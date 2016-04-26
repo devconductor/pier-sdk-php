@@ -92,7 +92,7 @@ class ContaApi
   
     
     /**
-     * consultarContaUsingGET1
+     * consultarContaUsingGET
      *
      * /contas/{idConta}
      *
@@ -101,15 +101,15 @@ class ContaApi
      * @return \br.com.conductor.caas.api.v1.model\ContaResponse
      * @throws \br.com.conductor.caas.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarContaUsingGET1($id_emissor, $id_conta)
+    public function consultarContaUsingGET($id_emissor, $id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarContaUsingGET1WithHttpInfo ($id_emissor, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarContaUsingGETWithHttpInfo ($id_emissor, $id_conta);
         return $response; 
     }
 
 
     /**
-     * consultarContaUsingGET1WithHttpInfo
+     * consultarContaUsingGETWithHttpInfo
      *
      * /contas/{idConta}
      *
@@ -118,16 +118,16 @@ class ContaApi
      * @return Array of \br.com.conductor.caas.api.v1.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.caas.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarContaUsingGET1WithHttpInfo($id_emissor, $id_conta)
+    public function consultarContaUsingGETWithHttpInfo($id_emissor, $id_conta)
     {
         
         // verify the required parameter 'id_emissor' is set
         if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarContaUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarContaUsingGET');
         }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarContaUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarContaUsingGET');
         }
   
         // parse inputs
