@@ -96,7 +96,6 @@ class ContaApi
      *
      * /contas/buscar
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param string $nome Nome (optional)
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)
@@ -104,9 +103,9 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v1.model\ConsultarContaResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function buscarContaUsingGET($id_emissor, $nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
+    public function buscarContaUsingGET($nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->buscarContaUsingGETWithHttpInfo ($id_emissor, $nome, $cpf, $numero_cartao, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->buscarContaUsingGETWithHttpInfo ($nome, $cpf, $numero_cartao, $id_conta);
         return $response; 
     }
 
@@ -116,7 +115,6 @@ class ContaApi
      *
      * /contas/buscar
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param string $nome Nome (optional)
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)
@@ -124,13 +122,9 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function buscarContaUsingGETWithHttpInfo($id_emissor, $nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
+    public function buscarContaUsingGETWithHttpInfo($nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling buscarContaUsingGET');
-        }
   
         // parse inputs
         $resourcePath = "/api/v1/contas/buscar";
@@ -161,11 +155,7 @@ class ContaApi
         if ($id_conta !== null) {
             $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
         }
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -218,14 +208,13 @@ class ContaApi
      *
      * /contas/{idConta}
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @return \br.com.conductor.pier.api.v1.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarContaUsingGET($id_emissor, $id_conta)
+    public function consultarContaUsingGET($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarContaUsingGETWithHttpInfo ($id_emissor, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarContaUsingGETWithHttpInfo ($id_conta);
         return $response; 
     }
 
@@ -235,18 +224,13 @@ class ContaApi
      *
      * /contas/{idConta}
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarContaUsingGETWithHttpInfo($id_emissor, $id_conta)
+    public function consultarContaUsingGETWithHttpInfo($id_conta)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarContaUsingGET');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarContaUsingGET');
@@ -265,11 +249,7 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         // path params
         
         if ($id_conta !== null) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoResponseApi
+ * CartaoApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
 
 /**
- * CartaoResponseApi Class Doc Comment
+ * CartaoApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CartaoResponseApi
+class CartaoApi
 {
 
     /**
@@ -82,7 +82,7 @@ class CartaoResponseApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v1.invoker\ApiClient $apiClient set the API client
-     * @return CartaoResponseApi
+     * @return CartaoApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
@@ -96,7 +96,6 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/cancelar
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
      * @param int $motivo Motivo do cancelamento (required)
@@ -104,9 +103,9 @@ class CartaoResponseApi
      * @return \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function cancelarCartaoUsingPOST($id_emissor, $id_conta, $id_cartao, $motivo, $observacao)
+    public function cancelarCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao)
     {
-        list($response, $statusCode, $httpHeader) = $this->cancelarCartaoUsingPOSTWithHttpInfo ($id_emissor, $id_conta, $id_cartao, $motivo, $observacao);
+        list($response, $statusCode, $httpHeader) = $this->cancelarCartaoUsingPOSTWithHttpInfo ($id_conta, $id_cartao, $motivo, $observacao);
         return $response; 
     }
 
@@ -116,7 +115,6 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/cancelar
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
      * @param int $motivo Motivo do cancelamento (required)
@@ -124,13 +122,9 @@ class CartaoResponseApi
      * @return Array of \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function cancelarCartaoUsingPOSTWithHttpInfo($id_emissor, $id_conta, $id_cartao, $motivo, $observacao)
+    public function cancelarCartaoUsingPOSTWithHttpInfo($id_conta, $id_cartao, $motivo, $observacao)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling cancelarCartaoUsingPOST');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling cancelarCartaoUsingPOST');
@@ -169,11 +163,7 @@ class CartaoResponseApi
         if ($observacao !== null) {
             $queryParams['observacao'] = $this->apiClient->getSerializer()->toQueryValue($observacao);
         }
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         // path params
         
         if ($id_conta !== null) {
@@ -242,16 +232,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
      * @param string $numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarCartaoUsingGET($id_emissor, $id_conta, $id_cartao, $numero_cartao = null)
+    public function consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarCartaoUsingGETWithHttpInfo ($id_emissor, $id_conta, $id_cartao, $numero_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarCartaoUsingGETWithHttpInfo ($id_conta, $id_cartao, $numero_cartao);
         return $response; 
     }
 
@@ -261,20 +250,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
      * @param string $numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarCartaoUsingGETWithHttpInfo($id_emissor, $id_conta, $id_cartao, $numero_cartao = null)
+    public function consultarCartaoUsingGETWithHttpInfo($id_conta, $id_cartao, $numero_cartao = null)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarCartaoUsingGET');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarCartaoUsingGET');
@@ -298,10 +282,6 @@ class CartaoResponseApi
   
         
         // header params
-        
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }// header params
         
         if ($numero_cartao !== null) {
             $headerParams['numeroCartao'] = $this->apiClient->getSerializer()->toHeaderValue($numero_cartao);
@@ -374,14 +354,13 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarCartoesUsingGET($id_emissor, $id_conta)
+    public function consultarCartoesUsingGET($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarCartoesUsingGETWithHttpInfo ($id_emissor, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarCartoesUsingGETWithHttpInfo ($id_conta);
         return $response; 
     }
 
@@ -391,18 +370,13 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarCartoesUsingGETWithHttpInfo($id_emissor, $id_conta)
+    public function consultarCartoesUsingGETWithHttpInfo($id_conta)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarCartoesUsingGET');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarCartoesUsingGET');
@@ -421,11 +395,7 @@ class CartaoResponseApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         // path params
         
         if ($id_conta !== null) {
@@ -486,16 +456,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/faturas
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarExtratoFaturasUsingGET($id_emissor, $id_conta, $id_cartao, $data_vencimento)
+    public function consultarExtratoFaturasUsingGET($id_conta, $id_cartao, $data_vencimento)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarExtratoFaturasUsingGETWithHttpInfo ($id_emissor, $id_conta, $id_cartao, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->consultarExtratoFaturasUsingGETWithHttpInfo ($id_conta, $id_cartao, $data_vencimento);
         return $response; 
     }
 
@@ -505,20 +474,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/faturas
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarExtratoFaturasUsingGETWithHttpInfo($id_emissor, $id_conta, $id_cartao, $data_vencimento)
+    public function consultarExtratoFaturasUsingGETWithHttpInfo($id_conta, $id_cartao, $data_vencimento)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarExtratoFaturasUsingGET');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarExtratoFaturasUsingGET');
@@ -549,11 +513,7 @@ class CartaoResponseApi
         if ($data_vencimento !== null) {
             $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
         }
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         // path params
         
         if ($id_conta !== null) {
@@ -626,15 +586,14 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/limites
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarSaldosLimitesUsingGET($id_emissor, $id_conta, $id_cartao)
+    public function consultarSaldosLimitesUsingGET($id_conta, $id_cartao)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarSaldosLimitesUsingGETWithHttpInfo ($id_emissor, $id_conta, $id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarSaldosLimitesUsingGETWithHttpInfo ($id_conta, $id_cartao);
         return $response; 
     }
 
@@ -644,19 +603,14 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/limites
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function consultarSaldosLimitesUsingGETWithHttpInfo($id_emissor, $id_conta, $id_cartao)
+    public function consultarSaldosLimitesUsingGETWithHttpInfo($id_conta, $id_cartao)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling consultarSaldosLimitesUsingGET');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarSaldosLimitesUsingGET');
@@ -679,11 +633,7 @@ class CartaoResponseApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }
         // path params
         
         if ($id_conta !== null) {
@@ -752,16 +702,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/desbloquear
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @param string $codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (required)
      * @return \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function desbloquearCartaoUsingPOST($id_emissor, $id_conta, $id_cartao, $codigo_segurancao)
+    public function desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao)
     {
-        list($response, $statusCode, $httpHeader) = $this->desbloquearCartaoUsingPOSTWithHttpInfo ($id_emissor, $id_conta, $id_cartao, $codigo_segurancao);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearCartaoUsingPOSTWithHttpInfo ($id_conta, $id_cartao, $codigo_segurancao);
         return $response; 
     }
 
@@ -771,20 +720,15 @@ class CartaoResponseApi
      *
      * /contas/{idConta}/cartoes/{idCartao}/desbloquear
      *
-     * @param int $id_emissor ID do Emissor (required)
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @param string $codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
      */
-    public function desbloquearCartaoUsingPOSTWithHttpInfo($id_emissor, $id_conta, $id_cartao, $codigo_segurancao)
+    public function desbloquearCartaoUsingPOSTWithHttpInfo($id_conta, $id_cartao, $codigo_segurancao)
     {
         
-        // verify the required parameter 'id_emissor' is set
-        if ($id_emissor === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_emissor when calling desbloquearCartaoUsingPOST');
-        }
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling desbloquearCartaoUsingPOST');
@@ -812,10 +756,6 @@ class CartaoResponseApi
   
         
         // header params
-        
-        if ($id_emissor !== null) {
-            $headerParams['idEmissor'] = $this->apiClient->getSerializer()->toHeaderValue($id_emissor);
-        }// header params
         
         if ($codigo_segurancao !== null) {
             $headerParams['codigoSegurancao'] = $this->apiClient->getSerializer()->toHeaderValue($codigo_segurancao);

@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoResponseApiTest
+ * CartaoApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
 
 /**
- * CartaoResponseApiTest Class Doc Comment
+ * CartaoApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CartaoResponseApiTest extends \PHPUnit_Framework_TestCase
+class CartaoApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **buscarContaUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarContaResponse buscarContaUsingGET($id_emissor, $nome, $cpf, $numero_cartao, $id_conta)
+> \br.com.conductor.pier.api.v1.model\ConsultarContaResponse buscarContaUsingGET($nome, $cpf, $numero_cartao, $id_conta)
 
 /contas/buscar
 
@@ -26,14 +26,13 @@ br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
-$id_emissor = 56; // int | ID do Emissor
 $nome = "nome_example"; // string | Nome
 $cpf = "cpf_example"; // string | CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
 $numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
 $id_conta = 789; // int | ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf)
 
 try { 
-    $result = $api_instance->buscarContaUsingGET($id_emissor, $nome, $cpf, $numero_cartao, $id_conta);
+    $result = $api_instance->buscarContaUsingGET($nome, $cpf, $numero_cartao, $id_conta);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContaApi->buscarContaUsingGET: ', $e->getMessage(), "\n";
@@ -45,7 +44,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **int**| ID do Emissor | 
  **nome** | **string**| Nome | [optional] 
  **cpf** | **string**| CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) | [optional] 
  **numero_cartao** | **string**| N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) | [optional] 
@@ -67,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarContaUsingGET**
-> \br.com.conductor.pier.api.v1.model\ContaResponse consultarContaUsingGET($id_emissor, $id_conta)
+> \br.com.conductor.pier.api.v1.model\ContaResponse consultarContaUsingGET($id_conta)
 
 /contas/{idConta}
 
@@ -84,11 +82,10 @@ br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
-$id_emissor = 56; // int | ID do Emissor
 $id_conta = 56; // int | ID da Conta
 
 try { 
-    $result = $api_instance->consultarContaUsingGET($id_emissor, $id_conta);
+    $result = $api_instance->consultarContaUsingGET($id_conta);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContaApi->consultarContaUsingGET: ', $e->getMessage(), "\n";
@@ -100,7 +97,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_emissor** | **int**| ID do Emissor | 
  **id_conta** | **int**| ID da Conta | 
 
 ### Return type
