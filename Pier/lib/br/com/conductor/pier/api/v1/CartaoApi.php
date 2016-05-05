@@ -143,7 +143,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
+        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -269,7 +269,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes/{idCartao}";
+        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -383,7 +383,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes";
+        $resourcePath = "/v1/contas/{idConta}/cartoes";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -497,7 +497,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
+        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -621,7 +621,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/limites";
+        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/limites";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -743,7 +743,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
+        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();

@@ -127,7 +127,7 @@ class ContaApi
         
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/buscar";
+        $resourcePath = "/v1/contas/buscar";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -237,7 +237,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/contas/{idConta}";
+        $resourcePath = "/v1/contas/{idConta}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();

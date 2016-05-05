@@ -258,9 +258,9 @@ class AuthToken implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array("ACTIVE", "REVOKE", "DELETED");
+        $allowed_values = array("ACTIVE", "REVOKED", "DELETED");
         if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'ACTIVE', 'REVOKE', 'DELETED'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'ACTIVE', 'REVOKED', 'DELETED'");
         }
         $this->status = $status;
         return $this;

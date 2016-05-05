@@ -75,4 +75,14 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
 
     }
     
+    /**
+     * Test case for validarUsingPOST
+     *
+     * /tokens/validar
+     *
+     */
+    public function test_validarUsingPOST() {
+
+    }
+    
 }

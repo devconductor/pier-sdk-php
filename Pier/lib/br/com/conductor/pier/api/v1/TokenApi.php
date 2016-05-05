@@ -125,7 +125,7 @@ class TokenApi
         }
   
         // parse inputs
-        $resourcePath = "/api/v1/tokens/callback";
+        $resourcePath = "/v1/tokens/callback";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -181,6 +181,104 @@ class TokenApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\BodyAccessToken', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarUsingPOST
+     *
+     * /tokens/validar
+     *
+     * @param \br.com.conductor.pier.api.v1.model\BodyAccessToken $body_access_token bodyAccessToken (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function validarUsingPOST($body_access_token)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarUsingPOSTWithHttpInfo ($body_access_token);
+        return $response; 
+    }
+
+
+    /**
+     * validarUsingPOSTWithHttpInfo
+     *
+     * /tokens/validar
+     *
+     * @param \br.com.conductor.pier.api.v1.model\BodyAccessToken $body_access_token bodyAccessToken (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function validarUsingPOSTWithHttpInfo($body_access_token)
+    {
+        
+        // verify the required parameter 'body_access_token' is set
+        if ($body_access_token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body_access_token when calling validarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/v1/tokens/validar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($body_access_token)) {
+            $_tempBody = $body_access_token;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -51,7 +51,9 @@ class BodyAccessToken implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'body' => '\br.com.conductor.pier.api.v1.model\Body'
+        'auth_token' => '\br.com.conductor.pier.api.v1.model\AuthToken',
+        'action' => 'string',
+        'user' => 'string'
     );
   
     static function swaggerTypes() {
@@ -63,7 +65,9 @@ class BodyAccessToken implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'body' => 'body'
+        'auth_token' => 'AuthToken',
+        'action' => 'action',
+        'user' => 'user'
     );
   
     static function attributeMap() {
@@ -75,7 +79,9 @@ class BodyAccessToken implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'body' => 'setBody'
+        'auth_token' => 'setAuthToken',
+        'action' => 'setAction',
+        'user' => 'setUser'
     );
   
     static function setters() {
@@ -87,7 +93,9 @@ class BodyAccessToken implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'body' => 'getBody'
+        'auth_token' => 'getAuthToken',
+        'action' => 'getAction',
+        'user' => 'getUser'
     );
   
     static function getters() {
@@ -96,10 +104,22 @@ class BodyAccessToken implements ArrayAccess
 
     
     /**
-      * $body 
-      * @var \br.com.conductor.pier.api.v1.model\Body
+      * $auth_token 
+      * @var \br.com.conductor.pier.api.v1.model\AuthToken
       */
-    protected $body;
+    protected $auth_token;
+    
+    /**
+      * $action 
+      * @var string
+      */
+    protected $action;
+    
+    /**
+      * $user 
+      * @var string
+      */
+    protected $user;
     
 
     /**
@@ -110,28 +130,75 @@ class BodyAccessToken implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->body = $data["body"];
+            $this->auth_token = $data["auth_token"];
+            $this->action = $data["action"];
+            $this->user = $data["user"];
         }
     }
     
     /**
-     * Gets body
-     * @return \br.com.conductor.pier.api.v1.model\Body
+     * Gets auth_token
+     * @return \br.com.conductor.pier.api.v1.model\AuthToken
      */
-    public function getBody()
+    public function getAuthToken()
     {
-        return $this->body;
+        return $this->auth_token;
     }
   
     /**
-     * Sets body
-     * @param \br.com.conductor.pier.api.v1.model\Body $body 
+     * Sets auth_token
+     * @param \br.com.conductor.pier.api.v1.model\AuthToken $auth_token 
      * @return $this
      */
-    public function setBody($body)
+    public function setAuthToken($auth_token)
     {
         
-        $this->body = $body;
+        $this->auth_token = $auth_token;
+        return $this;
+    }
+    
+    /**
+     * Gets action
+     * @return string
+     */
+    public function getAction()
+    {
+        return $this->action;
+    }
+  
+    /**
+     * Sets action
+     * @param string $action 
+     * @return $this
+     */
+    public function setAction($action)
+    {
+        $allowed_values = array("CREATED", "UPDATED", "DELETED");
+        if (!in_array($action, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'CREATED', 'UPDATED', 'DELETED'");
+        }
+        $this->action = $action;
+        return $this;
+    }
+    
+    /**
+     * Gets user
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+  
+    /**
+     * Sets user
+     * @param string $user 
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        
+        $this->user = $user;
         return $this;
     }
     
