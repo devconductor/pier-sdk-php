@@ -305,4 +305,222 @@ class ContaApi
         }
     }
     
+    /**
+     * consultarExtratoFaturasUsingGET
+     *
+     * /contas/{idConta}/faturas
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
+     * @return \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function consultarExtratoFaturasUsingGET($id_conta, $data_vencimento)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarExtratoFaturasUsingGETWithHttpInfo ($id_conta, $data_vencimento);
+        return $response; 
+    }
+
+
+    /**
+     * consultarExtratoFaturasUsingGETWithHttpInfo
+     *
+     * /contas/{idConta}/faturas
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
+     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function consultarExtratoFaturasUsingGETWithHttpInfo($id_conta, $data_vencimento)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarExtratoFaturasUsingGET');
+        }
+        // verify the required parameter 'data_vencimento' is set
+        if ($data_vencimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling consultarExtratoFaturasUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/v1/contas/{idConta}/faturas";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($data_vencimento !== null) {
+            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
+        }
+        
+        // path params
+        
+        if ($id_conta !== null) {
+            $resourcePath = str_replace(
+                "{" . "idConta" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_conta),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            case 204:
+                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarSaldosLimitesUsingGET
+     *
+     * /contas/{idConta}/limites
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @return \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function consultarSaldosLimitesUsingGET($id_conta)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarSaldosLimitesUsingGETWithHttpInfo ($id_conta);
+        return $response; 
+    }
+
+
+    /**
+     * consultarSaldosLimitesUsingGETWithHttpInfo
+     *
+     * /contas/{idConta}/limites
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function consultarSaldosLimitesUsingGETWithHttpInfo($id_conta)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarSaldosLimitesUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/v1/contas/{idConta}/limites";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_conta !== null) {
+            $resourcePath = str_replace(
+                "{" . "idConta" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_conta),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
 }

@@ -66,12 +66,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for cancelarCartaoUsingPOST
+     * Test case for bloquearCartaoUsingPOST
      *
-     * /contas/{idConta}/cartoes/{idCartao}/cancelar
+     * /contas/{idConta}/cartoes/{idCartao}/bloquear
      *
      */
-    public function test_cancelarCartaoUsingPOST() {
+    public function test_bloquearCartaoUsingPOST() {
 
     }
     
@@ -92,26 +92,6 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_consultarCartoesUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarExtratoFaturasUsingGET
-     *
-     * /contas/{idConta}/cartoes/{idCartao}/faturas
-     *
-     */
-    public function test_consultarExtratoFaturasUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarSaldosLimitesUsingGET
-     *
-     * /contas/{idConta}/cartoes/{idCartao}/limites
-     *
-     */
-    public function test_consultarSaldosLimitesUsingGET() {
 
     }
     

@@ -85,4 +85,24 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     }
     
+    /**
+     * Test case for consultarExtratoFaturasUsingGET
+     *
+     * /contas/{idConta}/faturas
+     *
+     */
+    public function test_consultarExtratoFaturasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarSaldosLimitesUsingGET
+     *
+     * /contas/{idConta}/limites
+     *
+     */
+    public function test_consultarSaldosLimitesUsingGET() {
+
+    }
+    
 }
