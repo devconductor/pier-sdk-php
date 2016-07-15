@@ -4,16 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buscarContaUsingGET**](ContaApi.md#buscarContaUsingGET) | **GET** /v1/contas/buscar | /contas/buscar
-[**consultarContaUsingGET**](ContaApi.md#consultarContaUsingGET) | **GET** /v1/contas/{idConta} | /contas/{idConta}
-[**consultarExtratoFaturasUsingGET**](ContaApi.md#consultarExtratoFaturasUsingGET) | **GET** /v1/contas/{idConta}/faturas | /contas/{idConta}/faturas
-[**consultarSaldosLimitesUsingGET**](ContaApi.md#consultarSaldosLimitesUsingGET) | **GET** /v1/contas/{idConta}/limites | /contas/{idConta}/limites
+[**buscarContaUsingGET**](ContaApi.md#buscarContaUsingGET) | **GET** /v1.1/contas/buscar | Buscar contas
+[**consultarContaUsingGET**](ContaApi.md#consultarContaUsingGET) | **GET** /v1.1/contas/{idConta} | Retorna uma conta
+[**consultarExtratoFaturasUsingGET**](ContaApi.md#consultarExtratoFaturasUsingGET) | **GET** /v1.1/contas/{idConta}/faturas | Retorna os extratos
+[**consultarSaldosLimitesUsingGET**](ContaApi.md#consultarSaldosLimitesUsingGET) | **GET** /v1.1/contas/{idConta}/limites | Retorna o limite
 
 
 # **buscarContaUsingGET**
 > \br.com.conductor.pier.api.v1.model\ConsultarContaResponse buscarContaUsingGET($nome, $cpf, $numero_cartao, $id_conta)
 
-/contas/buscar
+Buscar contas
 
 Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **consultarContaUsingGET**
 > \br.com.conductor.pier.api.v1.model\ContaResponse consultarContaUsingGET($id_conta)
 
-/contas/{idConta}
+Retorna uma conta
 
 Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
 
@@ -119,9 +119,9 @@ Name | Type | Description  | Notes
 # **consultarExtratoFaturasUsingGET**
 > \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET($id_conta, $data_vencimento)
 
-/contas/{idConta}/faturas
+Retorna os extratos
 
-Consulte os extratos/faturas de uma determinada conta
+Consulte os extratos de uma determinada conta
 
 ### Example 
 ```php
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 # **consultarSaldosLimitesUsingGET**
 > \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET($id_conta)
 
-/contas/{idConta}/limites
+Retorna o limite
 
 Consulte os limites de uma determinada conta
 

@@ -4,16 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/bloquear | /contas/{idConta}/cartoes/{idCartao}/bloquear
-[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
-[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
-[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
+[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
+[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
+[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
+[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
+[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /v1.1/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
 
 
 # **bloquearCartaoUsingPOST**
 > \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao)
 
-/contas/{idConta}/cartoes/{idCartao}/bloquear
+Bloqueia um cart\u00C3\u00A3o
 
 Bloquear um determinado cart\u00C3\u00A3o
 
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 # **consultarCartaoUsingGET**
 > \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao)
 
-/contas/{idConta}/cartoes/{idCartao}
+Retorna um cart\u00C3\u00A3o
 
 Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
 
@@ -123,7 +124,7 @@ Name | Type | Description  | Notes
 # **consultarCartoesUsingGET**
 > \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse consultarCartoesUsingGET($id_conta)
 
-/contas/{idConta}/cartoes
+Retorna todos os cart\u00C3\u00B5es
 
 Consultar todos os cart\u00C3\u00B5es de uma determinada conta
 
@@ -173,7 +174,7 @@ Name | Type | Description  | Notes
 # **desbloquearCartaoUsingPOST**
 > \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao)
 
-/contas/{idConta}/cartoes/{idCartao}/desbloquear
+Desbloqueia um cart\u00C3\u00A3o
 
 Desbloquear cart\u00C3\u00A3o de uma determinada conta
 
@@ -212,6 +213,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **embossadoCartaoUsingPUT**
+> \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse embossadoCartaoUsingPUT($id_conta, $id_cartao)
+
+Embossado
+
+N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$id_conta = 56; // int | ID da Conta
+$id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja cancelar
+
+try { 
+    $result = $api_instance->embossadoCartaoUsingPUT($id_conta, $id_cartao);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->embossadoCartaoUsingPUT: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_conta** | **int**| ID da Conta | 
+ **id_cartao** | **int**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
 
 ### Authorization
 

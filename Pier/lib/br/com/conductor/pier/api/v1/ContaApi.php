@@ -94,7 +94,7 @@ class ContaApi
     /**
      * buscarContaUsingGET
      *
-     * /contas/buscar
+     * Buscar contas
      *
      * @param string $nome Nome (optional)
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
@@ -113,7 +113,7 @@ class ContaApi
     /**
      * buscarContaUsingGETWithHttpInfo
      *
-     * /contas/buscar
+     * Buscar contas
      *
      * @param string $nome Nome (optional)
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
@@ -127,7 +127,7 @@ class ContaApi
         
   
         // parse inputs
-        $resourcePath = "/v1/contas/buscar";
+        $resourcePath = "/v1.1/contas/buscar";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -206,7 +206,7 @@ class ContaApi
     /**
      * consultarContaUsingGET
      *
-     * /contas/{idConta}
+     * Retorna uma conta
      *
      * @param int $id_conta ID da Conta (required)
      * @return \br.com.conductor.pier.api.v1.model\ContaResponse
@@ -222,7 +222,7 @@ class ContaApi
     /**
      * consultarContaUsingGETWithHttpInfo
      *
-     * /contas/{idConta}
+     * Retorna uma conta
      *
      * @param int $id_conta ID da Conta (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
@@ -237,7 +237,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}";
+        $resourcePath = "/v1.1/contas/{idConta}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -308,7 +308,7 @@ class ContaApi
     /**
      * consultarExtratoFaturasUsingGET
      *
-     * /contas/{idConta}/faturas
+     * Retorna os extratos
      *
      * @param int $id_conta ID da Conta (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
@@ -325,7 +325,7 @@ class ContaApi
     /**
      * consultarExtratoFaturasUsingGETWithHttpInfo
      *
-     * /contas/{idConta}/faturas
+     * Retorna os extratos
      *
      * @param int $id_conta ID da Conta (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
@@ -345,7 +345,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/faturas";
+        $resourcePath = "/v1.1/contas/{idConta}/faturas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -424,7 +424,7 @@ class ContaApi
     /**
      * consultarSaldosLimitesUsingGET
      *
-     * /contas/{idConta}/limites
+     * Retorna o limite
      *
      * @param int $id_conta ID da Conta (required)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse
@@ -440,7 +440,7 @@ class ContaApi
     /**
      * consultarSaldosLimitesUsingGETWithHttpInfo
      *
-     * /contas/{idConta}/limites
+     * Retorna o limite
      *
      * @param int $id_conta ID da Conta (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse, HTTP status code, HTTP response headers (array of strings)
@@ -455,7 +455,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/limites";
+        $resourcePath = "/v1.1/contas/{idConta}/limites";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();

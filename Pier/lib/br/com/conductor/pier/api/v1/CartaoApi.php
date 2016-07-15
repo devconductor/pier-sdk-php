@@ -94,7 +94,7 @@ class CartaoApi
     /**
      * bloquearCartaoUsingPOST
      *
-     * /contas/{idConta}/cartoes/{idCartao}/bloquear
+     * Bloqueia um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
@@ -113,7 +113,7 @@ class CartaoApi
     /**
      * bloquearCartaoUsingPOSTWithHttpInfo
      *
-     * /contas/{idConta}/cartoes/{idCartao}/bloquear
+     * Bloqueia um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
@@ -139,7 +139,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear";
+        $resourcePath = "/v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -226,7 +226,7 @@ class CartaoApi
     /**
      * consultarCartaoUsingGET
      *
-     * /contas/{idConta}/cartoes/{idCartao}
+     * Retorna um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
@@ -244,7 +244,7 @@ class CartaoApi
     /**
      * consultarCartaoUsingGETWithHttpInfo
      *
-     * /contas/{idConta}/cartoes/{idCartao}
+     * Retorna um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
@@ -265,7 +265,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}";
+        $resourcePath = "/v1.1/contas/{idConta}/cartoes/{idCartao}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -348,7 +348,7 @@ class CartaoApi
     /**
      * consultarCartoesUsingGET
      *
-     * /contas/{idConta}/cartoes
+     * Retorna todos os cart\u00C3\u00B5es
      *
      * @param int $id_conta ID da Conta (required)
      * @return \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse
@@ -364,7 +364,7 @@ class CartaoApi
     /**
      * consultarCartoesUsingGETWithHttpInfo
      *
-     * /contas/{idConta}/cartoes
+     * Retorna todos os cart\u00C3\u00B5es
      *
      * @param int $id_conta ID da Conta (required)
      * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
@@ -379,7 +379,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/cartoes";
+        $resourcePath = "/v1.1/contas/{idConta}/cartoes";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -450,7 +450,7 @@ class CartaoApi
     /**
      * desbloquearCartaoUsingPOST
      *
-     * /contas/{idConta}/cartoes/{idCartao}/desbloquear
+     * Desbloqueia um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
@@ -468,7 +468,7 @@ class CartaoApi
     /**
      * desbloquearCartaoUsingPOSTWithHttpInfo
      *
-     * /contas/{idConta}/cartoes/{idCartao}/desbloquear
+     * Desbloqueia um cart\u00C3\u00A3o
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
@@ -489,7 +489,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
+        $resourcePath = "/v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -561,6 +561,122 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * embossadoCartaoUsingPUT
+     *
+     * Embossado
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
+     * @return \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function embossadoCartaoUsingPUT($id_conta, $id_cartao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->embossadoCartaoUsingPUTWithHttpInfo ($id_conta, $id_cartao);
+        return $response; 
+    }
+
+
+    /**
+     * embossadoCartaoUsingPUTWithHttpInfo
+     *
+     * Embossado
+     *
+     * @param int $id_conta ID da Conta (required)
+     * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
+     * @return Array of \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     */
+    public function embossadoCartaoUsingPUTWithHttpInfo($id_conta, $id_cartao)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling embossadoCartaoUsingPUT');
+        }
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling embossadoCartaoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/v1.1/contas/{idConta}/cartoes/{idCartao}/embossado";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_conta !== null) {
+            $resourcePath = str_replace(
+                "{" . "idConta" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_conta),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "idCartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

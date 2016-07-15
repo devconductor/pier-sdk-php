@@ -68,7 +68,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for buscarContaUsingGET
      *
-     * /contas/buscar
+     * Buscar contas
      *
      */
     public function test_buscarContaUsingGET() {
@@ -78,7 +78,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarContaUsingGET
      *
-     * /contas/{idConta}
+     * Retorna uma conta
      *
      */
     public function test_consultarContaUsingGET() {
@@ -88,7 +88,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarExtratoFaturasUsingGET
      *
-     * /contas/{idConta}/faturas
+     * Retorna os extratos
      *
      */
     public function test_consultarExtratoFaturasUsingGET() {
@@ -98,7 +98,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarSaldosLimitesUsingGET
      *
-     * /contas/{idConta}/limites
+     * Retorna o limite
      *
      */
     public function test_consultarSaldosLimitesUsingGET() {

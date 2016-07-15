@@ -68,7 +68,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for bloquearCartaoUsingPOST
      *
-     * /contas/{idConta}/cartoes/{idCartao}/bloquear
+     * Bloqueia um cart\u00C3\u00A3o
      *
      */
     public function test_bloquearCartaoUsingPOST() {
@@ -78,7 +78,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarCartaoUsingGET
      *
-     * /contas/{idConta}/cartoes/{idCartao}
+     * Retorna um cart\u00C3\u00A3o
      *
      */
     public function test_consultarCartaoUsingGET() {
@@ -88,7 +88,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarCartoesUsingGET
      *
-     * /contas/{idConta}/cartoes
+     * Retorna todos os cart\u00C3\u00B5es
      *
      */
     public function test_consultarCartoesUsingGET() {
@@ -98,10 +98,20 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desbloquearCartaoUsingPOST
      *
-     * /contas/{idConta}/cartoes/{idCartao}/desbloquear
+     * Desbloqueia um cart\u00C3\u00A3o
      *
      */
     public function test_desbloquearCartaoUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for embossadoCartaoUsingPUT
+     *
+     * Embossado
+     *
+     */
+    public function test_embossadoCartaoUsingPUT() {
 
     }
     
