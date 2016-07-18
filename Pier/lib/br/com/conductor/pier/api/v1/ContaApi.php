@@ -127,7 +127,7 @@ class ContaApi
         
   
         // parse inputs
-        $resourcePath = "/v1.1/contas/buscar";
+        $resourcePath = "/api/contas/buscar";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -237,7 +237,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1.1/contas/{idConta}";
+        $resourcePath = "/api/contas/{idConta}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -345,7 +345,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1.1/contas/{idConta}/faturas";
+        $resourcePath = "/api/contas/{idConta}/faturas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -455,7 +455,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/v1.1/contas/{idConta}/limites";
+        $resourcePath = "/api/contas/{idConta}/limites";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();

@@ -125,7 +125,7 @@ class TokenApi
         }
   
         // parse inputs
-        $resourcePath = "/v1.1/tokens/callback";
+        $resourcePath = "/api/tokens/callback";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -223,7 +223,7 @@ class TokenApi
         }
   
         // parse inputs
-        $resourcePath = "/v1.1/tokens/validar";
+        $resourcePath = "/api/tokens/validar";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
