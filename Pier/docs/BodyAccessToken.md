@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auth_token** | [**\br.com.conductor.pier.api.v1.model\AuthToken**](AuthToken.md) |  | [optional] 
+**auth_token** | [**\br.com.conductor.pier.api.v1_1.model\AuthToken**](AuthToken.md) |  | [optional] 
 **action** | **string** |  | [optional] 
 **user** | **string** |  | [optional] 
 

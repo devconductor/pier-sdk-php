@@ -1,11 +1,11 @@
 <?php
 /**
- * ConsultarContaResponse
+ * ExtraInfo
  *
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,30 +31,27 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ConsultarContaResponse Class Doc Comment
+ * ExtraInfo Class Doc Comment
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConsultarContaResponse implements ArrayAccess
+class ExtraInfo implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cod_retorno' => 'int',
-        'codigo_retorno' => 'int',
-        'contas' => '\br.com.conductor.pier.api.v1.model\ContaCartaoResponse[]',
-        'descricao_retorno' => 'string'
+        'id_emissor' => 'int'
     );
   
     static function swaggerTypes() {
@@ -66,10 +63,7 @@ class ConsultarContaResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cod_retorno' => 'codRetorno',
-        'codigo_retorno' => 'codigoRetorno',
-        'contas' => 'contas',
-        'descricao_retorno' => 'descricaoRetorno'
+        'id_emissor' => 'idEmissor'
     );
   
     static function attributeMap() {
@@ -81,10 +75,7 @@ class ConsultarContaResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cod_retorno' => 'setCodRetorno',
-        'codigo_retorno' => 'setCodigoRetorno',
-        'contas' => 'setContas',
-        'descricao_retorno' => 'setDescricaoRetorno'
+        'id_emissor' => 'setIdEmissor'
     );
   
     static function setters() {
@@ -96,10 +87,7 @@ class ConsultarContaResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cod_retorno' => 'getCodRetorno',
-        'codigo_retorno' => 'getCodigoRetorno',
-        'contas' => 'getContas',
-        'descricao_retorno' => 'getDescricaoRetorno'
+        'id_emissor' => 'getIdEmissor'
     );
   
     static function getters() {
@@ -108,28 +96,10 @@ class ConsultarContaResponse implements ArrayAccess
 
     
     /**
-      * $cod_retorno 
+      * $id_emissor 
       * @var int
       */
-    protected $cod_retorno;
-    
-    /**
-      * $codigo_retorno 
-      * @var int
-      */
-    protected $codigo_retorno;
-    
-    /**
-      * $contas 
-      * @var \br.com.conductor.pier.api.v1.model\ContaCartaoResponse[]
-      */
-    protected $contas;
-    
-    /**
-      * $descricao_retorno 
-      * @var string
-      */
-    protected $descricao_retorno;
+    protected $id_emissor;
     
 
     /**
@@ -140,94 +110,28 @@ class ConsultarContaResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cod_retorno = $data["cod_retorno"];
-            $this->codigo_retorno = $data["codigo_retorno"];
-            $this->contas = $data["contas"];
-            $this->descricao_retorno = $data["descricao_retorno"];
+            $this->id_emissor = $data["id_emissor"];
         }
     }
     
     /**
-     * Gets cod_retorno
+     * Gets id_emissor
      * @return int
      */
-    public function getCodRetorno()
+    public function getIdEmissor()
     {
-        return $this->cod_retorno;
+        return $this->id_emissor;
     }
   
     /**
-     * Sets cod_retorno
-     * @param int $cod_retorno 
+     * Sets id_emissor
+     * @param int $id_emissor 
      * @return $this
      */
-    public function setCodRetorno($cod_retorno)
+    public function setIdEmissor($id_emissor)
     {
         
-        $this->cod_retorno = $cod_retorno;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_retorno
-     * @return int
-     */
-    public function getCodigoRetorno()
-    {
-        return $this->codigo_retorno;
-    }
-  
-    /**
-     * Sets codigo_retorno
-     * @param int $codigo_retorno 
-     * @return $this
-     */
-    public function setCodigoRetorno($codigo_retorno)
-    {
-        
-        $this->codigo_retorno = $codigo_retorno;
-        return $this;
-    }
-    
-    /**
-     * Gets contas
-     * @return \br.com.conductor.pier.api.v1.model\ContaCartaoResponse[]
-     */
-    public function getContas()
-    {
-        return $this->contas;
-    }
-  
-    /**
-     * Sets contas
-     * @param \br.com.conductor.pier.api.v1.model\ContaCartaoResponse[] $contas 
-     * @return $this
-     */
-    public function setContas($contas)
-    {
-        
-        $this->contas = $contas;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_retorno
-     * @return string
-     */
-    public function getDescricaoRetorno()
-    {
-        return $this->descricao_retorno;
-    }
-  
-    /**
-     * Sets descricao_retorno
-     * @param string $descricao_retorno 
-     * @return $this
-     */
-    public function setDescricaoRetorno($descricao_retorno)
-    {
-        
-        $this->descricao_retorno = $descricao_retorno;
+        $this->id_emissor = $id_emissor;
         return $this;
     }
     
@@ -279,9 +183,9 @@ class ConsultarContaResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

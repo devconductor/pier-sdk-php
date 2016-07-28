@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,7 +31,7 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
@@ -39,7 +39,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -759,9 +759,9 @@ class PessoaFisicaResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

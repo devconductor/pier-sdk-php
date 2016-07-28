@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,18 +31,18 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1;
+namespace br.com.conductor.pier.api.v1_1;
 
-use \br.com.conductor.pier.api.v1.invoker\Configuration;
-use \br.com.conductor.pier.api.v1.invoker\ApiClient;
-use \br.com.conductor.pier.api.v1.invoker\ApiException;
-use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
+use \br.com.conductor.pier.api.v1_1.invoker\Configuration;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiClient;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
+use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
  * BaseApi Class Doc Comment
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -52,13 +52,13 @@ class BaseApi
 
     /**
      * API Client
-     * @var \br.com.conductor.pier.api.v1.invoker\ApiClient instance of the ApiClient
+     * @var \br.com.conductor.pier.api.v1_1.invoker\ApiClient instance of the ApiClient
      */
     protected $apiClient;
   
     /**
      * Constructor
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient|null $apiClient The api client to use
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient|null $apiClient The api client to use
      */
     function __construct($apiClient = null)
     {
@@ -72,7 +72,7 @@ class BaseApi
   
     /**
      * Get API client
-     * @return \br.com.conductor.pier.api.v1.invoker\ApiClient get the API client
+     * @return \br.com.conductor.pier.api.v1_1.invoker\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -81,7 +81,7 @@ class BaseApi
   
     /**
      * Set the API client
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient $apiClient set the API client
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient $apiClient set the API client
      * @return BaseApi
      */
     public function setApiClient(ApiClient $apiClient)
@@ -96,8 +96,8 @@ class BaseApi
      *
      * /bases/clear
      *
-     * @return \br.com.conductor.pier.api.v1.model\BodyAccessToken
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\BodyAccessToken
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function clearUsingGET()
     {
@@ -111,8 +111,8 @@ class BaseApi
      *
      * /bases/clear
      *
-     * @return Array of \br.com.conductor.pier.api.v1.model\BodyAccessToken, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\BodyAccessToken, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function clearUsingGETWithHttpInfo()
     {
@@ -158,19 +158,19 @@ class BaseApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\BodyAccessToken'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\BodyAccessToken'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\BodyAccessToken', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\BodyAccessToken', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\BodyAccessToken', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\BodyAccessToken', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

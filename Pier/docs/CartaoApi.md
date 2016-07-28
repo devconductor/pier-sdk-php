@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1.invoker\CartaoApi
+# br.com.conductor.pier.api.v1_1.invoker\CartaoApi
 
 All URIs are relative to *https://localhost/*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **bloquearCartaoUsingPOST**
-> \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao)
+> \br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao)
 
 Bloqueia um cart\u00C3\u00A3o
 
@@ -24,11 +24,11 @@ Bloquear um determinado cart\u00C3\u00A3o
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
 $id_conta = 56; // int | ID da Conta
 $id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja cancelar
 $motivo = 56; // int | Motivo do bloqueio
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\CancelarCartaoResponse**](CancelarCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse**](CancelarCartaoResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarCartaoUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao)
+> \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao)
 
 Retorna um cart\u00C3\u00A3o
 
@@ -80,11 +80,11 @@ Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
 $id_conta = 56; // int | ID da Conta que pertence o cart\u00C3\u00A3o
 $id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja consultar
 $numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarCartoesUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse consultarCartoesUsingGET($id_conta)
+> \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse consultarCartoesUsingGET($id_conta)
 
 Retorna todos os cart\u00C3\u00B5es
 
@@ -134,11 +134,11 @@ Consultar todos os cart\u00C3\u00B5es de uma determinada conta
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
 $id_conta = 56; // int | ID da Conta
 
 try { 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desbloquearCartaoUsingPOST**
-> \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao)
+> \br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao)
 
 Desbloqueia um cart\u00C3\u00A3o
 
@@ -184,11 +184,11 @@ Desbloquear cart\u00C3\u00A3o de uma determinada conta
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
 $id_conta = 56; // int | ID da Conta
 $id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
 $codigo_segurancao = "codigo_segurancao_example"; // string | C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **embossadoCartaoUsingPUT**
-> \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse embossadoCartaoUsingPUT($id_conta, $id_cartao)
+> \br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse embossadoCartaoUsingPUT($id_conta, $id_cartao)
 
 Embossado
 
@@ -238,11 +238,11 @@ N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\CartaoApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
 $id_conta = 56; // int | ID da Conta
 $id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja cancelar
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
 
 ### Authorization
 

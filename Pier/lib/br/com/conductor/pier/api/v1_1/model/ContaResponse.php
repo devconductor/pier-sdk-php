@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,7 +31,7 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
@@ -39,7 +39,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -52,7 +52,7 @@ class ContaResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'bin' => 'int',
-        'cartao' => '\br.com.conductor.pier.api.v1.model\ConsultarContaCartaoResponse',
+        'cartao' => '\br.com.conductor.pier.api.v1_1.model\ConsultarContaCartaoResponse',
         'data_cadastramento' => 'string',
         'data_ultimo_pagamento' => 'string',
         'data_venc_cobranca' => 'string',
@@ -76,9 +76,9 @@ class ContaResponse implements ArrayAccess
         'num_celular_sms' => 'string',
         'pagamentos' => 'double',
         'permite_refinanciamento' => 'bool',
-        'pessoa_fisica' => '\br.com.conductor.pier.api.v1.model\PessoaFisicaResponse',
+        'pessoa_fisica' => '\br.com.conductor.pier.api.v1_1.model\PessoaFisicaResponse',
         'quantidade_pagamentos' => 'int',
-        'saldo_limite' => '\br.com.conductor.pier.api.v1.model\SaldoLimiteResponse',
+        'saldo_limite' => '\br.com.conductor.pier.api.v1_1.model\SaldoLimiteResponse',
         'status' => 'int',
         'status_data' => '\DateTime',
         'taxa_refinanciamento' => 'string',
@@ -235,7 +235,7 @@ class ContaResponse implements ArrayAccess
     
     /**
       * $cartao 
-      * @var \br.com.conductor.pier.api.v1.model\ConsultarContaCartaoResponse
+      * @var \br.com.conductor.pier.api.v1_1.model\ConsultarContaCartaoResponse
       */
     protected $cartao;
     
@@ -379,7 +379,7 @@ class ContaResponse implements ArrayAccess
     
     /**
       * $pessoa_fisica 
-      * @var \br.com.conductor.pier.api.v1.model\PessoaFisicaResponse
+      * @var \br.com.conductor.pier.api.v1_1.model\PessoaFisicaResponse
       */
     protected $pessoa_fisica;
     
@@ -391,7 +391,7 @@ class ContaResponse implements ArrayAccess
     
     /**
       * $saldo_limite 
-      * @var \br.com.conductor.pier.api.v1.model\SaldoLimiteResponse
+      * @var \br.com.conductor.pier.api.v1_1.model\SaldoLimiteResponse
       */
     protected $saldo_limite;
     
@@ -500,7 +500,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets cartao
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarContaCartaoResponse
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarContaCartaoResponse
      */
     public function getCartao()
     {
@@ -509,7 +509,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets cartao
-     * @param \br.com.conductor.pier.api.v1.model\ConsultarContaCartaoResponse $cartao 
+     * @param \br.com.conductor.pier.api.v1_1.model\ConsultarContaCartaoResponse $cartao 
      * @return $this
      */
     public function setCartao($cartao)
@@ -1004,7 +1004,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets pessoa_fisica
-     * @return \br.com.conductor.pier.api.v1.model\PessoaFisicaResponse
+     * @return \br.com.conductor.pier.api.v1_1.model\PessoaFisicaResponse
      */
     public function getPessoaFisica()
     {
@@ -1013,7 +1013,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets pessoa_fisica
-     * @param \br.com.conductor.pier.api.v1.model\PessoaFisicaResponse $pessoa_fisica 
+     * @param \br.com.conductor.pier.api.v1_1.model\PessoaFisicaResponse $pessoa_fisica 
      * @return $this
      */
     public function setPessoaFisica($pessoa_fisica)
@@ -1046,7 +1046,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets saldo_limite
-     * @return \br.com.conductor.pier.api.v1.model\SaldoLimiteResponse
+     * @return \br.com.conductor.pier.api.v1_1.model\SaldoLimiteResponse
      */
     public function getSaldoLimite()
     {
@@ -1055,7 +1055,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets saldo_limite
-     * @param \br.com.conductor.pier.api.v1.model\SaldoLimiteResponse $saldo_limite 
+     * @param \br.com.conductor.pier.api.v1_1.model\SaldoLimiteResponse $saldo_limite 
      * @return $this
      */
     public function setSaldoLimite($saldo_limite)
@@ -1239,9 +1239,9 @@ class ContaResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

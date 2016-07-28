@@ -1,11 +1,11 @@
 <?php
 /**
- * ConsultarCartaoResponse
+ * EmbossadoCartaoResponse
  *
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,29 +31,30 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ConsultarCartaoResponse Class Doc Comment
+ * EmbossadoCartaoResponse Class Doc Comment
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConsultarCartaoResponse implements ArrayAccess
+class EmbossadoCartaoResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cartoes' => '\br.com.conductor.pier.api.v1.model\CartaoResponse[]',
         'codigo_retorno' => 'int',
-        'descricao_retorno' => 'string'
+        'descricao_retorno' => 'string',
+        'id_cartao' => 'int',
+        'id_conta' => 'int'
     );
   
     static function swaggerTypes() {
@@ -65,9 +66,10 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cartoes' => 'cartoes',
         'codigo_retorno' => 'codigoRetorno',
-        'descricao_retorno' => 'descricaoRetorno'
+        'descricao_retorno' => 'descricaoRetorno',
+        'id_cartao' => 'idCartao',
+        'id_conta' => 'idConta'
     );
   
     static function attributeMap() {
@@ -79,9 +81,10 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cartoes' => 'setCartoes',
         'codigo_retorno' => 'setCodigoRetorno',
-        'descricao_retorno' => 'setDescricaoRetorno'
+        'descricao_retorno' => 'setDescricaoRetorno',
+        'id_cartao' => 'setIdCartao',
+        'id_conta' => 'setIdConta'
     );
   
     static function setters() {
@@ -93,21 +96,16 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cartoes' => 'getCartoes',
         'codigo_retorno' => 'getCodigoRetorno',
-        'descricao_retorno' => 'getDescricaoRetorno'
+        'descricao_retorno' => 'getDescricaoRetorno',
+        'id_cartao' => 'getIdCartao',
+        'id_conta' => 'getIdConta'
     );
   
     static function getters() {
         return self::$getters;
     }
 
-    
-    /**
-      * $cartoes 
-      * @var \br.com.conductor.pier.api.v1.model\CartaoResponse[]
-      */
-    protected $cartoes;
     
     /**
       * $codigo_retorno 
@@ -121,6 +119,18 @@ class ConsultarCartaoResponse implements ArrayAccess
       */
     protected $descricao_retorno;
     
+    /**
+      * $id_cartao 
+      * @var int
+      */
+    protected $id_cartao;
+    
+    /**
+      * $id_conta 
+      * @var int
+      */
+    protected $id_conta;
+    
 
     /**
      * Constructor
@@ -130,31 +140,11 @@ class ConsultarCartaoResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cartoes = $data["cartoes"];
             $this->codigo_retorno = $data["codigo_retorno"];
             $this->descricao_retorno = $data["descricao_retorno"];
+            $this->id_cartao = $data["id_cartao"];
+            $this->id_conta = $data["id_conta"];
         }
-    }
-    
-    /**
-     * Gets cartoes
-     * @return \br.com.conductor.pier.api.v1.model\CartaoResponse[]
-     */
-    public function getCartoes()
-    {
-        return $this->cartoes;
-    }
-  
-    /**
-     * Sets cartoes
-     * @param \br.com.conductor.pier.api.v1.model\CartaoResponse[] $cartoes 
-     * @return $this
-     */
-    public function setCartoes($cartoes)
-    {
-        
-        $this->cartoes = $cartoes;
-        return $this;
     }
     
     /**
@@ -196,6 +186,48 @@ class ConsultarCartaoResponse implements ArrayAccess
     {
         
         $this->descricao_retorno = $descricao_retorno;
+        return $this;
+    }
+    
+    /**
+     * Gets id_cartao
+     * @return int
+     */
+    public function getIdCartao()
+    {
+        return $this->id_cartao;
+    }
+  
+    /**
+     * Sets id_cartao
+     * @param int $id_cartao 
+     * @return $this
+     */
+    public function setIdCartao($id_cartao)
+    {
+        
+        $this->id_cartao = $id_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta 
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
         return $this;
     }
     
@@ -247,9 +279,9 @@ class ConsultarCartaoResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

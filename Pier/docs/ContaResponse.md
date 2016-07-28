@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bin** | **int** |  | [optional] 
-**cartao** | [**\br.com.conductor.pier.api.v1.model\ConsultarContaCartaoResponse**](ConsultarContaCartaoResponse.md) |  | [optional] 
+**cartao** | [**\br.com.conductor.pier.api.v1_1.model\ConsultarContaCartaoResponse**](ConsultarContaCartaoResponse.md) |  | [optional] 
 **data_cadastramento** | **string** |  | [optional] 
 **data_ultimo_pagamento** | **string** |  | [optional] 
 **data_venc_cobranca** | **string** |  | [optional] 
@@ -28,9 +28,9 @@ Name | Type | Description | Notes
 **num_celular_sms** | **string** |  | [optional] 
 **pagamentos** | **double** |  | [optional] 
 **permite_refinanciamento** | **bool** |  | [optional] 
-**pessoa_fisica** | [**\br.com.conductor.pier.api.v1.model\PessoaFisicaResponse**](PessoaFisicaResponse.md) |  | [optional] 
+**pessoa_fisica** | [**\br.com.conductor.pier.api.v1_1.model\PessoaFisicaResponse**](PessoaFisicaResponse.md) |  | [optional] 
 **quantidade_pagamentos** | **int** |  | [optional] 
-**saldo_limite** | [**\br.com.conductor.pier.api.v1.model\SaldoLimiteResponse**](SaldoLimiteResponse.md) |  | [optional] 
+**saldo_limite** | [**\br.com.conductor.pier.api.v1_1.model\SaldoLimiteResponse**](SaldoLimiteResponse.md) |  | [optional] 
 **status** | **int** |  | [optional] 
 **status_data** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **taxa_refinanciamento** | **string** |  | [optional] 

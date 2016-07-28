@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **string** |  | [optional] 
-**extra_info** | [**\br.com.conductor.pier.api.v1.model\ExtraInfo**](ExtraInfo.md) |  | [optional] 
+**extra_info** | [**\br.com.conductor.pier.api.v1_1.model\ExtraInfo**](ExtraInfo.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **owner** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 

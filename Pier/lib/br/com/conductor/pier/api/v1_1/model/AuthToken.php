@@ -1,11 +1,11 @@
 <?php
 /**
- * BodyAccessToken
+ * AuthToken
  *
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,29 +31,31 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * BodyAccessToken Class Doc Comment
+ * AuthToken Class Doc Comment
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BodyAccessToken implements ArrayAccess
+class AuthToken implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'auth_token' => '\br.com.conductor.pier.api.v1.model\AuthToken',
-        'action' => 'string',
-        'user' => 'string'
+        'code' => 'string',
+        'extra_info' => '\br.com.conductor.pier.api.v1_1.model\ExtraInfo',
+        'id' => 'int',
+        'owner' => 'string',
+        'status' => 'string'
     );
   
     static function swaggerTypes() {
@@ -65,9 +67,11 @@ class BodyAccessToken implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'auth_token' => 'AuthToken',
-        'action' => 'action',
-        'user' => 'user'
+        'code' => 'code',
+        'extra_info' => 'extraInfo',
+        'id' => 'id',
+        'owner' => 'owner',
+        'status' => 'status'
     );
   
     static function attributeMap() {
@@ -79,9 +83,11 @@ class BodyAccessToken implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'auth_token' => 'setAuthToken',
-        'action' => 'setAction',
-        'user' => 'setUser'
+        'code' => 'setCode',
+        'extra_info' => 'setExtraInfo',
+        'id' => 'setId',
+        'owner' => 'setOwner',
+        'status' => 'setStatus'
     );
   
     static function setters() {
@@ -93,9 +99,11 @@ class BodyAccessToken implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'auth_token' => 'getAuthToken',
-        'action' => 'getAction',
-        'user' => 'getUser'
+        'code' => 'getCode',
+        'extra_info' => 'getExtraInfo',
+        'id' => 'getId',
+        'owner' => 'getOwner',
+        'status' => 'getStatus'
     );
   
     static function getters() {
@@ -104,22 +112,34 @@ class BodyAccessToken implements ArrayAccess
 
     
     /**
-      * $auth_token 
-      * @var \br.com.conductor.pier.api.v1.model\AuthToken
-      */
-    protected $auth_token;
-    
-    /**
-      * $action 
+      * $code 
       * @var string
       */
-    protected $action;
+    protected $code;
     
     /**
-      * $user 
+      * $extra_info 
+      * @var \br.com.conductor.pier.api.v1_1.model\ExtraInfo
+      */
+    protected $extra_info;
+    
+    /**
+      * $id 
+      * @var int
+      */
+    protected $id;
+    
+    /**
+      * $owner 
       * @var string
       */
-    protected $user;
+    protected $owner;
+    
+    /**
+      * $status 
+      * @var string
+      */
+    protected $status;
     
 
     /**
@@ -130,75 +150,119 @@ class BodyAccessToken implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->auth_token = $data["auth_token"];
-            $this->action = $data["action"];
-            $this->user = $data["user"];
+            $this->code = $data["code"];
+            $this->extra_info = $data["extra_info"];
+            $this->id = $data["id"];
+            $this->owner = $data["owner"];
+            $this->status = $data["status"];
         }
     }
     
     /**
-     * Gets auth_token
-     * @return \br.com.conductor.pier.api.v1.model\AuthToken
+     * Gets code
+     * @return string
      */
-    public function getAuthToken()
+    public function getCode()
     {
-        return $this->auth_token;
+        return $this->code;
     }
   
     /**
-     * Sets auth_token
-     * @param \br.com.conductor.pier.api.v1.model\AuthToken $auth_token 
+     * Sets code
+     * @param string $code 
      * @return $this
      */
-    public function setAuthToken($auth_token)
+    public function setCode($code)
     {
         
-        $this->auth_token = $auth_token;
+        $this->code = $code;
         return $this;
     }
     
     /**
-     * Gets action
-     * @return string
+     * Gets extra_info
+     * @return \br.com.conductor.pier.api.v1_1.model\ExtraInfo
      */
-    public function getAction()
+    public function getExtraInfo()
     {
-        return $this->action;
+        return $this->extra_info;
     }
   
     /**
-     * Sets action
-     * @param string $action 
+     * Sets extra_info
+     * @param \br.com.conductor.pier.api.v1_1.model\ExtraInfo $extra_info 
      * @return $this
      */
-    public function setAction($action)
+    public function setExtraInfo($extra_info)
     {
-        $allowed_values = array("CREATED", "UPDATED", "DELETED");
-        if (!in_array($action, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'CREATED', 'UPDATED', 'DELETED'");
+        
+        $this->extra_info = $extra_info;
+        return $this;
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id 
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets owner
+     * @return string
+     */
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+  
+    /**
+     * Sets owner
+     * @param string $owner 
+     * @return $this
+     */
+    public function setOwner($owner)
+    {
+        
+        $this->owner = $owner;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param string $status 
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array("ACTIVE", "REVOKED", "DELETED");
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'ACTIVE', 'REVOKED', 'DELETED'");
         }
-        $this->action = $action;
-        return $this;
-    }
-    
-    /**
-     * Gets user
-     * @return string
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-  
-    /**
-     * Sets user
-     * @param string $user 
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        
-        $this->user = $user;
+        $this->status = $status;
         return $this;
     }
     
@@ -250,9 +314,9 @@ class BodyAccessToken implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

@@ -1,11 +1,11 @@
 <?php
 /**
- * AuthToken
+ * ConsultarCartaoResponse
  *
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,31 +31,29 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * AuthToken Class Doc Comment
+ * ConsultarCartaoResponse Class Doc Comment
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AuthToken implements ArrayAccess
+class ConsultarCartaoResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'code' => 'string',
-        'extra_info' => '\br.com.conductor.pier.api.v1.model\ExtraInfo',
-        'id' => 'int',
-        'owner' => 'string',
-        'status' => 'string'
+        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartaoResponse[]',
+        'codigo_retorno' => 'int',
+        'descricao_retorno' => 'string'
     );
   
     static function swaggerTypes() {
@@ -67,11 +65,9 @@ class AuthToken implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'code' => 'code',
-        'extra_info' => 'extraInfo',
-        'id' => 'id',
-        'owner' => 'owner',
-        'status' => 'status'
+        'cartoes' => 'cartoes',
+        'codigo_retorno' => 'codigoRetorno',
+        'descricao_retorno' => 'descricaoRetorno'
     );
   
     static function attributeMap() {
@@ -83,11 +79,9 @@ class AuthToken implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'code' => 'setCode',
-        'extra_info' => 'setExtraInfo',
-        'id' => 'setId',
-        'owner' => 'setOwner',
-        'status' => 'setStatus'
+        'cartoes' => 'setCartoes',
+        'codigo_retorno' => 'setCodigoRetorno',
+        'descricao_retorno' => 'setDescricaoRetorno'
     );
   
     static function setters() {
@@ -99,11 +93,9 @@ class AuthToken implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'code' => 'getCode',
-        'extra_info' => 'getExtraInfo',
-        'id' => 'getId',
-        'owner' => 'getOwner',
-        'status' => 'getStatus'
+        'cartoes' => 'getCartoes',
+        'codigo_retorno' => 'getCodigoRetorno',
+        'descricao_retorno' => 'getDescricaoRetorno'
     );
   
     static function getters() {
@@ -112,34 +104,22 @@ class AuthToken implements ArrayAccess
 
     
     /**
-      * $code 
-      * @var string
+      * $cartoes 
+      * @var \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
       */
-    protected $code;
+    protected $cartoes;
     
     /**
-      * $extra_info 
-      * @var \br.com.conductor.pier.api.v1.model\ExtraInfo
-      */
-    protected $extra_info;
-    
-    /**
-      * $id 
+      * $codigo_retorno 
       * @var int
       */
-    protected $id;
+    protected $codigo_retorno;
     
     /**
-      * $owner 
+      * $descricao_retorno 
       * @var string
       */
-    protected $owner;
-    
-    /**
-      * $status 
-      * @var string
-      */
-    protected $status;
+    protected $descricao_retorno;
     
 
     /**
@@ -150,119 +130,72 @@ class AuthToken implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->code = $data["code"];
-            $this->extra_info = $data["extra_info"];
-            $this->id = $data["id"];
-            $this->owner = $data["owner"];
-            $this->status = $data["status"];
+            $this->cartoes = $data["cartoes"];
+            $this->codigo_retorno = $data["codigo_retorno"];
+            $this->descricao_retorno = $data["descricao_retorno"];
         }
     }
     
     /**
-     * Gets code
-     * @return string
+     * Gets cartoes
+     * @return \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
      */
-    public function getCode()
+    public function getCartoes()
     {
-        return $this->code;
+        return $this->cartoes;
     }
   
     /**
-     * Sets code
-     * @param string $code 
+     * Sets cartoes
+     * @param \br.com.conductor.pier.api.v1_1.model\CartaoResponse[] $cartoes 
      * @return $this
      */
-    public function setCode($code)
+    public function setCartoes($cartoes)
     {
         
-        $this->code = $code;
+        $this->cartoes = $cartoes;
         return $this;
     }
     
     /**
-     * Gets extra_info
-     * @return \br.com.conductor.pier.api.v1.model\ExtraInfo
-     */
-    public function getExtraInfo()
-    {
-        return $this->extra_info;
-    }
-  
-    /**
-     * Sets extra_info
-     * @param \br.com.conductor.pier.api.v1.model\ExtraInfo $extra_info 
-     * @return $this
-     */
-    public function setExtraInfo($extra_info)
-    {
-        
-        $this->extra_info = $extra_info;
-        return $this;
-    }
-    
-    /**
-     * Gets id
+     * Gets codigo_retorno
      * @return int
      */
-    public function getId()
+    public function getCodigoRetorno()
     {
-        return $this->id;
+        return $this->codigo_retorno;
     }
   
     /**
-     * Sets id
-     * @param int $id 
+     * Sets codigo_retorno
+     * @param int $codigo_retorno 
      * @return $this
      */
-    public function setId($id)
+    public function setCodigoRetorno($codigo_retorno)
     {
         
-        $this->id = $id;
+        $this->codigo_retorno = $codigo_retorno;
         return $this;
     }
     
     /**
-     * Gets owner
+     * Gets descricao_retorno
      * @return string
      */
-    public function getOwner()
+    public function getDescricaoRetorno()
     {
-        return $this->owner;
+        return $this->descricao_retorno;
     }
   
     /**
-     * Sets owner
-     * @param string $owner 
+     * Sets descricao_retorno
+     * @param string $descricao_retorno 
      * @return $this
      */
-    public function setOwner($owner)
+    public function setDescricaoRetorno($descricao_retorno)
     {
         
-        $this->owner = $owner;
-        return $this;
-    }
-    
-    /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-  
-    /**
-     * Sets status
-     * @param string $status 
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $allowed_values = array("ACTIVE", "REVOKED", "DELETED");
-        if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'ACTIVE', 'REVOKED', 'DELETED'");
-        }
-        $this->status = $status;
+        $this->descricao_retorno = $descricao_retorno;
         return $this;
     }
     
@@ -314,9 +247,9 @@ class AuthToken implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

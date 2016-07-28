@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **data_vencimento** | **string** |  | [optional] 
 **debitos_nacionais** | **double** |  | [optional] 
 **descricao_retorno** | **string** |  | [optional] 
-**extrato** | [**\br.com.conductor.pier.api.v1.model\ExtratoResponse[]**](ExtratoResponse.md) |  | [optional] 
+**extrato** | [**\br.com.conductor.pier.api.v1_1.model\ExtratoResponse[]**](ExtratoResponse.md) |  | [optional] 
 **id_cartao** | **int** |  | [optional] 
 **id_conta** | **int** |  | [optional] 
 **multa** | **double** |  | [optional] 

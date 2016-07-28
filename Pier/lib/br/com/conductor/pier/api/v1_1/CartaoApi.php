@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,18 +31,18 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1;
+namespace br.com.conductor.pier.api.v1_1;
 
-use \br.com.conductor.pier.api.v1.invoker\Configuration;
-use \br.com.conductor.pier.api.v1.invoker\ApiClient;
-use \br.com.conductor.pier.api.v1.invoker\ApiException;
-use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
+use \br.com.conductor.pier.api.v1_1.invoker\Configuration;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiClient;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
+use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
  * CartaoApi Class Doc Comment
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -52,13 +52,13 @@ class CartaoApi
 
     /**
      * API Client
-     * @var \br.com.conductor.pier.api.v1.invoker\ApiClient instance of the ApiClient
+     * @var \br.com.conductor.pier.api.v1_1.invoker\ApiClient instance of the ApiClient
      */
     protected $apiClient;
   
     /**
      * Constructor
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient|null $apiClient The api client to use
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient|null $apiClient The api client to use
      */
     function __construct($apiClient = null)
     {
@@ -72,7 +72,7 @@ class CartaoApi
   
     /**
      * Get API client
-     * @return \br.com.conductor.pier.api.v1.invoker\ApiClient get the API client
+     * @return \br.com.conductor.pier.api.v1_1.invoker\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -81,7 +81,7 @@ class CartaoApi
   
     /**
      * Set the API client
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient $apiClient set the API client
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient $apiClient set the API client
      * @return CartaoApi
      */
     public function setApiClient(ApiClient $apiClient)
@@ -100,8 +100,8 @@ class CartaoApi
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
      * @param int $motivo Motivo do bloqueio (required)
      * @param string $observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)
-     * @return \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao = null)
     {
@@ -119,8 +119,8 @@ class CartaoApi
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
      * @param int $motivo Motivo do bloqueio (required)
      * @param string $observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)
-     * @return Array of \br.com.conductor.pier.api.v1.model\CancelarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function bloquearCartaoUsingPOSTWithHttpInfo($id_conta, $id_cartao, $motivo, $observacao = null)
     {
@@ -202,19 +202,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\CancelarCartaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\CancelarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\CancelarCartaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -231,8 +231,8 @@ class CartaoApi
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
      * @param string $numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao = null)
     {
@@ -249,8 +249,8 @@ class CartaoApi
      * @param int $id_conta ID da Conta que pertence o cart\u00C3\u00A3o (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar (required)
      * @param string $numero_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarCartaoUsingGETWithHttpInfo($id_conta, $id_cartao, $numero_cartao = null)
     {
@@ -324,19 +324,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -351,8 +351,8 @@ class CartaoApi
      * Retorna todos os cart\u00C3\u00B5es
      *
      * @param int $id_conta ID da Conta (required)
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarCartoesUsingGET($id_conta)
     {
@@ -367,8 +367,8 @@ class CartaoApi
      * Retorna todos os cart\u00C3\u00B5es
      *
      * @param int $id_conta ID da Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarCartoesUsingGETWithHttpInfo($id_conta)
     {
@@ -426,19 +426,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarCartaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -455,8 +455,8 @@ class CartaoApi
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @param string $codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)
-     * @return \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao = null)
     {
@@ -473,8 +473,8 @@ class CartaoApi
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite (required)
      * @param string $codigo_segurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)
-     * @return Array of \br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function desbloquearCartaoUsingPOSTWithHttpInfo($id_conta, $id_cartao, $codigo_segurancao = null)
     {
@@ -548,19 +548,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\DesbloquearCartaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -576,8 +576,8 @@ class CartaoApi
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
-     * @return \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function embossadoCartaoUsingPUT($id_conta, $id_cartao)
     {
@@ -593,8 +593,8 @@ class CartaoApi
      *
      * @param int $id_conta ID da Conta (required)
      * @param int $id_cartao ID do Cart\u00C3\u00A3o que deseja cancelar (required)
-     * @return Array of \br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function embossadoCartaoUsingPUTWithHttpInfo($id_conta, $id_cartao)
     {
@@ -664,19 +664,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\EmbossadoCartaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

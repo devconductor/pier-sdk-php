@@ -28,6 +28,6 @@
         "squizlabs/php_codesniffer": "~2.0"
     },
     "autoload": {
-        "psr-4": { "br.com.conductor.pier.api.v1.invoker\\" : "lib/" }
+        "psr-4": { "br.com.conductor.pier.api.v1_1.invoker\\" : "lib/" }
     }
 }

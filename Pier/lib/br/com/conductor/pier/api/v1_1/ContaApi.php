@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,18 +31,18 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1;
+namespace br.com.conductor.pier.api.v1_1;
 
-use \br.com.conductor.pier.api.v1.invoker\Configuration;
-use \br.com.conductor.pier.api.v1.invoker\ApiClient;
-use \br.com.conductor.pier.api.v1.invoker\ApiException;
-use \br.com.conductor.pier.api.v1.invoker\ObjectSerializer;
+use \br.com.conductor.pier.api.v1_1.invoker\Configuration;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiClient;
+use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
+use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
  * ContaApi Class Doc Comment
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -52,13 +52,13 @@ class ContaApi
 
     /**
      * API Client
-     * @var \br.com.conductor.pier.api.v1.invoker\ApiClient instance of the ApiClient
+     * @var \br.com.conductor.pier.api.v1_1.invoker\ApiClient instance of the ApiClient
      */
     protected $apiClient;
   
     /**
      * Constructor
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient|null $apiClient The api client to use
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient|null $apiClient The api client to use
      */
     function __construct($apiClient = null)
     {
@@ -72,7 +72,7 @@ class ContaApi
   
     /**
      * Get API client
-     * @return \br.com.conductor.pier.api.v1.invoker\ApiClient get the API client
+     * @return \br.com.conductor.pier.api.v1_1.invoker\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -81,7 +81,7 @@ class ContaApi
   
     /**
      * Set the API client
-     * @param \br.com.conductor.pier.api.v1.invoker\ApiClient $apiClient set the API client
+     * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient $apiClient set the API client
      * @return ContaApi
      */
     public function setApiClient(ApiClient $apiClient)
@@ -100,8 +100,8 @@ class ContaApi
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)
      * @param int $id_conta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarContaResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function buscarContaUsingGET($nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
     {
@@ -119,8 +119,8 @@ class ContaApi
      * @param string $cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)
      * @param int $id_conta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarContaResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function buscarContaUsingGETWithHttpInfo($nome = null, $cpf = null, $numero_cartao = null, $id_conta = null)
     {
@@ -182,19 +182,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarContaResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarContaResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarContaResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -209,8 +209,8 @@ class ContaApi
      * Retorna uma conta
      *
      * @param int $id_conta ID da Conta (required)
-     * @return \br.com.conductor.pier.api.v1.model\ContaResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ContaResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarContaUsingGET($id_conta)
     {
@@ -225,8 +225,8 @@ class ContaApi
      * Retorna uma conta
      *
      * @param int $id_conta ID da Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarContaUsingGETWithHttpInfo($id_conta)
     {
@@ -284,19 +284,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ContaResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ContaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ContaResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -312,8 +312,8 @@ class ContaApi
      *
      * @param int $id_conta ID da Conta (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarExtratoFaturasUsingGET($id_conta, $data_vencimento)
     {
@@ -329,8 +329,8 @@ class ContaApi
      *
      * @param int $id_conta ID da Conta (required)
      * @param string $data_vencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es (required)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarExtratoFaturasUsingGETWithHttpInfo($id_conta, $data_vencimento)
     {
@@ -396,23 +396,23 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             case 204:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -427,8 +427,8 @@ class ContaApi
      * Retorna o limite
      *
      * @param int $id_conta ID da Conta (required)
-     * @return \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return \br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarSaldosLimitesUsingGET($id_conta)
     {
@@ -443,8 +443,8 @@ class ContaApi
      * Retorna o limite
      *
      * @param int $id_conta ID da Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1.invoker\ApiException on non-2xx response
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarSaldosLimitesUsingGETWithHttpInfo($id_conta)
     {
@@ -502,19 +502,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -1,11 +1,11 @@
 <?php
 /**
- * CancelarCartaoResponse
+ * BodyAccessToken
  *
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1.invoker
+ * @package  br.com.conductor.pier.api.v1_1.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,30 +31,29 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1.model;
+namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * CancelarCartaoResponse Class Doc Comment
+ * BodyAccessToken Class Doc Comment
  *
  * @category    Class
  * @description 
- * @package     br.com.conductor.pier.api.v1.invoker
+ * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CancelarCartaoResponse implements ArrayAccess
+class BodyAccessToken implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'codigo_retorno' => 'int',
-        'descricao_retorno' => 'string',
-        'id_cartao' => 'int',
-        'id_conta' => 'int'
+        'auth_token' => '\br.com.conductor.pier.api.v1_1.model\AuthToken',
+        'action' => 'string',
+        'user' => 'string'
     );
   
     static function swaggerTypes() {
@@ -66,10 +65,9 @@ class CancelarCartaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'codigo_retorno' => 'codigoRetorno',
-        'descricao_retorno' => 'descricaoRetorno',
-        'id_cartao' => 'idCartao',
-        'id_conta' => 'idConta'
+        'auth_token' => 'AuthToken',
+        'action' => 'action',
+        'user' => 'user'
     );
   
     static function attributeMap() {
@@ -81,10 +79,9 @@ class CancelarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'codigo_retorno' => 'setCodigoRetorno',
-        'descricao_retorno' => 'setDescricaoRetorno',
-        'id_cartao' => 'setIdCartao',
-        'id_conta' => 'setIdConta'
+        'auth_token' => 'setAuthToken',
+        'action' => 'setAction',
+        'user' => 'setUser'
     );
   
     static function setters() {
@@ -96,10 +93,9 @@ class CancelarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'codigo_retorno' => 'getCodigoRetorno',
-        'descricao_retorno' => 'getDescricaoRetorno',
-        'id_cartao' => 'getIdCartao',
-        'id_conta' => 'getIdConta'
+        'auth_token' => 'getAuthToken',
+        'action' => 'getAction',
+        'user' => 'getUser'
     );
   
     static function getters() {
@@ -108,28 +104,22 @@ class CancelarCartaoResponse implements ArrayAccess
 
     
     /**
-      * $codigo_retorno 
-      * @var int
+      * $auth_token 
+      * @var \br.com.conductor.pier.api.v1_1.model\AuthToken
       */
-    protected $codigo_retorno;
+    protected $auth_token;
     
     /**
-      * $descricao_retorno 
+      * $action 
       * @var string
       */
-    protected $descricao_retorno;
+    protected $action;
     
     /**
-      * $id_cartao 
-      * @var int
+      * $user 
+      * @var string
       */
-    protected $id_cartao;
-    
-    /**
-      * $id_conta 
-      * @var int
-      */
-    protected $id_conta;
+    protected $user;
     
 
     /**
@@ -140,94 +130,75 @@ class CancelarCartaoResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->codigo_retorno = $data["codigo_retorno"];
-            $this->descricao_retorno = $data["descricao_retorno"];
-            $this->id_cartao = $data["id_cartao"];
-            $this->id_conta = $data["id_conta"];
+            $this->auth_token = $data["auth_token"];
+            $this->action = $data["action"];
+            $this->user = $data["user"];
         }
     }
     
     /**
-     * Gets codigo_retorno
-     * @return int
+     * Gets auth_token
+     * @return \br.com.conductor.pier.api.v1_1.model\AuthToken
      */
-    public function getCodigoRetorno()
+    public function getAuthToken()
     {
-        return $this->codigo_retorno;
+        return $this->auth_token;
     }
   
     /**
-     * Sets codigo_retorno
-     * @param int $codigo_retorno 
+     * Sets auth_token
+     * @param \br.com.conductor.pier.api.v1_1.model\AuthToken $auth_token 
      * @return $this
      */
-    public function setCodigoRetorno($codigo_retorno)
+    public function setAuthToken($auth_token)
     {
         
-        $this->codigo_retorno = $codigo_retorno;
+        $this->auth_token = $auth_token;
         return $this;
     }
     
     /**
-     * Gets descricao_retorno
+     * Gets action
      * @return string
      */
-    public function getDescricaoRetorno()
+    public function getAction()
     {
-        return $this->descricao_retorno;
+        return $this->action;
     }
   
     /**
-     * Sets descricao_retorno
-     * @param string $descricao_retorno 
+     * Sets action
+     * @param string $action 
      * @return $this
      */
-    public function setDescricaoRetorno($descricao_retorno)
+    public function setAction($action)
     {
-        
-        $this->descricao_retorno = $descricao_retorno;
+        $allowed_values = array("CREATED", "UPDATED", "DELETED");
+        if (!in_array($action, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'CREATED', 'UPDATED', 'DELETED'");
+        }
+        $this->action = $action;
         return $this;
     }
     
     /**
-     * Gets id_cartao
-     * @return int
+     * Gets user
+     * @return string
      */
-    public function getIdCartao()
+    public function getUser()
     {
-        return $this->id_cartao;
+        return $this->user;
     }
   
     /**
-     * Sets id_cartao
-     * @param int $id_cartao 
+     * Sets user
+     * @param string $user 
      * @return $this
      */
-    public function setIdCartao($id_cartao)
+    public function setUser($user)
     {
         
-        $this->id_cartao = $id_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets id_conta
-     * @return int
-     */
-    public function getIdConta()
-    {
-        return $this->id_conta;
-    }
-  
-    /**
-     * Sets id_conta
-     * @param int $id_conta 
-     * @return $this
-     */
-    public function setIdConta($id_conta)
-    {
-        
-        $this->id_conta = $id_conta;
+        $this->user = $user;
         return $this;
     }
     
@@ -279,9 +250,9 @@ class CancelarCartaoResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         } else {
-            return json_encode(\br.com.conductor.pier.api.v1.invoker\ObjectSerializer::sanitizeForSerialization($this));
+            return json_encode(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::sanitizeForSerialization($this));
         }
     }
 }

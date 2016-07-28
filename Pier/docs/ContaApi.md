@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1.invoker\ContaApi
+# br.com.conductor.pier.api.v1_1.invoker\ContaApi
 
 All URIs are relative to *https://localhost/*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **buscarContaUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarContaResponse buscarContaUsingGET($nome, $cpf, $numero_cartao, $id_conta)
+> \br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse buscarContaUsingGET($nome, $cpf, $numero_cartao, $id_conta)
 
 Buscar contas
 
@@ -23,11 +23,11 @@ Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ContaApi();
 $nome = "nome_example"; // string | Nome
 $cpf = "cpf_example"; // string | CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
 $numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ConsultarContaResponse**](ConsultarContaResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ConsultarContaResponse**](ConsultarContaResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarContaUsingGET**
-> \br.com.conductor.pier.api.v1.model\ContaResponse consultarContaUsingGET($id_conta)
+> \br.com.conductor.pier.api.v1_1.model\ContaResponse consultarContaUsingGET($id_conta)
 
 Retorna uma conta
 
@@ -79,11 +79,11 @@ Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ContaApi();
 $id_conta = 56; // int | ID da Conta
 
 try { 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ContaResponse**](ContaResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ContaResponse**](ContaResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarExtratoFaturasUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET($id_conta, $data_vencimento)
+> \br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET($id_conta, $data_vencimento)
 
 Retorna os extratos
 
@@ -129,11 +129,11 @@ Consulte os extratos de uma determinada conta
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ContaApi();
 $id_conta = 56; // int | ID da Conta
 $data_vencimento = "data_vencimento_example"; // string | Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ConsultarExtratoContaResponse**](ConsultarExtratoContaResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ConsultarExtratoContaResponse**](ConsultarExtratoContaResponse.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarSaldosLimitesUsingGET**
-> \br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET($id_conta)
+> \br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET($id_conta)
 
 Retorna o limite
 
@@ -181,11 +181,11 @@ Consulte os limites de uma determinada conta
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1.invoker\Api\ContaApi();
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ContaApi();
 $id_conta = 56; // int | ID da Conta
 
 try { 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1.model\ConsultarSaldoLimitesResponse**](ConsultarSaldoLimitesResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ConsultarSaldoLimitesResponse**](ConsultarSaldoLimitesResponse.md)
 
 ### Authorization
 
