@@ -69,6 +69,7 @@ class CartaoResponse implements ArrayAccess
         'id_log' => 'string',
         'id_pessoa_fisica' => 'int',
         'id_produto' => 'int',
+        'nome_plastico' => 'string',
         'numero_cartao' => 'string',
         'numero_cartao_real' => 'string',
         'status_cartao' => 'int',
@@ -102,6 +103,7 @@ class CartaoResponse implements ArrayAccess
         'id_log' => 'idLog',
         'id_pessoa_fisica' => 'idPessoaFisica',
         'id_produto' => 'idProduto',
+        'nome_plastico' => 'nomePlastico',
         'numero_cartao' => 'numeroCartao',
         'numero_cartao_real' => 'numeroCartaoReal',
         'status_cartao' => 'statusCartao',
@@ -135,6 +137,7 @@ class CartaoResponse implements ArrayAccess
         'id_log' => 'setIdLog',
         'id_pessoa_fisica' => 'setIdPessoaFisica',
         'id_produto' => 'setIdProduto',
+        'nome_plastico' => 'setNomePlastico',
         'numero_cartao' => 'setNumeroCartao',
         'numero_cartao_real' => 'setNumeroCartaoReal',
         'status_cartao' => 'setStatusCartao',
@@ -168,6 +171,7 @@ class CartaoResponse implements ArrayAccess
         'id_log' => 'getIdLog',
         'id_pessoa_fisica' => 'getIdPessoaFisica',
         'id_produto' => 'getIdProduto',
+        'nome_plastico' => 'getNomePlastico',
         'numero_cartao' => 'getNumeroCartao',
         'numero_cartao_real' => 'getNumeroCartaoReal',
         'status_cartao' => 'getStatusCartao',
@@ -288,6 +292,12 @@ class CartaoResponse implements ArrayAccess
     protected $id_produto;
     
     /**
+      * $nome_plastico 
+      * @var string
+      */
+    protected $nome_plastico;
+    
+    /**
       * $numero_cartao 
       * @var string
       */
@@ -338,6 +348,7 @@ class CartaoResponse implements ArrayAccess
             $this->id_log = $data["id_log"];
             $this->id_pessoa_fisica = $data["id_pessoa_fisica"];
             $this->id_produto = $data["id_produto"];
+            $this->nome_plastico = $data["nome_plastico"];
             $this->numero_cartao = $data["numero_cartao"];
             $this->numero_cartao_real = $data["numero_cartao_real"];
             $this->status_cartao = $data["status_cartao"];
@@ -720,6 +731,27 @@ class CartaoResponse implements ArrayAccess
     {
         
         $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_plastico
+     * @return string
+     */
+    public function getNomePlastico()
+    {
+        return $this->nome_plastico;
+    }
+  
+    /**
+     * Sets nome_plastico
+     * @param string $nome_plastico 
+     * @return $this
+     */
+    public function setNomePlastico($nome_plastico)
+    {
+        
+        $this->nome_plastico = $nome_plastico;
         return $this;
     }
     
