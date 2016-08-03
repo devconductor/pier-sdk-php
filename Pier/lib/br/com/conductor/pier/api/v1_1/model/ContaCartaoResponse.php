@@ -53,9 +53,9 @@ class ContaCartaoResponse implements ArrayAccess
     static $swaggerTypes = array(
         'cnpj_loja' => 'string',
         'cpf' => 'string',
-        'data_cadastro_conta' => 'string',
-        'data_emissao_identidade' => 'string',
-        'data_nascimento' => 'string',
+        'data_cadastro_conta' => '\DateTime',
+        'data_emissao_identidade' => '\DateTime',
+        'data_nascimento' => '\DateTime',
         'ddd_celular' => 'string',
         'id_conta' => 'int',
         'nome' => 'string',
@@ -161,19 +161,19 @@ class ContaCartaoResponse implements ArrayAccess
     
     /**
       * $data_cadastro_conta 
-      * @var string
+      * @var \DateTime
       */
     protected $data_cadastro_conta;
     
     /**
       * $data_emissao_identidade 
-      * @var string
+      * @var \DateTime
       */
     protected $data_emissao_identidade;
     
     /**
       * $data_nascimento 
-      * @var string
+      * @var \DateTime
       */
     protected $data_nascimento;
     
@@ -301,7 +301,7 @@ class ContaCartaoResponse implements ArrayAccess
     
     /**
      * Gets data_cadastro_conta
-     * @return string
+     * @return \DateTime
      */
     public function getDataCadastroConta()
     {
@@ -310,7 +310,7 @@ class ContaCartaoResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro_conta
-     * @param string $data_cadastro_conta 
+     * @param \DateTime $data_cadastro_conta 
      * @return $this
      */
     public function setDataCadastroConta($data_cadastro_conta)
@@ -322,7 +322,7 @@ class ContaCartaoResponse implements ArrayAccess
     
     /**
      * Gets data_emissao_identidade
-     * @return string
+     * @return \DateTime
      */
     public function getDataEmissaoIdentidade()
     {
@@ -331,7 +331,7 @@ class ContaCartaoResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade 
+     * @param \DateTime $data_emissao_identidade 
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -343,7 +343,7 @@ class ContaCartaoResponse implements ArrayAccess
     
     /**
      * Gets data_nascimento
-     * @return string
+     * @return \DateTime
      */
     public function getDataNascimento()
     {
@@ -352,7 +352,7 @@ class ContaCartaoResponse implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento 
+     * @param \DateTime $data_nascimento 
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
