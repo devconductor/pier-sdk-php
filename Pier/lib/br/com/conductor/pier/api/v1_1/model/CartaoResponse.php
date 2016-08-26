@@ -51,29 +51,22 @@ class CartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'bin' => 'int',
-        'cod_retorno' => 'int',
+        'arquivo_impressao' => 'string',
         'codigo_desbloqueio' => 'string',
-        'criptografia_hsm' => 'string',
-        'data_emissao' => '\DateTime',
-        'data_validade' => '\DateTime',
-        'data_vencimento_padrao' => 'string',
-        'descricao_retorno' => 'string',
-        'estagio_cartao' => 'int',
-        'estagio_data' => '\DateTime',
-        'flag_reversao' => 'bool',
-        'flag_senha' => 'bool',
-        'id_cartao' => 'int',
+        'data_estagio_cartao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'data_geracao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'data_impressao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'data_status_cartao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'data_validade' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'flag_impressao_origem_comercial' => 'int',
+        'flag_provisorio' => 'int',
+        'id' => 'int',
         'id_conta' => 'int',
-        'id_emissor' => 'int',
-        'id_log' => 'string',
-        'id_pessoa_fisica' => 'int',
-        'id_produto' => 'int',
-        'nome_plastico' => 'string',
+        'id_estagio_cartao' => 'int',
+        'id_pessoa' => 'int',
+        'id_status_cartao' => 'int',
         'numero_cartao' => 'string',
-        'numero_cartao_real' => 'string',
-        'status_cartao' => 'int',
-        'status_data' => '\DateTime'
+        'portador' => 'int'
     );
   
     static function swaggerTypes() {
@@ -85,29 +78,22 @@ class CartaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'bin' => 'bin',
-        'cod_retorno' => 'codRetorno',
+        'arquivo_impressao' => 'arquivoImpressao',
         'codigo_desbloqueio' => 'codigoDesbloqueio',
-        'criptografia_hsm' => 'criptografiaHSM',
-        'data_emissao' => 'dataEmissao',
+        'data_estagio_cartao' => 'dataEstagioCartao',
+        'data_geracao' => 'dataGeracao',
+        'data_impressao' => 'dataImpressao',
+        'data_status_cartao' => 'dataStatusCartao',
         'data_validade' => 'dataValidade',
-        'data_vencimento_padrao' => 'dataVencimentoPadrao',
-        'descricao_retorno' => 'descricaoRetorno',
-        'estagio_cartao' => 'estagioCartao',
-        'estagio_data' => 'estagioData',
-        'flag_reversao' => 'flagReversao',
-        'flag_senha' => 'flagSenha',
-        'id_cartao' => 'idCartao',
+        'flag_impressao_origem_comercial' => 'flagImpressaoOrigemComercial',
+        'flag_provisorio' => 'flagProvisorio',
+        'id' => 'id',
         'id_conta' => 'idConta',
-        'id_emissor' => 'idEmissor',
-        'id_log' => 'idLog',
-        'id_pessoa_fisica' => 'idPessoaFisica',
-        'id_produto' => 'idProduto',
-        'nome_plastico' => 'nomePlastico',
+        'id_estagio_cartao' => 'idEstagioCartao',
+        'id_pessoa' => 'idPessoa',
+        'id_status_cartao' => 'idStatusCartao',
         'numero_cartao' => 'numeroCartao',
-        'numero_cartao_real' => 'numeroCartaoReal',
-        'status_cartao' => 'statusCartao',
-        'status_data' => 'statusData'
+        'portador' => 'portador'
     );
   
     static function attributeMap() {
@@ -119,29 +105,22 @@ class CartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'bin' => 'setBin',
-        'cod_retorno' => 'setCodRetorno',
+        'arquivo_impressao' => 'setArquivoImpressao',
         'codigo_desbloqueio' => 'setCodigoDesbloqueio',
-        'criptografia_hsm' => 'setCriptografiaHsm',
-        'data_emissao' => 'setDataEmissao',
+        'data_estagio_cartao' => 'setDataEstagioCartao',
+        'data_geracao' => 'setDataGeracao',
+        'data_impressao' => 'setDataImpressao',
+        'data_status_cartao' => 'setDataStatusCartao',
         'data_validade' => 'setDataValidade',
-        'data_vencimento_padrao' => 'setDataVencimentoPadrao',
-        'descricao_retorno' => 'setDescricaoRetorno',
-        'estagio_cartao' => 'setEstagioCartao',
-        'estagio_data' => 'setEstagioData',
-        'flag_reversao' => 'setFlagReversao',
-        'flag_senha' => 'setFlagSenha',
-        'id_cartao' => 'setIdCartao',
+        'flag_impressao_origem_comercial' => 'setFlagImpressaoOrigemComercial',
+        'flag_provisorio' => 'setFlagProvisorio',
+        'id' => 'setId',
         'id_conta' => 'setIdConta',
-        'id_emissor' => 'setIdEmissor',
-        'id_log' => 'setIdLog',
-        'id_pessoa_fisica' => 'setIdPessoaFisica',
-        'id_produto' => 'setIdProduto',
-        'nome_plastico' => 'setNomePlastico',
+        'id_estagio_cartao' => 'setIdEstagioCartao',
+        'id_pessoa' => 'setIdPessoa',
+        'id_status_cartao' => 'setIdStatusCartao',
         'numero_cartao' => 'setNumeroCartao',
-        'numero_cartao_real' => 'setNumeroCartaoReal',
-        'status_cartao' => 'setStatusCartao',
-        'status_data' => 'setStatusData'
+        'portador' => 'setPortador'
     );
   
     static function setters() {
@@ -153,29 +132,22 @@ class CartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'bin' => 'getBin',
-        'cod_retorno' => 'getCodRetorno',
+        'arquivo_impressao' => 'getArquivoImpressao',
         'codigo_desbloqueio' => 'getCodigoDesbloqueio',
-        'criptografia_hsm' => 'getCriptografiaHsm',
-        'data_emissao' => 'getDataEmissao',
+        'data_estagio_cartao' => 'getDataEstagioCartao',
+        'data_geracao' => 'getDataGeracao',
+        'data_impressao' => 'getDataImpressao',
+        'data_status_cartao' => 'getDataStatusCartao',
         'data_validade' => 'getDataValidade',
-        'data_vencimento_padrao' => 'getDataVencimentoPadrao',
-        'descricao_retorno' => 'getDescricaoRetorno',
-        'estagio_cartao' => 'getEstagioCartao',
-        'estagio_data' => 'getEstagioData',
-        'flag_reversao' => 'getFlagReversao',
-        'flag_senha' => 'getFlagSenha',
-        'id_cartao' => 'getIdCartao',
+        'flag_impressao_origem_comercial' => 'getFlagImpressaoOrigemComercial',
+        'flag_provisorio' => 'getFlagProvisorio',
+        'id' => 'getId',
         'id_conta' => 'getIdConta',
-        'id_emissor' => 'getIdEmissor',
-        'id_log' => 'getIdLog',
-        'id_pessoa_fisica' => 'getIdPessoaFisica',
-        'id_produto' => 'getIdProduto',
-        'nome_plastico' => 'getNomePlastico',
+        'id_estagio_cartao' => 'getIdEstagioCartao',
+        'id_pessoa' => 'getIdPessoa',
+        'id_status_cartao' => 'getIdStatusCartao',
         'numero_cartao' => 'getNumeroCartao',
-        'numero_cartao_real' => 'getNumeroCartaoReal',
-        'status_cartao' => 'getStatusCartao',
-        'status_data' => 'getStatusData'
+        'portador' => 'getPortador'
     );
   
     static function getters() {
@@ -184,142 +156,100 @@ class CartaoResponse implements ArrayAccess
 
     
     /**
-      * $bin 
-      * @var int
+      * $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+      * @var string
       */
-    protected $bin;
+    protected $arquivo_impressao;
     
     /**
-      * $cod_retorno 
-      * @var int
-      */
-    protected $cod_retorno;
-    
-    /**
-      * $codigo_desbloqueio 
+      * $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
       * @var string
       */
     protected $codigo_desbloqueio;
     
     /**
-      * $criptografia_hsm 
-      * @var string
+      * $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
       */
-    protected $criptografia_hsm;
+    protected $data_estagio_cartao;
     
     /**
-      * $data_emissao 
-      * @var \DateTime
+      * $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
       */
-    protected $data_emissao;
+    protected $data_geracao;
     
     /**
-      * $data_validade 
-      * @var \DateTime
+      * $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      */
+    protected $data_impressao;
+    
+    /**
+      * $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      */
+    protected $data_status_cartao;
+    
+    /**
+      * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
       */
     protected $data_validade;
     
     /**
-      * $data_vencimento_padrao 
-      * @var string
-      */
-    protected $data_vencimento_padrao;
-    
-    /**
-      * $descricao_retorno 
-      * @var string
-      */
-    protected $descricao_retorno;
-    
-    /**
-      * $estagio_cartao 
+      * $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
       * @var int
       */
-    protected $estagio_cartao;
+    protected $flag_impressao_origem_comercial;
     
     /**
-      * $estagio_data 
-      * @var \DateTime
-      */
-    protected $estagio_data;
-    
-    /**
-      * $flag_reversao 
-      * @var bool
-      */
-    protected $flag_reversao;
-    
-    /**
-      * $flag_senha 
-      * @var bool
-      */
-    protected $flag_senha;
-    
-    /**
-      * $id_cartao 
+      * $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
       * @var int
       */
-    protected $id_cartao;
+    protected $flag_provisorio;
     
     /**
-      * $id_conta 
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+      * @var int
+      */
+    protected $id;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_emissor 
+      * $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
       * @var int
       */
-    protected $id_emissor;
+    protected $id_estagio_cartao;
     
     /**
-      * $id_log 
-      * @var string
-      */
-    protected $id_log;
-    
-    /**
-      * $id_pessoa_fisica 
+      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
       * @var int
       */
-    protected $id_pessoa_fisica;
+    protected $id_pessoa;
     
     /**
-      * $id_produto 
+      * $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
       * @var int
       */
-    protected $id_produto;
+    protected $id_status_cartao;
     
     /**
-      * $nome_plastico 
-      * @var string
-      */
-    protected $nome_plastico;
-    
-    /**
-      * $numero_cartao 
+      * $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $numero_cartao_real 
-      * @var string
-      */
-    protected $numero_cartao_real;
-    
-    /**
-      * $status_cartao 
+      * $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
       * @var int
       */
-    protected $status_cartao;
-    
-    /**
-      * $status_data 
-      * @var \DateTime
-      */
-    protected $status_data;
+    protected $portador;
     
 
     /**
@@ -330,71 +260,43 @@ class CartaoResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->bin = $data["bin"];
-            $this->cod_retorno = $data["cod_retorno"];
+            $this->arquivo_impressao = $data["arquivo_impressao"];
             $this->codigo_desbloqueio = $data["codigo_desbloqueio"];
-            $this->criptografia_hsm = $data["criptografia_hsm"];
-            $this->data_emissao = $data["data_emissao"];
+            $this->data_estagio_cartao = $data["data_estagio_cartao"];
+            $this->data_geracao = $data["data_geracao"];
+            $this->data_impressao = $data["data_impressao"];
+            $this->data_status_cartao = $data["data_status_cartao"];
             $this->data_validade = $data["data_validade"];
-            $this->data_vencimento_padrao = $data["data_vencimento_padrao"];
-            $this->descricao_retorno = $data["descricao_retorno"];
-            $this->estagio_cartao = $data["estagio_cartao"];
-            $this->estagio_data = $data["estagio_data"];
-            $this->flag_reversao = $data["flag_reversao"];
-            $this->flag_senha = $data["flag_senha"];
-            $this->id_cartao = $data["id_cartao"];
+            $this->flag_impressao_origem_comercial = $data["flag_impressao_origem_comercial"];
+            $this->flag_provisorio = $data["flag_provisorio"];
+            $this->id = $data["id"];
             $this->id_conta = $data["id_conta"];
-            $this->id_emissor = $data["id_emissor"];
-            $this->id_log = $data["id_log"];
-            $this->id_pessoa_fisica = $data["id_pessoa_fisica"];
-            $this->id_produto = $data["id_produto"];
-            $this->nome_plastico = $data["nome_plastico"];
+            $this->id_estagio_cartao = $data["id_estagio_cartao"];
+            $this->id_pessoa = $data["id_pessoa"];
+            $this->id_status_cartao = $data["id_status_cartao"];
             $this->numero_cartao = $data["numero_cartao"];
-            $this->numero_cartao_real = $data["numero_cartao_real"];
-            $this->status_cartao = $data["status_cartao"];
-            $this->status_data = $data["status_data"];
+            $this->portador = $data["portador"];
         }
     }
     
     /**
-     * Gets bin
-     * @return int
+     * Gets arquivo_impressao
+     * @return string
      */
-    public function getBin()
+    public function getArquivoImpressao()
     {
-        return $this->bin;
+        return $this->arquivo_impressao;
     }
   
     /**
-     * Sets bin
-     * @param int $bin 
+     * Sets arquivo_impressao
+     * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
      * @return $this
      */
-    public function setBin($bin)
+    public function setArquivoImpressao($arquivo_impressao)
     {
         
-        $this->bin = $bin;
-        return $this;
-    }
-    
-    /**
-     * Gets cod_retorno
-     * @return int
-     */
-    public function getCodRetorno()
-    {
-        return $this->cod_retorno;
-    }
-  
-    /**
-     * Sets cod_retorno
-     * @param int $cod_retorno 
-     * @return $this
-     */
-    public function setCodRetorno($cod_retorno)
-    {
-        
-        $this->cod_retorno = $cod_retorno;
+        $this->arquivo_impressao = $arquivo_impressao;
         return $this;
     }
     
@@ -409,7 +311,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_desbloqueio
-     * @param string $codigo_desbloqueio 
+     * @param string $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @return $this
      */
     public function setCodigoDesbloqueio($codigo_desbloqueio)
@@ -420,50 +322,92 @@ class CartaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets criptografia_hsm
-     * @return string
+     * Gets data_estagio_cartao
+     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
      */
-    public function getCriptografiaHsm()
+    public function getDataEstagioCartao()
     {
-        return $this->criptografia_hsm;
+        return $this->data_estagio_cartao;
     }
   
     /**
-     * Sets criptografia_hsm
-     * @param string $criptografia_hsm 
+     * Sets data_estagio_cartao
+     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @return $this
      */
-    public function setCriptografiaHsm($criptografia_hsm)
+    public function setDataEstagioCartao($data_estagio_cartao)
     {
         
-        $this->criptografia_hsm = $criptografia_hsm;
+        $this->data_estagio_cartao = $data_estagio_cartao;
         return $this;
     }
     
     /**
-     * Gets data_emissao
-     * @return \DateTime
+     * Gets data_geracao
+     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
      */
-    public function getDataEmissao()
+    public function getDataGeracao()
     {
-        return $this->data_emissao;
+        return $this->data_geracao;
     }
   
     /**
-     * Sets data_emissao
-     * @param \DateTime $data_emissao 
+     * Sets data_geracao
+     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @return $this
      */
-    public function setDataEmissao($data_emissao)
+    public function setDataGeracao($data_geracao)
     {
         
-        $this->data_emissao = $data_emissao;
+        $this->data_geracao = $data_geracao;
+        return $this;
+    }
+    
+    /**
+     * Gets data_impressao
+     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     */
+    public function getDataImpressao()
+    {
+        return $this->data_impressao;
+    }
+  
+    /**
+     * Sets data_impressao
+     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @return $this
+     */
+    public function setDataImpressao($data_impressao)
+    {
+        
+        $this->data_impressao = $data_impressao;
+        return $this;
+    }
+    
+    /**
+     * Gets data_status_cartao
+     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     */
+    public function getDataStatusCartao()
+    {
+        return $this->data_status_cartao;
+    }
+  
+    /**
+     * Sets data_status_cartao
+     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @return $this
+     */
+    public function setDataStatusCartao($data_status_cartao)
+    {
+        
+        $this->data_status_cartao = $data_status_cartao;
         return $this;
     }
     
     /**
      * Gets data_validade
-     * @return \DateTime
+     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
      */
     public function getDataValidade()
     {
@@ -472,7 +416,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \DateTime $data_validade 
+     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -483,149 +427,65 @@ class CartaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_vencimento_padrao
-     * @return string
-     */
-    public function getDataVencimentoPadrao()
-    {
-        return $this->data_vencimento_padrao;
-    }
-  
-    /**
-     * Sets data_vencimento_padrao
-     * @param string $data_vencimento_padrao 
-     * @return $this
-     */
-    public function setDataVencimentoPadrao($data_vencimento_padrao)
-    {
-        
-        $this->data_vencimento_padrao = $data_vencimento_padrao;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_retorno
-     * @return string
-     */
-    public function getDescricaoRetorno()
-    {
-        return $this->descricao_retorno;
-    }
-  
-    /**
-     * Sets descricao_retorno
-     * @param string $descricao_retorno 
-     * @return $this
-     */
-    public function setDescricaoRetorno($descricao_retorno)
-    {
-        
-        $this->descricao_retorno = $descricao_retorno;
-        return $this;
-    }
-    
-    /**
-     * Gets estagio_cartao
+     * Gets flag_impressao_origem_comercial
      * @return int
      */
-    public function getEstagioCartao()
+    public function getFlagImpressaoOrigemComercial()
     {
-        return $this->estagio_cartao;
+        return $this->flag_impressao_origem_comercial;
     }
   
     /**
-     * Sets estagio_cartao
-     * @param int $estagio_cartao 
+     * Sets flag_impressao_origem_comercial
+     * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
      * @return $this
      */
-    public function setEstagioCartao($estagio_cartao)
+    public function setFlagImpressaoOrigemComercial($flag_impressao_origem_comercial)
     {
         
-        $this->estagio_cartao = $estagio_cartao;
+        $this->flag_impressao_origem_comercial = $flag_impressao_origem_comercial;
         return $this;
     }
     
     /**
-     * Gets estagio_data
-     * @return \DateTime
-     */
-    public function getEstagioData()
-    {
-        return $this->estagio_data;
-    }
-  
-    /**
-     * Sets estagio_data
-     * @param \DateTime $estagio_data 
-     * @return $this
-     */
-    public function setEstagioData($estagio_data)
-    {
-        
-        $this->estagio_data = $estagio_data;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_reversao
-     * @return bool
-     */
-    public function getFlagReversao()
-    {
-        return $this->flag_reversao;
-    }
-  
-    /**
-     * Sets flag_reversao
-     * @param bool $flag_reversao 
-     * @return $this
-     */
-    public function setFlagReversao($flag_reversao)
-    {
-        
-        $this->flag_reversao = $flag_reversao;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_senha
-     * @return bool
-     */
-    public function getFlagSenha()
-    {
-        return $this->flag_senha;
-    }
-  
-    /**
-     * Sets flag_senha
-     * @param bool $flag_senha 
-     * @return $this
-     */
-    public function setFlagSenha($flag_senha)
-    {
-        
-        $this->flag_senha = $flag_senha;
-        return $this;
-    }
-    
-    /**
-     * Gets id_cartao
+     * Gets flag_provisorio
      * @return int
      */
-    public function getIdCartao()
+    public function getFlagProvisorio()
     {
-        return $this->id_cartao;
+        return $this->flag_provisorio;
     }
   
     /**
-     * Sets id_cartao
-     * @param int $id_cartao 
+     * Sets flag_provisorio
+     * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @return $this
      */
-    public function setIdCartao($id_cartao)
+    public function setFlagProvisorio($flag_provisorio)
     {
         
-        $this->id_cartao = $id_cartao;
+        $this->flag_provisorio = $flag_provisorio;
+        return $this;
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
         return $this;
     }
     
@@ -640,7 +500,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta 
+     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -651,107 +511,65 @@ class CartaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets id_emissor
+     * Gets id_estagio_cartao
      * @return int
      */
-    public function getIdEmissor()
+    public function getIdEstagioCartao()
     {
-        return $this->id_emissor;
+        return $this->id_estagio_cartao;
     }
   
     /**
-     * Sets id_emissor
-     * @param int $id_emissor 
+     * Sets id_estagio_cartao
+     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @return $this
      */
-    public function setIdEmissor($id_emissor)
+    public function setIdEstagioCartao($id_estagio_cartao)
     {
         
-        $this->id_emissor = $id_emissor;
+        $this->id_estagio_cartao = $id_estagio_cartao;
         return $this;
     }
     
     /**
-     * Gets id_log
-     * @return string
-     */
-    public function getIdLog()
-    {
-        return $this->id_log;
-    }
-  
-    /**
-     * Sets id_log
-     * @param string $id_log 
-     * @return $this
-     */
-    public function setIdLog($id_log)
-    {
-        
-        $this->id_log = $id_log;
-        return $this;
-    }
-    
-    /**
-     * Gets id_pessoa_fisica
+     * Gets id_pessoa
      * @return int
      */
-    public function getIdPessoaFisica()
+    public function getIdPessoa()
     {
-        return $this->id_pessoa_fisica;
+        return $this->id_pessoa;
     }
   
     /**
-     * Sets id_pessoa_fisica
-     * @param int $id_pessoa_fisica 
+     * Sets id_pessoa
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
      * @return $this
      */
-    public function setIdPessoaFisica($id_pessoa_fisica)
+    public function setIdPessoa($id_pessoa)
     {
         
-        $this->id_pessoa_fisica = $id_pessoa_fisica;
+        $this->id_pessoa = $id_pessoa;
         return $this;
     }
     
     /**
-     * Gets id_produto
+     * Gets id_status_cartao
      * @return int
      */
-    public function getIdProduto()
+    public function getIdStatusCartao()
     {
-        return $this->id_produto;
+        return $this->id_status_cartao;
     }
   
     /**
-     * Sets id_produto
-     * @param int $id_produto 
+     * Sets id_status_cartao
+     * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
      * @return $this
      */
-    public function setIdProduto($id_produto)
+    public function setIdStatusCartao($id_status_cartao)
     {
         
-        $this->id_produto = $id_produto;
-        return $this;
-    }
-    
-    /**
-     * Gets nome_plastico
-     * @return string
-     */
-    public function getNomePlastico()
-    {
-        return $this->nome_plastico;
-    }
-  
-    /**
-     * Sets nome_plastico
-     * @param string $nome_plastico 
-     * @return $this
-     */
-    public function setNomePlastico($nome_plastico)
-    {
-        
-        $this->nome_plastico = $nome_plastico;
+        $this->id_status_cartao = $id_status_cartao;
         return $this;
     }
     
@@ -766,7 +584,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao 
+     * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -777,65 +595,23 @@ class CartaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets numero_cartao_real
-     * @return string
-     */
-    public function getNumeroCartaoReal()
-    {
-        return $this->numero_cartao_real;
-    }
-  
-    /**
-     * Sets numero_cartao_real
-     * @param string $numero_cartao_real 
-     * @return $this
-     */
-    public function setNumeroCartaoReal($numero_cartao_real)
-    {
-        
-        $this->numero_cartao_real = $numero_cartao_real;
-        return $this;
-    }
-    
-    /**
-     * Gets status_cartao
+     * Gets portador
      * @return int
      */
-    public function getStatusCartao()
+    public function getPortador()
     {
-        return $this->status_cartao;
+        return $this->portador;
     }
   
     /**
-     * Sets status_cartao
-     * @param int $status_cartao 
+     * Sets portador
+     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
      * @return $this
      */
-    public function setStatusCartao($status_cartao)
+    public function setPortador($portador)
     {
         
-        $this->status_cartao = $status_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets status_data
-     * @return \DateTime
-     */
-    public function getStatusData()
-    {
-        return $this->status_data;
-    }
-  
-    /**
-     * Sets status_data
-     * @param \DateTime $status_data 
-     * @return $this
-     */
-    public function setStatusData($status_data)
-    {
-        
-        $this->status_data = $status_data;
+        $this->portador = $portador;
         return $this;
     }
     

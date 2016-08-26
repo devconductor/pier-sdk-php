@@ -1,6 +1,6 @@
 <?php
 /**
- * ConsultarCartaoResponse
+ * Chronology
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ConsultarCartaoResponse Class Doc Comment
+ * Chronology Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -44,16 +44,15 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConsultarCartaoResponse implements ArrayAccess
+class Chronology implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]',
-        'codigo_retorno' => 'int',
-        'descricao_retorno' => 'string'
+        'calendar_type' => 'string',
+        'id' => 'string'
     );
   
     static function swaggerTypes() {
@@ -65,9 +64,8 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cartoes' => 'cartoes',
-        'codigo_retorno' => 'codigoRetorno',
-        'descricao_retorno' => 'descricaoRetorno'
+        'calendar_type' => 'calendarType',
+        'id' => 'id'
     );
   
     static function attributeMap() {
@@ -79,9 +77,8 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cartoes' => 'setCartoes',
-        'codigo_retorno' => 'setCodigoRetorno',
-        'descricao_retorno' => 'setDescricaoRetorno'
+        'calendar_type' => 'setCalendarType',
+        'id' => 'setId'
     );
   
     static function setters() {
@@ -93,9 +90,8 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cartoes' => 'getCartoes',
-        'codigo_retorno' => 'getCodigoRetorno',
-        'descricao_retorno' => 'getDescricaoRetorno'
+        'calendar_type' => 'getCalendarType',
+        'id' => 'getId'
     );
   
     static function getters() {
@@ -104,22 +100,16 @@ class ConsultarCartaoResponse implements ArrayAccess
 
     
     /**
-      * $cartoes 
-      * @var \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]
-      */
-    protected $cartoes;
-    
-    /**
-      * $codigo_retorno 
-      * @var int
-      */
-    protected $codigo_retorno;
-    
-    /**
-      * $descricao_retorno 
+      * $calendar_type 
       * @var string
       */
-    protected $descricao_retorno;
+    protected $calendar_type;
+    
+    /**
+      * $id 
+      * @var string
+      */
+    protected $id;
     
 
     /**
@@ -130,72 +120,50 @@ class ConsultarCartaoResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cartoes = $data["cartoes"];
-            $this->codigo_retorno = $data["codigo_retorno"];
-            $this->descricao_retorno = $data["descricao_retorno"];
+            $this->calendar_type = $data["calendar_type"];
+            $this->id = $data["id"];
         }
     }
     
     /**
-     * Gets cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]
-     */
-    public function getCartoes()
-    {
-        return $this->cartoes;
-    }
-  
-    /**
-     * Sets cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[] $cartoes 
-     * @return $this
-     */
-    public function setCartoes($cartoes)
-    {
-        
-        $this->cartoes = $cartoes;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_retorno
-     * @return int
-     */
-    public function getCodigoRetorno()
-    {
-        return $this->codigo_retorno;
-    }
-  
-    /**
-     * Sets codigo_retorno
-     * @param int $codigo_retorno 
-     * @return $this
-     */
-    public function setCodigoRetorno($codigo_retorno)
-    {
-        
-        $this->codigo_retorno = $codigo_retorno;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_retorno
+     * Gets calendar_type
      * @return string
      */
-    public function getDescricaoRetorno()
+    public function getCalendarType()
     {
-        return $this->descricao_retorno;
+        return $this->calendar_type;
     }
   
     /**
-     * Sets descricao_retorno
-     * @param string $descricao_retorno 
+     * Sets calendar_type
+     * @param string $calendar_type 
      * @return $this
      */
-    public function setDescricaoRetorno($descricao_retorno)
+    public function setCalendarType($calendar_type)
     {
         
-        $this->descricao_retorno = $descricao_retorno;
+        $this->calendar_type = $calendar_type;
+        return $this;
+    }
+    
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param string $id 
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
         return $this;
     }
     

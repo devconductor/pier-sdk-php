@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartoes** | [**\br.com.conductor.pier.api.v1_1.model\CartaoResponse[]**](CartaoResponse.md) |  | [optional] 
+**cartoes** | [**\br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]**](CartaoResponseOld.md) |  | [optional] 
 **codigo_retorno** | **int** |  | [optional] 
 **descricao_retorno** | **string** |  | [optional] 
 

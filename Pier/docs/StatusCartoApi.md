@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarStatusCartaoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\EstGioCartO consultarStatusCartaoUsingGET($id_status_cartao)
+> \br.com.conductor.pier.api.v1_1.model\StatusCartO consultarStatusCartaoUsingGET($id_status_cartao)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\EstGioCartO**](EstGioCartO.md)
+[**\br.com.conductor.pier.api.v1_1.model\StatusCartO**](StatusCartO.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs listarStatusCartoesUsingGET($id_status_cartao, $nome, $id_status_destino_desbloqueio, $cancela_conta, $permite_desbloqueio, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs listarStatusCartoesUsingGET($id_status_cartao, $nome, $flag_altera_status, $flag_desbloqueio, $flag_reversao_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_cartao, $flag_reversao_cancelamento, $flag_emite_provisorio, $flag_cancela_conta, $id_status_destino_conta, $flag_reemite_cartao, $flag_cobra_tarifa, $flag_origem_transferencia, $flag_destino_transferencia, $flag_cadastro_senha, $flag_cadastro_nova_senha, $flag_excecao_bandeira, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -78,14 +78,27 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\StatusCartoApi();
 $id_status_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+$flag_altera_status = "flag_altera_status_example"; // string | Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.
+$flag_desbloqueio = "flag_desbloqueio_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.
+$flag_reversao_desbloqueio = "flag_reversao_desbloqueio_example"; // string | Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.
 $id_status_destino_desbloqueio = 789; // int | Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.
-$cancela_conta = "cancela_conta_example"; // string | Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada.
-$permite_desbloqueio = "permite_desbloqueio_example"; // string | Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados.
+$flag_cancela_cartao = "flag_cancela_cartao_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado. 
+$flag_reversao_cancelamento = "flag_reversao_cancelamento_example"; // string | Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.
+$flag_emite_provisorio = "flag_emite_provisorio_example"; // string | Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. 
+$flag_cancela_conta = "flag_cancela_conta_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.
+$id_status_destino_conta = 789; // int | Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.
+$flag_reemite_cartao = "flag_reemite_cartao_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.
+$flag_cobra_tarifa = "flag_cobra_tarifa_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.
+$flag_origem_transferencia = "flag_origem_transferencia_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
+$flag_destino_transferencia = "flag_destino_transferencia_example"; // string | Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
+$flag_cadastro_senha = "flag_cadastro_senha_example"; // string | Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.
+$flag_cadastro_nova_senha = "flag_cadastro_nova_senha_example"; // string | Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.
+$flag_excecao_bandeira = "flag_excecao_bandeira_example"; // string | Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarStatusCartoesUsingGET($id_status_cartao, $nome, $id_status_destino_desbloqueio, $cancela_conta, $permite_desbloqueio, $page, $limit);
+    $result = $api_instance->listarStatusCartoesUsingGET($id_status_cartao, $nome, $flag_altera_status, $flag_desbloqueio, $flag_reversao_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_cartao, $flag_reversao_cancelamento, $flag_emite_provisorio, $flag_cancela_conta, $id_status_destino_conta, $flag_reemite_cartao, $flag_cobra_tarifa, $flag_origem_transferencia, $flag_destino_transferencia, $flag_cadastro_senha, $flag_cadastro_nova_senha, $flag_excecao_bandeira, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusCartoApi->listarStatusCartoesUsingGET: ', $e->getMessage(), "\n";
@@ -99,9 +112,22 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_status_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 
  **nome** | **string**| Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. | [optional] 
+ **flag_altera_status** | **string**| Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. | [optional] 
+ **flag_desbloqueio** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. | [optional] 
+ **flag_reversao_desbloqueio** | **string**| Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. | [optional] 
  **id_status_destino_desbloqueio** | **int**| Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. | [optional] 
- **cancela_conta** | **string**| Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. | [optional] 
- **permite_desbloqueio** | **string**| Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. | [optional] 
+ **flag_cancela_cartao** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  | [optional] 
+ **flag_reversao_cancelamento** | **string**| Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. | [optional] 
+ **flag_emite_provisorio** | **string**| Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  | [optional] 
+ **flag_cancela_conta** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. | [optional] 
+ **id_status_destino_conta** | **int**| Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. | [optional] 
+ **flag_reemite_cartao** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. | [optional] 
+ **flag_cobra_tarifa** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. | [optional] 
+ **flag_origem_transferencia** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. | [optional] 
+ **flag_destino_transferencia** | **string**| Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. | [optional] 
+ **flag_cadastro_senha** | **string**| Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. | [optional] 
+ **flag_cadastro_nova_senha** | **string**| Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. | [optional] 
+ **flag_excecao_bandeira** | **string**| Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

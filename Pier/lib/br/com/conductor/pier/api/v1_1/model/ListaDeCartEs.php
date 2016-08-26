@@ -1,6 +1,6 @@
 <?php
 /**
- * ConsultarCartaoResponse
+ * ListaDeCartEs
  *
  * PHP version 5
  *
@@ -35,25 +35,23 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ConsultarCartaoResponse Class Doc Comment
+ * ListaDeCartEs Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Lista de Cart\u00C3\u00B5es
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConsultarCartaoResponse implements ArrayAccess
+class ListaDeCartEs implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]',
-        'codigo_retorno' => 'int',
-        'descricao_retorno' => 'string'
+        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartaoResponse[]'
     );
   
     static function swaggerTypes() {
@@ -65,9 +63,7 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cartoes' => 'cartoes',
-        'codigo_retorno' => 'codigoRetorno',
-        'descricao_retorno' => 'descricaoRetorno'
+        'cartoes' => 'cartoes'
     );
   
     static function attributeMap() {
@@ -79,9 +75,7 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cartoes' => 'setCartoes',
-        'codigo_retorno' => 'setCodigoRetorno',
-        'descricao_retorno' => 'setDescricaoRetorno'
+        'cartoes' => 'setCartoes'
     );
   
     static function setters() {
@@ -93,9 +87,7 @@ class ConsultarCartaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cartoes' => 'getCartoes',
-        'codigo_retorno' => 'getCodigoRetorno',
-        'descricao_retorno' => 'getDescricaoRetorno'
+        'cartoes' => 'getCartoes'
     );
   
     static function getters() {
@@ -104,22 +96,10 @@ class ConsultarCartaoResponse implements ArrayAccess
 
     
     /**
-      * $cartoes 
-      * @var \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]
+      * $cartoes Lista de cart\u00C3\u00B5es
+      * @var \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
       */
     protected $cartoes;
-    
-    /**
-      * $codigo_retorno 
-      * @var int
-      */
-    protected $codigo_retorno;
-    
-    /**
-      * $descricao_retorno 
-      * @var string
-      */
-    protected $descricao_retorno;
     
 
     /**
@@ -131,14 +111,12 @@ class ConsultarCartaoResponse implements ArrayAccess
         
         if ($data != null) {
             $this->cartoes = $data["cartoes"];
-            $this->codigo_retorno = $data["codigo_retorno"];
-            $this->descricao_retorno = $data["descricao_retorno"];
         }
     }
     
     /**
      * Gets cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[]
+     * @return \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
      */
     public function getCartoes()
     {
@@ -147,55 +125,13 @@ class ConsultarCartaoResponse implements ArrayAccess
   
     /**
      * Sets cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\CartaoResponseOld[] $cartoes 
+     * @param \br.com.conductor.pier.api.v1_1.model\CartaoResponse[] $cartoes Lista de cart\u00C3\u00B5es
      * @return $this
      */
     public function setCartoes($cartoes)
     {
         
         $this->cartoes = $cartoes;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_retorno
-     * @return int
-     */
-    public function getCodigoRetorno()
-    {
-        return $this->codigo_retorno;
-    }
-  
-    /**
-     * Sets codigo_retorno
-     * @param int $codigo_retorno 
-     * @return $this
-     */
-    public function setCodigoRetorno($codigo_retorno)
-    {
-        
-        $this->codigo_retorno = $codigo_retorno;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_retorno
-     * @return string
-     */
-    public function getDescricaoRetorno()
-    {
-        return $this->descricao_retorno;
-    }
-  
-    /**
-     * Sets descricao_retorno
-     * @param string $descricao_retorno 
-     * @return $this
-     */
-    public function setDescricaoRetorno($descricao_retorno)
-    {
-        
-        $this->descricao_retorno = $descricao_retorno;
         return $this;
     }
     

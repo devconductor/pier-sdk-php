@@ -1,6 +1,6 @@
 <?php
 /**
- * EstGioCartO
+ * Pessoa
  *
  * PHP version 5
  *
@@ -35,24 +35,29 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * EstGioCartO Class Doc Comment
+ * Pessoa Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
+ * @description Pessoa
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EstGioCartO implements ArrayAccess
+class Pessoa implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
+        'cnpj' => 'string',
+        'cpf' => 'string',
+        'data_nascimento' => '\DateTime',
         'id' => 'int',
-        'nome' => 'string'
+        'nome' => 'string',
+        'sexo' => 'string',
+        'tipo' => 'string'
     );
   
     static function swaggerTypes() {
@@ -64,8 +69,13 @@ class EstGioCartO implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'cnpj' => 'cnpj',
+        'cpf' => 'cpf',
+        'data_nascimento' => 'dataNascimento',
         'id' => 'id',
-        'nome' => 'nome'
+        'nome' => 'nome',
+        'sexo' => 'sexo',
+        'tipo' => 'tipo'
     );
   
     static function attributeMap() {
@@ -77,8 +87,13 @@ class EstGioCartO implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'cnpj' => 'setCnpj',
+        'cpf' => 'setCpf',
+        'data_nascimento' => 'setDataNascimento',
         'id' => 'setId',
-        'nome' => 'setNome'
+        'nome' => 'setNome',
+        'sexo' => 'setSexo',
+        'tipo' => 'setTipo'
     );
   
     static function setters() {
@@ -90,8 +105,13 @@ class EstGioCartO implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'cnpj' => 'getCnpj',
+        'cpf' => 'getCpf',
+        'data_nascimento' => 'getDataNascimento',
         'id' => 'getId',
-        'nome' => 'getNome'
+        'nome' => 'getNome',
+        'sexo' => 'getSexo',
+        'tipo' => 'getTipo'
     );
   
     static function getters() {
@@ -100,16 +120,46 @@ class EstGioCartO implements ArrayAccess
 
     
     /**
-      * $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+      * $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+      * @var string
+      */
+    protected $cnpj;
+    
+    /**
+      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
+      * @var string
+      */
+    protected $cpf;
+    
+    /**
+      * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+      * @var \DateTime
+      */
+    protected $data_nascimento;
+    
+    /**
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+      * $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
       * @var string
       */
     protected $nome;
+    
+    /**
+      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+      * @var string
+      */
+    protected $sexo;
+    
+    /**
+      * $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+      * @var string
+      */
+    protected $tipo;
     
 
     /**
@@ -120,9 +170,77 @@ class EstGioCartO implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->cnpj = $data["cnpj"];
+            $this->cpf = $data["cpf"];
+            $this->data_nascimento = $data["data_nascimento"];
             $this->id = $data["id"];
             $this->nome = $data["nome"];
+            $this->sexo = $data["sexo"];
+            $this->tipo = $data["tipo"];
         }
+    }
+    
+    /**
+     * Gets cnpj
+     * @return string
+     */
+    public function getCnpj()
+    {
+        return $this->cnpj;
+    }
+  
+    /**
+     * Sets cnpj
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @return $this
+     */
+    public function setCnpj($cnpj)
+    {
+        
+        $this->cnpj = $cnpj;
+        return $this;
+    }
+    
+    /**
+     * Gets cpf
+     * @return string
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+  
+    /**
+     * Sets cpf
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @return $this
+     */
+    public function setCpf($cpf)
+    {
+        
+        $this->cpf = $cpf;
+        return $this;
+    }
+    
+    /**
+     * Gets data_nascimento
+     * @return \DateTime
+     */
+    public function getDataNascimento()
+    {
+        return $this->data_nascimento;
+    }
+  
+    /**
+     * Sets data_nascimento
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @return $this
+     */
+    public function setDataNascimento($data_nascimento)
+    {
+        
+        $this->data_nascimento = $data_nascimento;
+        return $this;
     }
     
     /**
@@ -136,7 +254,7 @@ class EstGioCartO implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
      * @return $this
      */
     public function setId($id)
@@ -157,13 +275,55 @@ class EstGioCartO implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param string $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
      * @return $this
      */
     public function setNome($nome)
     {
         
         $this->nome = $nome;
+        return $this;
+    }
+    
+    /**
+     * Gets sexo
+     * @return string
+     */
+    public function getSexo()
+    {
+        return $this->sexo;
+    }
+  
+    /**
+     * Sets sexo
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+     * @return $this
+     */
+    public function setSexo($sexo)
+    {
+        
+        $this->sexo = $sexo;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo
+     * @return string
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+  
+    /**
+     * Sets tipo
+     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+     * @return $this
+     */
+    public function setTipo($tipo)
+    {
+        
+        $this->tipo = $tipo;
         return $this;
     }
     

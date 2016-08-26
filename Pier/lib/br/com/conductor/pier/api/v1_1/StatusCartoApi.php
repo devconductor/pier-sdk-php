@@ -97,7 +97,7 @@ class StatusCartoApi
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\EstGioCartO
+     * @return \br.com.conductor.pier.api.v1_1.model\StatusCartO
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarStatusCartaoUsingGET($id_status_cartao)
@@ -113,7 +113,7 @@ class StatusCartoApi
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\EstGioCartO, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\StatusCartO, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarStatusCartaoUsingGETWithHttpInfo($id_status_cartao)
@@ -172,19 +172,19 @@ class StatusCartoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\EstGioCartO'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\StatusCartO'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\EstGioCartO', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\StatusCartO', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\EstGioCartO', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\StatusCartO', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -200,17 +200,30 @@ class StatusCartoApi
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
+     * @param string $flag_altera_status Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)
+     * @param string $flag_desbloqueio Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)
+     * @param string $flag_reversao_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)
-     * @param string $cancela_conta Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)
-     * @param string $permite_desbloqueio Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)
+     * @param string $flag_cancela_cartao Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)
+     * @param string $flag_reversao_cancelamento Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)
+     * @param string $flag_emite_provisorio Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)
+     * @param string $flag_cancela_conta Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)
+     * @param int $id_status_destino_conta Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)
+     * @param string $flag_reemite_cartao Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)
+     * @param string $flag_cobra_tarifa Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)
+     * @param string $flag_origem_transferencia Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)
+     * @param string $flag_destino_transferencia Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)
+     * @param string $flag_cadastro_senha Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)
+     * @param string $flag_cadastro_nova_senha Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)
+     * @param string $flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGET($id_status_cartao = null, $nome = null, $id_status_destino_desbloqueio = null, $cancela_conta = null, $permite_desbloqueio = null, $page = null, $limit = null)
+    public function listarStatusCartoesUsingGET($id_status_cartao = null, $nome = null, $flag_altera_status = null, $flag_desbloqueio = null, $flag_reversao_desbloqueio = null, $id_status_destino_desbloqueio = null, $flag_cancela_cartao = null, $flag_reversao_cancelamento = null, $flag_emite_provisorio = null, $flag_cancela_conta = null, $id_status_destino_conta = null, $flag_reemite_cartao = null, $flag_cobra_tarifa = null, $flag_origem_transferencia = null, $flag_destino_transferencia = null, $flag_cadastro_senha = null, $flag_cadastro_nova_senha = null, $flag_excecao_bandeira = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($id_status_cartao, $nome, $id_status_destino_desbloqueio, $cancela_conta, $permite_desbloqueio, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($id_status_cartao, $nome, $flag_altera_status, $flag_desbloqueio, $flag_reversao_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_cartao, $flag_reversao_cancelamento, $flag_emite_provisorio, $flag_cancela_conta, $id_status_destino_conta, $flag_reemite_cartao, $flag_cobra_tarifa, $flag_origem_transferencia, $flag_destino_transferencia, $flag_cadastro_senha, $flag_cadastro_nova_senha, $flag_excecao_bandeira, $page, $limit);
         return $response; 
     }
 
@@ -222,15 +235,28 @@ class StatusCartoApi
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
+     * @param string $flag_altera_status Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)
+     * @param string $flag_desbloqueio Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)
+     * @param string $flag_reversao_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)
-     * @param string $cancela_conta Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)
-     * @param string $permite_desbloqueio Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)
+     * @param string $flag_cancela_cartao Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)
+     * @param string $flag_reversao_cancelamento Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)
+     * @param string $flag_emite_provisorio Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)
+     * @param string $flag_cancela_conta Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)
+     * @param int $id_status_destino_conta Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)
+     * @param string $flag_reemite_cartao Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)
+     * @param string $flag_cobra_tarifa Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)
+     * @param string $flag_origem_transferencia Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)
+     * @param string $flag_destino_transferencia Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)
+     * @param string $flag_cadastro_senha Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)
+     * @param string $flag_cadastro_nova_senha Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)
+     * @param string $flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGETWithHttpInfo($id_status_cartao = null, $nome = null, $id_status_destino_desbloqueio = null, $cancela_conta = null, $permite_desbloqueio = null, $page = null, $limit = null)
+    public function listarStatusCartoesUsingGETWithHttpInfo($id_status_cartao = null, $nome = null, $flag_altera_status = null, $flag_desbloqueio = null, $flag_reversao_desbloqueio = null, $id_status_destino_desbloqueio = null, $flag_cancela_cartao = null, $flag_reversao_cancelamento = null, $flag_emite_provisorio = null, $flag_cancela_conta = null, $id_status_destino_conta = null, $flag_reemite_cartao = null, $flag_cobra_tarifa = null, $flag_origem_transferencia = null, $flag_destino_transferencia = null, $flag_cadastro_senha = null, $flag_cadastro_nova_senha = null, $flag_excecao_bandeira = null, $page = null, $limit = null)
     {
         
   
@@ -256,16 +282,68 @@ class StatusCartoApi
             $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }// query params
         
+        if ($flag_altera_status !== null) {
+            $queryParams['flag_altera_status'] = $this->apiClient->getSerializer()->toQueryValue($flag_altera_status);
+        }// query params
+        
+        if ($flag_desbloqueio !== null) {
+            $queryParams['flag_desbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_desbloqueio);
+        }// query params
+        
+        if ($flag_reversao_desbloqueio !== null) {
+            $queryParams['flag_reversao_desbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_reversao_desbloqueio);
+        }// query params
+        
         if ($id_status_destino_desbloqueio !== null) {
             $queryParams['id_status_destino_desbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($id_status_destino_desbloqueio);
         }// query params
         
-        if ($cancela_conta !== null) {
-            $queryParams['cancela_conta'] = $this->apiClient->getSerializer()->toQueryValue($cancela_conta);
+        if ($flag_cancela_cartao !== null) {
+            $queryParams['flag_cancela_cartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancela_cartao);
         }// query params
         
-        if ($permite_desbloqueio !== null) {
-            $queryParams['permite_desbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($permite_desbloqueio);
+        if ($flag_reversao_cancelamento !== null) {
+            $queryParams['flag_reversao_cancelamento'] = $this->apiClient->getSerializer()->toQueryValue($flag_reversao_cancelamento);
+        }// query params
+        
+        if ($flag_emite_provisorio !== null) {
+            $queryParams['flag_emite_provisorio'] = $this->apiClient->getSerializer()->toQueryValue($flag_emite_provisorio);
+        }// query params
+        
+        if ($flag_cancela_conta !== null) {
+            $queryParams['flag_cancela_conta'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancela_conta);
+        }// query params
+        
+        if ($id_status_destino_conta !== null) {
+            $queryParams['id_status_destino_conta'] = $this->apiClient->getSerializer()->toQueryValue($id_status_destino_conta);
+        }// query params
+        
+        if ($flag_reemite_cartao !== null) {
+            $queryParams['flag_reemite_cartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_reemite_cartao);
+        }// query params
+        
+        if ($flag_cobra_tarifa !== null) {
+            $queryParams['flag_cobra_tarifa'] = $this->apiClient->getSerializer()->toQueryValue($flag_cobra_tarifa);
+        }// query params
+        
+        if ($flag_origem_transferencia !== null) {
+            $queryParams['flag_origem_transferencia'] = $this->apiClient->getSerializer()->toQueryValue($flag_origem_transferencia);
+        }// query params
+        
+        if ($flag_destino_transferencia !== null) {
+            $queryParams['flag_destino_transferencia'] = $this->apiClient->getSerializer()->toQueryValue($flag_destino_transferencia);
+        }// query params
+        
+        if ($flag_cadastro_senha !== null) {
+            $queryParams['flag_cadastro_senha'] = $this->apiClient->getSerializer()->toQueryValue($flag_cadastro_senha);
+        }// query params
+        
+        if ($flag_cadastro_nova_senha !== null) {
+            $queryParams['flag_cadastro_nova_senha'] = $this->apiClient->getSerializer()->toQueryValue($flag_cadastro_nova_senha);
+        }// query params
+        
+        if ($flag_excecao_bandeira !== null) {
+            $queryParams['flag_excecao_bandeira'] = $this->apiClient->getSerializer()->toQueryValue($flag_excecao_bandeira);
         }// query params
         
         if ($page !== null) {

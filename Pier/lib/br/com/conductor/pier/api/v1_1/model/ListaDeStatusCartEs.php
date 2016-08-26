@@ -51,7 +51,7 @@ class ListaDeStatusCartEs implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'status_cartoes' => '\br.com.conductor.pier.api.v1_1.model\EstGioCartO[]'
+        'status_cartoes' => '\br.com.conductor.pier.api.v1_1.model\StatusCartO[]'
     );
   
     static function swaggerTypes() {
@@ -97,7 +97,7 @@ class ListaDeStatusCartEs implements ArrayAccess
     
     /**
       * $status_cartoes Lista de status cart\u00C3\u00B5es
-      * @var \br.com.conductor.pier.api.v1_1.model\EstGioCartO[]
+      * @var \br.com.conductor.pier.api.v1_1.model\StatusCartO[]
       */
     protected $status_cartoes;
     
@@ -116,7 +116,7 @@ class ListaDeStatusCartEs implements ArrayAccess
     
     /**
      * Gets status_cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\EstGioCartO[]
+     * @return \br.com.conductor.pier.api.v1_1.model\StatusCartO[]
      */
     public function getStatusCartoes()
     {
@@ -125,7 +125,7 @@ class ListaDeStatusCartEs implements ArrayAccess
   
     /**
      * Sets status_cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\EstGioCartO[] $status_cartoes Lista de status cart\u00C3\u00B5es
+     * @param \br.com.conductor.pier.api.v1_1.model\StatusCartO[] $status_cartoes Lista de status cart\u00C3\u00B5es
      * @return $this
      */
     public function setStatusCartoes($status_cartoes)
