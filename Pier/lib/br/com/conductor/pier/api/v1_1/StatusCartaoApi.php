@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusCartoApi
+ * StatusCartaoApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
- * StatusCartoApi Class Doc Comment
+ * StatusCartaoApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1_1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusCartoApi
+class StatusCartaoApi
 {
 
     /**
@@ -82,7 +82,7 @@ class StatusCartoApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient $apiClient set the API client
-     * @return StatusCartoApi
+     * @return StatusCartaoApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
