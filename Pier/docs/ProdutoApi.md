@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarProdutosUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaDePessoas listarProdutosUsingGET($id_produto, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaProdutos listarProdutosUsingGET($id_produto, $nome, $status, $page, $limit)
 
 Lista os Produtos do Emissor
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaDePessoas**](ListaDePessoas.md)
+[**\br.com.conductor.pier.api.v1_1.model\ListaProdutos**](ListaProdutos.md)
 
 ### Authorization
 

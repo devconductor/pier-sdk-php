@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET1**
-> \br.com.conductor.pier.api.v1_1.model\ListaDeOrigensComerciais listarUsingGET1($id_pessoa, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $cnpj2, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais listarUsingGET1($id_pessoa, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $cnpj2, $page, $limit)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaDeOrigensComerciais**](ListaDeOrigensComerciais.md)
+[**\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais**](ListaOrigensComerciais.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoApiTest
+ * EstagioCartaoApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
- * CartaoApiTest Class Doc Comment
+ * EstagioCartaoApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1_1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CartaoApiTest extends \PHPUnit_Framework_TestCase
+class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,22 +66,22 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET
+     * Test case for consultarEstagioCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
      *
      */
-    public function test_consultarUsingGET() {
+    public function test_consultarEstagioCartaoUsingGET() {
 
     }
     
     /**
-     * Test case for listarUsingGET
+     * Test case for listarEstagiosCartoesUsingGET
      *
-     * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      *
      */
-    public function test_listarUsingGET() {
+    public function test_listarEstagiosCartoesUsingGET() {
 
     }
     

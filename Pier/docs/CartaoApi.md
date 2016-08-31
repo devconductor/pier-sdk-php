@@ -4,19 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
-[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /api/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
-[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /api/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
-[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
-[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /api/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
+[**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
-# **bloquearCartaoUsingPOST**
-> \br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao)
+# **consultarUsingGET**
+> \br.com.conductor.pier.api.v1_1.model\OrigemComercial consultarUsingGET($id_cartao)
 
-Bloqueia um cart\u00C3\u00A3o
+Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
-Bloquear um determinado cart\u00C3\u00A3o
+Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example 
 ```php
@@ -29,16 +26,13 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
-$id_conta = 56; // int | ID da Conta
-$id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja cancelar
-$motivo = 56; // int | Motivo do bloqueio
-$observacao = "observacao_example"; // string | Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->bloquearCartaoUsingPOST($id_conta, $id_cartao, $motivo, $observacao);
+    $result = $api_instance->consultarUsingGET($id_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->bloquearCartaoUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->consultarUsingGET: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -47,14 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| ID da Conta | 
- **id_cartao** | **int**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
- **motivo** | **int**| Motivo do bloqueio | 
- **observacao** | **string**| Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio | [optional] 
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\CancelarCartaoResponse**](CancelarCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\OrigemComercial**](OrigemComercial.md)
 
 ### Authorization
 
@@ -67,66 +58,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarCartaoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao)
+# **listarUsingGET**
+> \br.com.conductor.pier.api.v1_1.model\ListaCartoes listarUsingGET($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit)
 
-Retorna um cart\u00C3\u00A3o
+Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
-Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
-$id_conta = 56; // int | ID da Conta que pertence o cart\u00C3\u00A3o
-$id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja consultar
-$numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
-
-try { 
-    $result = $api_instance->consultarCartaoUsingGET($id_conta, $id_cartao, $numero_cartao);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarCartaoUsingGET: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| ID da Conta que pertence o cart\u00C3\u00A3o | 
- **id_cartao** | **int**| ID do Cart\u00C3\u00A3o que deseja consultar | 
- **numero_cartao** | **string**| N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **consultarCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse consultarCartoesUsingGET($id_conta)
-
-Retorna todos os cart\u00C3\u00B5es
-
-Consultar todos os cart\u00C3\u00B5es de uma determinada conta
+Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
 
 ### Example 
 ```php
@@ -139,13 +76,32 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
-$id_conta = 56; // int | ID da Conta
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+$id_status_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+$id_estagio_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+$id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
+$id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+$id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+$portador = 56; // int | Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando '1', corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+$numero_cartao = "numero_cartao_example"; // string | Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+$nome_impresso = "nome_impresso_example"; // string | Apresenta o nome impresso no cart\u00C3\u00A3o.
+$data_geracao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+$data_status_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+$data_estagio_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+$data_validade = "data_validade_example"; // string | Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+$data_impressao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+$arquivo_impressao = "arquivo_impressao_example"; // string | Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+$flag_impressao_origem_comercial = 56; // int | Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+$flag_provisorio = 56; // int | Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+$codigo_desbloqueio = "codigo_desbloqueio_example"; // string | Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->consultarCartoesUsingGET($id_conta);
+    $result = $api_instance->listarUsingGET($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarCartoesUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->listarUsingGET: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -154,117 +110,30 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| ID da Conta | 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
+ **id_status_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 
+ **id_estagio_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
+ **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
+ **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) | [optional] 
+ **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
+ **portador** | **int**| Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. | [optional] 
+ **numero_cartao** | **string**| Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. | [optional] 
+ **nome_impresso** | **string**| Apresenta o nome impresso no cart\u00C3\u00A3o. | [optional] 
+ **data_geracao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **data_status_cartao** | **\DateTime**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **data_estagio_cartao** | **\DateTime**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **data_validade** | **string**| Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. | [optional] 
+ **data_impressao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
+ **arquivo_impressao** | **string**| Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. | [optional] 
+ **flag_impressao_origem_comercial** | **int**| Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. | [optional] 
+ **flag_provisorio** | **int**| Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. | [optional] 
+ **codigo_desbloqueio** | **string**| Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **desbloquearCartaoUsingPOST**
-> \br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao)
-
-Desbloqueia um cart\u00C3\u00A3o
-
-Desbloquear cart\u00C3\u00A3o de uma determinada conta
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
-$id_conta = 56; // int | ID da Conta
-$id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-$codigo_segurancao = "codigo_segurancao_example"; // string | C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
-
-try { 
-    $result = $api_instance->desbloquearCartaoUsingPOST($id_conta, $id_cartao, $codigo_segurancao);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->desbloquearCartaoUsingPOST: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| ID da Conta | 
- **id_cartao** | **int**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
- **codigo_segurancao** | **string**| C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v1_1.model\DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **embossadoCartaoUsingPUT**
-> \br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse embossadoCartaoUsingPUT($id_conta, $id_cartao)
-
-Embossado
-
-N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
-$id_conta = 56; // int | ID da Conta
-$id_cartao = 56; // int | ID do Cart\u00C3\u00A3o que deseja cancelar
-
-try { 
-    $result = $api_instance->embossadoCartaoUsingPUT($id_conta, $id_cartao);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->embossadoCartaoUsingPUT: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| ID da Conta | 
- **id_cartao** | **int**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v1_1.model\EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
+[**\br.com.conductor.pier.api.v1_1.model\ListaCartoes**](ListaCartoes.md)
 
 ### Authorization
 

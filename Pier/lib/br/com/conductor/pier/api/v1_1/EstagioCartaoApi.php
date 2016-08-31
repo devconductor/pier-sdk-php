@@ -1,6 +1,6 @@
 <?php
 /**
- * PessoaApi
+ * EstagioCartaoApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
- * PessoaApi Class Doc Comment
+ * EstagioCartaoApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1_1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PessoaApi
+class EstagioCartaoApi
 {
 
     /**
@@ -82,7 +82,7 @@ class PessoaApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v1_1.invoker\ApiClient $apiClient set the API client
-     * @return PessoaApi
+     * @return EstagioCartaoApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
@@ -92,40 +92,40 @@ class PessoaApi
   
     
     /**
-     * consultarUsingGET1
+     * consultarEstagioCartaoUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\OrigemComercial
+     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @return \br.com.conductor.pier.api.v1_1.model\EstagioCartao
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id_origem_comercial)
+    public function consultarEstagioCartaoUsingGET($id_estagio_cartao)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id_origem_comercial);
+        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGETWithHttpInfo ($id_estagio_cartao);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET1WithHttpInfo
+     * consultarEstagioCartaoUsingGETWithHttpInfo
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\OrigemComercial, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\EstagioCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id_origem_comercial)
+    public function consultarEstagioCartaoUsingGETWithHttpInfo($id_estagio_cartao)
     {
         
-        // verify the required parameter 'id_origem_comercial' is set
-        if ($id_origem_comercial === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_origem_comercial when calling consultarUsingGET1');
+        // verify the required parameter 'id_estagio_cartao' is set
+        if ($id_estagio_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_estagio_cartao when calling consultarEstagioCartaoUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/pessoas/{id_origem_comercial}";
+        $resourcePath = "/api/estagios-cartoes/{id_estagio_cartao}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -140,10 +140,10 @@ class PessoaApi
         
         // path params
         
-        if ($id_origem_comercial !== null) {
+        if ($id_estagio_cartao !== null) {
             $resourcePath = str_replace(
-                "{" . "id_origem_comercial" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_origem_comercial),
+                "{" . "id_estagio_cartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_estagio_cartao),
                 $resourcePath
             );
         }
@@ -172,19 +172,19 @@ class PessoaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\EstagioCartao'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\EstagioCartao', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\EstagioCartao', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -194,52 +194,42 @@ class PessoaApi
     }
     
     /**
-     * listarUsingGET1
+     * listarEstagiosCartoesUsingGET
      *
-     * Lista as Pessoas cadastradas no Emissor
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais
+     * @return \br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($id_pessoa = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $cnpj2 = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGET($id = null, $nome = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id_pessoa, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $cnpj2, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($id, $nome, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarEstagiosCartoesUsingGETWithHttpInfo
      *
-     * Lista as Pessoas cadastradas no Emissor
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($id_pessoa = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $cnpj2 = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGETWithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
     {
         
   
         // parse inputs
-        $resourcePath = "/api/pessoas";
+        $resourcePath = "/api/estagios-cartoes";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -252,32 +242,12 @@ class PessoaApi
   
         // query params
         
-        if ($id_pessoa !== null) {
-            $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {
             $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
-        }// query params
-        
-        if ($tipo !== null) {
-            $queryParams['tipo'] = $this->apiClient->getSerializer()->toQueryValue($tipo);
-        }// query params
-        
-        if ($cpf !== null) {
-            $queryParams['cpf'] = $this->apiClient->getSerializer()->toQueryValue($cpf);
-        }// query params
-        
-        if ($cnpj !== null) {
-            $queryParams['cnpj'] = $this->apiClient->getSerializer()->toQueryValue($cnpj);
-        }// query params
-        
-        if ($data_nascimento !== null) {
-            $queryParams['data_nascimento'] = $this->apiClient->getSerializer()->toQueryValue($data_nascimento);
-        }// query params
-        
-        if ($cnpj2 !== null) {
-            $queryParams['cnpj'] = $this->apiClient->getSerializer()->toQueryValue($cnpj2);
         }// query params
         
         if ($page !== null) {
@@ -314,19 +284,19 @@ class PessoaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

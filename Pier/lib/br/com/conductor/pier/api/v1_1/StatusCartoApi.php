@@ -97,7 +97,7 @@ class StatusCartoApi
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\StatusCartO
+     * @return \br.com.conductor.pier.api.v1_1.model\StatusCartao
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarStatusCartaoUsingGET($id_status_cartao)
@@ -113,7 +113,7 @@ class StatusCartoApi
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\StatusCartO, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\StatusCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarStatusCartaoUsingGETWithHttpInfo($id_status_cartao)
@@ -172,19 +172,19 @@ class StatusCartoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\StatusCartO'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\StatusCartao'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\StatusCartO', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\StatusCartao', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\StatusCartO', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\StatusCartao', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -214,7 +214,7 @@ class StatusCartoApi
      * @param int $flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs
+     * @return \br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarStatusCartoesUsingGET($id = null, $nome = null, $flag_altera_status = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $flag_cancela_conta = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_reemite_cartao = null, $flag_emite_provisorio = null, $flag_cadastro_nova_senha = null, $flag_origem_transferencia = null, $flag_destino_transferencia = null, $flag_excecao_bandeira = null, $page = null, $limit = null)
@@ -245,7 +245,7 @@ class StatusCartoApi
      * @param int $flag_excecao_bandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarStatusCartoesUsingGETWithHttpInfo($id = null, $nome = null, $flag_altera_status = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $flag_cancela_conta = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_reemite_cartao = null, $flag_emite_provisorio = null, $flag_cadastro_nova_senha = null, $flag_origem_transferencia = null, $flag_destino_transferencia = null, $flag_excecao_bandeira = null, $page = null, $limit = null)
@@ -356,19 +356,19 @@ class StatusCartoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

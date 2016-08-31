@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarStatusCartaoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\StatusCartO consultarStatusCartaoUsingGET($id_status_cartao)
+> \br.com.conductor.pier.api.v1_1.model\StatusCartao consultarStatusCartaoUsingGET($id_status_cartao)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\StatusCartO**](StatusCartO.md)
+[**\br.com.conductor.pier.api.v1_1.model\StatusCartao**](StatusCartao.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs listarStatusCartoesUsingGET($id, $nome, $flag_altera_status, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_conta, $id_status_destino_conta, $flag_cobra_tarifa, $flag_reemite_cartao, $flag_emite_provisorio, $flag_cadastro_nova_senha, $flag_origem_transferencia, $flag_destino_transferencia, $flag_excecao_bandeira, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes listarStatusCartoesUsingGET($id, $nome, $flag_altera_status, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_conta, $id_status_destino_conta, $flag_cobra_tarifa, $flag_reemite_cartao, $flag_emite_provisorio, $flag_cadastro_nova_senha, $flag_origem_transferencia, $flag_destino_transferencia, $flag_excecao_bandeira, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaDeStatusCartEs**](ListaDeStatusCartEs.md)
+[**\br.com.conductor.pier.api.v1_1.model\ListaStatusCartoes**](ListaStatusCartoes.md)
 
 ### Authorization
 
