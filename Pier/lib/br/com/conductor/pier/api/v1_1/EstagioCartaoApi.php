@@ -202,7 +202,7 @@ class EstagioCartaoApi
      * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes
+     * @return \br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarEstagiosCartoesUsingGET($id = null, $nome = null, $page = null, $limit = null)
@@ -221,7 +221,7 @@ class EstagioCartaoApi
      * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarEstagiosCartoesUsingGETWithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
@@ -284,19 +284,19 @@ class EstagioCartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarEstagiosCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes listarEstagiosCartoesUsingGET($id, $nome, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes listarEstagiosCartoesUsingGET($id, $nome, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaEstagiosCartoes**](ListaEstagiosCartoes.md)
+[**\br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes**](PageEstagiosCartoes.md)
 
 ### Authorization
 

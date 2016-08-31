@@ -1,6 +1,6 @@
 <?php
 /**
- * ListaEstagiosCartoes
+ * PageImplOfEstagioCartao
  *
  * PHP version 5
  *
@@ -35,23 +35,25 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ListaEstagiosCartoes Class Doc Comment
+ * PageImplOfEstagioCartao Class Doc Comment
  *
  * @category    Class
- * @description Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+ * @description 
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ListaEstagiosCartoes implements ArrayAccess
+class PageImplOfEstagioCartao implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'estagios_cartoes' => '\br.com.conductor.pier.api.v1_1.model\EstagioCartao[]'
+        'last' => 'bool',
+        'total_elements' => 'int',
+        'total_pages' => 'int'
     );
   
     static function swaggerTypes() {
@@ -63,7 +65,9 @@ class ListaEstagiosCartoes implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'estagios_cartoes' => 'estagiosCartoes'
+        'last' => 'last',
+        'total_elements' => 'totalElements',
+        'total_pages' => 'totalPages'
     );
   
     static function attributeMap() {
@@ -75,7 +79,9 @@ class ListaEstagiosCartoes implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'estagios_cartoes' => 'setEstagiosCartoes'
+        'last' => 'setLast',
+        'total_elements' => 'setTotalElements',
+        'total_pages' => 'setTotalPages'
     );
   
     static function setters() {
@@ -87,7 +93,9 @@ class ListaEstagiosCartoes implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'estagios_cartoes' => 'getEstagiosCartoes'
+        'last' => 'getLast',
+        'total_elements' => 'getTotalElements',
+        'total_pages' => 'getTotalPages'
     );
   
     static function getters() {
@@ -96,10 +104,22 @@ class ListaEstagiosCartoes implements ArrayAccess
 
     
     /**
-      * $estagios_cartoes Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es
-      * @var \br.com.conductor.pier.api.v1_1.model\EstagioCartao[]
+      * $last 
+      * @var bool
       */
-    protected $estagios_cartoes;
+    protected $last;
+    
+    /**
+      * $total_elements 
+      * @var int
+      */
+    protected $total_elements;
+    
+    /**
+      * $total_pages 
+      * @var int
+      */
+    protected $total_pages;
     
 
     /**
@@ -110,28 +130,72 @@ class ListaEstagiosCartoes implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->estagios_cartoes = $data["estagios_cartoes"];
+            $this->last = $data["last"];
+            $this->total_elements = $data["total_elements"];
+            $this->total_pages = $data["total_pages"];
         }
     }
     
     /**
-     * Gets estagios_cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\EstagioCartao[]
+     * Gets last
+     * @return bool
      */
-    public function getEstagiosCartoes()
+    public function getLast()
     {
-        return $this->estagios_cartoes;
+        return $this->last;
     }
   
     /**
-     * Sets estagios_cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\EstagioCartao[] $estagios_cartoes Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es
+     * Sets last
+     * @param bool $last 
      * @return $this
      */
-    public function setEstagiosCartoes($estagios_cartoes)
+    public function setLast($last)
     {
         
-        $this->estagios_cartoes = $estagios_cartoes;
+        $this->last = $last;
+        return $this;
+    }
+    
+    /**
+     * Gets total_elements
+     * @return int
+     */
+    public function getTotalElements()
+    {
+        return $this->total_elements;
+    }
+  
+    /**
+     * Sets total_elements
+     * @param int $total_elements 
+     * @return $this
+     */
+    public function setTotalElements($total_elements)
+    {
+        
+        $this->total_elements = $total_elements;
+        return $this;
+    }
+    
+    /**
+     * Gets total_pages
+     * @return int
+     */
+    public function getTotalPages()
+    {
+        return $this->total_pages;
+    }
+  
+    /**
+     * Sets total_pages
+     * @param int $total_pages 
+     * @return $this
+     */
+    public function setTotalPages($total_pages)
+    {
+        
+        $this->total_pages = $total_pages;
         return $this;
     }
     
