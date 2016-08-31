@@ -51,7 +51,7 @@ class PageEstagiosCartoes implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'estagio_cartoes' => '\br.com.conductor.pier.api.v1_1.model\PageImplOfEstagioCartao'
+        'estagio_cartoes' => '\br.com.conductor.pier.api.v1_1.model\PageApiOfEstagioCartao'
     );
   
     static function swaggerTypes() {
@@ -97,7 +97,7 @@ class PageEstagiosCartoes implements ArrayAccess
     
     /**
       * $estagio_cartoes 
-      * @var \br.com.conductor.pier.api.v1_1.model\PageImplOfEstagioCartao
+      * @var \br.com.conductor.pier.api.v1_1.model\PageApiOfEstagioCartao
       */
     protected $estagio_cartoes;
     
@@ -116,7 +116,7 @@ class PageEstagiosCartoes implements ArrayAccess
     
     /**
      * Gets estagio_cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\PageImplOfEstagioCartao
+     * @return \br.com.conductor.pier.api.v1_1.model\PageApiOfEstagioCartao
      */
     public function getEstagioCartoes()
     {
@@ -125,7 +125,7 @@ class PageEstagiosCartoes implements ArrayAccess
   
     /**
      * Sets estagio_cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\PageImplOfEstagioCartao $estagio_cartoes 
+     * @param \br.com.conductor.pier.api.v1_1.model\PageApiOfEstagioCartao $estagio_cartoes 
      * @return $this
      */
     public function setEstagioCartoes($estagio_cartoes)

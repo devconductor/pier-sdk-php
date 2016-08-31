@@ -1,6 +1,6 @@
 <?php
 /**
- * PageImplOfEstagioCartaoTest
+ * PageApiOfEstagioCartaoTest
  *
  * PHP version 5
  *
@@ -34,7 +34,7 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * PageImplOfEstagioCartaoTest Class Doc Comment
+ * PageApiOfEstagioCartaoTest Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -43,7 +43,7 @@ namespace br.com.conductor.pier.api.v1_1.model;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PageImplOfEstagioCartaoTest extends \PHPUnit_Framework_TestCase
+class PageApiOfEstagioCartaoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class PageImplOfEstagioCartaoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test PageImplOfEstagioCartao
+     * Test PageApiOfEstagioCartao
      */
-    public function testPageImplOfEstagioCartao() {
+    public function testPageApiOfEstagioCartao() {
 
     }
 
