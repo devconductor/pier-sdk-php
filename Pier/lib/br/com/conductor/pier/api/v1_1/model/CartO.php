@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoResponse
+ * CartO
  *
  * PHP version 5
  *
@@ -35,16 +35,16 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * CartaoResponse Class Doc Comment
+ * CartO Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Objeto Cart\u00C3\u00A3o
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CartaoResponse implements ArrayAccess
+class CartO implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -53,18 +53,20 @@ class CartaoResponse implements ArrayAccess
     static $swaggerTypes = array(
         'arquivo_impressao' => 'string',
         'codigo_desbloqueio' => 'string',
-        'data_estagio_cartao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
-        'data_geracao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
-        'data_impressao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
-        'data_status_cartao' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
-        'data_validade' => '\br.com.conductor.pier.api.v1_1.model\LocalDateTime',
+        'data_estagio_cartao' => '\DateTime',
+        'data_geracao' => '\DateTime',
+        'data_impressao' => '\DateTime',
+        'data_status_cartao' => '\DateTime',
+        'data_validade' => '\DateTime',
         'flag_impressao_origem_comercial' => 'int',
         'flag_provisorio' => 'int',
         'id' => 'int',
         'id_conta' => 'int',
         'id_estagio_cartao' => 'int',
         'id_pessoa' => 'int',
+        'id_produto' => 'int',
         'id_status_cartao' => 'int',
+        'nome_impresso' => 'string',
         'numero_cartao' => 'string',
         'portador' => 'int'
     );
@@ -91,7 +93,9 @@ class CartaoResponse implements ArrayAccess
         'id_conta' => 'idConta',
         'id_estagio_cartao' => 'idEstagioCartao',
         'id_pessoa' => 'idPessoa',
+        'id_produto' => 'idProduto',
         'id_status_cartao' => 'idStatusCartao',
+        'nome_impresso' => 'nomeImpresso',
         'numero_cartao' => 'numeroCartao',
         'portador' => 'portador'
     );
@@ -118,7 +122,9 @@ class CartaoResponse implements ArrayAccess
         'id_conta' => 'setIdConta',
         'id_estagio_cartao' => 'setIdEstagioCartao',
         'id_pessoa' => 'setIdPessoa',
+        'id_produto' => 'setIdProduto',
         'id_status_cartao' => 'setIdStatusCartao',
+        'nome_impresso' => 'setNomeImpresso',
         'numero_cartao' => 'setNumeroCartao',
         'portador' => 'setPortador'
     );
@@ -145,7 +151,9 @@ class CartaoResponse implements ArrayAccess
         'id_conta' => 'getIdConta',
         'id_estagio_cartao' => 'getIdEstagioCartao',
         'id_pessoa' => 'getIdPessoa',
+        'id_produto' => 'getIdProduto',
         'id_status_cartao' => 'getIdStatusCartao',
+        'nome_impresso' => 'getNomeImpresso',
         'numero_cartao' => 'getNumeroCartao',
         'portador' => 'getPortador'
     );
@@ -169,31 +177,31 @@ class CartaoResponse implements ArrayAccess
     
     /**
       * $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      * @var \DateTime
       */
     protected $data_estagio_cartao;
     
     /**
       * $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      * @var \DateTime
       */
     protected $data_geracao;
     
     /**
       * $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      * @var \DateTime
       */
     protected $data_impressao;
     
     /**
       * $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      * @var \DateTime
       */
     protected $data_status_cartao;
     
     /**
       * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
-      * @var \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+      * @var \DateTime
       */
     protected $data_validade;
     
@@ -234,10 +242,22 @@ class CartaoResponse implements ArrayAccess
     protected $id_pessoa;
     
     /**
+      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+      * @var int
+      */
+    protected $id_produto;
+    
+    /**
       * $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
       * @var int
       */
     protected $id_status_cartao;
+    
+    /**
+      * $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+      * @var string
+      */
+    protected $nome_impresso;
     
     /**
       * $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
@@ -273,7 +293,9 @@ class CartaoResponse implements ArrayAccess
             $this->id_conta = $data["id_conta"];
             $this->id_estagio_cartao = $data["id_estagio_cartao"];
             $this->id_pessoa = $data["id_pessoa"];
+            $this->id_produto = $data["id_produto"];
             $this->id_status_cartao = $data["id_status_cartao"];
+            $this->nome_impresso = $data["nome_impresso"];
             $this->numero_cartao = $data["numero_cartao"];
             $this->portador = $data["portador"];
         }
@@ -323,7 +345,7 @@ class CartaoResponse implements ArrayAccess
     
     /**
      * Gets data_estagio_cartao
-     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     * @return \DateTime
      */
     public function getDataEstagioCartao()
     {
@@ -332,7 +354,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_estagio_cartao
-     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataEstagioCartao($data_estagio_cartao)
@@ -344,7 +366,7 @@ class CartaoResponse implements ArrayAccess
     
     /**
      * Gets data_geracao
-     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     * @return \DateTime
      */
     public function getDataGeracao()
     {
@@ -353,7 +375,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -365,7 +387,7 @@ class CartaoResponse implements ArrayAccess
     
     /**
      * Gets data_impressao
-     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     * @return \DateTime
      */
     public function getDataImpressao()
     {
@@ -374,7 +396,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_impressao
-     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
      * @return $this
      */
     public function setDataImpressao($data_impressao)
@@ -386,7 +408,7 @@ class CartaoResponse implements ArrayAccess
     
     /**
      * Gets data_status_cartao
-     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     * @return \DateTime
      */
     public function getDataStatusCartao()
     {
@@ -395,7 +417,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_status_cartao
-     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataStatusCartao($data_status_cartao)
@@ -407,7 +429,7 @@ class CartaoResponse implements ArrayAccess
     
     /**
      * Gets data_validade
-     * @return \br.com.conductor.pier.api.v1_1.model\LocalDateTime
+     * @return \DateTime
      */
     public function getDataValidade()
     {
@@ -416,7 +438,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \br.com.conductor.pier.api.v1_1.model\LocalDateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+     * @param \DateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -553,6 +575,27 @@ class CartaoResponse implements ArrayAccess
     }
     
     /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
      * Gets id_status_cartao
      * @return int
      */
@@ -570,6 +613,27 @@ class CartaoResponse implements ArrayAccess
     {
         
         $this->id_status_cartao = $id_status_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_impresso
+     * @return string
+     */
+    public function getNomeImpresso()
+    {
+        return $this->nome_impresso;
+    }
+  
+    /**
+     * Sets nome_impresso
+     * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setNomeImpresso($nome_impresso)
+    {
+        
+        $this->nome_impresso = $nome_impresso;
         return $this;
     }
     

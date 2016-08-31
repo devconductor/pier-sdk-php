@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarEstagiosCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaDeEstGiosCartEs listarEstagiosCartoesUsingGET($id_estagio_cartao, $nome, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaDeEstGiosCartEs listarEstagiosCartoesUsingGET($id, $nome, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -76,13 +76,13 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\EstgioCartoApi();
-$id_estagio_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-$nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o.
+$id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+$nome = "nome_example"; // string | Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarEstagiosCartoesUsingGET($id_estagio_cartao, $nome, $page, $limit);
+    $result = $api_instance->listarEstagiosCartoesUsingGET($id, $nome, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EstgioCartoApi->listarEstagiosCartoesUsingGET: ', $e->getMessage(), "\n";
@@ -94,8 +94,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_estagio_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). | [optional] 
- **nome** | **string**| Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. | [optional] 
+ **id** | **int**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
+ **nome** | **string**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

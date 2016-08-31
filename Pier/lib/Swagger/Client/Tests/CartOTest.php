@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoResponseTest
+ * CartOTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * CartaoResponseTest Class Doc Comment
+ * CartOTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Objeto Cart\u00C3\u00A3o
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CartaoResponseTest extends \PHPUnit_Framework_TestCase
+class CartOTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class CartaoResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test CartaoResponse
+     * Test CartO
      */
-    public function testCartaoResponse() {
+    public function testCartO() {
 
     }
 

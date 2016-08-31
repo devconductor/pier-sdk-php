@@ -51,7 +51,7 @@ class ListaDeCartEs implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartaoResponse[]'
+        'cartoes' => '\br.com.conductor.pier.api.v1_1.model\CartO[]'
     );
   
     static function swaggerTypes() {
@@ -97,7 +97,7 @@ class ListaDeCartEs implements ArrayAccess
     
     /**
       * $cartoes Lista de cart\u00C3\u00B5es
-      * @var \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
+      * @var \br.com.conductor.pier.api.v1_1.model\CartO[]
       */
     protected $cartoes;
     
@@ -116,7 +116,7 @@ class ListaDeCartEs implements ArrayAccess
     
     /**
      * Gets cartoes
-     * @return \br.com.conductor.pier.api.v1_1.model\CartaoResponse[]
+     * @return \br.com.conductor.pier.api.v1_1.model\CartO[]
      */
     public function getCartoes()
     {
@@ -125,7 +125,7 @@ class ListaDeCartEs implements ArrayAccess
   
     /**
      * Sets cartoes
-     * @param \br.com.conductor.pier.api.v1_1.model\CartaoResponse[] $cartoes Lista de cart\u00C3\u00B5es
+     * @param \br.com.conductor.pier.api.v1_1.model\CartO[] $cartoes Lista de cart\u00C3\u00B5es
      * @return $this
      */
     public function setCartoes($cartoes)

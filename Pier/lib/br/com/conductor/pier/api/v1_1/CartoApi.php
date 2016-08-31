@@ -198,18 +198,20 @@ class CartoApi
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
+     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
-     * @param string $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param string $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato AAAA-MM, quando houver. (optional)
-     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
+     * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
+     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)
+     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
@@ -219,9 +221,9 @@ class CartoApi
      * @return \br.com.conductor.pier.api.v1_1.model\ListaDeCartEs
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($id_cartao = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $portador = null, $numero_cartao = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
+    public function listarUsingGET($id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($id_cartao, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $portador, $numero_cartao, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit);
         return $response; 
     }
 
@@ -231,18 +233,20 @@ class CartoApi
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
+     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
-     * @param string $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param string $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato AAAA-MM, quando houver. (optional)
-     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
+     * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
+     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)
+     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
@@ -252,7 +256,7 @@ class CartoApi
      * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaDeCartEs, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($id_cartao = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $portador = null, $numero_cartao = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
+    public function listarUsingGETWithHttpInfo($id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
     {
         
   
@@ -270,24 +274,28 @@ class CartoApi
   
         // query params
         
-        if ($id_cartao !== null) {
-            $queryParams['id_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($id_status_cartao !== null) {
-            $queryParams['id_status_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_cartao);
+            $queryParams['idStatusCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_cartao);
         }// query params
         
         if ($id_estagio_cartao !== null) {
-            $queryParams['id_estagio_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_estagio_cartao);
+            $queryParams['idEstagioCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_estagio_cartao);
         }// query params
         
         if ($id_conta !== null) {
-            $queryParams['id_conta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
+            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
         }// query params
         
         if ($id_pessoa !== null) {
-            $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
+            $queryParams['idPessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
+        }// query params
+        
+        if ($id_produto !== null) {
+            $queryParams['idProduto'] = $this->apiClient->getSerializer()->toQueryValue($id_produto);
         }// query params
         
         if ($portador !== null) {
@@ -295,43 +303,47 @@ class CartoApi
         }// query params
         
         if ($numero_cartao !== null) {
-            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+        }// query params
+        
+        if ($nome_impresso !== null) {
+            $queryParams['nomeImpresso'] = $this->apiClient->getSerializer()->toQueryValue($nome_impresso);
         }// query params
         
         if ($data_geracao !== null) {
-            $queryParams['data_geracao'] = $this->apiClient->getSerializer()->toQueryValue($data_geracao);
+            $queryParams['dataGeracao'] = $this->apiClient->getSerializer()->toQueryValue($data_geracao);
         }// query params
         
         if ($data_status_cartao !== null) {
-            $queryParams['data_status_cartao'] = $this->apiClient->getSerializer()->toQueryValue($data_status_cartao);
+            $queryParams['dataStatusCartao'] = $this->apiClient->getSerializer()->toQueryValue($data_status_cartao);
         }// query params
         
         if ($data_estagio_cartao !== null) {
-            $queryParams['data_estagio_cartao'] = $this->apiClient->getSerializer()->toQueryValue($data_estagio_cartao);
+            $queryParams['dataEstagioCartao'] = $this->apiClient->getSerializer()->toQueryValue($data_estagio_cartao);
         }// query params
         
         if ($data_validade !== null) {
-            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
+            $queryParams['dataValidade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
         }// query params
         
         if ($data_impressao !== null) {
-            $queryParams['data_impressao'] = $this->apiClient->getSerializer()->toQueryValue($data_impressao);
+            $queryParams['dataImpressao'] = $this->apiClient->getSerializer()->toQueryValue($data_impressao);
         }// query params
         
         if ($arquivo_impressao !== null) {
-            $queryParams['arquivo_impressao'] = $this->apiClient->getSerializer()->toQueryValue($arquivo_impressao);
+            $queryParams['arquivoImpressao'] = $this->apiClient->getSerializer()->toQueryValue($arquivo_impressao);
         }// query params
         
         if ($flag_impressao_origem_comercial !== null) {
-            $queryParams['flag_impressao_origem_comercial'] = $this->apiClient->getSerializer()->toQueryValue($flag_impressao_origem_comercial);
+            $queryParams['flagImpressaoOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($flag_impressao_origem_comercial);
         }// query params
         
         if ($flag_provisorio !== null) {
-            $queryParams['flag_provisorio'] = $this->apiClient->getSerializer()->toQueryValue($flag_provisorio);
+            $queryParams['flagProvisorio'] = $this->apiClient->getSerializer()->toQueryValue($flag_provisorio);
         }// query params
         
         if ($codigo_desbloqueio !== null) {
-            $queryParams['codigo_desbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($codigo_desbloqueio);
+            $queryParams['codigoDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($codigo_desbloqueio);
         }// query params
         
         if ($page !== null) {

@@ -198,16 +198,16 @@ class EstgioCartoApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      *
-     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)
-     * @param string $nome Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (required)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\ListaDeEstGiosCartEs
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGET($id_estagio_cartao = null, $nome = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGET($id, $nome, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($id_estagio_cartao, $nome, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($id, $nome, $page, $limit);
         return $response; 
     }
 
@@ -217,16 +217,24 @@ class EstgioCartoApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      *
-     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)
-     * @param string $nome Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (required)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaDeEstGiosCartEs, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGETWithHttpInfo($id_estagio_cartao = null, $nome = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGETWithHttpInfo($id, $nome, $page = null, $limit = null)
     {
         
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarEstagiosCartoesUsingGET');
+        }
+        // verify the required parameter 'nome' is set
+        if ($nome === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nome when calling listarEstagiosCartoesUsingGET');
+        }
   
         // parse inputs
         $resourcePath = "/api/estagios-cartoes";
@@ -242,8 +250,8 @@ class EstgioCartoApi
   
         // query params
         
-        if ($id_estagio_cartao !== null) {
-            $queryParams['id_estagio_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_estagio_cartao);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {
