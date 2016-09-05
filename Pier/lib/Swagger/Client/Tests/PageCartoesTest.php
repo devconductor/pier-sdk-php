@@ -1,6 +1,6 @@
 <?php
 /**
- * ListaCartoesTest
+ * PageCartoesTest
  *
  * PHP version 5
  *
@@ -34,7 +34,7 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * ListaCartoesTest Class Doc Comment
+ * PageCartoesTest Class Doc Comment
  *
  * @category    Class
  * @description Lista de Cart\u00C3\u00B5es
@@ -43,7 +43,7 @@ namespace br.com.conductor.pier.api.v1_1.model;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ListaCartoesTest extends \PHPUnit_Framework_TestCase
+class PageCartoesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class ListaCartoesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test ListaCartoes
+     * Test PageCartoes
      */
-    public function testListaCartoes() {
+    public function testPageCartoes() {
 
     }
 

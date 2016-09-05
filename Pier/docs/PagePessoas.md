@@ -1,9 +1,9 @@
-# ListaProdutos
+# PagePessoas
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v1_1.model\Produto[]**](Produto.md) |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v1_1.model\Pessoa[]**](Pessoa.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

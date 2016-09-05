@@ -1,6 +1,6 @@
 <?php
 /**
- * PageEstagiosCartoesTest
+ * PageStatusCartoesTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * PageEstagiosCartoesTest Class Doc Comment
+ * PageStatusCartoesTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+ * @description Lista de Status Cart\u00C3\u00B5es
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PageEstagiosCartoesTest extends \PHPUnit_Framework_TestCase
+class PageStatusCartoesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class PageEstagiosCartoesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test PageEstagiosCartoes
+     * Test PageStatusCartoes
      */
-    public function testPageEstagiosCartoes() {
+    public function testPageStatusCartoes() {
 
     }
 

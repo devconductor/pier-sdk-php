@@ -1,6 +1,6 @@
 <?php
 /**
- * ListaOrigensComerciaisTest
+ * PageOrigensComerciaisTest
  *
  * PHP version 5
  *
@@ -34,7 +34,7 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * ListaOrigensComerciaisTest Class Doc Comment
+ * PageOrigensComerciaisTest Class Doc Comment
  *
  * @category    Class
  * @description Lista de Origens Comerciais
@@ -43,7 +43,7 @@ namespace br.com.conductor.pier.api.v1_1.model;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ListaOrigensComerciaisTest extends \PHPUnit_Framework_TestCase
+class PageOrigensComerciaisTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class ListaOrigensComerciaisTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test ListaOrigensComerciais
+     * Test PageOrigensComerciais
      */
-    public function testListaOrigensComerciais() {
+    public function testPageOrigensComerciais() {
 
     }
 

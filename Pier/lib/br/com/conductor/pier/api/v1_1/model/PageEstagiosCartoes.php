@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageEstagiosCartoes Class Doc Comment
  *
  * @category    Class
- * @description Page de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+ * @description Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

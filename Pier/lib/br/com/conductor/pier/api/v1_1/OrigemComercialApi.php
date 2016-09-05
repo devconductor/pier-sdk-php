@@ -203,7 +203,7 @@ class OrigemComercialApi
      * @param string $status Status da Origem Comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais
+     * @return \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarOrigensComerciaisUsingGET($id_origem_comercial = null, $nome = null, $status = null, $page = null, $limit = null)
@@ -223,7 +223,7 @@ class OrigemComercialApi
      * @param string $status Status da Origem Comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function listarOrigensComerciaisUsingGETWithHttpInfo($id_origem_comercial = null, $nome = null, $status = null, $page = null, $limit = null)
@@ -290,19 +290,19 @@ class OrigemComercialApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

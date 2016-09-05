@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarOrigensComerciaisUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais listarOrigensComerciaisUsingGET($id_origem_comercial, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($id_origem_comercial, $nome, $status, $page, $limit)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaOrigensComerciais**](ListaOrigensComerciais.md)
+[**\br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais**](PageOrigensComerciais.md)
 
 ### Authorization
 

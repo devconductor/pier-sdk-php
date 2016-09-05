@@ -1,6 +1,6 @@
 <?php
 /**
- * ListaProdutos
+ * PageStatusCartoes
  *
  * PHP version 5
  *
@@ -35,23 +35,23 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * ListaProdutos Class Doc Comment
+ * PageStatusCartoes Class Doc Comment
  *
  * @category    Class
- * @description Lista de Produtos
+ * @description Lista de Status Cart\u00C3\u00B5es
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ListaProdutos implements ArrayAccess
+class PageStatusCartoes implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v1_1.model\Produto[]',
+        'content' => '\br.com.conductor.pier.api.v1_1.model\StatusCartao[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class ListaProdutos implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v1_1.model\Produto[]
+      * @var \br.com.conductor.pier.api.v1_1.model\StatusCartao[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class ListaProdutos implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v1_1.model\Produto[]
+     * @return \br.com.conductor.pier.api.v1_1.model\StatusCartao[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class ListaProdutos implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v1_1.model\Produto[] $content 
+     * @param \br.com.conductor.pier.api.v1_1.model\StatusCartao[] $content 
      * @return $this
      */
     public function setContent($content)

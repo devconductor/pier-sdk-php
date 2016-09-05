@@ -5,11 +5,12 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**debloquearUsingGET**](CartaoApi.md#debloquearUsingGET) | **GET** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
 # **consultarUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\OrigemComercial consultarUsingGET($id_cartao)
+> \br.com.conductor.pier.api.v1_1.model\Cartao consultarUsingGET($id_cartao)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -45,7 +46,57 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\OrigemComercial**](OrigemComercial.md)
+[**\br.com.conductor.pier.api.v1_1.model\Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **debloquearUsingGET**
+> \br.com.conductor.pier.api.v1_1.model\Cartao debloquearUsingGET($id_cartao)
+
+Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+try { 
+    $result = $api_instance->debloquearUsingGET($id_cartao);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->debloquearUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v1_1.model\Cartao**](Cartao.md)
 
 ### Authorization
 
@@ -59,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaCartoes listarUsingGET($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\PageCartoes listarUsingGET($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -133,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaCartoes**](ListaCartoes.md)
+[**\br.com.conductor.pier.api.v1_1.model\PageCartoes**](PageCartoes.md)
 
 ### Authorization
 

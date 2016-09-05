@@ -1,6 +1,6 @@
 <?php
 /**
- * ListaStatusCartoesTest
+ * PagePessoasTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * ListaStatusCartoesTest Class Doc Comment
+ * PagePessoasTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de Status Cart\u00C3\u00B5es
+ * @description Lista de Pessoas
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ListaStatusCartoesTest extends \PHPUnit_Framework_TestCase
+class PagePessoasTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class ListaStatusCartoesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test ListaStatusCartoes
+     * Test PagePessoas
      */
-    public function testListaStatusCartoes() {
+    public function testPagePessoas() {
 
     }
 

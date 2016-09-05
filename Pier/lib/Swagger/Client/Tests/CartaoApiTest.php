@@ -76,6 +76,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for debloquearUsingGET
+     *
+     * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_debloquearUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
