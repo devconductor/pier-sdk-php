@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarProdutosUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaProdutos listarProdutosUsingGET($id_produto, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\ListaProdutos listarProdutosUsingGET($id, $nome, $status, $page, $limit)
 
 Lista os Produtos do Emissor
 
@@ -76,14 +76,14 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ProdutoApi();
-$id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-$nome = "nome_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-$status = "status_example"; // string | Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+$nome = "nome_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+$status = "status_example"; // string | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarProdutosUsingGET($id_produto, $nome, $status, $page, $limit);
+    $result = $api_instance->listarProdutosUsingGET($id, $nome, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProdutoApi->listarProdutosUsingGET: ', $e->getMessage(), "\n";
@@ -95,9 +95,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | [optional] 
- **nome** | **string**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto | [optional] 
- **status** | **string**| Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
+ **nome** | **string**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
+ **status** | **string**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

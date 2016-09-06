@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarOrigensComerciaisUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($id_origem_comercial, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($id, $nome, $status, $page, $limit)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
 
@@ -76,14 +76,14 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\OrigemComercialApi();
-$id_origem_comercial = 789; // int | ID da Origem Comercial
-$nome = "nome_example"; // string | Nome da Origem Comercial
-$status = "status_example"; // string | Status da Origem Comercial
+$id = 789; // int | Id da origem comercial
+$nome = "nome_example"; // string | Nome da origem comercial
+$status = "status_example"; // string | Status da origem comercial
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarOrigensComerciaisUsingGET($id_origem_comercial, $nome, $status, $page, $limit);
+    $result = $api_instance->listarOrigensComerciaisUsingGET($id, $nome, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrigemComercialApi->listarOrigensComerciaisUsingGET: ', $e->getMessage(), "\n";
@@ -95,9 +95,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_origem_comercial** | **int**| ID da Origem Comercial | [optional] 
- **nome** | **string**| Nome da Origem Comercial | [optional] 
- **status** | **string**| Status da Origem Comercial | [optional] 
+ **id** | **int**| Id da origem comercial | [optional] 
+ **nome** | **string**| Nome da origem comercial | [optional] 
+ **status** | **string**| Status da origem comercial | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

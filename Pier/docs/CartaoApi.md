@@ -4,10 +4,61 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**consultarLimiteUsingGET**](CartaoApi.md#consultarLimiteUsingGET) | **GET** /api/cartoes/{id_cartao}/limites | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**debloquearUsingGET**](CartaoApi.md#debloquearUsingGET) | **GET** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
+
+# **consultarLimiteUsingGET**
+> \br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade consultarLimiteUsingGET($id_cartao)
+
+Apresenta os limites do Portador do Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+try { 
+    $result = $api_instance->consultarLimiteUsingGET($id_cartao);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->consultarLimiteUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade**](LimiteDisponibilidade.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET**
 > \br.com.conductor.pier.api.v1_1.model\Cartao consultarUsingGET($id_cartao)
@@ -139,7 +190,7 @@ $nome_impresso = "nome_impresso_example"; // string | Apresenta o nome impresso 
 $data_geracao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
 $data_status_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
 $data_estagio_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-$data_validade = "data_validade_example"; // string | Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+$data_validade = "data_validade_example"; // string | Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
 $data_impressao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
 $arquivo_impressao = "arquivo_impressao_example"; // string | Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
 $flag_impressao_origem_comercial = 56; // int | Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
@@ -173,7 +224,7 @@ Name | Type | Description  | Notes
  **data_geracao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
  **data_status_cartao** | **\DateTime**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
  **data_estagio_cartao** | **\DateTime**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
- **data_validade** | **string**| Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. | [optional] 
+ **data_validade** | **string**| Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver. | [optional] 
  **data_impressao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
  **arquivo_impressao** | **string**| Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. | [optional] 
  **flag_impressao_origem_comercial** | **int**| Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. | [optional] 

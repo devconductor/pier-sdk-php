@@ -198,17 +198,17 @@ class ProdutoApi
      *
      * Lista os Produtos do Emissor
      *
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)
-     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)
-     * @param string $status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
+     * @param string $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\ListaProdutos
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarProdutosUsingGET($id_produto = null, $nome = null, $status = null, $page = null, $limit = null)
+    public function listarProdutosUsingGET($id = null, $nome = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarProdutosUsingGETWithHttpInfo ($id_produto, $nome, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarProdutosUsingGETWithHttpInfo ($id, $nome, $status, $page, $limit);
         return $response; 
     }
 
@@ -218,15 +218,15 @@ class ProdutoApi
      *
      * Lista os Produtos do Emissor
      *
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)
-     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)
-     * @param string $status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
+     * @param string $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaProdutos, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarProdutosUsingGETWithHttpInfo($id_produto = null, $nome = null, $status = null, $page = null, $limit = null)
+    public function listarProdutosUsingGETWithHttpInfo($id = null, $nome = null, $status = null, $page = null, $limit = null)
     {
         
   
@@ -244,8 +244,8 @@ class ProdutoApi
   
         // query params
         
-        if ($id_produto !== null) {
-            $queryParams['id_produto'] = $this->apiClient->getSerializer()->toQueryValue($id_produto);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {

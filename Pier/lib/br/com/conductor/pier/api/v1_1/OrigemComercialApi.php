@@ -198,17 +198,17 @@ class OrigemComercialApi
      *
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (optional)
-     * @param string $nome Nome da Origem Comercial (optional)
-     * @param string $status Status da Origem Comercial (optional)
+     * @param int $id Id da origem comercial (optional)
+     * @param string $nome Nome da origem comercial (optional)
+     * @param string $status Status da origem comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarOrigensComerciaisUsingGET($id_origem_comercial = null, $nome = null, $status = null, $page = null, $limit = null)
+    public function listarOrigensComerciaisUsingGET($id = null, $nome = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarOrigensComerciaisUsingGETWithHttpInfo ($id_origem_comercial, $nome, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarOrigensComerciaisUsingGETWithHttpInfo ($id, $nome, $status, $page, $limit);
         return $response; 
     }
 
@@ -218,15 +218,15 @@ class OrigemComercialApi
      *
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (optional)
-     * @param string $nome Nome da Origem Comercial (optional)
-     * @param string $status Status da Origem Comercial (optional)
+     * @param int $id Id da origem comercial (optional)
+     * @param string $nome Nome da origem comercial (optional)
+     * @param string $status Status da origem comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarOrigensComerciaisUsingGETWithHttpInfo($id_origem_comercial = null, $nome = null, $status = null, $page = null, $limit = null)
+    public function listarOrigensComerciaisUsingGETWithHttpInfo($id = null, $nome = null, $status = null, $page = null, $limit = null)
     {
         
   
@@ -244,8 +244,8 @@ class OrigemComercialApi
   
         // query params
         
-        if ($id_origem_comercial !== null) {
-            $queryParams['id_origem_comercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {

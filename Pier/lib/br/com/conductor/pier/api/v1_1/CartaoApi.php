@@ -92,6 +92,108 @@ class CartaoApi
   
     
     /**
+     * consultarLimiteUsingGET
+     *
+     * Apresenta os limites do Portador do Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return \br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
+     */
+    public function consultarLimiteUsingGET($id_cartao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarLimiteUsingGETWithHttpInfo ($id_cartao);
+        return $response; 
+    }
+
+
+    /**
+     * consultarLimiteUsingGETWithHttpInfo
+     *
+     * Apresenta os limites do Portador do Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
+     */
+    public function consultarLimiteUsingGETWithHttpInfo($id_cartao)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarLimiteUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id_cartao}/limites";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_cartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarUsingGET
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -312,7 +414,7 @@ class CartaoApi
      * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
      * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
      * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)
+     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver. (optional)
      * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
@@ -347,7 +449,7 @@ class CartaoApi
      * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
      * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
      * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)
+     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver. (optional)
      * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)

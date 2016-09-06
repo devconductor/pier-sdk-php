@@ -198,21 +198,21 @@ class PessoaApi
      *
      * Lista as Pessoas cadastradas no Emissor
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
      * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
      * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
      * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
      * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
      * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\PagePessoas
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($id_pessoa = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $cnpj2 = null, $page = null, $limit = null)
+    public function listarUsingGET1($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id_pessoa, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $cnpj2, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit);
         return $response; 
     }
 
@@ -222,19 +222,19 @@ class PessoaApi
      *
      * Lista as Pessoas cadastradas no Emissor
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
      * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
      * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
      * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
      * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
      * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\PagePessoas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($id_pessoa = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $cnpj2 = null, $page = null, $limit = null)
+    public function listarUsingGET1WithHttpInfo($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
     {
         
   
@@ -252,8 +252,8 @@ class PessoaApi
   
         // query params
         
-        if ($id_pessoa !== null) {
-            $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {
@@ -273,11 +273,11 @@ class PessoaApi
         }// query params
         
         if ($data_nascimento !== null) {
-            $queryParams['data_nascimento'] = $this->apiClient->getSerializer()->toQueryValue($data_nascimento);
+            $queryParams['dataNascimento'] = $this->apiClient->getSerializer()->toQueryValue($data_nascimento);
         }// query params
         
-        if ($cnpj2 !== null) {
-            $queryParams['cnpj'] = $this->apiClient->getSerializer()->toQueryValue($cnpj2);
+        if ($sexo !== null) {
+            $queryParams['sexo'] = $this->apiClient->getSerializer()->toQueryValue($sexo);
         }// query params
         
         if ($page !== null) {
