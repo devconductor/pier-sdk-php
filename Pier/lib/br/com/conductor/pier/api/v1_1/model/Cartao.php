@@ -68,7 +68,7 @@ class Cartao implements ArrayAccess
         'id_status_cartao' => 'int',
         'nome_impresso' => 'string',
         'numero_cartao' => 'string',
-        'portador' => 'int'
+        'tipo_portador' => 'string'
     );
   
     static function swaggerTypes() {
@@ -97,7 +97,7 @@ class Cartao implements ArrayAccess
         'id_status_cartao' => 'idStatusCartao',
         'nome_impresso' => 'nomeImpresso',
         'numero_cartao' => 'numeroCartao',
-        'portador' => 'portador'
+        'tipo_portador' => 'tipoPortador'
     );
   
     static function attributeMap() {
@@ -126,7 +126,7 @@ class Cartao implements ArrayAccess
         'id_status_cartao' => 'setIdStatusCartao',
         'nome_impresso' => 'setNomeImpresso',
         'numero_cartao' => 'setNumeroCartao',
-        'portador' => 'setPortador'
+        'tipo_portador' => 'setTipoPortador'
     );
   
     static function setters() {
@@ -155,7 +155,7 @@ class Cartao implements ArrayAccess
         'id_status_cartao' => 'getIdStatusCartao',
         'nome_impresso' => 'getNomeImpresso',
         'numero_cartao' => 'getNumeroCartao',
-        'portador' => 'getPortador'
+        'tipo_portador' => 'getTipoPortador'
     );
   
     static function getters() {
@@ -266,10 +266,10 @@ class Cartao implements ArrayAccess
     protected $numero_cartao;
     
     /**
-      * $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
-      * @var int
+      * $tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+      * @var string
       */
-    protected $portador;
+    protected $tipo_portador;
     
 
     /**
@@ -297,7 +297,7 @@ class Cartao implements ArrayAccess
             $this->id_status_cartao = $data["id_status_cartao"];
             $this->nome_impresso = $data["nome_impresso"];
             $this->numero_cartao = $data["numero_cartao"];
-            $this->portador = $data["portador"];
+            $this->tipo_portador = $data["tipo_portador"];
         }
     }
     
@@ -659,23 +659,23 @@ class Cartao implements ArrayAccess
     }
     
     /**
-     * Gets portador
-     * @return int
+     * Gets tipo_portador
+     * @return string
      */
-    public function getPortador()
+    public function getTipoPortador()
     {
-        return $this->portador;
+        return $this->tipo_portador;
     }
   
     /**
-     * Sets portador
-     * @param int $portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+     * Sets tipo_portador
+     * @param string $tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
      * @return $this
      */
-    public function setPortador($portador)
+    public function setTipoPortador($tipo_portador)
     {
         
-        $this->portador = $portador;
+        $this->tipo_portador = $tipo_portador;
         return $this;
     }
     

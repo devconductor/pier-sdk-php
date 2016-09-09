@@ -53,7 +53,7 @@ class Produto implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'nome' => 'string',
-        'status' => 'string'
+        'status' => 'int'
     );
   
     static function swaggerTypes() {
@@ -117,7 +117,7 @@ class Produto implements ArrayAccess
     
     /**
       * $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
-      * @var string
+      * @var int
       */
     protected $status;
     
@@ -180,7 +180,7 @@ class Produto implements ArrayAccess
     
     /**
      * Gets status
-     * @return string
+     * @return int
      */
     public function getStatus()
     {
@@ -189,7 +189,7 @@ class Produto implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+     * @param int $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
      * @return $this
      */
     public function setStatus($status)

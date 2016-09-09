@@ -4,16 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa.
 [**listarUsingGET1**](PessoaApi.md#listarUsingGET1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 # **consultarUsingGET1**
-> \br.com.conductor.pier.api.v1_1.model\OrigemComercial consultarUsingGET1($id_origem_comercial)
+> \br.com.conductor.pier.api.v1_1.model\Pessoa consultarUsingGET1($id_pessoa)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+Apresenta os dados de uma determinada Pessoa.
 
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
 ### Example 
 ```php
@@ -26,10 +26,10 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 // br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\PessoaApi();
-$id_origem_comercial = 789; // int | ID da Origem Comercial
+$id_pessoa = 789; // int | ID da Origem Comercial
 
 try { 
-    $result = $api_instance->consultarUsingGET1($id_origem_comercial);
+    $result = $api_instance->consultarUsingGET1($id_pessoa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PessoaApi->consultarUsingGET1: ', $e->getMessage(), "\n";
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_origem_comercial** | **int**| ID da Origem Comercial | 
+ **id_pessoa** | **int**| ID da Origem Comercial | 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\OrigemComercial**](OrigemComercial.md)
+[**\br.com.conductor.pier.api.v1_1.model\Pessoa**](Pessoa.md)
 
 ### Authorization
 

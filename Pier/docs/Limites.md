@@ -1,4 +1,4 @@
-# LimiteDisponibilidade
+# Limites
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **limite_consignado** | **double** |  | 
 **limite_externo** | **double** |  | 
 **limite_extra** | **double** |  | 
-**limite_global** | **double** | Campo que  | 
+**limite_global** | **double** |  | 
 **limite_internacional_compra** | **double** |  | 
 **limite_internacional_parcelado** | **double** |  | 
 **limite_internacional_parcelas** | **double** |  | 

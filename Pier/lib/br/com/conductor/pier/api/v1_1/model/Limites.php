@@ -1,6 +1,6 @@
 <?php
 /**
- * LimiteDisponibilidade
+ * Limites
  *
  * PHP version 5
  *
@@ -35,16 +35,16 @@ namespace br.com.conductor.pier.api.v1_1.model;
 
 use \ArrayAccess;
 /**
- * LimiteDisponibilidade Class Doc Comment
+ * Limites Class Doc Comment
  *
  * @category    Class
- * @description LimiteDisponibilidade
+ * @description Limites
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LimiteDisponibilidade implements ArrayAccess
+class Limites implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -186,7 +186,7 @@ class LimiteDisponibilidade implements ArrayAccess
     protected $limite_extra;
     
     /**
-      * $limite_global Campo que 
+      * $limite_global 
       * @var double
       */
     protected $limite_global;
@@ -395,7 +395,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param double $limite_global Campo que 
+     * @param double $limite_global 
      * @return $this
      */
     public function setLimiteGlobal($limite_global)

@@ -94,15 +94,15 @@ class PessoaApi
     /**
      * consultarUsingGET1
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de uma determinada Pessoa.
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\OrigemComercial
+     * @param int $id_pessoa ID da Origem Comercial (required)
+     * @return \br.com.conductor.pier.api.v1_1.model\Pessoa
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id_origem_comercial)
+    public function consultarUsingGET1($id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id_origem_comercial);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id_pessoa);
         return $response; 
     }
 
@@ -110,22 +110,22 @@ class PessoaApi
     /**
      * consultarUsingGET1WithHttpInfo
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de uma determinada Pessoa.
      *
-     * @param int $id_origem_comercial ID da Origem Comercial (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\OrigemComercial, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id_pessoa ID da Origem Comercial (required)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\Pessoa, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id_origem_comercial)
+    public function consultarUsingGET1WithHttpInfo($id_pessoa)
     {
         
-        // verify the required parameter 'id_origem_comercial' is set
-        if ($id_origem_comercial === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_origem_comercial when calling consultarUsingGET1');
+        // verify the required parameter 'id_pessoa' is set
+        if ($id_pessoa === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling consultarUsingGET1');
         }
   
         // parse inputs
-        $resourcePath = "/api/pessoas/{id_origem_comercial}";
+        $resourcePath = "/api/pessoas/{id_pessoa}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -140,10 +140,10 @@ class PessoaApi
         
         // path params
         
-        if ($id_origem_comercial !== null) {
+        if ($id_pessoa !== null) {
             $resourcePath = str_replace(
-                "{" . "id_origem_comercial" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_origem_comercial),
+                "{" . "id_pessoa" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_pessoa),
                 $resourcePath
             );
         }
@@ -172,19 +172,19 @@ class PessoaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\Pessoa'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\Pessoa', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\Pessoa', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

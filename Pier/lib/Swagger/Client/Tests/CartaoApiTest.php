@@ -76,6 +76,26 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarPortadorUsingGET
+     *
+     * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+     *
+     */
+    public function test_consultarPortadorUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarSaldoUsingGET
+     *
+     * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
+     *
+     */
+    public function test_consultarSaldoUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o

@@ -94,10 +94,10 @@ class ProdutoApi
     /**
      * consultarProdutoUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de um determinado Produto.
      *
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\OrigemComercial
+     * @return \br.com.conductor.pier.api.v1_1.model\Produto
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarProdutoUsingGET($id_produto)
@@ -110,10 +110,10 @@ class ProdutoApi
     /**
      * consultarProdutoUsingGETWithHttpInfo
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de um determinado Produto.
      *
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\OrigemComercial, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\Produto, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
     public function consultarProdutoUsingGETWithHttpInfo($id_produto)
@@ -125,7 +125,7 @@ class ProdutoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/produtos/{id_origem_comercial}";
+        $resourcePath = "/api/produtos/{id_produto}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -172,19 +172,19 @@ class ProdutoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\Produto'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\Produto', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\OrigemComercial', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\Produto', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -200,7 +200,7 @@ class ProdutoApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
      * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
-     * @param string $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\ListaProdutos
@@ -220,7 +220,7 @@ class ProdutoApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
      * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
-     * @param string $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\ListaProdutos, HTTP status code, HTTP response headers (array of strings)

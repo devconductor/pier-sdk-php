@@ -68,7 +68,7 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET1
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Apresenta os dados de uma determinada Pessoa.
      *
      */
     public function test_consultarUsingGET1() {

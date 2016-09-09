@@ -1,6 +1,6 @@
 <?php
 /**
- * LimiteDisponibilidadeTest
+ * PortadorTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * LimiteDisponibilidadeTest Class Doc Comment
+ * PortadorTest Class Doc Comment
  *
  * @category    Class
- * @description LimiteDisponibilidade
+ * @description Portador
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LimiteDisponibilidadeTest extends \PHPUnit_Framework_TestCase
+class PortadorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class LimiteDisponibilidadeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test LimiteDisponibilidade
+     * Test Portador
      */
-    public function testLimiteDisponibilidade() {
+    public function testPortador() {
 
     }
 
