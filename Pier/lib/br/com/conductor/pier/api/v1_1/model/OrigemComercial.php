@@ -53,7 +53,7 @@ class OrigemComercial implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'nome' => 'string',
-        'status' => 'string'
+        'status' => 'int'
     );
   
     static function swaggerTypes() {
@@ -117,7 +117,7 @@ class OrigemComercial implements ArrayAccess
     
     /**
       * $status Status da origem comercial
-      * @var string
+      * @var int
       */
     protected $status;
     
@@ -180,7 +180,7 @@ class OrigemComercial implements ArrayAccess
     
     /**
      * Gets status
-     * @return string
+     * @return int
      */
     public function getStatus()
     {
@@ -189,7 +189,7 @@ class OrigemComercial implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status da origem comercial
+     * @param int $status Status da origem comercial
      * @return $this
      */
     public function setStatus($status)

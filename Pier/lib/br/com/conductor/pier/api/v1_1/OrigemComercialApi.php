@@ -200,7 +200,7 @@ class OrigemComercialApi
      *
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)
-     * @param string $status Status da origem comercial (optional)
+     * @param int $status Status da origem comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais
@@ -220,7 +220,7 @@ class OrigemComercialApi
      *
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)
-     * @param string $status Status da origem comercial (optional)
+     * @param int $status Status da origem comercial (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais, HTTP status code, HTTP response headers (array of strings)

@@ -78,7 +78,7 @@ br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()-
 $api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\OrigemComercialApi();
 $id = 789; // int | Id da origem comercial
 $nome = "nome_example"; // string | Nome da origem comercial
-$status = "status_example"; // string | Status da origem comercial
+$status = 56; // int | Status da origem comercial
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id da origem comercial | [optional] 
  **nome** | **string**| Nome da origem comercial | [optional] 
- **status** | **string**| Status da origem comercial | [optional] 
+ **status** | **int**| Status da origem comercial | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

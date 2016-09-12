@@ -200,7 +200,7 @@ class Cartao implements ArrayAccess
     protected $data_status_cartao;
     
     /**
-      * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+      * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
       * @var \DateTime
       */
     protected $data_validade;
@@ -438,7 +438,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \DateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+     * @param \DateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
      * @return $this
      */
     public function setDataValidade($data_validade)
