@@ -176,7 +176,7 @@ class Portador implements ArrayAccess
     protected $nome_impresso;
     
     /**
-      * $tipo_portador 
+      * $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
       * @var string
       */
     protected $tipo_portador;
@@ -381,7 +381,7 @@ class Portador implements ArrayAccess
   
     /**
      * Sets tipo_portador
-     * @param string $tipo_portador 
+     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
      * @return $this
      */
     public function setTipoPortador($tipo_portador)

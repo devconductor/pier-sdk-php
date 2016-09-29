@@ -1,6 +1,6 @@
 <?php
 /**
- * CartaoApiTest
+ * StatusContaApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
 use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
 
 /**
- * CartaoApiTest Class Doc Comment
+ * StatusContaApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v1_1.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CartaoApiTest extends \PHPUnit_Framework_TestCase
+class StatusContaApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,52 +66,22 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarLimiteDisponibilidadeUsingGET
+     * Test case for consultarUsingGET2
      *
-     * Apresenta os limites do Portador do Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Status Conta
      *
      */
-    public function test_consultarLimiteDisponibilidadeUsingGET() {
+    public function test_consultarUsingGET2() {
 
     }
     
     /**
-     * Test case for consultarPortadorUsingGET
+     * Test case for listarUsingGET2
      *
-     * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
-     *
-     */
-    public function test_consultarPortadorUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET
-     *
-     * Apresenta os dados de um determinado Cart\u00C3\u00A3o
+     * Lista os Status Contas cadastrados para o Emissor 
      *
      */
-    public function test_consultarUsingGET() {
-
-    }
-    
-    /**
-     * Test case for debloquearUsingGET
-     *
-     * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
-     *
-     */
-    public function test_debloquearUsingGET() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET
-     *
-     * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-     *
-     */
-    public function test_listarUsingGET() {
+    public function test_listarUsingGET2() {
 
     }
     

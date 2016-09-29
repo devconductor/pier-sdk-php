@@ -1,6 +1,6 @@
 <?php
 /**
- * SaldosTest
+ * PageStatusContasTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * SaldosTest Class Doc Comment
+ * PageStatusContasTest Class Doc Comment
  *
  * @category    Class
- * @description Saldos
+ * @description Lista de Status Contas
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SaldosTest extends \PHPUnit_Framework_TestCase
+class PageStatusContasTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class SaldosTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test Saldos
+     * Test PageStatusContas
      */
-    public function testSaldos() {
+    public function testPageStatusContas() {
 
     }
 

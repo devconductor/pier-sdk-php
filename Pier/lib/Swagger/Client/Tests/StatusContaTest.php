@@ -1,6 +1,6 @@
 <?php
 /**
- * LimitesTest
+ * StatusContaTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v1_1.model;
 
 /**
- * LimitesTest Class Doc Comment
+ * StatusContaTest Class Doc Comment
  *
  * @category    Class
- * @description Limites
+ * @description Status Conta
  * @package     br.com.conductor.pier.api.v1_1.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LimitesTest extends \PHPUnit_Framework_TestCase
+class StatusContaTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class LimitesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test Limites
+     * Test StatusConta
      */
-    public function testLimites() {
+    public function testStatusConta() {
 
     }
 

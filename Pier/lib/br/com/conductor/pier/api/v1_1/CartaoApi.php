@@ -92,40 +92,40 @@ class CartaoApi
   
     
     /**
-     * consultarLimiteUsingGET
+     * consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\Limites
+     * @return \br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteUsingGET($id_cartao)
+    public function consultarLimiteDisponibilidadeUsingGET($id_cartao)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarLimiteUsingGETWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGETWithHttpInfo ($id_cartao);
         return $response; 
     }
 
 
     /**
-     * consultarLimiteUsingGETWithHttpInfo
+     * consultarLimiteDisponibilidadeUsingGETWithHttpInfo
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\Limites, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteUsingGETWithHttpInfo($id_cartao)
+    public function consultarLimiteDisponibilidadeUsingGETWithHttpInfo($id_cartao)
     {
         
         // verify the required parameter 'id_cartao' is set
         if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarLimiteUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarLimiteDisponibilidadeUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/limites";
+        $resourcePath = "/api/cartoes/{id_cartao}/limites-disponibilidades";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -172,19 +172,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\Limites'
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\Limites', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\Limites', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\LimiteDisponibilidade', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -287,108 +287,6 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\Portador', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarSaldoUsingGET
-     *
-     * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-     *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v1_1.model\Saldos
-     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
-     */
-    public function consultarSaldoUsingGET($id_cartao)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarSaldoUsingGETWithHttpInfo ($id_cartao);
-        return $response; 
-    }
-
-
-    /**
-     * consultarSaldoUsingGETWithHttpInfo
-     *
-     * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-     *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v1_1.model\Saldos, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
-     */
-    public function consultarSaldoUsingGETWithHttpInfo($id_cartao)
-    {
-        
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarSaldoUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/saldos-disponiveis";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id_cartao !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v1_1.model\Saldos'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\Saldos', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\Saldos', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -612,7 +510,7 @@ class CartaoApi
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param string $tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
+     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
      * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
      * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
@@ -647,7 +545,7 @@ class CartaoApi
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
-     * @param string $tipo_portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)
+     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
      * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
      * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
