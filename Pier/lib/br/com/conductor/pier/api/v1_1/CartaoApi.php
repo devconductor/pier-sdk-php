@@ -92,6 +92,122 @@ class CartaoApi
   
     
     /**
+     * alterarStatusImpressaoUsingPUT
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status_impressao Id . (required)
+     * @return \br.com.conductor.pier.api.v1_1.model\HistoricoImpressaoCartao
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
+     */
+    public function alterarStatusImpressaoUsingPUT($id_cartao, $id_status_impressao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id_cartao, $id_status_impressao);
+        return $response; 
+    }
+
+
+    /**
+     * alterarStatusImpressaoUsingPUTWithHttpInfo
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status_impressao Id . (required)
+     * @return Array of \br.com.conductor.pier.api.v1_1.model\HistoricoImpressaoCartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v1_1.invoker\ApiException on non-2xx response
+     */
+    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id_cartao, $id_status_impressao)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling alterarStatusImpressaoUsingPUT');
+        }
+        // verify the required parameter 'id_status_impressao' is set
+        if ($id_status_impressao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling alterarStatusImpressaoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_cartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($id_status_impressao !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_status_impressao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_status_impressao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v1_1.model\HistoricoImpressaoCartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v1_1.model\HistoricoImpressaoCartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v1_1.model\HistoricoImpressaoCartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o

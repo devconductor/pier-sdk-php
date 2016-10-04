@@ -66,6 +66,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarStatusImpressaoUsingPUT
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     *
+     */
+    public function test_alterarStatusImpressaoUsingPUT() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
