@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\EstagioCartaoApi
+# br.com.conductor.pier.api.v2.invoker\EstagioCartaoApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarEstagioCartaoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\EstagioCartao consultarEstagioCartaoUsingGET($id_estagio_cartao)
+> \br.com.conductor.pier.api.v2.model\EstagioCartao consultarEstagioCartaoUsingGET($id_estagio_cartao)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\EstagioCartaoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstagioCartaoApi();
 $id_estagio_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\EstagioCartao**](EstagioCartao.md)
+[**\br.com.conductor.pier.api.v2.model\EstagioCartao**](EstagioCartao.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarEstagiosCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes listarEstagiosCartoesUsingGET($id, $nome, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageEstagiosCartoes listarEstagiosCartoesUsingGET($id, $nome, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5e
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\EstagioCartaoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstagioCartaoApi();
 $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\PageEstagiosCartoes**](PageEstagiosCartoes.md)
+[**\br.com.conductor.pier.api.v2.model\PageEstagiosCartoes**](PageEstagiosCartoes.md)
 
 ### Authorization
 

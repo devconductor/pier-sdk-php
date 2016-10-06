@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\ProdutoApi
+# br.com.conductor.pier.api.v2.invoker\ProdutoApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarProdutoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\Produto consultarProdutoUsingGET($id_produto)
+> \br.com.conductor.pier.api.v2.model\Produto consultarProdutoUsingGET($id_produto)
 
 Apresenta os dados de um determinado Produto.
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ProdutoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ProdutoApi();
 $id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\Produto**](Produto.md)
+[**\br.com.conductor.pier.api.v2.model\Produto**](Produto.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarProdutosUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\ListaProdutos listarProdutosUsingGET($id, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\ListaProdutos listarProdutosUsingGET($id, $nome, $status, $page, $limit)
 
 Lista os Produtos do Emissor
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\ProdutoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ProdutoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
 $nome = "nome_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
 $status = 56; // int | Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\ListaProdutos**](ListaProdutos.md)
+[**\br.com.conductor.pier.api.v2.model\ListaProdutos**](ListaProdutos.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1_1.invoker
+ * @package  br.com.conductor.pier.api.v2.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -32,14 +32,14 @@
  * Do not edit the class manually.
  */
 
-namespace br.com.conductor.pier.api.v1_1.invoker;
+namespace br.com.conductor.pier.api.v2.invoker;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1_1.invoker
+ * @package  br.com.conductor.pier.api.v2.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -87,7 +87,7 @@ class Configuration
     /**
      * The default instance of ApiClient
      *
-     * @var \br.com.conductor.pier.api.v1_1.invoker\ApiClient
+     * @var \br.com.conductor.pier.api.v2.invoker\ApiClient
      */
     protected $defaultHeaders = array();
 
@@ -513,7 +513,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = "PHP SDK (br.com.conductor.pier.api.v1_1.invoker) Debug Report:\n";
+        $report  = "PHP SDK (br.com.conductor.pier.api.v2.invoker) Debug Report:\n";
         $report .= "    OS: ".php_uname()."\n";
         $report .= "    PHP Version: ".phpversion()."\n";
         $report .= "    OpenAPI Spec Version: 0.0.1\n";

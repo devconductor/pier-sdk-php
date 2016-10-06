@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\OrigemComercialApi
+# br.com.conductor.pier.api.v2.invoker\OrigemComercialApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarOrigemComercialUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\OrigemComercial consultarOrigemComercialUsingGET($id_origem_comercial)
+> \br.com.conductor.pier.api.v2.model\OrigemComercial consultarOrigemComercialUsingGET($id_origem_comercial)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinad
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\OrigemComercialApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\OrigemComercialApi();
 $id_origem_comercial = 789; // int | ID da Origem Comercial
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\OrigemComercial**](OrigemComercial.md)
+[**\br.com.conductor.pier.api.v2.model\OrigemComercial**](OrigemComercial.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarOrigensComerciaisUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($id, $nome, $status, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($id, $nome, $status, $page, $limit)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existent
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\OrigemComercialApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\OrigemComercialApi();
 $id = 789; // int | Id da origem comercial
 $nome = "nome_example"; // string | Nome da origem comercial
 $status = 56; // int | Status da origem comercial
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\PageOrigensComerciais**](PageOrigensComerciais.md)
+[**\br.com.conductor.pier.api.v2.model\PageOrigensComerciais**](PageOrigensComerciais.md)
 
 ### Authorization
 

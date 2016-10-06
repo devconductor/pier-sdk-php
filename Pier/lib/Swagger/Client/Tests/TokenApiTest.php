@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1_1.invoker
+ * @package  br.com.conductor.pier.api.v2.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -31,18 +31,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace br.com.conductor.pier.api.v1_1;
+namespace br.com.conductor.pier.api.v2;
 
-use \br.com.conductor.pier.api.v1_1.invoker\Configuration;
-use \br.com.conductor.pier.api.v1_1.invoker\ApiClient;
-use \br.com.conductor.pier.api.v1_1.invoker\ApiException;
-use \br.com.conductor.pier.api.v1_1.invoker\ObjectSerializer;
+use \br.com.conductor.pier.api.v2.invoker\Configuration;
+use \br.com.conductor.pier.api.v2.invoker\ApiClient;
+use \br.com.conductor.pier.api.v2.invoker\ApiException;
+use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
  * TokenApiTest Class Doc Comment
  *
  * @category Class
- * @package  br.com.conductor.pier.api.v1_1.invoker
+ * @package  br.com.conductor.pier.api.v2.invoker
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -68,7 +68,7 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for callbackUsingPOST
      *
-     * /tokens/callback
+     * /api/tokens/callback
      *
      */
     public function test_callbackUsingPOST() {
@@ -78,7 +78,7 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarUsingPOST
      *
-     * /tokens/validar
+     * /api/tokens/validar
      *
      */
     public function test_validarUsingPOST() {

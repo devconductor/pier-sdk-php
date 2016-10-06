@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v1_1.model\EstagioCartao[]**](EstagioCartao.md) |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v2.model\EstagioCartao[]**](EstagioCartao.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

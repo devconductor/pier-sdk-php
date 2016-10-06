@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\StatusCartaoApi
+# br.com.conductor.pier.api.v2.invoker\StatusCartaoApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarStatusCartaoUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\StatusCartao consultarStatusCartaoUsingGET($id_status_cartao)
+> \br.com.conductor.pier.api.v2.model\StatusCartao consultarStatusCartaoUsingGET($id_status_cartao)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\StatusCartaoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusCartaoApi();
 $id_status_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\StatusCartao**](StatusCartao.md)
+[**\br.com.conductor.pier.api.v2.model\StatusCartao**](StatusCartao.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusCartoesUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\PageStatusCartoes listarStatusCartoesUsingGET($id, $nome, $flag_altera_status, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_conta, $id_status_destino_conta, $flag_cobra_tarifa, $flag_reemite_cartao, $flag_emite_provisorio, $flag_cadastro_nova_senha, $flag_origem_transferencia, $flag_destino_transferencia, $flag_excecao_bandeira, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageStatusCartoes listarStatusCartoesUsingGET($id, $nome, $flag_altera_status, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $flag_cancela_conta, $id_status_destino_conta, $flag_cobra_tarifa, $flag_reemite_cartao, $flag_emite_provisorio, $flag_cadastro_nova_senha, $flag_origem_transferencia, $flag_destino_transferencia, $flag_excecao_bandeira, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status qu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\StatusCartaoApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusCartaoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
 $flag_altera_status = 56; // int | Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\PageStatusCartoes**](PageStatusCartoes.md)
+[**\br.com.conductor.pier.api.v2.model\PageStatusCartoes**](PageStatusCartoes.md)
 
 ### Authorization
 

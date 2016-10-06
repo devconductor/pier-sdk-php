@@ -1,16 +1,16 @@
-# br.com.conductor.pier.api.v1_1.invoker\BaseApi
+# br.com.conductor.pier.api.v2.invoker\BaseApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | /bases/clear
+[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | /api/bases/clear
 
 
 # **clearUsingGET**
-> \br.com.conductor.pier.api.v1_1.model\BodyAccessToken clearUsingGET()
+> \br.com.conductor.pier.api.v2.model\BodyAccessToken clearUsingGET()
 
-/bases/clear
+/api/bases/clear
 
 ### Example 
 ```php
@@ -18,11 +18,11 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\BaseApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\BaseApi();
 
 try { 
     $result = $api_instance->clearUsingGET();
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\BodyAccessToken**](BodyAccessToken.md)
+[**\br.com.conductor.pier.api.v2.model\BodyAccessToken**](BodyAccessToken.md)
 
 ### Authorization
 

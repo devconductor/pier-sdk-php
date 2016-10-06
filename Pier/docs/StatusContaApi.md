@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\StatusContaApi
+# br.com.conductor.pier.api.v2.invoker\StatusContaApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarUsingGET2**
-> \br.com.conductor.pier.api.v1_1.model\StatusConta consultarUsingGET2($id_status_conta)
+> \br.com.conductor.pier.api.v2.model\StatusConta consultarUsingGET2($id_status_conta)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\StatusContaApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusContaApi();
 $id_status_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\StatusConta**](StatusConta.md)
+[**\br.com.conductor.pier.api.v2.model\StatusConta**](StatusConta.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET2**
-> \br.com.conductor.pier.api.v1_1.model\PageStatusContas listarUsingGET2($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET2($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
 
 Lista os Status Contas cadastrados para o Emissor 
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\StatusContaApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusContaApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status da Conta.
 $flag_altera_limite = 56; // int | Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\PageStatusContas**](PageStatusContas.md)
+[**\br.com.conductor.pier.api.v2.model\PageStatusContas**](PageStatusContas.md)
 
 ### Authorization
 

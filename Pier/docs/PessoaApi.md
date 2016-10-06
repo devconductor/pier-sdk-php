@@ -1,4 +1,4 @@
-# br.com.conductor.pier.api.v1_1.invoker\PessoaApi
+# br.com.conductor.pier.api.v2.invoker\PessoaApi
 
 All URIs are relative to *https://localhost/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **consultarUsingGET1**
-> \br.com.conductor.pier.api.v1_1.model\Pessoa consultarUsingGET1($id_pessoa)
+> \br.com.conductor.pier.api.v2.model\Pessoa consultarUsingGET1($id_pessoa)
 
 Apresenta os dados de uma determinada Pessoa.
 
@@ -21,11 +21,11 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\PessoaApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\PessoaApi();
 $id_pessoa = 789; // int | ID da Origem Comercial
 
 try { 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\Pessoa**](Pessoa.md)
+[**\br.com.conductor.pier.api.v2.model\Pessoa**](Pessoa.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET1**
-> \br.com.conductor.pier.api.v1_1.model\PagePessoas listarUsingGET1($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET1($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -71,11 +71,11 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\PessoaApi();
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\PessoaApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
 $nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
 $tipo = "tipo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\PagePessoas**](PagePessoas.md)
+[**\br.com.conductor.pier.api.v2.model\PagePessoas**](PagePessoas.md)
 
 ### Authorization
 

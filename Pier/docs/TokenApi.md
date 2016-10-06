@@ -1,17 +1,17 @@
-# br.com.conductor.pier.api.v1_1.invoker\TokenApi
+# br.com.conductor.pier.api.v2.invoker\TokenApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**callbackUsingPOST**](TokenApi.md#callbackUsingPOST) | **POST** /api/tokens/callback | /tokens/callback
-[**validarUsingPOST**](TokenApi.md#validarUsingPOST) | **POST** /api/tokens/validar | /tokens/validar
+[**callbackUsingPOST**](TokenApi.md#callbackUsingPOST) | **POST** /api/tokens/callback | /api/tokens/callback
+[**validarUsingPOST**](TokenApi.md#validarUsingPOST) | **POST** /api/tokens/validar | /api/tokens/validar
 
 
 # **callbackUsingPOST**
-> \br.com.conductor.pier.api.v1_1.model\BodyAccessToken callbackUsingPOST($body_access_token)
+> \br.com.conductor.pier.api.v2.model\BodyAccessToken callbackUsingPOST($body_access_token)
 
-/tokens/callback
+/api/tokens/callback
 
 ### Example 
 ```php
@@ -19,12 +19,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\TokenApi();
-$body_access_token = new \br.com.conductor.pier.api.v1_1.model\BodyAccessToken(); // \br.com.conductor.pier.api.v1_1.model\BodyAccessToken | bodyAccessToken
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TokenApi();
+$body_access_token = new \br.com.conductor.pier.api.v2.model\BodyAccessToken(); // \br.com.conductor.pier.api.v2.model\BodyAccessToken | bodyAccessToken
 
 try { 
     $result = $api_instance->callbackUsingPOST($body_access_token);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body_access_token** | [**\br.com.conductor.pier.api.v1_1.model\BodyAccessToken**](\br.com.conductor.pier.api.v1_1.model\BodyAccessToken.md)| bodyAccessToken | 
+ **body_access_token** | [**\br.com.conductor.pier.api.v2.model\BodyAccessToken**](\br.com.conductor.pier.api.v2.model\BodyAccessToken.md)| bodyAccessToken | 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v1_1.model\BodyAccessToken**](BodyAccessToken.md)
+[**\br.com.conductor.pier.api.v2.model\BodyAccessToken**](BodyAccessToken.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 # **validarUsingPOST**
 > object validarUsingPOST($body_access_token)
 
-/tokens/validar
+/api/tokens/validar
 
 ### Example 
 ```php
@@ -67,12 +67,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: access_token
-br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v1_1.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
-$api_instance = new br.com.conductor.pier.api.v1_1.invoker\Api\TokenApi();
-$body_access_token = new \br.com.conductor.pier.api.v1_1.model\BodyAccessToken(); // \br.com.conductor.pier.api.v1_1.model\BodyAccessToken | bodyAccessToken
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TokenApi();
+$body_access_token = new \br.com.conductor.pier.api.v2.model\BodyAccessToken(); // \br.com.conductor.pier.api.v2.model\BodyAccessToken | bodyAccessToken
 
 try { 
     $result = $api_instance->validarUsingPOST($body_access_token);
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body_access_token** | [**\br.com.conductor.pier.api.v1_1.model\BodyAccessToken**](\br.com.conductor.pier.api.v1_1.model\BodyAccessToken.md)| bodyAccessToken | 
+ **body_access_token** | [**\br.com.conductor.pier.api.v2.model\BodyAccessToken**](\br.com.conductor.pier.api.v2.model\BodyAccessToken.md)| bodyAccessToken | 
 
 ### Return type
 
