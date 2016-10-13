@@ -94,7 +94,7 @@ class PessoaApi
     /**
      * consultarUsingGET1
      *
-     * Apresenta os dados de uma determinada Pessoa.
+     * Apresenta os dados de uma determinada Pessoa
      *
      * @param int $id_pessoa ID da Origem Comercial (required)
      * @return \br.com.conductor.pier.api.v2.model\Pessoa
@@ -110,7 +110,7 @@ class PessoaApi
     /**
      * consultarUsingGET1WithHttpInfo
      *
-     * Apresenta os dados de uma determinada Pessoa.
+     * Apresenta os dados de uma determinada Pessoa
      *
      * @param int $id_pessoa ID da Origem Comercial (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Pessoa, HTTP status code, HTTP response headers (array of strings)

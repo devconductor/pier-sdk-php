@@ -68,7 +68,7 @@ class ProdutoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarProdutoUsingGET
      *
-     * Apresenta os dados de um determinado Produto.
+     * Apresenta os dados de um determinado Produto
      *
      */
     public function test_consultarProdutoUsingGET() {

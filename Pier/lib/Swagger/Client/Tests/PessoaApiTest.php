@@ -68,7 +68,7 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET1
      *
-     * Apresenta os dados de uma determinada Pessoa.
+     * Apresenta os dados de uma determinada Pessoa
      *
      */
     public function test_consultarUsingGET1() {

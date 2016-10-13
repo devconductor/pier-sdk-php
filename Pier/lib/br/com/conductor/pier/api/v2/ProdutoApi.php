@@ -94,7 +94,7 @@ class ProdutoApi
     /**
      * consultarProdutoUsingGET
      *
-     * Apresenta os dados de um determinado Produto.
+     * Apresenta os dados de um determinado Produto
      *
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (required)
      * @return \br.com.conductor.pier.api.v2.model\Produto
@@ -110,7 +110,7 @@ class ProdutoApi
     /**
      * consultarProdutoUsingGETWithHttpInfo
      *
-     * Apresenta os dados de um determinado Produto.
+     * Apresenta os dados de um determinado Produto
      *
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Produto, HTTP status code, HTTP response headers (array of strings)

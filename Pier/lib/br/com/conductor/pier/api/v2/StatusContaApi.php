@@ -196,7 +196,7 @@ class StatusContaApi
     /**
      * listarUsingGET2
      *
-     * Lista os Status Contas cadastrados para o Emissor 
+     * Lista os Status Contas cadastrados para o Emissor
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
@@ -217,7 +217,7 @@ class StatusContaApi
     /**
      * listarUsingGET2WithHttpInfo
      *
-     * Lista os Status Contas cadastrados para o Emissor 
+     * Lista os Status Contas cadastrados para o Emissor
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)

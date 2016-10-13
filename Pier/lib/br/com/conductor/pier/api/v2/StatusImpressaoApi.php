@@ -94,7 +94,7 @@ class StatusImpressaoApi
     /**
      * consultarUsingGET3
      *
-     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
      * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
@@ -110,7 +110,7 @@ class StatusImpressaoApi
     /**
      * consultarUsingGET3WithHttpInfo
      *
-     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
      * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
@@ -196,7 +196,7 @@ class StatusImpressaoApi
     /**
      * listarUsingGET3
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
@@ -215,7 +215,7 @@ class StatusImpressaoApi
     /**
      * listarUsingGET3WithHttpInfo
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do status impress\u00C3\u00A3o (optional)

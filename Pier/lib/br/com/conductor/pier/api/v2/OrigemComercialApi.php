@@ -94,7 +94,7 @@ class OrigemComercialApi
     /**
      * consultarOrigemComercialUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
      *
      * @param int $id_origem_comercial ID da Origem Comercial (required)
      * @return \br.com.conductor.pier.api.v2.model\OrigemComercial
@@ -110,7 +110,7 @@ class OrigemComercialApi
     /**
      * consultarOrigemComercialUsingGETWithHttpInfo
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
      *
      * @param int $id_origem_comercial ID da Origem Comercial (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OrigemComercial, HTTP status code, HTTP response headers (array of strings)
@@ -196,7 +196,7 @@ class OrigemComercialApi
     /**
      * listarOrigensComerciaisUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
      *
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)
@@ -216,7 +216,7 @@ class OrigemComercialApi
     /**
      * listarOrigensComerciaisUsingGETWithHttpInfo
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
      *
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)

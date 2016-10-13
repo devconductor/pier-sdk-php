@@ -68,7 +68,7 @@ class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarEstagioCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
      */
     public function test_consultarEstagioCartaoUsingGET() {
@@ -78,7 +78,7 @@ class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarEstagiosCartoesUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
      */
     public function test_listarEstagiosCartoesUsingGET() {

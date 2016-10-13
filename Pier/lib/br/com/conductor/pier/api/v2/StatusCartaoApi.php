@@ -94,7 +94,7 @@ class StatusCartaoApi
     /**
      * consultarStatusCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusCartao
@@ -110,7 +110,7 @@ class StatusCartaoApi
     /**
      * consultarStatusCartaoUsingGETWithHttpInfo
      *
-     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusCartao, HTTP status code, HTTP response headers (array of strings)
@@ -196,7 +196,7 @@ class StatusCartaoApi
     /**
      * listarStatusCartoesUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
@@ -220,7 +220,7 @@ class StatusCartaoApi
     /**
      * listarStatusCartoesUsingGETWithHttpInfo
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)

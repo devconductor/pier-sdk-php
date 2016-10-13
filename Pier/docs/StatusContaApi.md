@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET2**](StatusContaApi.md#consultarUsingGET2) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listarUsingGET2**](StatusContaApi.md#listarUsingGET2) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor 
+[**listarUsingGET2**](StatusContaApi.md#listarUsingGET2) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
 # **consultarUsingGET2**
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 # **listarUsingGET2**
 > \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET2($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
 
-Lista os Status Contas cadastrados para o Emissor 
+Lista os Status Contas cadastrados para o Emissor
 
 Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
 

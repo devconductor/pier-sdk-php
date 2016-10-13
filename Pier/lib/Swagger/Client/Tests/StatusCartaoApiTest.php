@@ -68,7 +68,7 @@ class StatusCartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarStatusCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
      */
     public function test_consultarStatusCartaoUsingGET() {
@@ -78,7 +78,7 @@ class StatusCartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarStatusCartoesUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
      */
     public function test_listarStatusCartoesUsingGET() {

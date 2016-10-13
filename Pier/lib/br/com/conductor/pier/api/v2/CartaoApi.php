@@ -94,7 +94,7 @@ class CartaoApi
     /**
      * alterarStatusImpressaoUsingPUT
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param int $id_status_impressao Id . (required)
@@ -111,7 +111,7 @@ class CartaoApi
     /**
      * alterarStatusImpressaoUsingPUTWithHttpInfo
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param int $id_status_impressao Id . (required)
@@ -312,7 +312,7 @@ class CartaoApi
     /**
      * consultarPortadorUsingGET
      *
-     * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+     * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\Portador
@@ -328,7 +328,7 @@ class CartaoApi
     /**
      * consultarPortadorUsingGETWithHttpInfo
      *
-     * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+     * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      *
      * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Portador, HTTP status code, HTTP response headers (array of strings)
@@ -514,7 +514,7 @@ class CartaoApi
     }
     
     /**
-     * debloquearUsingGET
+     * desbloquearUsingPUT
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -522,15 +522,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function debloquearUsingGET($id_cartao)
+    public function desbloquearUsingPUT($id_cartao)
     {
-        list($response, $statusCode, $httpHeader) = $this->debloquearUsingGETWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPUTWithHttpInfo ($id_cartao);
         return $response; 
     }
 
 
     /**
-     * debloquearUsingGETWithHttpInfo
+     * desbloquearUsingPUTWithHttpInfo
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -538,12 +538,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function debloquearUsingGETWithHttpInfo($id_cartao)
+    public function desbloquearUsingPUTWithHttpInfo($id_cartao)
     {
         
         // verify the required parameter 'id_cartao' is set
         if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling debloquearUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling desbloquearUsingPUT');
         }
   
         // parse inputs
@@ -592,7 +592,7 @@ class CartaoApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
+                $resourcePath, 'PUT',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
             );

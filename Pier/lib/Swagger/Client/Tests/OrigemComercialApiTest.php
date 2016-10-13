@@ -68,7 +68,7 @@ class OrigemComercialApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarOrigemComercialUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
      *
      */
     public function test_consultarOrigemComercialUsingGET() {
@@ -78,7 +78,7 @@ class OrigemComercialApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarOrigensComerciaisUsingGET
      *
-     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+     * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
      *
      */
     public function test_listarOrigensComerciaisUsingGET() {

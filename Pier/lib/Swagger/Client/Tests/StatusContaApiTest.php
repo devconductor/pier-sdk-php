@@ -78,7 +78,7 @@ class StatusContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET2
      *
-     * Lista os Status Contas cadastrados para o Emissor 
+     * Lista os Status Contas cadastrados para o Emissor
      *
      */
     public function test_listarUsingGET2() {
