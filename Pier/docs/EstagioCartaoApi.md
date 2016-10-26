@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarEstagioCartaoUsingGET**](EstagioCartaoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+[**consultarEstagioCartaoUsingGET1**](EstagioCartaoApi.md#consultarEstagioCartaoUsingGET1) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](EstagioCartaoApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 
 
-# **consultarEstagioCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\EstagioCartao consultarEstagioCartaoUsingGET($id_estagio_cartao)
+# **consultarEstagioCartaoUsingGET1**
+> \br.com.conductor.pier.api.v2.model\EstagioCartao consultarEstagioCartaoUsingGET1($id_estagio_cartao)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 
@@ -29,10 +29,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstagioCartaoApi();
 $id_estagio_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarEstagioCartaoUsingGET($id_estagio_cartao);
+    $result = $api_instance->consultarEstagioCartaoUsingGET1($id_estagio_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstagioCartaoApi->consultarEstagioCartaoUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstagioCartaoApi->consultarEstagioCartaoUsingGET1: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -1,6 +1,6 @@
 <?php
 /**
- * PageStatusImpressao
+ * PageEnderecos
  *
  * PHP version 5
  *
@@ -35,23 +35,23 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * PageStatusImpressao Class Doc Comment
+ * PageEnderecos Class Doc Comment
  *
  * @category    Class
- * @description Lista de Status Impress\u00C3\u00A3o
+ * @description Lista de Endere\u00C3\u00A7os
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PageStatusImpressao implements ArrayAccess
+class PageEnderecos implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\StatusImpressao[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\Endereco[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageStatusImpressao implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\StatusImpressao[]
+      * @var \br.com.conductor.pier.api.v2.model\Endereco[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageStatusImpressao implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\StatusImpressao[]
+     * @return \br.com.conductor.pier.api.v2.model\Endereco[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageStatusImpressao implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\StatusImpressao[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\Endereco[] $content 
      * @return $this
      */
     public function setContent($content)

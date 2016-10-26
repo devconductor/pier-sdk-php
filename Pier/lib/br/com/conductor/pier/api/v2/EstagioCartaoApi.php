@@ -92,7 +92,7 @@ class EstagioCartaoApi
   
     
     /**
-     * consultarEstagioCartaoUsingGET
+     * consultarEstagioCartaoUsingGET1
      *
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
@@ -100,15 +100,15 @@ class EstagioCartaoApi
      * @return \br.com.conductor.pier.api.v2.model\EstagioCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGET($id_estagio_cartao)
+    public function consultarEstagioCartaoUsingGET1($id_estagio_cartao)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGETWithHttpInfo ($id_estagio_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGET1WithHttpInfo ($id_estagio_cartao);
         return $response; 
     }
 
 
     /**
-     * consultarEstagioCartaoUsingGETWithHttpInfo
+     * consultarEstagioCartaoUsingGET1WithHttpInfo
      *
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
@@ -116,12 +116,12 @@ class EstagioCartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\EstagioCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGETWithHttpInfo($id_estagio_cartao)
+    public function consultarEstagioCartaoUsingGET1WithHttpInfo($id_estagio_cartao)
     {
         
         // verify the required parameter 'id_estagio_cartao' is set
         if ($id_estagio_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_estagio_cartao when calling consultarEstagioCartaoUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id_estagio_cartao when calling consultarEstagioCartaoUsingGET1');
         }
   
         // parse inputs

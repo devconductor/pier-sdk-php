@@ -1,6 +1,6 @@
 <?php
 /**
- * EstagioCartaoApiTest
+ * EnderecoApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * EstagioCartaoApiTest Class Doc Comment
+ * EnderecoApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
+class EnderecoApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,22 +66,42 @@ class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarEstagioCartaoUsingGET1
+     * Test case for alterarUsingPUT
      *
-     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarEstagioCartaoUsingGET1() {
+    public function test_alterarUsingPUT() {
 
     }
     
     /**
-     * Test case for listarEstagiosCartoesUsingGET
+     * Test case for consultarEstagioCartaoUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_listarEstagiosCartoesUsingGET() {
+    public function test_consultarEstagioCartaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET1
+     *
+     * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+     *
+     */
+    public function test_listarUsingGET1() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST
+     *
+     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     *
+     */
+    public function test_salvarUsingPOST() {
 
     }
     

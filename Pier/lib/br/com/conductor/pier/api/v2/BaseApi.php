@@ -94,7 +94,7 @@ class BaseApi
     /**
      * clearUsingGET
      *
-     * /api/bases/clear
+     * Limpar mapa de bases
      *
      * @return \br.com.conductor.pier.api.v2.model\BodyAccessToken
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -109,7 +109,7 @@ class BaseApi
     /**
      * clearUsingGETWithHttpInfo
      *
-     * /api/bases/clear
+     * Limpar mapa de bases
      *
      * @return Array of \br.com.conductor.pier.api.v2.model\BodyAccessToken, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response

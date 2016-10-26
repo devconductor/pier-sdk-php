@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**listarUsingGET1**](PessoaApi.md#listarUsingGET1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET2**](PessoaApi.md#listarUsingGET2) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 # **consultarUsingGET1**
@@ -58,8 +58,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET1($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit)
+# **listarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET2($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -87,10 +87,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET1($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit);
+    $result = $api_instance->listarUsingGET2($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PessoaApi->listarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PessoaApi->listarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```

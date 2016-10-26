@@ -68,7 +68,7 @@ class BaseApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for clearUsingGET
      *
-     * /api/bases/clear
+     * Limpar mapa de bases
      *
      */
     public function test_clearUsingGET() {

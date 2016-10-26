@@ -76,12 +76,12 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET1
+     * Test case for listarUsingGET2
      *
      * Lista as Pessoas cadastradas no Emissor
      *
      */
-    public function test_listarUsingGET1() {
+    public function test_listarUsingGET2() {
 
     }
     

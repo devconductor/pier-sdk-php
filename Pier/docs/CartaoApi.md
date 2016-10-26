@@ -31,7 +31,7 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-$id_status_impressao = 789; // int | Id .
+$id_status_impressao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
 
 try { 
     $result = $api_instance->alterarStatusImpressaoUsingPUT($id_cartao, $id_status_impressao);
@@ -47,7 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
- **id_status_impressao** | **int**| Id . | 
+ **id_status_impressao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | 
 
 ### Return type
 

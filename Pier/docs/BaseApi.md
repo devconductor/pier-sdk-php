@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | /api/bases/clear
+[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | Limpar mapa de bases
 
 
 # **clearUsingGET**
 > \br.com.conductor.pier.api.v2.model\BodyAccessToken clearUsingGET()
 
-/api/bases/clear
+Limpar mapa de bases
 
 ### Example 
 ```php

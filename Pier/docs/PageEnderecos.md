@@ -1,9 +1,9 @@
-# PageStatusImpressao
+# PageEnderecos
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v2.model\StatusImpressao[]**](StatusImpressao.md) |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v2.model\Endereco[]**](Endereco.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

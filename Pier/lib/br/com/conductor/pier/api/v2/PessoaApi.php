@@ -194,7 +194,7 @@ class PessoaApi
     }
     
     /**
-     * listarUsingGET1
+     * listarUsingGET2
      *
      * Lista as Pessoas cadastradas no Emissor
      *
@@ -210,15 +210,15 @@ class PessoaApi
      * @return \br.com.conductor.pier.api.v2.model\PagePessoas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
+    public function listarUsingGET2($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarUsingGET2WithHttpInfo
      *
      * Lista as Pessoas cadastradas no Emissor
      *
@@ -234,7 +234,7 @@ class PessoaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
+    public function listarUsingGET2WithHttpInfo($id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $page = null, $limit = null)
     {
         
   

@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET3**](StatusImpressaoApi.md#consultarUsingGET3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-[**listarUsingGET3**](StatusImpressaoApi.md#listarUsingGET3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET4**](StatusImpressaoApi.md#listarUsingGET4) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultarUsingGET3**
@@ -58,8 +58,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\PageStatusImpressao listarUsingGET3($id, $nome, $page, $limit)
+# **listarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\PageStatusImpressao listarUsingGET4($id, $nome, $page, $limit)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -82,10 +82,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET3($id, $nome, $page, $limit);
+    $result = $api_instance->listarUsingGET4($id, $nome, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusImpressaoApi->listarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusImpressaoApi->listarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
