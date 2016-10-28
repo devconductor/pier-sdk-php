@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET2**](StatusContaApi.md#consultarUsingGET2) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listarUsingGET3**](StatusContaApi.md#listarUsingGET3) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**consultarUsingGET4**](StatusContaApi.md#consultarUsingGET4) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
+[**listarUsingGET4**](StatusContaApi.md#listarUsingGET4) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
-# **consultarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\StatusConta consultarUsingGET2($id_status_conta)
+# **consultarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\StatusConta consultarUsingGET4($id_status_conta)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -29,10 +29,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusContaApi();
 $id_status_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET2($id_status_conta);
+    $result = $api_instance->consultarUsingGET4($id_status_conta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusContaApi->consultarUsingGET2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusContaApi->consultarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -58,8 +58,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET3($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
+# **listarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET4($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -84,10 +84,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET3($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
+    $result = $api_instance->listarUsingGET4($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusContaApi->listarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusContaApi->listarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -61,7 +61,7 @@ class Endereco implements ArrayAccess
         'id_pessoa' => 'int',
         'id_tipo_endereco' => 'int',
         'logradouro' => 'string',
-        'numero' => 'string',
+        'numero' => 'int',
         'pais' => 'string',
         'ponto_referencia' => 'string',
         'uf' => 'string'
@@ -154,7 +154,7 @@ class Endereco implements ArrayAccess
     protected $bairro;
     
     /**
-      * $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+      * $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
       * @var string
       */
     protected $cep;
@@ -209,7 +209,7 @@ class Endereco implements ArrayAccess
     
     /**
       * $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-      * @var string
+      * @var int
       */
     protected $numero;
     
@@ -289,7 +289,7 @@ class Endereco implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
      * @return $this
      */
     public function setCep($cep)
@@ -469,7 +469,7 @@ class Endereco implements ArrayAccess
     
     /**
      * Gets numero
-     * @return string
+     * @return int
      */
     public function getNumero()
     {
@@ -478,7 +478,7 @@ class Endereco implements ArrayAccess
   
     /**
      * Sets numero
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
      * @return $this
      */
     public function setNumero($numero)

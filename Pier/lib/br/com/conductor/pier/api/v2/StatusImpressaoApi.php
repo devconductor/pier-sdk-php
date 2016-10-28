@@ -92,7 +92,7 @@ class StatusImpressaoApi
   
     
     /**
-     * consultarUsingGET3
+     * consultarUsingGET5
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -100,15 +100,15 @@ class StatusImpressaoApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3($id_status_impressao)
+    public function consultarUsingGET5($id_status_impressao)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET3WithHttpInfo ($id_status_impressao);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id_status_impressao);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET3WithHttpInfo
+     * consultarUsingGET5WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -116,12 +116,12 @@ class StatusImpressaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3WithHttpInfo($id_status_impressao)
+    public function consultarUsingGET5WithHttpInfo($id_status_impressao)
     {
         
         // verify the required parameter 'id_status_impressao' is set
         if ($id_status_impressao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling consultarUsingGET3');
+            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling consultarUsingGET5');
         }
   
         // parse inputs
@@ -194,7 +194,7 @@ class StatusImpressaoApi
     }
     
     /**
-     * listarUsingGET4
+     * listarUsingGET5
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -205,15 +205,15 @@ class StatusImpressaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET5($id = null, $nome = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($id, $nome, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($id, $nome, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET4WithHttpInfo
+     * listarUsingGET5WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -224,7 +224,7 @@ class StatusImpressaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4WithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET5WithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
     {
         
   

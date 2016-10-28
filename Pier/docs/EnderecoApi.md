@@ -4,18 +4,18 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT**](EnderecoApi.md#alterarUsingPUT) | **PUT** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**consultarEstagioCartaoUsingGET**](EnderecoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/enderecos/{id_endereco} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**listarUsingGET1**](EnderecoApi.md#listarUsingGET1) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**alterarUsingPUT**](EnderecoApi.md#alterarUsingPUT) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET2**](EnderecoApi.md#consultarUsingGET2) | **GET** /api/enderecos/{id_endereco} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**listarUsingGET2**](EnderecoApi.md#listarUsingGET2) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**salvarUsingPOST**](EnderecoApi.md#salvarUsingPOST) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
 # **alterarUsingPUT**
 > \br.com.conductor.pier.api.v2.model\Endereco alterarUsingPUT($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
-Realiza o cadastro de um novo Endere\u00C3\u00A7o
+Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
 
 ### Example 
 ```php
@@ -31,9 +31,9 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EnderecoApi();
 $id = 789; // int | id
 $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
 $id_tipo_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-$cep = "cep_example"; // string | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+$cep = "cep_example"; // string | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
 $logradouro = "logradouro_example"; // string | Apresenta o nome do Logradouro
-$numero = "numero_example"; // string | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+$numero = 56; // int | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
 $complemento = "complemento_example"; // string | Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
 $ponto_referencia = "ponto_referencia_example"; // string | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
 $bairro = "bairro_example"; // string | Apresenta nome do bairro
@@ -57,9 +57,9 @@ Name | Type | Description  | Notes
  **id** | **int**| id | 
  **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
  **id_tipo_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **string**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
+ **cep** | **string**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
  **logradouro** | **string**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **string**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **int**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **string**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **ponto_referencia** | **string**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **string**| Apresenta nome do bairro | [optional] 
@@ -82,8 +82,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarEstagioCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\Endereco consultarEstagioCartaoUsingGET($id_endereco)
+# **consultarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\Endereco consultarUsingGET2($id_endereco)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -103,10 +103,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EnderecoApi();
 $id_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 
 try { 
-    $result = $api_instance->consultarEstagioCartaoUsingGET($id_endereco);
+    $result = $api_instance->consultarUsingGET2($id_endereco);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EnderecoApi->consultarEstagioCartaoUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EnderecoApi->consultarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -132,8 +132,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET1($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit)
+# **listarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET2($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -155,7 +155,7 @@ $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 $id_tipo_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
 $cep = "cep_example"; // string | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
 $logradouro = "logradouro_example"; // string | Apresenta o nome do Logradouro
-$numero = "numero_example"; // string | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+$numero = 56; // int | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
 $complemento = "complemento_example"; // string | Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
 $ponto_referencia = "ponto_referencia_example"; // string | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
 $bairro = "bairro_example"; // string | Apresenta nome do bairro
@@ -168,10 +168,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET1($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit);
+    $result = $api_instance->listarUsingGET2($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EnderecoApi->listarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EnderecoApi->listarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
  **id_tipo_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
  **cep** | **string**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
  **logradouro** | **string**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **string**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **int**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **string**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **ponto_referencia** | **string**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **string**| Apresenta nome do bairro | [optional] 
@@ -232,9 +232,9 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EnderecoApi();
 $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
 $id_tipo_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-$cep = "cep_example"; // string | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+$cep = "cep_example"; // string | Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
 $logradouro = "logradouro_example"; // string | Apresenta o nome do Logradouro
-$numero = "numero_example"; // string | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+$numero = 56; // int | Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
 $complemento = "complemento_example"; // string | Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
 $ponto_referencia = "ponto_referencia_example"; // string | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
 $bairro = "bairro_example"; // string | Apresenta nome do bairro
@@ -257,9 +257,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
  **id_tipo_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **string**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
+ **cep** | **string**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
  **logradouro** | **string**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **string**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **int**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **string**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **ponto_referencia** | **string**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **string**| Apresenta nome do bairro | [optional] 

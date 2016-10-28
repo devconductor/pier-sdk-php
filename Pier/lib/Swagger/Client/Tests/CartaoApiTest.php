@@ -76,6 +76,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for bloquearUsingPUT
+     *
+     * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_bloquearUsingPUT() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o

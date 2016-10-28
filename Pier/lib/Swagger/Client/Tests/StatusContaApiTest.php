@@ -66,22 +66,22 @@ class StatusContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET2
+     * Test case for consultarUsingGET4
      *
      * Apresenta os dados de um determinado Status Conta
      *
      */
-    public function test_consultarUsingGET2() {
+    public function test_consultarUsingGET4() {
 
     }
     
     /**
-     * Test case for listarUsingGET3
+     * Test case for listarUsingGET4
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET3() {
+    public function test_listarUsingGET4() {
 
     }
     

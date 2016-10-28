@@ -208,6 +208,128 @@ class CartaoApi
     }
     
     /**
+     * bloquearUsingPUT
+     *
+     * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
+     * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio. (required)
+     * @return \br.com.conductor.pier.api.v2.model\Cartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function bloquearUsingPUT($id_cartao, $id_status, $observacao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPUTWithHttpInfo ($id_cartao, $id_status, $observacao);
+        return $response; 
+    }
+
+
+    /**
+     * bloquearUsingPUTWithHttpInfo
+     *
+     * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
+     * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function bloquearUsingPUTWithHttpInfo($id_cartao, $id_status, $observacao)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling bloquearUsingPUT');
+        }
+        // verify the required parameter 'id_status' is set
+        if ($id_status === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling bloquearUsingPUT');
+        }
+        // verify the required parameter 'observacao' is set
+        if ($observacao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $observacao when calling bloquearUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id_cartao}/bloqueio";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_status !== null) {
+            $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
+        }// query params
+        
+        if ($observacao !== null) {
+            $queryParams['observacao'] = $this->apiClient->getSerializer()->toQueryValue($observacao);
+        }
+        
+        // path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_cartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Cartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Cartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o

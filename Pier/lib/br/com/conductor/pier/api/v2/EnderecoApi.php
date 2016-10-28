@@ -94,14 +94,14 @@ class EnderecoApi
     /**
      * alterarUsingPUT
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
      *
      * @param int $id id (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
@@ -121,14 +121,14 @@ class EnderecoApi
     /**
      * alterarUsingPUTWithHttpInfo
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
      *
      * @param int $id id (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
@@ -256,7 +256,7 @@ class EnderecoApi
     }
     
     /**
-     * consultarEstagioCartaoUsingGET
+     * consultarUsingGET2
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
@@ -264,15 +264,15 @@ class EnderecoApi
      * @return \br.com.conductor.pier.api.v2.model\Endereco
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGET($id_endereco)
+    public function consultarUsingGET2($id_endereco)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGETWithHttpInfo ($id_endereco);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id_endereco);
         return $response; 
     }
 
 
     /**
-     * consultarEstagioCartaoUsingGETWithHttpInfo
+     * consultarUsingGET2WithHttpInfo
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
@@ -280,12 +280,12 @@ class EnderecoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\Endereco, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGETWithHttpInfo($id_endereco)
+    public function consultarUsingGET2WithHttpInfo($id_endereco)
     {
         
         // verify the required parameter 'id_endereco' is set
         if ($id_endereco === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_endereco when calling consultarEstagioCartaoUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id_endereco when calling consultarUsingGET2');
         }
   
         // parse inputs
@@ -358,7 +358,7 @@ class EnderecoApi
     }
     
     /**
-     * listarUsingGET1
+     * listarUsingGET2
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
@@ -367,7 +367,7 @@ class EnderecoApi
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
      * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
@@ -381,15 +381,15 @@ class EnderecoApi
      * @return \br.com.conductor.pier.api.v2.model\PageEnderecos
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null, $page = null, $limit = null)
+    public function listarUsingGET2($id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarUsingGET2WithHttpInfo
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
@@ -398,7 +398,7 @@ class EnderecoApi
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
      * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
@@ -412,7 +412,7 @@ class EnderecoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEnderecos, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null, $page = null, $limit = null)
+    public function listarUsingGET2WithHttpInfo($id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null, $page = null, $limit = null)
     {
         
   
@@ -548,9 +548,9 @@ class EnderecoApi
      *
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
@@ -574,9 +574,9 @@ class EnderecoApi
      *
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
      * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param string $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
      * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
      * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)

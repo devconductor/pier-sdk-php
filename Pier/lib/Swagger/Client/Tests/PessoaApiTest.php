@@ -66,22 +66,22 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET1
+     * Test case for consultarUsingGET3
      *
      * Apresenta os dados de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET1() {
+    public function test_consultarUsingGET3() {
 
     }
     
     /**
-     * Test case for listarUsingGET2
+     * Test case for listarUsingGET3
      *
      * Lista as Pessoas cadastradas no Emissor
      *
      */
-    public function test_listarUsingGET2() {
+    public function test_listarUsingGET3() {
 
     }
     

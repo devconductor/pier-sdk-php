@@ -68,7 +68,7 @@ class EnderecoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
      *
      */
     public function test_alterarUsingPUT() {
@@ -76,22 +76,22 @@ class EnderecoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarEstagioCartaoUsingGET
+     * Test case for consultarUsingGET2
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarEstagioCartaoUsingGET() {
+    public function test_consultarUsingGET2() {
 
     }
     
     /**
-     * Test case for listarUsingGET1
+     * Test case for listarUsingGET2
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET1() {
+    public function test_listarUsingGET2() {
 
     }
     

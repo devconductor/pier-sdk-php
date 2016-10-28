@@ -66,12 +66,12 @@ class EstagioCartaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarEstagioCartaoUsingGET1
+     * Test case for consultarEstagioCartaoUsingGET
      *
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarEstagioCartaoUsingGET1() {
+    public function test_consultarEstagioCartaoUsingGET() {
 
     }
     
