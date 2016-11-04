@@ -92,6 +92,118 @@ class ContaApi
   
     
     /**
+     * alterarVencimentoUsingPUT
+     *
+     * Alterar vencimento
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
+     * @return \br.com.conductor.pier.api.v2.model\Conta
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarVencimentoUsingPUT($id_conta, $novo_dia_vencimento)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarVencimentoUsingPUTWithHttpInfo ($id_conta, $novo_dia_vencimento);
+        return $response; 
+    }
+
+
+    /**
+     * alterarVencimentoUsingPUTWithHttpInfo
+     *
+     * Alterar vencimento
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Conta, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarVencimentoUsingPUTWithHttpInfo($id_conta, $novo_dia_vencimento)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling alterarVencimentoUsingPUT');
+        }
+        // verify the required parameter 'novo_dia_vencimento' is set
+        if ($novo_dia_vencimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $novo_dia_vencimento when calling alterarVencimentoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id_conta}/alterar-vencimento";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($novo_dia_vencimento !== null) {
+            $queryParams['novo_dia_vencimento'] = $this->apiClient->getSerializer()->toQueryValue($novo_dia_vencimento);
+        }
+        
+        // path params
+        
+        if ($id_conta !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_conta" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_conta),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Conta'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Conta', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Conta', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarUsingGET1
      *
      * Apresenta dados de uma determinada conta
@@ -196,7 +308,7 @@ class ContaApi
     /**
      * listarUsingGET1
      *
-     * Lista contas existentes na base de dados do Emissor.
+     * Lista contas existentes na base de dados do Emissor
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
@@ -207,14 +319,15 @@ class ContaApi
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
      * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
      * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\Conta
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($id = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $page = null, $limit = null)
+    public function listarUsingGET1($id = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento, $page, $limit);
         return $response; 
     }
 
@@ -222,7 +335,7 @@ class ContaApi
     /**
      * listarUsingGET1WithHttpInfo
      *
-     * Lista contas existentes na base de dados do Emissor.
+     * Lista contas existentes na base de dados do Emissor
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
@@ -233,12 +346,13 @@ class ContaApi
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
      * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
      * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\Conta, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($id = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $page = null, $limit = null)
+    public function listarUsingGET1WithHttpInfo($id = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null, $page = null, $limit = null)
     {
         
   
@@ -290,6 +404,10 @@ class ContaApi
         
         if ($data_cadastro !== null) {
             $queryParams['dataCadastro'] = $this->apiClient->getSerializer()->toQueryValue($data_cadastro);
+        }// query params
+        
+        if ($data_ultima_alteracao_vencimento !== null) {
+            $queryParams['dataUltimaAlteracaoVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_ultima_alteracao_vencimento);
         }// query params
         
         if ($page !== null) {

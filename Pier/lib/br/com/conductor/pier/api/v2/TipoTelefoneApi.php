@@ -1,6 +1,6 @@
 <?php
 /**
- * StatusImpressaoApi
+ * TipoTelefoneApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * StatusImpressaoApi Class Doc Comment
+ * TipoTelefoneApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StatusImpressaoApi
+class TipoTelefoneApi
 {
 
     /**
@@ -82,7 +82,7 @@ class StatusImpressaoApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v2.invoker\ApiClient $apiClient set the API client
-     * @return StatusImpressaoApi
+     * @return TipoTelefoneApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
@@ -92,40 +92,40 @@ class StatusImpressaoApi
   
     
     /**
-     * consultarUsingGET5
+     * consultarUsingGET8
      *
-     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+     * Apresenta os dados de um determinado Tipo de Telefone
      *
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
+     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoTelefone
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($id_status_impressao)
+    public function consultarUsingGET8($id_tipo_telefone)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id_status_impressao);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($id_tipo_telefone);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET5WithHttpInfo
+     * consultarUsingGET8WithHttpInfo
      *
-     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+     * Apresenta os dados de um determinado Tipo de Telefone
      *
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoTelefone, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($id_status_impressao)
+    public function consultarUsingGET8WithHttpInfo($id_tipo_telefone)
     {
         
-        // verify the required parameter 'id_status_impressao' is set
-        if ($id_status_impressao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling consultarUsingGET5');
+        // verify the required parameter 'id_tipo_telefone' is set
+        if ($id_tipo_telefone === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_tipo_telefone when calling consultarUsingGET8');
         }
   
         // parse inputs
-        $resourcePath = "/api/status-impressoes/{id_status_impressao}";
+        $resourcePath = "/api/tipos-telefones/{id_tipo_telefone}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -140,10 +140,10 @@ class StatusImpressaoApi
         
         // path params
         
-        if ($id_status_impressao !== null) {
+        if ($id_tipo_telefone !== null) {
             $resourcePath = str_replace(
-                "{" . "id_status_impressao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_status_impressao),
+                "{" . "id_tipo_telefone" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_tipo_telefone),
                 $resourcePath
             );
         }
@@ -172,19 +172,19 @@ class StatusImpressaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\StatusImpressao'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoTelefone'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\StatusImpressao', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoTelefone', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\StatusImpressao', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoTelefone', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -194,42 +194,42 @@ class StatusImpressaoApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET9
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     * Lista os Tipos de Telefones
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
+     * @param string $nome Nome do Tipo do Telefone (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
+     * @return \br.com.conductor.pier.api.v2.model\PageTipoTelefones
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET9($id = null, $nome = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($id, $nome, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($id, $nome, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     * Lista os Tipos de Telefones
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
+     * @param string $nome Nome do Tipo do Telefone (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTelefones, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET9WithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
     {
         
   
         // parse inputs
-        $resourcePath = "/api/status-impressoes";
+        $resourcePath = "/api/tipos-telefones";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -284,19 +284,19 @@ class StatusImpressaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoTelefones'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoTelefones', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoTelefones', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

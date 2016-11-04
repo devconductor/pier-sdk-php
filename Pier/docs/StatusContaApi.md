@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET4**](StatusContaApi.md#consultarUsingGET4) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listarUsingGET4**](StatusContaApi.md#listarUsingGET4) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET5**](StatusContaApi.md#listarUsingGET5) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
 # **consultarUsingGET4**
@@ -58,8 +58,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET4**
-> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET4($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
+# **listarUsingGET5**
+> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET5($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -84,10 +84,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET4($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
+    $result = $api_instance->listarUsingGET5($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusContaApi->listarUsingGET4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusContaApi->listarUsingGET5: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -76,12 +76,12 @@ class StatusImpressaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET5
+     * Test case for listarUsingGET6
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      */
-    public function test_listarUsingGET5() {
+    public function test_listarUsingGET6() {
 
     }
     

@@ -53,6 +53,7 @@ class Conta implements ArrayAccess
     static $swaggerTypes = array(
         'data_cadastro' => '\DateTime',
         'data_status_conta' => '\DateTime',
+        'data_ultima_alteracao_vencimento' => '\DateTime',
         'dia_vencimento' => 'int',
         'id' => 'int',
         'id_origem_comercial' => 'int',
@@ -73,6 +74,7 @@ class Conta implements ArrayAccess
     static $attributeMap = array(
         'data_cadastro' => 'dataCadastro',
         'data_status_conta' => 'dataStatusConta',
+        'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
         'dia_vencimento' => 'diaVencimento',
         'id' => 'id',
         'id_origem_comercial' => 'idOrigemComercial',
@@ -93,6 +95,7 @@ class Conta implements ArrayAccess
     static $setters = array(
         'data_cadastro' => 'setDataCadastro',
         'data_status_conta' => 'setDataStatusConta',
+        'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
         'dia_vencimento' => 'setDiaVencimento',
         'id' => 'setId',
         'id_origem_comercial' => 'setIdOrigemComercial',
@@ -113,6 +116,7 @@ class Conta implements ArrayAccess
     static $getters = array(
         'data_cadastro' => 'getDataCadastro',
         'data_status_conta' => 'getDataStatusConta',
+        'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
         'dia_vencimento' => 'getDiaVencimento',
         'id' => 'getId',
         'id_origem_comercial' => 'getIdOrigemComercial',
@@ -138,6 +142,12 @@ class Conta implements ArrayAccess
       * @var \DateTime
       */
     protected $data_status_conta;
+    
+    /**
+      * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+      * @var \DateTime
+      */
+    protected $data_ultima_alteracao_vencimento;
     
     /**
       * $dia_vencimento Apresenta o dia de vencimento.
@@ -192,6 +202,7 @@ class Conta implements ArrayAccess
         if ($data != null) {
             $this->data_cadastro = $data["data_cadastro"];
             $this->data_status_conta = $data["data_status_conta"];
+            $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->id = $data["id"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
@@ -241,6 +252,27 @@ class Conta implements ArrayAccess
     {
         
         $this->data_status_conta = $data_status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets data_ultima_alteracao_vencimento
+     * @return \DateTime
+     */
+    public function getDataUltimaAlteracaoVencimento()
+    {
+        return $this->data_ultima_alteracao_vencimento;
+    }
+  
+    /**
+     * Sets data_ultima_alteracao_vencimento
+     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+     * @return $this
+     */
+    public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)
+    {
+        
+        $this->data_ultima_alteracao_vencimento = $data_ultima_alteracao_vencimento;
         return $this;
     }
     

@@ -1,6 +1,6 @@
 <?php
 /**
- * ContaApiTest
+ * TelefoneApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * ContaApiTest Class Doc Comment
+ * TelefoneApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContaApiTest extends \PHPUnit_Framework_TestCase
+class TelefoneApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,32 +66,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarVencimentoUsingPUT
+     * Test case for consultarUsingGET6
      *
-     * Alterar vencimento
+     * Apresenta os dados de um determinado Telefone
      *
      */
-    public function test_alterarVencimentoUsingPUT() {
+    public function test_consultarUsingGET6() {
 
     }
     
     /**
-     * Test case for consultarUsingGET1
+     * Test case for listarUsingGET7
      *
-     * Apresenta dados de uma determinada conta
+     * Lista os Telefones cadastrados no Emissor
      *
      */
-    public function test_consultarUsingGET1() {
+    public function test_listarUsingGET7() {
 
     }
     
     /**
-     * Test case for listarUsingGET1
+     * Test case for salvarUsingPOST1
      *
-     * Lista contas existentes na base de dados do Emissor
+     * Realiza o cadastro de um novo Telefone
      *
      */
-    public function test_listarUsingGET1() {
+    public function test_salvarUsingPOST1() {
 
     }
     

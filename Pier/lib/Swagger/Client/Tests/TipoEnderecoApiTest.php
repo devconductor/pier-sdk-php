@@ -1,6 +1,6 @@
 <?php
 /**
- * ContaApiTest
+ * TipoEnderecoApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * ContaApiTest Class Doc Comment
+ * TipoEnderecoApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContaApiTest extends \PHPUnit_Framework_TestCase
+class TipoEnderecoApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,32 +66,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarVencimentoUsingPUT
+     * Test case for consultarUsingGET7
      *
-     * Alterar vencimento
+     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
      */
-    public function test_alterarVencimentoUsingPUT() {
+    public function test_consultarUsingGET7() {
 
     }
     
     /**
-     * Test case for consultarUsingGET1
+     * Test case for listarUsingGET8
      *
-     * Apresenta dados de uma determinada conta
-     *
-     */
-    public function test_consultarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET1
-     *
-     * Lista contas existentes na base de dados do Emissor
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
      */
-    public function test_listarUsingGET1() {
+    public function test_listarUsingGET8() {
 
     }
     

@@ -194,7 +194,7 @@ class StatusContaApi
     }
     
     /**
-     * listarUsingGET4
+     * listarUsingGET5
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -207,15 +207,15 @@ class StatusContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
+    public function listarUsingGET5($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET4WithHttpInfo
+     * listarUsingGET5WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -228,7 +228,7 @@ class StatusContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4WithHttpInfo($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
+    public function listarUsingGET5WithHttpInfo($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
     {
         
   

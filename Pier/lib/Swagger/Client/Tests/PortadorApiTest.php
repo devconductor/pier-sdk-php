@@ -1,6 +1,6 @@
 <?php
 /**
- * ContaApiTest
+ * PortadorApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * ContaApiTest Class Doc Comment
+ * PortadorApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContaApiTest extends \PHPUnit_Framework_TestCase
+class PortadorApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,32 +66,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarVencimentoUsingPUT
+     * Test case for listarUsingGET4
      *
-     * Alterar vencimento
-     *
-     */
-    public function test_alterarVencimentoUsingPUT() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET1
-     *
-     * Apresenta dados de uma determinada conta
+     * Lista os Portadores existentes
      *
      */
-    public function test_consultarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET1
-     *
-     * Lista contas existentes na base de dados do Emissor
-     *
-     */
-    public function test_listarUsingGET1() {
+    public function test_listarUsingGET4() {
 
     }
     
