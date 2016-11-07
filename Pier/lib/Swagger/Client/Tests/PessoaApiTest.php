@@ -66,6 +66,16 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarUsingPUT1
+     *
+     * Atualiza os dados de uma determinada Pessoa
+     *
+     */
+    public function test_alterarUsingPUT1() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET3
      *
      * Apresenta os dados de uma determinada Pessoa
@@ -82,6 +92,16 @@ class PessoaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarUsingGET3() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST1
+     *
+     * Realiza o cadastro de um nova Pessoa
+     *
+     */
+    public function test_salvarUsingPOST1() {
 
     }
     

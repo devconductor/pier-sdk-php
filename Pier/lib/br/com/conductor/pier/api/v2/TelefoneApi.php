@@ -336,7 +336,7 @@ class TelefoneApi
     }
     
     /**
-     * salvarUsingPOST1
+     * salvarUsingPOST2
      *
      * Realiza o cadastro de um novo Telefone
      *
@@ -348,15 +348,15 @@ class TelefoneApi
      * @return \br.com.conductor.pier.api.v2.model\Telefone
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST1($id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null)
+    public function salvarUsingPOST2($id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST1WithHttpInfo ($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST2WithHttpInfo ($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST1WithHttpInfo
+     * salvarUsingPOST2WithHttpInfo
      *
      * Realiza o cadastro de um novo Telefone
      *
@@ -368,7 +368,7 @@ class TelefoneApi
      * @return Array of \br.com.conductor.pier.api.v2.model\Telefone, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST1WithHttpInfo($id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null)
+    public function salvarUsingPOST2WithHttpInfo($id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null)
     {
         
   

@@ -86,12 +86,12 @@ class TelefoneApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST1
+     * Test case for salvarUsingPOST2
      *
      * Realiza o cadastro de um novo Telefone
      *
      */
-    public function test_salvarUsingPOST1() {
+    public function test_salvarUsingPOST2() {
 
     }
     

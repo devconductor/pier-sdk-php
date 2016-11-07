@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET6**](TelefoneApi.md#consultarUsingGET6) | **GET** /api/telefones/{id_telefone} | Apresenta os dados de um determinado Telefone
 [**listarUsingGET7**](TelefoneApi.md#listarUsingGET7) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**salvarUsingPOST1**](TelefoneApi.md#salvarUsingPOST1) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST2**](TelefoneApi.md#salvarUsingPOST2) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 # **consultarUsingGET6**
@@ -125,8 +125,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST1**
-> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST1($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+# **salvarUsingPOST2**
+> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST2($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -150,10 +150,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST1($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST2($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TelefoneApi->salvarUsingPOST1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TelefoneApi->salvarUsingPOST2: ', $e->getMessage(), "\n";
 }
 ?>
 ```

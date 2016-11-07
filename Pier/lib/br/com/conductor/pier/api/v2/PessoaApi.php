@@ -92,11 +92,153 @@ class PessoaApi
   
     
     /**
+     * alterarUsingPUT1
+     *
+     * Atualiza os dados de uma determinada Pessoa
+     *
+     * @param int $id ID da Pessoa (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
+     * @return \br.com.conductor.pier.api.v2.model\Pessoa
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarUsingPUT1($id, $nome, $tipo, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT1WithHttpInfo ($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
+        return $response; 
+    }
+
+
+    /**
+     * alterarUsingPUT1WithHttpInfo
+     *
+     * Atualiza os dados de uma determinada Pessoa
+     *
+     * @param int $id ID da Pessoa (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Pessoa, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarUsingPUT1WithHttpInfo($id, $nome, $tipo, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT1');
+        }
+        // verify the required parameter 'nome' is set
+        if ($nome === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nome when calling alterarUsingPUT1');
+        }
+        // verify the required parameter 'tipo' is set
+        if ($tipo === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tipo when calling alterarUsingPUT1');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/pessoas";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($tipo !== null) {
+            $queryParams['tipo'] = $this->apiClient->getSerializer()->toQueryValue($tipo);
+        }// query params
+        
+        if ($cpf !== null) {
+            $queryParams['cpf'] = $this->apiClient->getSerializer()->toQueryValue($cpf);
+        }// query params
+        
+        if ($cnpj !== null) {
+            $queryParams['cnpj'] = $this->apiClient->getSerializer()->toQueryValue($cnpj);
+        }// query params
+        
+        if ($data_nascimento !== null) {
+            $queryParams['dataNascimento'] = $this->apiClient->getSerializer()->toQueryValue($data_nascimento);
+        }// query params
+        
+        if ($sexo !== null) {
+            $queryParams['sexo'] = $this->apiClient->getSerializer()->toQueryValue($sexo);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Pessoa'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Pessoa', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Pessoa', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarUsingGET3
      *
      * Apresenta os dados de uma determinada Pessoa
      *
-     * @param int $id_pessoa ID da Origem Comercial (required)
+     * @param int $id_pessoa ID da Pessoa (required)
      * @return \br.com.conductor.pier.api.v2.model\Pessoa
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -112,7 +254,7 @@ class PessoaApi
      *
      * Apresenta os dados de uma determinada Pessoa
      *
-     * @param int $id_pessoa ID da Origem Comercial (required)
+     * @param int $id_pessoa ID da Pessoa (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Pessoa, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -327,6 +469,138 @@ class PessoaApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePessoas', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarUsingPOST1
+     *
+     * Realiza o cadastro de um nova Pessoa
+     *
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
+     * @return \br.com.conductor.pier.api.v2.model\Pessoa
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST1($nome, $tipo, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST1WithHttpInfo ($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
+        return $response; 
+    }
+
+
+    /**
+     * salvarUsingPOST1WithHttpInfo
+     *
+     * Realiza o cadastro de um nova Pessoa
+     *
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Pessoa, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST1WithHttpInfo($nome, $tipo, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null)
+    {
+        
+        // verify the required parameter 'nome' is set
+        if ($nome === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nome when calling salvarUsingPOST1');
+        }
+        // verify the required parameter 'tipo' is set
+        if ($tipo === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tipo when calling salvarUsingPOST1');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/pessoas";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($tipo !== null) {
+            $queryParams['tipo'] = $this->apiClient->getSerializer()->toQueryValue($tipo);
+        }// query params
+        
+        if ($cpf !== null) {
+            $queryParams['cpf'] = $this->apiClient->getSerializer()->toQueryValue($cpf);
+        }// query params
+        
+        if ($cnpj !== null) {
+            $queryParams['cnpj'] = $this->apiClient->getSerializer()->toQueryValue($cnpj);
+        }// query params
+        
+        if ($data_nascimento !== null) {
+            $queryParams['dataNascimento'] = $this->apiClient->getSerializer()->toQueryValue($data_nascimento);
+        }// query params
+        
+        if ($sexo !== null) {
+            $queryParams['sexo'] = $this->apiClient->getSerializer()->toQueryValue($sexo);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Pessoa'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Pessoa', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Pessoa', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
