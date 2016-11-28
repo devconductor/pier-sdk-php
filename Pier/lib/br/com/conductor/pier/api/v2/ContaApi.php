@@ -306,6 +306,122 @@ class ContaApi
     }
     
     /**
+     * gerarCartaoUsingPUT
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoImpressao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoUsingPUT($id_conta, $id_pessoa)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoUsingPUTWithHttpInfo ($id_conta, $id_pessoa);
+        return $response; 
+    }
+
+
+    /**
+     * gerarCartaoUsingPUTWithHttpInfo
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoUsingPUTWithHttpInfo($id_conta, $id_pessoa)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling gerarCartaoUsingPUT');
+        }
+        // verify the required parameter 'id_pessoa' is set
+        if ($id_pessoa === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling gerarCartaoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_conta !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_conta" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_conta),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($id_pessoa !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_pessoa" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_pessoa),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoImpressao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoImpressao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoImpressao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarUsingGET1
      *
      * Lista contas existentes na base de dados do Emissor

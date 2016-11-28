@@ -86,6 +86,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for gerarCartaoUsingPUT
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     *
+     */
+    public function test_gerarCartaoUsingPUT() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET1
      *
      * Lista contas existentes na base de dados do Emissor

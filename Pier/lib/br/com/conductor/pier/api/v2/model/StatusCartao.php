@@ -150,7 +150,7 @@ class StatusCartao implements ArrayAccess
     protected $id_status_destino_conta;
     
     /**
-      * $id_status_destino_desbloqueio Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+      * $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
       * @var int
       */
     protected $id_status_destino_desbloqueio;
@@ -296,7 +296,7 @@ class StatusCartao implements ArrayAccess
   
     /**
      * Sets id_status_destino_desbloqueio
-     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
      * @return $this
      */
     public function setIdStatusDestinoDesbloqueio($id_status_destino_desbloqueio)
