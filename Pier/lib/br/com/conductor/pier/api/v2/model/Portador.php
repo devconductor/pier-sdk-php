@@ -55,7 +55,6 @@ class Portador implements ArrayAccess
         'data_cancelamento_portador' => '\DateTime',
         'flag_ativo' => 'int',
         'id_conta' => 'int',
-        'id_imagem' => 'int',
         'id_parentesco' => 'int',
         'id_pessoa' => 'int',
         'id_produto' => 'int',
@@ -77,7 +76,6 @@ class Portador implements ArrayAccess
         'data_cancelamento_portador' => 'dataCancelamentoPortador',
         'flag_ativo' => 'flagAtivo',
         'id_conta' => 'idConta',
-        'id_imagem' => 'idImagem',
         'id_parentesco' => 'idParentesco',
         'id_pessoa' => 'idPessoa',
         'id_produto' => 'idProduto',
@@ -99,7 +97,6 @@ class Portador implements ArrayAccess
         'data_cancelamento_portador' => 'setDataCancelamentoPortador',
         'flag_ativo' => 'setFlagAtivo',
         'id_conta' => 'setIdConta',
-        'id_imagem' => 'setIdImagem',
         'id_parentesco' => 'setIdParentesco',
         'id_pessoa' => 'setIdPessoa',
         'id_produto' => 'setIdProduto',
@@ -121,7 +118,6 @@ class Portador implements ArrayAccess
         'data_cancelamento_portador' => 'getDataCancelamentoPortador',
         'flag_ativo' => 'getFlagAtivo',
         'id_conta' => 'getIdConta',
-        'id_imagem' => 'getIdImagem',
         'id_parentesco' => 'getIdParentesco',
         'id_pessoa' => 'getIdPessoa',
         'id_produto' => 'getIdProduto',
@@ -158,12 +154,6 @@ class Portador implements ArrayAccess
       * @var int
       */
     protected $id_conta;
-    
-    /**
-      * $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_imagem;
     
     /**
       * $id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
@@ -214,7 +204,6 @@ class Portador implements ArrayAccess
             $this->data_cancelamento_portador = $data["data_cancelamento_portador"];
             $this->flag_ativo = $data["flag_ativo"];
             $this->id_conta = $data["id_conta"];
-            $this->id_imagem = $data["id_imagem"];
             $this->id_parentesco = $data["id_parentesco"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_produto = $data["id_produto"];
@@ -305,27 +294,6 @@ class Portador implements ArrayAccess
     {
         
         $this->id_conta = $id_conta;
-        return $this;
-    }
-    
-    /**
-     * Gets id_imagem
-     * @return int
-     */
-    public function getIdImagem()
-    {
-        return $this->id_imagem;
-    }
-  
-    /**
-     * Sets id_imagem
-     * @param int $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdImagem($id_imagem)
-    {
-        
-        $this->id_imagem = $id_imagem;
         return $this;
     }
     
