@@ -92,7 +92,7 @@ class WebhooksApi
   
     
     /**
-     * alterarUsingPUT2
+     * alterarUsingPUT3
      *
      * Alterar Webhook
      *
@@ -103,15 +103,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT2($id, $evento, $metodo, $url)
+    public function alterarUsingPUT3($id, $evento, $metodo, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT2WithHttpInfo ($id, $evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT3WithHttpInfo ($id, $evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT2WithHttpInfo
+     * alterarUsingPUT3WithHttpInfo
      *
      * Alterar Webhook
      *
@@ -122,24 +122,24 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT2WithHttpInfo($id, $evento, $metodo, $url)
+    public function alterarUsingPUT3WithHttpInfo($id, $evento, $metodo, $url)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT3');
         }
         // verify the required parameter 'evento' is set
         if ($evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $evento when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $evento when calling alterarUsingPUT3');
         }
         // verify the required parameter 'metodo' is set
         if ($metodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling alterarUsingPUT3');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling alterarUsingPUT3');
         }
   
         // parse inputs

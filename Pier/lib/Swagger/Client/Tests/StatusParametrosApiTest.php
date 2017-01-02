@@ -1,6 +1,6 @@
 <?php
 /**
- * TipoTelefoneApiTest
+ * StatusParametrosApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * TipoTelefoneApiTest Class Doc Comment
+ * StatusParametrosApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TipoTelefoneApiTest extends \PHPUnit_Framework_TestCase
+class StatusParametrosApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,22 +66,82 @@ class TipoTelefoneApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarEstagioCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Tipo de Telefone
+     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarEstagioCartaoUsingGET() {
 
     }
     
     /**
-     * Test case for listarUsingGET9
+     * Test case for consultarStatusCartaoUsingGET
      *
-     * Lista os Tipos de Telefones
+     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
      */
-    public function test_listarUsingGET9() {
+    public function test_consultarStatusCartaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET4
+     *
+     * Apresenta os dados de um determinado Status Conta
+     *
+     */
+    public function test_consultarUsingGET4() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET5
+     *
+     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+     *
+     */
+    public function test_consultarUsingGET5() {
+
+    }
+    
+    /**
+     * Test case for listarEstagiosCartoesUsingGET
+     *
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
+     *
+     */
+    public function test_listarEstagiosCartoesUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarStatusCartoesUsingGET
+     *
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
+     *
+     */
+    public function test_listarStatusCartoesUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET5
+     *
+     * Lista os Status Contas cadastrados para o Emissor
+     *
+     */
+    public function test_listarUsingGET5() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET6
+     *
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     *
+     */
+    public function test_listarUsingGET6() {
 
     }
     

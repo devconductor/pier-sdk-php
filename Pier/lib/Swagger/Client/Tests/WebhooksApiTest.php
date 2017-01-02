@@ -66,12 +66,12 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT2
+     * Test case for alterarUsingPUT3
      *
      * Alterar Webhook
      *
      */
-    public function test_alterarUsingPUT2() {
+    public function test_alterarUsingPUT3() {
 
     }
     

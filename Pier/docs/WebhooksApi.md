@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT2**](WebhooksApi.md#alterarUsingPUT2) | **PUT** /api/webhooks | Alterar Webhook
+[**alterarUsingPUT3**](WebhooksApi.md#alterarUsingPUT3) | **PUT** /api/webhooks | Alterar Webhook
 [**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET10**](WebhooksApi.md#listarUsingGET10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST3**](WebhooksApi.md#salvarUsingPOST3) | **POST** /api/webhooks | Salvar Webhook
 
 
-# **alterarUsingPUT2**
-> \br.com.conductor.pier.api.v2.model\WebHook alterarUsingPUT2($id, $evento, $metodo, $url)
+# **alterarUsingPUT3**
+> \br.com.conductor.pier.api.v2.model\WebHook alterarUsingPUT3($id, $evento, $metodo, $url)
 
 Alterar Webhook
 
@@ -34,10 +34,10 @@ $metodo = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->alterarUsingPUT2($id, $evento, $metodo, $url);
+    $result = $api_instance->alterarUsingPUT3($id, $evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->alterarUsingPUT2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->alterarUsingPUT3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
