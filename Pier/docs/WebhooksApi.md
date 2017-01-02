@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT2**](WebhooksApi.md#alterarUsingPUT2) | **PUT** /api/webhooks | Alterar Webhook
-[**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id_webhook} | Consultar Webhook
+[**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET10**](WebhooksApi.md#listarUsingGET10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST3**](WebhooksApi.md#salvarUsingPOST3) | **POST** /api/webhooks | Salvar Webhook
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET9($id_webhook)
+> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET9($id)
 
 Consultar Webhook
 
@@ -84,10 +84,10 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
-$id_webhook = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET9($id_webhook);
+    $result = $api_instance->consultarUsingGET9($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->consultarUsingGET9: ', $e->getMessage(), "\n";
@@ -99,7 +99,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_webhook** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
 
 ### Return type
 

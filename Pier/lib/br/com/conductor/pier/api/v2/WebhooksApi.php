@@ -224,13 +224,13 @@ class WebhooksApi
      *
      * Consultar Webhook
      *
-     * @param int $id_webhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9($id_webhook)
+    public function consultarUsingGET9($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id_webhook);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id);
         return $response; 
     }
 
@@ -240,20 +240,20 @@ class WebhooksApi
      *
      * Consultar Webhook
      *
-     * @param int $id_webhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9WithHttpInfo($id_webhook)
+    public function consultarUsingGET9WithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_webhook' is set
-        if ($id_webhook === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_webhook when calling consultarUsingGET9');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
         }
   
         // parse inputs
-        $resourcePath = "/api/webhooks/{id_webhook}";
+        $resourcePath = "/api/webhooks/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -268,10 +268,10 @@ class WebhooksApi
         
         // path params
         
-        if ($id_webhook !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_webhook" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_webhook),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
