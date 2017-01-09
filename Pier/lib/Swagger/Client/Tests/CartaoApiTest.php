@@ -76,12 +76,32 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for atribuirPessoaUsingPUT
+     *
+     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+     *
+     */
+    public function test_atribuirPessoaUsingPUT() {
+
+    }
+    
+    /**
      * Test case for bloquearUsingPUT
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
      */
     public function test_bloquearUsingPUT() {
+
+    }
+    
+    /**
+     * Test case for cadastrarAlterarSenhaUsingPUT
+     *
+     * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     *
+     */
+    public function test_cadastrarAlterarSenhaUsingPUT() {
 
     }
     
@@ -132,6 +152,56 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarCartaoChipBandeiradoUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+     *
+     */
+    public function test_validarCartaoChipBandeiradoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarCartaoDigitadoBandeiradoUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+     *
+     */
+    public function test_validarCartaoDigitadoBandeiradoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarCartaoDigitadoNaoBandeiradoUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+     *
+     */
+    public function test_validarCartaoDigitadoNaoBandeiradoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarCartaoTarjaBandeiradoUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     *
+     */
+    public function test_validarCartaoTarjaBandeiradoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarSenhaUsingPOST
+     *
+     * Permite validar a senha de um Cart\u00C3\u00A3o
+     *
+     */
+    public function test_validarSenhaUsingPOST() {
 
     }
     

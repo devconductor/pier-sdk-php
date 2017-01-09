@@ -5,12 +5,19 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarStatusImpressaoUsingPUT**](CartaoApi.md#alterarStatusImpressaoUsingPUT) | **PUT** /api/cartoes/{id_cartao}/impressao/{id_status_impressao}  | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+[**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id_cartao}/atribuir-pessoa | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
 [**bloquearUsingPUT**](CartaoApi.md#bloquearUsingPUT) | **PUT** /api/cartoes/{id_cartao}/bloqueio | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+[**cadastrarAlterarSenhaUsingPUT**](CartaoApi.md#cadastrarAlterarSenhaUsingPUT) | **PUT** /api/cartoes/{id_cartao}/alterar-senha | Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id_cartao}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id_cartao}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**validarCartaoChipBandeiradoUsingGET**](CartaoApi.md#validarCartaoChipBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar/chip | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+[**validarCartaoDigitadoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+[**validarCartaoDigitadoNaoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoNaoBandeiradoUsingGET) | **GET** /api/cartoes/nao-bandeirados/validar/digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+[**validarCartaoTarjaBandeiradoUsingGET**](CartaoApi.md#validarCartaoTarjaBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar/tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+[**validarSenhaUsingPOST**](CartaoApi.md#validarSenhaUsingPOST) | **POST** /api/cartoes/{id_cartao}/validar-senha | Permite validar a senha de um Cart\u00C3\u00A3o
 
 
 # **alterarStatusImpressaoUsingPUT**
@@ -65,6 +72,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **atribuirPessoaUsingPUT**
+> \br.com.conductor.pier.api.v2.model\Cartao atribuirPessoaUsingPUT($id_cartao, $id_pessoa)
+
+Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+
+Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+$id_pessoa = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+
+try { 
+    $result = $api_instance->atribuirPessoaUsingPUT($id_cartao, $id_pessoa);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->atribuirPessoaUsingPUT: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
+ **id_pessoa** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **bloquearUsingPUT**
 > \br.com.conductor.pier.api.v2.model\Cartao bloquearUsingPUT($id_cartao, $id_status, $observacao)
 
@@ -107,6 +166,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cadastrarAlterarSenhaUsingPUT**
+> string cadastrarAlterarSenhaUsingPUT($id_cartao, $senha)
+
+Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha, a sua escolha
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+$senha = "senha_example"; // string | Senha para ser cadastrada ou alterada.
+
+try { 
+    $result = $api_instance->cadastrarAlterarSenhaUsingPUT($id_cartao, $senha);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->cadastrarAlterarSenhaUsingPUT: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **senha** | **string**| Senha para ser cadastrada ou alterada. | 
+
+### Return type
+
+**string**
 
 ### Authorization
 
@@ -395,6 +506,276 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageCartoes**](PageCartoes.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarCartaoChipBandeiradoUsingGET**
+> \br.com.conductor.pier.api.v2.model\ValidaCartao validarCartaoChipBandeiradoUsingGET($numero_cartao, $criptograma)
+
+Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+$criptograma = "criptograma_example"; // string | Criptograma do cart\u00C3\u00A3o no formato de55
+
+try { 
+    $result = $api_instance->validarCartaoChipBandeiradoUsingGET($numero_cartao, $criptograma);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->validarCartaoChipBandeiradoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **string**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **criptograma** | **string**| Criptograma do cart\u00C3\u00A3o no formato de55 | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarCartaoDigitadoBandeiradoUsingGET**
+> \br.com.conductor.pier.api.v2.model\ValidaCartao validarCartaoDigitadoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+
+Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+$nome_portador = "nome_portador_example"; // string | Nome do portador do cart\u00C3\u00A3o
+$data_validade = "data_validade_example"; // string | Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+$codigo_seguranca = "codigo_seguranca_example"; // string | C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+try { 
+    $result = $api_instance->validarCartaoDigitadoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->validarCartaoDigitadoBandeiradoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **string**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nome_portador** | **string**| Nome do portador do cart\u00C3\u00A3o | 
+ **data_validade** | **string**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigo_seguranca** | **string**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarCartaoDigitadoNaoBandeiradoUsingGET**
+> \br.com.conductor.pier.api.v2.model\ValidaCartao validarCartaoDigitadoNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+
+Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+$nome_portador = "nome_portador_example"; // string | Nome do portador do cart\u00C3\u00A3o
+$data_validade = "data_validade_example"; // string | Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+$codigo_seguranca = "codigo_seguranca_example"; // string | C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+try { 
+    $result = $api_instance->validarCartaoDigitadoNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->validarCartaoDigitadoNaoBandeiradoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **string**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nome_portador** | **string**| Nome do portador do cart\u00C3\u00A3o | 
+ **data_validade** | **string**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigo_seguranca** | **string**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarCartaoTarjaBandeiradoUsingGET**
+> \br.com.conductor.pier.api.v2.model\ValidaCartao validarCartaoTarjaBandeiradoUsingGET($numero_cartao, $trilha1, $trilha2)
+
+Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$numero_cartao = "numero_cartao_example"; // string | N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+$trilha1 = "trilha1_example"; // string | Trilha 1 do cart\u00C3\u00A3o a ser validado
+$trilha2 = "trilha2_example"; // string | Trilha 2 do cart\u00C3\u00A3o a ser validado
+
+try { 
+    $result = $api_instance->validarCartaoTarjaBandeiradoUsingGET($numero_cartao, $trilha1, $trilha2);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->validarCartaoTarjaBandeiradoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_cartao** | **string**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **trilha1** | **string**| Trilha 1 do cart\u00C3\u00A3o a ser validado | 
+ **trilha2** | **string**| Trilha 2 do cart\u00C3\u00A3o a ser validado | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarSenhaUsingPOST**
+> string validarSenhaUsingPOST($id_cartao, $senha)
+
+Permite validar a senha de um Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+$senha = "senha_example"; // string | Senha para ser validada.
+
+try { 
+    $result = $api_instance->validarSenhaUsingPOST($id_cartao, $senha);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->validarSenhaUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **senha** | **string**| Senha para ser validada. | 
+
+### Return type
+
+**string**
 
 ### Authorization
 
