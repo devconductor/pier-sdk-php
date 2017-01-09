@@ -1168,7 +1168,7 @@ class CartaoApi
     /**
      * validarCartaoChipBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)
@@ -1185,7 +1185,7 @@ class CartaoApi
     /**
      * validarCartaoChipBandeiradoUsingGETWithHttpInfo
      *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)

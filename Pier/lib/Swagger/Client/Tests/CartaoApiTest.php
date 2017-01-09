@@ -158,7 +158,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarCartaoChipBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
      *
      */
     public function test_validarCartaoChipBandeiradoUsingGET() {
