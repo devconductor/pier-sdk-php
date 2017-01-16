@@ -96,14 +96,14 @@ class CartaoApi
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (optional)
      * @return \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUT($id_cartao, $id_status_impressao)
+    public function alterarStatusImpressaoUsingPUT($id, $id_status_impressao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id_cartao, $id_status_impressao);
+        list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id, $id_status_impressao);
         return $response; 
     }
 
@@ -113,25 +113,21 @@ class CartaoApi
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id_cartao, $id_status_impressao)
+    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id, $id_status_impressao = null)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling alterarStatusImpressaoUsingPUT');
-        }
-        // verify the required parameter 'id_status_impressao' is set
-        if ($id_status_impressao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling alterarStatusImpressaoUsingPUT');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarStatusImpressaoUsingPUT');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ";
+        $resourcePath = "/api/cartoes/{id}/alterar-status-impressao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -142,22 +138,18 @@ class CartaoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
+        // query params
         
+        if ($id_status_impressao !== null) {
+            $queryParams['id_status_impressao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_impressao);
+        }
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
-                $resourcePath
-            );
-        }// path params
-        
-        if ($id_status_impressao !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_status_impressao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_status_impressao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -210,16 +202,16 @@ class CartaoApi
     /**
      * atribuirPessoaUsingPUT
      *
-     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atribuirPessoaUsingPUT($id_cartao, $id_pessoa)
+    public function atribuirPessoaUsingPUT($id, $id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->atribuirPessoaUsingPUTWithHttpInfo ($id_cartao, $id_pessoa);
+        list($response, $statusCode, $httpHeader) = $this->atribuirPessoaUsingPUTWithHttpInfo ($id, $id_pessoa);
         return $response; 
     }
 
@@ -227,19 +219,19 @@ class CartaoApi
     /**
      * atribuirPessoaUsingPUTWithHttpInfo
      *
-     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atribuirPessoaUsingPUTWithHttpInfo($id_cartao, $id_pessoa)
+    public function atribuirPessoaUsingPUTWithHttpInfo($id, $id_pessoa)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling atribuirPessoaUsingPUT');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atribuirPessoaUsingPUT');
         }
         // verify the required parameter 'id_pessoa' is set
         if ($id_pessoa === null) {
@@ -247,7 +239,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/atribuir-pessoa";
+        $resourcePath = "/api/cartoes/{id}/atribuir-pessoa";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -266,10 +258,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -324,15 +316,15 @@ class CartaoApi
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
      * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio. (required)
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPUT($id_cartao, $id_status, $observacao)
+    public function bloquearUsingPUT($id, $id_status, $observacao)
     {
-        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPUTWithHttpInfo ($id_cartao, $id_status, $observacao);
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPUTWithHttpInfo ($id, $id_status, $observacao);
         return $response; 
     }
 
@@ -342,18 +334,18 @@ class CartaoApi
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
      * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPUTWithHttpInfo($id_cartao, $id_status, $observacao)
+    public function bloquearUsingPUTWithHttpInfo($id, $id_status, $observacao)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling bloquearUsingPUT');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling bloquearUsingPUT');
         }
         // verify the required parameter 'id_status' is set
         if ($id_status === null) {
@@ -365,7 +357,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/bloqueio";
+        $resourcePath = "/api/cartoes/{id}/bloquear";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -388,10 +380,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -446,14 +438,14 @@ class CartaoApi
      *
      * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser cadastrada ou alterada. (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPUT($id_cartao, $senha)
+    public function cadastrarAlterarSenhaUsingPUT($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPUTWithHttpInfo ($id_cartao, $senha);
+        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPUTWithHttpInfo ($id, $senha);
         return $response; 
     }
 
@@ -463,17 +455,17 @@ class CartaoApi
      *
      * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser cadastrada ou alterada. (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPUTWithHttpInfo($id_cartao, $senha)
+    public function cadastrarAlterarSenhaUsingPUTWithHttpInfo($id, $senha)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling cadastrarAlterarSenhaUsingPUT');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarAlterarSenhaUsingPUT');
         }
         // verify the required parameter 'senha' is set
         if ($senha === null) {
@@ -481,7 +473,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/alterar-senha";
+        $resourcePath = "/api/cartoes/{id}/alterar-senha";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -494,8 +486,8 @@ class CartaoApi
   
         // query params
         
-        if ($id_cartao !== null) {
-            $queryParams['id_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }
         // header params
         
@@ -554,13 +546,13 @@ class CartaoApi
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteDisponibilidadeUsingGET($id_cartao)
+    public function consultarLimiteDisponibilidadeUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGETWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -570,20 +562,20 @@ class CartaoApi
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteDisponibilidadeUsingGETWithHttpInfo($id_cartao)
+    public function consultarLimiteDisponibilidadeUsingGETWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarLimiteDisponibilidadeUsingGET');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarLimiteDisponibilidadeUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/limites-disponibilidades";
+        $resourcePath = "/api/cartoes/{id}/limites-disponibilidades";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -598,10 +590,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -656,13 +648,13 @@ class CartaoApi
      *
      * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\Portador
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarPortadorUsingGET($id_cartao)
+    public function consultarPortadorUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarPortadorUsingGETWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarPortadorUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -672,20 +664,20 @@ class CartaoApi
      *
      * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Portador, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarPortadorUsingGETWithHttpInfo($id_cartao)
+    public function consultarPortadorUsingGETWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarPortadorUsingGET');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarPortadorUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/portadores";
+        $resourcePath = "/api/cartoes/{id}/portadores";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -700,10 +692,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -758,13 +750,13 @@ class CartaoApi
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET($id_cartao)
+    public function consultarUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGETWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -774,20 +766,20 @@ class CartaoApi
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGETWithHttpInfo($id_cartao)
+    public function consultarUsingGETWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarUsingGET');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}";
+        $resourcePath = "/api/cartoes/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -802,10 +794,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -860,13 +852,13 @@ class CartaoApi
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPUT($id_cartao)
+    public function desbloquearUsingPUT($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPUTWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPUTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -876,20 +868,20 @@ class CartaoApi
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPUTWithHttpInfo($id_cartao)
+    public function desbloquearUsingPUTWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling desbloquearUsingPUT');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling desbloquearUsingPUT');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/desbloqueio";
+        $resourcePath = "/api/cartoes/{id}/desbloquear";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -904,10 +896,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -958,10 +950,172 @@ class CartaoApi
     }
     
     /**
+     * listarLotesCartoesPrePagosUsingGET
+     *
+     * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id). (optional)
+     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
+     * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
+     * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
+     * @param \DateTime $data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
+     * @param int $flag_processado Indica o Status de Processamento do Lote. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageCartoes
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarLotesCartoesPrePagosUsingGET($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro_lote = null, $usuario_cadastro = null, $flag_processado = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarLotesCartoesPrePagosUsingGETWithHttpInfo ($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro_lote, $usuario_cadastro, $flag_processado);
+        return $response; 
+    }
+
+
+    /**
+     * listarLotesCartoesPrePagosUsingGETWithHttpInfo
+     *
+     * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id). (optional)
+     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
+     * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
+     * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
+     * @param \DateTime $data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
+     * @param int $flag_processado Indica o Status de Processamento do Lote. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarLotesCartoesPrePagosUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro_lote = null, $usuario_cadastro = null, $flag_processado = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/pre-pagos/lotes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($id_origem_comercial !== null) {
+            $queryParams['idOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
+        }// query params
+        
+        if ($id_produto !== null) {
+            $queryParams['idProduto'] = $this->apiClient->getSerializer()->toQueryValue($id_produto);
+        }// query params
+        
+        if ($id_tipo_cartao !== null) {
+            $queryParams['idTipoCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_cartao);
+        }// query params
+        
+        if ($id_imagem !== null) {
+            $queryParams['idImagem'] = $this->apiClient->getSerializer()->toQueryValue($id_imagem);
+        }// query params
+        
+        if ($id_endereco !== null) {
+            $queryParams['idEndereco'] = $this->apiClient->getSerializer()->toQueryValue($id_endereco);
+        }// query params
+        
+        if ($quantidade_cartoes !== null) {
+            $queryParams['quantidadeCartoes'] = $this->apiClient->getSerializer()->toQueryValue($quantidade_cartoes);
+        }// query params
+        
+        if ($data_cadastro_lote !== null) {
+            $queryParams['dataCadastroLote'] = $this->apiClient->getSerializer()->toQueryValue($data_cadastro_lote);
+        }// query params
+        
+        if ($usuario_cadastro !== null) {
+            $queryParams['usuarioCadastro'] = $this->apiClient->getSerializer()->toQueryValue($usuario_cadastro);
+        }// query params
+        
+        if ($flag_processado !== null) {
+            $queryParams['flagProcessado'] = $this->apiClient->getSerializer()->toQueryValue($flag_processado);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageCartoes'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageCartoes', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageCartoes', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarUsingGET
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
@@ -980,14 +1134,12 @@ class CartaoApi
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
      * @param string $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
+    public function listarUsingGET($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($page, $limit, $id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio);
         return $response; 
     }
 
@@ -997,6 +1149,8 @@ class CartaoApi
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
@@ -1015,12 +1169,10 @@ class CartaoApi
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
      * @param string $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $page = null, $limit = null)
+    public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
     {
         
   
@@ -1037,6 +1189,14 @@ class CartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
         
         if ($id !== null) {
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
@@ -1108,14 +1268,6 @@ class CartaoApi
         
         if ($codigo_desbloqueio !== null) {
             $queryParams['codigoDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($codigo_desbloqueio);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         
         
@@ -1168,7 +1320,7 @@ class CartaoApi
     /**
      * validarCartaoChipBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)
@@ -1185,7 +1337,7 @@ class CartaoApi
     /**
      * validarCartaoChipBandeiradoUsingGETWithHttpInfo
      *
-     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)
@@ -1205,7 +1357,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar/chip";
+        $resourcePath = "/api/cartoes/bandeirados/validar-chip";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1219,7 +1371,7 @@ class CartaoApi
         // query params
         
         if ($numero_cartao !== null) {
-            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
         }// query params
         
         if ($criptograma !== null) {
@@ -1325,7 +1477,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar/digitado";
+        $resourcePath = "/api/cartoes/bandeirados/validar-digitado";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1339,19 +1491,19 @@ class CartaoApi
         // query params
         
         if ($numero_cartao !== null) {
-            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
         }// query params
         
         if ($nome_portador !== null) {
-            $queryParams['nomePortador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
+            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
         }// query params
         
         if ($data_validade !== null) {
-            $queryParams['dataValidade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
+            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
         }// query params
         
         if ($codigo_seguranca !== null) {
-            $queryParams['codigoSeguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
+            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
         }
         
         
@@ -1453,7 +1605,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/nao-bandeirados/validar/digitado";
+        $resourcePath = "/api/cartoes/nao-bandeirados/validar-digitado";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1467,19 +1619,19 @@ class CartaoApi
         // query params
         
         if ($numero_cartao !== null) {
-            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
         }// query params
         
         if ($nome_portador !== null) {
-            $queryParams['nomePortador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
+            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
         }// query params
         
         if ($data_validade !== null) {
-            $queryParams['dataValidade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
+            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
         }// query params
         
         if ($codigo_seguranca !== null) {
-            $queryParams['codigoSeguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
+            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
         }
         
         
@@ -1575,7 +1727,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar/tarja";
+        $resourcePath = "/api/cartoes/bandeirados/validar-tarja";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1589,7 +1741,7 @@ class CartaoApi
         // query params
         
         if ($numero_cartao !== null) {
-            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
         }// query params
         
         if ($trilha1 !== null) {
@@ -1648,46 +1800,46 @@ class CartaoApi
     }
     
     /**
-     * validarSenhaUsingPOST
+     * validarSenhaUsingGET
      *
      * Permite validar a senha de um Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser validada. (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarSenhaUsingPOST($id_cartao, $senha)
+    public function validarSenhaUsingGET($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarSenhaUsingPOSTWithHttpInfo ($id_cartao, $senha);
+        list($response, $statusCode, $httpHeader) = $this->validarSenhaUsingGETWithHttpInfo ($id, $senha);
         return $response; 
     }
 
 
     /**
-     * validarSenhaUsingPOSTWithHttpInfo
+     * validarSenhaUsingGETWithHttpInfo
      *
      * Permite validar a senha de um Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser validada. (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarSenhaUsingPOSTWithHttpInfo($id_cartao, $senha)
+    public function validarSenhaUsingGETWithHttpInfo($id, $senha)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling validarSenhaUsingPOST');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling validarSenhaUsingGET');
         }
         // verify the required parameter 'senha' is set
         if ($senha === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $senha when calling validarSenhaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $senha when calling validarSenhaUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/validar-senha";
+        $resourcePath = "/api/cartoes/{id}/validar-senha";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1700,8 +1852,8 @@ class CartaoApi
   
         // query params
         
-        if ($id_cartao !== null) {
-            $queryParams['id_cartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }
         // header params
         
@@ -1732,7 +1884,7 @@ class CartaoApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
+                $resourcePath, 'GET',
                 $queryParams, $httpBody,
                 $headerParams, 'string'
             );

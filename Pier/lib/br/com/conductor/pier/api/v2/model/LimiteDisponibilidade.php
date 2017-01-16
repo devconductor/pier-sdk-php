@@ -52,26 +52,26 @@ class LimiteDisponibilidade implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'limite_compra' => 'double',
-        'limite_consignado' => 'double',
-        'limite_global' => 'double',
-        'limite_internacional_compra' => 'double',
-        'limite_internacional_parcelado' => 'double',
-        'limite_internacional_parcelas' => 'double',
-        'limite_internacional_saque_global' => 'double',
-        'limite_internacional_saque_periodo' => 'double',
-        'limite_parcelado' => 'double',
-        'limite_parcelas' => 'double',
-        'limite_saque_global' => 'double',
-        'limite_saque_periodo' => 'double',
-        'saldo_disponivel_compra' => 'double',
-        'saldo_disponivel_compra_internacional' => 'double',
-        'saldo_disponivel_global' => 'double',
-        'saldo_disponivel_parcelado' => 'double',
-        'saldo_disponivel_parcelas' => 'double',
-        'saldo_disponivel_saque' => 'double',
-        'saldo_disponivel_saque_internacional' => 'double',
-        'saldo_pontos_fidelidade' => 'double'
+        'limite_global' => 'Number',
+        'limite_compra' => 'Number',
+        'limite_parcelado' => 'Number',
+        'limite_parcelas' => 'Number',
+        'limite_saque_global' => 'Number',
+        'limite_saque_periodo' => 'Number',
+        'limite_consignado' => 'Number',
+        'limite_internacional_compra' => 'Number',
+        'limite_internacional_parcelado' => 'Number',
+        'limite_internacional_parcelas' => 'Number',
+        'limite_internacional_saque_global' => 'Number',
+        'limite_internacional_saque_periodo' => 'Number',
+        'saldo_disponivel_global' => 'Number',
+        'saldo_disponivel_compra' => 'Number',
+        'saldo_disponivel_parcelado' => 'Number',
+        'saldo_disponivel_parcelas' => 'Number',
+        'saldo_disponivel_saque' => 'Number',
+        'saldo_pontos_fidelidade' => 'Number',
+        'saldo_disponivel_compra_internacional' => 'Number',
+        'saldo_disponivel_saque_internacional' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -84,26 +84,26 @@ class LimiteDisponibilidade implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'limite_compra' => 'limiteCompra',
-        'limite_consignado' => 'limiteConsignado',
         'limite_global' => 'limiteGlobal',
+        'limite_compra' => 'limiteCompra',
+        'limite_parcelado' => 'limiteParcelado',
+        'limite_parcelas' => 'limiteParcelas',
+        'limite_saque_global' => 'limiteSaqueGlobal',
+        'limite_saque_periodo' => 'limiteSaquePeriodo',
+        'limite_consignado' => 'limiteConsignado',
         'limite_internacional_compra' => 'limiteInternacionalCompra',
         'limite_internacional_parcelado' => 'limiteInternacionalParcelado',
         'limite_internacional_parcelas' => 'limiteInternacionalParcelas',
         'limite_internacional_saque_global' => 'limiteInternacionalSaqueGlobal',
         'limite_internacional_saque_periodo' => 'limiteInternacionalSaquePeriodo',
-        'limite_parcelado' => 'limiteParcelado',
-        'limite_parcelas' => 'limiteParcelas',
-        'limite_saque_global' => 'limiteSaqueGlobal',
-        'limite_saque_periodo' => 'limiteSaquePeriodo',
-        'saldo_disponivel_compra' => 'saldoDisponivelCompra',
-        'saldo_disponivel_compra_internacional' => 'saldoDisponivelCompraInternacional',
         'saldo_disponivel_global' => 'saldoDisponivelGlobal',
+        'saldo_disponivel_compra' => 'saldoDisponivelCompra',
         'saldo_disponivel_parcelado' => 'saldoDisponivelParcelado',
         'saldo_disponivel_parcelas' => 'saldoDisponivelParcelas',
         'saldo_disponivel_saque' => 'saldoDisponivelSaque',
-        'saldo_disponivel_saque_internacional' => 'saldoDisponivelSaqueInternacional',
-        'saldo_pontos_fidelidade' => 'saldoPontosFidelidade'
+        'saldo_pontos_fidelidade' => 'saldoPontosFidelidade',
+        'saldo_disponivel_compra_internacional' => 'saldoDisponivelCompraInternacional',
+        'saldo_disponivel_saque_internacional' => 'saldoDisponivelSaqueInternacional'
     );
   
     static function attributeMap() {
@@ -116,26 +116,26 @@ class LimiteDisponibilidade implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'limite_compra' => 'setLimiteCompra',
-        'limite_consignado' => 'setLimiteConsignado',
         'limite_global' => 'setLimiteGlobal',
+        'limite_compra' => 'setLimiteCompra',
+        'limite_parcelado' => 'setLimiteParcelado',
+        'limite_parcelas' => 'setLimiteParcelas',
+        'limite_saque_global' => 'setLimiteSaqueGlobal',
+        'limite_saque_periodo' => 'setLimiteSaquePeriodo',
+        'limite_consignado' => 'setLimiteConsignado',
         'limite_internacional_compra' => 'setLimiteInternacionalCompra',
         'limite_internacional_parcelado' => 'setLimiteInternacionalParcelado',
         'limite_internacional_parcelas' => 'setLimiteInternacionalParcelas',
         'limite_internacional_saque_global' => 'setLimiteInternacionalSaqueGlobal',
         'limite_internacional_saque_periodo' => 'setLimiteInternacionalSaquePeriodo',
-        'limite_parcelado' => 'setLimiteParcelado',
-        'limite_parcelas' => 'setLimiteParcelas',
-        'limite_saque_global' => 'setLimiteSaqueGlobal',
-        'limite_saque_periodo' => 'setLimiteSaquePeriodo',
-        'saldo_disponivel_compra' => 'setSaldoDisponivelCompra',
-        'saldo_disponivel_compra_internacional' => 'setSaldoDisponivelCompraInternacional',
         'saldo_disponivel_global' => 'setSaldoDisponivelGlobal',
+        'saldo_disponivel_compra' => 'setSaldoDisponivelCompra',
         'saldo_disponivel_parcelado' => 'setSaldoDisponivelParcelado',
         'saldo_disponivel_parcelas' => 'setSaldoDisponivelParcelas',
         'saldo_disponivel_saque' => 'setSaldoDisponivelSaque',
-        'saldo_disponivel_saque_internacional' => 'setSaldoDisponivelSaqueInternacional',
-        'saldo_pontos_fidelidade' => 'setSaldoPontosFidelidade'
+        'saldo_pontos_fidelidade' => 'setSaldoPontosFidelidade',
+        'saldo_disponivel_compra_internacional' => 'setSaldoDisponivelCompraInternacional',
+        'saldo_disponivel_saque_internacional' => 'setSaldoDisponivelSaqueInternacional'
     );
   
     static function setters() {
@@ -148,26 +148,26 @@ class LimiteDisponibilidade implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'limite_compra' => 'getLimiteCompra',
-        'limite_consignado' => 'getLimiteConsignado',
         'limite_global' => 'getLimiteGlobal',
+        'limite_compra' => 'getLimiteCompra',
+        'limite_parcelado' => 'getLimiteParcelado',
+        'limite_parcelas' => 'getLimiteParcelas',
+        'limite_saque_global' => 'getLimiteSaqueGlobal',
+        'limite_saque_periodo' => 'getLimiteSaquePeriodo',
+        'limite_consignado' => 'getLimiteConsignado',
         'limite_internacional_compra' => 'getLimiteInternacionalCompra',
         'limite_internacional_parcelado' => 'getLimiteInternacionalParcelado',
         'limite_internacional_parcelas' => 'getLimiteInternacionalParcelas',
         'limite_internacional_saque_global' => 'getLimiteInternacionalSaqueGlobal',
         'limite_internacional_saque_periodo' => 'getLimiteInternacionalSaquePeriodo',
-        'limite_parcelado' => 'getLimiteParcelado',
-        'limite_parcelas' => 'getLimiteParcelas',
-        'limite_saque_global' => 'getLimiteSaqueGlobal',
-        'limite_saque_periodo' => 'getLimiteSaquePeriodo',
-        'saldo_disponivel_compra' => 'getSaldoDisponivelCompra',
-        'saldo_disponivel_compra_internacional' => 'getSaldoDisponivelCompraInternacional',
         'saldo_disponivel_global' => 'getSaldoDisponivelGlobal',
+        'saldo_disponivel_compra' => 'getSaldoDisponivelCompra',
         'saldo_disponivel_parcelado' => 'getSaldoDisponivelParcelado',
         'saldo_disponivel_parcelas' => 'getSaldoDisponivelParcelas',
         'saldo_disponivel_saque' => 'getSaldoDisponivelSaque',
-        'saldo_disponivel_saque_internacional' => 'getSaldoDisponivelSaqueInternacional',
-        'saldo_pontos_fidelidade' => 'getSaldoPontosFidelidade'
+        'saldo_pontos_fidelidade' => 'getSaldoPontosFidelidade',
+        'saldo_disponivel_compra_internacional' => 'getSaldoDisponivelCompraInternacional',
+        'saldo_disponivel_saque_internacional' => 'getSaldoDisponivelSaqueInternacional'
     );
   
     static function getters() {
@@ -182,124 +182,124 @@ class LimiteDisponibilidade implements ArrayAccess
     protected $id;
     
     /**
-      * $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-      * @var double
-      */
-    protected $limite_compra;
-    
-    /**
-      * $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-      * @var double
-      */
-    protected $limite_consignado;
-    
-    /**
       * $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-      * @var double
+      * @var Number
       */
     protected $limite_global;
     
     /**
-      * $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
-      * @var double
+      * $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+      * @var Number
       */
-    protected $limite_internacional_compra;
-    
-    /**
-      * $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-      * @var double
-      */
-    protected $limite_internacional_parcelado;
-    
-    /**
-      * $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-      * @var double
-      */
-    protected $limite_internacional_parcelas;
-    
-    /**
-      * $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-      * @var double
-      */
-    protected $limite_internacional_saque_global;
-    
-    /**
-      * $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-      * @var double
-      */
-    protected $limite_internacional_saque_periodo;
+    protected $limite_compra;
     
     /**
       * $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-      * @var double
+      * @var Number
       */
     protected $limite_parcelado;
     
     /**
       * $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-      * @var double
+      * @var Number
       */
     protected $limite_parcelas;
     
     /**
       * $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-      * @var double
+      * @var Number
       */
     protected $limite_saque_global;
     
     /**
       * $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-      * @var double
+      * @var Number
       */
     protected $limite_saque_periodo;
     
     /**
-      * $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
-      * @var double
+      * $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+      * @var Number
       */
-    protected $saldo_disponivel_compra;
+    protected $limite_consignado;
     
     /**
-      * $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
-      * @var double
+      * $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+      * @var Number
       */
-    protected $saldo_disponivel_compra_internacional;
+    protected $limite_internacional_compra;
+    
+    /**
+      * $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+      * @var Number
+      */
+    protected $limite_internacional_parcelado;
+    
+    /**
+      * $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+      * @var Number
+      */
+    protected $limite_internacional_parcelas;
+    
+    /**
+      * $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+      * @var Number
+      */
+    protected $limite_internacional_saque_global;
+    
+    /**
+      * $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+      * @var Number
+      */
+    protected $limite_internacional_saque_periodo;
     
     /**
       * $saldo_disponivel_global Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-      * @var double
+      * @var Number
       */
     protected $saldo_disponivel_global;
     
     /**
+      * $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+      * @var Number
+      */
+    protected $saldo_disponivel_compra;
+    
+    /**
       * $saldo_disponivel_parcelado Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
-      * @var double
+      * @var Number
       */
     protected $saldo_disponivel_parcelado;
     
     /**
       * $saldo_disponivel_parcelas Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
-      * @var double
+      * @var Number
       */
     protected $saldo_disponivel_parcelas;
     
     /**
       * $saldo_disponivel_saque Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-      * @var double
+      * @var Number
       */
     protected $saldo_disponivel_saque;
     
     /**
-      * $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-      * @var double
-      */
-    protected $saldo_disponivel_saque_internacional;
-    
-    /**
       * $saldo_pontos_fidelidade Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
-      * @var double
+      * @var Number
       */
     protected $saldo_pontos_fidelidade;
+    
+    /**
+      * $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+      * @var Number
+      */
+    protected $saldo_disponivel_compra_internacional;
+    
+    /**
+      * $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+      * @var Number
+      */
+    protected $saldo_disponivel_saque_internacional;
     
 
     /**
@@ -311,26 +311,26 @@ class LimiteDisponibilidade implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->limite_compra = $data["limite_compra"];
-            $this->limite_consignado = $data["limite_consignado"];
             $this->limite_global = $data["limite_global"];
+            $this->limite_compra = $data["limite_compra"];
+            $this->limite_parcelado = $data["limite_parcelado"];
+            $this->limite_parcelas = $data["limite_parcelas"];
+            $this->limite_saque_global = $data["limite_saque_global"];
+            $this->limite_saque_periodo = $data["limite_saque_periodo"];
+            $this->limite_consignado = $data["limite_consignado"];
             $this->limite_internacional_compra = $data["limite_internacional_compra"];
             $this->limite_internacional_parcelado = $data["limite_internacional_parcelado"];
             $this->limite_internacional_parcelas = $data["limite_internacional_parcelas"];
             $this->limite_internacional_saque_global = $data["limite_internacional_saque_global"];
             $this->limite_internacional_saque_periodo = $data["limite_internacional_saque_periodo"];
-            $this->limite_parcelado = $data["limite_parcelado"];
-            $this->limite_parcelas = $data["limite_parcelas"];
-            $this->limite_saque_global = $data["limite_saque_global"];
-            $this->limite_saque_periodo = $data["limite_saque_periodo"];
-            $this->saldo_disponivel_compra = $data["saldo_disponivel_compra"];
-            $this->saldo_disponivel_compra_internacional = $data["saldo_disponivel_compra_internacional"];
             $this->saldo_disponivel_global = $data["saldo_disponivel_global"];
+            $this->saldo_disponivel_compra = $data["saldo_disponivel_compra"];
             $this->saldo_disponivel_parcelado = $data["saldo_disponivel_parcelado"];
             $this->saldo_disponivel_parcelas = $data["saldo_disponivel_parcelas"];
             $this->saldo_disponivel_saque = $data["saldo_disponivel_saque"];
-            $this->saldo_disponivel_saque_internacional = $data["saldo_disponivel_saque_internacional"];
             $this->saldo_pontos_fidelidade = $data["saldo_pontos_fidelidade"];
+            $this->saldo_disponivel_compra_internacional = $data["saldo_disponivel_compra_internacional"];
+            $this->saldo_disponivel_saque_internacional = $data["saldo_disponivel_saque_internacional"];
         }
     }
     
@@ -356,50 +356,8 @@ class LimiteDisponibilidade implements ArrayAccess
     }
     
     /**
-     * Gets limite_compra
-     * @return double
-     */
-    public function getLimiteCompra()
-    {
-        return $this->limite_compra;
-    }
-  
-    /**
-     * Sets limite_compra
-     * @param double $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
-     * @return $this
-     */
-    public function setLimiteCompra($limite_compra)
-    {
-        
-        $this->limite_compra = $limite_compra;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_consignado
-     * @return double
-     */
-    public function getLimiteConsignado()
-    {
-        return $this->limite_consignado;
-    }
-  
-    /**
-     * Sets limite_consignado
-     * @param double $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
-     * @return $this
-     */
-    public function setLimiteConsignado($limite_consignado)
-    {
-        
-        $this->limite_consignado = $limite_consignado;
-        return $this;
-    }
-    
-    /**
      * Gets limite_global
-     * @return double
+     * @return Number
      */
     public function getLimiteGlobal()
     {
@@ -408,7 +366,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param double $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+     * @param Number $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -419,113 +377,29 @@ class LimiteDisponibilidade implements ArrayAccess
     }
     
     /**
-     * Gets limite_internacional_compra
-     * @return double
+     * Gets limite_compra
+     * @return Number
      */
-    public function getLimiteInternacionalCompra()
+    public function getLimiteCompra()
     {
-        return $this->limite_internacional_compra;
+        return $this->limite_compra;
     }
   
     /**
-     * Sets limite_internacional_compra
-     * @param double $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+     * Sets limite_compra
+     * @param Number $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
      * @return $this
      */
-    public function setLimiteInternacionalCompra($limite_internacional_compra)
+    public function setLimiteCompra($limite_compra)
     {
         
-        $this->limite_internacional_compra = $limite_internacional_compra;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_internacional_parcelado
-     * @return double
-     */
-    public function getLimiteInternacionalParcelado()
-    {
-        return $this->limite_internacional_parcelado;
-    }
-  
-    /**
-     * Sets limite_internacional_parcelado
-     * @param double $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
-     * @return $this
-     */
-    public function setLimiteInternacionalParcelado($limite_internacional_parcelado)
-    {
-        
-        $this->limite_internacional_parcelado = $limite_internacional_parcelado;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_internacional_parcelas
-     * @return double
-     */
-    public function getLimiteInternacionalParcelas()
-    {
-        return $this->limite_internacional_parcelas;
-    }
-  
-    /**
-     * Sets limite_internacional_parcelas
-     * @param double $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
-     * @return $this
-     */
-    public function setLimiteInternacionalParcelas($limite_internacional_parcelas)
-    {
-        
-        $this->limite_internacional_parcelas = $limite_internacional_parcelas;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_internacional_saque_global
-     * @return double
-     */
-    public function getLimiteInternacionalSaqueGlobal()
-    {
-        return $this->limite_internacional_saque_global;
-    }
-  
-    /**
-     * Sets limite_internacional_saque_global
-     * @param double $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-     * @return $this
-     */
-    public function setLimiteInternacionalSaqueGlobal($limite_internacional_saque_global)
-    {
-        
-        $this->limite_internacional_saque_global = $limite_internacional_saque_global;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_internacional_saque_periodo
-     * @return double
-     */
-    public function getLimiteInternacionalSaquePeriodo()
-    {
-        return $this->limite_internacional_saque_periodo;
-    }
-  
-    /**
-     * Sets limite_internacional_saque_periodo
-     * @param double $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-     * @return $this
-     */
-    public function setLimiteInternacionalSaquePeriodo($limite_internacional_saque_periodo)
-    {
-        
-        $this->limite_internacional_saque_periodo = $limite_internacional_saque_periodo;
+        $this->limite_compra = $limite_compra;
         return $this;
     }
     
     /**
      * Gets limite_parcelado
-     * @return double
+     * @return Number
      */
     public function getLimiteParcelado()
     {
@@ -534,7 +408,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_parcelado
-     * @param double $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+     * @param Number $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
      * @return $this
      */
     public function setLimiteParcelado($limite_parcelado)
@@ -546,7 +420,7 @@ class LimiteDisponibilidade implements ArrayAccess
     
     /**
      * Gets limite_parcelas
-     * @return double
+     * @return Number
      */
     public function getLimiteParcelas()
     {
@@ -555,7 +429,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param double $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+     * @param Number $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)
@@ -567,7 +441,7 @@ class LimiteDisponibilidade implements ArrayAccess
     
     /**
      * Gets limite_saque_global
-     * @return double
+     * @return Number
      */
     public function getLimiteSaqueGlobal()
     {
@@ -576,7 +450,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_saque_global
-     * @param double $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
      * @return $this
      */
     public function setLimiteSaqueGlobal($limite_saque_global)
@@ -588,7 +462,7 @@ class LimiteDisponibilidade implements ArrayAccess
     
     /**
      * Gets limite_saque_periodo
-     * @return double
+     * @return Number
      */
     public function getLimiteSaquePeriodo()
     {
@@ -597,7 +471,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets limite_saque_periodo
-     * @param double $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+     * @param Number $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
      * @return $this
      */
     public function setLimiteSaquePeriodo($limite_saque_periodo)
@@ -608,50 +482,134 @@ class LimiteDisponibilidade implements ArrayAccess
     }
     
     /**
-     * Gets saldo_disponivel_compra
-     * @return double
+     * Gets limite_consignado
+     * @return Number
      */
-    public function getSaldoDisponivelCompra()
+    public function getLimiteConsignado()
     {
-        return $this->saldo_disponivel_compra;
+        return $this->limite_consignado;
     }
   
     /**
-     * Sets saldo_disponivel_compra
-     * @param double $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+     * Sets limite_consignado
+     * @param Number $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
      * @return $this
      */
-    public function setSaldoDisponivelCompra($saldo_disponivel_compra)
+    public function setLimiteConsignado($limite_consignado)
     {
         
-        $this->saldo_disponivel_compra = $saldo_disponivel_compra;
+        $this->limite_consignado = $limite_consignado;
         return $this;
     }
     
     /**
-     * Gets saldo_disponivel_compra_internacional
-     * @return double
+     * Gets limite_internacional_compra
+     * @return Number
      */
-    public function getSaldoDisponivelCompraInternacional()
+    public function getLimiteInternacionalCompra()
     {
-        return $this->saldo_disponivel_compra_internacional;
+        return $this->limite_internacional_compra;
     }
   
     /**
-     * Sets saldo_disponivel_compra_internacional
-     * @param double $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+     * Sets limite_internacional_compra
+     * @param Number $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
      * @return $this
      */
-    public function setSaldoDisponivelCompraInternacional($saldo_disponivel_compra_internacional)
+    public function setLimiteInternacionalCompra($limite_internacional_compra)
     {
         
-        $this->saldo_disponivel_compra_internacional = $saldo_disponivel_compra_internacional;
+        $this->limite_internacional_compra = $limite_internacional_compra;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_internacional_parcelado
+     * @return Number
+     */
+    public function getLimiteInternacionalParcelado()
+    {
+        return $this->limite_internacional_parcelado;
+    }
+  
+    /**
+     * Sets limite_internacional_parcelado
+     * @param Number $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+     * @return $this
+     */
+    public function setLimiteInternacionalParcelado($limite_internacional_parcelado)
+    {
+        
+        $this->limite_internacional_parcelado = $limite_internacional_parcelado;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_internacional_parcelas
+     * @return Number
+     */
+    public function getLimiteInternacionalParcelas()
+    {
+        return $this->limite_internacional_parcelas;
+    }
+  
+    /**
+     * Sets limite_internacional_parcelas
+     * @param Number $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+     * @return $this
+     */
+    public function setLimiteInternacionalParcelas($limite_internacional_parcelas)
+    {
+        
+        $this->limite_internacional_parcelas = $limite_internacional_parcelas;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_internacional_saque_global
+     * @return Number
+     */
+    public function getLimiteInternacionalSaqueGlobal()
+    {
+        return $this->limite_internacional_saque_global;
+    }
+  
+    /**
+     * Sets limite_internacional_saque_global
+     * @param Number $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+     * @return $this
+     */
+    public function setLimiteInternacionalSaqueGlobal($limite_internacional_saque_global)
+    {
+        
+        $this->limite_internacional_saque_global = $limite_internacional_saque_global;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_internacional_saque_periodo
+     * @return Number
+     */
+    public function getLimiteInternacionalSaquePeriodo()
+    {
+        return $this->limite_internacional_saque_periodo;
+    }
+  
+    /**
+     * Sets limite_internacional_saque_periodo
+     * @param Number $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+     * @return $this
+     */
+    public function setLimiteInternacionalSaquePeriodo($limite_internacional_saque_periodo)
+    {
+        
+        $this->limite_internacional_saque_periodo = $limite_internacional_saque_periodo;
         return $this;
     }
     
     /**
      * Gets saldo_disponivel_global
-     * @return double
+     * @return Number
      */
     public function getSaldoDisponivelGlobal()
     {
@@ -660,7 +618,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_global
-     * @param double $saldo_disponivel_global Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+     * @param Number $saldo_disponivel_global Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
      * @return $this
      */
     public function setSaldoDisponivelGlobal($saldo_disponivel_global)
@@ -671,8 +629,29 @@ class LimiteDisponibilidade implements ArrayAccess
     }
     
     /**
+     * Gets saldo_disponivel_compra
+     * @return Number
+     */
+    public function getSaldoDisponivelCompra()
+    {
+        return $this->saldo_disponivel_compra;
+    }
+  
+    /**
+     * Sets saldo_disponivel_compra
+     * @param Number $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+     * @return $this
+     */
+    public function setSaldoDisponivelCompra($saldo_disponivel_compra)
+    {
+        
+        $this->saldo_disponivel_compra = $saldo_disponivel_compra;
+        return $this;
+    }
+    
+    /**
      * Gets saldo_disponivel_parcelado
-     * @return double
+     * @return Number
      */
     public function getSaldoDisponivelParcelado()
     {
@@ -681,7 +660,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelado
-     * @param double $saldo_disponivel_parcelado Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+     * @param Number $saldo_disponivel_parcelado Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
      * @return $this
      */
     public function setSaldoDisponivelParcelado($saldo_disponivel_parcelado)
@@ -693,7 +672,7 @@ class LimiteDisponibilidade implements ArrayAccess
     
     /**
      * Gets saldo_disponivel_parcelas
-     * @return double
+     * @return Number
      */
     public function getSaldoDisponivelParcelas()
     {
@@ -702,7 +681,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelas
-     * @param double $saldo_disponivel_parcelas Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+     * @param Number $saldo_disponivel_parcelas Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
      * @return $this
      */
     public function setSaldoDisponivelParcelas($saldo_disponivel_parcelas)
@@ -714,7 +693,7 @@ class LimiteDisponibilidade implements ArrayAccess
     
     /**
      * Gets saldo_disponivel_saque
-     * @return double
+     * @return Number
      */
     public function getSaldoDisponivelSaque()
     {
@@ -723,7 +702,7 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque
-     * @param double $saldo_disponivel_saque Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+     * @param Number $saldo_disponivel_saque Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
      * @return $this
      */
     public function setSaldoDisponivelSaque($saldo_disponivel_saque)
@@ -734,29 +713,8 @@ class LimiteDisponibilidade implements ArrayAccess
     }
     
     /**
-     * Gets saldo_disponivel_saque_internacional
-     * @return double
-     */
-    public function getSaldoDisponivelSaqueInternacional()
-    {
-        return $this->saldo_disponivel_saque_internacional;
-    }
-  
-    /**
-     * Sets saldo_disponivel_saque_internacional
-     * @param double $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-     * @return $this
-     */
-    public function setSaldoDisponivelSaqueInternacional($saldo_disponivel_saque_internacional)
-    {
-        
-        $this->saldo_disponivel_saque_internacional = $saldo_disponivel_saque_internacional;
-        return $this;
-    }
-    
-    /**
      * Gets saldo_pontos_fidelidade
-     * @return double
+     * @return Number
      */
     public function getSaldoPontosFidelidade()
     {
@@ -765,13 +723,55 @@ class LimiteDisponibilidade implements ArrayAccess
   
     /**
      * Sets saldo_pontos_fidelidade
-     * @param double $saldo_pontos_fidelidade Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+     * @param Number $saldo_pontos_fidelidade Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
      * @return $this
      */
     public function setSaldoPontosFidelidade($saldo_pontos_fidelidade)
     {
         
         $this->saldo_pontos_fidelidade = $saldo_pontos_fidelidade;
+        return $this;
+    }
+    
+    /**
+     * Gets saldo_disponivel_compra_internacional
+     * @return Number
+     */
+    public function getSaldoDisponivelCompraInternacional()
+    {
+        return $this->saldo_disponivel_compra_internacional;
+    }
+  
+    /**
+     * Sets saldo_disponivel_compra_internacional
+     * @param Number $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+     * @return $this
+     */
+    public function setSaldoDisponivelCompraInternacional($saldo_disponivel_compra_internacional)
+    {
+        
+        $this->saldo_disponivel_compra_internacional = $saldo_disponivel_compra_internacional;
+        return $this;
+    }
+    
+    /**
+     * Gets saldo_disponivel_saque_internacional
+     * @return Number
+     */
+    public function getSaldoDisponivelSaqueInternacional()
+    {
+        return $this->saldo_disponivel_saque_internacional;
+    }
+  
+    /**
+     * Sets saldo_disponivel_saque_internacional
+     * @param Number $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+     * @return $this
+     */
+    public function setSaldoDisponivelSaqueInternacional($saldo_disponivel_saque_internacional)
+    {
+        
+        $this->saldo_disponivel_saque_internacional = $saldo_disponivel_saque_internacional;
         return $this;
     }
     

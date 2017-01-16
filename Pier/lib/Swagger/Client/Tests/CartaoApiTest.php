@@ -78,7 +78,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for atribuirPessoaUsingPUT
      *
-     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
+     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
      *
      */
     public function test_atribuirPessoaUsingPUT() {
@@ -146,6 +146,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarLotesCartoesPrePagosUsingGET
+     *
+     * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     */
+    public function test_listarLotesCartoesPrePagosUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -158,7 +168,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarCartaoChipBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
      *
      */
     public function test_validarCartaoChipBandeiradoUsingGET() {
@@ -196,12 +206,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for validarSenhaUsingPOST
+     * Test case for validarSenhaUsingGET
      *
      * Permite validar a senha de um Cart\u00C3\u00A3o
      *
      */
-    public function test_validarSenhaUsingPOST() {
+    public function test_validarSenhaUsingGET() {
 
     }
     

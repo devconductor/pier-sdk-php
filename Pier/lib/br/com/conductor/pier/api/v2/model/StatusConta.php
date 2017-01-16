@@ -51,10 +51,10 @@ class StatusConta implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'flag_altera_limite' => 'int',
         'id' => 'int',
-        'mensagem_consulta_negada' => 'string',
-        'nome' => 'string'
+        'nome' => 'string',
+        'flag_altera_limite' => 'int',
+        'mensagem_consulta_negada' => 'string'
     );
   
     static function swaggerTypes() {
@@ -66,10 +66,10 @@ class StatusConta implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'flag_altera_limite' => 'flagAlteraLimite',
         'id' => 'id',
-        'mensagem_consulta_negada' => 'mensagemConsultaNegada',
-        'nome' => 'nome'
+        'nome' => 'nome',
+        'flag_altera_limite' => 'flagAlteraLimite',
+        'mensagem_consulta_negada' => 'mensagemConsultaNegada'
     );
   
     static function attributeMap() {
@@ -81,10 +81,10 @@ class StatusConta implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'flag_altera_limite' => 'setFlagAlteraLimite',
         'id' => 'setId',
-        'mensagem_consulta_negada' => 'setMensagemConsultaNegada',
-        'nome' => 'setNome'
+        'nome' => 'setNome',
+        'flag_altera_limite' => 'setFlagAlteraLimite',
+        'mensagem_consulta_negada' => 'setMensagemConsultaNegada'
     );
   
     static function setters() {
@@ -96,10 +96,10 @@ class StatusConta implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'flag_altera_limite' => 'getFlagAlteraLimite',
         'id' => 'getId',
-        'mensagem_consulta_negada' => 'getMensagemConsultaNegada',
-        'nome' => 'getNome'
+        'nome' => 'getNome',
+        'flag_altera_limite' => 'getFlagAlteraLimite',
+        'mensagem_consulta_negada' => 'getMensagemConsultaNegada'
     );
   
     static function getters() {
@@ -108,28 +108,28 @@ class StatusConta implements ArrayAccess
 
     
     /**
-      * $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_altera_limite;
-    
-    /**
       * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-      * @var string
-      */
-    protected $mensagem_consulta_negada;
-    
-    /**
       * $nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
       * @var string
       */
     protected $nome;
+    
+    /**
+      * $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_altera_limite;
+    
+    /**
+      * $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+      * @var string
+      */
+    protected $mensagem_consulta_negada;
     
 
     /**
@@ -140,32 +140,11 @@ class StatusConta implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->flag_altera_limite = $data["flag_altera_limite"];
             $this->id = $data["id"];
-            $this->mensagem_consulta_negada = $data["mensagem_consulta_negada"];
             $this->nome = $data["nome"];
+            $this->flag_altera_limite = $data["flag_altera_limite"];
+            $this->mensagem_consulta_negada = $data["mensagem_consulta_negada"];
         }
-    }
-    
-    /**
-     * Gets flag_altera_limite
-     * @return int
-     */
-    public function getFlagAlteraLimite()
-    {
-        return $this->flag_altera_limite;
-    }
-  
-    /**
-     * Sets flag_altera_limite
-     * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagAlteraLimite($flag_altera_limite)
-    {
-        
-        $this->flag_altera_limite = $flag_altera_limite;
-        return $this;
     }
     
     /**
@@ -190,27 +169,6 @@ class StatusConta implements ArrayAccess
     }
     
     /**
-     * Gets mensagem_consulta_negada
-     * @return string
-     */
-    public function getMensagemConsultaNegada()
-    {
-        return $this->mensagem_consulta_negada;
-    }
-  
-    /**
-     * Sets mensagem_consulta_negada
-     * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-     * @return $this
-     */
-    public function setMensagemConsultaNegada($mensagem_consulta_negada)
-    {
-        
-        $this->mensagem_consulta_negada = $mensagem_consulta_negada;
-        return $this;
-    }
-    
-    /**
      * Gets nome
      * @return string
      */
@@ -228,6 +186,48 @@ class StatusConta implements ArrayAccess
     {
         
         $this->nome = $nome;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_altera_limite
+     * @return int
+     */
+    public function getFlagAlteraLimite()
+    {
+        return $this->flag_altera_limite;
+    }
+  
+    /**
+     * Sets flag_altera_limite
+     * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagAlteraLimite($flag_altera_limite)
+    {
+        
+        $this->flag_altera_limite = $flag_altera_limite;
+        return $this;
+    }
+    
+    /**
+     * Gets mensagem_consulta_negada
+     * @return string
+     */
+    public function getMensagemConsultaNegada()
+    {
+        return $this->mensagem_consulta_negada;
+    }
+  
+    /**
+     * Sets mensagem_consulta_negada
+     * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+     * @return $this
+     */
+    public function setMensagemConsultaNegada($mensagem_consulta_negada)
+    {
+        
+        $this->mensagem_consulta_negada = $mensagem_consulta_negada;
         return $this;
     }
     

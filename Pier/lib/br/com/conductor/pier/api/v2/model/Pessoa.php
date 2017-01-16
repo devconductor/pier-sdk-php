@@ -51,13 +51,13 @@ class Pessoa implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cnpj' => 'string',
-        'cpf' => 'string',
-        'data_nascimento' => '\DateTime',
         'id' => 'int',
         'nome' => 'string',
-        'sexo' => 'string',
-        'tipo' => 'string'
+        'tipo' => 'string',
+        'cpf' => 'string',
+        'cnpj' => 'string',
+        'data_nascimento' => '\DateTime',
+        'sexo' => 'string'
     );
   
     static function swaggerTypes() {
@@ -69,13 +69,13 @@ class Pessoa implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cnpj' => 'cnpj',
-        'cpf' => 'cpf',
-        'data_nascimento' => 'dataNascimento',
         'id' => 'id',
         'nome' => 'nome',
-        'sexo' => 'sexo',
-        'tipo' => 'tipo'
+        'tipo' => 'tipo',
+        'cpf' => 'cpf',
+        'cnpj' => 'cnpj',
+        'data_nascimento' => 'dataNascimento',
+        'sexo' => 'sexo'
     );
   
     static function attributeMap() {
@@ -87,13 +87,13 @@ class Pessoa implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cnpj' => 'setCnpj',
-        'cpf' => 'setCpf',
-        'data_nascimento' => 'setDataNascimento',
         'id' => 'setId',
         'nome' => 'setNome',
-        'sexo' => 'setSexo',
-        'tipo' => 'setTipo'
+        'tipo' => 'setTipo',
+        'cpf' => 'setCpf',
+        'cnpj' => 'setCnpj',
+        'data_nascimento' => 'setDataNascimento',
+        'sexo' => 'setSexo'
     );
   
     static function setters() {
@@ -105,37 +105,19 @@ class Pessoa implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cnpj' => 'getCnpj',
-        'cpf' => 'getCpf',
-        'data_nascimento' => 'getDataNascimento',
         'id' => 'getId',
         'nome' => 'getNome',
-        'sexo' => 'getSexo',
-        'tipo' => 'getTipo'
+        'tipo' => 'getTipo',
+        'cpf' => 'getCpf',
+        'cnpj' => 'getCnpj',
+        'data_nascimento' => 'getDataNascimento',
+        'sexo' => 'getSexo'
     );
   
     static function getters() {
         return self::$getters;
     }
 
-    
-    /**
-      * $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-      * @var string
-      */
-    protected $cnpj;
-    
-    /**
-      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
-      * @var string
-      */
-    protected $cpf;
-    
-    /**
-      * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-      * @var \DateTime
-      */
-    protected $data_nascimento;
     
     /**
       * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -150,16 +132,34 @@ class Pessoa implements ArrayAccess
     protected $nome;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-      * @var string
-      */
-    protected $sexo;
-    
-    /**
       * $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
       * @var string
       */
     protected $tipo;
+    
+    /**
+      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
+      * @var string
+      */
+    protected $cpf;
+    
+    /**
+      * $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+      * @var string
+      */
+    protected $cnpj;
+    
+    /**
+      * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+      * @var \DateTime
+      */
+    protected $data_nascimento;
+    
+    /**
+      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+      * @var string
+      */
+    protected $sexo;
     
 
     /**
@@ -170,77 +170,14 @@ class Pessoa implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cnpj = $data["cnpj"];
-            $this->cpf = $data["cpf"];
-            $this->data_nascimento = $data["data_nascimento"];
             $this->id = $data["id"];
             $this->nome = $data["nome"];
-            $this->sexo = $data["sexo"];
             $this->tipo = $data["tipo"];
+            $this->cpf = $data["cpf"];
+            $this->cnpj = $data["cnpj"];
+            $this->data_nascimento = $data["data_nascimento"];
+            $this->sexo = $data["sexo"];
         }
-    }
-    
-    /**
-     * Gets cnpj
-     * @return string
-     */
-    public function getCnpj()
-    {
-        return $this->cnpj;
-    }
-  
-    /**
-     * Sets cnpj
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @return $this
-     */
-    public function setCnpj($cnpj)
-    {
-        
-        $this->cnpj = $cnpj;
-        return $this;
-    }
-    
-    /**
-     * Gets cpf
-     * @return string
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-  
-    /**
-     * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
-     * @return $this
-     */
-    public function setCpf($cpf)
-    {
-        
-        $this->cpf = $cpf;
-        return $this;
-    }
-    
-    /**
-     * Gets data_nascimento
-     * @return \DateTime
-     */
-    public function getDataNascimento()
-    {
-        return $this->data_nascimento;
-    }
-  
-    /**
-     * Sets data_nascimento
-     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-     * @return $this
-     */
-    public function setDataNascimento($data_nascimento)
-    {
-        
-        $this->data_nascimento = $data_nascimento;
-        return $this;
     }
     
     /**
@@ -286,27 +223,6 @@ class Pessoa implements ArrayAccess
     }
     
     /**
-     * Gets sexo
-     * @return string
-     */
-    public function getSexo()
-    {
-        return $this->sexo;
-    }
-  
-    /**
-     * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-     * @return $this
-     */
-    public function setSexo($sexo)
-    {
-        
-        $this->sexo = $sexo;
-        return $this;
-    }
-    
-    /**
      * Gets tipo
      * @return string
      */
@@ -324,6 +240,90 @@ class Pessoa implements ArrayAccess
     {
         
         $this->tipo = $tipo;
+        return $this;
+    }
+    
+    /**
+     * Gets cpf
+     * @return string
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+  
+    /**
+     * Sets cpf
+     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @return $this
+     */
+    public function setCpf($cpf)
+    {
+        
+        $this->cpf = $cpf;
+        return $this;
+    }
+    
+    /**
+     * Gets cnpj
+     * @return string
+     */
+    public function getCnpj()
+    {
+        return $this->cnpj;
+    }
+  
+    /**
+     * Sets cnpj
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @return $this
+     */
+    public function setCnpj($cnpj)
+    {
+        
+        $this->cnpj = $cnpj;
+        return $this;
+    }
+    
+    /**
+     * Gets data_nascimento
+     * @return \DateTime
+     */
+    public function getDataNascimento()
+    {
+        return $this->data_nascimento;
+    }
+  
+    /**
+     * Sets data_nascimento
+     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @return $this
+     */
+    public function setDataNascimento($data_nascimento)
+    {
+        
+        $this->data_nascimento = $data_nascimento;
+        return $this;
+    }
+    
+    /**
+     * Gets sexo
+     * @return string
+     */
+    public function getSexo()
+    {
+        return $this->sexo;
+    }
+  
+    /**
+     * Sets sexo
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+     * @return $this
+     */
+    public function setSexo($sexo)
+    {
+        
+        $this->sexo = $sexo;
         return $this;
     }
     

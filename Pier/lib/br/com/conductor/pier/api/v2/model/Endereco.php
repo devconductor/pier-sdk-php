@@ -51,20 +51,20 @@ class Endereco implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'bairro' => 'string',
-        'cep' => 'string',
-        'cidade' => 'string',
-        'complemento' => 'string',
-        'data_inclusao' => '\DateTime',
-        'data_ultima_atualizacao' => '\DateTime',
         'id' => 'int',
         'id_pessoa' => 'int',
         'id_tipo_endereco' => 'int',
+        'cep' => 'string',
         'logradouro' => 'string',
         'numero' => 'int',
-        'pais' => 'string',
+        'complemento' => 'string',
         'ponto_referencia' => 'string',
-        'uf' => 'string'
+        'bairro' => 'string',
+        'cidade' => 'string',
+        'uf' => 'string',
+        'pais' => 'string',
+        'data_inclusao' => '\DateTime',
+        'data_ultima_atualizacao' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -76,20 +76,20 @@ class Endereco implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'bairro' => 'bairro',
-        'cep' => 'cep',
-        'cidade' => 'cidade',
-        'complemento' => 'complemento',
-        'data_inclusao' => 'dataInclusao',
-        'data_ultima_atualizacao' => 'dataUltimaAtualizacao',
         'id' => 'id',
         'id_pessoa' => 'idPessoa',
         'id_tipo_endereco' => 'idTipoEndereco',
+        'cep' => 'cep',
         'logradouro' => 'logradouro',
         'numero' => 'numero',
-        'pais' => 'pais',
+        'complemento' => 'complemento',
         'ponto_referencia' => 'pontoReferencia',
-        'uf' => 'uf'
+        'bairro' => 'bairro',
+        'cidade' => 'cidade',
+        'uf' => 'uf',
+        'pais' => 'pais',
+        'data_inclusao' => 'dataInclusao',
+        'data_ultima_atualizacao' => 'dataUltimaAtualizacao'
     );
   
     static function attributeMap() {
@@ -101,20 +101,20 @@ class Endereco implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'bairro' => 'setBairro',
-        'cep' => 'setCep',
-        'cidade' => 'setCidade',
-        'complemento' => 'setComplemento',
-        'data_inclusao' => 'setDataInclusao',
-        'data_ultima_atualizacao' => 'setDataUltimaAtualizacao',
         'id' => 'setId',
         'id_pessoa' => 'setIdPessoa',
         'id_tipo_endereco' => 'setIdTipoEndereco',
+        'cep' => 'setCep',
         'logradouro' => 'setLogradouro',
         'numero' => 'setNumero',
-        'pais' => 'setPais',
+        'complemento' => 'setComplemento',
         'ponto_referencia' => 'setPontoReferencia',
-        'uf' => 'setUf'
+        'bairro' => 'setBairro',
+        'cidade' => 'setCidade',
+        'uf' => 'setUf',
+        'pais' => 'setPais',
+        'data_inclusao' => 'setDataInclusao',
+        'data_ultima_atualizacao' => 'setDataUltimaAtualizacao'
     );
   
     static function setters() {
@@ -126,62 +126,26 @@ class Endereco implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'bairro' => 'getBairro',
-        'cep' => 'getCep',
-        'cidade' => 'getCidade',
-        'complemento' => 'getComplemento',
-        'data_inclusao' => 'getDataInclusao',
-        'data_ultima_atualizacao' => 'getDataUltimaAtualizacao',
         'id' => 'getId',
         'id_pessoa' => 'getIdPessoa',
         'id_tipo_endereco' => 'getIdTipoEndereco',
+        'cep' => 'getCep',
         'logradouro' => 'getLogradouro',
         'numero' => 'getNumero',
-        'pais' => 'getPais',
+        'complemento' => 'getComplemento',
         'ponto_referencia' => 'getPontoReferencia',
-        'uf' => 'getUf'
+        'bairro' => 'getBairro',
+        'cidade' => 'getCidade',
+        'uf' => 'getUf',
+        'pais' => 'getPais',
+        'data_inclusao' => 'getDataInclusao',
+        'data_ultima_atualizacao' => 'getDataUltimaAtualizacao'
     );
   
     static function getters() {
         return self::$getters;
     }
 
-    
-    /**
-      * $bairro Apresenta nome do bairro
-      * @var string
-      */
-    protected $bairro;
-    
-    /**
-      * $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-      * @var string
-      */
-    protected $cep;
-    
-    /**
-      * $cidade Apresenta nome da cidade
-      * @var string
-      */
-    protected $cidade;
-    
-    /**
-      * $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-      * @var string
-      */
-    protected $complemento;
-    
-    /**
-      * $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-      * @var \DateTime
-      */
-    protected $data_inclusao;
-    
-    /**
-      * $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-      * @var \DateTime
-      */
-    protected $data_ultima_atualizacao;
     
     /**
       * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
@@ -202,6 +166,12 @@ class Endereco implements ArrayAccess
     protected $id_tipo_endereco;
     
     /**
+      * $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+      * @var string
+      */
+    protected $cep;
+    
+    /**
       * $logradouro Apresenta o nome do Logradouro
       * @var string
       */
@@ -214,10 +184,10 @@ class Endereco implements ArrayAccess
     protected $numero;
     
     /**
-      * $pais Apresenta nome do Pais
+      * $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
       * @var string
       */
-    protected $pais;
+    protected $complemento;
     
     /**
       * $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
@@ -226,10 +196,40 @@ class Endereco implements ArrayAccess
     protected $ponto_referencia;
     
     /**
+      * $bairro Apresenta nome do bairro
+      * @var string
+      */
+    protected $bairro;
+    
+    /**
+      * $cidade Apresenta nome da cidade
+      * @var string
+      */
+    protected $cidade;
+    
+    /**
       * $uf Apresenta sigla da Unidade Federativa
       * @var string
       */
     protected $uf;
+    
+    /**
+      * $pais Apresenta nome do Pais
+      * @var string
+      */
+    protected $pais;
+    
+    /**
+      * $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+      * @var \DateTime
+      */
+    protected $data_inclusao;
+    
+    /**
+      * $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+      * @var \DateTime
+      */
+    protected $data_ultima_atualizacao;
     
 
     /**
@@ -240,147 +240,21 @@ class Endereco implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->bairro = $data["bairro"];
-            $this->cep = $data["cep"];
-            $this->cidade = $data["cidade"];
-            $this->complemento = $data["complemento"];
-            $this->data_inclusao = $data["data_inclusao"];
-            $this->data_ultima_atualizacao = $data["data_ultima_atualizacao"];
             $this->id = $data["id"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_tipo_endereco = $data["id_tipo_endereco"];
+            $this->cep = $data["cep"];
             $this->logradouro = $data["logradouro"];
             $this->numero = $data["numero"];
-            $this->pais = $data["pais"];
+            $this->complemento = $data["complemento"];
             $this->ponto_referencia = $data["ponto_referencia"];
+            $this->bairro = $data["bairro"];
+            $this->cidade = $data["cidade"];
             $this->uf = $data["uf"];
+            $this->pais = $data["pais"];
+            $this->data_inclusao = $data["data_inclusao"];
+            $this->data_ultima_atualizacao = $data["data_ultima_atualizacao"];
         }
-    }
-    
-    /**
-     * Gets bairro
-     * @return string
-     */
-    public function getBairro()
-    {
-        return $this->bairro;
-    }
-  
-    /**
-     * Sets bairro
-     * @param string $bairro Apresenta nome do bairro
-     * @return $this
-     */
-    public function setBairro($bairro)
-    {
-        
-        $this->bairro = $bairro;
-        return $this;
-    }
-    
-    /**
-     * Gets cep
-     * @return string
-     */
-    public function getCep()
-    {
-        return $this->cep;
-    }
-  
-    /**
-     * Sets cep
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-     * @return $this
-     */
-    public function setCep($cep)
-    {
-        
-        $this->cep = $cep;
-        return $this;
-    }
-    
-    /**
-     * Gets cidade
-     * @return string
-     */
-    public function getCidade()
-    {
-        return $this->cidade;
-    }
-  
-    /**
-     * Sets cidade
-     * @param string $cidade Apresenta nome da cidade
-     * @return $this
-     */
-    public function setCidade($cidade)
-    {
-        
-        $this->cidade = $cidade;
-        return $this;
-    }
-    
-    /**
-     * Gets complemento
-     * @return string
-     */
-    public function getComplemento()
-    {
-        return $this->complemento;
-    }
-  
-    /**
-     * Sets complemento
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-     * @return $this
-     */
-    public function setComplemento($complemento)
-    {
-        
-        $this->complemento = $complemento;
-        return $this;
-    }
-    
-    /**
-     * Gets data_inclusao
-     * @return \DateTime
-     */
-    public function getDataInclusao()
-    {
-        return $this->data_inclusao;
-    }
-  
-    /**
-     * Sets data_inclusao
-     * @param \DateTime $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-     * @return $this
-     */
-    public function setDataInclusao($data_inclusao)
-    {
-        
-        $this->data_inclusao = $data_inclusao;
-        return $this;
-    }
-    
-    /**
-     * Gets data_ultima_atualizacao
-     * @return \DateTime
-     */
-    public function getDataUltimaAtualizacao()
-    {
-        return $this->data_ultima_atualizacao;
-    }
-  
-    /**
-     * Sets data_ultima_atualizacao
-     * @param \DateTime $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @return $this
-     */
-    public function setDataUltimaAtualizacao($data_ultima_atualizacao)
-    {
-        
-        $this->data_ultima_atualizacao = $data_ultima_atualizacao;
-        return $this;
     }
     
     /**
@@ -447,6 +321,27 @@ class Endereco implements ArrayAccess
     }
     
     /**
+     * Gets cep
+     * @return string
+     */
+    public function getCep()
+    {
+        return $this->cep;
+    }
+  
+    /**
+     * Sets cep
+     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+     * @return $this
+     */
+    public function setCep($cep)
+    {
+        
+        $this->cep = $cep;
+        return $this;
+    }
+    
+    /**
      * Gets logradouro
      * @return string
      */
@@ -489,23 +384,23 @@ class Endereco implements ArrayAccess
     }
     
     /**
-     * Gets pais
+     * Gets complemento
      * @return string
      */
-    public function getPais()
+    public function getComplemento()
     {
-        return $this->pais;
+        return $this->complemento;
     }
   
     /**
-     * Sets pais
-     * @param string $pais Apresenta nome do Pais
+     * Sets complemento
+     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
      * @return $this
      */
-    public function setPais($pais)
+    public function setComplemento($complemento)
     {
         
-        $this->pais = $pais;
+        $this->complemento = $complemento;
         return $this;
     }
     
@@ -531,6 +426,48 @@ class Endereco implements ArrayAccess
     }
     
     /**
+     * Gets bairro
+     * @return string
+     */
+    public function getBairro()
+    {
+        return $this->bairro;
+    }
+  
+    /**
+     * Sets bairro
+     * @param string $bairro Apresenta nome do bairro
+     * @return $this
+     */
+    public function setBairro($bairro)
+    {
+        
+        $this->bairro = $bairro;
+        return $this;
+    }
+    
+    /**
+     * Gets cidade
+     * @return string
+     */
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+  
+    /**
+     * Sets cidade
+     * @param string $cidade Apresenta nome da cidade
+     * @return $this
+     */
+    public function setCidade($cidade)
+    {
+        
+        $this->cidade = $cidade;
+        return $this;
+    }
+    
+    /**
      * Gets uf
      * @return string
      */
@@ -548,6 +485,69 @@ class Endereco implements ArrayAccess
     {
         
         $this->uf = $uf;
+        return $this;
+    }
+    
+    /**
+     * Gets pais
+     * @return string
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+  
+    /**
+     * Sets pais
+     * @param string $pais Apresenta nome do Pais
+     * @return $this
+     */
+    public function setPais($pais)
+    {
+        
+        $this->pais = $pais;
+        return $this;
+    }
+    
+    /**
+     * Gets data_inclusao
+     * @return \DateTime
+     */
+    public function getDataInclusao()
+    {
+        return $this->data_inclusao;
+    }
+  
+    /**
+     * Sets data_inclusao
+     * @param \DateTime $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+     * @return $this
+     */
+    public function setDataInclusao($data_inclusao)
+    {
+        
+        $this->data_inclusao = $data_inclusao;
+        return $this;
+    }
+    
+    /**
+     * Gets data_ultima_atualizacao
+     * @return \DateTime
+     */
+    public function getDataUltimaAtualizacao()
+    {
+        return $this->data_ultima_atualizacao;
+    }
+  
+    /**
+     * Sets data_ultima_atualizacao
+     * @param \DateTime $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+     * @return $this
+     */
+    public function setDataUltimaAtualizacao($data_ultima_atualizacao)
+    {
+        
+        $this->data_ultima_atualizacao = $data_ultima_atualizacao;
         return $this;
     }
     

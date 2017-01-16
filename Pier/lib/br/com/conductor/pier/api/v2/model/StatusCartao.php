@@ -51,13 +51,13 @@ class StatusCartao implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id' => 'int',
+        'nome' => 'string',
         'flag_cancela_cartao' => 'int',
         'flag_cancela_no_desbloqueio' => 'int',
-        'flag_cobra_tarifa' => 'int',
-        'id' => 'int',
-        'id_status_destino_conta' => 'int',
         'id_status_destino_desbloqueio' => 'int',
-        'nome' => 'string'
+        'id_status_destino_conta' => 'int',
+        'flag_cobra_tarifa' => 'int'
     );
   
     static function swaggerTypes() {
@@ -69,13 +69,13 @@ class StatusCartao implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id' => 'id',
+        'nome' => 'nome',
         'flag_cancela_cartao' => 'flagCancelaCartao',
         'flag_cancela_no_desbloqueio' => 'flagCancelaNoDesbloqueio',
-        'flag_cobra_tarifa' => 'flagCobraTarifa',
-        'id' => 'id',
-        'id_status_destino_conta' => 'idStatusDestinoConta',
         'id_status_destino_desbloqueio' => 'idStatusDestinoDesbloqueio',
-        'nome' => 'nome'
+        'id_status_destino_conta' => 'idStatusDestinoConta',
+        'flag_cobra_tarifa' => 'flagCobraTarifa'
     );
   
     static function attributeMap() {
@@ -87,13 +87,13 @@ class StatusCartao implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id' => 'setId',
+        'nome' => 'setNome',
         'flag_cancela_cartao' => 'setFlagCancelaCartao',
         'flag_cancela_no_desbloqueio' => 'setFlagCancelaNoDesbloqueio',
-        'flag_cobra_tarifa' => 'setFlagCobraTarifa',
-        'id' => 'setId',
-        'id_status_destino_conta' => 'setIdStatusDestinoConta',
         'id_status_destino_desbloqueio' => 'setIdStatusDestinoDesbloqueio',
-        'nome' => 'setNome'
+        'id_status_destino_conta' => 'setIdStatusDestinoConta',
+        'flag_cobra_tarifa' => 'setFlagCobraTarifa'
     );
   
     static function setters() {
@@ -105,19 +105,31 @@ class StatusCartao implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id' => 'getId',
+        'nome' => 'getNome',
         'flag_cancela_cartao' => 'getFlagCancelaCartao',
         'flag_cancela_no_desbloqueio' => 'getFlagCancelaNoDesbloqueio',
-        'flag_cobra_tarifa' => 'getFlagCobraTarifa',
-        'id' => 'getId',
-        'id_status_destino_conta' => 'getIdStatusDestinoConta',
         'id_status_destino_desbloqueio' => 'getIdStatusDestinoDesbloqueio',
-        'nome' => 'getNome'
+        'id_status_destino_conta' => 'getIdStatusDestinoConta',
+        'flag_cobra_tarifa' => 'getFlagCobraTarifa'
     );
   
     static function getters() {
         return self::$getters;
     }
 
+    
+    /**
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+      * @var int
+      */
+    protected $id;
+    
+    /**
+      * $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+      * @var string
+      */
+    protected $nome;
     
     /**
       * $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -132,16 +144,10 @@ class StatusCartao implements ArrayAccess
     protected $flag_cancela_no_desbloqueio;
     
     /**
-      * $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+      * $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
       * @var int
       */
-    protected $flag_cobra_tarifa;
-    
-    /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
-      * @var int
-      */
-    protected $id;
+    protected $id_status_destino_desbloqueio;
     
     /**
       * $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
@@ -150,16 +156,10 @@ class StatusCartao implements ArrayAccess
     protected $id_status_destino_conta;
     
     /**
-      * $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+      * $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
       * @var int
       */
-    protected $id_status_destino_desbloqueio;
-    
-    /**
-      * $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
-      * @var string
-      */
-    protected $nome;
+    protected $flag_cobra_tarifa;
     
 
     /**
@@ -170,14 +170,56 @@ class StatusCartao implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id = $data["id"];
+            $this->nome = $data["nome"];
             $this->flag_cancela_cartao = $data["flag_cancela_cartao"];
             $this->flag_cancela_no_desbloqueio = $data["flag_cancela_no_desbloqueio"];
-            $this->flag_cobra_tarifa = $data["flag_cobra_tarifa"];
-            $this->id = $data["id"];
-            $this->id_status_destino_conta = $data["id_status_destino_conta"];
             $this->id_status_destino_desbloqueio = $data["id_status_destino_desbloqueio"];
-            $this->nome = $data["nome"];
+            $this->id_status_destino_conta = $data["id_status_destino_conta"];
+            $this->flag_cobra_tarifa = $data["flag_cobra_tarifa"];
         }
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
+        return $this;
     }
     
     /**
@@ -223,44 +265,23 @@ class StatusCartao implements ArrayAccess
     }
     
     /**
-     * Gets flag_cobra_tarifa
+     * Gets id_status_destino_desbloqueio
      * @return int
      */
-    public function getFlagCobraTarifa()
+    public function getIdStatusDestinoDesbloqueio()
     {
-        return $this->flag_cobra_tarifa;
+        return $this->id_status_destino_desbloqueio;
     }
   
     /**
-     * Sets flag_cobra_tarifa
-     * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+     * Sets id_status_destino_desbloqueio
+     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
      * @return $this
      */
-    public function setFlagCobraTarifa($flag_cobra_tarifa)
+    public function setIdStatusDestinoDesbloqueio($id_status_destino_desbloqueio)
     {
         
-        $this->flag_cobra_tarifa = $flag_cobra_tarifa;
-        return $this;
-    }
-    
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-  
-    /**
-     * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
-     * @return $this
-     */
-    public function setId($id)
-    {
-        
-        $this->id = $id;
+        $this->id_status_destino_desbloqueio = $id_status_destino_desbloqueio;
         return $this;
     }
     
@@ -286,44 +307,23 @@ class StatusCartao implements ArrayAccess
     }
     
     /**
-     * Gets id_status_destino_desbloqueio
+     * Gets flag_cobra_tarifa
      * @return int
      */
-    public function getIdStatusDestinoDesbloqueio()
+    public function getFlagCobraTarifa()
     {
-        return $this->id_status_destino_desbloqueio;
+        return $this->flag_cobra_tarifa;
     }
   
     /**
-     * Sets id_status_destino_desbloqueio
-     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+     * Sets flag_cobra_tarifa
+     * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
      * @return $this
      */
-    public function setIdStatusDestinoDesbloqueio($id_status_destino_desbloqueio)
+    public function setFlagCobraTarifa($flag_cobra_tarifa)
     {
         
-        $this->id_status_destino_desbloqueio = $id_status_destino_desbloqueio;
-        return $this;
-    }
-    
-    /**
-     * Gets nome
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-  
-    /**
-     * Sets nome
-     * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setNome($nome)
-    {
-        
-        $this->nome = $nome;
+        $this->flag_cobra_tarifa = $flag_cobra_tarifa;
         return $this;
     }
     

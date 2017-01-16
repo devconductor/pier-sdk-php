@@ -51,11 +51,11 @@ class HistoricoImpressaoCartao implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_historico' => '\DateTime',
         'id' => 'int',
         'id_cartao' => 'int',
         'id_status_impressao_cartao' => 'int',
-        'mensagem_historico' => 'string'
+        'mensagem_historico' => 'string',
+        'data_historico' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -67,11 +67,11 @@ class HistoricoImpressaoCartao implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'data_historico' => 'dataHistorico',
         'id' => 'id',
         'id_cartao' => 'idCartao',
         'id_status_impressao_cartao' => 'idStatusImpressaoCartao',
-        'mensagem_historico' => 'mensagemHistorico'
+        'mensagem_historico' => 'mensagemHistorico',
+        'data_historico' => 'dataHistorico'
     );
   
     static function attributeMap() {
@@ -83,11 +83,11 @@ class HistoricoImpressaoCartao implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'data_historico' => 'setDataHistorico',
         'id' => 'setId',
         'id_cartao' => 'setIdCartao',
         'id_status_impressao_cartao' => 'setIdStatusImpressaoCartao',
-        'mensagem_historico' => 'setMensagemHistorico'
+        'mensagem_historico' => 'setMensagemHistorico',
+        'data_historico' => 'setDataHistorico'
     );
   
     static function setters() {
@@ -99,23 +99,17 @@ class HistoricoImpressaoCartao implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'data_historico' => 'getDataHistorico',
         'id' => 'getId',
         'id_cartao' => 'getIdCartao',
         'id_status_impressao_cartao' => 'getIdStatusImpressaoCartao',
-        'mensagem_historico' => 'getMensagemHistorico'
+        'mensagem_historico' => 'getMensagemHistorico',
+        'data_historico' => 'getDataHistorico'
     );
   
     static function getters() {
         return self::$getters;
     }
 
-    
-    /**
-      * $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-      * @var \DateTime
-      */
-    protected $data_historico;
     
     /**
       * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
@@ -141,6 +135,12 @@ class HistoricoImpressaoCartao implements ArrayAccess
       */
     protected $mensagem_historico;
     
+    /**
+      * $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+      * @var \DateTime
+      */
+    protected $data_historico;
+    
 
     /**
      * Constructor
@@ -150,33 +150,12 @@ class HistoricoImpressaoCartao implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->data_historico = $data["data_historico"];
             $this->id = $data["id"];
             $this->id_cartao = $data["id_cartao"];
             $this->id_status_impressao_cartao = $data["id_status_impressao_cartao"];
             $this->mensagem_historico = $data["mensagem_historico"];
+            $this->data_historico = $data["data_historico"];
         }
-    }
-    
-    /**
-     * Gets data_historico
-     * @return \DateTime
-     */
-    public function getDataHistorico()
-    {
-        return $this->data_historico;
-    }
-  
-    /**
-     * Sets data_historico
-     * @param \DateTime $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-     * @return $this
-     */
-    public function setDataHistorico($data_historico)
-    {
-        
-        $this->data_historico = $data_historico;
-        return $this;
     }
     
     /**
@@ -260,6 +239,27 @@ class HistoricoImpressaoCartao implements ArrayAccess
     {
         
         $this->mensagem_historico = $mensagem_historico;
+        return $this;
+    }
+    
+    /**
+     * Gets data_historico
+     * @return \DateTime
+     */
+    public function getDataHistorico()
+    {
+        return $this->data_historico;
+    }
+  
+    /**
+     * Sets data_historico
+     * @param \DateTime $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+     * @return $this
+     */
+    public function setDataHistorico($data_historico)
+    {
+        
+        $this->data_historico = $data_historico;
         return $this;
     }
     

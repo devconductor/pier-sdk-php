@@ -51,17 +51,17 @@ class Portador implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_cadastro_portador' => '\DateTime',
-        'data_cancelamento_portador' => '\DateTime',
-        'flag_ativo' => 'int',
         'id_conta' => 'int',
-        'id_imagem' => 'int',
-        'id_parentesco' => 'int',
-        'id_pessoa' => 'int',
         'id_produto' => 'int',
-        'id_tipo_cartao' => 'int',
+        'id_pessoa' => 'int',
+        'id_parentesco' => 'int',
+        'tipo_portador' => 'string',
         'nome_impresso' => 'string',
-        'tipo_portador' => 'string'
+        'id_imagem' => 'int',
+        'id_tipo_cartao' => 'int',
+        'flag_ativo' => 'int',
+        'data_cadastro_portador' => '\DateTime',
+        'data_cancelamento_portador' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -73,17 +73,17 @@ class Portador implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'data_cadastro_portador' => 'dataCadastroPortador',
-        'data_cancelamento_portador' => 'dataCancelamentoPortador',
-        'flag_ativo' => 'flagAtivo',
         'id_conta' => 'idConta',
-        'id_imagem' => 'idImagem',
-        'id_parentesco' => 'idParentesco',
-        'id_pessoa' => 'idPessoa',
         'id_produto' => 'idProduto',
-        'id_tipo_cartao' => 'idTipoCartao',
+        'id_pessoa' => 'idPessoa',
+        'id_parentesco' => 'idParentesco',
+        'tipo_portador' => 'tipoPortador',
         'nome_impresso' => 'nomeImpresso',
-        'tipo_portador' => 'tipoPortador'
+        'id_imagem' => 'idImagem',
+        'id_tipo_cartao' => 'idTipoCartao',
+        'flag_ativo' => 'flagAtivo',
+        'data_cadastro_portador' => 'dataCadastroPortador',
+        'data_cancelamento_portador' => 'dataCancelamentoPortador'
     );
   
     static function attributeMap() {
@@ -95,17 +95,17 @@ class Portador implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'data_cadastro_portador' => 'setDataCadastroPortador',
-        'data_cancelamento_portador' => 'setDataCancelamentoPortador',
-        'flag_ativo' => 'setFlagAtivo',
         'id_conta' => 'setIdConta',
-        'id_imagem' => 'setIdImagem',
-        'id_parentesco' => 'setIdParentesco',
-        'id_pessoa' => 'setIdPessoa',
         'id_produto' => 'setIdProduto',
-        'id_tipo_cartao' => 'setIdTipoCartao',
+        'id_pessoa' => 'setIdPessoa',
+        'id_parentesco' => 'setIdParentesco',
+        'tipo_portador' => 'setTipoPortador',
         'nome_impresso' => 'setNomeImpresso',
-        'tipo_portador' => 'setTipoPortador'
+        'id_imagem' => 'setIdImagem',
+        'id_tipo_cartao' => 'setIdTipoCartao',
+        'flag_ativo' => 'setFlagAtivo',
+        'data_cadastro_portador' => 'setDataCadastroPortador',
+        'data_cancelamento_portador' => 'setDataCancelamentoPortador'
     );
   
     static function setters() {
@@ -117,23 +117,77 @@ class Portador implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'data_cadastro_portador' => 'getDataCadastroPortador',
-        'data_cancelamento_portador' => 'getDataCancelamentoPortador',
-        'flag_ativo' => 'getFlagAtivo',
         'id_conta' => 'getIdConta',
-        'id_imagem' => 'getIdImagem',
-        'id_parentesco' => 'getIdParentesco',
-        'id_pessoa' => 'getIdPessoa',
         'id_produto' => 'getIdProduto',
-        'id_tipo_cartao' => 'getIdTipoCartao',
+        'id_pessoa' => 'getIdPessoa',
+        'id_parentesco' => 'getIdParentesco',
+        'tipo_portador' => 'getTipoPortador',
         'nome_impresso' => 'getNomeImpresso',
-        'tipo_portador' => 'getTipoPortador'
+        'id_imagem' => 'getIdImagem',
+        'id_tipo_cartao' => 'getIdTipoCartao',
+        'flag_ativo' => 'getFlagAtivo',
+        'data_cadastro_portador' => 'getDataCadastroPortador',
+        'data_cancelamento_portador' => 'getDataCancelamentoPortador'
     );
   
     static function getters() {
         return self::$getters;
     }
 
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+      * @var int
+      */
+    protected $id_produto;
+    
+    /**
+      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+      * @var int
+      */
+    protected $id_pessoa;
+    
+    /**
+      * $id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+      * @var int
+      */
+    protected $id_parentesco;
+    
+    /**
+      * $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+      * @var string
+      */
+    protected $tipo_portador;
+    
+    /**
+      * $nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+      * @var string
+      */
+    protected $nome_impresso;
+    
+    /**
+      * $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+      * @var int
+      */
+    protected $id_imagem;
+    
+    /**
+      * $id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+      * @var int
+      */
+    protected $id_tipo_cartao;
+    
+    /**
+      * $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+      * @var int
+      */
+    protected $flag_ativo;
     
     /**
       * $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
@@ -147,60 +201,6 @@ class Portador implements ArrayAccess
       */
     protected $data_cancelamento_portador;
     
-    /**
-      * $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-      * @var int
-      */
-    protected $flag_ativo;
-    
-    /**
-      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-      * @var int
-      */
-    protected $id_conta;
-    
-    /**
-      * $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_imagem;
-    
-    /**
-      * $id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-      * @var int
-      */
-    protected $id_parentesco;
-    
-    /**
-      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-      * @var int
-      */
-    protected $id_pessoa;
-    
-    /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-      * @var int
-      */
-    protected $id_produto;
-    
-    /**
-      * $id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-      * @var int
-      */
-    protected $id_tipo_cartao;
-    
-    /**
-      * $nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-      * @var string
-      */
-    protected $nome_impresso;
-    
-    /**
-      * $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-      * @var string
-      */
-    protected $tipo_portador;
-    
 
     /**
      * Constructor
@@ -210,18 +210,207 @@ class Portador implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id_conta = $data["id_conta"];
+            $this->id_produto = $data["id_produto"];
+            $this->id_pessoa = $data["id_pessoa"];
+            $this->id_parentesco = $data["id_parentesco"];
+            $this->tipo_portador = $data["tipo_portador"];
+            $this->nome_impresso = $data["nome_impresso"];
+            $this->id_imagem = $data["id_imagem"];
+            $this->id_tipo_cartao = $data["id_tipo_cartao"];
+            $this->flag_ativo = $data["flag_ativo"];
             $this->data_cadastro_portador = $data["data_cadastro_portador"];
             $this->data_cancelamento_portador = $data["data_cancelamento_portador"];
-            $this->flag_ativo = $data["flag_ativo"];
-            $this->id_conta = $data["id_conta"];
-            $this->id_imagem = $data["id_imagem"];
-            $this->id_parentesco = $data["id_parentesco"];
-            $this->id_pessoa = $data["id_pessoa"];
-            $this->id_produto = $data["id_produto"];
-            $this->id_tipo_cartao = $data["id_tipo_cartao"];
-            $this->nome_impresso = $data["nome_impresso"];
-            $this->tipo_portador = $data["tipo_portador"];
         }
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
+     * Gets id_pessoa
+     * @return int
+     */
+    public function getIdPessoa()
+    {
+        return $this->id_pessoa;
+    }
+  
+    /**
+     * Sets id_pessoa
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+     * @return $this
+     */
+    public function setIdPessoa($id_pessoa)
+    {
+        
+        $this->id_pessoa = $id_pessoa;
+        return $this;
+    }
+    
+    /**
+     * Gets id_parentesco
+     * @return int
+     */
+    public function getIdParentesco()
+    {
+        return $this->id_parentesco;
+    }
+  
+    /**
+     * Sets id_parentesco
+     * @param int $id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+     * @return $this
+     */
+    public function setIdParentesco($id_parentesco)
+    {
+        
+        $this->id_parentesco = $id_parentesco;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_portador
+     * @return string
+     */
+    public function getTipoPortador()
+    {
+        return $this->tipo_portador;
+    }
+  
+    /**
+     * Sets tipo_portador
+     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+     * @return $this
+     */
+    public function setTipoPortador($tipo_portador)
+    {
+        
+        $this->tipo_portador = $tipo_portador;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_impresso
+     * @return string
+     */
+    public function getNomeImpresso()
+    {
+        return $this->nome_impresso;
+    }
+  
+    /**
+     * Sets nome_impresso
+     * @param string $nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setNomeImpresso($nome_impresso)
+    {
+        
+        $this->nome_impresso = $nome_impresso;
+        return $this;
+    }
+    
+    /**
+     * Gets id_imagem
+     * @return int
+     */
+    public function getIdImagem()
+    {
+        return $this->id_imagem;
+    }
+  
+    /**
+     * Sets id_imagem
+     * @param int $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setIdImagem($id_imagem)
+    {
+        
+        $this->id_imagem = $id_imagem;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_cartao
+     * @return int
+     */
+    public function getIdTipoCartao()
+    {
+        return $this->id_tipo_cartao;
+    }
+  
+    /**
+     * Sets id_tipo_cartao
+     * @param int $id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+     * @return $this
+     */
+    public function setIdTipoCartao($id_tipo_cartao)
+    {
+        
+        $this->id_tipo_cartao = $id_tipo_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_ativo
+     * @return int
+     */
+    public function getFlagAtivo()
+    {
+        return $this->flag_ativo;
+    }
+  
+    /**
+     * Sets flag_ativo
+     * @param int $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setFlagAtivo($flag_ativo)
+    {
+        
+        $this->flag_ativo = $flag_ativo;
+        return $this;
     }
     
     /**
@@ -263,195 +452,6 @@ class Portador implements ArrayAccess
     {
         
         $this->data_cancelamento_portador = $data_cancelamento_portador;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_ativo
-     * @return int
-     */
-    public function getFlagAtivo()
-    {
-        return $this->flag_ativo;
-    }
-  
-    /**
-     * Sets flag_ativo
-     * @param int $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setFlagAtivo($flag_ativo)
-    {
-        
-        $this->flag_ativo = $flag_ativo;
-        return $this;
-    }
-    
-    /**
-     * Gets id_conta
-     * @return int
-     */
-    public function getIdConta()
-    {
-        return $this->id_conta;
-    }
-  
-    /**
-     * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-     * @return $this
-     */
-    public function setIdConta($id_conta)
-    {
-        
-        $this->id_conta = $id_conta;
-        return $this;
-    }
-    
-    /**
-     * Gets id_imagem
-     * @return int
-     */
-    public function getIdImagem()
-    {
-        return $this->id_imagem;
-    }
-  
-    /**
-     * Sets id_imagem
-     * @param int $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdImagem($id_imagem)
-    {
-        
-        $this->id_imagem = $id_imagem;
-        return $this;
-    }
-    
-    /**
-     * Gets id_parentesco
-     * @return int
-     */
-    public function getIdParentesco()
-    {
-        return $this->id_parentesco;
-    }
-  
-    /**
-     * Sets id_parentesco
-     * @param int $id_parentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-     * @return $this
-     */
-    public function setIdParentesco($id_parentesco)
-    {
-        
-        $this->id_parentesco = $id_parentesco;
-        return $this;
-    }
-    
-    /**
-     * Gets id_pessoa
-     * @return int
-     */
-    public function getIdPessoa()
-    {
-        return $this->id_pessoa;
-    }
-  
-    /**
-     * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-     * @return $this
-     */
-    public function setIdPessoa($id_pessoa)
-    {
-        
-        $this->id_pessoa = $id_pessoa;
-        return $this;
-    }
-    
-    /**
-     * Gets id_produto
-     * @return int
-     */
-    public function getIdProduto()
-    {
-        return $this->id_produto;
-    }
-  
-    /**
-     * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-     * @return $this
-     */
-    public function setIdProduto($id_produto)
-    {
-        
-        $this->id_produto = $id_produto;
-        return $this;
-    }
-    
-    /**
-     * Gets id_tipo_cartao
-     * @return int
-     */
-    public function getIdTipoCartao()
-    {
-        return $this->id_tipo_cartao;
-    }
-  
-    /**
-     * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-     * @return $this
-     */
-    public function setIdTipoCartao($id_tipo_cartao)
-    {
-        
-        $this->id_tipo_cartao = $id_tipo_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets nome_impresso
-     * @return string
-     */
-    public function getNomeImpresso()
-    {
-        return $this->nome_impresso;
-    }
-  
-    /**
-     * Sets nome_impresso
-     * @param string $nome_impresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setNomeImpresso($nome_impresso)
-    {
-        
-        $this->nome_impresso = $nome_impresso;
-        return $this;
-    }
-    
-    /**
-     * Gets tipo_portador
-     * @return string
-     */
-    public function getTipoPortador()
-    {
-        return $this->tipo_portador;
-    }
-  
-    /**
-     * Sets tipo_portador
-     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-     * @return $this
-     */
-    public function setTipoPortador($tipo_portador)
-    {
-        
-        $this->tipo_portador = $tipo_portador;
         return $this;
     }
     

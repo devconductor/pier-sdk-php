@@ -51,16 +51,16 @@ class Conta implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_cadastro' => '\DateTime',
-        'data_status_conta' => '\DateTime',
-        'data_ultima_alteracao_vencimento' => '\DateTime',
-        'dia_vencimento' => 'int',
         'id' => 'int',
+        'id_produto' => 'int',
         'id_origem_comercial' => 'int',
         'id_pessoa' => 'int',
-        'id_produto' => 'int',
         'id_status_conta' => 'int',
-        'melhor_dia_compra' => 'int'
+        'dia_vencimento' => 'int',
+        'melhor_dia_compra' => 'int',
+        'data_status_conta' => '\DateTime',
+        'data_cadastro' => '\DateTime',
+        'data_ultima_alteracao_vencimento' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -72,16 +72,16 @@ class Conta implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'data_cadastro' => 'dataCadastro',
-        'data_status_conta' => 'dataStatusConta',
-        'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
-        'dia_vencimento' => 'diaVencimento',
         'id' => 'id',
+        'id_produto' => 'idProduto',
         'id_origem_comercial' => 'idOrigemComercial',
         'id_pessoa' => 'idPessoa',
-        'id_produto' => 'idProduto',
         'id_status_conta' => 'idStatusConta',
-        'melhor_dia_compra' => 'melhorDiaCompra'
+        'dia_vencimento' => 'diaVencimento',
+        'melhor_dia_compra' => 'melhorDiaCompra',
+        'data_status_conta' => 'dataStatusConta',
+        'data_cadastro' => 'dataCadastro',
+        'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento'
     );
   
     static function attributeMap() {
@@ -93,16 +93,16 @@ class Conta implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'data_cadastro' => 'setDataCadastro',
-        'data_status_conta' => 'setDataStatusConta',
-        'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
-        'dia_vencimento' => 'setDiaVencimento',
         'id' => 'setId',
+        'id_produto' => 'setIdProduto',
         'id_origem_comercial' => 'setIdOrigemComercial',
         'id_pessoa' => 'setIdPessoa',
-        'id_produto' => 'setIdProduto',
         'id_status_conta' => 'setIdStatusConta',
-        'melhor_dia_compra' => 'setMelhorDiaCompra'
+        'dia_vencimento' => 'setDiaVencimento',
+        'melhor_dia_compra' => 'setMelhorDiaCompra',
+        'data_status_conta' => 'setDataStatusConta',
+        'data_cadastro' => 'setDataCadastro',
+        'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento'
     );
   
     static function setters() {
@@ -114,16 +114,16 @@ class Conta implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'data_cadastro' => 'getDataCadastro',
-        'data_status_conta' => 'getDataStatusConta',
-        'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
-        'dia_vencimento' => 'getDiaVencimento',
         'id' => 'getId',
+        'id_produto' => 'getIdProduto',
         'id_origem_comercial' => 'getIdOrigemComercial',
         'id_pessoa' => 'getIdPessoa',
-        'id_produto' => 'getIdProduto',
         'id_status_conta' => 'getIdStatusConta',
-        'melhor_dia_compra' => 'getMelhorDiaCompra'
+        'dia_vencimento' => 'getDiaVencimento',
+        'melhor_dia_compra' => 'getMelhorDiaCompra',
+        'data_status_conta' => 'getDataStatusConta',
+        'data_cadastro' => 'getDataCadastro',
+        'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento'
     );
   
     static function getters() {
@@ -132,34 +132,16 @@ class Conta implements ArrayAccess
 
     
     /**
-      * $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-      * @var \DateTime
-      */
-    protected $data_cadastro;
-    
-    /**
-      * $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-      * @var \DateTime
-      */
-    protected $data_status_conta;
-    
-    /**
-      * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-      * @var \DateTime
-      */
-    protected $data_ultima_alteracao_vencimento;
-    
-    /**
-      * $dia_vencimento Apresenta o dia de vencimento.
-      * @var int
-      */
-    protected $dia_vencimento;
-    
-    /**
       * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
       * @var int
       */
     protected $id;
+    
+    /**
+      * $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+      * @var int
+      */
+    protected $id_produto;
     
     /**
       * $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -174,22 +156,40 @@ class Conta implements ArrayAccess
     protected $id_pessoa;
     
     /**
-      * $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-      * @var int
-      */
-    protected $id_produto;
-    
-    /**
       * $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
       * @var int
       */
     protected $id_status_conta;
     
     /**
+      * $dia_vencimento Apresenta o dia de vencimento.
+      * @var int
+      */
+    protected $dia_vencimento;
+    
+    /**
       * $melhor_dia_compra Apresenta o melhor dia de compra.
       * @var int
       */
     protected $melhor_dia_compra;
+    
+    /**
+      * $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+      * @var \DateTime
+      */
+    protected $data_status_conta;
+    
+    /**
+      * $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+      * @var \DateTime
+      */
+    protected $data_cadastro;
+    
+    /**
+      * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+      * @var \DateTime
+      */
+    protected $data_ultima_alteracao_vencimento;
     
 
     /**
@@ -200,101 +200,17 @@ class Conta implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->data_cadastro = $data["data_cadastro"];
-            $this->data_status_conta = $data["data_status_conta"];
-            $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
-            $this->dia_vencimento = $data["dia_vencimento"];
             $this->id = $data["id"];
+            $this->id_produto = $data["id_produto"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
             $this->id_pessoa = $data["id_pessoa"];
-            $this->id_produto = $data["id_produto"];
             $this->id_status_conta = $data["id_status_conta"];
+            $this->dia_vencimento = $data["dia_vencimento"];
             $this->melhor_dia_compra = $data["melhor_dia_compra"];
+            $this->data_status_conta = $data["data_status_conta"];
+            $this->data_cadastro = $data["data_cadastro"];
+            $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
         }
-    }
-    
-    /**
-     * Gets data_cadastro
-     * @return \DateTime
-     */
-    public function getDataCadastro()
-    {
-        return $this->data_cadastro;
-    }
-  
-    /**
-     * Sets data_cadastro
-     * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-     * @return $this
-     */
-    public function setDataCadastro($data_cadastro)
-    {
-        
-        $this->data_cadastro = $data_cadastro;
-        return $this;
-    }
-    
-    /**
-     * Gets data_status_conta
-     * @return \DateTime
-     */
-    public function getDataStatusConta()
-    {
-        return $this->data_status_conta;
-    }
-  
-    /**
-     * Sets data_status_conta
-     * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-     * @return $this
-     */
-    public function setDataStatusConta($data_status_conta)
-    {
-        
-        $this->data_status_conta = $data_status_conta;
-        return $this;
-    }
-    
-    /**
-     * Gets data_ultima_alteracao_vencimento
-     * @return \DateTime
-     */
-    public function getDataUltimaAlteracaoVencimento()
-    {
-        return $this->data_ultima_alteracao_vencimento;
-    }
-  
-    /**
-     * Sets data_ultima_alteracao_vencimento
-     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-     * @return $this
-     */
-    public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)
-    {
-        
-        $this->data_ultima_alteracao_vencimento = $data_ultima_alteracao_vencimento;
-        return $this;
-    }
-    
-    /**
-     * Gets dia_vencimento
-     * @return int
-     */
-    public function getDiaVencimento()
-    {
-        return $this->dia_vencimento;
-    }
-  
-    /**
-     * Sets dia_vencimento
-     * @param int $dia_vencimento Apresenta o dia de vencimento.
-     * @return $this
-     */
-    public function setDiaVencimento($dia_vencimento)
-    {
-        
-        $this->dia_vencimento = $dia_vencimento;
-        return $this;
     }
     
     /**
@@ -315,6 +231,27 @@ class Conta implements ArrayAccess
     {
         
         $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
         return $this;
     }
     
@@ -361,27 +298,6 @@ class Conta implements ArrayAccess
     }
     
     /**
-     * Gets id_produto
-     * @return int
-     */
-    public function getIdProduto()
-    {
-        return $this->id_produto;
-    }
-  
-    /**
-     * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-     * @return $this
-     */
-    public function setIdProduto($id_produto)
-    {
-        
-        $this->id_produto = $id_produto;
-        return $this;
-    }
-    
-    /**
      * Gets id_status_conta
      * @return int
      */
@@ -403,6 +319,27 @@ class Conta implements ArrayAccess
     }
     
     /**
+     * Gets dia_vencimento
+     * @return int
+     */
+    public function getDiaVencimento()
+    {
+        return $this->dia_vencimento;
+    }
+  
+    /**
+     * Sets dia_vencimento
+     * @param int $dia_vencimento Apresenta o dia de vencimento.
+     * @return $this
+     */
+    public function setDiaVencimento($dia_vencimento)
+    {
+        
+        $this->dia_vencimento = $dia_vencimento;
+        return $this;
+    }
+    
+    /**
      * Gets melhor_dia_compra
      * @return int
      */
@@ -420,6 +357,69 @@ class Conta implements ArrayAccess
     {
         
         $this->melhor_dia_compra = $melhor_dia_compra;
+        return $this;
+    }
+    
+    /**
+     * Gets data_status_conta
+     * @return \DateTime
+     */
+    public function getDataStatusConta()
+    {
+        return $this->data_status_conta;
+    }
+  
+    /**
+     * Sets data_status_conta
+     * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+     * @return $this
+     */
+    public function setDataStatusConta($data_status_conta)
+    {
+        
+        $this->data_status_conta = $data_status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets data_cadastro
+     * @return \DateTime
+     */
+    public function getDataCadastro()
+    {
+        return $this->data_cadastro;
+    }
+  
+    /**
+     * Sets data_cadastro
+     * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @return $this
+     */
+    public function setDataCadastro($data_cadastro)
+    {
+        
+        $this->data_cadastro = $data_cadastro;
+        return $this;
+    }
+    
+    /**
+     * Gets data_ultima_alteracao_vencimento
+     * @return \DateTime
+     */
+    public function getDataUltimaAlteracaoVencimento()
+    {
+        return $this->data_ultima_alteracao_vencimento;
+    }
+  
+    /**
+     * Sets data_ultima_alteracao_vencimento
+     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+     * @return $this
+     */
+    public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)
+    {
+        
+        $this->data_ultima_alteracao_vencimento = $data_ultima_alteracao_vencimento;
         return $this;
     }
     

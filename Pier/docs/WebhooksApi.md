@@ -29,8 +29,8 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo identificador do Webhook
-$evento = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | Evento a ser chamado pelo WebHook
-$metodo = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+$evento = "evento_example"; // string | Evento a ser chamado pelo WebHook
+$metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo WebHook
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
@@ -47,8 +47,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| C\u00C3\u00B3digo identificador do Webhook | 
- **evento** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **string**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **string**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **string**| URL que a ser consumida pelo WebHook | 
 
 ### Return type
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET10($id, $evento, $metodo, $url, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET10($page, $limit, $id, $evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -134,15 +134,15 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
-$id = 789; // int | Id do WebHook
-$evento = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | Evento a ser chamado pelo WebHook
-$metodo = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
-$url = "url_example"; // string | URL que a ser consumida pelo WebHook
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$id = 789; // int | Id do WebHook
+$evento = "evento_example"; // string | Evento a ser chamado pelo WebHook
+$metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+$url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET10($id, $evento, $metodo, $url, $page, $limit);
+    $result = $api_instance->listarUsingGET10($page, $limit, $id, $evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->listarUsingGET10: ', $e->getMessage(), "\n";
@@ -154,12 +154,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Id do WebHook | [optional] 
- **evento** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| Evento a ser chamado pelo WebHook | [optional] 
- **metodo** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
- **url** | **string**| URL que a ser consumida pelo WebHook | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **int**| Id do WebHook | [optional] 
+ **evento** | **string**| Evento a ser chamado pelo WebHook | [optional] 
+ **metodo** | **string**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
+ **url** | **string**| URL que a ser consumida pelo WebHook | [optional] 
 
 ### Return type
 
@@ -194,8 +194,8 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
-$evento = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | Evento a ser chamado pelo WebHook
-$metodo = new \br.com.conductor.pier.api.v2.model\Object(); // \br.com.conductor.pier.api.v2.model\Object | M\u00C3\u00A9todo que a ser chamado pelo WebHook
+$evento = "evento_example"; // string | Evento a ser chamado pelo WebHook
+$metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo WebHook
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
@@ -211,8 +211,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evento** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**\br.com.conductor.pier.api.v2.model\Object**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **string**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **string**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **string**| URL que a ser consumida pelo WebHook | 
 
 ### Return type

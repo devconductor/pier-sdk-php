@@ -97,8 +97,8 @@ class WebhooksApi
      * Alterar Webhook
      *
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $evento Evento a ser chamado pelo WebHook (required)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -116,8 +116,8 @@ class WebhooksApi
      * Alterar Webhook
      *
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $evento Evento a ser chamado pelo WebHook (required)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -326,18 +326,18 @@ class WebhooksApi
      *
      * Lista os Webhooks
      *
-     * @param int $id Id do WebHook (optional)
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (optional)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
-     * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do WebHook (optional)
+     * @param string $evento Evento a ser chamado pelo WebHook (optional)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
+     * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10($id = null, $evento = null, $metodo = null, $url = null, $page = null, $limit = null)
+    public function listarUsingGET10($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($id, $evento, $metodo, $url, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
         return $response; 
     }
 
@@ -347,16 +347,16 @@ class WebhooksApi
      *
      * Lista os Webhooks
      *
-     * @param int $id Id do WebHook (optional)
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (optional)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
-     * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do WebHook (optional)
+     * @param string $evento Evento a ser chamado pelo WebHook (optional)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
+     * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10WithHttpInfo($id = null, $evento = null, $metodo = null, $url = null, $page = null, $limit = null)
+    public function listarUsingGET10WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
         
   
@@ -374,6 +374,14 @@ class WebhooksApi
   
         // query params
         
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
         if ($id !== null) {
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
@@ -388,14 +396,6 @@ class WebhooksApi
         
         if ($url !== null) {
             $queryParams['url'] = $this->apiClient->getSerializer()->toQueryValue($url);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         
         
@@ -450,8 +450,8 @@ class WebhooksApi
      *
      * Salvar Webhook
      *
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $evento Evento a ser chamado pelo WebHook (required)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -468,8 +468,8 @@ class WebhooksApi
      *
      * Salvar Webhook
      *
-     * @param \br.com.conductor.pier.api.v2.model\Object $evento Evento a ser chamado pelo WebHook (required)
-     * @param \br.com.conductor.pier.api.v2.model\Object $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $evento Evento a ser chamado pelo WebHook (required)
+     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response

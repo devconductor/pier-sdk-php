@@ -51,13 +51,13 @@ class Telefone implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'ddd' => 'string',
         'id' => 'int',
-        'id_pessoa' => 'int',
         'id_tipo_telefone' => 'int',
+        'id_pessoa' => 'int',
+        'ddd' => 'string',
+        'telefone' => 'string',
         'ramal' => 'string',
-        'status' => 'int',
-        'telefone' => 'string'
+        'status' => 'int'
     );
   
     static function swaggerTypes() {
@@ -69,13 +69,13 @@ class Telefone implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'ddd' => 'ddd',
         'id' => 'id',
-        'id_pessoa' => 'idPessoa',
         'id_tipo_telefone' => 'idTipoTelefone',
+        'id_pessoa' => 'idPessoa',
+        'ddd' => 'ddd',
+        'telefone' => 'telefone',
         'ramal' => 'ramal',
-        'status' => 'status',
-        'telefone' => 'telefone'
+        'status' => 'status'
     );
   
     static function attributeMap() {
@@ -87,13 +87,13 @@ class Telefone implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'ddd' => 'setDdd',
         'id' => 'setId',
-        'id_pessoa' => 'setIdPessoa',
         'id_tipo_telefone' => 'setIdTipoTelefone',
+        'id_pessoa' => 'setIdPessoa',
+        'ddd' => 'setDdd',
+        'telefone' => 'setTelefone',
         'ramal' => 'setRamal',
-        'status' => 'setStatus',
-        'telefone' => 'setTelefone'
+        'status' => 'setStatus'
     );
   
     static function setters() {
@@ -105,13 +105,13 @@ class Telefone implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'ddd' => 'getDdd',
         'id' => 'getId',
-        'id_pessoa' => 'getIdPessoa',
         'id_tipo_telefone' => 'getIdTipoTelefone',
+        'id_pessoa' => 'getIdPessoa',
+        'ddd' => 'getDdd',
+        'telefone' => 'getTelefone',
         'ramal' => 'getRamal',
-        'status' => 'getStatus',
-        'telefone' => 'getTelefone'
+        'status' => 'getStatus'
     );
   
     static function getters() {
@@ -120,16 +120,16 @@ class Telefone implements ArrayAccess
 
     
     /**
-      * $ddd C\u00C3\u00B3digo DDD do telefone (id).
-      * @var string
-      */
-    protected $ddd;
-    
-    /**
       * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
       * @var int
       */
     protected $id;
+    
+    /**
+      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+      * @var int
+      */
+    protected $id_tipo_telefone;
     
     /**
       * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -138,10 +138,16 @@ class Telefone implements ArrayAccess
     protected $id_pessoa;
     
     /**
-      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-      * @var int
+      * $ddd C\u00C3\u00B3digo DDD do telefone (id).
+      * @var string
       */
-    protected $id_tipo_telefone;
+    protected $ddd;
+    
+    /**
+      * $telefone N\u00C3\u00BAmero do telefone.
+      * @var string
+      */
+    protected $telefone;
     
     /**
       * $ramal N\u00C3\u00BAmero do ramal.
@@ -155,12 +161,6 @@ class Telefone implements ArrayAccess
       */
     protected $status;
     
-    /**
-      * $telefone N\u00C3\u00BAmero do telefone.
-      * @var string
-      */
-    protected $telefone;
-    
 
     /**
      * Constructor
@@ -170,35 +170,14 @@ class Telefone implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->ddd = $data["ddd"];
             $this->id = $data["id"];
-            $this->id_pessoa = $data["id_pessoa"];
             $this->id_tipo_telefone = $data["id_tipo_telefone"];
+            $this->id_pessoa = $data["id_pessoa"];
+            $this->ddd = $data["ddd"];
+            $this->telefone = $data["telefone"];
             $this->ramal = $data["ramal"];
             $this->status = $data["status"];
-            $this->telefone = $data["telefone"];
         }
-    }
-    
-    /**
-     * Gets ddd
-     * @return string
-     */
-    public function getDdd()
-    {
-        return $this->ddd;
-    }
-  
-    /**
-     * Sets ddd
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id).
-     * @return $this
-     */
-    public function setDdd($ddd)
-    {
-        
-        $this->ddd = $ddd;
-        return $this;
     }
     
     /**
@@ -219,6 +198,27 @@ class Telefone implements ArrayAccess
     {
         
         $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_telefone
+     * @return int
+     */
+    public function getIdTipoTelefone()
+    {
+        return $this->id_tipo_telefone;
+    }
+  
+    /**
+     * Sets id_tipo_telefone
+     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @return $this
+     */
+    public function setIdTipoTelefone($id_tipo_telefone)
+    {
+        
+        $this->id_tipo_telefone = $id_tipo_telefone;
         return $this;
     }
     
@@ -244,23 +244,44 @@ class Telefone implements ArrayAccess
     }
     
     /**
-     * Gets id_tipo_telefone
-     * @return int
+     * Gets ddd
+     * @return string
      */
-    public function getIdTipoTelefone()
+    public function getDdd()
     {
-        return $this->id_tipo_telefone;
+        return $this->ddd;
     }
   
     /**
-     * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * Sets ddd
+     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @return $this
      */
-    public function setIdTipoTelefone($id_tipo_telefone)
+    public function setDdd($ddd)
     {
         
-        $this->id_tipo_telefone = $id_tipo_telefone;
+        $this->ddd = $ddd;
+        return $this;
+    }
+    
+    /**
+     * Gets telefone
+     * @return string
+     */
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+  
+    /**
+     * Sets telefone
+     * @param string $telefone N\u00C3\u00BAmero do telefone.
+     * @return $this
+     */
+    public function setTelefone($telefone)
+    {
+        
+        $this->telefone = $telefone;
         return $this;
     }
     
@@ -303,27 +324,6 @@ class Telefone implements ArrayAccess
     {
         
         $this->status = $status;
-        return $this;
-    }
-    
-    /**
-     * Gets telefone
-     * @return string
-     */
-    public function getTelefone()
-    {
-        return $this->telefone;
-    }
-  
-    /**
-     * Sets telefone
-     * @param string $telefone N\u00C3\u00BAmero do telefone.
-     * @return $this
-     */
-    public function setTelefone($telefone)
-    {
-        
-        $this->telefone = $telefone;
         return $this;
     }
     

@@ -51,9 +51,9 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'criptograma_resposta' => 'string',
         'status_cartao' => 'string',
-        'status_conta' => 'string'
+        'status_conta' => 'string',
+        'criptograma_resposta' => 'string'
     );
   
     static function swaggerTypes() {
@@ -65,9 +65,9 @@ class ValidaCartao implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'criptograma_resposta' => 'criptogramaResposta',
         'status_cartao' => 'statusCartao',
-        'status_conta' => 'statusConta'
+        'status_conta' => 'statusConta',
+        'criptograma_resposta' => 'criptogramaResposta'
     );
   
     static function attributeMap() {
@@ -79,9 +79,9 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'criptograma_resposta' => 'setCriptogramaResposta',
         'status_cartao' => 'setStatusCartao',
-        'status_conta' => 'setStatusConta'
+        'status_conta' => 'setStatusConta',
+        'criptograma_resposta' => 'setCriptogramaResposta'
     );
   
     static function setters() {
@@ -93,21 +93,15 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'criptograma_resposta' => 'getCriptogramaResposta',
         'status_cartao' => 'getStatusCartao',
-        'status_conta' => 'getStatusConta'
+        'status_conta' => 'getStatusConta',
+        'criptograma_resposta' => 'getCriptogramaResposta'
     );
   
     static function getters() {
         return self::$getters;
     }
 
-    
-    /**
-      * $criptograma_resposta Criptograma de resposta
-      * @var string
-      */
-    protected $criptograma_resposta;
     
     /**
       * $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
@@ -121,6 +115,12 @@ class ValidaCartao implements ArrayAccess
       */
     protected $status_conta;
     
+    /**
+      * $criptograma_resposta Criptograma de resposta
+      * @var string
+      */
+    protected $criptograma_resposta;
+    
 
     /**
      * Constructor
@@ -130,31 +130,10 @@ class ValidaCartao implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->criptograma_resposta = $data["criptograma_resposta"];
             $this->status_cartao = $data["status_cartao"];
             $this->status_conta = $data["status_conta"];
+            $this->criptograma_resposta = $data["criptograma_resposta"];
         }
-    }
-    
-    /**
-     * Gets criptograma_resposta
-     * @return string
-     */
-    public function getCriptogramaResposta()
-    {
-        return $this->criptograma_resposta;
-    }
-  
-    /**
-     * Sets criptograma_resposta
-     * @param string $criptograma_resposta Criptograma de resposta
-     * @return $this
-     */
-    public function setCriptogramaResposta($criptograma_resposta)
-    {
-        
-        $this->criptograma_resposta = $criptograma_resposta;
-        return $this;
     }
     
     /**
@@ -196,6 +175,27 @@ class ValidaCartao implements ArrayAccess
     {
         
         $this->status_conta = $status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets criptograma_resposta
+     * @return string
+     */
+    public function getCriptogramaResposta()
+    {
+        return $this->criptograma_resposta;
+    }
+  
+    /**
+     * Sets criptograma_resposta
+     * @param string $criptograma_resposta Criptograma de resposta
+     * @return $this
+     */
+    public function setCriptogramaResposta($criptograma_resposta)
+    {
+        
+        $this->criptograma_resposta = $criptograma_resposta;
         return $this;
     }
     

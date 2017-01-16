@@ -51,8 +51,8 @@ class WebHook implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'evento' => 'string',
         'id' => 'int',
+        'evento' => 'string',
         'metodo' => 'string',
         'url' => 'string'
     );
@@ -66,8 +66,8 @@ class WebHook implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'evento' => 'evento',
         'id' => 'id',
+        'evento' => 'evento',
         'metodo' => 'metodo',
         'url' => 'url'
     );
@@ -81,8 +81,8 @@ class WebHook implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'evento' => 'setEvento',
         'id' => 'setId',
+        'evento' => 'setEvento',
         'metodo' => 'setMetodo',
         'url' => 'setUrl'
     );
@@ -96,8 +96,8 @@ class WebHook implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'evento' => 'getEvento',
         'id' => 'getId',
+        'evento' => 'getEvento',
         'metodo' => 'getMetodo',
         'url' => 'getUrl'
     );
@@ -108,16 +108,16 @@ class WebHook implements ArrayAccess
 
     
     /**
-      * $evento Evento a ser chamado pelo WebHook
-      * @var string
-      */
-    protected $evento;
-    
-    /**
       * $id Id do WebHook
       * @var int
       */
     protected $id;
+    
+    /**
+      * $evento Evento a ser chamado pelo WebHook
+      * @var string
+      */
+    protected $evento;
     
     /**
       * $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -140,11 +140,32 @@ class WebHook implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->evento = $data["evento"];
             $this->id = $data["id"];
+            $this->evento = $data["evento"];
             $this->metodo = $data["metodo"];
             $this->url = $data["url"];
         }
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id Id do WebHook
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
     }
     
     /**
@@ -168,27 +189,6 @@ class WebHook implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
         $this->evento = $evento;
-        return $this;
-    }
-    
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-  
-    /**
-     * Sets id
-     * @param int $id Id do WebHook
-     * @return $this
-     */
-    public function setId($id)
-    {
-        
-        $this->id = $id;
         return $this;
     }
     

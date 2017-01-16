@@ -86,6 +86,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarLimiteDisponibilidadeUsingGET1
+     *
+     * Apresenta os limites da conta
+     *
+     */
+    public function test_consultarLimiteDisponibilidadeUsingGET1() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET1
      *
      * Apresenta dados de uma determinada conta

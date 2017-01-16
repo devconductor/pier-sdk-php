@@ -96,13 +96,13 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
-     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\EstagioCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGET($id_estagio_cartao)
+    public function consultarEstagioCartaoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGETWithHttpInfo ($id_estagio_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarEstagioCartaoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -112,20 +112,20 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      *
-     * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\EstagioCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarEstagioCartaoUsingGETWithHttpInfo($id_estagio_cartao)
+    public function consultarEstagioCartaoUsingGETWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_estagio_cartao' is set
-        if ($id_estagio_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_estagio_cartao when calling consultarEstagioCartaoUsingGET');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarEstagioCartaoUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/estagios-cartoes/{id_estagio_cartao}";
+        $resourcePath = "/api/estagios-cartoes/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -140,10 +140,10 @@ class StatusParametrosApi
         
         // path params
         
-        if ($id_estagio_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_estagio_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_estagio_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -198,13 +198,13 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
-     * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarStatusCartaoUsingGET($id_status_cartao)
+    public function consultarStatusCartaoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarStatusCartaoUsingGETWithHttpInfo ($id_status_cartao);
+        list($response, $statusCode, $httpHeader) = $this->consultarStatusCartaoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -214,20 +214,20 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      *
-     * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarStatusCartaoUsingGETWithHttpInfo($id_status_cartao)
+    public function consultarStatusCartaoUsingGETWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_status_cartao' is set
-        if ($id_status_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_cartao when calling consultarStatusCartaoUsingGET');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarStatusCartaoUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/status-cartoes/{id_status_cartao}";
+        $resourcePath = "/api/status-cartoes/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -242,10 +242,10 @@ class StatusParametrosApi
         
         // path params
         
-        if ($id_status_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_status_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_status_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -300,13 +300,13 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Conta
      *
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusConta
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4($id_status_conta)
+    public function consultarUsingGET4($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id_status_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id);
         return $response; 
     }
 
@@ -316,20 +316,20 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Conta
      *
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusConta, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4WithHttpInfo($id_status_conta)
+    public function consultarUsingGET4WithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_status_conta' is set
-        if ($id_status_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_conta when calling consultarUsingGET4');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET4');
         }
   
         // parse inputs
-        $resourcePath = "/api/status-contas/{id_status_conta}";
+        $resourcePath = "/api/status-contas/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -344,10 +344,10 @@ class StatusParametrosApi
         
         // path params
         
-        if ($id_status_conta !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_status_conta" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_status_conta),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -402,13 +402,13 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($id_status_impressao)
+    public function consultarUsingGET5($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id_status_impressao);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
         return $response; 
     }
 
@@ -418,20 +418,20 @@ class StatusParametrosApi
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($id_status_impressao)
+    public function consultarUsingGET5WithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_status_impressao' is set
-        if ($id_status_impressao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling consultarUsingGET5');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
         }
   
         // parse inputs
-        $resourcePath = "/api/status-impressoes/{id_status_impressao}";
+        $resourcePath = "/api/status-impressoes/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -446,10 +446,10 @@ class StatusParametrosApi
         
         // path params
         
-        if ($id_status_impressao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_status_impressao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_status_impressao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -504,16 +504,16 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageEstagiosCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGET($id = null, $nome = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($id, $nome, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome);
         return $response; 
     }
 
@@ -523,14 +523,14 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstagiosCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGETWithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
+    public function listarEstagiosCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -548,20 +548,20 @@ class StatusParametrosApi
   
         // query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
-        if ($nome !== null) {
-            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
-        }// query params
-        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }
         
         
@@ -616,6 +616,8 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
      * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
@@ -623,14 +625,12 @@ class StatusParametrosApi
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
      * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
      * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGET($id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $page = null, $limit = null)
+    public function listarStatusCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa);
         return $response; 
     }
 
@@ -640,6 +640,8 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
      * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
@@ -647,12 +649,10 @@ class StatusParametrosApi
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
      * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
      * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGETWithHttpInfo($id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $page = null, $limit = null)
+    public function listarStatusCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null)
     {
         
   
@@ -669,6 +669,14 @@ class StatusParametrosApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
         
         if ($id !== null) {
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
@@ -696,14 +704,6 @@ class StatusParametrosApi
         
         if ($flag_cobra_tarifa !== null) {
             $queryParams['flagCobraTarifa'] = $this->apiClient->getSerializer()->toQueryValue($flag_cobra_tarifa);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         
         
@@ -758,18 +758,18 @@ class StatusParametrosApi
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
      * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
+    public function listarUsingGET5($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada);
         return $response; 
     }
 
@@ -779,16 +779,16 @@ class StatusParametrosApi
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
      * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $page = null, $limit = null)
+    public function listarUsingGET5WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null)
     {
         
   
@@ -806,6 +806,14 @@ class StatusParametrosApi
   
         // query params
         
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
         if ($id !== null) {
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
@@ -820,14 +828,6 @@ class StatusParametrosApi
         
         if ($mensagem_consulta_negada !== null) {
             $queryParams['mensagemConsultaNegada'] = $this->apiClient->getSerializer()->toQueryValue($mensagem_consulta_negada);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         
         
@@ -882,16 +882,16 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET6($page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($id, $nome, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($page, $limit, $id, $nome);
         return $response; 
     }
 
@@ -901,14 +901,14 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($id = null, $nome = null, $page = null, $limit = null)
+    public function listarUsingGET6WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -926,20 +926,20 @@ class StatusParametrosApi
   
         // query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
-        if ($nome !== null) {
-            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
-        }// query params
-        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }
         
         
