@@ -97,11 +97,11 @@ class CartaoApi
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (optional)
+     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (required)
      * @return \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUT($id, $id_status_impressao = null)
+    public function alterarStatusImpressaoUsingPUT($id, $id_status_impressao)
     {
         list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id, $id_status_impressao);
         return $response; 
@@ -114,16 +114,20 @@ class CartaoApi
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (optional)
+     * @param int $id_status_impressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id, $id_status_impressao = null)
+    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id, $id_status_impressao)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarStatusImpressaoUsingPUT');
+        }
+        // verify the required parameter 'id_status_impressao' is set
+        if ($id_status_impressao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status_impressao when calling alterarStatusImpressaoUsingPUT');
         }
   
         // parse inputs
@@ -484,17 +488,21 @@ class CartaoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }
         // header params
         
         if ($senha !== null) {
             $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
         }
+        // path params
         
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -1850,17 +1858,21 @@ class CartaoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }
         // header params
         
         if ($senha !== null) {
             $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
         }
+        // path params
         
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
