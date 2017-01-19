@@ -136,12 +136,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for transacoesUsingPOST
+     * Test case for transacoesUsingGET
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
      */
-    public function test_transacoesUsingPOST() {
+    public function test_transacoesUsingGET() {
 
     }
     

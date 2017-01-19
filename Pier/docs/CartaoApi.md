@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/pre-pagos/lotes | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id_cartao}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
+[**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/pre-pagos/lotes | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validarCartaoChipBandeiradoUsingGET**](CartaoApi.md#validarCartaoChipBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarNovaViaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Cartao gerarNovaViaUsingPOST($id_cartao)
+> \br.com.conductor.pier.api.v2.model\Cartao gerarNovaViaUsingPOST($id)
 
 Gerar uma nova via de Cart\u00C3\u00A3o
 
@@ -511,10 +511,10 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
-$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
 
 try { 
-    $result = $api_instance->gerarNovaViaUsingPOST($id_cartao);
+    $result = $api_instance->gerarNovaViaUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartaoApi->gerarNovaViaUsingPOST: ', $e->getMessage(), "\n";
@@ -526,7 +526,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
 
 ### Return type
 

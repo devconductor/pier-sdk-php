@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id_conta}/faturas | Listar Faturas da Conta
+[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
 [**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**transacoesUsingPOST**](ContaApi.md#transacoesUsingPOST) | **POST** /api/contas/{id_conta}/timeline | Permite listar uma linha do tempo com os eventos da conta
+[**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
 # **alterarLimiteUsingPUT**
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarFaturasUsingGET**
-> \br.com.conductor.pier.api.v2.model\Fatura listarFaturasUsingGET($page, $limit, $id, $data_vencimento)
+> \br.com.conductor.pier.api.v2.model\Fatura listarFaturasUsingGET($id, $page, $limit, $data_vencimento)
 
 Listar Faturas da Conta
 
@@ -308,13 +308,13 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
+$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
 $data_vencimento = new \DateTime(); // \DateTime | Data de Vencimento da Fatura.
 
 try { 
-    $result = $api_instance->listarFaturasUsingGET($page, $limit, $id, $data_vencimento);
+    $result = $api_instance->listarFaturasUsingGET($id, $page, $limit, $data_vencimento);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContaApi->listarFaturasUsingGET: ', $e->getMessage(), "\n";
@@ -326,9 +326,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **data_vencimento** | **\DateTime**| Data de Vencimento da Fatura. | [optional] 
 
 ### Return type
@@ -418,8 +418,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **transacoesUsingPOST**
-> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingPOST($page, $limit, $id_conta)
+# **transacoesUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingGET($page, $limit, $id_conta)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -441,10 +441,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 try { 
-    $result = $api_instance->transacoesUsingPOST($page, $limit, $id_conta);
+    $result = $api_instance->transacoesUsingGET($page, $limit, $id_conta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->transacoesUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->transacoesUsingGET: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -1086,13 +1086,13 @@ class CartaoApi
      *
      * Gerar uma nova via de Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaUsingPOST($id_cartao)
+    public function gerarNovaViaUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaUsingPOSTWithHttpInfo ($id_cartao);
+        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1102,20 +1102,20 @@ class CartaoApi
      *
      * Gerar uma nova via de Cart\u00C3\u00A3o
      *
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaUsingPOSTWithHttpInfo($id_cartao)
+    public function gerarNovaViaUsingPOSTWithHttpInfo($id)
     {
         
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling gerarNovaViaUsingPOST');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling gerarNovaViaUsingPOST');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id_cartao}/gerar-nova-via";
+        $resourcePath = "/api/cartoes/{id}/gerar-nova-via";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1130,10 +1130,10 @@ class CartaoApi
         
         // path params
         
-        if ($id_cartao !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "id_cartao" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }

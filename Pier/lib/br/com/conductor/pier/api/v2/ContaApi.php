@@ -750,16 +750,16 @@ class ContaApi
      *
      * Listar Faturas da Conta
      *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param \DateTime $data_vencimento Data de Vencimento da Fatura. (optional)
      * @return \br.com.conductor.pier.api.v2.model\Fatura
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarFaturasUsingGET($page = null, $limit = null, $id = null, $data_vencimento = null)
+    public function listarFaturasUsingGET($id, $page = null, $limit = null, $data_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarFaturasUsingGETWithHttpInfo ($page, $limit, $id, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarFaturasUsingGETWithHttpInfo ($id, $page, $limit, $data_vencimento);
         return $response; 
     }
 
@@ -769,19 +769,23 @@ class ContaApi
      *
      * Listar Faturas da Conta
      *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param \DateTime $data_vencimento Data de Vencimento da Fatura. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\Fatura, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarFaturasUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $data_vencimento = null)
+    public function listarFaturasUsingGETWithHttpInfo($id, $page = null, $limit = null, $data_vencimento = null)
     {
         
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarFaturasUsingGET');
+        }
   
         // parse inputs
-        $resourcePath = "/api/contas/{id_conta}/faturas";
+        $resourcePath = "/api/contas/{id}/faturas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -802,15 +806,19 @@ class ContaApi
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }// query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
         if ($data_vencimento !== null) {
             $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
         }
         
+        // path params
         
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -1018,7 +1026,7 @@ class ContaApi
     }
     
     /**
-     * transacoesUsingPOST
+     * transacoesUsingGET
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
@@ -1028,15 +1036,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingPOST($page = null, $limit = null, $id_conta = null)
+    public function transacoesUsingGET($page = null, $limit = null, $id_conta = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->transacoesUsingPOSTWithHttpInfo ($page, $limit, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($page, $limit, $id_conta);
         return $response; 
     }
 
 
     /**
-     * transacoesUsingPOSTWithHttpInfo
+     * transacoesUsingGETWithHttpInfo
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
@@ -1046,12 +1054,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingPOSTWithHttpInfo($page = null, $limit = null, $id_conta = null)
+    public function transacoesUsingGETWithHttpInfo($page = null, $limit = null, $id_conta = null)
     {
         
   
         // parse inputs
-        $resourcePath = "/api/contas/{id_conta}/timeline";
+        $resourcePath = "/api/contas/{id}/timeline";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1100,7 +1108,7 @@ class ContaApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
+                $resourcePath, 'GET',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransacaoResponse'
             );
