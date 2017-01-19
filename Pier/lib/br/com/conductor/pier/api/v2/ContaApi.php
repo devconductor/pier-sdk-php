@@ -748,7 +748,7 @@ class ContaApi
     /**
      * listarFaturasUsingGET
      *
-     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+     * Listar Faturas da Conta
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -767,7 +767,7 @@ class ContaApi
     /**
      * listarFaturasUsingGETWithHttpInfo
      *
-     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+     * Listar Faturas da Conta
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -1020,7 +1020,7 @@ class ContaApi
     /**
      * transacoesUsingPOST
      *
-     * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+     * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -1038,7 +1038,7 @@ class ContaApi
     /**
      * transacoesUsingPOSTWithHttpInfo
      *
-     * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+     * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -1051,7 +1051,7 @@ class ContaApi
         
   
         // parse inputs
-        $resourcePath = "/api/contas/{id_conta}/transacoes";
+        $resourcePath = "/api/contas/{id_conta}/timeline";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
