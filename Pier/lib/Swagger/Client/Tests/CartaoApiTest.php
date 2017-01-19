@@ -146,6 +146,26 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for gerarLotesCartoesPrePagosUsingPOST
+     *
+     * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     */
+    public function test_gerarLotesCartoesPrePagosUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarNovaViaUsingPOST
+     *
+     * Gerar uma nova via de Cart\u00C3\u00A3o
+     *
+     */
+    public function test_gerarNovaViaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for listarLotesCartoesPrePagosUsingGET
      *
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago

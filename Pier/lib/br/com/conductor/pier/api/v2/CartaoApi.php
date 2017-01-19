@@ -958,6 +958,232 @@ class CartaoApi
     }
     
     /**
+     * gerarLotesCartoesPrePagosUsingPOST
+     *
+     * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
+     * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
+     * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo ($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes);
+        return $response; 
+    }
+
+
+    /**
+     * gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo
+     *
+     * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
+     * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
+     * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
+     * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
+     * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo($id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/pre-pagos/lotes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_origem_comercial !== null) {
+            $queryParams['idOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
+        }// query params
+        
+        if ($id_produto !== null) {
+            $queryParams['idProduto'] = $this->apiClient->getSerializer()->toQueryValue($id_produto);
+        }// query params
+        
+        if ($id_tipo_cartao !== null) {
+            $queryParams['idTipoCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_cartao);
+        }// query params
+        
+        if ($id_imagem !== null) {
+            $queryParams['idImagem'] = $this->apiClient->getSerializer()->toQueryValue($id_imagem);
+        }// query params
+        
+        if ($id_endereco !== null) {
+            $queryParams['idEndereco'] = $this->apiClient->getSerializer()->toQueryValue($id_endereco);
+        }// query params
+        
+        if ($quantidade_cartoes !== null) {
+            $queryParams['quantidadeCartoes'] = $this->apiClient->getSerializer()->toQueryValue($quantidade_cartoes);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * gerarNovaViaUsingPOST
+     *
+     * Gerar uma nova via de Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @return \br.com.conductor.pier.api.v2.model\Cartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarNovaViaUsingPOST($id_cartao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaUsingPOSTWithHttpInfo ($id_cartao);
+        return $response; 
+    }
+
+
+    /**
+     * gerarNovaViaUsingPOSTWithHttpInfo
+     *
+     * Gerar uma nova via de Cart\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarNovaViaUsingPOSTWithHttpInfo($id_cartao)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling gerarNovaViaUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id_cartao}/gerar-nova-via";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_cartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Cartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Cartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarLotesCartoesPrePagosUsingGET
      *
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -971,15 +1197,15 @@ class CartaoApi
      * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
      * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
      * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
-     * @param \DateTime $data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param \DateTime $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
      * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
-     * @param int $flag_processado Indica o Status de Processamento do Lote. (optional)
+     * @param int $status_processamento Indica o Status de Processamento do Lote. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarLotesCartoesPrePagosUsingGET($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro_lote = null, $usuario_cadastro = null, $flag_processado = null)
+    public function listarLotesCartoesPrePagosUsingGET($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarLotesCartoesPrePagosUsingGETWithHttpInfo ($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro_lote, $usuario_cadastro, $flag_processado);
+        list($response, $statusCode, $httpHeader) = $this->listarLotesCartoesPrePagosUsingGETWithHttpInfo ($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento);
         return $response; 
     }
 
@@ -998,13 +1224,13 @@ class CartaoApi
      * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
      * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
      * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
-     * @param \DateTime $data_cadastro_lote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param \DateTime $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
      * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
-     * @param int $flag_processado Indica o Status de Processamento do Lote. (optional)
+     * @param int $status_processamento Indica o Status de Processamento do Lote. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarLotesCartoesPrePagosUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro_lote = null, $usuario_cadastro = null, $flag_processado = null)
+    public function listarLotesCartoesPrePagosUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null)
     {
         
   
@@ -1058,16 +1284,16 @@ class CartaoApi
             $queryParams['quantidadeCartoes'] = $this->apiClient->getSerializer()->toQueryValue($quantidade_cartoes);
         }// query params
         
-        if ($data_cadastro_lote !== null) {
-            $queryParams['dataCadastroLote'] = $this->apiClient->getSerializer()->toQueryValue($data_cadastro_lote);
+        if ($data_cadastro !== null) {
+            $queryParams['dataCadastro'] = $this->apiClient->getSerializer()->toQueryValue($data_cadastro);
         }// query params
         
         if ($usuario_cadastro !== null) {
             $queryParams['usuarioCadastro'] = $this->apiClient->getSerializer()->toQueryValue($usuario_cadastro);
         }// query params
         
-        if ($flag_processado !== null) {
-            $queryParams['flagProcessado'] = $this->apiClient->getSerializer()->toQueryValue($flag_processado);
+        if ($status_processamento !== null) {
+            $queryParams['statusProcessamento'] = $this->apiClient->getSerializer()->toQueryValue($status_processamento);
         }
         
         

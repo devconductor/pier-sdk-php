@@ -625,12 +625,13 @@ class StatusParametrosApi
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
      * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
      * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null)
+    public function listarStatusCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
@@ -649,10 +650,11 @@ class StatusParametrosApi
      * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
      * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
      * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null)
+    public function listarStatusCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -704,6 +706,10 @@ class StatusParametrosApi
         
         if ($flag_cobra_tarifa !== null) {
             $queryParams['flagCobraTarifa'] = $this->apiClient->getSerializer()->toQueryValue($flag_cobra_tarifa);
+        }// query params
+        
+        if ($flag_permite_nova_via_cartao !== null) {
+            $queryParams['flagPermiteNovaViaCartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_nova_via_cartao);
         }
         
         
@@ -764,12 +770,13 @@ class StatusParametrosApi
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
      * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null)
+    public function listarUsingGET5($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
@@ -785,10 +792,11 @@ class StatusParametrosApi
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
      * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null)
+    public function listarUsingGET5WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -828,6 +836,10 @@ class StatusParametrosApi
         
         if ($mensagem_consulta_negada !== null) {
             $queryParams['mensagemConsultaNegada'] = $this->apiClient->getSerializer()->toQueryValue($mensagem_consulta_negada);
+        }// query params
+        
+        if ($flag_permite_nova_via_cartao !== null) {
+            $queryParams['flagPermiteNovaViaCartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_nova_via_cartao);
         }
         
         

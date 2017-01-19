@@ -57,7 +57,8 @@ class StatusCartao implements ArrayAccess
         'flag_cancela_no_desbloqueio' => 'int',
         'id_status_destino_desbloqueio' => 'int',
         'id_status_destino_conta' => 'int',
-        'flag_cobra_tarifa' => 'int'
+        'flag_cobra_tarifa' => 'int',
+        'flag_permite_nova_via_cartao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -75,7 +76,8 @@ class StatusCartao implements ArrayAccess
         'flag_cancela_no_desbloqueio' => 'flagCancelaNoDesbloqueio',
         'id_status_destino_desbloqueio' => 'idStatusDestinoDesbloqueio',
         'id_status_destino_conta' => 'idStatusDestinoConta',
-        'flag_cobra_tarifa' => 'flagCobraTarifa'
+        'flag_cobra_tarifa' => 'flagCobraTarifa',
+        'flag_permite_nova_via_cartao' => 'flagPermiteNovaViaCartao'
     );
   
     static function attributeMap() {
@@ -93,7 +95,8 @@ class StatusCartao implements ArrayAccess
         'flag_cancela_no_desbloqueio' => 'setFlagCancelaNoDesbloqueio',
         'id_status_destino_desbloqueio' => 'setIdStatusDestinoDesbloqueio',
         'id_status_destino_conta' => 'setIdStatusDestinoConta',
-        'flag_cobra_tarifa' => 'setFlagCobraTarifa'
+        'flag_cobra_tarifa' => 'setFlagCobraTarifa',
+        'flag_permite_nova_via_cartao' => 'setFlagPermiteNovaViaCartao'
     );
   
     static function setters() {
@@ -111,7 +114,8 @@ class StatusCartao implements ArrayAccess
         'flag_cancela_no_desbloqueio' => 'getFlagCancelaNoDesbloqueio',
         'id_status_destino_desbloqueio' => 'getIdStatusDestinoDesbloqueio',
         'id_status_destino_conta' => 'getIdStatusDestinoConta',
-        'flag_cobra_tarifa' => 'getFlagCobraTarifa'
+        'flag_cobra_tarifa' => 'getFlagCobraTarifa',
+        'flag_permite_nova_via_cartao' => 'getFlagPermiteNovaViaCartao'
     );
   
     static function getters() {
@@ -161,6 +165,12 @@ class StatusCartao implements ArrayAccess
       */
     protected $flag_cobra_tarifa;
     
+    /**
+      * $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_permite_nova_via_cartao;
+    
 
     /**
      * Constructor
@@ -177,6 +187,7 @@ class StatusCartao implements ArrayAccess
             $this->id_status_destino_desbloqueio = $data["id_status_destino_desbloqueio"];
             $this->id_status_destino_conta = $data["id_status_destino_conta"];
             $this->flag_cobra_tarifa = $data["flag_cobra_tarifa"];
+            $this->flag_permite_nova_via_cartao = $data["flag_permite_nova_via_cartao"];
         }
     }
     
@@ -324,6 +335,27 @@ class StatusCartao implements ArrayAccess
     {
         
         $this->flag_cobra_tarifa = $flag_cobra_tarifa;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_permite_nova_via_cartao
+     * @return int
+     */
+    public function getFlagPermiteNovaViaCartao()
+    {
+        return $this->flag_permite_nova_via_cartao;
+    }
+  
+    /**
+     * Sets flag_permite_nova_via_cartao
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagPermiteNovaViaCartao($flag_permite_nova_via_cartao)
+    {
+        
+        $this->flag_permite_nova_via_cartao = $flag_permite_nova_via_cartao;
         return $this;
     }
     

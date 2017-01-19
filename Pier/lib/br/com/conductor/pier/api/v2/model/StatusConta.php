@@ -54,7 +54,8 @@ class StatusConta implements ArrayAccess
         'id' => 'int',
         'nome' => 'string',
         'flag_altera_limite' => 'int',
-        'mensagem_consulta_negada' => 'string'
+        'mensagem_consulta_negada' => 'string',
+        'flag_permite_nova_via_cartao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -69,7 +70,8 @@ class StatusConta implements ArrayAccess
         'id' => 'id',
         'nome' => 'nome',
         'flag_altera_limite' => 'flagAlteraLimite',
-        'mensagem_consulta_negada' => 'mensagemConsultaNegada'
+        'mensagem_consulta_negada' => 'mensagemConsultaNegada',
+        'flag_permite_nova_via_cartao' => 'flagPermiteNovaViaCartao'
     );
   
     static function attributeMap() {
@@ -84,7 +86,8 @@ class StatusConta implements ArrayAccess
         'id' => 'setId',
         'nome' => 'setNome',
         'flag_altera_limite' => 'setFlagAlteraLimite',
-        'mensagem_consulta_negada' => 'setMensagemConsultaNegada'
+        'mensagem_consulta_negada' => 'setMensagemConsultaNegada',
+        'flag_permite_nova_via_cartao' => 'setFlagPermiteNovaViaCartao'
     );
   
     static function setters() {
@@ -99,7 +102,8 @@ class StatusConta implements ArrayAccess
         'id' => 'getId',
         'nome' => 'getNome',
         'flag_altera_limite' => 'getFlagAlteraLimite',
-        'mensagem_consulta_negada' => 'getMensagemConsultaNegada'
+        'mensagem_consulta_negada' => 'getMensagemConsultaNegada',
+        'flag_permite_nova_via_cartao' => 'getFlagPermiteNovaViaCartao'
     );
   
     static function getters() {
@@ -131,6 +135,12 @@ class StatusConta implements ArrayAccess
       */
     protected $mensagem_consulta_negada;
     
+    /**
+      * $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_permite_nova_via_cartao;
+    
 
     /**
      * Constructor
@@ -144,6 +154,7 @@ class StatusConta implements ArrayAccess
             $this->nome = $data["nome"];
             $this->flag_altera_limite = $data["flag_altera_limite"];
             $this->mensagem_consulta_negada = $data["mensagem_consulta_negada"];
+            $this->flag_permite_nova_via_cartao = $data["flag_permite_nova_via_cartao"];
         }
     }
     
@@ -228,6 +239,27 @@ class StatusConta implements ArrayAccess
     {
         
         $this->mensagem_consulta_negada = $mensagem_consulta_negada;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_permite_nova_via_cartao
+     * @return int
+     */
+    public function getFlagPermiteNovaViaCartao()
+    {
+        return $this->flag_permite_nova_via_cartao;
+    }
+  
+    /**
+     * Sets flag_permite_nova_via_cartao
+     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagPermiteNovaViaCartao($flag_permite_nova_via_cartao)
+    {
+        
+        $this->flag_permite_nova_via_cartao = $flag_permite_nova_via_cartao;
         return $this;
     }
     

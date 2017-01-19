@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusCartoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageStatusCartoes listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa)
+> \br.com.conductor.pier.api.v2.model\PageStatusCartoes listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
@@ -297,9 +297,10 @@ $flag_cancela_no_desbloqueio = 56; // int | Quando ativa, indica que o cart\u00C
 $id_status_destino_desbloqueio = 789; // int | Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
 $id_status_destino_conta = 789; // int | Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
 $flag_cobra_tarifa = 56; // int | Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+$flag_permite_nova_via_cartao = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa);
+    $result = $api_instance->listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusParametrosApi->listarStatusCartoesUsingGET: ', $e->getMessage(), "\n";
@@ -320,6 +321,7 @@ Name | Type | Description  | Notes
  **id_status_destino_desbloqueio** | **int**| Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. | [optional] 
  **id_status_destino_conta** | **int**| Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. | [optional] 
  **flag_cobra_tarifa** | **int**| Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. | [optional] 
+ **flag_permite_nova_via_cartao** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 
@@ -337,7 +339,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET5($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada)
+> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET5($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -360,9 +362,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status da Conta.
 $flag_altera_limite = 56; // int | Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
 $mensagem_consulta_negada = "mensagem_consulta_negada_example"; // string | Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+$flag_permite_nova_via_cartao = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET5($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada);
+    $result = $api_instance->listarUsingGET5($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusParametrosApi->listarUsingGET5: ', $e->getMessage(), "\n";
@@ -380,6 +383,7 @@ Name | Type | Description  | Notes
  **nome** | **string**| Nome atribu\u00C3\u00ADdo ao Status da Conta. | [optional] 
  **flag_altera_limite** | **int**| Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **mensagem_consulta_negada** | **string**| Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. | [optional] 
+ **flag_permite_nova_via_cartao** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 

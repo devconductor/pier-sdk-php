@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+[**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/pre-pagos/lotes | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+[**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id_cartao}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/pre-pagos/lotes | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validarCartaoChipBandeiradoUsingGET**](CartaoApi.md#validarCartaoChipBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
@@ -431,8 +433,118 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **gerarLotesCartoesPrePagosUsingPOST**
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes)
+
+Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id_origem_comercial = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+$id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+$id_tipo_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+$id_imagem = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+$id_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+$quantidade_cartoes = 56; // int | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+
+try { 
+    $result = $api_instance->gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->gerarLotesCartoesPrePagosUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_origem_comercial** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). | [optional] 
+ **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
+ **id_tipo_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). | [optional] 
+ **id_imagem** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). | [optional] 
+ **id_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
+ **quantidade_cartoes** | **int**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **gerarNovaViaUsingPOST**
+> \br.com.conductor.pier.api.v2.model\Cartao gerarNovaViaUsingPOST($id_cartao)
+
+Gerar uma nova via de Cart\u00C3\u00A3o
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+
+try { 
+    $result = $api_instance->gerarNovaViaUsingPOST($id_cartao);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->gerarNovaViaUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **listarLotesCartoesPrePagosUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageCartoes listarLotesCartoesPrePagosUsingGET($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro_lote, $usuario_cadastro, $flag_processado)
+> \br.com.conductor.pier.api.v2.model\PageCartoes listarLotesCartoesPrePagosUsingGET($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento)
 
 Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -458,12 +570,12 @@ $id_tipo_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C
 $id_imagem = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
 $id_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 $quantidade_cartoes = 56; // int | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-$data_cadastro_lote = new \DateTime(); // \DateTime | Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+$data_cadastro = new \DateTime(); // \DateTime | Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
 $usuario_cadastro = "usuario_cadastro_example"; // string | Nome do Usu\u00C3\u00A1rio que criou o Lote.
-$flag_processado = 56; // int | Indica o Status de Processamento do Lote.
+$status_processamento = 56; // int | Indica o Status de Processamento do Lote.
 
 try { 
-    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro_lote, $usuario_cadastro, $flag_processado);
+    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($page, $limit, $id, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartaoApi->listarLotesCartoesPrePagosUsingGET: ', $e->getMessage(), "\n";
@@ -484,9 +596,9 @@ Name | Type | Description  | Notes
  **id_imagem** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). | [optional] 
  **id_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **quantidade_cartoes** | **int**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
- **data_cadastro_lote** | **\DateTime**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
+ **data_cadastro** | **\DateTime**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
  **usuario_cadastro** | **string**| Nome do Usu\u00C3\u00A1rio que criou o Lote. | [optional] 
- **flag_processado** | **int**| Indica o Status de Processamento do Lote. | [optional] 
+ **status_processamento** | **int**| Indica o Status de Processamento do Lote. | [optional] 
 
 ### Return type
 

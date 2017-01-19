@@ -116,12 +116,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarFaturasUsingGET
+     *
+     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+     *
+     */
+    public function test_listarFaturasUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET1
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
     public function test_listarUsingGET1() {
+
+    }
+    
+    /**
+     * Test case for transacoesUsingPOST
+     *
+     * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+     *
+     */
+    public function test_transacoesUsingPOST() {
 
     }
     
