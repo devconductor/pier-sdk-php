@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transacoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingGET($page, $limit, $id_conta)
+> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingGET($id, $page, $limit)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -436,12 +436,12 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
+$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 try { 
-    $result = $api_instance->transacoesUsingGET($page, $limit, $id_conta);
+    $result = $api_instance->transacoesUsingGET($id, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContaApi->transacoesUsingGET: ', $e->getMessage(), "\n";
@@ -453,9 +453,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | [optional] 
 
 ### Return type
 

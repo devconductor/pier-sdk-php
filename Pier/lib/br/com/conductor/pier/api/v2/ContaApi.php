@@ -1030,15 +1030,15 @@ class ContaApi
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGET($page = null, $limit = null, $id_conta = null)
+    public function transacoesUsingGET($id, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($page, $limit, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($id, $page, $limit);
         return $response; 
     }
 
@@ -1048,15 +1048,19 @@ class ContaApi
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGETWithHttpInfo($page = null, $limit = null, $id_conta = null)
+    public function transacoesUsingGETWithHttpInfo($id, $page = null, $limit = null)
     {
         
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling transacoesUsingGET');
+        }
   
         // parse inputs
         $resourcePath = "/api/contas/{id}/timeline";
@@ -1078,13 +1082,17 @@ class ContaApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id_conta !== null) {
-            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
         }
         
+        // path params
         
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
