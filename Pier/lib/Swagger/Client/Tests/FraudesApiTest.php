@@ -1,6 +1,6 @@
 <?php
 /**
- * ContaApiTest
+ * FraudesApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * ContaApiTest Class Doc Comment
+ * FraudesApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContaApiTest extends \PHPUnit_Framework_TestCase
+class FraudesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,82 +66,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarLimiteUsingPUT
+     * Test case for consultarUsingGET
      *
-     * Alterar limite
+     * Apresenta os dados de um determinado Atendimento
      *
      */
-    public function test_alterarLimiteUsingPUT() {
+    public function test_consultarUsingGET() {
 
     }
     
     /**
-     * Test case for alterarVencimentoUsingPUT
+     * Test case for listarUsingGET
      *
-     * Alterar vencimento
+     * Lista todos os atendimentos
      *
      */
-    public function test_alterarVencimentoUsingPUT() {
+    public function test_listarUsingGET() {
 
     }
     
     /**
-     * Test case for consultarLimiteDisponibilidadeUsingGET1
+     * Test case for salvarUsingPOST
      *
-     * Apresenta os limites da conta
-     *
-     */
-    public function test_consultarLimiteDisponibilidadeUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET2
-     *
-     * Apresenta dados de uma determinada conta
+     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
      *
      */
-    public function test_consultarUsingGET2() {
-
-    }
-    
-    /**
-     * Test case for gerarCartaoUsingPOST
-     *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-     *
-     */
-    public function test_gerarCartaoUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for listarFaturasUsingGET
-     *
-     * Listar Faturas da Conta
-     *
-     */
-    public function test_listarFaturasUsingGET() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET2
-     *
-     * Lista contas existentes na base de dados do Emissor
-     *
-     */
-    public function test_listarUsingGET2() {
-
-    }
-    
-    /**
-     * Test case for transacoesUsingGET
-     *
-     * Permite listar uma linha do tempo com os eventos da conta
-     *
-     */
-    public function test_transacoesUsingGET() {
+    public function test_salvarUsingPOST() {
 
     }
     

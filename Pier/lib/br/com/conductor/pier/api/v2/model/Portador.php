@@ -57,7 +57,6 @@ class Portador implements ArrayAccess
         'id_parentesco' => 'int',
         'tipo_portador' => 'string',
         'nome_impresso' => 'string',
-        'id_imagem' => 'int',
         'id_tipo_cartao' => 'int',
         'flag_ativo' => 'int',
         'data_cadastro_portador' => '\DateTime',
@@ -79,7 +78,6 @@ class Portador implements ArrayAccess
         'id_parentesco' => 'idParentesco',
         'tipo_portador' => 'tipoPortador',
         'nome_impresso' => 'nomeImpresso',
-        'id_imagem' => 'idImagem',
         'id_tipo_cartao' => 'idTipoCartao',
         'flag_ativo' => 'flagAtivo',
         'data_cadastro_portador' => 'dataCadastroPortador',
@@ -101,7 +99,6 @@ class Portador implements ArrayAccess
         'id_parentesco' => 'setIdParentesco',
         'tipo_portador' => 'setTipoPortador',
         'nome_impresso' => 'setNomeImpresso',
-        'id_imagem' => 'setIdImagem',
         'id_tipo_cartao' => 'setIdTipoCartao',
         'flag_ativo' => 'setFlagAtivo',
         'data_cadastro_portador' => 'setDataCadastroPortador',
@@ -123,7 +120,6 @@ class Portador implements ArrayAccess
         'id_parentesco' => 'getIdParentesco',
         'tipo_portador' => 'getTipoPortador',
         'nome_impresso' => 'getNomeImpresso',
-        'id_imagem' => 'getIdImagem',
         'id_tipo_cartao' => 'getIdTipoCartao',
         'flag_ativo' => 'getFlagAtivo',
         'data_cadastro_portador' => 'getDataCadastroPortador',
@@ -172,12 +168,6 @@ class Portador implements ArrayAccess
     protected $nome_impresso;
     
     /**
-      * $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_imagem;
-    
-    /**
       * $id_tipo_cartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
       * @var int
       */
@@ -216,7 +206,6 @@ class Portador implements ArrayAccess
             $this->id_parentesco = $data["id_parentesco"];
             $this->tipo_portador = $data["tipo_portador"];
             $this->nome_impresso = $data["nome_impresso"];
-            $this->id_imagem = $data["id_imagem"];
             $this->id_tipo_cartao = $data["id_tipo_cartao"];
             $this->flag_ativo = $data["flag_ativo"];
             $this->data_cadastro_portador = $data["data_cadastro_portador"];
@@ -347,27 +336,6 @@ class Portador implements ArrayAccess
     {
         
         $this->nome_impresso = $nome_impresso;
-        return $this;
-    }
-    
-    /**
-     * Gets id_imagem
-     * @return int
-     */
-    public function getIdImagem()
-    {
-        return $this->id_imagem;
-    }
-  
-    /**
-     * Sets id_imagem
-     * @param int $id_imagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdImagem($id_imagem)
-    {
-        
-        $this->id_imagem = $id_imagem;
         return $this;
     }
     

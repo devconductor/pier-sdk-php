@@ -7,10 +7,10 @@ Method | HTTP request | Description
 [**alterarLimiteUsingPUT**](ContaApi.md#alterarLimiteUsingPUT) | **PUT** /api/contas/{id}/alterar-limites | Alterar limite
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Alterar vencimento
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET2**](ContaApi.md#consultarUsingGET2) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET2**](ContaApi.md#listarUsingGET2) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
@@ -190,8 +190,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\Conta consultarUsingGET1($id)
+# **consultarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\Conta consultarUsingGET2($id)
 
 Apresenta dados de uma determinada conta
 
@@ -211,10 +211,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET1($id);
+    $result = $api_instance->consultarUsingGET2($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -241,9 +241,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarCartaoUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoImpressao gerarCartaoUsingPOST($id, $id_pessoa)
+> \br.com.conductor.pier.api.v2.model\CartaoImpressao gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico)
 
 Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+
+Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
 
 ### Example 
 ```php
@@ -258,9 +260,10 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 $id_pessoa = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+$id_tipo_plastico = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
 
 try { 
-    $result = $api_instance->gerarCartaoUsingPOST($id, $id_pessoa);
+    $result = $api_instance->gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContaApi->gerarCartaoUsingPOST: ', $e->getMessage(), "\n";
@@ -274,6 +277,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **id_pessoa** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+ **id_tipo_plastico** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
 
 ### Return type
 
@@ -291,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarFaturasUsingGET**
-> \br.com.conductor.pier.api.v2.model\Fatura listarFaturasUsingGET($id, $page, $limit, $data_vencimento)
+> \br.com.conductor.pier.api.v2.model\FaturaResponse listarFaturasUsingGET($id, $page, $limit, $data_vencimento)
 
 Listar Faturas da Conta
 
@@ -333,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Fatura**](Fatura.md)
+[**\br.com.conductor.pier.api.v2.model\FaturaResponse**](FaturaResponse.md)
 
 ### Authorization
 
@@ -346,8 +350,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\Conta listarUsingGET1($page, $limit, $id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
+# **listarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\Conta listarUsingGET2($page, $limit, $id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -378,10 +382,10 @@ $data_cadastro = new \DateTime(); // \DateTime | Apresenta a data em que o cart\
 $data_ultima_alteracao_vencimento = new \DateTime(); // \DateTime | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
 
 try { 
-    $result = $api_instance->listarUsingGET1($page, $limit, $id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+    $result = $api_instance->listarUsingGET2($page, $limit, $id, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->listarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->listarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```

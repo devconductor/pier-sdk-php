@@ -66,22 +66,92 @@ class NotificacoesApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for atualizarSMSUsingPUT
+     * Test case for atualizarSMSUsingPOST
      *
      * Atualizar SMS
      *
      */
-    public function test_atualizarSMSUsingPUT() {
+    public function test_atualizarSMSUsingPOST() {
 
     }
     
     /**
-     * Test case for responderSMSUsingPUT
+     * Test case for limparAcessoTWWUsingGET
+     *
+     * Limpar Acessos
+     *
+     */
+    public function test_limparAcessoTWWUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarPushUsingGET
+     *
+     * Listar Push
+     *
+     */
+    public function test_listarPushUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarSMSUsingGET
+     *
+     * Listar SMS
+     *
+     */
+    public function test_listarSMSUsingGET() {
+
+    }
+    
+    /**
+     * Test case for responderSMSUsingPOST
      *
      * Responder SMS
      *
      */
-    public function test_responderSMSUsingPUT() {
+    public function test_responderSMSUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarPushFCMUsingPOST
+     *
+     * Enviar Push FCM
+     *
+     */
+    public function test_salvarPushFCMUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarPushGCMUsingPOST
+     *
+     * Enviar Push GCM
+     *
+     */
+    public function test_salvarPushGCMUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarPushUsingPOST
+     *
+     * Enviar Push APNS
+     *
+     */
+    public function test_salvarPushUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarSMSUsingPOST
+     *
+     * Enviar SMS
+     *
+     */
+    public function test_salvarSMSUsingPOST() {
 
     }
     

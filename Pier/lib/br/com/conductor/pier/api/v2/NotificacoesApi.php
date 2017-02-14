@@ -92,11 +92,11 @@ class NotificacoesApi
   
     
     /**
-     * atualizarSMSUsingPUT
+     * atualizarSMSUsingPOST
      *
      * Atualizar SMS
      *
-     * @param string $seu_num Seu n\u00C3\u00BAmero (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (required)
      * @param string $status Status (required)
      * @param string $data Data (required)
      * @param string $texto_status TextoStatus (required)
@@ -104,19 +104,19 @@ class NotificacoesApi
      * @return \br.com.conductor.pier.api.v2.model\SMS
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarSMSUsingPUT($seu_num, $status, $data, $texto_status, $operadora)
+    public function atualizarSMSUsingPOST($nsu, $status, $data, $texto_status, $operadora)
     {
-        list($response, $statusCode, $httpHeader) = $this->atualizarSMSUsingPUTWithHttpInfo ($seu_num, $status, $data, $texto_status, $operadora);
+        list($response, $statusCode, $httpHeader) = $this->atualizarSMSUsingPOSTWithHttpInfo ($nsu, $status, $data, $texto_status, $operadora);
         return $response; 
     }
 
 
     /**
-     * atualizarSMSUsingPUTWithHttpInfo
+     * atualizarSMSUsingPOSTWithHttpInfo
      *
      * Atualizar SMS
      *
-     * @param string $seu_num Seu n\u00C3\u00BAmero (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (required)
      * @param string $status Status (required)
      * @param string $data Data (required)
      * @param string $texto_status TextoStatus (required)
@@ -124,28 +124,28 @@ class NotificacoesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarSMSUsingPUTWithHttpInfo($seu_num, $status, $data, $texto_status, $operadora)
+    public function atualizarSMSUsingPOSTWithHttpInfo($nsu, $status, $data, $texto_status, $operadora)
     {
         
-        // verify the required parameter 'seu_num' is set
-        if ($seu_num === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $seu_num when calling atualizarSMSUsingPUT');
+        // verify the required parameter 'nsu' is set
+        if ($nsu === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nsu when calling atualizarSMSUsingPOST');
         }
         // verify the required parameter 'status' is set
         if ($status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $status when calling atualizarSMSUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $status when calling atualizarSMSUsingPOST');
         }
         // verify the required parameter 'data' is set
         if ($data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data when calling atualizarSMSUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $data when calling atualizarSMSUsingPOST');
         }
         // verify the required parameter 'texto_status' is set
         if ($texto_status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $texto_status when calling atualizarSMSUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $texto_status when calling atualizarSMSUsingPOST');
         }
         // verify the required parameter 'operadora' is set
         if ($operadora === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $operadora when calling atualizarSMSUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $operadora when calling atualizarSMSUsingPOST');
         }
   
         // parse inputs
@@ -162,24 +162,24 @@ class NotificacoesApi
   
         // query params
         
-        if ($seu_num !== null) {
-            $queryParams['SeuNum'] = $this->apiClient->getSerializer()->toQueryValue($seu_num);
+        if ($nsu !== null) {
+            $queryParams['nsu'] = $this->apiClient->getSerializer()->toQueryValue($nsu);
         }// query params
         
         if ($status !== null) {
-            $queryParams['Status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
         }// query params
         
         if ($data !== null) {
-            $queryParams['Data'] = $this->apiClient->getSerializer()->toQueryValue($data);
+            $queryParams['data'] = $this->apiClient->getSerializer()->toQueryValue($data);
         }// query params
         
         if ($texto_status !== null) {
-            $queryParams['TextoStatus'] = $this->apiClient->getSerializer()->toQueryValue($texto_status);
+            $queryParams['texto_status'] = $this->apiClient->getSerializer()->toQueryValue($texto_status);
         }// query params
         
         if ($operadora !== null) {
-            $queryParams['Operadora'] = $this->apiClient->getSerializer()->toQueryValue($operadora);
+            $queryParams['operadora'] = $this->apiClient->getSerializer()->toQueryValue($operadora);
         }
         
         
@@ -206,7 +206,7 @@ class NotificacoesApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\SMS'
             );
@@ -230,52 +230,136 @@ class NotificacoesApi
     }
     
     /**
-     * responderSMSUsingPUT
+     * limparAcessoTWWUsingGET
      *
-     * Responder SMS
+     * Limpar Acessos
      *
-     * @param string $seunum Seu n\u00C3\u00BAmero (required)
-     * @param string $data Data (required)
-     * @param string $texto_sms_mo TextoStatus (required)
-     * @return \br.com.conductor.pier.api.v2.model\SMS
+     * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function responderSMSUsingPUT($seunum, $data, $texto_sms_mo)
+    public function limparAcessoTWWUsingGET()
     {
-        list($response, $statusCode, $httpHeader) = $this->responderSMSUsingPUTWithHttpInfo ($seunum, $data, $texto_sms_mo);
+        list($response, $statusCode, $httpHeader) = $this->limparAcessoTWWUsingGETWithHttpInfo ();
         return $response; 
     }
 
 
     /**
-     * responderSMSUsingPUTWithHttpInfo
+     * limparAcessoTWWUsingGETWithHttpInfo
      *
-     * Responder SMS
+     * Limpar Acessos
      *
-     * @param string $seunum Seu n\u00C3\u00BAmero (required)
-     * @param string $data Data (required)
-     * @param string $texto_sms_mo TextoStatus (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function responderSMSUsingPUTWithHttpInfo($seunum, $data, $texto_sms_mo)
+    public function limparAcessoTWWUsingGETWithHttpInfo()
     {
         
-        // verify the required parameter 'seunum' is set
-        if ($seunum === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $seunum when calling responderSMSUsingPUT');
-        }
-        // verify the required parameter 'data' is set
-        if ($data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data when calling responderSMSUsingPUT');
-        }
-        // verify the required parameter 'texto_sms_mo' is set
-        if ($texto_sms_mo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $texto_sms_mo when calling responderSMSUsingPUT');
-        }
   
         // parse inputs
-        $resourcePath = "/api/notificacoes/sms/responder";
+        $resourcePath = "/api/notificacoes/sms/limpar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarPushUsingGET
+     *
+     * Listar Push
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param \DateTime $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
+     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $plataforma Plataforma de Push notifications. (optional)
+     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PagePush
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPushUsingGET($page = null, $limit = null, $data_envio = null, $evento = null, $status = null, $plataforma = null, $protocolo = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarPushUsingGETWithHttpInfo ($page, $limit, $data_envio, $evento, $status, $plataforma, $protocolo);
+        return $response; 
+    }
+
+
+    /**
+     * listarPushUsingGETWithHttpInfo
+     *
+     * Listar Push
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param \DateTime $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
+     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $plataforma Plataforma de Push notifications. (optional)
+     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PagePush, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPushUsingGETWithHttpInfo($page = null, $limit = null, $data_envio = null, $evento = null, $status = null, $plataforma = null, $protocolo = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/push";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -288,16 +372,32 @@ class NotificacoesApi
   
         // query params
         
-        if ($seunum !== null) {
-            $queryParams['Seunum'] = $this->apiClient->getSerializer()->toQueryValue($seunum);
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
         
-        if ($data !== null) {
-            $queryParams['Data'] = $this->apiClient->getSerializer()->toQueryValue($data);
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }// query params
         
-        if ($texto_sms_mo !== null) {
-            $queryParams['TextoSmsMo'] = $this->apiClient->getSerializer()->toQueryValue($texto_sms_mo);
+        if ($data_envio !== null) {
+            $queryParams['dataEnvio'] = $this->apiClient->getSerializer()->toQueryValue($data_envio);
+        }// query params
+        
+        if ($evento !== null) {
+            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
+        }// query params
+        
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }// query params
+        
+        if ($plataforma !== null) {
+            $queryParams['plataforma'] = $this->apiClient->getSerializer()->toQueryValue($plataforma);
+        }// query params
+        
+        if ($protocolo !== null) {
+            $queryParams['protocolo'] = $this->apiClient->getSerializer()->toQueryValue($protocolo);
         }
         
         
@@ -324,7 +424,255 @@ class NotificacoesApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PagePush'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PagePush', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePush', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarSMSUsingGET
+     *
+     * Listar SMS
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param \DateTime $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
+     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
+     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageSMS
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $evento = null, $status = null, $operadora = null, $protocolo = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $evento, $status, $operadora, $protocolo);
+        return $response; 
+    }
+
+
+    /**
+     * listarSMSUsingGETWithHttpInfo
+     *
+     * Listar SMS
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param \DateTime $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
+     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
+     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageSMS, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $evento = null, $status = null, $operadora = null, $protocolo = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/sms";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($data_inclusao !== null) {
+            $queryParams['dataInclusao'] = $this->apiClient->getSerializer()->toQueryValue($data_inclusao);
+        }// query params
+        
+        if ($evento !== null) {
+            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
+        }// query params
+        
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }// query params
+        
+        if ($operadora !== null) {
+            $queryParams['operadora'] = $this->apiClient->getSerializer()->toQueryValue($operadora);
+        }// query params
+        
+        if ($protocolo !== null) {
+            $queryParams['protocolo'] = $this->apiClient->getSerializer()->toQueryValue($protocolo);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageSMS'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageSMS', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageSMS', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * responderSMSUsingPOST
+     *
+     * Responder SMS
+     *
+     * @param string $nsu Seu n\u00C3\u00BAmero (required)
+     * @param string $data Data (required)
+     * @param string $resposta TextoStatus (required)
+     * @return \br.com.conductor.pier.api.v2.model\SMS
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function responderSMSUsingPOST($nsu, $data, $resposta)
+    {
+        list($response, $statusCode, $httpHeader) = $this->responderSMSUsingPOSTWithHttpInfo ($nsu, $data, $resposta);
+        return $response; 
+    }
+
+
+    /**
+     * responderSMSUsingPOSTWithHttpInfo
+     *
+     * Responder SMS
+     *
+     * @param string $nsu Seu n\u00C3\u00BAmero (required)
+     * @param string $data Data (required)
+     * @param string $resposta TextoStatus (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function responderSMSUsingPOSTWithHttpInfo($nsu, $data, $resposta)
+    {
+        
+        // verify the required parameter 'nsu' is set
+        if ($nsu === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nsu when calling responderSMSUsingPOST');
+        }
+        // verify the required parameter 'data' is set
+        if ($data === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data when calling responderSMSUsingPOST');
+        }
+        // verify the required parameter 'resposta' is set
+        if ($resposta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling responderSMSUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/sms/responder";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($nsu !== null) {
+            $queryParams['nsu'] = $this->apiClient->getSerializer()->toQueryValue($nsu);
+        }// query params
+        
+        if ($data !== null) {
+            $queryParams['data'] = $this->apiClient->getSerializer()->toQueryValue($data);
+        }// query params
+        
+        if ($resposta !== null) {
+            $queryParams['resposta'] = $this->apiClient->getSerializer()->toQueryValue($resposta);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\SMS'
             );
@@ -339,6 +687,398 @@ class NotificacoesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\SMS', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarPushFCMUsingPOST
+     *
+     * Enviar Push FCM
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushFCMUsingPOST($push_persists)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarPushFCMUsingPOSTWithHttpInfo ($push_persists);
+        return $response; 
+    }
+
+
+    /**
+     * salvarPushFCMUsingPOSTWithHttpInfo
+     *
+     * Enviar Push FCM
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushFCMUsingPOSTWithHttpInfo($push_persists)
+    {
+        
+        // verify the required parameter 'push_persists' is set
+        if ($push_persists === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $push_persists when calling salvarPushFCMUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/push/fcm";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($push_persists)) {
+            $_tempBody = $push_persists;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarPushGCMUsingPOST
+     *
+     * Enviar Push GCM
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushGCMUsingPOST($push_persists)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarPushGCMUsingPOSTWithHttpInfo ($push_persists);
+        return $response; 
+    }
+
+
+    /**
+     * salvarPushGCMUsingPOSTWithHttpInfo
+     *
+     * Enviar Push GCM
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushGCMUsingPOSTWithHttpInfo($push_persists)
+    {
+        
+        // verify the required parameter 'push_persists' is set
+        if ($push_persists === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $push_persists when calling salvarPushGCMUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/push/gcm";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($push_persists)) {
+            $_tempBody = $push_persists;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarPushUsingPOST
+     *
+     * Enviar Push APNS
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushAPNS[] $push_persists pushPersists (required)
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushUsingPOST($push_persists)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarPushUsingPOSTWithHttpInfo ($push_persists);
+        return $response; 
+    }
+
+
+    /**
+     * salvarPushUsingPOSTWithHttpInfo
+     *
+     * Enviar Push APNS
+     *
+     * @param \br.com.conductor.pier.api.v2.model\PushAPNS[] $push_persists pushPersists (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarPushUsingPOSTWithHttpInfo($push_persists)
+    {
+        
+        // verify the required parameter 'push_persists' is set
+        if ($push_persists === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $push_persists when calling salvarPushUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/push/apns";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($push_persists)) {
+            $_tempBody = $push_persists;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarSMSUsingPOST
+     *
+     * Enviar SMS
+     *
+     * @param \br.com.conductor.pier.api.v2.model\NotificacaoSMSBody[] $lista_sms listaSMS (required)
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarSMSUsingPOST($lista_sms)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarSMSUsingPOSTWithHttpInfo ($lista_sms);
+        return $response; 
+    }
+
+
+    /**
+     * salvarSMSUsingPOSTWithHttpInfo
+     *
+     * Enviar SMS
+     *
+     * @param \br.com.conductor.pier.api.v2.model\NotificacaoSMSBody[] $lista_sms listaSMS (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarSMSUsingPOSTWithHttpInfo($lista_sms)
+    {
+        
+        // verify the required parameter 'lista_sms' is set
+        if ($lista_sms === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lista_sms when calling salvarSMSUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/sms";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($lista_sms)) {
+            $_tempBody = $lista_sms;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

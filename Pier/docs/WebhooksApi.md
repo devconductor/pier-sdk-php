@@ -5,9 +5,9 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT3**](WebhooksApi.md#alterarUsingPUT3) | **PUT** /api/webhooks | Alterar Webhook
-[**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET10**](WebhooksApi.md#listarUsingGET10) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST3**](WebhooksApi.md#salvarUsingPOST3) | **POST** /api/webhooks | Salvar Webhook
+[**consultarUsingGET10**](WebhooksApi.md#consultarUsingGET10) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET11**](WebhooksApi.md#listarUsingGET11) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST4**](WebhooksApi.md#salvarUsingPOST4) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT3**
@@ -66,8 +66,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET9($id)
+# **consultarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET10($id)
 
 Consultar Webhook
 
@@ -87,10 +87,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET9($id);
+    $result = $api_instance->consultarUsingGET10($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->consultarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->consultarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -116,8 +116,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET10($page, $limit, $id, $evento, $metodo, $url)
+# **listarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET11($page, $limit, $id, $evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -142,10 +142,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET10($page, $limit, $id, $evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET11($page, $limit, $id, $evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->listarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->listarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -176,8 +176,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST3**
-> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST3($evento, $metodo, $url)
+# **salvarUsingPOST4**
+> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST4($evento, $metodo, $url)
 
 Salvar Webhook
 
@@ -199,10 +199,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->salvarUsingPOST3($evento, $metodo, $url);
+    $result = $api_instance->salvarUsingPOST4($evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->salvarUsingPOST3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -9,22 +9,23 @@ Method | HTTP request | Description
 [**alterarUsingPUT2**](CadastrosGeraisApi.md#alterarUsingPUT2) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 [**consultarOrigemComercialUsingGET**](CadastrosGeraisApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarProdutoUsingGET**](CadastrosGeraisApi.md#consultarProdutoUsingGET) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
-[**consultarUsingGET2**](CadastrosGeraisApi.md#consultarUsingGET2) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET3**](CadastrosGeraisApi.md#consultarUsingGET3) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET6**](CadastrosGeraisApi.md#consultarUsingGET6) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultarUsingGET7**](CadastrosGeraisApi.md#consultarUsingGET7) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET8**](CadastrosGeraisApi.md#consultarUsingGET8) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET3**](CadastrosGeraisApi.md#consultarUsingGET3) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET4**](CadastrosGeraisApi.md#consultarUsingGET4) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET7**](CadastrosGeraisApi.md#consultarUsingGET7) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET8**](CadastrosGeraisApi.md#consultarUsingGET8) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultarUsingGET9**](CadastrosGeraisApi.md#consultarUsingGET9) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**listarHistoricoTelefonesUsingGET**](CadastrosGeraisApi.md#listarHistoricoTelefonesUsingGET) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProdutosUsingGET**](CadastrosGeraisApi.md#listarProdutosUsingGET) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET2**](CadastrosGeraisApi.md#listarUsingGET2) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET3**](CadastrosGeraisApi.md#listarUsingGET3) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET7**](CadastrosGeraisApi.md#listarUsingGET7) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**salvarUsingPOST**](CadastrosGeraisApi.md#salvarUsingPOST) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST1**](CadastrosGeraisApi.md#salvarUsingPOST1) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**listarUsingGET10**](CadastrosGeraisApi.md#listarUsingGET10) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET3**](CadastrosGeraisApi.md#listarUsingGET3) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET5**](CadastrosGeraisApi.md#listarUsingGET5) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**salvarUsingPOST1**](CadastrosGeraisApi.md#salvarUsingPOST1) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST3**](CadastrosGeraisApi.md#salvarUsingPOST3) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 # **alterarUsingPUT**
@@ -122,7 +123,7 @@ $nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome
 $tipo = "tipo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
 $cpf = "cpf_example"; // string | N\u00C3\u00BAmero do CPF, quando PF.
 $cnpj = "cnpj_example"; // string | N\u00C3\u00BAmero do CNPJ, quando PJ.
-$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
 $sexo = "sexo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
 
 try { 
@@ -143,7 +144,7 @@ Name | Type | Description  | Notes
  **tipo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
  **cpf** | **string**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
  **cnpj** | **string**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
 
 ### Return type
@@ -319,8 +320,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\Endereco consultarUsingGET2($id)
+# **consultarUsingGET3**
+> \br.com.conductor.pier.api.v2.model\Endereco consultarUsingGET3($id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -340,10 +341,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET2($id);
+    $result = $api_instance->consultarUsingGET3($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -369,8 +370,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\Pessoa consultarUsingGET3($id)
+# **consultarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\Pessoa consultarUsingGET4($id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -390,10 +391,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi(
 $id = 789; // int | ID da Pessoa
 
 try { 
-    $result = $api_instance->consultarUsingGET3($id);
+    $result = $api_instance->consultarUsingGET4($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -419,8 +420,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\Telefone consultarUsingGET6($id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\Telefone consultarUsingGET7($id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -440,10 +441,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET6($id);
+    $result = $api_instance->consultarUsingGET7($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -469,8 +470,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\TipoEndereco consultarUsingGET7($id)
+# **consultarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\TipoEndereco consultarUsingGET8($id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -490,10 +491,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET7($id);
+    $result = $api_instance->consultarUsingGET8($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -519,8 +520,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\TipoTelefone consultarUsingGET8($id)
+# **consultarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\TipoTelefone consultarUsingGET9($id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -540,10 +541,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET8($id);
+    $result = $api_instance->consultarUsingGET9($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -557,6 +558,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\TipoTelefone**](TipoTelefone.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarHistoricoTelefonesUsingGET**
+> \br.com.conductor.pier.api.v2.model\HistoricoTelefone listarHistoricoTelefonesUsingGET($id)
+
+Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+
+Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+
+try { 
+    $result = $api_instance->listarHistoricoTelefonesUsingGET($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarHistoricoTelefonesUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\HistoricoTelefone**](HistoricoTelefone.md)
 
 ### Authorization
 
@@ -685,8 +736,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET2($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
+# **listarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\PageTipoTelefones listarUsingGET10($page, $limit, $id, $nome)
+
+Lista os Tipos de Telefones
+
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: access_token
+br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+$nome = "nome_example"; // string | Nome do Tipo do Telefone
+
+try { 
+    $result = $api_instance->listarUsingGET10($page, $limit, $id, $nome);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET10: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **nome** | **string**| Nome do Tipo do Telefone | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageTipoTelefones**](PageTipoTelefones.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET3**
+> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET3($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -721,10 +828,10 @@ $data_inclusao = new \DateTime(); // \DateTime | Apresenta a data em que fora ca
 $data_ultima_atualizacao = new \DateTime(); // \DateTime | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
 
 try { 
-    $result = $api_instance->listarUsingGET2($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+    $result = $api_instance->listarUsingGET3($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -765,8 +872,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET3($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo)
+# **listarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET4($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -794,10 +901,10 @@ $data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa,
 $sexo = "sexo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
 
 try { 
-    $result = $api_instance->listarUsingGET3($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
+    $result = $api_instance->listarUsingGET4($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -831,8 +938,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET4**
-> \br.com.conductor.pier.api.v2.model\PagePortador listarUsingGET4($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_imagem, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
+# **listarUsingGET5**
+> \br.com.conductor.pier.api.v2.model\PagePortador listarUsingGET5($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
 
 Lista os Portadores existentes
 
@@ -857,17 +964,16 @@ $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 $id_parentesco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
 $tipo_portador = "tipo_portador_example"; // string | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
 $nome_impresso = "nome_impresso_example"; // string | Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-$id_imagem = 789; // int | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
 $id_tipo_cartao = 789; // int | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
 $flag_ativo = 56; // int | Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
 $data_cadastro_portador = new \DateTime(); // \DateTime | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
 $data_cancelamento_portador = new \DateTime(); // \DateTime | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->listarUsingGET4($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_imagem, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+    $result = $api_instance->listarUsingGET5($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET5: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -884,7 +990,6 @@ Name | Type | Description  | Notes
  **id_parentesco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
  **tipo_portador** | **string**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
  **nome_impresso** | **string**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
- **id_imagem** | **int**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o. | [optional] 
  **id_tipo_cartao** | **int**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
  **flag_ativo** | **int**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
  **data_cadastro_portador** | **\DateTime**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
@@ -905,8 +1010,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\PageTelefones listarUsingGET7($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
+# **listarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\PageTelefones listarUsingGET8($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -934,10 +1039,10 @@ $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 $status = 56; // int | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
 
 try { 
-    $result = $api_instance->listarUsingGET7($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+    $result = $api_instance->listarUsingGET8($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -971,8 +1076,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\PageTiposEndereco listarUsingGET8($page, $limit, $id, $nome)
+# **listarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\PageTiposEndereco listarUsingGET9($page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -995,10 +1100,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Endere\u00C3\u00A7o
 
 try { 
-    $result = $api_instance->listarUsingGET8($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET9($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1027,64 +1132,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PageTipoTelefones listarUsingGET9($page, $limit, $id, $nome)
-
-Lista os Tipos de Telefones
-
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-$nome = "nome_example"; // string | Nome do Tipo do Telefone
-
-try { 
-    $result = $api_instance->listarUsingGET9($page, $limit, $id, $nome);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET9: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
- **nome** | **string**| Nome do Tipo do Telefone | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PageTipoTelefones**](PageTipoTelefones.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **salvarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Endereco salvarUsingPOST($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+# **salvarUsingPOST1**
+> \br.com.conductor.pier.api.v2.model\Endereco salvarUsingPOST1($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1114,10 +1163,10 @@ $uf = "uf_example"; // string | Apresenta sigla da Unidade Federativa
 $pais = "pais_example"; // string | Apresenta nome do Pais
 
 try { 
-    $result = $api_instance->salvarUsingPOST($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
+    $result = $api_instance->salvarUsingPOST1($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1153,8 +1202,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST1**
-> \br.com.conductor.pier.api.v2.model\Pessoa salvarUsingPOST1($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo)
+# **salvarUsingPOST2**
+> \br.com.conductor.pier.api.v2.model\Pessoa salvarUsingPOST2($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1175,14 +1224,14 @@ $nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome
 $tipo = "tipo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
 $cpf = "cpf_example"; // string | N\u00C3\u00BAmero do CPF, quando PF.
 $cnpj = "cnpj_example"; // string | N\u00C3\u00BAmero do CNPJ, quando PJ.
-$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
 $sexo = "sexo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
 
 try { 
-    $result = $api_instance->salvarUsingPOST1($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
+    $result = $api_instance->salvarUsingPOST2($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1195,7 +1244,7 @@ Name | Type | Description  | Notes
  **tipo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
  **cpf** | **string**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
  **cnpj** | **string**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
 
 ### Return type
@@ -1213,8 +1262,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST2**
-> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST2($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+# **salvarUsingPOST3**
+> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST3($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1238,10 +1287,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST2($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST3($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST3: ', $e->getMessage(), "\n";
 }
 ?>
 ```

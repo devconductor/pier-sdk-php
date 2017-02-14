@@ -220,7 +220,7 @@ class WebhooksApi
     }
     
     /**
-     * consultarUsingGET9
+     * consultarUsingGET10
      *
      * Consultar Webhook
      *
@@ -228,15 +228,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9($id)
+    public function consultarUsingGET10($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET9WithHttpInfo
+     * consultarUsingGET10WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -244,12 +244,12 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9WithHttpInfo($id)
+    public function consultarUsingGET10WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
         }
   
         // parse inputs
@@ -322,7 +322,7 @@ class WebhooksApi
     }
     
     /**
-     * listarUsingGET10
+     * listarUsingGET11
      *
      * Lista os Webhooks
      *
@@ -335,15 +335,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET11($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET10WithHttpInfo
+     * listarUsingGET11WithHttpInfo
      *
      * Lista os Webhooks
      *
@@ -356,7 +356,7 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET11WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
         
   
@@ -446,7 +446,7 @@ class WebhooksApi
     }
     
     /**
-     * salvarUsingPOST3
+     * salvarUsingPOST4
      *
      * Salvar Webhook
      *
@@ -456,15 +456,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST3($evento, $metodo, $url)
+    public function salvarUsingPOST4($evento, $metodo, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST3WithHttpInfo ($evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST4WithHttpInfo ($evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST3WithHttpInfo
+     * salvarUsingPOST4WithHttpInfo
      *
      * Salvar Webhook
      *
@@ -474,20 +474,20 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST3WithHttpInfo($evento, $metodo, $url)
+    public function salvarUsingPOST4WithHttpInfo($evento, $metodo, $url)
     {
         
         // verify the required parameter 'evento' is set
         if ($evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $evento when calling salvarUsingPOST3');
+            throw new \InvalidArgumentException('Missing the required parameter $evento when calling salvarUsingPOST4');
         }
         // verify the required parameter 'metodo' is set
         if ($metodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling salvarUsingPOST3');
+            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling salvarUsingPOST4');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST3');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST4');
         }
   
         // parse inputs

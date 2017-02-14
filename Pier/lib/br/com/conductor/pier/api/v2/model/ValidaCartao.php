@@ -51,8 +51,13 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id_status_cartao' => 'int',
         'status_cartao' => 'string',
+        'id_status_conta' => 'int',
         'status_conta' => 'string',
+        'id_conta' => 'int',
+        'numero_agencia' => 'int',
+        'numero_conta_corrente' => 'string',
         'criptograma_resposta' => 'string'
     );
   
@@ -65,8 +70,13 @@ class ValidaCartao implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id_status_cartao' => 'idStatusCartao',
         'status_cartao' => 'statusCartao',
+        'id_status_conta' => 'idStatusConta',
         'status_conta' => 'statusConta',
+        'id_conta' => 'idConta',
+        'numero_agencia' => 'numeroAgencia',
+        'numero_conta_corrente' => 'numeroContaCorrente',
         'criptograma_resposta' => 'criptogramaResposta'
     );
   
@@ -79,8 +89,13 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id_status_cartao' => 'setIdStatusCartao',
         'status_cartao' => 'setStatusCartao',
+        'id_status_conta' => 'setIdStatusConta',
         'status_conta' => 'setStatusConta',
+        'id_conta' => 'setIdConta',
+        'numero_agencia' => 'setNumeroAgencia',
+        'numero_conta_corrente' => 'setNumeroContaCorrente',
         'criptograma_resposta' => 'setCriptogramaResposta'
     );
   
@@ -93,8 +108,13 @@ class ValidaCartao implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id_status_cartao' => 'getIdStatusCartao',
         'status_cartao' => 'getStatusCartao',
+        'id_status_conta' => 'getIdStatusConta',
         'status_conta' => 'getStatusConta',
+        'id_conta' => 'getIdConta',
+        'numero_agencia' => 'getNumeroAgencia',
+        'numero_conta_corrente' => 'getNumeroContaCorrente',
         'criptograma_resposta' => 'getCriptogramaResposta'
     );
   
@@ -104,16 +124,46 @@ class ValidaCartao implements ArrayAccess
 
     
     /**
+      * $id_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+      * @var int
+      */
+    protected $id_status_cartao;
+    
+    /**
       * $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
       * @var string
       */
     protected $status_cartao;
     
     /**
+      * $id_status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+      * @var int
+      */
+    protected $id_status_conta;
+    
+    /**
       * $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
       * @var string
       */
     protected $status_conta;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+      * @var int
+      */
+    protected $numero_agencia;
+    
+    /**
+      * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+      * @var string
+      */
+    protected $numero_conta_corrente;
     
     /**
       * $criptograma_resposta Criptograma de resposta
@@ -130,10 +180,36 @@ class ValidaCartao implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id_status_cartao = $data["id_status_cartao"];
             $this->status_cartao = $data["status_cartao"];
+            $this->id_status_conta = $data["id_status_conta"];
             $this->status_conta = $data["status_conta"];
+            $this->id_conta = $data["id_conta"];
+            $this->numero_agencia = $data["numero_agencia"];
+            $this->numero_conta_corrente = $data["numero_conta_corrente"];
             $this->criptograma_resposta = $data["criptograma_resposta"];
         }
+    }
+    
+    /**
+     * Gets id_status_cartao
+     * @return int
+     */
+    public function getIdStatusCartao()
+    {
+        return $this->id_status_cartao;
+    }
+  
+    /**
+     * Sets id_status_cartao
+     * @param int $id_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+     * @return $this
+     */
+    public function setIdStatusCartao($id_status_cartao)
+    {
+        
+        $this->id_status_cartao = $id_status_cartao;
+        return $this;
     }
     
     /**
@@ -158,6 +234,27 @@ class ValidaCartao implements ArrayAccess
     }
     
     /**
+     * Gets id_status_conta
+     * @return int
+     */
+    public function getIdStatusConta()
+    {
+        return $this->id_status_conta;
+    }
+  
+    /**
+     * Sets id_status_conta
+     * @param int $id_status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+     * @return $this
+     */
+    public function setIdStatusConta($id_status_conta)
+    {
+        
+        $this->id_status_conta = $id_status_conta;
+        return $this;
+    }
+    
+    /**
      * Gets status_conta
      * @return string
      */
@@ -175,6 +272,69 @@ class ValidaCartao implements ArrayAccess
     {
         
         $this->status_conta = $status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_agencia
+     * @return int
+     */
+    public function getNumeroAgencia()
+    {
+        return $this->numero_agencia;
+    }
+  
+    /**
+     * Sets numero_agencia
+     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @return $this
+     */
+    public function setNumeroAgencia($numero_agencia)
+    {
+        
+        $this->numero_agencia = $numero_agencia;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_conta_corrente
+     * @return string
+     */
+    public function getNumeroContaCorrente()
+    {
+        return $this->numero_conta_corrente;
+    }
+  
+    /**
+     * Sets numero_conta_corrente
+     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+     * @return $this
+     */
+    public function setNumeroContaCorrente($numero_conta_corrente)
+    {
+        
+        $this->numero_conta_corrente = $numero_conta_corrente;
         return $this;
     }
     

@@ -296,7 +296,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET4
+     * consultarUsingGET5
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -304,15 +304,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusConta
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4($id)
+    public function consultarUsingGET5($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET4WithHttpInfo
+     * consultarUsingGET5WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -320,12 +320,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusConta, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4WithHttpInfo($id)
+    public function consultarUsingGET5WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET4');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
         }
   
         // parse inputs
@@ -398,7 +398,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET5
+     * consultarUsingGET6
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -406,15 +406,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($id)
+    public function consultarUsingGET6($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET5WithHttpInfo
+     * consultarUsingGET6WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -422,12 +422,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($id)
+    public function consultarUsingGET6WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
         }
   
         // parse inputs
@@ -760,7 +760,7 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET5
+     * listarUsingGET6
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -774,15 +774,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET6($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET5WithHttpInfo
+     * listarUsingGET6WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -796,7 +796,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET6WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -890,7 +890,7 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET7
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -901,15 +901,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET7($page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -920,7 +920,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET7WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
     {
         
   

@@ -1,6 +1,6 @@
 <?php
 /**
- * Fatura
+ * FaturaResponse
  *
  * PHP version 5
  *
@@ -35,22 +35,25 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * Fatura Class Doc Comment
+ * FaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Fatura
+ * @description Fatura
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Fatura implements ArrayAccess
+class FaturaResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id' => 'int',
+        'id_conta' => 'int',
+        'id_produto' => 'int',
         'data_vencimento' => '\DateTime',
         'saldo_fatura_anterior' => 'Number',
         'saldo_multa' => 'Number',
@@ -73,6 +76,9 @@ class Fatura implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id' => 'id',
+        'id_conta' => 'idConta',
+        'id_produto' => 'idProduto',
         'data_vencimento' => 'dataVencimento',
         'saldo_fatura_anterior' => 'saldoFaturaAnterior',
         'saldo_multa' => 'saldoMulta',
@@ -95,6 +101,9 @@ class Fatura implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id' => 'setId',
+        'id_conta' => 'setIdConta',
+        'id_produto' => 'setIdProduto',
         'data_vencimento' => 'setDataVencimento',
         'saldo_fatura_anterior' => 'setSaldoFaturaAnterior',
         'saldo_multa' => 'setSaldoMulta',
@@ -117,6 +126,9 @@ class Fatura implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id' => 'getId',
+        'id_conta' => 'getIdConta',
+        'id_produto' => 'getIdProduto',
         'data_vencimento' => 'getDataVencimento',
         'saldo_fatura_anterior' => 'getSaldoFaturaAnterior',
         'saldo_multa' => 'getSaldoMulta',
@@ -136,13 +148,31 @@ class Fatura implements ArrayAccess
 
     
     /**
-      * $data_vencimento Data de Vencimento da Fatura.
+      * $id C\u00C3\u00B3digo identificador da fatura.
+      * @var int
+      */
+    protected $id;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_produto C\u00C3\u00B3digo identificador do produto.
+      * @var int
+      */
+    protected $id_produto;
+    
+    /**
+      * $data_vencimento Data de vencimento da fatura.
       * @var \DateTime
       */
     protected $data_vencimento;
     
     /**
-      * $saldo_fatura_anterior Saldo da Fatura Anterior.
+      * $saldo_fatura_anterior Saldo da fatura anterior.
       * @var Number
       */
     protected $saldo_fatura_anterior;
@@ -154,49 +184,49 @@ class Fatura implements ArrayAccess
     protected $saldo_multa;
     
     /**
-      * $saldo_compras Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+      * $saldo_compras Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
       * @var Number
       */
     protected $saldo_compras;
     
     /**
-      * $saldo_pagamentos Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+      * $saldo_pagamentos Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
       * @var Number
       */
     protected $saldo_pagamentos;
     
     /**
-      * $saldo_tarifas Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+      * $saldo_tarifas Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
       * @var Number
       */
     protected $saldo_tarifas;
     
     /**
-      * $saldo_debitos Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+      * $saldo_debitos Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
       * @var Number
       */
     protected $saldo_debitos;
     
     /**
-      * $saldo_creditos Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+      * $saldo_creditos Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
       * @var Number
       */
     protected $saldo_creditos;
     
     /**
-      * $saldo_atual_final Salto total devedor da Fatura atual.
+      * $saldo_atual_final Salto total devedor da fatura atual.
       * @var Number
       */
     protected $saldo_atual_final;
     
     /**
-      * $valor_minimo_fatura Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+      * $valor_minimo_fatura Valor m\u00C3\u00ADnimo para pagamento da fatura.
       * @var Number
       */
     protected $valor_minimo_fatura;
     
     /**
-      * $flag_emite_fatura Quando ativa, indica que fora emitida uma Fatura.
+      * $flag_emite_fatura Quando ativa, indica que fora emitida uma fatura.
       * @var int
       */
     protected $flag_emite_fatura;
@@ -210,6 +240,9 @@ class Fatura implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id = $data["id"];
+            $this->id_conta = $data["id_conta"];
+            $this->id_produto = $data["id_produto"];
             $this->data_vencimento = $data["data_vencimento"];
             $this->saldo_fatura_anterior = $data["saldo_fatura_anterior"];
             $this->saldo_multa = $data["saldo_multa"];
@@ -225,6 +258,69 @@ class Fatura implements ArrayAccess
     }
     
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo identificador da fatura.
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo identificador do produto.
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
      * Gets data_vencimento
      * @return \DateTime
      */
@@ -235,7 +331,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param \DateTime $data_vencimento Data de Vencimento da Fatura.
+     * @param \DateTime $data_vencimento Data de vencimento da fatura.
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -256,7 +352,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_fatura_anterior
-     * @param Number $saldo_fatura_anterior Saldo da Fatura Anterior.
+     * @param Number $saldo_fatura_anterior Saldo da fatura anterior.
      * @return $this
      */
     public function setSaldoFaturaAnterior($saldo_fatura_anterior)
@@ -298,7 +394,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_compras
-     * @param Number $saldo_compras Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+     * @param Number $saldo_compras Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
      * @return $this
      */
     public function setSaldoCompras($saldo_compras)
@@ -319,7 +415,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_pagamentos
-     * @param Number $saldo_pagamentos Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+     * @param Number $saldo_pagamentos Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
      * @return $this
      */
     public function setSaldoPagamentos($saldo_pagamentos)
@@ -340,7 +436,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_tarifas
-     * @param Number $saldo_tarifas Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+     * @param Number $saldo_tarifas Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
      * @return $this
      */
     public function setSaldoTarifas($saldo_tarifas)
@@ -361,7 +457,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_debitos
-     * @param Number $saldo_debitos Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+     * @param Number $saldo_debitos Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
      * @return $this
      */
     public function setSaldoDebitos($saldo_debitos)
@@ -382,7 +478,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_creditos
-     * @param Number $saldo_creditos Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+     * @param Number $saldo_creditos Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
      * @return $this
      */
     public function setSaldoCreditos($saldo_creditos)
@@ -403,7 +499,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets saldo_atual_final
-     * @param Number $saldo_atual_final Salto total devedor da Fatura atual.
+     * @param Number $saldo_atual_final Salto total devedor da fatura atual.
      * @return $this
      */
     public function setSaldoAtualFinal($saldo_atual_final)
@@ -424,7 +520,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets valor_minimo_fatura
-     * @param Number $valor_minimo_fatura Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+     * @param Number $valor_minimo_fatura Valor m\u00C3\u00ADnimo para pagamento da fatura.
      * @return $this
      */
     public function setValorMinimoFatura($valor_minimo_fatura)
@@ -445,7 +541,7 @@ class Fatura implements ArrayAccess
   
     /**
      * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura Quando ativa, indica que fora emitida uma Fatura.
+     * @param int $flag_emite_fatura Quando ativa, indica que fora emitida uma fatura.
      * @return $this
      */
     public function setFlagEmiteFatura($flag_emite_fatura)
