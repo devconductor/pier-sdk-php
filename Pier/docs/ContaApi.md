@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarFaturasUsingGET**
-> \br.com.conductor.pier.api.v2.model\FaturaResponse listarFaturasUsingGET($id, $page, $limit, $data_vencimento)
+> \br.com.conductor.pier.api.v2.model\PageFaturas listarFaturasUsingGET($id, $page, $limit, $data_vencimento)
 
 Listar Faturas da Conta
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\FaturaResponse**](FaturaResponse.md)
+[**\br.com.conductor.pier.api.v2.model\PageFaturas**](PageFaturas.md)
 
 ### Authorization
 
