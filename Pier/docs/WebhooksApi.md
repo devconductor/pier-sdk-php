@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT3**](WebhooksApi.md#alterarUsingPUT3) | **PUT** /api/webhooks | Alterar Webhook
-[**consultarUsingGET10**](WebhooksApi.md#consultarUsingGET10) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET11**](WebhooksApi.md#listarUsingGET11) | **GET** /api/webhooks | Lista os Webhooks
+[**consultarUsingGET11**](WebhooksApi.md#consultarUsingGET11) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET12**](WebhooksApi.md#listarUsingGET12) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST4**](WebhooksApi.md#salvarUsingPOST4) | **POST** /api/webhooks | Salvar Webhook
 
 
@@ -66,8 +66,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET10($id)
+# **consultarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET11($id)
 
 Consultar Webhook
 
@@ -87,10 +87,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET10($id);
+    $result = $api_instance->consultarUsingGET11($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->consultarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -116,8 +116,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET11($page, $limit, $id, $evento, $metodo, $url)
+# **listarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET12($page, $limit, $id, $evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -142,10 +142,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET11($page, $limit, $id, $evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET12($page, $limit, $id, $evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->listarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->listarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```

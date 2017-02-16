@@ -60,7 +60,9 @@ class Conta implements ArrayAccess
         'melhor_dia_compra' => 'int',
         'data_status_conta' => '\DateTime',
         'data_cadastro' => '\DateTime',
-        'data_ultima_alteracao_vencimento' => '\DateTime'
+        'data_ultima_alteracao_vencimento' => '\DateTime',
+        'numero_agencia' => 'int',
+        'numero_conta_corrente' => 'string'
     );
   
     static function swaggerTypes() {
@@ -81,7 +83,9 @@ class Conta implements ArrayAccess
         'melhor_dia_compra' => 'melhorDiaCompra',
         'data_status_conta' => 'dataStatusConta',
         'data_cadastro' => 'dataCadastro',
-        'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento'
+        'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
+        'numero_agencia' => 'numeroAgencia',
+        'numero_conta_corrente' => 'numeroContaCorrente'
     );
   
     static function attributeMap() {
@@ -102,7 +106,9 @@ class Conta implements ArrayAccess
         'melhor_dia_compra' => 'setMelhorDiaCompra',
         'data_status_conta' => 'setDataStatusConta',
         'data_cadastro' => 'setDataCadastro',
-        'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento'
+        'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
+        'numero_agencia' => 'setNumeroAgencia',
+        'numero_conta_corrente' => 'setNumeroContaCorrente'
     );
   
     static function setters() {
@@ -123,7 +129,9 @@ class Conta implements ArrayAccess
         'melhor_dia_compra' => 'getMelhorDiaCompra',
         'data_status_conta' => 'getDataStatusConta',
         'data_cadastro' => 'getDataCadastro',
-        'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento'
+        'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
+        'numero_agencia' => 'getNumeroAgencia',
+        'numero_conta_corrente' => 'getNumeroContaCorrente'
     );
   
     static function getters() {
@@ -191,6 +199,18 @@ class Conta implements ArrayAccess
       */
     protected $data_ultima_alteracao_vencimento;
     
+    /**
+      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+      * @var int
+      */
+    protected $numero_agencia;
+    
+    /**
+      * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+      * @var string
+      */
+    protected $numero_conta_corrente;
+    
 
     /**
      * Constructor
@@ -210,6 +230,8 @@ class Conta implements ArrayAccess
             $this->data_status_conta = $data["data_status_conta"];
             $this->data_cadastro = $data["data_cadastro"];
             $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
+            $this->numero_agencia = $data["numero_agencia"];
+            $this->numero_conta_corrente = $data["numero_conta_corrente"];
         }
     }
     
@@ -420,6 +442,48 @@ class Conta implements ArrayAccess
     {
         
         $this->data_ultima_alteracao_vencimento = $data_ultima_alteracao_vencimento;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_agencia
+     * @return int
+     */
+    public function getNumeroAgencia()
+    {
+        return $this->numero_agencia;
+    }
+  
+    /**
+     * Sets numero_agencia
+     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @return $this
+     */
+    public function setNumeroAgencia($numero_agencia)
+    {
+        
+        $this->numero_agencia = $numero_agencia;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_conta_corrente
+     * @return string
+     */
+    public function getNumeroContaCorrente()
+    {
+        return $this->numero_conta_corrente;
+    }
+  
+    /**
+     * Sets numero_conta_corrente
+     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+     * @return $this
+     */
+    public function setNumeroContaCorrente($numero_conta_corrente)
+    {
+        
+        $this->numero_conta_corrente = $numero_conta_corrente;
         return $this;
     }
     

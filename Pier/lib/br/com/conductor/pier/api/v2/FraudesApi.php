@@ -205,7 +205,7 @@ class FraudesApi
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
      * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
+     * @return \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarUsingGET($page = null, $limit = null, $id_atendimento = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
@@ -227,7 +227,7 @@ class FraudesApi
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
      * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id_atendimento = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
@@ -302,19 +302,19 @@ class FraudesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

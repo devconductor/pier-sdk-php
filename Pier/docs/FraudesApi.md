@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET**
-> \br.com.conductor.pier.api.v2.model\AtendimentoCliente listarUsingGET($page, $limit, $id_atendimento, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
+> \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes listarUsingGET($page, $limit, $id_atendimento, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
 
 Lista todos os atendimentos
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\AtendimentoCliente**](AtendimentoCliente.md)
+[**\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes**](PageAtendimentoClientes.md)
 
 ### Authorization
 

@@ -76,16 +76,6 @@ class NotificacoesApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for limparAcessoTWWUsingGET
-     *
-     * Limpar Acessos
-     *
-     */
-    public function test_limparAcessoTWWUsingGET() {
-
-    }
-    
-    /**
      * Test case for listarPushUsingGET
      *
      * Listar Push

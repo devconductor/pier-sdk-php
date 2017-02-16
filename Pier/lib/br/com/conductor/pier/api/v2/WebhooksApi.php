@@ -220,7 +220,7 @@ class WebhooksApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET11
      *
      * Consultar Webhook
      *
@@ -228,15 +228,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET11($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -244,12 +244,12 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET11WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -322,7 +322,7 @@ class WebhooksApi
     }
     
     /**
-     * listarUsingGET11
+     * listarUsingGET12
      *
      * Lista os Webhooks
      *
@@ -335,15 +335,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET12($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET11WithHttpInfo
+     * listarUsingGET12WithHttpInfo
      *
      * Lista os Webhooks
      *
@@ -356,7 +356,7 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET12WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
     {
         
   

@@ -5,7 +5,6 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarSMSUsingPOST**](NotificacoesApi.md#atualizarSMSUsingPOST) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
-[**limparAcessoTWWUsingGET**](NotificacoesApi.md#limparAcessoTWWUsingGET) | **GET** /api/notificacoes/sms/limpar | Limpar Acessos
 [**listarPushUsingGET**](NotificacoesApi.md#listarPushUsingGET) | **GET** /api/notificacoes/push | Listar Push
 [**listarSMSUsingGET**](NotificacoesApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**responderSMSUsingPOST**](NotificacoesApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
@@ -52,61 +51,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **string**| Seu n\u00C3\u00BAmero | 
- **status** | **string**| Status | 
- **data** | **string**| Data | 
- **texto_status** | **string**| TextoStatus | 
- **operadora** | **string**| Operadora | 
+ **nsu** | **string**| Seu n\u00C3\u00BAmero | [optional] 
+ **status** | **string**| Status | [optional] 
+ **data** | **string**| Data | [optional] 
+ **texto_status** | **string**| TextoStatus | [optional] 
+ **operadora** | **string**| Operadora | [optional] 
 
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\SMS**](SMS.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **limparAcessoTWWUsingGET**
-> string limparAcessoTWWUsingGET()
-
-Limpar Acessos
-
-Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
-
-try { 
-    $result = $api_instance->limparAcessoTWWUsingGET();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling NotificacoesApi->limparAcessoTWWUsingGET: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**string**
 
 ### Authorization
 
@@ -278,9 +231,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **string**| Seu n\u00C3\u00BAmero | 
- **data** | **string**| Data | 
- **resposta** | **string**| TextoStatus | 
+ **nsu** | **string**| Seu n\u00C3\u00BAmero | [optional] 
+ **data** | **string**| Data | [optional] 
+ **resposta** | **string**| TextoStatus | [optional] 
 
 ### Return type
 

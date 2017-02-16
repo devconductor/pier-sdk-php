@@ -51,14 +51,18 @@ class SMS implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id' => 'int',
         'nsu' => 'int',
         'id_emissor' => 'int',
         'evento' => 'string',
         'status' => 'string',
+        'descricao_status' => 'string',
         'id_pessoa' => 'int',
         'id_conta' => 'int',
         'celular' => 'string',
+        'operadora' => 'string',
         'conteudo' => 'string',
+        'resposta' => 'string',
         'data_agendamento' => '\DateTime',
         'quantidade_tentativas_envio' => 'int',
         'data_inclusao' => '\DateTime',
@@ -75,14 +79,18 @@ class SMS implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id' => 'id',
         'nsu' => 'nsu',
         'id_emissor' => 'idEmissor',
         'evento' => 'evento',
         'status' => 'status',
+        'descricao_status' => 'descricaoStatus',
         'id_pessoa' => 'idPessoa',
         'id_conta' => 'idConta',
         'celular' => 'celular',
+        'operadora' => 'operadora',
         'conteudo' => 'conteudo',
+        'resposta' => 'resposta',
         'data_agendamento' => 'dataAgendamento',
         'quantidade_tentativas_envio' => 'quantidadeTentativasEnvio',
         'data_inclusao' => 'dataInclusao',
@@ -99,14 +107,18 @@ class SMS implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id' => 'setId',
         'nsu' => 'setNsu',
         'id_emissor' => 'setIdEmissor',
         'evento' => 'setEvento',
         'status' => 'setStatus',
+        'descricao_status' => 'setDescricaoStatus',
         'id_pessoa' => 'setIdPessoa',
         'id_conta' => 'setIdConta',
         'celular' => 'setCelular',
+        'operadora' => 'setOperadora',
         'conteudo' => 'setConteudo',
+        'resposta' => 'setResposta',
         'data_agendamento' => 'setDataAgendamento',
         'quantidade_tentativas_envio' => 'setQuantidadeTentativasEnvio',
         'data_inclusao' => 'setDataInclusao',
@@ -123,14 +135,18 @@ class SMS implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id' => 'getId',
         'nsu' => 'getNsu',
         'id_emissor' => 'getIdEmissor',
         'evento' => 'getEvento',
         'status' => 'getStatus',
+        'descricao_status' => 'getDescricaoStatus',
         'id_pessoa' => 'getIdPessoa',
         'id_conta' => 'getIdConta',
         'celular' => 'getCelular',
+        'operadora' => 'getOperadora',
         'conteudo' => 'getConteudo',
+        'resposta' => 'getResposta',
         'data_agendamento' => 'getDataAgendamento',
         'quantidade_tentativas_envio' => 'getQuantidadeTentativasEnvio',
         'data_inclusao' => 'getDataInclusao',
@@ -142,6 +158,12 @@ class SMS implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $id C\u00C3\u00B3digo Identificador.
+      * @var int
+      */
+    protected $id;
     
     /**
       * $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
@@ -168,6 +190,12 @@ class SMS implements ArrayAccess
     protected $status;
     
     /**
+      * $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $descricao_status;
+    
+    /**
       * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
       * @var int
       */
@@ -186,10 +214,22 @@ class SMS implements ArrayAccess
     protected $celular;
     
     /**
+      * $operadora Apresenta a operadora do celular a ser eviado o SMS
+      * @var string
+      */
+    protected $operadora;
+    
+    /**
       * $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
       * @var string
       */
     protected $conteudo;
+    
+    /**
+      * $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+      * @var string
+      */
+    protected $resposta;
     
     /**
       * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
@@ -230,20 +270,45 @@ class SMS implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id = $data["id"];
             $this->nsu = $data["nsu"];
             $this->id_emissor = $data["id_emissor"];
             $this->evento = $data["evento"];
             $this->status = $data["status"];
+            $this->descricao_status = $data["descricao_status"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_conta = $data["id_conta"];
             $this->celular = $data["celular"];
+            $this->operadora = $data["operadora"];
             $this->conteudo = $data["conteudo"];
+            $this->resposta = $data["resposta"];
             $this->data_agendamento = $data["data_agendamento"];
             $this->quantidade_tentativas_envio = $data["quantidade_tentativas_envio"];
             $this->data_inclusao = $data["data_inclusao"];
             $this->data_alteracao_status = $data["data_alteracao_status"];
             $this->protocolo = $data["protocolo"];
         }
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo Identificador.
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
     }
     
     /**
@@ -337,6 +402,27 @@ class SMS implements ArrayAccess
     }
     
     /**
+     * Gets descricao_status
+     * @return string
+     */
+    public function getDescricaoStatus()
+    {
+        return $this->descricao_status;
+    }
+  
+    /**
+     * Sets descricao_status
+     * @param string $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setDescricaoStatus($descricao_status)
+    {
+        
+        $this->descricao_status = $descricao_status;
+        return $this;
+    }
+    
+    /**
      * Gets id_pessoa
      * @return int
      */
@@ -400,6 +486,27 @@ class SMS implements ArrayAccess
     }
     
     /**
+     * Gets operadora
+     * @return string
+     */
+    public function getOperadora()
+    {
+        return $this->operadora;
+    }
+  
+    /**
+     * Sets operadora
+     * @param string $operadora Apresenta a operadora do celular a ser eviado o SMS
+     * @return $this
+     */
+    public function setOperadora($operadora)
+    {
+        
+        $this->operadora = $operadora;
+        return $this;
+    }
+    
+    /**
      * Gets conteudo
      * @return string
      */
@@ -417,6 +524,27 @@ class SMS implements ArrayAccess
     {
         
         $this->conteudo = $conteudo;
+        return $this;
+    }
+    
+    /**
+     * Gets resposta
+     * @return string
+     */
+    public function getResposta()
+    {
+        return $this->resposta;
+    }
+  
+    /**
+     * Sets resposta
+     * @param string $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+     * @return $this
+     */
+    public function setResposta($resposta)
+    {
+        
+        $this->resposta = $resposta;
         return $this;
     }
     

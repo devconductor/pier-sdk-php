@@ -96,15 +96,15 @@ class NotificacoesApi
      *
      * Atualizar SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (required)
-     * @param string $status Status (required)
-     * @param string $data Data (required)
-     * @param string $texto_status TextoStatus (required)
-     * @param string $operadora Operadora (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $status Status (optional)
+     * @param string $data Data (optional)
+     * @param string $texto_status TextoStatus (optional)
+     * @param string $operadora Operadora (optional)
      * @return \br.com.conductor.pier.api.v2.model\SMS
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarSMSUsingPOST($nsu, $status, $data, $texto_status, $operadora)
+    public function atualizarSMSUsingPOST($nsu = null, $status = null, $data = null, $texto_status = null, $operadora = null)
     {
         list($response, $statusCode, $httpHeader) = $this->atualizarSMSUsingPOSTWithHttpInfo ($nsu, $status, $data, $texto_status, $operadora);
         return $response; 
@@ -116,37 +116,17 @@ class NotificacoesApi
      *
      * Atualizar SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (required)
-     * @param string $status Status (required)
-     * @param string $data Data (required)
-     * @param string $texto_status TextoStatus (required)
-     * @param string $operadora Operadora (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $status Status (optional)
+     * @param string $data Data (optional)
+     * @param string $texto_status TextoStatus (optional)
+     * @param string $operadora Operadora (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarSMSUsingPOSTWithHttpInfo($nsu, $status, $data, $texto_status, $operadora)
+    public function atualizarSMSUsingPOSTWithHttpInfo($nsu = null, $status = null, $data = null, $texto_status = null, $operadora = null)
     {
         
-        // verify the required parameter 'nsu' is set
-        if ($nsu === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $nsu when calling atualizarSMSUsingPOST');
-        }
-        // verify the required parameter 'status' is set
-        if ($status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $status when calling atualizarSMSUsingPOST');
-        }
-        // verify the required parameter 'data' is set
-        if ($data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data when calling atualizarSMSUsingPOST');
-        }
-        // verify the required parameter 'texto_status' is set
-        if ($texto_status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $texto_status when calling atualizarSMSUsingPOST');
-        }
-        // verify the required parameter 'operadora' is set
-        if ($operadora === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $operadora when calling atualizarSMSUsingPOST');
-        }
   
         // parse inputs
         $resourcePath = "/api/notificacoes/sms/atualizar-status";
@@ -221,94 +201,6 @@ class NotificacoesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\SMS', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * limparAcessoTWWUsingGET
-     *
-     * Limpar Acessos
-     *
-     * @return string
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function limparAcessoTWWUsingGET()
-    {
-        list($response, $statusCode, $httpHeader) = $this->limparAcessoTWWUsingGETWithHttpInfo ();
-        return $response; 
-    }
-
-
-    /**
-     * limparAcessoTWWUsingGETWithHttpInfo
-     *
-     * Limpar Acessos
-     *
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function limparAcessoTWWUsingGETWithHttpInfo()
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/api/notificacoes/sms/limpar";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, 'string'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -582,13 +474,13 @@ class NotificacoesApi
      *
      * Responder SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (required)
-     * @param string $data Data (required)
-     * @param string $resposta TextoStatus (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $data Data (optional)
+     * @param string $resposta TextoStatus (optional)
      * @return \br.com.conductor.pier.api.v2.model\SMS
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function responderSMSUsingPOST($nsu, $data, $resposta)
+    public function responderSMSUsingPOST($nsu = null, $data = null, $resposta = null)
     {
         list($response, $statusCode, $httpHeader) = $this->responderSMSUsingPOSTWithHttpInfo ($nsu, $data, $resposta);
         return $response; 
@@ -600,27 +492,15 @@ class NotificacoesApi
      *
      * Responder SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (required)
-     * @param string $data Data (required)
-     * @param string $resposta TextoStatus (required)
+     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $data Data (optional)
+     * @param string $resposta TextoStatus (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function responderSMSUsingPOSTWithHttpInfo($nsu, $data, $resposta)
+    public function responderSMSUsingPOSTWithHttpInfo($nsu = null, $data = null, $resposta = null)
     {
         
-        // verify the required parameter 'nsu' is set
-        if ($nsu === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $nsu when calling responderSMSUsingPOST');
-        }
-        // verify the required parameter 'data' is set
-        if ($data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data when calling responderSMSUsingPOST');
-        }
-        // verify the required parameter 'resposta' is set
-        if ($resposta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling responderSMSUsingPOST');
-        }
   
         // parse inputs
         $resourcePath = "/api/notificacoes/sms/responder";

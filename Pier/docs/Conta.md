@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **data_status_conta** | [**\DateTime**](\DateTime.md) | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
 **data_cadastro** | [**\DateTime**](\DateTime.md) | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
 **data_ultima_alteracao_vencimento** | [**\DateTime**](\DateTime.md) | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+**numero_agencia** | **int** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+**numero_conta_corrente** | **string** | N\u00C3\u00BAmero da conta corrente. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -92,6 +92,118 @@ class CartaoApi
   
     
     /**
+     * alterarAlterarSenhaUsingPUT
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param string $senha Senha para ser cadastrada ou alterada. (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarAlterarSenhaUsingPUT($id, $senha)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarAlterarSenhaUsingPUTWithHttpInfo ($id, $senha);
+        return $response; 
+    }
+
+
+    /**
+     * alterarAlterarSenhaUsingPUTWithHttpInfo
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param string $senha Senha para ser cadastrada ou alterada. (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarAlterarSenhaUsingPUTWithHttpInfo($id, $senha)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarAlterarSenhaUsingPUT');
+        }
+        // verify the required parameter 'senha' is set
+        if ($senha === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $senha when calling alterarAlterarSenhaUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/alterar-senha";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        // header params
+        
+        if ($senha !== null) {
+            $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
+        }
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * alterarStatusImpressaoUsingPUT
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
@@ -438,46 +550,46 @@ class CartaoApi
     }
     
     /**
-     * cadastrarAlterarSenhaUsingPUT
+     * cadastrarAlterarSenhaUsingPOST
      *
-     * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     * Realiza o cadastro da senha de um Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser cadastrada ou alterada. (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPUT($id, $senha)
+    public function cadastrarAlterarSenhaUsingPOST($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPUTWithHttpInfo ($id, $senha);
+        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPOSTWithHttpInfo ($id, $senha);
         return $response; 
     }
 
 
     /**
-     * cadastrarAlterarSenhaUsingPUTWithHttpInfo
+     * cadastrarAlterarSenhaUsingPOSTWithHttpInfo
      *
-     * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     * Realiza o cadastro da senha de um Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser cadastrada ou alterada. (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPUTWithHttpInfo($id, $senha)
+    public function cadastrarAlterarSenhaUsingPOSTWithHttpInfo($id, $senha)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarAlterarSenhaUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarAlterarSenhaUsingPOST');
         }
         // verify the required parameter 'senha' is set
         if ($senha === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $senha when calling cadastrarAlterarSenhaUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $senha when calling cadastrarAlterarSenhaUsingPOST');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id}/alterar-senha";
+        $resourcePath = "/api/cartoes/{id}/cadastrar-senha";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -526,7 +638,7 @@ class CartaoApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, 'string'
             );
