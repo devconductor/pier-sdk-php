@@ -68,8 +68,6 @@ class TransacaoResponse implements ArrayAccess
         'estabelecimento' => 'string',
         'flag_credito' => 'int',
         'tipo_estabelecimento' => 'string',
-        'latitude' => 'string',
-        'longetude' => 'string',
         'id_grupo_mcc' => 'int',
         'flag_solicitou_contestacao' => 'int'
     );
@@ -100,8 +98,6 @@ class TransacaoResponse implements ArrayAccess
         'estabelecimento' => 'estabelecimento',
         'flag_credito' => 'flagCredito',
         'tipo_estabelecimento' => 'tipoEstabelecimento',
-        'latitude' => 'latitude',
-        'longetude' => 'longetude',
         'id_grupo_mcc' => 'idGrupoMCC',
         'flag_solicitou_contestacao' => 'flagSolicitouContestacao'
     );
@@ -132,8 +128,6 @@ class TransacaoResponse implements ArrayAccess
         'estabelecimento' => 'setEstabelecimento',
         'flag_credito' => 'setFlagCredito',
         'tipo_estabelecimento' => 'setTipoEstabelecimento',
-        'latitude' => 'setLatitude',
-        'longetude' => 'setLongetude',
         'id_grupo_mcc' => 'setIdGrupoMcc',
         'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao'
     );
@@ -164,8 +158,6 @@ class TransacaoResponse implements ArrayAccess
         'estabelecimento' => 'getEstabelecimento',
         'flag_credito' => 'getFlagCredito',
         'tipo_estabelecimento' => 'getTipoEstabelecimento',
-        'latitude' => 'getLatitude',
-        'longetude' => 'getLongetude',
         'id_grupo_mcc' => 'getIdGrupoMcc',
         'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao'
     );
@@ -278,18 +270,6 @@ class TransacaoResponse implements ArrayAccess
     protected $tipo_estabelecimento;
     
     /**
-      * $latitude 
-      * @var string
-      */
-    protected $latitude;
-    
-    /**
-      * $longetude 
-      * @var string
-      */
-    protected $longetude;
-    
-    /**
       * $id_grupo_mcc 
       * @var int
       */
@@ -327,8 +307,6 @@ class TransacaoResponse implements ArrayAccess
             $this->estabelecimento = $data["estabelecimento"];
             $this->flag_credito = $data["flag_credito"];
             $this->tipo_estabelecimento = $data["tipo_estabelecimento"];
-            $this->latitude = $data["latitude"];
-            $this->longetude = $data["longetude"];
             $this->id_grupo_mcc = $data["id_grupo_mcc"];
             $this->flag_solicitou_contestacao = $data["flag_solicitou_contestacao"];
         }
@@ -688,48 +666,6 @@ class TransacaoResponse implements ArrayAccess
     {
         
         $this->tipo_estabelecimento = $tipo_estabelecimento;
-        return $this;
-    }
-    
-    /**
-     * Gets latitude
-     * @return string
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
-  
-    /**
-     * Sets latitude
-     * @param string $latitude 
-     * @return $this
-     */
-    public function setLatitude($latitude)
-    {
-        
-        $this->latitude = $latitude;
-        return $this;
-    }
-    
-    /**
-     * Gets longetude
-     * @return string
-     */
-    public function getLongetude()
-    {
-        return $this->longetude;
-    }
-  
-    /**
-     * Sets longetude
-     * @param string $longetude 
-     * @return $this
-     */
-    public function setLongetude($longetude)
-    {
-        
-        $this->longetude = $longetude;
         return $this;
     }
     

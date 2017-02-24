@@ -52,7 +52,7 @@ class WebHook implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'evento' => 'string',
+        'tipo_evento' => 'string',
         'metodo' => 'string',
         'url' => 'string'
     );
@@ -67,7 +67,7 @@ class WebHook implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'evento' => 'evento',
+        'tipo_evento' => 'tipoEvento',
         'metodo' => 'metodo',
         'url' => 'url'
     );
@@ -82,7 +82,7 @@ class WebHook implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'evento' => 'setEvento',
+        'tipo_evento' => 'setTipoEvento',
         'metodo' => 'setMetodo',
         'url' => 'setUrl'
     );
@@ -97,7 +97,7 @@ class WebHook implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'evento' => 'getEvento',
+        'tipo_evento' => 'getTipoEvento',
         'metodo' => 'getMetodo',
         'url' => 'getUrl'
     );
@@ -114,10 +114,10 @@ class WebHook implements ArrayAccess
     protected $id;
     
     /**
-      * $evento Evento a ser chamado pelo WebHook
+      * $tipo_evento TipoEvento a ser chamado pelo WebHook
       * @var string
       */
-    protected $evento;
+    protected $tipo_evento;
     
     /**
       * $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -141,7 +141,7 @@ class WebHook implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->evento = $data["evento"];
+            $this->tipo_evento = $data["tipo_evento"];
             $this->metodo = $data["metodo"];
             $this->url = $data["url"];
         }
@@ -169,26 +169,26 @@ class WebHook implements ArrayAccess
     }
     
     /**
-     * Gets evento
+     * Gets tipo_evento
      * @return string
      */
-    public function getEvento()
+    public function getTipoEvento()
     {
-        return $this->evento;
+        return $this->tipo_evento;
     }
   
     /**
-     * Sets evento
-     * @param string $evento Evento a ser chamado pelo WebHook
+     * Sets tipo_evento
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook
      * @return $this
      */
-    public function setEvento($evento)
+    public function setTipoEvento($tipo_evento)
     {
         $allowed_values = array("RISCO_FRAUDE", "OUTROS");
-        if (!in_array($evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
-        $this->evento = $evento;
+        $this->tipo_evento = $tipo_evento;
         return $this;
     }
     

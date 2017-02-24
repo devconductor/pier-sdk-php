@@ -66,12 +66,52 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarUsingPUT5
+     *
+     * Alterar token
+     *
+     */
+    public function test_alterarUsingPUT5() {
+
+    }
+    
+    /**
      * Test case for callbackUsingPOST
      *
      * /api/tokens/callback
      *
      */
     public function test_callbackUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET14
+     *
+     * Consultar token
+     *
+     */
+    public function test_consultarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET14
+     *
+     * Listar tokens
+     *
+     */
+    public function test_listarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST5
+     *
+     * Salvar token
+     *
+     */
+    public function test_salvarUsingPOST5() {
 
     }
     

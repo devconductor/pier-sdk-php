@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarPushUsingGET**
-> \br.com.conductor.pier.api.v2.model\PagePush listarPushUsingGET($page, $limit, $data_envio, $evento, $status, $plataforma, $protocolo)
+> \br.com.conductor.pier.api.v2.model\PagePush listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo)
 
 Listar Push
 
@@ -93,13 +93,13 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 $data_envio = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi enviado para o dispositivo.
-$evento = "evento_example"; // string | Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
 $status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
 $plataforma = "plataforma_example"; // string | Plataforma de Push notifications.
 $protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
 
 try { 
-    $result = $api_instance->listarPushUsingGET($page, $limit, $data_envio, $evento, $status, $plataforma, $protocolo);
+    $result = $api_instance->listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarPushUsingGET: ', $e->getMessage(), "\n";
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **data_envio** | **\DateTime**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
- **evento** | **string**| Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **plataforma** | **string**| Plataforma de Push notifications. | [optional] 
  **protocolo** | **string**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarSMSUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageSMS listarSMSUsingGET($page, $limit, $data_inclusao, $evento, $status, $operadora, $protocolo)
+> \br.com.conductor.pier.api.v2.model\PageSMS listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo)
 
 Listar SMS
 
@@ -155,13 +155,13 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 $data_inclusao = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-$evento = "evento_example"; // string | Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
 $status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
 $operadora = "operadora_example"; // string | Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
 $protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
 
 try { 
-    $result = $api_instance->listarSMSUsingGET($page, $limit, $data_inclusao, $evento, $status, $operadora, $protocolo);
+    $result = $api_instance->listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarSMSUsingGET: ', $e->getMessage(), "\n";
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **data_inclusao** | **\DateTime**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
- **evento** | **string**| Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **operadora** | **string**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 
  **protocolo** | **string**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 

@@ -54,7 +54,7 @@ class SMS implements ArrayAccess
         'id' => 'int',
         'nsu' => 'int',
         'id_emissor' => 'int',
-        'evento' => 'string',
+        'tipo_evento' => 'string',
         'status' => 'string',
         'descricao_status' => 'string',
         'id_pessoa' => 'int',
@@ -82,7 +82,7 @@ class SMS implements ArrayAccess
         'id' => 'id',
         'nsu' => 'nsu',
         'id_emissor' => 'idEmissor',
-        'evento' => 'evento',
+        'tipo_evento' => 'tipoEvento',
         'status' => 'status',
         'descricao_status' => 'descricaoStatus',
         'id_pessoa' => 'idPessoa',
@@ -110,7 +110,7 @@ class SMS implements ArrayAccess
         'id' => 'setId',
         'nsu' => 'setNsu',
         'id_emissor' => 'setIdEmissor',
-        'evento' => 'setEvento',
+        'tipo_evento' => 'setTipoEvento',
         'status' => 'setStatus',
         'descricao_status' => 'setDescricaoStatus',
         'id_pessoa' => 'setIdPessoa',
@@ -138,7 +138,7 @@ class SMS implements ArrayAccess
         'id' => 'getId',
         'nsu' => 'getNsu',
         'id_emissor' => 'getIdEmissor',
-        'evento' => 'getEvento',
+        'tipo_evento' => 'getTipoEvento',
         'status' => 'getStatus',
         'descricao_status' => 'getDescricaoStatus',
         'id_pessoa' => 'getIdPessoa',
@@ -178,10 +178,10 @@ class SMS implements ArrayAccess
     protected $id_emissor;
     
     /**
-      * $evento Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
       * @var string
       */
-    protected $evento;
+    protected $tipo_evento;
     
     /**
       * $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -273,7 +273,7 @@ class SMS implements ArrayAccess
             $this->id = $data["id"];
             $this->nsu = $data["nsu"];
             $this->id_emissor = $data["id_emissor"];
-            $this->evento = $data["evento"];
+            $this->tipo_evento = $data["tipo_evento"];
             $this->status = $data["status"];
             $this->descricao_status = $data["descricao_status"];
             $this->id_pessoa = $data["id_pessoa"];
@@ -354,26 +354,26 @@ class SMS implements ArrayAccess
     }
     
     /**
-     * Gets evento
+     * Gets tipo_evento
      * @return string
      */
-    public function getEvento()
+    public function getTipoEvento()
     {
-        return $this->evento;
+        return $this->tipo_evento;
     }
   
     /**
-     * Sets evento
-     * @param string $evento Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Sets tipo_evento
+     * @param string $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
-    public function setEvento($evento)
+    public function setTipoEvento($tipo_evento)
     {
         $allowed_values = array("RISCO_FRAUDE", "OUTROS");
-        if (!in_array($evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
-        $this->evento = $evento;
+        $this->tipo_evento = $tipo_evento;
         return $this;
     }
     

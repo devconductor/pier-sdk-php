@@ -1,6 +1,6 @@
 <?php
 /**
- * FraudesApiTest
+ * FAQApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * FraudesApiTest Class Doc Comment
+ * FAQApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class FraudesApiTest extends \PHPUnit_Framework_TestCase
+class FAQApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,32 +66,42 @@ class FraudesApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET
+     * Test case for adicionarUsingPOST
      *
-     * Apresenta os dados de um determinado Atendimento
+     * Adiciona uma nova FAQ para um determinado Emissor.
      *
      */
-    public function test_consultarUsingGET() {
+    public function test_adicionarUsingPOST() {
 
     }
     
     /**
-     * Test case for listarUsingGET
+     * Test case for alterarUsingPUT2
      *
-     * Lista todos os atendimentos
+     * Altera os par\u00C3\u00A2metros de uma FAQ existente.
      *
      */
-    public function test_listarUsingGET() {
+    public function test_alterarUsingPUT2() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST
+     * Test case for consultarUsingGET5
      *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+     * Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
      *
      */
-    public function test_salvarUsingPOST() {
+    public function test_consultarUsingGET5() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET5
+     *
+     * Lista todas as FAQs de um determinado emissor.
+     *
+     */
+    public function test_listarUsingGET5() {
 
     }
     

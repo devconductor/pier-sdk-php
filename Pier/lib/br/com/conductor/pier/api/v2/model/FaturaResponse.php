@@ -52,19 +52,13 @@ class FaturaResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'id_conta' => 'int',
-        'id_produto' => 'int',
-        'data_vencimento' => '\DateTime',
-        'saldo_fatura_anterior' => 'Number',
-        'saldo_multa' => 'Number',
-        'saldo_compras' => 'Number',
-        'saldo_pagamentos' => 'Number',
-        'saldo_tarifas' => 'Number',
-        'saldo_debitos' => 'Number',
-        'saldo_creditos' => 'Number',
-        'saldo_atual_final' => 'Number',
-        'valor_minimo_fatura' => 'Number',
-        'flag_emite_fatura' => 'int'
+        'descricao' => 'string',
+        'banco' => 'int',
+        'faixa_nosso_numero' => 'int',
+        'min_nosso_numero' => 'Number',
+        'max_nosso_numero' => 'Number',
+        'tam_nosso_numero' => 'int',
+        'ultimo_nosso_numero' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -77,19 +71,13 @@ class FaturaResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'id_conta' => 'idConta',
-        'id_produto' => 'idProduto',
-        'data_vencimento' => 'dataVencimento',
-        'saldo_fatura_anterior' => 'saldoFaturaAnterior',
-        'saldo_multa' => 'saldoMulta',
-        'saldo_compras' => 'saldoCompras',
-        'saldo_pagamentos' => 'saldoPagamentos',
-        'saldo_tarifas' => 'saldoTarifas',
-        'saldo_debitos' => 'saldoDebitos',
-        'saldo_creditos' => 'saldoCreditos',
-        'saldo_atual_final' => 'saldoAtualFinal',
-        'valor_minimo_fatura' => 'valorMinimoFatura',
-        'flag_emite_fatura' => 'flagEmiteFatura'
+        'descricao' => 'descricao',
+        'banco' => 'banco',
+        'faixa_nosso_numero' => 'faixaNossoNumero',
+        'min_nosso_numero' => 'minNossoNumero',
+        'max_nosso_numero' => 'maxNossoNumero',
+        'tam_nosso_numero' => 'tamNossoNumero',
+        'ultimo_nosso_numero' => 'ultimoNossoNumero'
     );
   
     static function attributeMap() {
@@ -102,19 +90,13 @@ class FaturaResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'id_conta' => 'setIdConta',
-        'id_produto' => 'setIdProduto',
-        'data_vencimento' => 'setDataVencimento',
-        'saldo_fatura_anterior' => 'setSaldoFaturaAnterior',
-        'saldo_multa' => 'setSaldoMulta',
-        'saldo_compras' => 'setSaldoCompras',
-        'saldo_pagamentos' => 'setSaldoPagamentos',
-        'saldo_tarifas' => 'setSaldoTarifas',
-        'saldo_debitos' => 'setSaldoDebitos',
-        'saldo_creditos' => 'setSaldoCreditos',
-        'saldo_atual_final' => 'setSaldoAtualFinal',
-        'valor_minimo_fatura' => 'setValorMinimoFatura',
-        'flag_emite_fatura' => 'setFlagEmiteFatura'
+        'descricao' => 'setDescricao',
+        'banco' => 'setBanco',
+        'faixa_nosso_numero' => 'setFaixaNossoNumero',
+        'min_nosso_numero' => 'setMinNossoNumero',
+        'max_nosso_numero' => 'setMaxNossoNumero',
+        'tam_nosso_numero' => 'setTamNossoNumero',
+        'ultimo_nosso_numero' => 'setUltimoNossoNumero'
     );
   
     static function setters() {
@@ -127,19 +109,13 @@ class FaturaResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'id_conta' => 'getIdConta',
-        'id_produto' => 'getIdProduto',
-        'data_vencimento' => 'getDataVencimento',
-        'saldo_fatura_anterior' => 'getSaldoFaturaAnterior',
-        'saldo_multa' => 'getSaldoMulta',
-        'saldo_compras' => 'getSaldoCompras',
-        'saldo_pagamentos' => 'getSaldoPagamentos',
-        'saldo_tarifas' => 'getSaldoTarifas',
-        'saldo_debitos' => 'getSaldoDebitos',
-        'saldo_creditos' => 'getSaldoCreditos',
-        'saldo_atual_final' => 'getSaldoAtualFinal',
-        'valor_minimo_fatura' => 'getValorMinimoFatura',
-        'flag_emite_fatura' => 'getFlagEmiteFatura'
+        'descricao' => 'getDescricao',
+        'banco' => 'getBanco',
+        'faixa_nosso_numero' => 'getFaixaNossoNumero',
+        'min_nosso_numero' => 'getMinNossoNumero',
+        'max_nosso_numero' => 'getMaxNossoNumero',
+        'tam_nosso_numero' => 'getTamNossoNumero',
+        'ultimo_nosso_numero' => 'getUltimoNossoNumero'
     );
   
     static function getters() {
@@ -148,88 +124,52 @@ class FaturaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador da fatura.
+      * $id C\u00C3\u00B3digo identificador do tipo de boleto.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+      * @var string
+      */
+    protected $descricao;
+    
+    /**
+      * $banco C\u00C3\u00B3digo identificador do banco.
       * @var int
       */
-    protected $id_conta;
+    protected $banco;
     
     /**
-      * $id_produto C\u00C3\u00B3digo identificador do produto.
+      * $faixa_nosso_numero Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
       * @var int
       */
-    protected $id_produto;
+    protected $faixa_nosso_numero;
     
     /**
-      * $data_vencimento Data de vencimento da fatura.
-      * @var \DateTime
-      */
-    protected $data_vencimento;
-    
-    /**
-      * $saldo_fatura_anterior Saldo da fatura anterior.
+      * $min_nosso_numero N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
       * @var Number
       */
-    protected $saldo_fatura_anterior;
+    protected $min_nosso_numero;
     
     /**
-      * $saldo_multa Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+      * $max_nosso_numero N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
       * @var Number
       */
-    protected $saldo_multa;
+    protected $max_nosso_numero;
     
     /**
-      * $saldo_compras Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
-      * @var Number
-      */
-    protected $saldo_compras;
-    
-    /**
-      * $saldo_pagamentos Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
-      * @var Number
-      */
-    protected $saldo_pagamentos;
-    
-    /**
-      * $saldo_tarifas Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
-      * @var Number
-      */
-    protected $saldo_tarifas;
-    
-    /**
-      * $saldo_debitos Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
-      * @var Number
-      */
-    protected $saldo_debitos;
-    
-    /**
-      * $saldo_creditos Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
-      * @var Number
-      */
-    protected $saldo_creditos;
-    
-    /**
-      * $saldo_atual_final Salto total devedor da fatura atual.
-      * @var Number
-      */
-    protected $saldo_atual_final;
-    
-    /**
-      * $valor_minimo_fatura Valor m\u00C3\u00ADnimo para pagamento da fatura.
-      * @var Number
-      */
-    protected $valor_minimo_fatura;
-    
-    /**
-      * $flag_emite_fatura Quando ativa, indica que fora emitida uma fatura.
+      * $tam_nosso_numero Tamanho do nosso n\u00C3\u00BAmero.
       * @var int
       */
-    protected $flag_emite_fatura;
+    protected $tam_nosso_numero;
+    
+    /**
+      * $ultimo_nosso_numero \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
+      * @var Number
+      */
+    protected $ultimo_nosso_numero;
     
 
     /**
@@ -241,19 +181,13 @@ class FaturaResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->id_conta = $data["id_conta"];
-            $this->id_produto = $data["id_produto"];
-            $this->data_vencimento = $data["data_vencimento"];
-            $this->saldo_fatura_anterior = $data["saldo_fatura_anterior"];
-            $this->saldo_multa = $data["saldo_multa"];
-            $this->saldo_compras = $data["saldo_compras"];
-            $this->saldo_pagamentos = $data["saldo_pagamentos"];
-            $this->saldo_tarifas = $data["saldo_tarifas"];
-            $this->saldo_debitos = $data["saldo_debitos"];
-            $this->saldo_creditos = $data["saldo_creditos"];
-            $this->saldo_atual_final = $data["saldo_atual_final"];
-            $this->valor_minimo_fatura = $data["valor_minimo_fatura"];
-            $this->flag_emite_fatura = $data["flag_emite_fatura"];
+            $this->descricao = $data["descricao"];
+            $this->banco = $data["banco"];
+            $this->faixa_nosso_numero = $data["faixa_nosso_numero"];
+            $this->min_nosso_numero = $data["min_nosso_numero"];
+            $this->max_nosso_numero = $data["max_nosso_numero"];
+            $this->tam_nosso_numero = $data["tam_nosso_numero"];
+            $this->ultimo_nosso_numero = $data["ultimo_nosso_numero"];
         }
     }
     
@@ -268,7 +202,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador da fatura.
+     * @param int $id C\u00C3\u00B3digo identificador do tipo de boleto.
      * @return $this
      */
     public function setId($id)
@@ -279,275 +213,149 @@ class FaturaResponse implements ArrayAccess
     }
     
     /**
-     * Gets id_conta
+     * Gets descricao
+     * @return string
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+  
+    /**
+     * Sets descricao
+     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+     * @return $this
+     */
+    public function setDescricao($descricao)
+    {
+        
+        $this->descricao = $descricao;
+        return $this;
+    }
+    
+    /**
+     * Gets banco
      * @return int
      */
-    public function getIdConta()
+    public function getBanco()
     {
-        return $this->id_conta;
+        return $this->banco;
     }
   
     /**
-     * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * Sets banco
+     * @param int $banco C\u00C3\u00B3digo identificador do banco.
      * @return $this
      */
-    public function setIdConta($id_conta)
+    public function setBanco($banco)
     {
         
-        $this->id_conta = $id_conta;
+        $this->banco = $banco;
         return $this;
     }
     
     /**
-     * Gets id_produto
+     * Gets faixa_nosso_numero
      * @return int
      */
-    public function getIdProduto()
+    public function getFaixaNossoNumero()
     {
-        return $this->id_produto;
+        return $this->faixa_nosso_numero;
     }
   
     /**
-     * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo identificador do produto.
+     * Sets faixa_nosso_numero
+     * @param int $faixa_nosso_numero Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
      * @return $this
      */
-    public function setIdProduto($id_produto)
+    public function setFaixaNossoNumero($faixa_nosso_numero)
     {
         
-        $this->id_produto = $id_produto;
+        $this->faixa_nosso_numero = $faixa_nosso_numero;
         return $this;
     }
     
     /**
-     * Gets data_vencimento
-     * @return \DateTime
-     */
-    public function getDataVencimento()
-    {
-        return $this->data_vencimento;
-    }
-  
-    /**
-     * Sets data_vencimento
-     * @param \DateTime $data_vencimento Data de vencimento da fatura.
-     * @return $this
-     */
-    public function setDataVencimento($data_vencimento)
-    {
-        
-        $this->data_vencimento = $data_vencimento;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_fatura_anterior
+     * Gets min_nosso_numero
      * @return Number
      */
-    public function getSaldoFaturaAnterior()
+    public function getMinNossoNumero()
     {
-        return $this->saldo_fatura_anterior;
+        return $this->min_nosso_numero;
     }
   
     /**
-     * Sets saldo_fatura_anterior
-     * @param Number $saldo_fatura_anterior Saldo da fatura anterior.
+     * Sets min_nosso_numero
+     * @param Number $min_nosso_numero N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
      * @return $this
      */
-    public function setSaldoFaturaAnterior($saldo_fatura_anterior)
+    public function setMinNossoNumero($min_nosso_numero)
     {
         
-        $this->saldo_fatura_anterior = $saldo_fatura_anterior;
+        $this->min_nosso_numero = $min_nosso_numero;
         return $this;
     }
     
     /**
-     * Gets saldo_multa
+     * Gets max_nosso_numero
      * @return Number
      */
-    public function getSaldoMulta()
+    public function getMaxNossoNumero()
     {
-        return $this->saldo_multa;
+        return $this->max_nosso_numero;
     }
   
     /**
-     * Sets saldo_multa
-     * @param Number $saldo_multa Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+     * Sets max_nosso_numero
+     * @param Number $max_nosso_numero N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
      * @return $this
      */
-    public function setSaldoMulta($saldo_multa)
+    public function setMaxNossoNumero($max_nosso_numero)
     {
         
-        $this->saldo_multa = $saldo_multa;
+        $this->max_nosso_numero = $max_nosso_numero;
         return $this;
     }
     
     /**
-     * Gets saldo_compras
-     * @return Number
-     */
-    public function getSaldoCompras()
-    {
-        return $this->saldo_compras;
-    }
-  
-    /**
-     * Sets saldo_compras
-     * @param Number $saldo_compras Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
-     * @return $this
-     */
-    public function setSaldoCompras($saldo_compras)
-    {
-        
-        $this->saldo_compras = $saldo_compras;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_pagamentos
-     * @return Number
-     */
-    public function getSaldoPagamentos()
-    {
-        return $this->saldo_pagamentos;
-    }
-  
-    /**
-     * Sets saldo_pagamentos
-     * @param Number $saldo_pagamentos Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
-     * @return $this
-     */
-    public function setSaldoPagamentos($saldo_pagamentos)
-    {
-        
-        $this->saldo_pagamentos = $saldo_pagamentos;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_tarifas
-     * @return Number
-     */
-    public function getSaldoTarifas()
-    {
-        return $this->saldo_tarifas;
-    }
-  
-    /**
-     * Sets saldo_tarifas
-     * @param Number $saldo_tarifas Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
-     * @return $this
-     */
-    public function setSaldoTarifas($saldo_tarifas)
-    {
-        
-        $this->saldo_tarifas = $saldo_tarifas;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_debitos
-     * @return Number
-     */
-    public function getSaldoDebitos()
-    {
-        return $this->saldo_debitos;
-    }
-  
-    /**
-     * Sets saldo_debitos
-     * @param Number $saldo_debitos Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
-     * @return $this
-     */
-    public function setSaldoDebitos($saldo_debitos)
-    {
-        
-        $this->saldo_debitos = $saldo_debitos;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_creditos
-     * @return Number
-     */
-    public function getSaldoCreditos()
-    {
-        return $this->saldo_creditos;
-    }
-  
-    /**
-     * Sets saldo_creditos
-     * @param Number $saldo_creditos Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
-     * @return $this
-     */
-    public function setSaldoCreditos($saldo_creditos)
-    {
-        
-        $this->saldo_creditos = $saldo_creditos;
-        return $this;
-    }
-    
-    /**
-     * Gets saldo_atual_final
-     * @return Number
-     */
-    public function getSaldoAtualFinal()
-    {
-        return $this->saldo_atual_final;
-    }
-  
-    /**
-     * Sets saldo_atual_final
-     * @param Number $saldo_atual_final Salto total devedor da fatura atual.
-     * @return $this
-     */
-    public function setSaldoAtualFinal($saldo_atual_final)
-    {
-        
-        $this->saldo_atual_final = $saldo_atual_final;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_minimo_fatura
-     * @return Number
-     */
-    public function getValorMinimoFatura()
-    {
-        return $this->valor_minimo_fatura;
-    }
-  
-    /**
-     * Sets valor_minimo_fatura
-     * @param Number $valor_minimo_fatura Valor m\u00C3\u00ADnimo para pagamento da fatura.
-     * @return $this
-     */
-    public function setValorMinimoFatura($valor_minimo_fatura)
-    {
-        
-        $this->valor_minimo_fatura = $valor_minimo_fatura;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_emite_fatura
+     * Gets tam_nosso_numero
      * @return int
      */
-    public function getFlagEmiteFatura()
+    public function getTamNossoNumero()
     {
-        return $this->flag_emite_fatura;
+        return $this->tam_nosso_numero;
     }
   
     /**
-     * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura Quando ativa, indica que fora emitida uma fatura.
+     * Sets tam_nosso_numero
+     * @param int $tam_nosso_numero Tamanho do nosso n\u00C3\u00BAmero.
      * @return $this
      */
-    public function setFlagEmiteFatura($flag_emite_fatura)
+    public function setTamNossoNumero($tam_nosso_numero)
     {
         
-        $this->flag_emite_fatura = $flag_emite_fatura;
+        $this->tam_nosso_numero = $tam_nosso_numero;
+        return $this;
+    }
+    
+    /**
+     * Gets ultimo_nosso_numero
+     * @return Number
+     */
+    public function getUltimoNossoNumero()
+    {
+        return $this->ultimo_nosso_numero;
+    }
+  
+    /**
+     * Sets ultimo_nosso_numero
+     * @param Number $ultimo_nosso_numero \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
+     * @return $this
+     */
+    public function setUltimoNossoNumero($ultimo_nosso_numero)
+    {
+        
+        $this->ultimo_nosso_numero = $ultimo_nosso_numero;
         return $this;
     }
     

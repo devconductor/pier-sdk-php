@@ -296,7 +296,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET5
+     * consultarUsingGET8
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -304,15 +304,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusConta
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($id)
+    public function consultarUsingGET8($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET5WithHttpInfo
+     * consultarUsingGET8WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -320,12 +320,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusConta, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($id)
+    public function consultarUsingGET8WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
         }
   
         // parse inputs
@@ -398,7 +398,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET6
+     * consultarUsingGET9
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -406,15 +406,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6($id)
+    public function consultarUsingGET9($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET6WithHttpInfo
+     * consultarUsingGET9WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -422,12 +422,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6WithHttpInfo($id)
+    public function consultarUsingGET9WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
         }
   
         // parse inputs
@@ -760,7 +760,119 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET10
+     *
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET10($page = null, $limit = null, $id = null, $nome = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($page, $limit, $id, $nome);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET10WithHttpInfo
+     *
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
+     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET10WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/status-impressoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['access_token'] = $apiKey;
+        }
+        
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET9
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -774,15 +886,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET9($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -796,7 +908,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET9WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -881,118 +993,6 @@ class StatusParametrosApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusContas', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET7
-     *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-     *
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET7($page = null, $limit = null, $id = null, $nome = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($page, $limit, $id, $nome);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET7WithHttpInfo
-     *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-     *
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
-     * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET7WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/api/status-impressoes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
-        if ($nome !== null) {
-            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusImpressao', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -66,12 +66,52 @@ class BaseApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarUsingPUT
+     *
+     * Alterar base
+     *
+     */
+    public function test_alterarUsingPUT() {
+
+    }
+    
+    /**
      * Test case for clearUsingGET
      *
      * Limpar mapa de bases
      *
      */
     public function test_clearUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET1
+     *
+     * Consultar base
+     *
+     */
+    public function test_consultarUsingGET1() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET1
+     *
+     * Listar bases
+     *
+     */
+    public function test_listarUsingGET1() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST1
+     *
+     * Salvar base
+     *
+     */
+    public function test_salvarUsingPOST1() {
 
     }
     

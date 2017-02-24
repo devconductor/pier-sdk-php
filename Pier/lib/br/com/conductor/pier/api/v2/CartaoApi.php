@@ -866,7 +866,7 @@ class CartaoApi
     }
     
     /**
-     * consultarUsingGET1
+     * consultarUsingGET2
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -874,15 +874,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\Cartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id)
+    public function consultarUsingGET2($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET1WithHttpInfo
+     * consultarUsingGET2WithHttpInfo
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -890,12 +890,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id)
+    public function consultarUsingGET2WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
         }
   
         // parse inputs
@@ -1456,7 +1456,7 @@ class CartaoApi
     }
     
     /**
-     * listarUsingGET1
+     * listarUsingGET2
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -1483,15 +1483,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
+    public function listarUsingGET2($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($page, $limit, $id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($page, $limit, $id, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarUsingGET2WithHttpInfo
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -1518,7 +1518,7 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
+    public function listarUsingGET2WithHttpInfo($page = null, $limit = null, $id = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null)
     {
         
   

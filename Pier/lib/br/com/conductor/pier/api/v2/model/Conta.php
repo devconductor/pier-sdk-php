@@ -62,6 +62,7 @@ class Conta implements ArrayAccess
         'data_cadastro' => '\DateTime',
         'data_ultima_alteracao_vencimento' => '\DateTime',
         'numero_agencia' => 'int',
+        'valor_renda' => 'Number',
         'numero_conta_corrente' => 'string'
     );
   
@@ -85,6 +86,7 @@ class Conta implements ArrayAccess
         'data_cadastro' => 'dataCadastro',
         'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
         'numero_agencia' => 'numeroAgencia',
+        'valor_renda' => 'valorRenda',
         'numero_conta_corrente' => 'numeroContaCorrente'
     );
   
@@ -108,6 +110,7 @@ class Conta implements ArrayAccess
         'data_cadastro' => 'setDataCadastro',
         'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
         'numero_agencia' => 'setNumeroAgencia',
+        'valor_renda' => 'setValorRenda',
         'numero_conta_corrente' => 'setNumeroContaCorrente'
     );
   
@@ -131,6 +134,7 @@ class Conta implements ArrayAccess
         'data_cadastro' => 'getDataCadastro',
         'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
         'numero_agencia' => 'getNumeroAgencia',
+        'valor_renda' => 'getValorRenda',
         'numero_conta_corrente' => 'getNumeroContaCorrente'
     );
   
@@ -206,6 +210,12 @@ class Conta implements ArrayAccess
     protected $numero_agencia;
     
     /**
+      * $valor_renda Apresenta o valor da renda comprovada
+      * @var Number
+      */
+    protected $valor_renda;
+    
+    /**
       * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
       * @var string
       */
@@ -231,6 +241,7 @@ class Conta implements ArrayAccess
             $this->data_cadastro = $data["data_cadastro"];
             $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
             $this->numero_agencia = $data["numero_agencia"];
+            $this->valor_renda = $data["valor_renda"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
         }
     }
@@ -463,6 +474,27 @@ class Conta implements ArrayAccess
     {
         
         $this->numero_agencia = $numero_agencia;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_renda
+     * @return Number
+     */
+    public function getValorRenda()
+    {
+        return $this->valor_renda;
+    }
+  
+    /**
+     * Sets valor_renda
+     * @param Number $valor_renda Apresenta o valor da renda comprovada
+     * @return $this
+     */
+    public function setValorRenda($valor_renda)
+    {
+        
+        $this->valor_renda = $valor_renda;
         return $this;
     }
     

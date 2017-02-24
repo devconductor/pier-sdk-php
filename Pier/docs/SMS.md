@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | C\u00C3\u00B3digo Identificador. | [optional] 
 **nsu** | **int** | N\u00C3\u00BAmero sequencial \u00C3\u00BAnico. | [optional] 
 **id_emissor** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id). | [optional] 
-**evento** | **string** | Evento de notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+**tipo_evento** | **string** | TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **status** | **string** | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | 
 **descricao_status** | **string** | Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | 
 **id_pessoa** | **int** | C\u00C3\u00B3digo identificado da pessoa | 

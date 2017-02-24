@@ -53,7 +53,7 @@ class NotificacaoPushResponse implements ArrayAccess
     static $swaggerTypes = array(
         'data_envio' => '\DateTime',
         'id_emissor' => 'int',
-        'evento' => 'string',
+        'tipo_evento' => 'string',
         'status' => 'string',
         'id_pessoa' => 'int',
         'id_conta' => 'int',
@@ -75,7 +75,7 @@ class NotificacaoPushResponse implements ArrayAccess
     static $attributeMap = array(
         'data_envio' => 'dataEnvio',
         'id_emissor' => 'idEmissor',
-        'evento' => 'evento',
+        'tipo_evento' => 'tipoEvento',
         'status' => 'status',
         'id_pessoa' => 'idPessoa',
         'id_conta' => 'idConta',
@@ -97,7 +97,7 @@ class NotificacaoPushResponse implements ArrayAccess
     static $setters = array(
         'data_envio' => 'setDataEnvio',
         'id_emissor' => 'setIdEmissor',
-        'evento' => 'setEvento',
+        'tipo_evento' => 'setTipoEvento',
         'status' => 'setStatus',
         'id_pessoa' => 'setIdPessoa',
         'id_conta' => 'setIdConta',
@@ -119,7 +119,7 @@ class NotificacaoPushResponse implements ArrayAccess
     static $getters = array(
         'data_envio' => 'getDataEnvio',
         'id_emissor' => 'getIdEmissor',
-        'evento' => 'getEvento',
+        'tipo_evento' => 'getTipoEvento',
         'status' => 'getStatus',
         'id_pessoa' => 'getIdPessoa',
         'id_conta' => 'getIdConta',
@@ -148,10 +148,10 @@ class NotificacaoPushResponse implements ArrayAccess
     protected $id_emissor;
     
     /**
-      * $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
       * @var string
       */
-    protected $evento;
+    protected $tipo_evento;
     
     /**
       * $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -212,7 +212,7 @@ class NotificacaoPushResponse implements ArrayAccess
         if ($data != null) {
             $this->data_envio = $data["data_envio"];
             $this->id_emissor = $data["id_emissor"];
-            $this->evento = $data["evento"];
+            $this->tipo_evento = $data["tipo_evento"];
             $this->status = $data["status"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_conta = $data["id_conta"];
@@ -267,26 +267,26 @@ class NotificacaoPushResponse implements ArrayAccess
     }
     
     /**
-     * Gets evento
+     * Gets tipo_evento
      * @return string
      */
-    public function getEvento()
+    public function getTipoEvento()
     {
-        return $this->evento;
+        return $this->tipo_evento;
     }
   
     /**
-     * Sets evento
-     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+     * Sets tipo_evento
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
-    public function setEvento($evento)
+    public function setTipoEvento($tipo_evento)
     {
         $allowed_values = array("RISCO_FRAUDE", "OUTROS");
-        if (!in_array($evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
-        $this->evento = $evento;
+        $this->tipo_evento = $tipo_evento;
         return $this;
     }
     

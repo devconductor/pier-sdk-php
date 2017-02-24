@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_envio** | [**\DateTime**](\DateTime.md) | Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
 **id_emissor** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id). | [optional] 
-**evento** | **string** | Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+**tipo_evento** | **string** | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **status** | **string** | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **id_pessoa** | **int** | C\u00C3\u00B3digo identificado da pessoa | 
 **id_conta** | **int** | C\u00C3\u00B3digo identificador da conta | 

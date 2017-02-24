@@ -86,6 +86,26 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarDividaAtualizadaClienteUsingGET
+     *
+     * Consultar a d\u00C3\u00ADvida atualizada do cliente
+     *
+     */
+    public function test_consultarDividaAtualizadaClienteUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarFaturaConsignadaUsingGET
+     *
+     * Apresenta dados de uma determinada fatura consignada
+     *
+     */
+    public function test_consultarFaturaConsignadaUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET1
      *
      * Apresenta os limites da conta
@@ -96,12 +116,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET2
+     * Test case for consultarUsingGET15
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     */
+    public function test_consultarUsingGET15() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET3
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET2() {
+    public function test_consultarUsingGET3() {
 
     }
     
@@ -116,6 +146,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarFaturasConsignadasUsingGET
+     *
+     * Listar Faturas consignadas da Conta
+     *
+     */
+    public function test_listarFaturasConsignadasUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarFaturasUsingGET
      *
      * Listar Faturas da Conta
@@ -126,12 +166,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET2
+     * Test case for listarUsingGET15
+     *
+     * Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+     *
+     */
+    public function test_listarUsingGET15() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET3
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET2() {
+    public function test_listarUsingGET3() {
 
     }
     
@@ -142,6 +192,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_transacoesUsingGET() {
+
+    }
+    
+    /**
+     * Test case for transferirUsingPOST
+     *
+     * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+     *
+     */
+    public function test_transferirUsingPOST() {
 
     }
     

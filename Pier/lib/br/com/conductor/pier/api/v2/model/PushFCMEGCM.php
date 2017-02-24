@@ -57,7 +57,7 @@ class PushFCMEGCM implements ArrayAccess
         'token_servidor' => 'string',
         'titulo' => 'string',
         'conteudo' => 'string',
-        'evento' => 'string',
+        'tipo_evento' => 'string',
         'icone' => 'string',
         'som' => 'string',
         'cor' => 'string'
@@ -78,7 +78,7 @@ class PushFCMEGCM implements ArrayAccess
         'token_servidor' => 'tokenServidor',
         'titulo' => 'titulo',
         'conteudo' => 'conteudo',
-        'evento' => 'evento',
+        'tipo_evento' => 'tipoEvento',
         'icone' => 'icone',
         'som' => 'som',
         'cor' => 'cor'
@@ -99,7 +99,7 @@ class PushFCMEGCM implements ArrayAccess
         'token_servidor' => 'setTokenServidor',
         'titulo' => 'setTitulo',
         'conteudo' => 'setConteudo',
-        'evento' => 'setEvento',
+        'tipo_evento' => 'setTipoEvento',
         'icone' => 'setIcone',
         'som' => 'setSom',
         'cor' => 'setCor'
@@ -120,7 +120,7 @@ class PushFCMEGCM implements ArrayAccess
         'token_servidor' => 'getTokenServidor',
         'titulo' => 'getTitulo',
         'conteudo' => 'getConteudo',
-        'evento' => 'getEvento',
+        'tipo_evento' => 'getTipoEvento',
         'icone' => 'getIcone',
         'som' => 'getSom',
         'cor' => 'getCor'
@@ -168,10 +168,10 @@ class PushFCMEGCM implements ArrayAccess
     protected $conteudo;
     
     /**
-      * $evento Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
       * @var string
       */
-    protected $evento;
+    protected $tipo_evento;
     
     /**
       * $icone Apresenta o nome do icone a ser apresentado no push.
@@ -206,7 +206,7 @@ class PushFCMEGCM implements ArrayAccess
             $this->token_servidor = $data["token_servidor"];
             $this->titulo = $data["titulo"];
             $this->conteudo = $data["conteudo"];
-            $this->evento = $data["evento"];
+            $this->tipo_evento = $data["tipo_evento"];
             $this->icone = $data["icone"];
             $this->som = $data["som"];
             $this->cor = $data["cor"];
@@ -340,26 +340,26 @@ class PushFCMEGCM implements ArrayAccess
     }
     
     /**
-     * Gets evento
+     * Gets tipo_evento
      * @return string
      */
-    public function getEvento()
+    public function getTipoEvento()
     {
-        return $this->evento;
+        return $this->tipo_evento;
     }
   
     /**
-     * Sets evento
-     * @param string $evento Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+     * Sets tipo_evento
+     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
-    public function setEvento($evento)
+    public function setTipoEvento($tipo_evento)
     {
         $allowed_values = array("RISCO_FRAUDE", "OUTROS");
-        if (!in_array($evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
-        $this->evento = $evento;
+        $this->tipo_evento = $tipo_evento;
         return $this;
     }
     

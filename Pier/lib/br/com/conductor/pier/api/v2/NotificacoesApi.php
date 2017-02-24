@@ -217,16 +217,16 @@ class NotificacoesApi
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param \DateTime $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
-     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePush
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPushUsingGET($page = null, $limit = null, $data_envio = null, $evento = null, $status = null, $plataforma = null, $protocolo = null)
+    public function listarPushUsingGET($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarPushUsingGETWithHttpInfo ($page, $limit, $data_envio, $evento, $status, $plataforma, $protocolo);
+        list($response, $statusCode, $httpHeader) = $this->listarPushUsingGETWithHttpInfo ($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
         return $response; 
     }
 
@@ -239,14 +239,14 @@ class NotificacoesApi
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param \DateTime $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
-     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePush, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPushUsingGETWithHttpInfo($page = null, $limit = null, $data_envio = null, $evento = null, $status = null, $plataforma = null, $protocolo = null)
+    public function listarPushUsingGETWithHttpInfo($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
     {
         
   
@@ -276,8 +276,8 @@ class NotificacoesApi
             $queryParams['dataEnvio'] = $this->apiClient->getSerializer()->toQueryValue($data_envio);
         }// query params
         
-        if ($evento !== null) {
-            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
+        if ($tipo_evento !== null) {
+            $queryParams['tipoEvento'] = $this->apiClient->getSerializer()->toQueryValue($tipo_evento);
         }// query params
         
         if ($status !== null) {
@@ -347,16 +347,16 @@ class NotificacoesApi
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param \DateTime $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
-     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageSMS
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $evento = null, $status = null, $operadora = null, $protocolo = null)
+    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $evento, $status, $operadora, $protocolo);
+        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo);
         return $response; 
     }
 
@@ -369,14 +369,14 @@ class NotificacoesApi
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param \DateTime $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
-     * @param string $evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageSMS, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $evento = null, $status = null, $operadora = null, $protocolo = null)
+    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null)
     {
         
   
@@ -406,8 +406,8 @@ class NotificacoesApi
             $queryParams['dataInclusao'] = $this->apiClient->getSerializer()->toQueryValue($data_inclusao);
         }// query params
         
-        if ($evento !== null) {
-            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
+        if ($tipo_evento !== null) {
+            $queryParams['tipoEvento'] = $this->apiClient->getSerializer()->toQueryValue($tipo_evento);
         }// query params
         
         if ($status !== null) {

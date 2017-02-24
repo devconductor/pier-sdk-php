@@ -57,7 +57,7 @@ class NotificacaoSMSBody implements ArrayAccess
         'celular' => 'string',
         'conteudo' => 'string',
         'data_agendamento' => '\DateTime',
-        'evento' => 'string'
+        'tipo_evento' => 'string'
     );
   
     static function swaggerTypes() {
@@ -75,7 +75,7 @@ class NotificacaoSMSBody implements ArrayAccess
         'celular' => 'celular',
         'conteudo' => 'conteudo',
         'data_agendamento' => 'dataAgendamento',
-        'evento' => 'evento'
+        'tipo_evento' => 'tipoEvento'
     );
   
     static function attributeMap() {
@@ -93,7 +93,7 @@ class NotificacaoSMSBody implements ArrayAccess
         'celular' => 'setCelular',
         'conteudo' => 'setConteudo',
         'data_agendamento' => 'setDataAgendamento',
-        'evento' => 'setEvento'
+        'tipo_evento' => 'setTipoEvento'
     );
   
     static function setters() {
@@ -111,7 +111,7 @@ class NotificacaoSMSBody implements ArrayAccess
         'celular' => 'getCelular',
         'conteudo' => 'getConteudo',
         'data_agendamento' => 'getDataAgendamento',
-        'evento' => 'getEvento'
+        'tipo_evento' => 'getTipoEvento'
     );
   
     static function getters() {
@@ -156,10 +156,10 @@ class NotificacaoSMSBody implements ArrayAccess
     protected $data_agendamento;
     
     /**
-      * $evento Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
       * @var string
       */
-    protected $evento;
+    protected $tipo_evento;
     
 
     /**
@@ -176,7 +176,7 @@ class NotificacaoSMSBody implements ArrayAccess
             $this->celular = $data["celular"];
             $this->conteudo = $data["conteudo"];
             $this->data_agendamento = $data["data_agendamento"];
-            $this->evento = $data["evento"];
+            $this->tipo_evento = $data["tipo_evento"];
         }
     }
     
@@ -307,26 +307,26 @@ class NotificacaoSMSBody implements ArrayAccess
     }
     
     /**
-     * Gets evento
+     * Gets tipo_evento
      * @return string
      */
-    public function getEvento()
+    public function getTipoEvento()
     {
-        return $this->evento;
+        return $this->tipo_evento;
     }
   
     /**
-     * Sets evento
-     * @param string $evento Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+     * Sets tipo_evento
+     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
-    public function setEvento($evento)
+    public function setTipoEvento($tipo_evento)
     {
         $allowed_values = array("RISCO_FRAUDE", "OUTROS");
-        if (!in_array($evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
         }
-        $this->evento = $evento;
+        $this->tipo_evento = $tipo_evento;
         return $this;
     }
     

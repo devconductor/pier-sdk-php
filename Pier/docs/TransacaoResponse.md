@@ -20,8 +20,6 @@ Name | Type | Description | Notes
 **estabelecimento** | **string** |  | [optional] 
 **flag_credito** | **int** |  | [optional] 
 **tipo_estabelecimento** | **string** |  | [optional] 
-**latitude** | **string** |  | [optional] 
-**longetude** | **string** |  | [optional] 
 **id_grupo_mcc** | **int** |  | [optional] 
 **flag_solicitou_contestacao** | **int** |  | [optional] 
 

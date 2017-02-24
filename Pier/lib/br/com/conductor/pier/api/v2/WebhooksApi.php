@@ -92,58 +92,52 @@ class WebhooksApi
   
     
     /**
-     * alterarUsingPUT3
+     * alterarUsingPUT7
      *
      * Alterar Webhook
      *
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
-     * @param string $evento Evento a ser chamado pelo WebHook (required)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3($id, $evento, $metodo, $url)
+    public function alterarUsingPUT7($id, $tipo_evento, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT3WithHttpInfo ($id, $evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT7WithHttpInfo ($id, $tipo_evento, $url);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT3WithHttpInfo
+     * alterarUsingPUT7WithHttpInfo
      *
      * Alterar Webhook
      *
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
-     * @param string $evento Evento a ser chamado pelo WebHook (required)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3WithHttpInfo($id, $evento, $metodo, $url)
+    public function alterarUsingPUT7WithHttpInfo($id, $tipo_evento, $url)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT7');
         }
-        // verify the required parameter 'evento' is set
-        if ($evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $evento when calling alterarUsingPUT3');
-        }
-        // verify the required parameter 'metodo' is set
-        if ($metodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling alterarUsingPUT3');
+        // verify the required parameter 'tipo_evento' is set
+        if ($tipo_evento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling alterarUsingPUT7');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling alterarUsingPUT7');
         }
   
         // parse inputs
-        $resourcePath = "/api/webhooks";
+        $resourcePath = "/api/webhooks/{id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -156,23 +150,23 @@ class WebhooksApi
   
         // query params
         
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
-        if ($evento !== null) {
-            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
-        }// query params
-        
-        if ($metodo !== null) {
-            $queryParams['metodo'] = $this->apiClient->getSerializer()->toQueryValue($metodo);
+        if ($tipo_evento !== null) {
+            $queryParams['tipoEvento'] = $this->apiClient->getSerializer()->toQueryValue($tipo_evento);
         }// query params
         
         if ($url !== null) {
             $queryParams['url'] = $this->apiClient->getSerializer()->toQueryValue($url);
         }
         
+        // path params
         
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -220,7 +214,7 @@ class WebhooksApi
     }
     
     /**
-     * consultarUsingGET11
+     * consultarUsingGET17
      *
      * Consultar Webhook
      *
@@ -228,15 +222,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11($id)
+    public function consultarUsingGET17($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET11WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -244,12 +238,12 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11WithHttpInfo($id)
+    public function consultarUsingGET17WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
         }
   
         // parse inputs
@@ -322,41 +316,41 @@ class WebhooksApi
     }
     
     /**
-     * listarUsingGET12
+     * listarUsingGET17
      *
      * Lista os Webhooks
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id Id do WebHook (optional)
-     * @param string $evento Evento a ser chamado pelo WebHook (optional)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET17($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($page, $limit, $id, $evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET17WithHttpInfo
      *
      * Lista os Webhooks
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @param int $id Id do WebHook (optional)
-     * @param string $evento Evento a ser chamado pelo WebHook (optional)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($page = null, $limit = null, $id = null, $evento = null, $metodo = null, $url = null)
+    public function listarUsingGET17WithHttpInfo($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   
@@ -386,8 +380,8 @@ class WebhooksApi
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
-        if ($evento !== null) {
-            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
+        if ($tipo_evento !== null) {
+            $queryParams['tipoEvento'] = $this->apiClient->getSerializer()->toQueryValue($tipo_evento);
         }// query params
         
         if ($metodo !== null) {
@@ -446,48 +440,42 @@ class WebhooksApi
     }
     
     /**
-     * salvarUsingPOST4
+     * salvarUsingPOST7
      *
      * Salvar Webhook
      *
-     * @param string $evento Evento a ser chamado pelo WebHook (required)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST4($evento, $metodo, $url)
+    public function salvarUsingPOST7($tipo_evento, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST4WithHttpInfo ($evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST7WithHttpInfo ($tipo_evento, $url);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST4WithHttpInfo
+     * salvarUsingPOST7WithHttpInfo
      *
      * Salvar Webhook
      *
-     * @param string $evento Evento a ser chamado pelo WebHook (required)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (required)
+     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST4WithHttpInfo($evento, $metodo, $url)
+    public function salvarUsingPOST7WithHttpInfo($tipo_evento, $url)
     {
         
-        // verify the required parameter 'evento' is set
-        if ($evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $evento when calling salvarUsingPOST4');
-        }
-        // verify the required parameter 'metodo' is set
-        if ($metodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $metodo when calling salvarUsingPOST4');
+        // verify the required parameter 'tipo_evento' is set
+        if ($tipo_evento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling salvarUsingPOST7');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST4');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST7');
         }
   
         // parse inputs
@@ -504,12 +492,8 @@ class WebhooksApi
   
         // query params
         
-        if ($evento !== null) {
-            $queryParams['evento'] = $this->apiClient->getSerializer()->toQueryValue($evento);
-        }// query params
-        
-        if ($metodo !== null) {
-            $queryParams['metodo'] = $this->apiClient->getSerializer()->toQueryValue($metodo);
+        if ($tipo_evento !== null) {
+            $queryParams['tipoEvento'] = $this->apiClient->getSerializer()->toQueryValue($tipo_evento);
         }// query params
         
         if ($url !== null) {
