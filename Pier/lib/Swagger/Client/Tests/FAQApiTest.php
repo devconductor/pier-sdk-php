@@ -68,7 +68,7 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for adicionarUsingPOST
      *
-     * Adiciona uma nova FAQ para um determinado Emissor.
+     * Adiciona uma nova FAQ
      *
      */
     public function test_adicionarUsingPOST() {
@@ -78,7 +78,7 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT2
      *
-     * Altera os par\u00C3\u00A2metros de uma FAQ existente.
+     * Alterar FAQ
      *
      */
     public function test_alterarUsingPUT2() {
@@ -88,7 +88,7 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET5
      *
-     * Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+     * Consultar FAQ por id
      *
      */
     public function test_consultarUsingGET5() {
@@ -98,7 +98,7 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET5
      *
-     * Lista todas as FAQs de um determinado emissor.
+     * Lista FAQs
      *
      */
     public function test_listarUsingGET5() {

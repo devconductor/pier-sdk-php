@@ -94,7 +94,7 @@ class FAQApi
     /**
      * adicionarUsingPOST
      *
-     * Adiciona uma nova FAQ para um determinado Emissor.
+     * Adiciona uma nova FAQ
      *
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
@@ -115,7 +115,7 @@ class FAQApi
     /**
      * adicionarUsingPOSTWithHttpInfo
      *
-     * Adiciona uma nova FAQ para um determinado Emissor.
+     * Adiciona uma nova FAQ
      *
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
@@ -226,7 +226,7 @@ class FAQApi
     /**
      * alterarUsingPUT2
      *
-     * Altera os par\u00C3\u00A2metros de uma FAQ existente.
+     * Alterar FAQ
      *
      * @param int $id Id (required)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
@@ -248,7 +248,7 @@ class FAQApi
     /**
      * alterarUsingPUT2WithHttpInfo
      *
-     * Altera os par\u00C3\u00A2metros de uma FAQ existente.
+     * Alterar FAQ
      *
      * @param int $id Id (required)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
@@ -372,7 +372,7 @@ class FAQApi
     /**
      * consultarUsingGET5
      *
-     * Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+     * Consultar FAQ por id
      *
      * @param int $id Id (required)
      * @return \br.com.conductor.pier.api.v2.model\FAQ
@@ -388,7 +388,7 @@ class FAQApi
     /**
      * consultarUsingGET5WithHttpInfo
      *
-     * Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+     * Consultar FAQ por id
      *
      * @param int $id Id (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\FAQ, HTTP status code, HTTP response headers (array of strings)
@@ -474,7 +474,7 @@ class FAQApi
     /**
      * listarUsingGET5
      *
-     * Lista todas as FAQs de um determinado emissor.
+     * Lista FAQs
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -498,7 +498,7 @@ class FAQApi
     /**
      * listarUsingGET5WithHttpInfo
      *
-     * Lista todas as FAQs de um determinado emissor.
+     * Lista FAQs
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)

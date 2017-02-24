@@ -168,7 +168,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET15
      *
-     * Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
     public function test_listarUsingGET15() {

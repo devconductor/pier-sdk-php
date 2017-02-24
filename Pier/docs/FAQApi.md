@@ -4,16 +4,18 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ para um determinado Emissor.
-[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Altera os par\u00C3\u00A2metros de uma FAQ existente.
-[**consultarUsingGET5**](FAQApi.md#consultarUsingGET5) | **GET** /api/faqs/{id} | Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-[**listarUsingGET5**](FAQApi.md#listarUsingGET5) | **GET** /api/faqs | Lista todas as FAQs de um determinado emissor.
+[**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
+[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultarUsingGET5**](FAQApi.md#consultarUsingGET5) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET5**](FAQApi.md#listarUsingGET5) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionarUsingPOST**
 > \br.com.conductor.pier.api.v2.model\FAQ adicionarUsingPOST($pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
-Adiciona uma nova FAQ para um determinado Emissor.
+Adiciona uma nova FAQ
+
+Adiciona uma nova FAQ
 
 ### Example 
 ```php
@@ -71,7 +73,9 @@ Name | Type | Description  | Notes
 # **alterarUsingPUT2**
 > \br.com.conductor.pier.api.v2.model\FAQ alterarUsingPUT2($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
-Altera os par\u00C3\u00A2metros de uma FAQ existente.
+Alterar FAQ
+
+Alterar FAQ
 
 ### Example 
 ```php
@@ -131,7 +135,9 @@ Name | Type | Description  | Notes
 # **consultarUsingGET5**
 > \br.com.conductor.pier.api.v2.model\FAQ consultarUsingGET5($id)
 
-Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+Consultar FAQ por id
+
+Consulta os detalhes de uma determinada FAQ
 
 ### Example 
 ```php
@@ -179,7 +185,9 @@ Name | Type | Description  | Notes
 # **listarUsingGET5**
 > \br.com.conductor.pier.api.v2.model\PageFaqs listarUsingGET5($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
-Lista todas as FAQs de um determinado emissor.
+Lista FAQs
+
+Lista todas as FAQs
 
 ### Example 
 ```php

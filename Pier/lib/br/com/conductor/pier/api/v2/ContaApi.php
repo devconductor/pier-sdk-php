@@ -1344,7 +1344,7 @@ class ContaApi
     /**
      * listarUsingGET15
      *
-     * Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
@@ -1367,7 +1367,7 @@ class ContaApi
     /**
      * listarUsingGET15WithHttpInfo
      *
-     * Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)

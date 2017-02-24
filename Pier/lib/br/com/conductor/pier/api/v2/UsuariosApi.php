@@ -216,7 +216,7 @@ class UsuariosApi
     /**
      * alterarUsingPUT6
      *
-     * Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+     * Alterar os usu\u00C3\u00A1rios cadastrados
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\Usuario $update update (required)
@@ -233,7 +233,7 @@ class UsuariosApi
     /**
      * alterarUsingPUT6WithHttpInfo
      *
-     * Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+     * Alterar os usu\u00C3\u00A1rios cadastrados
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\Usuario $update update (required)
@@ -430,7 +430,7 @@ class UsuariosApi
     /**
      * listarUsingGET16
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+     * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -452,7 +452,7 @@ class UsuariosApi
     /**
      * listarUsingGET16WithHttpInfo
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+     * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
@@ -662,7 +662,7 @@ class UsuariosApi
     /**
      * salvarUsingPOST6
      *
-     * Cadastrar Usu\u00C3\u00A1rio na base do PIER
+     * Cadastrar Usu\u00C3\u00A1rio
      *
      * @param \br.com.conductor.pier.api.v2.model\Usuario $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\Usuario
@@ -678,7 +678,7 @@ class UsuariosApi
     /**
      * salvarUsingPOST6WithHttpInfo
      *
-     * Cadastrar Usu\u00C3\u00A1rio na base do PIER
+     * Cadastrar Usu\u00C3\u00A1rio
      *
      * @param \br.com.conductor.pier.api.v2.model\Usuario $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\Usuario, HTTP status code, HTTP response headers (array of strings)
