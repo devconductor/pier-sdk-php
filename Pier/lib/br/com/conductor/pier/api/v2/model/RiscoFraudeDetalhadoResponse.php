@@ -73,7 +73,11 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'descricao_resposta_fraude' => 'string',
         'origem_transacao' => 'string',
         'codigo_modo_entrada_terminal' => 'string',
-        'descricao_modo_entrada_terminal' => 'string'
+        'descricao_modo_entrada_terminal' => 'string',
+        'cpf' => 'string',
+        'cnpj' => 'string',
+        'email' => 'string',
+        'tefefones' => '\br.com.conductor.pier.api.v2.model\Telefone[]'
     );
   
     static function swaggerTypes() {
@@ -107,7 +111,11 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'descricao_resposta_fraude' => 'descricaoRespostaFraude',
         'origem_transacao' => 'origemTransacao',
         'codigo_modo_entrada_terminal' => 'codigoModoEntradaTerminal',
-        'descricao_modo_entrada_terminal' => 'descricaoModoEntradaTerminal'
+        'descricao_modo_entrada_terminal' => 'descricaoModoEntradaTerminal',
+        'cpf' => 'cpf',
+        'cnpj' => 'cnpj',
+        'email' => 'email',
+        'tefefones' => 'tefefones'
     );
   
     static function attributeMap() {
@@ -141,7 +149,11 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'descricao_resposta_fraude' => 'setDescricaoRespostaFraude',
         'origem_transacao' => 'setOrigemTransacao',
         'codigo_modo_entrada_terminal' => 'setCodigoModoEntradaTerminal',
-        'descricao_modo_entrada_terminal' => 'setDescricaoModoEntradaTerminal'
+        'descricao_modo_entrada_terminal' => 'setDescricaoModoEntradaTerminal',
+        'cpf' => 'setCpf',
+        'cnpj' => 'setCnpj',
+        'email' => 'setEmail',
+        'tefefones' => 'setTefefones'
     );
   
     static function setters() {
@@ -175,7 +187,11 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'descricao_resposta_fraude' => 'getDescricaoRespostaFraude',
         'origem_transacao' => 'getOrigemTransacao',
         'codigo_modo_entrada_terminal' => 'getCodigoModoEntradaTerminal',
-        'descricao_modo_entrada_terminal' => 'getDescricaoModoEntradaTerminal'
+        'descricao_modo_entrada_terminal' => 'getDescricaoModoEntradaTerminal',
+        'cpf' => 'getCpf',
+        'cnpj' => 'getCnpj',
+        'email' => 'getEmail',
+        'tefefones' => 'getTefefones'
     );
   
     static function getters() {
@@ -321,6 +337,30 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
       */
     protected $descricao_modo_entrada_terminal;
     
+    /**
+      * $cpf N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+      * @var string
+      */
+    protected $cpf;
+    
+    /**
+      * $cnpj N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+      * @var string
+      */
+    protected $cnpj;
+    
+    /**
+      * $email Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+      * @var string
+      */
+    protected $email;
+    
+    /**
+      * $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+      * @var \br.com.conductor.pier.api.v2.model\Telefone[]
+      */
+    protected $tefefones;
+    
 
     /**
      * Constructor
@@ -353,6 +393,10 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
             $this->origem_transacao = $data["origem_transacao"];
             $this->codigo_modo_entrada_terminal = $data["codigo_modo_entrada_terminal"];
             $this->descricao_modo_entrada_terminal = $data["descricao_modo_entrada_terminal"];
+            $this->cpf = $data["cpf"];
+            $this->cnpj = $data["cnpj"];
+            $this->email = $data["email"];
+            $this->tefefones = $data["tefefones"];
         }
     }
     
@@ -836,6 +880,90 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     {
         
         $this->descricao_modo_entrada_terminal = $descricao_modo_entrada_terminal;
+        return $this;
+    }
+    
+    /**
+     * Gets cpf
+     * @return string
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+  
+    /**
+     * Sets cpf
+     * @param string $cpf N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+     * @return $this
+     */
+    public function setCpf($cpf)
+    {
+        
+        $this->cpf = $cpf;
+        return $this;
+    }
+    
+    /**
+     * Gets cnpj
+     * @return string
+     */
+    public function getCnpj()
+    {
+        return $this->cnpj;
+    }
+  
+    /**
+     * Sets cnpj
+     * @param string $cnpj N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+     * @return $this
+     */
+    public function setCnpj($cnpj)
+    {
+        
+        $this->cnpj = $cnpj;
+        return $this;
+    }
+    
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+  
+    /**
+     * Sets email
+     * @param string $email Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        
+        $this->email = $email;
+        return $this;
+    }
+    
+    /**
+     * Gets tefefones
+     * @return \br.com.conductor.pier.api.v2.model\Telefone[]
+     */
+    public function getTefefones()
+    {
+        return $this->tefefones;
+    }
+  
+    /**
+     * Sets tefefones
+     * @param \br.com.conductor.pier.api.v2.model\Telefone[] $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+     * @return $this
+     */
+    public function setTefefones($tefefones)
+    {
+        
+        $this->tefefones = $tefefones;
         return $this;
     }
     

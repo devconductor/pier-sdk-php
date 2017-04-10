@@ -5,11 +5,11 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterarUsingPUT6**](UsuariosApi.md#alterarUsingPUT6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET16**](UsuariosApi.md#consultarUsingGET16) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**listarUsingGET16**](UsuariosApi.md#listarUsingGET16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
+[**consultarUsingGET22**](UsuariosApi.md#consultarUsingGET22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+[**listarUsingGET21**](UsuariosApi.md#listarUsingGET21) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST6**](UsuariosApi.md#salvarUsingPOST6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio
+[**salvarUsingPOST8**](UsuariosApi.md#salvarUsingPOST8) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -67,10 +67,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **alterarUsingPUT6**
-> \br.com.conductor.pier.api.v2.model\Usuario alterarUsingPUT6($id, $update)
+# **alterarUsingPUT9**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse alterarUsingPUT9($id, $update)
 
-Alterar os usu\u00C3\u00A1rios cadastrados
+Altera os usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -86,13 +86,13 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-$update = new \br.com.conductor.pier.api.v2.model\Usuario(); // \br.com.conductor.pier.api.v2.model\Usuario | update
+$update = new \br.com.conductor.pier.api.v2.model\UsuarioUpdate(); // \br.com.conductor.pier.api.v2.model\UsuarioUpdate | update
 
 try { 
-    $result = $api_instance->alterarUsingPUT6($id, $update);
+    $result = $api_instance->alterarUsingPUT9($id, $update);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->alterarUsingPUT6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->alterarUsingPUT9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -102,11 +102,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
- **update** | [**\br.com.conductor.pier.api.v2.model\Usuario**](\br.com.conductor.pier.api.v2.model\Usuario.md)| update | 
+ **update** | [**\br.com.conductor.pier.api.v2.model\UsuarioUpdate**](\br.com.conductor.pier.api.v2.model\UsuarioUpdate.md)| update | 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Usuario**](Usuario.md)
+[**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 
@@ -119,8 +119,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\Usuario consultarUsingGET16($id)
+# **consultarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET22($id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 
@@ -140,10 +140,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET16($id);
+    $result = $api_instance->consultarUsingGET22($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->consultarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->consultarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Usuario**](Usuario.md)
+[**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 
@@ -169,8 +169,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PageUsuarios listarUsingGET16($page, $limit, $id, $nome, $cpf, $email, $status)
+# **listarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageUsuarios listarUsingGET21($page, $limit, $nome, $cpf, $email, $status)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -189,17 +189,16 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id = 789; // int | Id do Usuario
 $nome = "nome_example"; // string | Nome do Usuario
 $cpf = "cpf_example"; // string | CPF do Usuario
 $email = "email_example"; // string | Email do Usuario
 $status = "status_example"; // string | Status do Usuario
 
 try { 
-    $result = $api_instance->listarUsingGET16($page, $limit, $id, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET21($page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->listarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -210,7 +209,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **int**| Id do Usuario | [optional] 
  **nome** | **string**| Nome do Usuario | [optional] 
  **cpf** | **string**| CPF do Usuario | [optional] 
  **email** | **string**| Email do Usuario | [optional] 
@@ -281,10 +279,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST6**
-> \br.com.conductor.pier.api.v2.model\Usuario salvarUsingPOST6($persist)
+# **salvarUsingPOST8**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST8($persist)
 
-Cadastrar Usu\u00C3\u00A1rio
+Cadastra Usu\u00C3\u00A1rio
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -299,13 +297,13 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 // br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
-$persist = new \br.com.conductor.pier.api.v2.model\Usuario(); // \br.com.conductor.pier.api.v2.model\Usuario | persist
+$persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST6($persist);
+    $result = $api_instance->salvarUsingPOST8($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->salvarUsingPOST6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -314,11 +312,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **persist** | [**\br.com.conductor.pier.api.v2.model\Usuario**](\br.com.conductor.pier.api.v2.model\Usuario.md)| persist | 
+ **persist** | [**\br.com.conductor.pier.api.v2.model\UsuarioPersist**](\br.com.conductor.pier.api.v2.model\UsuarioPersist.md)| persist | 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Usuario**](Usuario.md)
+[**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 

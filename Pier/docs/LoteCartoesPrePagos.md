@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **id_tipo_cartao** | **int** | C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o. | 
 **id_imagem** | **int** | C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o. | 
 **id_endereco** | **int** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o. | 
-**quantidade_cartoes** | **int** | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | 
+**quantidade** | **int** | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | 
 **data_cadastro** | [**\DateTime**](\DateTime.md) | Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. | 
 **usuario_cadastro** | **string** | Nome do usu\u00C3\u00A1rio que criou o lote. | 
 **status_processamento** | **int** | Indica o status de processamento do lote. | 

@@ -57,7 +57,7 @@ class LoteCartoesPrePagos implements ArrayAccess
         'id_tipo_cartao' => 'int',
         'id_imagem' => 'int',
         'id_endereco' => 'int',
-        'quantidade_cartoes' => 'int',
+        'quantidade' => 'int',
         'data_cadastro' => '\DateTime',
         'usuario_cadastro' => 'string',
         'status_processamento' => 'int'
@@ -78,7 +78,7 @@ class LoteCartoesPrePagos implements ArrayAccess
         'id_tipo_cartao' => 'idTipoCartao',
         'id_imagem' => 'idImagem',
         'id_endereco' => 'idEndereco',
-        'quantidade_cartoes' => 'quantidadeCartoes',
+        'quantidade' => 'quantidade',
         'data_cadastro' => 'dataCadastro',
         'usuario_cadastro' => 'usuarioCadastro',
         'status_processamento' => 'statusProcessamento'
@@ -99,7 +99,7 @@ class LoteCartoesPrePagos implements ArrayAccess
         'id_tipo_cartao' => 'setIdTipoCartao',
         'id_imagem' => 'setIdImagem',
         'id_endereco' => 'setIdEndereco',
-        'quantidade_cartoes' => 'setQuantidadeCartoes',
+        'quantidade' => 'setQuantidade',
         'data_cadastro' => 'setDataCadastro',
         'usuario_cadastro' => 'setUsuarioCadastro',
         'status_processamento' => 'setStatusProcessamento'
@@ -120,7 +120,7 @@ class LoteCartoesPrePagos implements ArrayAccess
         'id_tipo_cartao' => 'getIdTipoCartao',
         'id_imagem' => 'getIdImagem',
         'id_endereco' => 'getIdEndereco',
-        'quantidade_cartoes' => 'getQuantidadeCartoes',
+        'quantidade' => 'getQuantidade',
         'data_cadastro' => 'getDataCadastro',
         'usuario_cadastro' => 'getUsuarioCadastro',
         'status_processamento' => 'getStatusProcessamento'
@@ -168,10 +168,10 @@ class LoteCartoesPrePagos implements ArrayAccess
     protected $id_endereco;
     
     /**
-      * $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+      * $quantidade N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
       * @var int
       */
-    protected $quantidade_cartoes;
+    protected $quantidade;
     
     /**
       * $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
@@ -206,7 +206,7 @@ class LoteCartoesPrePagos implements ArrayAccess
             $this->id_tipo_cartao = $data["id_tipo_cartao"];
             $this->id_imagem = $data["id_imagem"];
             $this->id_endereco = $data["id_endereco"];
-            $this->quantidade_cartoes = $data["quantidade_cartoes"];
+            $this->quantidade = $data["quantidade"];
             $this->data_cadastro = $data["data_cadastro"];
             $this->usuario_cadastro = $data["usuario_cadastro"];
             $this->status_processamento = $data["status_processamento"];
@@ -340,23 +340,23 @@ class LoteCartoesPrePagos implements ArrayAccess
     }
     
     /**
-     * Gets quantidade_cartoes
+     * Gets quantidade
      * @return int
      */
-    public function getQuantidadeCartoes()
+    public function getQuantidade()
     {
-        return $this->quantidade_cartoes;
+        return $this->quantidade;
     }
   
     /**
-     * Sets quantidade_cartoes
-     * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+     * Sets quantidade
+     * @param int $quantidade N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
      * @return $this
      */
-    public function setQuantidadeCartoes($quantidade_cartoes)
+    public function setQuantidade($quantidade)
     {
         
-        $this->quantidade_cartoes = $quantidade_cartoes;
+        $this->quantidade = $quantidade;
         return $this;
     }
     

@@ -66,42 +66,42 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT7
+     * Test case for alterarUsingPUT10
      *
      * Alterar Webhook
      *
      */
-    public function test_alterarUsingPUT7() {
+    public function test_alterarUsingPUT10() {
 
     }
     
     /**
-     * Test case for consultarUsingGET17
+     * Test case for consultarUsingGET23
      *
      * Consultar Webhook
      *
      */
-    public function test_consultarUsingGET17() {
+    public function test_consultarUsingGET23() {
 
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET22
      *
      * Lista os Webhooks
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET22() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST9
      *
      * Salvar Webhook
      *
      */
-    public function test_salvarUsingPOST7() {
+    public function test_salvarUsingPOST9() {
 
     }
     

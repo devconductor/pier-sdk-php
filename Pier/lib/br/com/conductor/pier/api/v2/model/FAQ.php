@@ -51,7 +51,7 @@ class FAQ implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_faq' => 'int',
+        'id' => 'int',
         'id_emissor' => 'int',
         'pergunta' => 'string',
         'resposta' => 'string',
@@ -70,7 +70,7 @@ class FAQ implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_faq' => 'idFaq',
+        'id' => 'id',
         'id_emissor' => 'idEmissor',
         'pergunta' => 'pergunta',
         'resposta' => 'resposta',
@@ -89,7 +89,7 @@ class FAQ implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_faq' => 'setIdFaq',
+        'id' => 'setId',
         'id_emissor' => 'setIdEmissor',
         'pergunta' => 'setPergunta',
         'resposta' => 'setResposta',
@@ -108,7 +108,7 @@ class FAQ implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_faq' => 'getIdFaq',
+        'id' => 'getId',
         'id_emissor' => 'getIdEmissor',
         'pergunta' => 'getPergunta',
         'resposta' => 'getResposta',
@@ -124,10 +124,10 @@ class FAQ implements ArrayAccess
 
     
     /**
-      * $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
       * @var int
       */
-    protected $id_faq;
+    protected $id;
     
     /**
       * $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
@@ -180,7 +180,7 @@ class FAQ implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_faq = $data["id_faq"];
+            $this->id = $data["id"];
             $this->id_emissor = $data["id_emissor"];
             $this->pergunta = $data["pergunta"];
             $this->resposta = $data["resposta"];
@@ -192,23 +192,23 @@ class FAQ implements ArrayAccess
     }
     
     /**
-     * Gets id_faq
+     * Gets id
      * @return int
      */
-    public function getIdFaq()
+    public function getId()
     {
-        return $this->id_faq;
+        return $this->id;
     }
   
     /**
-     * Sets id_faq
-     * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
      * @return $this
      */
-    public function setIdFaq($id_faq)
+    public function setId($id)
     {
         
-        $this->id_faq = $id_faq;
+        $this->id = $id;
         return $this;
     }
     

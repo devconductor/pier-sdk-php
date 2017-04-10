@@ -51,7 +51,7 @@ class ListaProdutos implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\Produto[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\ProdutoResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class ListaProdutos implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\Produto[]
+      * @var \br.com.conductor.pier.api.v2.model\ProdutoResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class ListaProdutos implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\Produto[]
+     * @return \br.com.conductor.pier.api.v2.model\ProdutoResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class ListaProdutos implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\Produto[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\ProdutoResponse[] $content 
      * @return $this
      */
     public function setContent($content)

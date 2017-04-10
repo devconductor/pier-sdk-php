@@ -51,7 +51,7 @@ class PageUsuarios implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\Usuario[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\UsuarioResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageUsuarios implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\Usuario[]
+      * @var \br.com.conductor.pier.api.v2.model\UsuarioResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageUsuarios implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\Usuario[]
+     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageUsuarios implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\Usuario[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioResponse[] $content 
      * @return $this
      */
     public function setContent($content)

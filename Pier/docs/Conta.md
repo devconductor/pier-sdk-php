@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **numero_agencia** | **int** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
 **valor_renda** | [**Number**](Number.md) | Apresenta o valor da renda comprovada | [optional] 
 **numero_conta_corrente** | **string** | N\u00C3\u00BAmero da conta corrente. | [optional] 
+**forma_envio_fatura** | **string** | Forma de envio da fatura. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

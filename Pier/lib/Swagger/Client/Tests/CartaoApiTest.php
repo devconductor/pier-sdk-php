@@ -126,6 +126,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarLotesCartoesPrePagosUsingGET
+     *
+     * Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     *
+     */
+    public function test_consultarLotesCartoesPrePagosUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarPortadorUsingGET
      *
      * Apresenta os dados do Portador do Cart\u00C3\u00A3o
@@ -142,6 +152,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_consultarUsingGET2() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET20
+     *
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+     *
+     */
+    public function test_consultarUsingGET20() {
 
     }
     
@@ -186,12 +206,32 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarUsingGET19
+     *
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     *
+     */
+    public function test_listarUsingGET19() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET2
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
     public function test_listarUsingGET2() {
+
+    }
+    
+    /**
+     * Test case for transferirUsingPOST
+     *
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+     *
+     */
+    public function test_transferirUsingPOST() {
 
     }
     

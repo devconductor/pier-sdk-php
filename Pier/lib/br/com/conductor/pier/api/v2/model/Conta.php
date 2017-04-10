@@ -63,7 +63,8 @@ class Conta implements ArrayAccess
         'data_ultima_alteracao_vencimento' => '\DateTime',
         'numero_agencia' => 'int',
         'valor_renda' => 'Number',
-        'numero_conta_corrente' => 'string'
+        'numero_conta_corrente' => 'string',
+        'forma_envio_fatura' => 'string'
     );
   
     static function swaggerTypes() {
@@ -87,7 +88,8 @@ class Conta implements ArrayAccess
         'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
         'numero_agencia' => 'numeroAgencia',
         'valor_renda' => 'valorRenda',
-        'numero_conta_corrente' => 'numeroContaCorrente'
+        'numero_conta_corrente' => 'numeroContaCorrente',
+        'forma_envio_fatura' => 'formaEnvioFatura'
     );
   
     static function attributeMap() {
@@ -111,7 +113,8 @@ class Conta implements ArrayAccess
         'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
         'numero_agencia' => 'setNumeroAgencia',
         'valor_renda' => 'setValorRenda',
-        'numero_conta_corrente' => 'setNumeroContaCorrente'
+        'numero_conta_corrente' => 'setNumeroContaCorrente',
+        'forma_envio_fatura' => 'setFormaEnvioFatura'
     );
   
     static function setters() {
@@ -135,7 +138,8 @@ class Conta implements ArrayAccess
         'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
         'numero_agencia' => 'getNumeroAgencia',
         'valor_renda' => 'getValorRenda',
-        'numero_conta_corrente' => 'getNumeroContaCorrente'
+        'numero_conta_corrente' => 'getNumeroContaCorrente',
+        'forma_envio_fatura' => 'getFormaEnvioFatura'
     );
   
     static function getters() {
@@ -221,6 +225,12 @@ class Conta implements ArrayAccess
       */
     protected $numero_conta_corrente;
     
+    /**
+      * $forma_envio_fatura Forma de envio da fatura.
+      * @var string
+      */
+    protected $forma_envio_fatura;
+    
 
     /**
      * Constructor
@@ -243,6 +253,7 @@ class Conta implements ArrayAccess
             $this->numero_agencia = $data["numero_agencia"];
             $this->valor_renda = $data["valor_renda"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
+            $this->forma_envio_fatura = $data["forma_envio_fatura"];
         }
     }
     
@@ -516,6 +527,27 @@ class Conta implements ArrayAccess
     {
         
         $this->numero_conta_corrente = $numero_conta_corrente;
+        return $this;
+    }
+    
+    /**
+     * Gets forma_envio_fatura
+     * @return string
+     */
+    public function getFormaEnvioFatura()
+    {
+        return $this->forma_envio_fatura;
+    }
+  
+    /**
+     * Sets forma_envio_fatura
+     * @param string $forma_envio_fatura Forma de envio da fatura.
+     * @return $this
+     */
+    public function setFormaEnvioFatura($forma_envio_fatura)
+    {
+        
+        $this->forma_envio_fatura = $forma_envio_fatura;
         return $this;
     }
     

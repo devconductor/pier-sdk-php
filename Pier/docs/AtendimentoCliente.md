@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **nome_sistema** | **string** | Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento. | [optional] 
 **data_hora_inicio_atendimento** | [**\DateTime**](\DateTime.md) | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
 **data_hora_fim_atendimento** | [**\DateTime**](\DateTime.md) | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. | [optional] 
-**data_atendimento** | [**\DateTime**](\DateTime.md) | Apresenta a data em que o Atendimento foi realizado. | [optional] 
-**data_agendamento** | [**\DateTime**](\DateTime.md) | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento. | [optional] 
-**data_processamento** | [**\DateTime**](\DateTime.md) | Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada. | [optional] 
+**data_atendimento** | [**\DateTime**](\DateTime.md) | Apresenta a data e hora em que o Atendimento foi realizado. | [optional] 
+**data_agendamento** | [**\DateTime**](\DateTime.md) | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento. | [optional] 
+**data_processamento** | [**\DateTime**](\DateTime.md) | Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada. | [optional] 
 **flag_processamento** | **int** | Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

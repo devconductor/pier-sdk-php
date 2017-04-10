@@ -214,42 +214,42 @@ class UsuariosApi
     }
     
     /**
-     * alterarUsingPUT6
+     * alterarUsingPUT9
      *
-     * Alterar os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\Usuario $update update (required)
-     * @return \br.com.conductor.pier.api.v2.model\Usuario
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
+     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT6($id, $update)
+    public function alterarUsingPUT9($id, $update)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT6WithHttpInfo ($id, $update);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT9WithHttpInfo ($id, $update);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT6WithHttpInfo
+     * alterarUsingPUT9WithHttpInfo
      *
-     * Alterar os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\Usuario $update update (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Usuario, HTTP status code, HTTP response headers (array of strings)
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT6WithHttpInfo($id, $update)
+    public function alterarUsingPUT9WithHttpInfo($id, $update)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT9');
         }
         // verify the required parameter 'update' is set
         if ($update === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT6');
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT9');
         }
   
         // parse inputs
@@ -304,19 +304,19 @@ class UsuariosApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Usuario'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\UsuarioResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Usuario', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Usuario', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -326,36 +326,36 @@ class UsuariosApi
     }
     
     /**
-     * consultarUsingGET16
+     * consultarUsingGET22
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\Usuario
+     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16($id)
+    public function consultarUsingGET22($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET16WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Usuario, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16WithHttpInfo($id)
+    public function consultarUsingGET22WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
         }
   
         // parse inputs
@@ -406,19 +406,19 @@ class UsuariosApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Usuario'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\UsuarioResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Usuario', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Usuario', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -428,13 +428,12 @@ class UsuariosApi
     }
     
     /**
-     * listarUsingGET16
+     * listarUsingGET21
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id Id do Usuario (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -442,21 +441,20 @@ class UsuariosApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarios
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16($page = null, $limit = null, $id = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET21($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($page, $limit, $id, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET16WithHttpInfo
+     * listarUsingGET21WithHttpInfo
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id Id do Usuario (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -464,7 +462,7 @@ class UsuariosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarios, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET21WithHttpInfo($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   
@@ -488,10 +486,6 @@ class UsuariosApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
         if ($nome !== null) {
@@ -660,36 +654,36 @@ class UsuariosApi
     }
     
     /**
-     * salvarUsingPOST6
+     * salvarUsingPOST8
      *
-     * Cadastrar Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio
      *
-     * @param \br.com.conductor.pier.api.v2.model\Usuario $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\Usuario
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST6($persist)
+    public function salvarUsingPOST8($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST6WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST6WithHttpInfo
+     * salvarUsingPOST8WithHttpInfo
      *
-     * Cadastrar Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio
      *
-     * @param \br.com.conductor.pier.api.v2.model\Usuario $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Usuario, HTTP status code, HTTP response headers (array of strings)
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST6WithHttpInfo($persist)
+    public function salvarUsingPOST8WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST6');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST8');
         }
   
         // parse inputs
@@ -736,19 +730,19 @@ class UsuariosApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Usuario'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\UsuarioResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Usuario', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Usuario', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

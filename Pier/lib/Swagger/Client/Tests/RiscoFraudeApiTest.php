@@ -76,12 +76,12 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET10
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET10() {
 
     }
     
@@ -106,12 +106,12 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET8
+     * Test case for listarUsingGET11
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
      */
-    public function test_listarUsingGET8() {
+    public function test_listarUsingGET11() {
 
     }
     

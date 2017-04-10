@@ -57,7 +57,11 @@ class Pessoa implements ArrayAccess
         'cpf' => 'string',
         'cnpj' => 'string',
         'data_nascimento' => '\DateTime',
-        'sexo' => 'string'
+        'numero_identidade' => 'string',
+        'orgao_expedidor_identidade' => 'string',
+        'sexo' => 'string',
+        'unidade_federativa_identidade' => 'string',
+        'data_emissao_identidade' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -75,7 +79,11 @@ class Pessoa implements ArrayAccess
         'cpf' => 'cpf',
         'cnpj' => 'cnpj',
         'data_nascimento' => 'dataNascimento',
-        'sexo' => 'sexo'
+        'numero_identidade' => 'numeroIdentidade',
+        'orgao_expedidor_identidade' => 'orgaoExpedidorIdentidade',
+        'sexo' => 'sexo',
+        'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'dataEmissaoIdentidade'
     );
   
     static function attributeMap() {
@@ -93,7 +101,11 @@ class Pessoa implements ArrayAccess
         'cpf' => 'setCpf',
         'cnpj' => 'setCnpj',
         'data_nascimento' => 'setDataNascimento',
-        'sexo' => 'setSexo'
+        'numero_identidade' => 'setNumeroIdentidade',
+        'orgao_expedidor_identidade' => 'setOrgaoExpedidorIdentidade',
+        'sexo' => 'setSexo',
+        'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'setDataEmissaoIdentidade'
     );
   
     static function setters() {
@@ -111,7 +123,11 @@ class Pessoa implements ArrayAccess
         'cpf' => 'getCpf',
         'cnpj' => 'getCnpj',
         'data_nascimento' => 'getDataNascimento',
-        'sexo' => 'getSexo'
+        'numero_identidade' => 'getNumeroIdentidade',
+        'orgao_expedidor_identidade' => 'getOrgaoExpedidorIdentidade',
+        'sexo' => 'getSexo',
+        'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'getDataEmissaoIdentidade'
     );
   
     static function getters() {
@@ -156,10 +172,34 @@ class Pessoa implements ArrayAccess
     protected $data_nascimento;
     
     /**
+      * $numero_identidade N\u00C3\u00BAmero da Identidade
+      * @var string
+      */
+    protected $numero_identidade;
+    
+    /**
+      * $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+      * @var string
+      */
+    protected $orgao_expedidor_identidade;
+    
+    /**
       * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
       * @var string
       */
     protected $sexo;
+    
+    /**
+      * $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+      * @var string
+      */
+    protected $unidade_federativa_identidade;
+    
+    /**
+      * $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+      * @var \DateTime
+      */
+    protected $data_emissao_identidade;
     
 
     /**
@@ -176,7 +216,11 @@ class Pessoa implements ArrayAccess
             $this->cpf = $data["cpf"];
             $this->cnpj = $data["cnpj"];
             $this->data_nascimento = $data["data_nascimento"];
+            $this->numero_identidade = $data["numero_identidade"];
+            $this->orgao_expedidor_identidade = $data["orgao_expedidor_identidade"];
             $this->sexo = $data["sexo"];
+            $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
+            $this->data_emissao_identidade = $data["data_emissao_identidade"];
         }
     }
     
@@ -307,6 +351,48 @@ class Pessoa implements ArrayAccess
     }
     
     /**
+     * Gets numero_identidade
+     * @return string
+     */
+    public function getNumeroIdentidade()
+    {
+        return $this->numero_identidade;
+    }
+  
+    /**
+     * Sets numero_identidade
+     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade
+     * @return $this
+     */
+    public function setNumeroIdentidade($numero_identidade)
+    {
+        
+        $this->numero_identidade = $numero_identidade;
+        return $this;
+    }
+    
+    /**
+     * Gets orgao_expedidor_identidade
+     * @return string
+     */
+    public function getOrgaoExpedidorIdentidade()
+    {
+        return $this->orgao_expedidor_identidade;
+    }
+  
+    /**
+     * Sets orgao_expedidor_identidade
+     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+     * @return $this
+     */
+    public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
+    {
+        
+        $this->orgao_expedidor_identidade = $orgao_expedidor_identidade;
+        return $this;
+    }
+    
+    /**
      * Gets sexo
      * @return string
      */
@@ -324,6 +410,48 @@ class Pessoa implements ArrayAccess
     {
         
         $this->sexo = $sexo;
+        return $this;
+    }
+    
+    /**
+     * Gets unidade_federativa_identidade
+     * @return string
+     */
+    public function getUnidadeFederativaIdentidade()
+    {
+        return $this->unidade_federativa_identidade;
+    }
+  
+    /**
+     * Sets unidade_federativa_identidade
+     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @return $this
+     */
+    public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
+    {
+        
+        $this->unidade_federativa_identidade = $unidade_federativa_identidade;
+        return $this;
+    }
+    
+    /**
+     * Gets data_emissao_identidade
+     * @return \DateTime
+     */
+    public function getDataEmissaoIdentidade()
+    {
+        return $this->data_emissao_identidade;
+    }
+  
+    /**
+     * Sets data_emissao_identidade
+     * @param \DateTime $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+     * @return $this
+     */
+    public function setDataEmissaoIdentidade($data_emissao_identidade)
+    {
+        
+        $this->data_emissao_identidade = $data_emissao_identidade;
         return $this;
     }
     

@@ -194,7 +194,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * consultarUsingGET7
+     * consultarUsingGET10
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -202,15 +202,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7($id)
+    public function consultarUsingGET10($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET7WithHttpInfo
+     * consultarUsingGET10WithHttpInfo
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -218,12 +218,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7WithHttpInfo($id)
+    public function consultarUsingGET10WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
         }
   
         // parse inputs
@@ -400,7 +400,6 @@ class RiscoFraudeApi
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id) (optional)
      * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
@@ -408,9 +407,9 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($page = null, $limit = null, $id_atendimento = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
+    public function listarUsingGET($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($page, $limit, $id_atendimento, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
         return $response; 
     }
 
@@ -422,7 +421,6 @@ class RiscoFraudeApi
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id) (optional)
      * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
@@ -430,7 +428,7 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id_atendimento = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
+    public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
     {
         
   
@@ -454,10 +452,6 @@ class RiscoFraudeApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id_atendimento !== null) {
-            $queryParams['idAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($id_atendimento);
         }// query params
         
         if ($id_tipo_atendimento !== null) {
@@ -524,7 +518,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET11
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
@@ -535,15 +529,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET11($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET11WithHttpInfo
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
@@ -554,16 +548,16 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET11WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET8');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET11');
         }
         // verify the required parameter 'confirmacao_fraude' is set
         if ($confirmacao_fraude === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET8');
+            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET11');
         }
   
         // parse inputs
@@ -856,16 +850,17 @@ class RiscoFraudeApi
      * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
      * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. (optional)
+     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param int $flag_fila_fraude Flag fila fraude (optional)
      * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null)
+    public function salvarUsingPOST($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOSTWithHttpInfo ($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOSTWithHttpInfo ($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
         return $response; 
     }
 
@@ -879,14 +874,15 @@ class RiscoFraudeApi
      * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
      * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos. (optional)
+     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param int $flag_fila_fraude Flag fila fraude (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOSTWithHttpInfo($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null)
+    public function salvarUsingPOSTWithHttpInfo($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
     {
         
   
@@ -934,6 +930,10 @@ class RiscoFraudeApi
         
         if ($data_hora_fim_atendimento !== null) {
             $queryParams['dataHoraFimAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($data_hora_fim_atendimento);
+        }// query params
+        
+        if ($flag_fila_fraude !== null) {
+            $queryParams['flagFilaFraude'] = $this->apiClient->getSerializer()->toQueryValue($flag_fila_fraude);
         }
         
         

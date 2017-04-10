@@ -66,9 +66,19 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for ajustarContaUsingPOST
+     *
+     * Lan\u00C3\u00A7a um ajuste para a conta do id informado
+     *
+     */
+    public function test_ajustarContaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for alterarLimiteUsingPUT
      *
-     * Alterar limite
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
      *
      */
     public function test_alterarLimiteUsingPUT() {
@@ -78,7 +88,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarVencimentoUsingPUT
      *
-     * Alterar vencimento
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
      *
      */
     public function test_alterarVencimentoUsingPUT() {
@@ -86,12 +96,42 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for ativarEnvioFaturaEmailUsingPOST
+     *
+     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *
+     */
+    public function test_ativarEnvioFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarBoletoEmitidoUsingGET
+     *
+     * Consulta os dados de um determinado boleto da fatura
+     *
+     */
+    public function test_consultarBoletoEmitidoUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarDividaAtualizadaClienteUsingGET
      *
-     * Consultar a d\u00C3\u00ADvida atualizada do cliente
+     * Consulta a d\u00C3\u00ADvida atualizada do cliente
      *
      */
     public function test_consultarDividaAtualizadaClienteUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarFaturaConsignadaAbertaUsingGET
+     *
+     * Consultar a fatura consignadas abertas da conta
+     *
+     */
+    public function test_consultarFaturaConsignadaAbertaUsingGET() {
 
     }
     
@@ -106,6 +146,26 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarFaturaUsingGET
+     *
+     * Consultar Fatura da Conta
+     *
+     */
+    public function test_consultarFaturaUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarLancamentosFuturosFaturaUsingGET
+     *
+     * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
+     *
+     */
+    public function test_consultarLancamentosFuturosFaturaUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET1
      *
      * Apresenta os limites da conta
@@ -116,12 +176,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET15
+     * Test case for consultarUsingGET21
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET15() {
+    public function test_consultarUsingGET21() {
 
     }
     
@@ -132,6 +192,26 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_consultarUsingGET3() {
+
+    }
+    
+    /**
+     * Test case for desativarEnvioFaturaEmailUsingPOST
+     *
+     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     *
+     */
+    public function test_desativarEnvioFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarBoletoRecargaUsingPOST
+     *
+     * Gera um boleto de recarga
+     *
+     */
+    public function test_gerarBoletoRecargaUsingPOST() {
 
     }
     
@@ -148,7 +228,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarFaturasConsignadasUsingGET
      *
-     * Listar Faturas consignadas da Conta
+     * Lista as faturas consignadas da conta
      *
      */
     public function test_listarFaturasConsignadasUsingGET() {
@@ -158,7 +238,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarFaturasUsingGET
      *
-     * Listar Faturas da Conta
+     * Lista as faturas da conta
      *
      */
     public function test_listarFaturasUsingGET() {
@@ -166,12 +246,62 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET15
+     * Test case for listarHistoricoAlteracoesLimitesUsingGET
+     *
+     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     *
+     */
+    public function test_listarHistoricoAlteracoesLimitesUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarHistoricoAssessoriaUsingGET
+     *
+     * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+     *
+     */
+    public function test_listarHistoricoAssessoriaUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarHistoricoAtrasosFaturasUsingGET
+     *
+     * Lista o historico de atrasos das faturas
+     *
+     */
+    public function test_listarHistoricoAtrasosFaturasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarNaoProcessadasUsingGET
+     *
+     * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+     *
+     */
+    public function test_listarNaoProcessadasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarProcessadasUsingGET
+     *
+     * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+     *
+     */
+    public function test_listarProcessadasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET20
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET15() {
+    public function test_listarUsingGET20() {
 
     }
     
@@ -186,6 +316,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for reativarUsingPOST
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+     *
+     */
+    public function test_reativarUsingPOST() {
+
+    }
+    
+    /**
      * Test case for transacoesUsingGET
      *
      * Permite listar uma linha do tempo com os eventos da conta
@@ -196,12 +336,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for transferirUsingPOST
+     * Test case for transferirUsingPOST1
      *
      * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
      *
      */
-    public function test_transferirUsingPOST() {
+    public function test_transferirUsingPOST1() {
 
     }
     
