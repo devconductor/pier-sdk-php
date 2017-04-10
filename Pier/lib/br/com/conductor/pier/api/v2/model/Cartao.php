@@ -68,7 +68,8 @@ class Cartao implements ArrayAccess
         'arquivo_impressao' => 'string',
         'flag_impressao_origem_comercial' => 'int',
         'flag_provisorio' => 'int',
-        'codigo_desbloqueio' => 'string'
+        'codigo_desbloqueio' => 'string',
+        'sequencial_cartao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -97,7 +98,8 @@ class Cartao implements ArrayAccess
         'arquivo_impressao' => 'arquivoImpressao',
         'flag_impressao_origem_comercial' => 'flagImpressaoOrigemComercial',
         'flag_provisorio' => 'flagProvisorio',
-        'codigo_desbloqueio' => 'codigoDesbloqueio'
+        'codigo_desbloqueio' => 'codigoDesbloqueio',
+        'sequencial_cartao' => 'sequencialCartao'
     );
   
     static function attributeMap() {
@@ -126,7 +128,8 @@ class Cartao implements ArrayAccess
         'arquivo_impressao' => 'setArquivoImpressao',
         'flag_impressao_origem_comercial' => 'setFlagImpressaoOrigemComercial',
         'flag_provisorio' => 'setFlagProvisorio',
-        'codigo_desbloqueio' => 'setCodigoDesbloqueio'
+        'codigo_desbloqueio' => 'setCodigoDesbloqueio',
+        'sequencial_cartao' => 'setSequencialCartao'
     );
   
     static function setters() {
@@ -155,7 +158,8 @@ class Cartao implements ArrayAccess
         'arquivo_impressao' => 'getArquivoImpressao',
         'flag_impressao_origem_comercial' => 'getFlagImpressaoOrigemComercial',
         'flag_provisorio' => 'getFlagProvisorio',
-        'codigo_desbloqueio' => 'getCodigoDesbloqueio'
+        'codigo_desbloqueio' => 'getCodigoDesbloqueio',
+        'sequencial_cartao' => 'getSequencialCartao'
     );
   
     static function getters() {
@@ -271,6 +275,12 @@ class Cartao implements ArrayAccess
       */
     protected $codigo_desbloqueio;
     
+    /**
+      * $sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+      * @var int
+      */
+    protected $sequencial_cartao;
+    
 
     /**
      * Constructor
@@ -298,6 +308,7 @@ class Cartao implements ArrayAccess
             $this->flag_impressao_origem_comercial = $data["flag_impressao_origem_comercial"];
             $this->flag_provisorio = $data["flag_provisorio"];
             $this->codigo_desbloqueio = $data["codigo_desbloqueio"];
+            $this->sequencial_cartao = $data["sequencial_cartao"];
         }
     }
     
@@ -676,6 +687,27 @@ class Cartao implements ArrayAccess
     {
         
         $this->codigo_desbloqueio = $codigo_desbloqueio;
+        return $this;
+    }
+    
+    /**
+     * Gets sequencial_cartao
+     * @return int
+     */
+    public function getSequencialCartao()
+    {
+        return $this->sequencial_cartao;
+    }
+  
+    /**
+     * Sets sequencial_cartao
+     * @param int $sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+     * @return $this
+     */
+    public function setSequencialCartao($sequencial_cartao)
+    {
+        
+        $this->sequencial_cartao = $sequencial_cartao;
         return $this;
     }
     
