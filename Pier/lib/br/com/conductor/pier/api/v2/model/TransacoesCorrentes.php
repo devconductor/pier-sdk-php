@@ -59,15 +59,15 @@ class TransacoesCorrentes implements ArrayAccess
         'id_conta' => 'int',
         'cartao_mascarado' => 'string',
         'nome_portador' => 'string',
-        'data_transacao_utc' => 'string',
+        'data_transacao_utc' => '\DateTime',
         'data_faturamento' => '\DateTime',
-        'data_vencimento' => 'string',
+        'data_vencimento' => '\DateTime',
         'modo_entrada_transacao' => 'string',
         'valor_taxa_embarque' => 'Number',
         'valor_entrada' => 'Number',
         'valor_brl' => 'Number',
-        'cotacao_usd' => 'Number',
         'valor_usd' => 'Number',
+        'cotacao_usd' => 'Number',
         'data_cotacao_usd' => '\DateTime',
         'codigo_moeda_origem' => 'string',
         'codigo_moeda_destino' => 'string',
@@ -111,8 +111,8 @@ class TransacoesCorrentes implements ArrayAccess
         'valor_taxa_embarque' => 'valorTaxaEmbarque',
         'valor_entrada' => 'valorEntrada',
         'valor_brl' => 'valorBRL',
-        'cotacao_usd' => 'cotacaoUSD',
         'valor_usd' => 'valorUSD',
+        'cotacao_usd' => 'cotacaoUSD',
         'data_cotacao_usd' => 'dataCotacaoUSD',
         'codigo_moeda_origem' => 'codigoMoedaOrigem',
         'codigo_moeda_destino' => 'codigoMoedaDestino',
@@ -156,8 +156,8 @@ class TransacoesCorrentes implements ArrayAccess
         'valor_taxa_embarque' => 'setValorTaxaEmbarque',
         'valor_entrada' => 'setValorEntrada',
         'valor_brl' => 'setValorBrl',
-        'cotacao_usd' => 'setCotacaoUsd',
         'valor_usd' => 'setValorUsd',
+        'cotacao_usd' => 'setCotacaoUsd',
         'data_cotacao_usd' => 'setDataCotacaoUsd',
         'codigo_moeda_origem' => 'setCodigoMoedaOrigem',
         'codigo_moeda_destino' => 'setCodigoMoedaDestino',
@@ -201,8 +201,8 @@ class TransacoesCorrentes implements ArrayAccess
         'valor_taxa_embarque' => 'getValorTaxaEmbarque',
         'valor_entrada' => 'getValorEntrada',
         'valor_brl' => 'getValorBrl',
-        'cotacao_usd' => 'getCotacaoUsd',
         'valor_usd' => 'getValorUsd',
+        'cotacao_usd' => 'getCotacaoUsd',
         'data_cotacao_usd' => 'getDataCotacaoUsd',
         'codigo_moeda_origem' => 'getCodigoMoedaOrigem',
         'codigo_moeda_destino' => 'getCodigoMoedaDestino',
@@ -277,7 +277,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
       * $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-      * @var string
+      * @var \DateTime
       */
     protected $data_transacao_utc;
     
@@ -289,7 +289,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
       * $data_vencimento Data de Vencimento da Fatura.
-      * @var string
+      * @var \DateTime
       */
     protected $data_vencimento;
     
@@ -318,16 +318,16 @@ class TransacoesCorrentes implements ArrayAccess
     protected $valor_brl;
     
     /**
-      * $cotacao_usd Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-      * @var Number
-      */
-    protected $cotacao_usd;
-    
-    /**
       * $valor_usd Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
       * @var Number
       */
     protected $valor_usd;
+    
+    /**
+      * $cotacao_usd Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+      * @var Number
+      */
+    protected $cotacao_usd;
     
     /**
       * $data_cotacao_usd Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
@@ -455,8 +455,8 @@ class TransacoesCorrentes implements ArrayAccess
             $this->valor_taxa_embarque = $data["valor_taxa_embarque"];
             $this->valor_entrada = $data["valor_entrada"];
             $this->valor_brl = $data["valor_brl"];
-            $this->cotacao_usd = $data["cotacao_usd"];
             $this->valor_usd = $data["valor_usd"];
+            $this->cotacao_usd = $data["cotacao_usd"];
             $this->data_cotacao_usd = $data["data_cotacao_usd"];
             $this->codigo_moeda_origem = $data["codigo_moeda_origem"];
             $this->codigo_moeda_destino = $data["codigo_moeda_destino"];
@@ -647,7 +647,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_transacao_utc
-     * @return string
+     * @return \DateTime
      */
     public function getDataTransacaoUtc()
     {
@@ -656,7 +656,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_transacao_utc
-     * @param string $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+     * @param \DateTime $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
      * @return $this
      */
     public function setDataTransacaoUtc($data_transacao_utc)
@@ -689,7 +689,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_vencimento
-     * @return string
+     * @return \DateTime
      */
     public function getDataVencimento()
     {
@@ -698,7 +698,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param string $data_vencimento Data de Vencimento da Fatura.
+     * @param \DateTime $data_vencimento Data de Vencimento da Fatura.
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -793,27 +793,6 @@ class TransacoesCorrentes implements ArrayAccess
     }
     
     /**
-     * Gets cotacao_usd
-     * @return Number
-     */
-    public function getCotacaoUsd()
-    {
-        return $this->cotacao_usd;
-    }
-  
-    /**
-     * Sets cotacao_usd
-     * @param Number $cotacao_usd Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-     * @return $this
-     */
-    public function setCotacaoUsd($cotacao_usd)
-    {
-        
-        $this->cotacao_usd = $cotacao_usd;
-        return $this;
-    }
-    
-    /**
      * Gets valor_usd
      * @return Number
      */
@@ -831,6 +810,27 @@ class TransacoesCorrentes implements ArrayAccess
     {
         
         $this->valor_usd = $valor_usd;
+        return $this;
+    }
+    
+    /**
+     * Gets cotacao_usd
+     * @return Number
+     */
+    public function getCotacaoUsd()
+    {
+        return $this->cotacao_usd;
+    }
+  
+    /**
+     * Sets cotacao_usd
+     * @param Number $cotacao_usd Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+     * @return $this
+     */
+    public function setCotacaoUsd($cotacao_usd)
+    {
+        
+        $this->cotacao_usd = $cotacao_usd;
         return $this;
     }
     

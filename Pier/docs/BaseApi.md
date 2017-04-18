@@ -4,11 +4,11 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearUsingPOST**](BaseApi.md#clearUsingPOST) | **POST** /api/bases/limpar | Limpar mapa de bases
+[**limparUsingPOST**](BaseApi.md#limparUsingPOST) | **POST** /api/bases/limpar | Limpar mapa de bases
 
 
-# **clearUsingPOST**
-> \br.com.conductor.pier.api.v2.model\BodyAccessToken clearUsingPOST()
+# **limparUsingPOST**
+> \br.com.conductor.pier.api.v2.model\BodyAccessToken limparUsingPOST()
 
 Limpar mapa de bases
 
@@ -25,10 +25,10 @@ br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->s
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\BaseApi();
 
 try { 
-    $result = $api_instance->clearUsingPOST();
+    $result = $api_instance->limparUsingPOST();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BaseApi->clearUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling BaseApi->limparUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```

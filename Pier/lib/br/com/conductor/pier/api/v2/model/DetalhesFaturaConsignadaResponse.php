@@ -1,6 +1,6 @@
 <?php
 /**
- * DetalheOportunidadePersist
+ * DetalhesFaturaConsignadaResponse
  *
  * PHP version 5
  *
@@ -35,24 +35,24 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * DetalheOportunidadePersist Class Doc Comment
+ * DetalhesFaturaConsignadaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto DetalheOportunidade
+ * @description Objeto contendo os detalhes de uma fatura consignada
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DetalheOportunidadePersist implements ArrayAccess
+class DetalhesFaturaConsignadaResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'nome_campo' => 'string',
-        'conteudo' => 'string'
+        'fatura_consignada_response' => '\br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse',
+        'transacoes' => '\br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]'
     );
   
     static function swaggerTypes() {
@@ -64,8 +64,8 @@ class DetalheOportunidadePersist implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'nome_campo' => 'nomeCampo',
-        'conteudo' => 'conteudo'
+        'fatura_consignada_response' => 'faturaConsignadaResponse',
+        'transacoes' => 'transacoes'
     );
   
     static function attributeMap() {
@@ -77,8 +77,8 @@ class DetalheOportunidadePersist implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'nome_campo' => 'setNomeCampo',
-        'conteudo' => 'setConteudo'
+        'fatura_consignada_response' => 'setFaturaConsignadaResponse',
+        'transacoes' => 'setTransacoes'
     );
   
     static function setters() {
@@ -90,8 +90,8 @@ class DetalheOportunidadePersist implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'nome_campo' => 'getNomeCampo',
-        'conteudo' => 'getConteudo'
+        'fatura_consignada_response' => 'getFaturaConsignadaResponse',
+        'transacoes' => 'getTransacoes'
     );
   
     static function getters() {
@@ -100,16 +100,16 @@ class DetalheOportunidadePersist implements ArrayAccess
 
     
     /**
-      * $nome_campo Nome do conte\u00C3\u00BAdo
-      * @var string
+      * $fatura_consignada_response Apresenta os detalhes da fatura
+      * @var \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse
       */
-    protected $nome_campo;
+    protected $fatura_consignada_response;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do detalhe
-      * @var string
+      * $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+      * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]
       */
-    protected $conteudo;
+    protected $transacoes;
     
 
     /**
@@ -120,50 +120,50 @@ class DetalheOportunidadePersist implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->nome_campo = $data["nome_campo"];
-            $this->conteudo = $data["conteudo"];
+            $this->fatura_consignada_response = $data["fatura_consignada_response"];
+            $this->transacoes = $data["transacoes"];
         }
     }
     
     /**
-     * Gets nome_campo
-     * @return string
+     * Gets fatura_consignada_response
+     * @return \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse
      */
-    public function getNomeCampo()
+    public function getFaturaConsignadaResponse()
     {
-        return $this->nome_campo;
+        return $this->fatura_consignada_response;
     }
   
     /**
-     * Sets nome_campo
-     * @param string $nome_campo Nome do conte\u00C3\u00BAdo
+     * Sets fatura_consignada_response
+     * @param \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse $fatura_consignada_response Apresenta os detalhes da fatura
      * @return $this
      */
-    public function setNomeCampo($nome_campo)
+    public function setFaturaConsignadaResponse($fatura_consignada_response)
     {
         
-        $this->nome_campo = $nome_campo;
+        $this->fatura_consignada_response = $fatura_consignada_response;
         return $this;
     }
     
     /**
-     * Gets conteudo
-     * @return string
+     * Gets transacoes
+     * @return \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]
      */
-    public function getConteudo()
+    public function getTransacoes()
     {
-        return $this->conteudo;
+        return $this->transacoes;
     }
   
     /**
-     * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do detalhe
+     * Sets transacoes
+     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[] $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
      * @return $this
      */
-    public function setConteudo($conteudo)
+    public function setTransacoes($transacoes)
     {
         
-        $this->conteudo = $conteudo;
+        $this->transacoes = $transacoes;
         return $this;
     }
     

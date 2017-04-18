@@ -393,9 +393,9 @@ class SMS implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array("PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA");
+        $allowed_values = array("PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA", "SUCESSO_RESPOSTA");
         if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA', 'SUCESSO_RESPOSTA'");
         }
         $this->status = $status;
         return $this;

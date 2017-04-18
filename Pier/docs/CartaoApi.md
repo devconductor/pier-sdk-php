@@ -13,14 +13,11 @@ Method | HTTP request | Description
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultarUsingGET2**](CartaoApi.md#consultarUsingGET2) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
-[**consultarUsingGET20**](CartaoApi.md#consultarUsingGET20) | **GET** /api/cartoes/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET19**](CartaoApi.md#listarUsingGET19) | **GET** /api/cartoes/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**listarUsingGET2**](CartaoApi.md#listarUsingGET2) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-[**transferirUsingPOST**](CartaoApi.md#transferirUsingPOST) | **POST** /api/cartoes/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
 [**validarCartaoChipBandeiradoUsingGET**](CartaoApi.md#validarCartaoChipBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
 [**validarCartaoDigitadoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
 [**validarCartaoDigitadoNaoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoNaoBandeiradoUsingGET) | **GET** /api/cartoes/nao-bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
@@ -490,60 +487,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_ consultarUsingGET20($id, $id_transferencia, $id_conta_bancaria_destino)
-
-Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-
-Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
-$id = 789; // int | Id Cart\u00C3\u00A3o
-$id_transferencia = 789; // int | Id Transfer\u00C3\u00AAncia
-$id_conta_bancaria_destino = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-
-try { 
-    $result = $api_instance->consultarUsingGET20($id, $id_transferencia, $id_conta_bancaria_destino);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| Id Cart\u00C3\u00A3o | 
- **id_transferencia** | **int**| Id Transfer\u00C3\u00AAncia | 
- **id_conta_bancaria_destino** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_**](LinkTransferenciaBancariaResponse_.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **desbloquearUsingPUT**
 > \br.com.conductor.pier.api.v2.model\Cartao desbloquearUsingPUT($id)
 
@@ -774,62 +717,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_ listarUsingGET19($id, $id_conta_bancaria_destino, $page, $limit)
-
-Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-
-Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
-$id = 789; // int | Id Cart\u00C3\u00A3o
-$id_conta_bancaria_destino = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-
-try { 
-    $result = $api_instance->listarUsingGET19($id, $id_conta_bancaria_destino, $page, $limit);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->listarUsingGET19: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| Id Cart\u00C3\u00A3o | 
- **id_conta_bancaria_destino** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_**](LinkPageTransferenciaBancariaResponse_.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **listarUsingGET2**
 > \br.com.conductor.pier.api.v2.model\PageCartoes listarUsingGET2($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
 
@@ -906,84 +793,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageCartoes**](PageCartoes.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **transferirUsingPOST**
-> \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_ transferirUsingPOST($id, $data_compra, $proximo_vencimento_padrao, $proximo_vencimento_real, $valor_compra, $nome_favorecido, $documento_favorecido, $banco, $numero_agencia, $numero_conta, $flag_conta_poupanca, $page, $limit, $digito_agencia, $digito_conta)
-
-Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-
-Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
-$id = 789; // int | Id Cart\u00C3\u00A3o
-$data_compra = new \DateTime(); // \DateTime | Data da transfer\u00C3\u00AAncia
-$proximo_vencimento_padrao = new \DateTime(); // \DateTime | Dia do vencimento padr\u00C3\u00A3o da fatura
-$proximo_vencimento_real = new \DateTime(); // \DateTime | Data do vencimento real da fatura
-$valor_compra = new Number(); // Number | Valor da transfer\u00C3\u00AAncia
-$nome_favorecido = "nome_favorecido_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-$documento_favorecido = "documento_favorecido_example"; // string | N\u00C3\u00BAmero do CPF ou CNPJ.
-$banco = 789; // int | C\u00C3\u00B3digo do banco
-$numero_agencia = "numero_agencia_example"; // string | N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-$numero_conta = "numero_conta_example"; // string | N\u00C3\u00BAmero da conta
-$flag_conta_poupanca = 56; // int | Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$digito_agencia = "digito_agencia_example"; // string | D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-$digito_conta = "digito_conta_example"; // string | D\u00C3\u00ADgito da conta
-
-try { 
-    $result = $api_instance->transferirUsingPOST($id, $data_compra, $proximo_vencimento_padrao, $proximo_vencimento_real, $valor_compra, $nome_favorecido, $documento_favorecido, $banco, $numero_agencia, $numero_conta, $flag_conta_poupanca, $page, $limit, $digito_agencia, $digito_conta);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->transferirUsingPOST: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| Id Cart\u00C3\u00A3o | 
- **data_compra** | **\DateTime**| Data da transfer\u00C3\u00AAncia | 
- **proximo_vencimento_padrao** | **\DateTime**| Dia do vencimento padr\u00C3\u00A3o da fatura | 
- **proximo_vencimento_real** | **\DateTime**| Data do vencimento real da fatura | 
- **valor_compra** | [**Number**](.md)| Valor da transfer\u00C3\u00AAncia | 
- **nome_favorecido** | **string**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
- **documento_favorecido** | **string**| N\u00C3\u00BAmero do CPF ou CNPJ. | 
- **banco** | **int**| C\u00C3\u00B3digo do banco | 
- **numero_agencia** | **string**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia | 
- **numero_conta** | **string**| N\u00C3\u00BAmero da conta | 
- **flag_conta_poupanca** | **int**| Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) | 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **digito_agencia** | **string**| D\u00C3\u00ADgito da ag\u00C3\u00AAncia | [optional] 
- **digito_conta** | **string**| D\u00C3\u00ADgito da conta | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_**](LinkTransferenciaBancariaResponse_.md)
 
 ### Authorization
 
