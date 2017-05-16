@@ -86,6 +86,16 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for ativarUsuarioUsingPOST
+     *
+     * Ativa os usu\u00C3\u00A1rios cadastrados
+     *
+     */
+    public function test_ativarUsuarioUsingPOST() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET22
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
@@ -96,12 +106,22 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET21
+     * Test case for desativarUsuarioUsingPOST
+     *
+     * Desativa os usu\u00C3\u00A1rios cadastrados
+     *
+     */
+    public function test_desativarUsuarioUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET24
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      */
-    public function test_listarUsingGET21() {
+    public function test_listarUsingGET24() {
 
     }
     
@@ -116,12 +136,12 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST8
+     * Test case for salvarUsingPOST12
      *
      * Cadastra Usu\u00C3\u00A1rio
      *
      */
-    public function test_salvarUsingPOST8() {
+    public function test_salvarUsingPOST12() {
 
     }
     

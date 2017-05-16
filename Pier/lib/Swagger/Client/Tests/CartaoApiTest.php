@@ -116,6 +116,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarDadosCartaoUsingGET
+     *
+     * Consultar Detalhes do Cart\u00C3\u00A3o
+     *
+     */
+    public function test_consultarDadosCartaoUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET
      *
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -152,6 +162,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_consultarUsingGET2() {
+
+    }
+    
+    /**
+     * Test case for desbloquearSenhaIncorretaUsingPOST
+     *
+     * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+     *
+     */
+    public function test_desbloquearSenhaIncorretaUsingPOST() {
 
     }
     
@@ -196,52 +216,42 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET2
+     * Test case for listarUsingGET3
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET2() {
+    public function test_listarUsingGET3() {
 
     }
     
     /**
-     * Test case for validarCartaoChipBandeiradoUsingGET
+     * Test case for validarDadosImpressosBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+     * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
      *
      */
-    public function test_validarCartaoChipBandeiradoUsingGET() {
+    public function test_validarDadosImpressosBandeiradoUsingGET() {
 
     }
     
     /**
-     * Test case for validarCartaoDigitadoBandeiradoUsingGET
+     * Test case for validarDadosImpressosNaoBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
+     * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
      *
      */
-    public function test_validarCartaoDigitadoBandeiradoUsingGET() {
+    public function test_validarDadosImpressosNaoBandeiradoUsingGET() {
 
     }
     
     /**
-     * Test case for validarCartaoDigitadoNaoBandeiradoUsingGET
+     * Test case for validarDe55CartaoMastercardUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-     *
-     */
-    public function test_validarCartaoDigitadoNaoBandeiradoUsingGET() {
-
-    }
-    
-    /**
-     * Test case for validarCartaoTarjaBandeiradoUsingGET
-     *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
      *
      */
-    public function test_validarCartaoTarjaBandeiradoUsingGET() {
+    public function test_validarDe55CartaoMastercardUsingGET() {
 
     }
     
@@ -252,6 +262,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_validarSenhaUsingGET() {
+
+    }
+    
+    /**
+     * Test case for validarTarjaUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     *
+     */
+    public function test_validarTarjaUsingGET() {
 
     }
     

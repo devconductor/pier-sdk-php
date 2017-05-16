@@ -64,7 +64,7 @@ class ContaApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -100,14 +100,12 @@ class ContaApi
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
      * @param \DateTime $data_ajuste Data do ajuste. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\AjusteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $page = null, $limit = null)
+    public function ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
     {
-        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOSTWithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOSTWithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste);
         return $response; 
     }
 
@@ -121,12 +119,10 @@ class ContaApi
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
      * @param \DateTime $data_ajuste Data do ajuste. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AjusteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOSTWithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $page = null, $limit = null)
+    public function ajustarContaUsingPOSTWithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
     {
         
         // verify the required parameter 'id' is set
@@ -159,14 +155,6 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
         
         if ($id_tipo_ajuste !== null) {
             $queryParams['idTipoAjuste'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_ajuste);
@@ -201,13 +189,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -424,13 +405,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -458,13 +432,118 @@ class ContaApi
     }
     
     /**
+     * alterarTitularUsingPOST
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
+     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\ContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarTitularUsingPOST($id, $id_pessoa)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarTitularUsingPOSTWithHttpInfo ($id, $id_pessoa);
+        return $response; 
+    }
+
+
+    /**
+     * alterarTitularUsingPOSTWithHttpInfo
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
+     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarTitularUsingPOSTWithHttpInfo($id, $id_pessoa)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarTitularUsingPOST');
+        }
+        // verify the required parameter 'id_pessoa' is set
+        if ($id_pessoa === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling alterarTitularUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/alterar-titular";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_pessoa !== null) {
+            $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * alterarVencimentoUsingPUT
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
-     * @return \br.com.conductor.pier.api.v2.model\Conta
+     * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function alterarVencimentoUsingPUT($id, $novo_dia_vencimento)
@@ -481,7 +560,7 @@ class ContaApi
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Conta, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function alterarVencimentoUsingPUTWithHttpInfo($id, $novo_dia_vencimento)
@@ -536,31 +615,24 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Conta'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Conta', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Conta', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -637,13 +709,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -739,13 +804,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -866,13 +924,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -905,11 +956,11 @@ class ContaApi
      * Consultar a fatura consignadas abertas da conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
+     * @param \DateTime $data_vencimento Data Vencimento (optional)
      * @return \br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarFaturaConsignadaAbertaUsingGET($id, $data_vencimento)
+    public function consultarFaturaConsignadaAbertaUsingGET($id, $data_vencimento = null)
     {
         list($response, $statusCode, $httpHeader) = $this->consultarFaturaConsignadaAbertaUsingGETWithHttpInfo ($id, $data_vencimento);
         return $response; 
@@ -922,20 +973,16 @@ class ContaApi
      * Consultar a fatura consignadas abertas da conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
+     * @param \DateTime $data_vencimento Data Vencimento (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarFaturaConsignadaAbertaUsingGETWithHttpInfo($id, $data_vencimento)
+    public function consultarFaturaConsignadaAbertaUsingGETWithHttpInfo($id, $data_vencimento = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarFaturaConsignadaAbertaUsingGET');
-        }
-        // verify the required parameter 'data_vencimento' is set
-        if ($data_vencimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling consultarFaturaConsignadaAbertaUsingGET');
         }
   
         // parse inputs
@@ -977,13 +1024,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1094,13 +1134,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1206,13 +1239,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1245,11 +1271,11 @@ class ContaApi
      * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
+     * @param \DateTime $data_vencimento Data Vencimento (optional)
      * @return \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLancamentosFuturosFaturaUsingGET($id, $data_vencimento)
+    public function consultarLancamentosFuturosFaturaUsingGET($id, $data_vencimento = null)
     {
         list($response, $statusCode, $httpHeader) = $this->consultarLancamentosFuturosFaturaUsingGETWithHttpInfo ($id, $data_vencimento);
         return $response; 
@@ -1262,20 +1288,16 @@ class ContaApi
      * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
+     * @param \DateTime $data_vencimento Data Vencimento (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLancamentosFuturosFaturaUsingGETWithHttpInfo($id, $data_vencimento)
+    public function consultarLancamentosFuturosFaturaUsingGETWithHttpInfo($id, $data_vencimento = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarLancamentosFuturosFaturaUsingGET');
-        }
-        // verify the required parameter 'data_vencimento' is set
-        if ($data_vencimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling consultarLancamentosFuturosFaturaUsingGET');
         }
   
         // parse inputs
@@ -1317,13 +1339,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1420,13 +1435,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1456,7 +1464,7 @@ class ContaApi
     /**
      * consultarUsingGET20
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      * @param int $id Id Conta (required)
      * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
@@ -1474,7 +1482,7 @@ class ContaApi
     /**
      * consultarUsingGET20WithHttpInfo
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      * @param int $id Id Conta (required)
      * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
@@ -1541,13 +1549,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1658,13 +1659,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1697,7 +1691,7 @@ class ContaApi
      * Apresenta dados de uma determinada conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\Conta
+     * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET3($id)
@@ -1713,7 +1707,7 @@ class ContaApi
      * Apresenta dados de uma determinada conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Conta, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET3WithHttpInfo($id)
@@ -1760,31 +1754,24 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Conta'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaDetalheResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Conta', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaDetalheResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Conta', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaDetalheResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1861,13 +1848,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1996,13 +1976,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2118,13 +2091,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2238,13 +2204,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2311,7 +2270,7 @@ class ContaApi
         }
   
         // parse inputs
-        $resourcePath = "/api/contas/{id}/listar-faturas";
+        $resourcePath = "/api/contas/{id}/faturas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -2357,13 +2316,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -2472,13 +2424,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2586,13 +2531,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2687,13 +2625,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -2801,13 +2732,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -2922,13 +2846,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2956,7 +2873,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET19
+     * listarUsingGET22
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -2967,15 +2884,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET19($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
+    public function listarUsingGET22($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($id, $id_conta_bancaria_destino, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($id, $id_conta_bancaria_destino, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET19WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -2986,12 +2903,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET19WithHttpInfo($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
+    public function listarUsingGET22WithHttpInfo($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET19');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET22');
         }
   
         // parse inputs
@@ -3042,13 +2959,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -3076,7 +2986,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET20
+     * listarUsingGET23
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3091,15 +3001,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferencias
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET23($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($id, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($id, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET23WithHttpInfo
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3114,12 +3024,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferencias, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET23WithHttpInfo($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET20');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET23');
         }
   
         // parse inputs
@@ -3186,13 +3096,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -3220,7 +3123,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET3
+     * listarUsingGET4
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -3238,15 +3141,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET4($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET3WithHttpInfo
+     * listarUsingGET4WithHttpInfo
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -3264,7 +3167,7 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3WithHttpInfo($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET4WithHttpInfo($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3339,13 +3242,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -3441,13 +3337,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -3556,13 +3445,6 @@ class ContaApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -3592,29 +3474,16 @@ class ContaApi
     /**
      * transferirUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
      *
      * @param int $id Id Conta (required)
-     * @param \DateTime $data_compra Data da transfer\u00C3\u00AAncia (required)
-     * @param \DateTime $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura (required)
-     * @param \DateTime $proximo_vencimento_real Data do vencimento real da fatura (required)
-     * @param Number $valor_compra Valor da transfer\u00C3\u00AAncia (required)
-     * @param string $nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ. (required)
-     * @param int $banco C\u00C3\u00B3digo do banco (required)
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia (required)
-     * @param string $numero_conta N\u00C3\u00BAmero da conta (required)
-     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param string $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia (optional)
-     * @param string $digito_conta D\u00C3\u00ADgito da conta (optional)
+     * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)
      * @return \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transferirUsingPOST($id, $data_compra, $proximo_vencimento_padrao, $proximo_vencimento_real, $valor_compra, $nome_favorecido, $documento_favorecido, $banco, $numero_agencia, $numero_conta, $flag_conta_poupanca, $page = null, $limit = null, $digito_agencia = null, $digito_conta = null)
+    public function transferirUsingPOST($id, $transferencia_bancaria_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->transferirUsingPOSTWithHttpInfo ($id, $data_compra, $proximo_vencimento_padrao, $proximo_vencimento_real, $valor_compra, $nome_favorecido, $documento_favorecido, $banco, $numero_agencia, $numero_conta, $flag_conta_poupanca, $page, $limit, $digito_agencia, $digito_conta);
+        list($response, $statusCode, $httpHeader) = $this->transferirUsingPOSTWithHttpInfo ($id, $transferencia_bancaria_persist);
         return $response; 
     }
 
@@ -3622,72 +3491,23 @@ class ContaApi
     /**
      * transferirUsingPOSTWithHttpInfo
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
      *
      * @param int $id Id Conta (required)
-     * @param \DateTime $data_compra Data da transfer\u00C3\u00AAncia (required)
-     * @param \DateTime $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura (required)
-     * @param \DateTime $proximo_vencimento_real Data do vencimento real da fatura (required)
-     * @param Number $valor_compra Valor da transfer\u00C3\u00AAncia (required)
-     * @param string $nome_favorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ. (required)
-     * @param int $banco C\u00C3\u00B3digo do banco (required)
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia (required)
-     * @param string $numero_conta N\u00C3\u00BAmero da conta (required)
-     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param string $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia (optional)
-     * @param string $digito_conta D\u00C3\u00ADgito da conta (optional)
+     * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transferirUsingPOSTWithHttpInfo($id, $data_compra, $proximo_vencimento_padrao, $proximo_vencimento_real, $valor_compra, $nome_favorecido, $documento_favorecido, $banco, $numero_agencia, $numero_conta, $flag_conta_poupanca, $page = null, $limit = null, $digito_agencia = null, $digito_conta = null)
+    public function transferirUsingPOSTWithHttpInfo($id, $transferencia_bancaria_persist)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling transferirUsingPOST');
         }
-        // verify the required parameter 'data_compra' is set
-        if ($data_compra === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_compra when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'proximo_vencimento_padrao' is set
-        if ($proximo_vencimento_padrao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $proximo_vencimento_padrao when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'proximo_vencimento_real' is set
-        if ($proximo_vencimento_real === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $proximo_vencimento_real when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'valor_compra' is set
-        if ($valor_compra === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $valor_compra when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'nome_favorecido' is set
-        if ($nome_favorecido === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $nome_favorecido when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'documento_favorecido' is set
-        if ($documento_favorecido === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $documento_favorecido when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'banco' is set
-        if ($banco === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $banco when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'numero_agencia' is set
-        if ($numero_agencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_agencia when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'numero_conta' is set
-        if ($numero_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_conta when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'flag_conta_poupanca' is set
-        if ($flag_conta_poupanca === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $flag_conta_poupanca when calling transferirUsingPOST');
+        // verify the required parameter 'transferencia_bancaria_persist' is set
+        if ($transferencia_bancaria_persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $transferencia_bancaria_persist when calling transferirUsingPOST');
         }
   
         // parse inputs
@@ -3702,63 +3522,7 @@ class ContaApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($data_compra !== null) {
-            $queryParams['dataCompra'] = $this->apiClient->getSerializer()->toQueryValue($data_compra);
-        }// query params
-        
-        if ($proximo_vencimento_padrao !== null) {
-            $queryParams['proximoVencimentoPadrao'] = $this->apiClient->getSerializer()->toQueryValue($proximo_vencimento_padrao);
-        }// query params
-        
-        if ($proximo_vencimento_real !== null) {
-            $queryParams['proximoVencimentoReal'] = $this->apiClient->getSerializer()->toQueryValue($proximo_vencimento_real);
-        }// query params
-        
-        if ($valor_compra !== null) {
-            $queryParams['valorCompra'] = $this->apiClient->getSerializer()->toQueryValue($valor_compra);
-        }// query params
-        
-        if ($nome_favorecido !== null) {
-            $queryParams['nomeFavorecido'] = $this->apiClient->getSerializer()->toQueryValue($nome_favorecido);
-        }// query params
-        
-        if ($documento_favorecido !== null) {
-            $queryParams['documentoFavorecido'] = $this->apiClient->getSerializer()->toQueryValue($documento_favorecido);
-        }// query params
-        
-        if ($banco !== null) {
-            $queryParams['banco'] = $this->apiClient->getSerializer()->toQueryValue($banco);
-        }// query params
-        
-        if ($numero_agencia !== null) {
-            $queryParams['numeroAgencia'] = $this->apiClient->getSerializer()->toQueryValue($numero_agencia);
-        }// query params
-        
-        if ($digito_agencia !== null) {
-            $queryParams['digitoAgencia'] = $this->apiClient->getSerializer()->toQueryValue($digito_agencia);
-        }// query params
-        
-        if ($numero_conta !== null) {
-            $queryParams['numeroConta'] = $this->apiClient->getSerializer()->toQueryValue($numero_conta);
-        }// query params
-        
-        if ($digito_conta !== null) {
-            $queryParams['digitoConta'] = $this->apiClient->getSerializer()->toQueryValue($digito_conta);
-        }// query params
-        
-        if ($flag_conta_poupanca !== null) {
-            $queryParams['flagContaPoupanca'] = $this->apiClient->getSerializer()->toQueryValue($flag_conta_poupanca);
-        }
         
         // path params
         
@@ -3773,7 +3537,11 @@ class ContaApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
+        // body params
+        $_tempBody = null;
+        if (isset($transferencia_bancaria_persist)) {
+            $_tempBody = $transferencia_bancaria_persist;
+        }
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -3781,13 +3549,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -3820,7 +3581,7 @@ class ContaApi
      *
      * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
      * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
      * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
      * @return \br.com.conductor.pier.api.v2.model\PageTransferencias
@@ -3838,7 +3599,7 @@ class ContaApi
      *
      * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
      * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
      * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferencias, HTTP status code, HTTP response headers (array of strings)
@@ -3903,13 +3664,6 @@ class ContaApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

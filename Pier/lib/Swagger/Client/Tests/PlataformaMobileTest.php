@@ -1,6 +1,6 @@
 <?php
 /**
- * ContaTest
+ * PlataformaMobileTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * ContaTest Class Doc Comment
+ * PlataformaMobileTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto conta
+ * @description Plataforma Mobile
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ContaTest extends \PHPUnit_Framework_TestCase
+class PlataformaMobileTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class ContaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test Conta
+     * Test PlataformaMobile
      */
-    public function testConta() {
+    public function testPlataformaMobile() {
 
     }
 

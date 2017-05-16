@@ -1,13 +1,13 @@
 # br.com.conductor.pier.api.v2.invoker\FAQApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultarUsingGET6**](FAQApi.md#consultarUsingGET6) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET6**](FAQApi.md#listarUsingGET6) | **GET** /api/faqs | Lista FAQs
+[**listarUsingGET8**](FAQApi.md#listarUsingGET8) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionarUsingPOST**
@@ -21,11 +21,6 @@ Adiciona uma nova FAQ
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $pergunta = "pergunta_example"; // string | Conte\u00C3\u00BAdo da pergunta.
@@ -61,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -81,11 +76,6 @@ Alterar FAQ
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $id = 789; // int | Id
@@ -123,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -143,11 +133,6 @@ Consulta os detalhes de uma determinada FAQ
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $id = 789; // int | Id
@@ -173,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -182,8 +167,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\PageFaqs listarUsingGET6($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+# **listarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\PageFaqs listarUsingGET8($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Lista FAQs
 
@@ -193,11 +178,6 @@ Lista todas as FAQs
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -211,10 +191,10 @@ $categoria = "categoria_example"; // string | Categoria de assunto do qual a FAQ
 $status = "status_example"; // string | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
 
 try { 
-    $result = $api_instance->listarUsingGET6($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+    $result = $api_instance->listarUsingGET8($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->listarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->listarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -239,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

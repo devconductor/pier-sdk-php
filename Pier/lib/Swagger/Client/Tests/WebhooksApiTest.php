@@ -86,22 +86,22 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET22
+     * Test case for listarUsingGET25
      *
      * Lista os Webhooks
      *
      */
-    public function test_listarUsingGET22() {
+    public function test_listarUsingGET25() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST9
+     * Test case for salvarUsingPOST13
      *
      * Salvar Webhook
      *
      */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST13() {
 
     }
     

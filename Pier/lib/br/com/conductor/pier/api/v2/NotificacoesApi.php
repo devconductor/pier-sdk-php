@@ -64,7 +64,7 @@ class NotificacoesApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -175,13 +175,6 @@ class NotificacoesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -306,13 +299,6 @@ class NotificacoesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -351,12 +337,13 @@ class NotificacoesApi
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageSMS
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null)
+    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo);
+        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
         return $response; 
     }
 
@@ -373,10 +360,11 @@ class NotificacoesApi
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageSMS, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null)
+    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
     {
         
   
@@ -420,6 +408,10 @@ class NotificacoesApi
         
         if ($protocolo !== null) {
             $queryParams['protocolo'] = $this->apiClient->getSerializer()->toQueryValue($protocolo);
+        }// query params
+        
+        if ($nsu !== null) {
+            $queryParams['nsu'] = $this->apiClient->getSerializer()->toQueryValue($nsu);
         }
         
         
@@ -435,13 +427,6 @@ class NotificacoesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -542,13 +527,6 @@ class NotificacoesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -639,13 +617,6 @@ class NotificacoesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -738,13 +709,6 @@ class NotificacoesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -836,13 +800,6 @@ class NotificacoesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -933,13 +890,6 @@ class NotificacoesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

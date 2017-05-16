@@ -64,7 +64,7 @@ class FAQApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -189,13 +189,6 @@ class FAQApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -336,13 +329,6 @@ class FAQApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -438,13 +424,6 @@ class FAQApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -472,7 +451,7 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET8
      *
      * Lista FAQs
      *
@@ -488,15 +467,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\PageFaqs
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET8($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET8WithHttpInfo
      *
      * Lista FAQs
      *
@@ -512,7 +491,7 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqs, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET8WithHttpInfo($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   
@@ -579,13 +558,6 @@ class FAQApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

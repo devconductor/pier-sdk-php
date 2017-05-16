@@ -174,13 +174,13 @@ class UsuarioResponse implements ArrayAccess
     protected $status;
     
     /**
-      * $data_criacao Status do Usu\u00C3\u00A1rio
+      * $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
       * @var \DateTime
       */
     protected $data_criacao;
     
     /**
-      * $data_modificacao Status do Usu\u00C3\u00A1rio
+      * $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
       * @var \DateTime
       */
     protected $data_modificacao;
@@ -374,7 +374,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_criacao
-     * @param \DateTime $data_criacao Status do Usu\u00C3\u00A1rio
+     * @param \DateTime $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
      * @return $this
      */
     public function setDataCriacao($data_criacao)
@@ -395,7 +395,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param \DateTime $data_modificacao Status do Usu\u00C3\u00A1rio
+     * @param \DateTime $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
      * @return $this
      */
     public function setDataModificacao($data_modificacao)

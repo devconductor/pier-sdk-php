@@ -64,7 +64,7 @@ class BaseApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -145,13 +145,6 @@ class BaseApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **rev_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **rev_oportunidade** | **int** |  | [optional] 
 **rev_type** | **int** |  | [optional] 
+**rev_user** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

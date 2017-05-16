@@ -64,7 +64,7 @@ class StatusParametrosApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -159,13 +159,6 @@ class StatusParametrosApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -262,13 +255,6 @@ class StatusParametrosApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -364,13 +350,6 @@ class StatusParametrosApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -465,13 +444,6 @@ class StatusParametrosApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -577,13 +549,6 @@ class StatusParametrosApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -726,13 +691,6 @@ class StatusParametrosApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -760,7 +718,7 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET12
+     * listarUsingGET15
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -774,15 +732,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET15($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET15WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -796,7 +754,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET15WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -856,13 +814,6 @@ class StatusParametrosApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -890,7 +841,7 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET13
+     * listarUsingGET16
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -901,15 +852,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET16($page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET13WithHttpInfo
+     * listarUsingGET16WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -920,7 +871,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET16WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -967,13 +918,6 @@ class StatusParametrosApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

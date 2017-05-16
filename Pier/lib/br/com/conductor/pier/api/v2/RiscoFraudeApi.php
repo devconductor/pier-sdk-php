@@ -64,7 +64,7 @@ class RiscoFraudeApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -159,13 +159,6 @@ class RiscoFraudeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -262,13 +255,6 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -360,13 +346,6 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -394,7 +373,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * listarUsingGET
+     * listarUsingGET1
      *
      * Lista todos os atendimentos
      *
@@ -407,15 +386,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
+    public function listarUsingGET1($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGETWithHttpInfo
+     * listarUsingGET1WithHttpInfo
      *
      * Lista todos os atendimentos
      *
@@ -428,7 +407,7 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
+    public function listarUsingGET1WithHttpInfo($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
     {
         
   
@@ -484,13 +463,6 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -518,7 +490,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * listarUsingGET11
+     * listarUsingGET14
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
@@ -529,15 +501,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET14($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET11WithHttpInfo
+     * listarUsingGET14WithHttpInfo
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
@@ -548,16 +520,16 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET14WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET14');
         }
         // verify the required parameter 'confirmacao_fraude' is set
         if ($confirmacao_fraude === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET14');
         }
   
         // parse inputs
@@ -604,13 +576,6 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -638,7 +603,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * negarUsingGET
+     * negarUsingPOST
      *
      * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
@@ -646,15 +611,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function negarUsingGET($id)
+    public function negarUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->negarUsingGETWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->negarUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * negarUsingGETWithHttpInfo
+     * negarUsingPOSTWithHttpInfo
      *
      * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
@@ -662,12 +627,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function negarUsingGETWithHttpInfo($id)
+    public function negarUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling negarUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling negarUsingPOST');
         }
   
         // parse inputs
@@ -706,17 +671,10 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
             );
@@ -740,7 +698,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * reconhecerUsingGET
+     * reconhecerUsingPOST
      *
      * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
@@ -748,15 +706,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reconhecerUsingGET($id)
+    public function reconhecerUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->reconhecerUsingGETWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->reconhecerUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * reconhecerUsingGETWithHttpInfo
+     * reconhecerUsingPOSTWithHttpInfo
      *
      * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
@@ -764,12 +722,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reconhecerUsingGETWithHttpInfo($id)
+    public function reconhecerUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling reconhecerUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling reconhecerUsingPOST');
         }
   
         // parse inputs
@@ -808,17 +766,10 @@ class RiscoFraudeApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
             );
@@ -842,7 +793,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * salvarUsingPOST
+     * salvarUsingPOST1
      *
      * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
      *
@@ -858,15 +809,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
+    public function salvarUsingPOST1($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOSTWithHttpInfo ($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST1WithHttpInfo ($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOSTWithHttpInfo
+     * salvarUsingPOST1WithHttpInfo
      *
      * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
      *
@@ -882,7 +833,7 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOSTWithHttpInfo($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
+    public function salvarUsingPOST1WithHttpInfo($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
     {
         
   
@@ -949,13 +900,6 @@ class RiscoFraudeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {

@@ -76,7 +76,9 @@ class FaturaResponse implements ArrayAccess
         'taxa_rotativo' => 'Number',
         'taxa_saque' => 'Number',
         'taxa_maxima_proximo_periodo' => 'Number',
-        'total_servicos' => 'Number'
+        'total_servicos' => 'Number',
+        'total_parcelado_nacionais' => 'Number',
+        'total_parcelado_internacionais' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -113,7 +115,9 @@ class FaturaResponse implements ArrayAccess
         'taxa_rotativo' => 'taxaRotativo',
         'taxa_saque' => 'taxaSaque',
         'taxa_maxima_proximo_periodo' => 'taxaMaximaProximoPeriodo',
-        'total_servicos' => 'totalServicos'
+        'total_servicos' => 'totalServicos',
+        'total_parcelado_nacionais' => 'totalParceladoNacionais',
+        'total_parcelado_internacionais' => 'totalParceladoInternacionais'
     );
   
     static function attributeMap() {
@@ -150,7 +154,9 @@ class FaturaResponse implements ArrayAccess
         'taxa_rotativo' => 'setTaxaRotativo',
         'taxa_saque' => 'setTaxaSaque',
         'taxa_maxima_proximo_periodo' => 'setTaxaMaximaProximoPeriodo',
-        'total_servicos' => 'setTotalServicos'
+        'total_servicos' => 'setTotalServicos',
+        'total_parcelado_nacionais' => 'setTotalParceladoNacionais',
+        'total_parcelado_internacionais' => 'setTotalParceladoInternacionais'
     );
   
     static function setters() {
@@ -187,7 +193,9 @@ class FaturaResponse implements ArrayAccess
         'taxa_rotativo' => 'getTaxaRotativo',
         'taxa_saque' => 'getTaxaSaque',
         'taxa_maxima_proximo_periodo' => 'getTaxaMaximaProximoPeriodo',
-        'total_servicos' => 'getTotalServicos'
+        'total_servicos' => 'getTotalServicos',
+        'total_parcelado_nacionais' => 'getTotalParceladoNacionais',
+        'total_parcelado_internacionais' => 'getTotalParceladoInternacionais'
     );
   
     static function getters() {
@@ -351,6 +359,18 @@ class FaturaResponse implements ArrayAccess
       */
     protected $total_servicos;
     
+    /**
+      * $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
+      * @var Number
+      */
+    protected $total_parcelado_nacionais;
+    
+    /**
+      * $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
+      * @var Number
+      */
+    protected $total_parcelado_internacionais;
+    
 
     /**
      * Constructor
@@ -386,6 +406,8 @@ class FaturaResponse implements ArrayAccess
             $this->taxa_saque = $data["taxa_saque"];
             $this->taxa_maxima_proximo_periodo = $data["taxa_maxima_proximo_periodo"];
             $this->total_servicos = $data["total_servicos"];
+            $this->total_parcelado_nacionais = $data["total_parcelado_nacionais"];
+            $this->total_parcelado_internacionais = $data["total_parcelado_internacionais"];
         }
     }
     
@@ -932,6 +954,48 @@ class FaturaResponse implements ArrayAccess
     {
         
         $this->total_servicos = $total_servicos;
+        return $this;
+    }
+    
+    /**
+     * Gets total_parcelado_nacionais
+     * @return Number
+     */
+    public function getTotalParceladoNacionais()
+    {
+        return $this->total_parcelado_nacionais;
+    }
+  
+    /**
+     * Sets total_parcelado_nacionais
+     * @param Number $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
+     * @return $this
+     */
+    public function setTotalParceladoNacionais($total_parcelado_nacionais)
+    {
+        
+        $this->total_parcelado_nacionais = $total_parcelado_nacionais;
+        return $this;
+    }
+    
+    /**
+     * Gets total_parcelado_internacionais
+     * @return Number
+     */
+    public function getTotalParceladoInternacionais()
+    {
+        return $this->total_parcelado_internacionais;
+    }
+  
+    /**
+     * Sets total_parcelado_internacionais
+     * @param Number $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
+     * @return $this
+     */
+    public function setTotalParceladoInternacionais($total_parcelado_internacionais)
+    {
+        
+        $this->total_parcelado_internacionais = $total_parcelado_internacionais;
         return $this;
     }
     

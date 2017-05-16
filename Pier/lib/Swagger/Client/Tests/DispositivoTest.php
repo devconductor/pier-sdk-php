@@ -1,6 +1,6 @@
 <?php
 /**
- * TransacaoResponseTest
+ * DispositivoTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * TransacaoResponseTest Class Doc Comment
+ * DispositivoTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
+ * @description Dispositivo Mobile
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TransacaoResponseTest extends \PHPUnit_Framework_TestCase
+class DispositivoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class TransacaoResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test TransacaoResponse
+     * Test Dispositivo
      */
-    public function testTransacaoResponse() {
+    public function testDispositivo() {
 
     }
 

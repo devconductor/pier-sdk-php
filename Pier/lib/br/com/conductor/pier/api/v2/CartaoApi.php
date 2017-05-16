@@ -64,7 +64,7 @@ class CartaoApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -169,13 +169,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -282,13 +275,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -355,7 +341,7 @@ class CartaoApi
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/{id}/atribuir-pessoa";
+        $resourcePath = "/api/cartoes/{id}/atribuir-titular";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -393,13 +379,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -516,13 +495,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -628,13 +600,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -653,6 +618,101 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarDadosCartaoUsingGET
+     *
+     * Consultar Detalhes do Cart\u00C3\u00A3o
+     *
+     * @param int $id id (required)
+     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarDadosCartaoUsingGET($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarDadosCartaoUsingGETWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarDadosCartaoUsingGETWithHttpInfo
+     *
+     * Consultar Detalhes do Cart\u00C3\u00A3o
+     *
+     * @param int $id id (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarDadosCartaoUsingGETWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarDadosCartaoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/consultar-dados-reais";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -729,13 +789,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -832,13 +885,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -933,13 +979,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1036,17 +1075,105 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Cartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Cartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * desbloquearSenhaIncorretaUsingPOST
+     *
+     * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\Cartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function desbloquearSenhaIncorretaUsingPOST($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->desbloquearSenhaIncorretaUsingPOSTWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * desbloquearSenhaIncorretaUsingPOSTWithHttpInfo
+     *
+     * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function desbloquearSenhaIncorretaUsingPOSTWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling desbloquearSenhaIncorretaUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/desbloquear-senha-incorreta";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
             );
@@ -1137,13 +1264,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1262,13 +1382,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1363,13 +1476,6 @@ class CartaoApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1518,13 +1624,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1552,7 +1651,7 @@ class CartaoApi
     }
     
     /**
-     * listarUsingGET2
+     * listarUsingGET3
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -1579,15 +1678,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET2($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET3($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET2WithHttpInfo
+     * listarUsingGET3WithHttpInfo
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -1614,7 +1713,7 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET2WithHttpInfo($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET3WithHttpInfo($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
         
   
@@ -1726,13 +1825,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1760,46 +1852,288 @@ class CartaoApi
     }
     
     /**
-     * validarCartaoChipBandeiradoUsingGET
+     * validarDadosImpressosBandeiradoUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+     * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
+     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
+     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
+     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
+        return $response; 
+    }
+
+
+    /**
+     * validarDadosImpressosBandeiradoUsingGETWithHttpInfo
+     *
+     * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
+     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
+     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosImpressosBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+    {
+        
+        // verify the required parameter 'numero_cartao' is set
+        if ($numero_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarDadosImpressosBandeiradoUsingGET');
+        }
+        // verify the required parameter 'nome_portador' is set
+        if ($nome_portador === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nome_portador when calling validarDadosImpressosBandeiradoUsingGET');
+        }
+        // verify the required parameter 'data_validade' is set
+        if ($data_validade === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_validade when calling validarDadosImpressosBandeiradoUsingGET');
+        }
+        // verify the required parameter 'codigo_seguranca' is set
+        if ($codigo_seguranca === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $codigo_seguranca when calling validarDadosImpressosBandeiradoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/validar-dados-impressos-bandeirados";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($numero_cartao !== null) {
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+        }// query params
+        
+        if ($nome_portador !== null) {
+            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
+        }// query params
+        
+        if ($data_validade !== null) {
+            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
+        }// query params
+        
+        if ($codigo_seguranca !== null) {
+            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarDadosImpressosNaoBandeiradoUsingGET
+     *
+     * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
+     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
+     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
+     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
+        return $response; 
+    }
+
+
+    /**
+     * validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo
+     *
+     * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
+     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
+     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+    {
+        
+        // verify the required parameter 'numero_cartao' is set
+        if ($numero_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarDadosImpressosNaoBandeiradoUsingGET');
+        }
+        // verify the required parameter 'nome_portador' is set
+        if ($nome_portador === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $nome_portador when calling validarDadosImpressosNaoBandeiradoUsingGET');
+        }
+        // verify the required parameter 'data_validade' is set
+        if ($data_validade === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_validade when calling validarDadosImpressosNaoBandeiradoUsingGET');
+        }
+        // verify the required parameter 'codigo_seguranca' is set
+        if ($codigo_seguranca === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $codigo_seguranca when calling validarDadosImpressosNaoBandeiradoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/validar-dados-impressos-nao-bandeirados";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($numero_cartao !== null) {
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+        }// query params
+        
+        if ($nome_portador !== null) {
+            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
+        }// query params
+        
+        if ($data_validade !== null) {
+            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
+        }// query params
+        
+        if ($codigo_seguranca !== null) {
+            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarDe55CartaoMastercardUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)
      * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarCartaoChipBandeiradoUsingGET($numero_cartao, $criptograma)
+    public function validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarCartaoChipBandeiradoUsingGETWithHttpInfo ($numero_cartao, $criptograma);
+        list($response, $statusCode, $httpHeader) = $this->validarDe55CartaoMastercardUsingGETWithHttpInfo ($numero_cartao, $criptograma);
         return $response; 
     }
 
 
     /**
-     * validarCartaoChipBandeiradoUsingGETWithHttpInfo
+     * validarDe55CartaoMastercardUsingGETWithHttpInfo
      *
-     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
      *
      * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
      * @param string $criptograma Criptograma do cart\u00C3\u00A3o no formato de55 (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarCartaoChipBandeiradoUsingGETWithHttpInfo($numero_cartao, $criptograma)
+    public function validarDe55CartaoMastercardUsingGETWithHttpInfo($numero_cartao, $criptograma)
     {
         
         // verify the required parameter 'numero_cartao' is set
         if ($numero_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarCartaoChipBandeiradoUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarDe55CartaoMastercardUsingGET');
         }
         // verify the required parameter 'criptograma' is set
         if ($criptograma === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $criptograma when calling validarCartaoChipBandeiradoUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $criptograma when calling validarDe55CartaoMastercardUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar-chip";
+        $resourcePath = "/api/cartoes/validar-de55-mastercard";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -1834,387 +2168,6 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * validarCartaoDigitadoBandeiradoUsingGET
-     *
-     * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
-     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
-     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
-     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoDigitadoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
-    {
-        list($response, $statusCode, $httpHeader) = $this->validarCartaoDigitadoBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
-        return $response; 
-    }
-
-
-    /**
-     * validarCartaoDigitadoBandeiradoUsingGETWithHttpInfo
-     *
-     * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
-     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
-     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoDigitadoBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
-    {
-        
-        // verify the required parameter 'numero_cartao' is set
-        if ($numero_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarCartaoDigitadoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'nome_portador' is set
-        if ($nome_portador === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $nome_portador when calling validarCartaoDigitadoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'data_validade' is set
-        if ($data_validade === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_validade when calling validarCartaoDigitadoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'codigo_seguranca' is set
-        if ($codigo_seguranca === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $codigo_seguranca when calling validarCartaoDigitadoBandeiradoUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar-digitado";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($numero_cartao !== null) {
-            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
-        }// query params
-        
-        if ($nome_portador !== null) {
-            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
-        }// query params
-        
-        if ($data_validade !== null) {
-            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
-        }// query params
-        
-        if ($codigo_seguranca !== null) {
-            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * validarCartaoDigitadoNaoBandeiradoUsingGET
-     *
-     * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
-     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
-     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
-     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoDigitadoNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
-    {
-        list($response, $statusCode, $httpHeader) = $this->validarCartaoDigitadoNaoBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
-        return $response; 
-    }
-
-
-    /**
-     * validarCartaoDigitadoNaoBandeiradoUsingGETWithHttpInfo
-     *
-     * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $nome_portador Nome do portador do cart\u00C3\u00A3o (required)
-     * @param string $data_validade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM (required)
-     * @param string $codigo_seguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoDigitadoNaoBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
-    {
-        
-        // verify the required parameter 'numero_cartao' is set
-        if ($numero_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarCartaoDigitadoNaoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'nome_portador' is set
-        if ($nome_portador === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $nome_portador when calling validarCartaoDigitadoNaoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'data_validade' is set
-        if ($data_validade === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_validade when calling validarCartaoDigitadoNaoBandeiradoUsingGET');
-        }
-        // verify the required parameter 'codigo_seguranca' is set
-        if ($codigo_seguranca === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $codigo_seguranca when calling validarCartaoDigitadoNaoBandeiradoUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/cartoes/nao-bandeirados/validar-digitado";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($numero_cartao !== null) {
-            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
-        }// query params
-        
-        if ($nome_portador !== null) {
-            $queryParams['nome_portador'] = $this->apiClient->getSerializer()->toQueryValue($nome_portador);
-        }// query params
-        
-        if ($data_validade !== null) {
-            $queryParams['data_validade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
-        }// query params
-        
-        if ($codigo_seguranca !== null) {
-            $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * validarCartaoTarjaBandeiradoUsingGET
-     *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado (required)
-     * @param string $trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado (required)
-     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoTarjaBandeiradoUsingGET($numero_cartao, $trilha1, $trilha2)
-    {
-        list($response, $statusCode, $httpHeader) = $this->validarCartaoTarjaBandeiradoUsingGETWithHttpInfo ($numero_cartao, $trilha1, $trilha2);
-        return $response; 
-    }
-
-
-    /**
-     * validarCartaoTarjaBandeiradoUsingGETWithHttpInfo
-     *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-     *
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
-     * @param string $trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado (required)
-     * @param string $trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function validarCartaoTarjaBandeiradoUsingGETWithHttpInfo($numero_cartao, $trilha1, $trilha2)
-    {
-        
-        // verify the required parameter 'numero_cartao' is set
-        if ($numero_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarCartaoTarjaBandeiradoUsingGET');
-        }
-        // verify the required parameter 'trilha1' is set
-        if ($trilha1 === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $trilha1 when calling validarCartaoTarjaBandeiradoUsingGET');
-        }
-        // verify the required parameter 'trilha2' is set
-        if ($trilha2 === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $trilha2 when calling validarCartaoTarjaBandeiradoUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/cartoes/bandeirados/validar-tarja";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($numero_cartao !== null) {
-            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
-        }// query params
-        
-        if ($trilha1 !== null) {
-            $queryParams['trilha1'] = $this->apiClient->getSerializer()->toQueryValue($trilha1);
-        }// query params
-        
-        if ($trilha2 !== null) {
-            $queryParams['trilha2'] = $this->apiClient->getSerializer()->toQueryValue($trilha2);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -2248,7 +2201,7 @@ class CartaoApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser validada. (required)
-     * @return string
+     * @return \br.com.conductor.pier.api.v2.model\ValidaSenhaCartao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function validarSenhaUsingGET($id, $senha)
@@ -2265,7 +2218,7 @@ class CartaoApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
      * @param string $senha Senha para ser validada. (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaSenhaCartao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function validarSenhaUsingGETWithHttpInfo($id, $senha)
@@ -2320,31 +2273,135 @@ class CartaoApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, 'string'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaSenhaCartao'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaSenhaCartao', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaSenhaCartao', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarTarjaUsingGET
+     *
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado (required)
+     * @param string $trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado (required)
+     * @return \br.com.conductor.pier.api.v2.model\ValidaCartao
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarTarjaUsingGETWithHttpInfo ($numero_cartao, $trilha1, $trilha2);
+        return $response; 
+    }
+
+
+    /**
+     * validarTarjaUsingGETWithHttpInfo
+     *
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     *
+     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. (required)
+     * @param string $trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado (required)
+     * @param string $trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartao, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarTarjaUsingGETWithHttpInfo($numero_cartao, $trilha1, $trilha2)
+    {
+        
+        // verify the required parameter 'numero_cartao' is set
+        if ($numero_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $numero_cartao when calling validarTarjaUsingGET');
+        }
+        // verify the required parameter 'trilha1' is set
+        if ($trilha1 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $trilha1 when calling validarTarjaUsingGET');
+        }
+        // verify the required parameter 'trilha2' is set
+        if ($trilha2 === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $trilha2 when calling validarTarjaUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/validar-tarja";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($numero_cartao !== null) {
+            $queryParams['numero_cartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
+        }// query params
+        
+        if ($trilha1 !== null) {
+            $queryParams['trilha1'] = $this->apiClient->getSerializer()->toQueryValue($trilha1);
+        }// query params
+        
+        if ($trilha2 !== null) {
+            $queryParams['trilha2'] = $this->apiClient->getSerializer()->toQueryValue($trilha2);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ValidaCartao'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ValidaCartao', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ValidaCartao', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

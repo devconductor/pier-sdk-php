@@ -1,6 +1,6 @@
 <?php
 /**
- * Conta
+ * ContaDetalheResponse
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * Conta Class Doc Comment
+ * ContaDetalheResponse Class Doc Comment
  *
  * @category    Class
  * @description Objeto conta
@@ -44,7 +44,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Conta implements ArrayAccess
+class ContaDetalheResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -52,19 +52,31 @@ class Conta implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
+        'id_pessoa' => 'int',
+        'nome' => 'string',
         'id_produto' => 'int',
         'id_origem_comercial' => 'int',
-        'id_pessoa' => 'int',
+        'nome_origem_comercial' => 'string',
+        'id_fantasia_basica' => 'int',
+        'nome_fantasia_basica' => 'string',
         'id_status_conta' => 'int',
+        'status_conta' => 'string',
         'dia_vencimento' => 'int',
         'melhor_dia_compra' => 'int',
         'data_status_conta' => '\DateTime',
+        'valor_renda' => 'Number',
         'data_cadastro' => '\DateTime',
         'data_ultima_alteracao_vencimento' => '\DateTime',
+        'data_hora_ultima_compra' => '\DateTime',
         'numero_agencia' => 'int',
-        'valor_renda' => 'Number',
         'numero_conta_corrente' => 'string',
-        'forma_envio_fatura' => 'string'
+        'forma_envio_fatura' => 'string',
+        'titular' => 'bool',
+        'limite_global' => 'Number',
+        'limite_saque_global' => 'Number',
+        'saldo_disponivel_global' => 'Number',
+        'saldo_disponivel_saque' => 'Number',
+        'data_inicio_atraso' => '\DateTime'
     );
   
     static function swaggerTypes() {
@@ -77,19 +89,31 @@ class Conta implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
+        'id_pessoa' => 'idPessoa',
+        'nome' => 'nome',
         'id_produto' => 'idProduto',
         'id_origem_comercial' => 'idOrigemComercial',
-        'id_pessoa' => 'idPessoa',
+        'nome_origem_comercial' => 'nomeOrigemComercial',
+        'id_fantasia_basica' => 'idFantasiaBasica',
+        'nome_fantasia_basica' => 'nomeFantasiaBasica',
         'id_status_conta' => 'idStatusConta',
+        'status_conta' => 'statusConta',
         'dia_vencimento' => 'diaVencimento',
         'melhor_dia_compra' => 'melhorDiaCompra',
         'data_status_conta' => 'dataStatusConta',
+        'valor_renda' => 'valorRenda',
         'data_cadastro' => 'dataCadastro',
         'data_ultima_alteracao_vencimento' => 'dataUltimaAlteracaoVencimento',
+        'data_hora_ultima_compra' => 'dataHoraUltimaCompra',
         'numero_agencia' => 'numeroAgencia',
-        'valor_renda' => 'valorRenda',
         'numero_conta_corrente' => 'numeroContaCorrente',
-        'forma_envio_fatura' => 'formaEnvioFatura'
+        'forma_envio_fatura' => 'formaEnvioFatura',
+        'titular' => 'titular',
+        'limite_global' => 'limiteGlobal',
+        'limite_saque_global' => 'limiteSaqueGlobal',
+        'saldo_disponivel_global' => 'saldoDisponivelGlobal',
+        'saldo_disponivel_saque' => 'saldoDisponivelSaque',
+        'data_inicio_atraso' => 'dataInicioAtraso'
     );
   
     static function attributeMap() {
@@ -102,19 +126,31 @@ class Conta implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
+        'id_pessoa' => 'setIdPessoa',
+        'nome' => 'setNome',
         'id_produto' => 'setIdProduto',
         'id_origem_comercial' => 'setIdOrigemComercial',
-        'id_pessoa' => 'setIdPessoa',
+        'nome_origem_comercial' => 'setNomeOrigemComercial',
+        'id_fantasia_basica' => 'setIdFantasiaBasica',
+        'nome_fantasia_basica' => 'setNomeFantasiaBasica',
         'id_status_conta' => 'setIdStatusConta',
+        'status_conta' => 'setStatusConta',
         'dia_vencimento' => 'setDiaVencimento',
         'melhor_dia_compra' => 'setMelhorDiaCompra',
         'data_status_conta' => 'setDataStatusConta',
+        'valor_renda' => 'setValorRenda',
         'data_cadastro' => 'setDataCadastro',
         'data_ultima_alteracao_vencimento' => 'setDataUltimaAlteracaoVencimento',
+        'data_hora_ultima_compra' => 'setDataHoraUltimaCompra',
         'numero_agencia' => 'setNumeroAgencia',
-        'valor_renda' => 'setValorRenda',
         'numero_conta_corrente' => 'setNumeroContaCorrente',
-        'forma_envio_fatura' => 'setFormaEnvioFatura'
+        'forma_envio_fatura' => 'setFormaEnvioFatura',
+        'titular' => 'setTitular',
+        'limite_global' => 'setLimiteGlobal',
+        'limite_saque_global' => 'setLimiteSaqueGlobal',
+        'saldo_disponivel_global' => 'setSaldoDisponivelGlobal',
+        'saldo_disponivel_saque' => 'setSaldoDisponivelSaque',
+        'data_inicio_atraso' => 'setDataInicioAtraso'
     );
   
     static function setters() {
@@ -127,19 +163,31 @@ class Conta implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
+        'id_pessoa' => 'getIdPessoa',
+        'nome' => 'getNome',
         'id_produto' => 'getIdProduto',
         'id_origem_comercial' => 'getIdOrigemComercial',
-        'id_pessoa' => 'getIdPessoa',
+        'nome_origem_comercial' => 'getNomeOrigemComercial',
+        'id_fantasia_basica' => 'getIdFantasiaBasica',
+        'nome_fantasia_basica' => 'getNomeFantasiaBasica',
         'id_status_conta' => 'getIdStatusConta',
+        'status_conta' => 'getStatusConta',
         'dia_vencimento' => 'getDiaVencimento',
         'melhor_dia_compra' => 'getMelhorDiaCompra',
         'data_status_conta' => 'getDataStatusConta',
+        'valor_renda' => 'getValorRenda',
         'data_cadastro' => 'getDataCadastro',
         'data_ultima_alteracao_vencimento' => 'getDataUltimaAlteracaoVencimento',
+        'data_hora_ultima_compra' => 'getDataHoraUltimaCompra',
         'numero_agencia' => 'getNumeroAgencia',
-        'valor_renda' => 'getValorRenda',
         'numero_conta_corrente' => 'getNumeroContaCorrente',
-        'forma_envio_fatura' => 'getFormaEnvioFatura'
+        'forma_envio_fatura' => 'getFormaEnvioFatura',
+        'titular' => 'getTitular',
+        'limite_global' => 'getLimiteGlobal',
+        'limite_saque_global' => 'getLimiteSaqueGlobal',
+        'saldo_disponivel_global' => 'getSaldoDisponivelGlobal',
+        'saldo_disponivel_saque' => 'getSaldoDisponivelSaque',
+        'data_inicio_atraso' => 'getDataInicioAtraso'
     );
   
     static function getters() {
@@ -154,6 +202,18 @@ class Conta implements ArrayAccess
     protected $id;
     
     /**
+      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+      * @var int
+      */
+    protected $id_pessoa;
+    
+    /**
+      * $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+      * @var string
+      */
+    protected $nome;
+    
+    /**
       * $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
       * @var int
       */
@@ -166,16 +226,34 @@ class Conta implements ArrayAccess
     protected $id_origem_comercial;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+      * $nome_origem_comercial Nome da origem comercial
+      * @var string
+      */
+    protected $nome_origem_comercial;
+    
+    /**
+      * $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id).
       * @var int
       */
-    protected $id_pessoa;
+    protected $id_fantasia_basica;
+    
+    /**
+      * $nome_fantasia_basica Nome da Fantasia Basica
+      * @var string
+      */
+    protected $nome_fantasia_basica;
     
     /**
       * $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
       * @var int
       */
     protected $id_status_conta;
+    
+    /**
+      * $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+      * @var string
+      */
+    protected $status_conta;
     
     /**
       * $dia_vencimento Apresenta o dia de vencimento.
@@ -196,6 +274,12 @@ class Conta implements ArrayAccess
     protected $data_status_conta;
     
     /**
+      * $valor_renda Valor da renda comprovada.
+      * @var Number
+      */
+    protected $valor_renda;
+    
+    /**
       * $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
       * @var \DateTime
       */
@@ -208,16 +292,16 @@ class Conta implements ArrayAccess
     protected $data_ultima_alteracao_vencimento;
     
     /**
+      * $data_hora_ultima_compra Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+      * @var \DateTime
+      */
+    protected $data_hora_ultima_compra;
+    
+    /**
       * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
       * @var int
       */
     protected $numero_agencia;
-    
-    /**
-      * $valor_renda Apresenta o valor da renda comprovada
-      * @var Number
-      */
-    protected $valor_renda;
     
     /**
       * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
@@ -231,6 +315,42 @@ class Conta implements ArrayAccess
       */
     protected $forma_envio_fatura;
     
+    /**
+      * $titular Apresenta se a pessoa \u00C3\u00A9 titular da conta.
+      * @var bool
+      */
+    protected $titular;
+    
+    /**
+      * $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+      * @var Number
+      */
+    protected $limite_global;
+    
+    /**
+      * $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+      * @var Number
+      */
+    protected $limite_saque_global;
+    
+    /**
+      * $saldo_disponivel_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+      * @var Number
+      */
+    protected $saldo_disponivel_global;
+    
+    /**
+      * $saldo_disponivel_saque Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+      * @var Number
+      */
+    protected $saldo_disponivel_saque;
+    
+    /**
+      * $data_inicio_atraso Apresenta a data da ultima cobran\u00C3\u00A7a.
+      * @var \DateTime
+      */
+    protected $data_inicio_atraso;
+    
 
     /**
      * Constructor
@@ -241,19 +361,31 @@ class Conta implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
+            $this->id_pessoa = $data["id_pessoa"];
+            $this->nome = $data["nome"];
             $this->id_produto = $data["id_produto"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
-            $this->id_pessoa = $data["id_pessoa"];
+            $this->nome_origem_comercial = $data["nome_origem_comercial"];
+            $this->id_fantasia_basica = $data["id_fantasia_basica"];
+            $this->nome_fantasia_basica = $data["nome_fantasia_basica"];
             $this->id_status_conta = $data["id_status_conta"];
+            $this->status_conta = $data["status_conta"];
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->melhor_dia_compra = $data["melhor_dia_compra"];
             $this->data_status_conta = $data["data_status_conta"];
+            $this->valor_renda = $data["valor_renda"];
             $this->data_cadastro = $data["data_cadastro"];
             $this->data_ultima_alteracao_vencimento = $data["data_ultima_alteracao_vencimento"];
+            $this->data_hora_ultima_compra = $data["data_hora_ultima_compra"];
             $this->numero_agencia = $data["numero_agencia"];
-            $this->valor_renda = $data["valor_renda"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
             $this->forma_envio_fatura = $data["forma_envio_fatura"];
+            $this->titular = $data["titular"];
+            $this->limite_global = $data["limite_global"];
+            $this->limite_saque_global = $data["limite_saque_global"];
+            $this->saldo_disponivel_global = $data["saldo_disponivel_global"];
+            $this->saldo_disponivel_saque = $data["saldo_disponivel_saque"];
+            $this->data_inicio_atraso = $data["data_inicio_atraso"];
         }
     }
     
@@ -275,6 +407,48 @@ class Conta implements ArrayAccess
     {
         
         $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets id_pessoa
+     * @return int
+     */
+    public function getIdPessoa()
+    {
+        return $this->id_pessoa;
+    }
+  
+    /**
+     * Sets id_pessoa
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+     * @return $this
+     */
+    public function setIdPessoa($id_pessoa)
+    {
+        
+        $this->id_pessoa = $id_pessoa;
+        return $this;
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
         return $this;
     }
     
@@ -321,23 +495,65 @@ class Conta implements ArrayAccess
     }
     
     /**
-     * Gets id_pessoa
-     * @return int
+     * Gets nome_origem_comercial
+     * @return string
      */
-    public function getIdPessoa()
+    public function getNomeOrigemComercial()
     {
-        return $this->id_pessoa;
+        return $this->nome_origem_comercial;
     }
   
     /**
-     * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+     * Sets nome_origem_comercial
+     * @param string $nome_origem_comercial Nome da origem comercial
      * @return $this
      */
-    public function setIdPessoa($id_pessoa)
+    public function setNomeOrigemComercial($nome_origem_comercial)
     {
         
-        $this->id_pessoa = $id_pessoa;
+        $this->nome_origem_comercial = $nome_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets id_fantasia_basica
+     * @return int
+     */
+    public function getIdFantasiaBasica()
+    {
+        return $this->id_fantasia_basica;
+    }
+  
+    /**
+     * Sets id_fantasia_basica
+     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id).
+     * @return $this
+     */
+    public function setIdFantasiaBasica($id_fantasia_basica)
+    {
+        
+        $this->id_fantasia_basica = $id_fantasia_basica;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_fantasia_basica
+     * @return string
+     */
+    public function getNomeFantasiaBasica()
+    {
+        return $this->nome_fantasia_basica;
+    }
+  
+    /**
+     * Sets nome_fantasia_basica
+     * @param string $nome_fantasia_basica Nome da Fantasia Basica
+     * @return $this
+     */
+    public function setNomeFantasiaBasica($nome_fantasia_basica)
+    {
+        
+        $this->nome_fantasia_basica = $nome_fantasia_basica;
         return $this;
     }
     
@@ -359,6 +575,27 @@ class Conta implements ArrayAccess
     {
         
         $this->id_status_conta = $id_status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets status_conta
+     * @return string
+     */
+    public function getStatusConta()
+    {
+        return $this->status_conta;
+    }
+  
+    /**
+     * Sets status_conta
+     * @param string $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+     * @return $this
+     */
+    public function setStatusConta($status_conta)
+    {
+        
+        $this->status_conta = $status_conta;
         return $this;
     }
     
@@ -426,6 +663,27 @@ class Conta implements ArrayAccess
     }
     
     /**
+     * Gets valor_renda
+     * @return Number
+     */
+    public function getValorRenda()
+    {
+        return $this->valor_renda;
+    }
+  
+    /**
+     * Sets valor_renda
+     * @param Number $valor_renda Valor da renda comprovada.
+     * @return $this
+     */
+    public function setValorRenda($valor_renda)
+    {
+        
+        $this->valor_renda = $valor_renda;
+        return $this;
+    }
+    
+    /**
      * Gets data_cadastro
      * @return \DateTime
      */
@@ -468,6 +726,27 @@ class Conta implements ArrayAccess
     }
     
     /**
+     * Gets data_hora_ultima_compra
+     * @return \DateTime
+     */
+    public function getDataHoraUltimaCompra()
+    {
+        return $this->data_hora_ultima_compra;
+    }
+  
+    /**
+     * Sets data_hora_ultima_compra
+     * @param \DateTime $data_hora_ultima_compra Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+     * @return $this
+     */
+    public function setDataHoraUltimaCompra($data_hora_ultima_compra)
+    {
+        
+        $this->data_hora_ultima_compra = $data_hora_ultima_compra;
+        return $this;
+    }
+    
+    /**
      * Gets numero_agencia
      * @return int
      */
@@ -485,27 +764,6 @@ class Conta implements ArrayAccess
     {
         
         $this->numero_agencia = $numero_agencia;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_renda
-     * @return Number
-     */
-    public function getValorRenda()
-    {
-        return $this->valor_renda;
-    }
-  
-    /**
-     * Sets valor_renda
-     * @param Number $valor_renda Apresenta o valor da renda comprovada
-     * @return $this
-     */
-    public function setValorRenda($valor_renda)
-    {
-        
-        $this->valor_renda = $valor_renda;
         return $this;
     }
     
@@ -548,6 +806,132 @@ class Conta implements ArrayAccess
     {
         
         $this->forma_envio_fatura = $forma_envio_fatura;
+        return $this;
+    }
+    
+    /**
+     * Gets titular
+     * @return bool
+     */
+    public function getTitular()
+    {
+        return $this->titular;
+    }
+  
+    /**
+     * Sets titular
+     * @param bool $titular Apresenta se a pessoa \u00C3\u00A9 titular da conta.
+     * @return $this
+     */
+    public function setTitular($titular)
+    {
+        
+        $this->titular = $titular;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_global
+     * @return Number
+     */
+    public function getLimiteGlobal()
+    {
+        return $this->limite_global;
+    }
+  
+    /**
+     * Sets limite_global
+     * @param Number $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+     * @return $this
+     */
+    public function setLimiteGlobal($limite_global)
+    {
+        
+        $this->limite_global = $limite_global;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_saque_global
+     * @return Number
+     */
+    public function getLimiteSaqueGlobal()
+    {
+        return $this->limite_saque_global;
+    }
+  
+    /**
+     * Sets limite_saque_global
+     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+     * @return $this
+     */
+    public function setLimiteSaqueGlobal($limite_saque_global)
+    {
+        
+        $this->limite_saque_global = $limite_saque_global;
+        return $this;
+    }
+    
+    /**
+     * Gets saldo_disponivel_global
+     * @return Number
+     */
+    public function getSaldoDisponivelGlobal()
+    {
+        return $this->saldo_disponivel_global;
+    }
+  
+    /**
+     * Sets saldo_disponivel_global
+     * @param Number $saldo_disponivel_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+     * @return $this
+     */
+    public function setSaldoDisponivelGlobal($saldo_disponivel_global)
+    {
+        
+        $this->saldo_disponivel_global = $saldo_disponivel_global;
+        return $this;
+    }
+    
+    /**
+     * Gets saldo_disponivel_saque
+     * @return Number
+     */
+    public function getSaldoDisponivelSaque()
+    {
+        return $this->saldo_disponivel_saque;
+    }
+  
+    /**
+     * Sets saldo_disponivel_saque
+     * @param Number $saldo_disponivel_saque Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+     * @return $this
+     */
+    public function setSaldoDisponivelSaque($saldo_disponivel_saque)
+    {
+        
+        $this->saldo_disponivel_saque = $saldo_disponivel_saque;
+        return $this;
+    }
+    
+    /**
+     * Gets data_inicio_atraso
+     * @return \DateTime
+     */
+    public function getDataInicioAtraso()
+    {
+        return $this->data_inicio_atraso;
+    }
+  
+    /**
+     * Sets data_inicio_atraso
+     * @param \DateTime $data_inicio_atraso Apresenta a data da ultima cobran\u00C3\u00A7a.
+     * @return $this
+     */
+    public function setDataInicioAtraso($data_inicio_atraso)
+    {
+        
+        $this->data_inicio_atraso = $data_inicio_atraso;
         return $this;
     }
     

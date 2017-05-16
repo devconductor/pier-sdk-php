@@ -126,22 +126,22 @@ class StatusParametrosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET12
+     * Test case for listarUsingGET15
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET12() {
+    public function test_listarUsingGET15() {
 
     }
     
     /**
-     * Test case for listarUsingGET13
+     * Test case for listarUsingGET16
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      */
-    public function test_listarUsingGET13() {
+    public function test_listarUsingGET16() {
 
     }
     

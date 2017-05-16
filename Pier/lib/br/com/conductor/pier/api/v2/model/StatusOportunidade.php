@@ -51,6 +51,7 @@ class StatusOportunidade implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'nome' => 'string',
         'descricao' => 'string',
         'flag_ativo' => 'bool'
     );
@@ -64,6 +65,7 @@ class StatusOportunidade implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'nome' => 'nome',
         'descricao' => 'descricao',
         'flag_ativo' => 'flagAtivo'
     );
@@ -77,6 +79,7 @@ class StatusOportunidade implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'nome' => 'setNome',
         'descricao' => 'setDescricao',
         'flag_ativo' => 'setFlagAtivo'
     );
@@ -90,6 +93,7 @@ class StatusOportunidade implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'nome' => 'getNome',
         'descricao' => 'getDescricao',
         'flag_ativo' => 'getFlagAtivo'
     );
@@ -98,6 +102,12 @@ class StatusOportunidade implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $nome Nome do status oportunidade
+      * @var string
+      */
+    protected $nome;
     
     /**
       * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
@@ -120,9 +130,31 @@ class StatusOportunidade implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->nome = $data["nome"];
             $this->descricao = $data["descricao"];
             $this->flag_ativo = $data["flag_ativo"];
         }
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome Nome do status oportunidade
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
+        return $this;
     }
     
     /**

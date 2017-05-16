@@ -1,6 +1,6 @@
 # br.com.conductor.pier.api.v2.invoker\TokenApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,11 +16,6 @@ Method | HTTP request | Description
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TokenApi();
 $body_access_token = new \br.com.conductor.pier.api.v2.model\BodyAccessToken(); // \br.com.conductor.pier.api.v2.model\BodyAccessToken | bodyAccessToken
@@ -46,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

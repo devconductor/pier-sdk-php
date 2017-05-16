@@ -96,52 +96,52 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET
+     * Test case for listarUsingGET1
      *
      * Lista todos os atendimentos
      *
      */
-    public function test_listarUsingGET() {
+    public function test_listarUsingGET1() {
 
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET14
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET14() {
 
     }
     
     /**
-     * Test case for negarUsingGET
+     * Test case for negarUsingPOST
      *
      * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
      */
-    public function test_negarUsingGET() {
+    public function test_negarUsingPOST() {
 
     }
     
     /**
-     * Test case for reconhecerUsingGET
+     * Test case for reconhecerUsingPOST
      *
      * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      *
      */
-    public function test_reconhecerUsingGET() {
+    public function test_reconhecerUsingPOST() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST
+     * Test case for salvarUsingPOST1
      *
      * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
      *
      */
-    public function test_salvarUsingPOST() {
+    public function test_salvarUsingPOST1() {
 
     }
     

@@ -1,6 +1,6 @@
 # br.com.conductor.pier.api.v2.invoker\NotificacoesApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,11 +25,6 @@ Esse recurso permite atualizar o status do SMS do emissor
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $nsu = "nsu_example"; // string | Seu n\u00C3\u00BAmero
@@ -63,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -83,11 +78,6 @@ Esse recurso permite listar os Pushes do emissor
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -125,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -135,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarSMSUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageSMS listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo)
+> \br.com.conductor.pier.api.v2.model\PageSMS listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu)
 
 Listar SMS
 
@@ -146,11 +136,6 @@ Esse recurso permite listar os SMS do emissor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -159,9 +144,10 @@ $tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica
 $status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
 $operadora = "operadora_example"; // string | Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
 $protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+$nsu = 789; // int | Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo);
+    $result = $api_instance->listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarSMSUsingGET: ', $e->getMessage(), "\n";
@@ -180,6 +166,7 @@ Name | Type | Description  | Notes
  **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **operadora** | **string**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 
  **protocolo** | **string**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
+ **nsu** | **int**| Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 ### Return type
 
@@ -187,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -207,11 +194,6 @@ Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $nsu = "nsu_example"; // string | Seu n\u00C3\u00BAmero
@@ -241,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -261,11 +243,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $push_persists = array(new PushFCMEGCM()); // \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] | pushPersists
@@ -291,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -311,11 +288,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $push_persists = array(new PushFCMEGCM()); // \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] | pushPersists
@@ -341,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -361,11 +333,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $push_persists = array(new PushAPNS()); // \br.com.conductor.pier.api.v2.model\PushAPNS[] | pushPersists
@@ -391,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -411,11 +378,6 @@ Esse recurso permite enviar uma lista de SMS.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $lista_sms = array(new NotificacaoSMSBody()); // \br.com.conductor.pier.api.v2.model\NotificacaoSMSBody[] | listaSMS
@@ -441,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

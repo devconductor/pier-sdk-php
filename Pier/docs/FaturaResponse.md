@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 **taxa_saque** | [**Number**](Number.md) | Valor percentual da taxa de saque. | [optional] 
 **taxa_maxima_proximo_periodo** | [**Number**](Number.md) | Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo. | [optional] 
 **total_servicos** | [**Number**](Number.md) | Apresenta a soma de todos os seguros cobrados na fatura do cliente. | 
+**total_parcelado_nacionais** | [**Number**](Number.md) | Apresenta a soma de todos os valores parcelados + compras nacionais. | 
+**total_parcelado_internacionais** | [**Number**](Number.md) | Apresenta a soma de todos os valores parcelados + compras internacionais. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

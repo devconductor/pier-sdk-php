@@ -1,6 +1,6 @@
 <?php
 /**
- * TransacaoResponse
+ * TransacaoCorrenteResponse
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * TransacaoResponse Class Doc Comment
+ * TransacaoCorrenteResponse Class Doc Comment
  *
  * @category    Class
  * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
@@ -44,7 +44,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TransacaoResponse implements ArrayAccess
+class TransacaoCorrenteResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 

@@ -51,7 +51,7 @@ class PageContas implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\Conta[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\ContaResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageContas implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\Conta[]
+      * @var \br.com.conductor.pier.api.v2.model\ContaResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageContas implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\Conta[]
+     * @return \br.com.conductor.pier.api.v2.model\ContaResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageContas implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\Conta[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\ContaResponse[] $content 
      * @return $this
      */
     public function setContent($content)

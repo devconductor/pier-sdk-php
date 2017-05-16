@@ -56,6 +56,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
         'rev_date' => '\DateTime',
         'id' => 'int',
         'id_tipo_oportunidade' => 'int',
+        'nome' => 'string',
         'descricao' => 'string',
         'flag_ativo' => 'bool'
     );
@@ -74,6 +75,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
         'rev_date' => 'revDate',
         'id' => 'id',
         'id_tipo_oportunidade' => 'idTipoOportunidade',
+        'nome' => 'nome',
         'descricao' => 'descricao',
         'flag_ativo' => 'flagAtivo'
     );
@@ -92,6 +94,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
         'rev_date' => 'setRevDate',
         'id' => 'setId',
         'id_tipo_oportunidade' => 'setIdTipoOportunidade',
+        'nome' => 'setNome',
         'descricao' => 'setDescricao',
         'flag_ativo' => 'setFlagAtivo'
     );
@@ -110,6 +113,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
         'rev_date' => 'getRevDate',
         'id' => 'getId',
         'id_tipo_oportunidade' => 'getIdTipoOportunidade',
+        'nome' => 'getNome',
         'descricao' => 'getDescricao',
         'flag_ativo' => 'getFlagAtivo'
     );
@@ -150,6 +154,12 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
     protected $id_tipo_oportunidade;
     
     /**
+      * $nome Nome do status oportunidade
+      * @var string
+      */
+    protected $nome;
+    
+    /**
       * $descricao Descricao do StatusOportunidade
       * @var string
       */
@@ -175,6 +185,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
             $this->rev_date = $data["rev_date"];
             $this->id = $data["id"];
             $this->id_tipo_oportunidade = $data["id_tipo_oportunidade"];
+            $this->nome = $data["nome"];
             $this->descricao = $data["descricao"];
             $this->flag_ativo = $data["flag_ativo"];
         }
@@ -282,6 +293,27 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
     {
         
         $this->id_tipo_oportunidade = $id_tipo_oportunidade;
+        return $this;
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome Nome do status oportunidade
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
         return $this;
     }
     

@@ -86,6 +86,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for alterarTitularUsingPOST
+     *
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     *
+     */
+    public function test_alterarTitularUsingPOST() {
+
+    }
+    
+    /**
      * Test case for alterarVencimentoUsingPUT
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -178,7 +188,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET20
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
     public function test_consultarUsingGET20() {
@@ -306,32 +316,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET19
+     * Test case for listarUsingGET22
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET19() {
+    public function test_listarUsingGET22() {
 
     }
     
     /**
-     * Test case for listarUsingGET20
+     * Test case for listarUsingGET23
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET20() {
+    public function test_listarUsingGET23() {
 
     }
     
     /**
-     * Test case for listarUsingGET3
+     * Test case for listarUsingGET4
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET3() {
+    public function test_listarUsingGET4() {
 
     }
     
@@ -358,7 +368,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transferirUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
      *
      */
     public function test_transferirUsingPOST() {

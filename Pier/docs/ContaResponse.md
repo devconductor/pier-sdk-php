@@ -1,4 +1,4 @@
-# Conta
+# ContaResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,10 +13,7 @@ Name | Type | Description | Notes
 **data_status_conta** | [**\DateTime**](\DateTime.md) | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
 **data_cadastro** | [**\DateTime**](\DateTime.md) | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
 **data_ultima_alteracao_vencimento** | [**\DateTime**](\DateTime.md) | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
-**numero_agencia** | **int** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
 **valor_renda** | [**Number**](Number.md) | Apresenta o valor da renda comprovada | [optional] 
-**numero_conta_corrente** | **string** | N\u00C3\u00BAmero da conta corrente. | [optional] 
-**forma_envio_fatura** | **string** | Forma de envio da fatura. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

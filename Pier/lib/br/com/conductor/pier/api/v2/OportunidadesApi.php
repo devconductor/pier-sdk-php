@@ -64,7 +64,7 @@ class OportunidadesApi
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
+            $apiClient->getConfig()->setHost('http://localhost/');
         }
   
         $this->apiClient = $apiClient;
@@ -184,13 +184,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -296,13 +289,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -407,13 +393,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -524,13 +503,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -625,13 +597,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -728,13 +693,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -772,14 +730,16 @@ class OportunidadesApi
      * @param \DateTime $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
      * @param int $id C\u00C3\u00B3digo identificador do status oportunidade (optional)
      * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade (optional)
+     * @param string $nome Nome do status oportunidade (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOprtunidadesAUD
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasStatusUsingGET($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $descricao = null, $flag_ativo = null)
+    public function listarAuditoriasStatusUsingGET($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasStatusUsingGETWithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasStatusUsingGETWithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $nome, $descricao, $flag_ativo, $rev_user);
         return $response; 
     }
 
@@ -795,12 +755,14 @@ class OportunidadesApi
      * @param \DateTime $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
      * @param int $id C\u00C3\u00B3digo identificador do status oportunidade (optional)
      * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade (optional)
+     * @param string $nome Nome do status oportunidade (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOprtunidadesAUD, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasStatusUsingGETWithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $descricao = null, $flag_ativo = null)
+    public function listarAuditoriasStatusUsingGETWithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
         
   
@@ -842,12 +804,20 @@ class OportunidadesApi
             $queryParams['idTipoOportunidade'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_oportunidade);
         }// query params
         
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
         if ($descricao !== null) {
             $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
         }// query params
         
         if ($flag_ativo !== null) {
             $queryParams['flagAtivo'] = $this->apiClient->getSerializer()->toQueryValue($flag_ativo);
+        }// query params
+        
+        if ($rev_user !== null) {
+            $queryParams['revUser'] = $this->apiClient->getSerializer()->toQueryValue($rev_user);
         }
         
         
@@ -863,13 +833,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -913,12 +876,13 @@ class OportunidadesApi
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
      * @param \DateTime $rev_date Data da auditoria (optional)
      * @param \DateTime $rev_type Tipo da auditoria (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOprtunidadeAUD
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null)
+    public function listarAuditoriasUsingGET($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGETWithHttpInfo ($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGETWithHttpInfo ($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type, $rev_user);
         return $response; 
     }
 
@@ -939,10 +903,11 @@ class OportunidadesApi
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
      * @param \DateTime $rev_date Data da auditoria (optional)
      * @param \DateTime $rev_type Tipo da auditoria (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOprtunidadeAUD, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGETWithHttpInfo($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null)
+    public function listarAuditoriasUsingGETWithHttpInfo($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
     {
         
   
@@ -1002,6 +967,10 @@ class OportunidadesApi
         
         if ($rev_type !== null) {
             $queryParams['revType'] = $this->apiClient->getSerializer()->toQueryValue($rev_type);
+        }// query params
+        
+        if ($rev_user !== null) {
+            $queryParams['revUser'] = $this->apiClient->getSerializer()->toQueryValue($rev_user);
         }
         
         
@@ -1017,13 +986,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1063,12 +1025,13 @@ class OportunidadesApi
      * @param int $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOprtunidadesAUD
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET1($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null)
+    public function listarAuditoriasUsingGET1($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGET1WithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGET1WithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo, $rev_user);
         return $response; 
     }
 
@@ -1085,10 +1048,11 @@ class OportunidadesApi
      * @param int $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param \DateTime $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOprtunidadesAUD, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET1WithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null)
+    public function listarAuditoriasUsingGET1WithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
         
   
@@ -1132,6 +1096,10 @@ class OportunidadesApi
         
         if ($flag_ativo !== null) {
             $queryParams['flagAtivo'] = $this->apiClient->getSerializer()->toQueryValue($flag_ativo);
+        }// query params
+        
+        if ($rev_user !== null) {
+            $queryParams['revUser'] = $this->apiClient->getSerializer()->toQueryValue($rev_user);
         }
         
         
@@ -1147,13 +1115,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1189,14 +1150,15 @@ class OportunidadesApi
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param string $nome Nome do status oportunidade (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOprtunidades
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusUsingGET($id, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarStatusUsingGET($id, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusUsingGETWithHttpInfo ($id, $page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusUsingGETWithHttpInfo ($id, $page, $limit, $nome, $descricao, $flag_ativo);
         return $response; 
     }
 
@@ -1209,12 +1171,13 @@ class OportunidadesApi
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param string $nome Nome do status oportunidade (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOprtunidades, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusUsingGETWithHttpInfo($id, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarStatusUsingGETWithHttpInfo($id, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
     {
         
         // verify the required parameter 'id' is set
@@ -1242,6 +1205,10 @@ class OportunidadesApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }// query params
         
         if ($descricao !== null) {
@@ -1274,13 +1241,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1308,7 +1268,7 @@ class OportunidadesApi
     }
     
     /**
-     * listarUsingGET16
+     * listarUsingGET19
      *
      * Lista os tipos oportunidades
      *
@@ -1319,15 +1279,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOprtunidades
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16($page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET19($page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET16WithHttpInfo
+     * listarUsingGET19WithHttpInfo
      *
      * Lista os tipos oportunidades
      *
@@ -1338,7 +1298,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOprtunidades, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16WithHttpInfo($page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET19WithHttpInfo($page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   
@@ -1386,13 +1346,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1420,7 +1373,7 @@ class OportunidadesApi
     }
     
     /**
-     * listarUsingGET7
+     * listarUsingGET9
      *
      * Lista as oportunidades
      *
@@ -1436,15 +1389,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageOprtunidadesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET9($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET7WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
      * Lista as oportunidades
      *
@@ -1460,7 +1413,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOprtunidadesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7WithHttpInfo($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET9WithHttpInfo($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
   
@@ -1527,13 +1480,6 @@ class OportunidadesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
         
         // make the API Call
         try {
@@ -1640,13 +1586,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1674,105 +1613,7 @@ class OportunidadesApi
     }
     
     /**
-     * salvarUsingPOST3
-     *
-     * Cadastra as oportunidade
-     *
-     * @param \br.com.conductor.pier.api.v2.model\OportunidadePersist $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST3($persist)
-    {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST3WithHttpInfo ($persist);
-        return $response; 
-    }
-
-
-    /**
-     * salvarUsingPOST3WithHttpInfo
-     *
-     * Cadastra as oportunidade
-     *
-     * @param \br.com.conductor.pier.api.v2.model\OportunidadePersist $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST3WithHttpInfo($persist)
-    {
-        
-        // verify the required parameter 'persist' is set
-        if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST3');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/oportunidades";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($persist)) {
-            $_tempBody = $persist;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\OportunidadeResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\OportunidadeResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\OportunidadeResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * salvarUsingPOST6
+     * salvarUsingPOST10
      *
      * Cadastra tipos oportunidades
      *
@@ -1780,15 +1621,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST6($persist)
+    public function salvarUsingPOST10($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST6WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST10WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST6WithHttpInfo
+     * salvarUsingPOST10WithHttpInfo
      *
      * Cadastra tipos oportunidades
      *
@@ -1796,12 +1637,12 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST6WithHttpInfo($persist)
+    public function salvarUsingPOST10WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST6');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST10');
         }
   
         // parse inputs
@@ -1836,13 +1677,6 @@ class OportunidadesApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('access_token');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['access_token'] = $apiKey;
-        }
-        
-        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -1861,6 +1695,97 @@ class OportunidadesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarUsingPOST5
+     *
+     * Cadastra as oportunidade
+     *
+     * @param \br.com.conductor.pier.api.v2.model\OportunidadePersist $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST5($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST5WithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarUsingPOST5WithHttpInfo
+     *
+     * Cadastra as oportunidade
+     *
+     * @param \br.com.conductor.pier.api.v2.model\OportunidadePersist $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST5WithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST5');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/oportunidades";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\OportunidadeResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\OportunidadeResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\OportunidadeResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -51,7 +51,7 @@ class PageTransacaoResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\TransacaoResponse[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\TransacaoCorrenteResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageTransacaoResponse implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\TransacaoResponse[]
+      * @var \br.com.conductor.pier.api.v2.model\TransacaoCorrenteResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageTransacaoResponse implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\TransacaoResponse[]
+     * @return \br.com.conductor.pier.api.v2.model\TransacaoCorrenteResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageTransacaoResponse implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\TransacaoResponse[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\TransacaoCorrenteResponse[] $content 
      * @return $this
      */
     public function setContent($content)

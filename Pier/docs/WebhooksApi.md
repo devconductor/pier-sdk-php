@@ -1,13 +1,13 @@
 # br.com.conductor.pier.api.v2.invoker\WebhooksApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET23**](WebhooksApi.md#consultarUsingGET23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET22**](WebhooksApi.md#listarUsingGET22) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST9**](WebhooksApi.md#salvarUsingPOST9) | **POST** /api/webhooks | Salvar Webhook
+[**listarUsingGET25**](WebhooksApi.md#listarUsingGET25) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST13**](WebhooksApi.md#salvarUsingPOST13) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT10**
@@ -21,11 +21,6 @@ Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cad
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo identificador do Webhook
@@ -55,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -75,11 +70,6 @@ Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
@@ -105,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -114,8 +104,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET22($page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET25($page, $limit, $id, $tipo_evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -126,11 +116,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -140,10 +125,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET22($page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET25($page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->listarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->listarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -165,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -174,8 +159,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST9**
-> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST9($tipo_evento, $url)
+# **salvarUsingPOST13**
+> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST13($tipo_evento, $url)
 
 Salvar Webhook
 
@@ -186,20 +171,15 @@ Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo WebHook
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->salvarUsingPOST9($tipo_evento, $url);
+    $result = $api_instance->salvarUsingPOST13($tipo_evento, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->salvarUsingPOST9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -217,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

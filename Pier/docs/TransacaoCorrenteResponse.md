@@ -1,4 +1,4 @@
-# TransacaoResponse
+# TransacaoCorrenteResponse
 
 ## Properties
 Name | Type | Description | Notes

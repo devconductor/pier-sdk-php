@@ -58,7 +58,8 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
         'rev' => 'int',
         'rev_date' => '\DateTime',
         'rev_oportunidade' => 'int',
-        'rev_type' => 'int'
+        'rev_type' => 'int',
+        'rev_user' => 'string'
     );
   
     static function swaggerTypes() {
@@ -77,7 +78,8 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
         'rev' => 'rev',
         'rev_date' => 'revDate',
         'rev_oportunidade' => 'revOportunidade',
-        'rev_type' => 'revType'
+        'rev_type' => 'revType',
+        'rev_user' => 'revUser'
     );
   
     static function attributeMap() {
@@ -96,7 +98,8 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
         'rev' => 'setRev',
         'rev_date' => 'setRevDate',
         'rev_oportunidade' => 'setRevOportunidade',
-        'rev_type' => 'setRevType'
+        'rev_type' => 'setRevType',
+        'rev_user' => 'setRevUser'
     );
   
     static function setters() {
@@ -115,7 +118,8 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
         'rev' => 'getRev',
         'rev_date' => 'getRevDate',
         'rev_oportunidade' => 'getRevOportunidade',
-        'rev_type' => 'getRevType'
+        'rev_type' => 'getRevType',
+        'rev_user' => 'getRevUser'
     );
   
     static function getters() {
@@ -171,6 +175,12 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
       */
     protected $rev_type;
     
+    /**
+      * $rev_user 
+      * @var string
+      */
+    protected $rev_user;
+    
 
     /**
      * Constructor
@@ -188,6 +198,7 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
             $this->rev_date = $data["rev_date"];
             $this->rev_oportunidade = $data["rev_oportunidade"];
             $this->rev_type = $data["rev_type"];
+            $this->rev_user = $data["rev_user"];
         }
     }
     
@@ -356,6 +367,27 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
     {
         
         $this->rev_type = $rev_type;
+        return $this;
+    }
+    
+    /**
+     * Gets rev_user
+     * @return string
+     */
+    public function getRevUser()
+    {
+        return $this->rev_user;
+    }
+  
+    /**
+     * Sets rev_user
+     * @param string $rev_user 
+     * @return $this
+     */
+    public function setRevUser($rev_user)
+    {
+        
+        $this->rev_user = $rev_user;
         return $this;
     }
     

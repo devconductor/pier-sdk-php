@@ -1,6 +1,6 @@
 # br.com.conductor.pier.api.v2.invoker\CadastrosGeraisApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,25 +19,28 @@ Method | HTTP request | Description
 [**consultarUsingGET5**](CadastrosGeraisApi.md#consultarUsingGET5) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
 [**consultarUsingGET8**](CadastrosGeraisApi.md#consultarUsingGET8) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
 [**consultarUsingGET9**](CadastrosGeraisApi.md#consultarUsingGET9) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**listarContasPorPessoaUsingGET**](CadastrosGeraisApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listarEstadosCivisUsingGET**](CadastrosGeraisApi.md#listarEstadosCivisUsingGET) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
 [**listarHistoricoTelefonesUsingGET**](CadastrosGeraisApi.md#listarHistoricoTelefonesUsingGET) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+[**listarNacionalidadesUsingGET**](CadastrosGeraisApi.md#listarNacionalidadesUsingGET) | **GET** /api/nacionalidades | Lista nacionalidades
 [**listarNaturezasOcupacoesUsingGET**](CadastrosGeraisApi.md#listarNaturezasOcupacoesUsingGET) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProdutosUsingGET**](CadastrosGeraisApi.md#listarProdutosUsingGET) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listarProfissoesUsingGET**](CadastrosGeraisApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listarUsingGET10**](CadastrosGeraisApi.md#listarUsingGET10) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET15**](CadastrosGeraisApi.md#listarUsingGET15) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET5**](CadastrosGeraisApi.md#listarUsingGET5) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**salvarPessoaFisicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/contas-pessoas/fisicas | Cadastro de Conta e Pessoa Fisica
-[**salvarPessoaJuridicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/contas-pessoas/juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST5**](CadastrosGeraisApi.md#salvarUsingPOST5) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**listarUsingGET10**](CadastrosGeraisApi.md#listarUsingGET10) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET11**](CadastrosGeraisApi.md#listarUsingGET11) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET13**](CadastrosGeraisApi.md#listarUsingGET13) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET18**](CadastrosGeraisApi.md#listarUsingGET18) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET20**](CadastrosGeraisApi.md#listarUsingGET20) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET6**](CadastrosGeraisApi.md#listarUsingGET6) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET7**](CadastrosGeraisApi.md#listarUsingGET7) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**salvarPessoaFisicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
+[**salvarPessoaJuridicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+[**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST6**](CadastrosGeraisApi.md#salvarUsingPOST6) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST7**](CadastrosGeraisApi.md#salvarUsingPOST7) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST9**](CadastrosGeraisApi.md#salvarUsingPOST9) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 # **alterarUsingPUT1**
@@ -51,11 +54,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais r
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | id
@@ -103,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -117,17 +115,12 @@ Name | Type | Description  | Notes
 
 Atualiza os detalhes de uma determinada Pessoa
 
-Este m\u00C3\u00A9todo permite que seja alterado na base do emissor od detalhes de uma determinada Pessoa.
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
 
 ### Example 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | ID da Pessoa
@@ -171,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -191,11 +184,6 @@ Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | ID da Pessoa
@@ -241,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -261,11 +249,6 @@ Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
@@ -299,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -319,11 +302,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinad
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | ID da Origem Comercial
@@ -349,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -369,11 +347,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
@@ -399,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -419,11 +392,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
@@ -449,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -469,11 +437,6 @@ Este recurso permite que sejam listados os tipos de ajustes existentes na base d
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -505,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -525,11 +488,6 @@ Este recurso permite que sejam listados os tipos de boletos existentes na base d
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -563,7 +521,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -583,11 +541,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
@@ -613,7 +566,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -633,11 +586,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a parti
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
@@ -663,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -683,11 +631,6 @@ Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a pa
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
@@ -713,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -733,11 +676,6 @@ Consulta os detalhes de um determinado estabelecimento
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | Id
@@ -763,7 +701,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -783,11 +721,6 @@ Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | ID da Pessoa
@@ -813,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -833,11 +766,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | ID da Pessoa
@@ -863,7 +791,56 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarContasPorPessoaUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageContasDetalhe listarContasPorPessoaUsingGET($numero_receita_federal, $page, $limit)
+
+Lista as contas da pessoa
+
+Permite listar as contas de um pessoa a partir do seu numero na receita federal.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$numero_receita_federal = "numero_receita_federal_example"; // string | Id Conta
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+
+try { 
+    $result = $api_instance->listarContasPorPessoaUsingGET($numero_receita_federal, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarContasPorPessoaUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numero_receita_federal** | **string**| Id Conta | 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageContasDetalhe**](PageContasDetalhe.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -883,11 +860,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -915,7 +887,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -935,11 +907,6 @@ Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado qu
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
@@ -965,7 +932,54 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarNacionalidadesUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao listarNacionalidadesUsingGET($page, $limit)
+
+Lista nacionalidades
+
+Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+
+try { 
+    $result = $api_instance->listarNacionalidadesUsingGET($page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarNacionalidadesUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -985,11 +999,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u0
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1017,7 +1026,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1037,11 +1046,6 @@ Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existent
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1075,7 +1079,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1095,11 +1099,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1135,7 +1134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1155,11 +1154,6 @@ Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na ba
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1187,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1197,7 +1191,143 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PagePortador listarUsingGET10($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse listarUsingGET10($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+
+Lista os Detalhes das Pessoas cadastradas no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$id_pessoa = 789; // int | C\u00C3\u00B3digo identificador da pessoa
+$nome_mae = "nome_mae_example"; // string | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+$id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
+$profissao = "profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
+$id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+$id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
+$numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+$numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
+$email = "email_example"; // string | Email da pessoa fisica
+$nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
+
+try { 
+    $result = $api_instance->listarUsingGET10($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET10: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id_pessoa** | **int**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
+ **nome_mae** | **string**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **id_estado_civil** | **int**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **string**| Email da pessoa fisica | [optional] 
+ **nome_empresa** | **string**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET11($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+
+Lista as Pessoas cadastradas no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+$nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+$tipo = "tipo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+$cpf = "cpf_example"; // string | N\u00C3\u00BAmero do CPF, quando PF.
+$cnpj = "cnpj_example"; // string | N\u00C3\u00BAmero do CNPJ, quando PJ.
+$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+$sexo = "sexo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+$numero_identidade = "numero_identidade_example"; // string | N\u00C3\u00BAmero da Identidade
+$orgao_expedidor_identidade = "orgao_expedidor_identidade_example"; // string | Org\u00C3\u00A3o expedidor do RG.
+$unidade_federativa_identidade = "unidade_federativa_identidade_example"; // string | Sigla da Unidade Federativa de onde foi expedido a Identidade
+$data_emissao_identidade = new \DateTime(); // \DateTime | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+
+try { 
+    $result = $api_instance->listarUsingGET11($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET11: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
+ **nome** | **string**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | [optional] 
+ **tipo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | [optional] 
+ **cpf** | **string**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
+ **cnpj** | **string**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
+ **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **sexo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+ **numero_identidade** | **string**| N\u00C3\u00BAmero da Identidade | [optional] 
+ **orgao_expedidor_identidade** | **string**| Org\u00C3\u00A3o expedidor do RG. | [optional] 
+ **unidade_federativa_identidade** | **string**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
+ **data_emissao_identidade** | **\DateTime**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PagePessoas**](PagePessoas.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\PagePortador listarUsingGET13($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
 
 Lista os Portadores existentes
 
@@ -1207,11 +1337,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na b
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1228,10 +1353,10 @@ $data_cadastro_portador = new \DateTime(); // \DateTime | Apresenta a data em qu
 $data_cancelamento_portador = new \DateTime(); // \DateTime | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->listarUsingGET10($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+    $result = $api_instance->listarUsingGET13($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1259,7 +1384,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1268,8 +1393,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\PageTelefones listarUsingGET14($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
+# **listarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PageTelefones listarUsingGET17($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1279,11 +1404,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na bas
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1297,10 +1417,10 @@ $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 $status = 56; // int | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
 
 try { 
-    $result = $api_instance->listarUsingGET14($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+    $result = $api_instance->listarUsingGET17($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1325,7 +1445,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1334,8 +1454,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageTiposEndereco listarUsingGET15($page, $limit, $id, $nome)
+# **listarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\PageTiposEndereco listarUsingGET18($page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1346,11 +1466,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -1358,10 +1473,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Endere\u00C3\u00A7o
 
 try { 
-    $result = $api_instance->listarUsingGET15($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET18($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1381,7 +1496,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1390,8 +1505,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\PageTipoTelefones listarUsingGET17($page, $limit, $id, $nome)
+# **listarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\PageTipoTelefones listarUsingGET20($page, $limit, $id, $nome)
 
 Lista os Tipos de Telefones
 
@@ -1402,11 +1517,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existent
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -1414,10 +1524,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Telefone
 
 try { 
-    $result = $api_instance->listarUsingGET17($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET20($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1437,7 +1547,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1446,8 +1556,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET4**
-> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET4($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
+# **listarUsingGET6**
+> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET6($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -1457,11 +1567,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existe
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1482,10 +1587,10 @@ $data_inclusao = new \DateTime(); // \DateTime | Apresenta a data em que fora ca
 $data_ultima_atualizacao = new \DateTime(); // \DateTime | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
 
 try { 
-    $result = $api_instance->listarUsingGET4($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+    $result = $api_instance->listarUsingGET6($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET6: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1517,7 +1622,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1526,8 +1631,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentos listarUsingGET5($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
+# **listarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentos listarUsingGET7($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
 
 Lista Estabelecimentos
 
@@ -1537,11 +1642,6 @@ Lista todas os Estabelecimentos
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
@@ -1567,10 +1667,10 @@ $flag_cartao_digitado = 56; // int | Indica se o estabelecimento poder\u00C3\u00
 $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 
 try { 
-    $result = $api_instance->listarUsingGET5($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+    $result = $api_instance->listarUsingGET7($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1607,153 +1707,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **listarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse listarUsingGET8($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
-
-Lista os Detalhes das Pessoas cadastradas no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id_pessoa = 789; // int | C\u00C3\u00B3digo identificador da pessoa
-$nome_mae = "nome_mae_example"; // string | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-$id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
-$profissao = "profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
-$id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-$id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
-$numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-$numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
-$email = "email_example"; // string | Email da pessoa fisica
-$nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
-
-try { 
-    $result = $api_instance->listarUsingGET8($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET8: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id_pessoa** | **int**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
- **nome_mae** | **string**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
- **id_estado_civil** | **int**| Id Estado civil da pessoa fisica | [optional] 
- **profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
- **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
- **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
- **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
- **email** | **string**| Email da pessoa fisica | [optional] 
- **nome_empresa** | **string**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET9($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
-
-Lista as Pessoas cadastradas no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-$nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-$tipo = "tipo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
-$cpf = "cpf_example"; // string | N\u00C3\u00BAmero do CPF, quando PF.
-$cnpj = "cnpj_example"; // string | N\u00C3\u00BAmero do CNPJ, quando PJ.
-$data_nascimento = new \DateTime(); // \DateTime | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-$sexo = "sexo_example"; // string | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-$numero_identidade = "numero_identidade_example"; // string | N\u00C3\u00BAmero da Identidade
-$orgao_expedidor_identidade = "orgao_expedidor_identidade_example"; // string | Org\u00C3\u00A3o expedidor do RG.
-$unidade_federativa_identidade = "unidade_federativa_identidade_example"; // string | Sigla da Unidade Federativa de onde foi expedido a Identidade
-$data_emissao_identidade = new \DateTime(); // \DateTime | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-
-try { 
-    $result = $api_instance->listarUsingGET9($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET9: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
- **nome** | **string**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | [optional] 
- **tipo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | [optional] 
- **cpf** | **string**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
- **cnpj** | **string**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
- **data_nascimento** | **\DateTime**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
- **sexo** | **string**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
- **numero_identidade** | **string**| N\u00C3\u00BAmero da Identidade | [optional] 
- **orgao_expedidor_identidade** | **string**| Org\u00C3\u00A3o expedidor do RG. | [optional] 
- **unidade_federativa_identidade** | **string**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
- **data_emissao_identidade** | **\DateTime**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PagePessoas**](PagePessoas.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1773,11 +1727,6 @@ Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00C3\
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $pessoa_persist = new \br.com.conductor.pier.api.v2.model\PessoaFisicaAprovadaPersist(); // \br.com.conductor.pier.api.v2.model\PessoaFisicaAprovadaPersist | pessoaPersist
@@ -1803,7 +1752,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1823,11 +1772,6 @@ Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica Permite realizar o cadastro de um
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $pessoa_persist = new \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaPersist(); // \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaPersist | pessoaPersist
@@ -1853,7 +1797,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1862,8 +1806,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST2**
-> \br.com.conductor.pier.api.v2.model\Endereco salvarUsingPOST2($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+# **salvarUsingPOST4**
+> \br.com.conductor.pier.api.v2.model\Endereco salvarUsingPOST4($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1873,11 +1817,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o n
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
@@ -1893,10 +1832,10 @@ $uf = "uf_example"; // string | Apresenta sigla da Unidade Federativa
 $pais = "pais_example"; // string | Apresenta nome do Pais
 
 try { 
-    $result = $api_instance->salvarUsingPOST2($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
+    $result = $api_instance->salvarUsingPOST4($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1923,7 +1862,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1932,8 +1871,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST4**
-> \br.com.conductor.pier.api.v2.model\Pessoa salvarUsingPOST4($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+# **salvarUsingPOST6**
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST6($id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+
+Salvar os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$id_pessoa = 789; // int | Apresenta o c\u00C3\u00B3digo identificador da pessoa
+$nome_mae = "nome_mae_example"; // string | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+$id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
+$profissao = "profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
+$id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+$id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
+$numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+$numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
+$email = "email_example"; // string | Email da pessoa fisica
+$nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
+
+try { 
+    $result = $api_instance->salvarUsingPOST6($id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST6: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_pessoa** | **int**| Apresenta o c\u00C3\u00B3digo identificador da pessoa | [optional] 
+ **nome_mae** | **string**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **id_estado_civil** | **int**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **string**| Email da pessoa fisica | [optional] 
+ **nome_empresa** | **string**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salvarUsingPOST7**
+> \br.com.conductor.pier.api.v2.model\Pessoa salvarUsingPOST7($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1943,11 +1945,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de da
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $nome = "nome_example"; // string | Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
@@ -1962,10 +1959,10 @@ $unidade_federativa_identidade = "unidade_federativa_identidade_example"; // str
 $data_emissao_identidade = new \DateTime(); // \DateTime | Data emiss\u00C3\u00A3o da Identidade.
 
 try { 
-    $result = $api_instance->salvarUsingPOST4($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    $result = $api_instance->salvarUsingPOST7($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1991,7 +1988,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -2000,8 +1997,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST5($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+# **salvarUsingPOST9**
+> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST9($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -2012,11 +2009,6 @@ Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de d
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
 $id_tipo_telefone = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
 $id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -2025,10 +2017,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST5($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST9($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2049,7 +2041,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

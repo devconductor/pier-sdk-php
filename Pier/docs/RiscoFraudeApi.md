@@ -1,17 +1,17 @@
 # br.com.conductor.pier.api.v2.invoker\RiscoFraudeApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET**](RiscoFraudeApi.md#consultarUsingGET) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultarUsingGET10**](RiscoFraudeApi.md#consultarUsingGET10) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**informarRiscoFraudeUsingPOST**](RiscoFraudeApi.md#informarRiscoFraudeUsingPOST) | **POST** /api/riscos-fraudes | Receber Risco Fraude
-[**listarUsingGET**](RiscoFraudeApi.md#listarUsingGET) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET11**](RiscoFraudeApi.md#listarUsingGET11) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-[**negarUsingGET**](RiscoFraudeApi.md#negarUsingGET) | **GET** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**reconhecerUsingGET**](RiscoFraudeApi.md#reconhecerUsingGET) | **GET** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**salvarUsingPOST**](RiscoFraudeApi.md#salvarUsingPOST) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+[**listarUsingGET1**](RiscoFraudeApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET14**](RiscoFraudeApi.md#listarUsingGET14) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+[**negarUsingPOST**](RiscoFraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**reconhecerUsingPOST**](RiscoFraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**salvarUsingPOST1**](RiscoFraudeApi.md#salvarUsingPOST1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
 # **consultarUsingGET**
@@ -25,11 +25,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
@@ -55,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -75,11 +70,6 @@ Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
@@ -105,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -125,11 +115,6 @@ Receber risco fraude
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $detalhado_responses = array(new RiscoFraudeDetalhadoResponse()); // \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse[] | detalhadoResponses
@@ -155,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -164,8 +149,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes listarUsingGET($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
+# **listarUsingGET1**
+> \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes listarUsingGET1($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
 
 Lista todos os atendimentos
 
@@ -176,11 +161,6 @@ Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimen
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
@@ -190,10 +170,10 @@ $nome_atendente = "nome_atendente_example"; // string | Apresenta o nome do Aten
 $data_atendimento = new \DateTime(); // \DateTime | Apresenta a data em que o Atendimento foi realizado.
 
 try { 
-    $result = $api_instance->listarUsingGET($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
+    $result = $api_instance->listarUsingGET1($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->listarUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->listarUsingGET1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -215,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -224,8 +204,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage listarUsingGET11($id_conta, $confirmacao_fraude, $page, $limit)
+# **listarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage listarUsingGET14($id_conta, $confirmacao_fraude, $page, $limit)
 
 Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 
@@ -236,11 +216,6 @@ Este recurso permite que sejam listados os riscos de fraudes existentes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id_conta = 789; // int | Id Conta
 $confirmacao_fraude = "confirmacao_fraude_example"; // string | Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
@@ -248,10 +223,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
 try { 
-    $result = $api_instance->listarUsingGET11($id_conta, $confirmacao_fraude, $page, $limit);
+    $result = $api_instance->listarUsingGET14($id_conta, $confirmacao_fraude, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->listarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->listarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -271,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -280,8 +255,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **negarUsingGET**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse negarUsingGET($id)
+# **negarUsingPOST**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse negarUsingPOST($id)
 
 Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -292,19 +267,14 @@ Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o class
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
 
 try { 
-    $result = $api_instance->negarUsingGET($id);
+    $result = $api_instance->negarUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->negarUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->negarUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -321,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -330,8 +300,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **reconhecerUsingGET**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse reconhecerUsingGET($id)
+# **reconhecerUsingPOST**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse reconhecerUsingPOST($id)
 
 Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -342,19 +312,14 @@ Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
-
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
 
 try { 
-    $result = $api_instance->reconhecerUsingGET($id);
+    $result = $api_instance->reconhecerUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->reconhecerUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->reconhecerUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -371,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -380,8 +345,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\AtendimentoCliente salvarUsingPOST($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude)
+# **salvarUsingPOST1**
+> \br.com.conductor.pier.api.v2.model\AtendimentoCliente salvarUsingPOST1($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude)
 
 Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
@@ -389,11 +354,6 @@ Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: access_token
-br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKey('access_token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
-// br.com.conductor.pier.api.v2.invoker\Configuration::getDefaultConfiguration()->setApiKeyPrefix('access_token', 'BEARER');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
@@ -407,10 +367,10 @@ $data_hora_fim_atendimento = new \DateTime(); // \DateTime | Apresenta a data e 
 $flag_fila_fraude = 56; // int | Flag fila fraude
 
 try { 
-    $result = $api_instance->salvarUsingPOST($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
+    $result = $api_instance->salvarUsingPOST1($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->salvarUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->salvarUsingPOST1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -435,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
