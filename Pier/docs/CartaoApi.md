@@ -265,7 +265,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarDadosCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse consultarDadosCartaoUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\DadosCartO consultarDadosCartaoUsingGET($id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+[**\br.com.conductor.pier.api.v2.model\DadosCartO**](DadosCartO.md)
 
 ### Authorization
 

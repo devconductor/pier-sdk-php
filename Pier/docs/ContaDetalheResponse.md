@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **limite_saque_global** | [**Number**](Number.md) | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. | 
 **saldo_disponivel_global** | [**Number**](Number.md) | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. | 
 **saldo_disponivel_saque** | [**Number**](Number.md) | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. | 
-**data_inicio_atraso** | [**\DateTime**](\DateTime.md) | Apresenta a data da ultima cobran\u00C3\u00A7a. | [optional] 
+**dias_atraso** | **int** | Apresenta a quantidade de dias que a conta esta em atraso | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

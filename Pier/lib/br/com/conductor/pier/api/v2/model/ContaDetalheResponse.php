@@ -76,7 +76,7 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'Number',
         'saldo_disponivel_global' => 'Number',
         'saldo_disponivel_saque' => 'Number',
-        'data_inicio_atraso' => '\DateTime'
+        'dias_atraso' => 'int'
     );
   
     static function swaggerTypes() {
@@ -113,7 +113,7 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'limiteSaqueGlobal',
         'saldo_disponivel_global' => 'saldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'saldoDisponivelSaque',
-        'data_inicio_atraso' => 'dataInicioAtraso'
+        'dias_atraso' => 'diasAtraso'
     );
   
     static function attributeMap() {
@@ -150,7 +150,7 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'setLimiteSaqueGlobal',
         'saldo_disponivel_global' => 'setSaldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'setSaldoDisponivelSaque',
-        'data_inicio_atraso' => 'setDataInicioAtraso'
+        'dias_atraso' => 'setDiasAtraso'
     );
   
     static function setters() {
@@ -187,7 +187,7 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'getLimiteSaqueGlobal',
         'saldo_disponivel_global' => 'getSaldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'getSaldoDisponivelSaque',
-        'data_inicio_atraso' => 'getDataInicioAtraso'
+        'dias_atraso' => 'getDiasAtraso'
     );
   
     static function getters() {
@@ -346,10 +346,10 @@ class ContaDetalheResponse implements ArrayAccess
     protected $saldo_disponivel_saque;
     
     /**
-      * $data_inicio_atraso Apresenta a data da ultima cobran\u00C3\u00A7a.
-      * @var \DateTime
+      * $dias_atraso Apresenta a quantidade de dias que a conta esta em atraso
+      * @var int
       */
-    protected $data_inicio_atraso;
+    protected $dias_atraso;
     
 
     /**
@@ -385,7 +385,7 @@ class ContaDetalheResponse implements ArrayAccess
             $this->limite_saque_global = $data["limite_saque_global"];
             $this->saldo_disponivel_global = $data["saldo_disponivel_global"];
             $this->saldo_disponivel_saque = $data["saldo_disponivel_saque"];
-            $this->data_inicio_atraso = $data["data_inicio_atraso"];
+            $this->dias_atraso = $data["dias_atraso"];
         }
     }
     
@@ -915,23 +915,23 @@ class ContaDetalheResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_inicio_atraso
-     * @return \DateTime
+     * Gets dias_atraso
+     * @return int
      */
-    public function getDataInicioAtraso()
+    public function getDiasAtraso()
     {
-        return $this->data_inicio_atraso;
+        return $this->dias_atraso;
     }
   
     /**
-     * Sets data_inicio_atraso
-     * @param \DateTime $data_inicio_atraso Apresenta a data da ultima cobran\u00C3\u00A7a.
+     * Sets dias_atraso
+     * @param int $dias_atraso Apresenta a quantidade de dias que a conta esta em atraso
      * @return $this
      */
-    public function setDataInicioAtraso($data_inicio_atraso)
+    public function setDiasAtraso($dias_atraso)
     {
         
-        $this->data_inicio_atraso = $data_inicio_atraso;
+        $this->dias_atraso = $dias_atraso;
         return $this;
     }
     

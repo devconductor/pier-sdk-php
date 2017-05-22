@@ -1747,7 +1747,7 @@ class CadastrosGeraisApi
      *
      * Lista as contas da pessoa
      *
-     * @param string $numero_receita_federal Id Conta (required)
+     * @param string $numero_receita_federal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageContasDetalhe
@@ -1765,7 +1765,7 @@ class CadastrosGeraisApi
      *
      * Lista as contas da pessoa
      *
-     * @param string $numero_receita_federal Id Conta (required)
+     * @param string $numero_receita_federal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContasDetalhe, HTTP status code, HTTP response headers (array of strings)

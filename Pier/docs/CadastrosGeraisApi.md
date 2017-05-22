@@ -813,7 +813,7 @@ Permite listar as contas de um pessoa a partir do seu numero na receita federal.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
-$numero_receita_federal = "numero_receita_federal_example"; // string | Id Conta
+$numero_receita_federal = "numero_receita_federal_example"; // string | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 
@@ -830,7 +830,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **numero_receita_federal** | **string**| Id Conta | 
+ **numero_receita_federal** | **string**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

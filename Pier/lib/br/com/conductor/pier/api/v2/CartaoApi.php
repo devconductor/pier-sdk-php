@@ -632,7 +632,7 @@ class CartaoApi
      * Consultar Detalhes do Cart\u00C3\u00A3o
      *
      * @param int $id id (required)
-     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
+     * @return \br.com.conductor.pier.api.v2.model\DadosCartO
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarDadosCartaoUsingGET($id)
@@ -648,7 +648,7 @@ class CartaoApi
      * Consultar Detalhes do Cart\u00C3\u00A3o
      *
      * @param int $id id (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DadosCartO, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarDadosCartaoUsingGETWithHttpInfo($id)
@@ -700,19 +700,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\DadosCartO'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DadosCartO', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DadosCartO', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
