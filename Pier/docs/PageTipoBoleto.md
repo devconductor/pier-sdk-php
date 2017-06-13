@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **object[]** |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v2.model\FaturaResponse[]**](FaturaResponse.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

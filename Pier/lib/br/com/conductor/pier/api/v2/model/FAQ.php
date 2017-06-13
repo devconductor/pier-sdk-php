@@ -52,7 +52,6 @@ class FAQ implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'id_emissor' => 'int',
         'pergunta' => 'string',
         'resposta' => 'string',
         'relevancia' => 'int',
@@ -71,7 +70,6 @@ class FAQ implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'id_emissor' => 'idEmissor',
         'pergunta' => 'pergunta',
         'resposta' => 'resposta',
         'relevancia' => 'relevancia',
@@ -90,7 +88,6 @@ class FAQ implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'id_emissor' => 'setIdEmissor',
         'pergunta' => 'setPergunta',
         'resposta' => 'setResposta',
         'relevancia' => 'setRelevancia',
@@ -109,7 +106,6 @@ class FAQ implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'id_emissor' => 'getIdEmissor',
         'pergunta' => 'getPergunta',
         'resposta' => 'getResposta',
         'relevancia' => 'getRelevancia',
@@ -128,12 +124,6 @@ class FAQ implements ArrayAccess
       * @var int
       */
     protected $id;
-    
-    /**
-      * $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-      * @var int
-      */
-    protected $id_emissor;
     
     /**
       * $pergunta Conte\u00C3\u00BAdo da pergunta.
@@ -181,7 +171,6 @@ class FAQ implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->id_emissor = $data["id_emissor"];
             $this->pergunta = $data["pergunta"];
             $this->resposta = $data["resposta"];
             $this->relevancia = $data["relevancia"];
@@ -209,27 +198,6 @@ class FAQ implements ArrayAccess
     {
         
         $this->id = $id;
-        return $this;
-    }
-    
-    /**
-     * Gets id_emissor
-     * @return int
-     */
-    public function getIdEmissor()
-    {
-        return $this->id_emissor;
-    }
-  
-    /**
-     * Sets id_emissor
-     * @param int $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-     * @return $this
-     */
-    public function setIdEmissor($id_emissor)
-    {
-        
-        $this->id_emissor = $id_emissor;
         return $this;
     }
     

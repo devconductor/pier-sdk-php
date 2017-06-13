@@ -56,7 +56,7 @@ class NotificacaoSMSBody implements ArrayAccess
         'id_conta' => 'int',
         'celular' => 'string',
         'conteudo' => 'string',
-        'data_agendamento' => '\DateTime',
+        'data_agendamento' => 'string',
         'tipo_evento' => 'string'
     );
   
@@ -151,7 +151,7 @@ class NotificacaoSMSBody implements ArrayAccess
     
     /**
       * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
-      * @var \DateTime
+      * @var string
       */
     protected $data_agendamento;
     
@@ -287,7 +287,7 @@ class NotificacaoSMSBody implements ArrayAccess
     
     /**
      * Gets data_agendamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataAgendamento()
     {
@@ -296,7 +296,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param \DateTime $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)

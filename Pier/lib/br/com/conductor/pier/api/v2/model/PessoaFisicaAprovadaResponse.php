@@ -54,13 +54,13 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'id' => 'int',
         'nome' => 'string',
         'nome_mae' => 'string',
-        'data_nascimento' => '\DateTime',
+        'data_nascimento' => 'string',
         'sexo' => 'string',
         'cpf' => 'string',
         'numero_identidade' => 'string',
         'orgao_expedidor_identidade' => 'string',
         'unidade_federativa_identidade' => 'string',
-        'data_emissao_identidade' => '\DateTime',
+        'data_emissao_identidade' => 'string',
         'id_estado_civil' => 'int',
         'profissao' => 'string',
         'id_natureza_ocupacao' => 'int',
@@ -207,7 +207,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     
     /**
       * $data_nascimento Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
-      * @var \DateTime
+      * @var string
       */
     protected $data_nascimento;
     
@@ -243,7 +243,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     
     /**
       * $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
-      * @var \DateTime
+      * @var string
       */
     protected $data_emissao_identidade;
     
@@ -432,7 +432,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     
     /**
      * Gets data_nascimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataNascimento()
     {
@@ -441,7 +441,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
+     * @param string $data_nascimento Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -558,7 +558,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     
     /**
      * Gets data_emissao_identidade
-     * @return \DateTime
+     * @return string
      */
     public function getDataEmissaoIdentidade()
     {
@@ -567,7 +567,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param \DateTime $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
+     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)

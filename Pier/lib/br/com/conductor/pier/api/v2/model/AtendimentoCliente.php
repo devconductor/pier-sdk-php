@@ -59,11 +59,11 @@ class AtendimentoCliente implements ArrayAccess
         'detalhes_atendimento' => 'string',
         'nome_atendente' => 'string',
         'nome_sistema' => 'string',
-        'data_hora_inicio_atendimento' => '\DateTime',
-        'data_hora_fim_atendimento' => '\DateTime',
-        'data_atendimento' => '\DateTime',
-        'data_agendamento' => '\DateTime',
-        'data_processamento' => '\DateTime',
+        'data_hora_inicio_atendimento' => 'string',
+        'data_hora_fim_atendimento' => 'string',
+        'data_atendimento' => 'string',
+        'data_agendamento' => 'string',
+        'data_processamento' => 'string',
         'flag_processamento' => 'int'
     );
   
@@ -197,31 +197,31 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
       * $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_inicio_atendimento;
     
     /**
       * $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_fim_atendimento;
     
     /**
       * $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado.
-      * @var \DateTime
+      * @var string
       */
     protected $data_atendimento;
     
     /**
       * $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
-      * @var \DateTime
+      * @var string
       */
     protected $data_agendamento;
     
     /**
       * $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
-      * @var \DateTime
+      * @var string
       */
     protected $data_processamento;
     
@@ -427,7 +427,7 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
      * Gets data_hora_inicio_atendimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraInicioAtendimento()
     {
@@ -436,7 +436,7 @@ class AtendimentoCliente implements ArrayAccess
   
     /**
      * Sets data_hora_inicio_atendimento
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+     * @param string $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
      * @return $this
      */
     public function setDataHoraInicioAtendimento($data_hora_inicio_atendimento)
@@ -448,7 +448,7 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
      * Gets data_hora_fim_atendimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraFimAtendimento()
     {
@@ -457,7 +457,7 @@ class AtendimentoCliente implements ArrayAccess
   
     /**
      * Sets data_hora_fim_atendimento
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+     * @param string $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
      * @return $this
      */
     public function setDataHoraFimAtendimento($data_hora_fim_atendimento)
@@ -469,7 +469,7 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
      * Gets data_atendimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataAtendimento()
     {
@@ -478,7 +478,7 @@ class AtendimentoCliente implements ArrayAccess
   
     /**
      * Sets data_atendimento
-     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado.
+     * @param string $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado.
      * @return $this
      */
     public function setDataAtendimento($data_atendimento)
@@ -490,7 +490,7 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
      * Gets data_agendamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataAgendamento()
     {
@@ -499,7 +499,7 @@ class AtendimentoCliente implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
+     * @param string $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -511,7 +511,7 @@ class AtendimentoCliente implements ArrayAccess
     
     /**
      * Gets data_processamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataProcessamento()
     {
@@ -520,7 +520,7 @@ class AtendimentoCliente implements ArrayAccess
   
     /**
      * Sets data_processamento
-     * @param \DateTime $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+     * @param string $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
      * @return $this
      */
     public function setDataProcessamento($data_processamento)

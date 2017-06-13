@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET23**](WebhooksApi.md#consultarUsingGET23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET25**](WebhooksApi.md#listarUsingGET25) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST13**](WebhooksApi.md#salvarUsingPOST13) | **POST** /api/webhooks | Salvar Webhook
+[**consultarUsingGET26**](WebhooksApi.md#consultarUsingGET26) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET30**](WebhooksApi.md#listarUsingGET30) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST14**](WebhooksApi.md#salvarUsingPOST14) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT10**
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET23($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET26($id)
 
 Consultar Webhook
 
@@ -75,10 +75,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET23($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->consultarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET25($page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET30**
+> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET30($page, $limit, $id, $tipo_evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -118,17 +118,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhooksApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | Id do WebHook
 $tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo WebHook
 $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo WebHook
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET25($page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET30($page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->listarUsingGET30: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -138,7 +138,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| Id do WebHook | [optional] 
  **tipo_evento** | **string**| TipoEvento a ser chamado pelo WebHook | [optional] 
  **metodo** | **string**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
@@ -159,8 +159,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST13**
-> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST13($tipo_evento, $url)
+# **salvarUsingPOST14**
+> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST14($tipo_evento, $url)
 
 Salvar Webhook
 
@@ -176,10 +176,10 @@ $tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo 
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->salvarUsingPOST13($tipo_evento, $url);
+    $result = $api_instance->salvarUsingPOST14($tipo_evento, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->salvarUsingPOST14: ', $e->getMessage(), "\n";
 }
 ?>
 ```

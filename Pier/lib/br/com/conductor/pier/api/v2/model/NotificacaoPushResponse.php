@@ -51,7 +51,7 @@ class NotificacaoPushResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_envio' => '\DateTime',
+        'data_envio' => 'string',
         'id_emissor' => 'int',
         'tipo_evento' => 'string',
         'status' => 'string',
@@ -137,7 +137,7 @@ class NotificacaoPushResponse implements ArrayAccess
     
     /**
       * $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
-      * @var \DateTime
+      * @var string
       */
     protected $data_envio;
     
@@ -226,7 +226,7 @@ class NotificacaoPushResponse implements ArrayAccess
     
     /**
      * Gets data_envio
-     * @return \DateTime
+     * @return string
      */
     public function getDataEnvio()
     {
@@ -235,7 +235,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets data_envio
-     * @param \DateTime $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
+     * @param string $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo.
      * @return $this
      */
     public function setDataEnvio($data_envio)

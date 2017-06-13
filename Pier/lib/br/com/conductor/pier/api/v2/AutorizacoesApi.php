@@ -92,9 +92,100 @@ class AutorizacoesApi
   
     
     /**
+     * autorizarUsingPOST
+     *
+     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     *
+     * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
+     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function autorizarUsingPOST($autorizacao_on_us_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->autorizarUsingPOSTWithHttpInfo ($autorizacao_on_us_request);
+        return $response; 
+    }
+
+
+    /**
+     * autorizarUsingPOSTWithHttpInfo
+     *
+     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     *
+     * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function autorizarUsingPOSTWithHttpInfo($autorizacao_on_us_request)
+    {
+        
+        // verify the required parameter 'autorizacao_on_us_request' is set
+        if ($autorizacao_on_us_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $autorizacao_on_us_request when calling autorizarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/autorizar-transacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($autorizacao_on_us_request)) {
+            $_tempBody = $autorizacao_on_us_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * cancelarUsingPOST
      *
-     * Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest $cancelamento_request cancelamentoRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -110,7 +201,7 @@ class AutorizacoesApi
     /**
      * cancelarUsingPOSTWithHttpInfo
      *
-     * Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest $cancelamento_request cancelamentoRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
@@ -183,40 +274,34 @@ class AutorizacoesApi
     }
     
     /**
-     * desfazerUsingPOST
+     * listarCodigosProcessamentoAutorizacaoUsingGET
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
      *
-     * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
-     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
+     * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desfazerUsingPOST($autorizacao_on_us_request)
+    public function listarCodigosProcessamentoAutorizacaoUsingGET()
     {
-        list($response, $statusCode, $httpHeader) = $this->desfazerUsingPOSTWithHttpInfo ($autorizacao_on_us_request);
+        list($response, $statusCode, $httpHeader) = $this->listarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ();
         return $response; 
     }
 
 
     /**
-     * desfazerUsingPOSTWithHttpInfo
+     * listarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
      *
-     * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desfazerUsingPOSTWithHttpInfo($autorizacao_on_us_request)
+    public function listarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo()
     {
         
-        // verify the required parameter 'autorizacao_on_us_request' is set
-        if ($autorizacao_on_us_request === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $autorizacao_on_us_request when calling desfazerUsingPOST');
-        }
   
         // parse inputs
-        $resourcePath = "/api/autorizar-transacao";
+        $resourcePath = "/api/consultar-codigos-processamento-autorizacao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -234,11 +319,7 @@ class AutorizacoesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        // body params
-        $_tempBody = null;
-        if (isset($autorizacao_on_us_request)) {
-            $_tempBody = $autorizacao_on_us_request;
-        }
+        
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -250,112 +331,21 @@ class AutorizacoesApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
+                $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
+                $headerParams, 'object[]'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object[]', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * desfazerUsingPOST1
-     *
-     * Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-     *
-     * @param \br.com.conductor.pier.api.v2.model\DesfazimentoTransacaoOnURequest $desfazimento_request desfazimentoRequest (required)
-     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function desfazerUsingPOST1($desfazimento_request)
-    {
-        list($response, $statusCode, $httpHeader) = $this->desfazerUsingPOST1WithHttpInfo ($desfazimento_request);
-        return $response; 
-    }
-
-
-    /**
-     * desfazerUsingPOST1WithHttpInfo
-     *
-     * Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-     *
-     * @param \br.com.conductor.pier.api.v2.model\DesfazimentoTransacaoOnURequest $desfazimento_request desfazimentoRequest (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function desfazerUsingPOST1WithHttpInfo($desfazimento_request)
-    {
-        
-        // verify the required parameter 'desfazimento_request' is set
-        if ($desfazimento_request === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $desfazimento_request when calling desfazerUsingPOST1');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/desfazer-transacao";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($desfazimento_request)) {
-            $_tempBody = $desfazimento_request;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object[]', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -367,7 +357,7 @@ class AutorizacoesApi
     /**
      * simularUsingPOST
      *
-     * Simula Compra Parcelada
+     * Simula planos de pagamento
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -383,7 +373,7 @@ class AutorizacoesApi
     /**
      * simularUsingPOSTWithHttpInfo
      *
-     * Simula Compra Parcelada
+     * Simula planos de pagamento
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)

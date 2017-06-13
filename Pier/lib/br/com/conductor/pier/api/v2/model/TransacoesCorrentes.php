@@ -59,22 +59,24 @@ class TransacoesCorrentes implements ArrayAccess
         'id_conta' => 'int',
         'cartao_mascarado' => 'string',
         'nome_portador' => 'string',
-        'data_transacao_utc' => '\DateTime',
-        'data_faturamento' => '\DateTime',
-        'data_vencimento' => '\DateTime',
+        'data_transacao_utc' => 'string',
+        'data_faturamento' => 'string',
+        'data_vencimento' => 'string',
         'modo_entrada_transacao' => 'string',
         'valor_taxa_embarque' => 'Number',
         'valor_entrada' => 'Number',
         'valor_brl' => 'Number',
         'valor_usd' => 'Number',
         'cotacao_usd' => 'Number',
-        'data_cotacao_usd' => '\DateTime',
+        'data_cotacao_usd' => 'string',
         'codigo_moeda_origem' => 'string',
         'codigo_moeda_destino' => 'string',
         'codigo_autorizacao' => 'string',
         'codigo_referencia' => 'string',
         'codigo_terminal' => 'string',
         'codigo_mcc' => 'int',
+        'grupo_mcc' => 'int',
+        'grupo_descricao_mcc' => 'string',
         'id_estabelecimento' => 'int',
         'nome_estabelecimento' => 'string',
         'localidade_estabelecimento' => 'string',
@@ -120,6 +122,8 @@ class TransacoesCorrentes implements ArrayAccess
         'codigo_referencia' => 'codigoReferencia',
         'codigo_terminal' => 'codigoTerminal',
         'codigo_mcc' => 'codigoMCC',
+        'grupo_mcc' => 'grupoMCC',
+        'grupo_descricao_mcc' => 'grupoDescricaoMCC',
         'id_estabelecimento' => 'idEstabelecimento',
         'nome_estabelecimento' => 'nomeEstabelecimento',
         'localidade_estabelecimento' => 'localidadeEstabelecimento',
@@ -165,6 +169,8 @@ class TransacoesCorrentes implements ArrayAccess
         'codigo_referencia' => 'setCodigoReferencia',
         'codigo_terminal' => 'setCodigoTerminal',
         'codigo_mcc' => 'setCodigoMcc',
+        'grupo_mcc' => 'setGrupoMcc',
+        'grupo_descricao_mcc' => 'setGrupoDescricaoMcc',
         'id_estabelecimento' => 'setIdEstabelecimento',
         'nome_estabelecimento' => 'setNomeEstabelecimento',
         'localidade_estabelecimento' => 'setLocalidadeEstabelecimento',
@@ -210,6 +216,8 @@ class TransacoesCorrentes implements ArrayAccess
         'codigo_referencia' => 'getCodigoReferencia',
         'codigo_terminal' => 'getCodigoTerminal',
         'codigo_mcc' => 'getCodigoMcc',
+        'grupo_mcc' => 'getGrupoMcc',
+        'grupo_descricao_mcc' => 'getGrupoDescricaoMcc',
         'id_estabelecimento' => 'getIdEstabelecimento',
         'nome_estabelecimento' => 'getNomeEstabelecimento',
         'localidade_estabelecimento' => 'getLocalidadeEstabelecimento',
@@ -277,19 +285,19 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
       * $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-      * @var \DateTime
+      * @var string
       */
     protected $data_transacao_utc;
     
     /**
       * $data_faturamento Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
-      * @var \DateTime
+      * @var string
       */
     protected $data_faturamento;
     
     /**
       * $data_vencimento Data de Vencimento da Fatura.
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento;
     
@@ -331,7 +339,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
       * $data_cotacao_usd Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
-      * @var \DateTime
+      * @var string
       */
     protected $data_cotacao_usd;
     
@@ -370,6 +378,18 @@ class TransacoesCorrentes implements ArrayAccess
       * @var int
       */
     protected $codigo_mcc;
+    
+    /**
+      * $grupo_mcc C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+      * @var int
+      */
+    protected $grupo_mcc;
+    
+    /**
+      * $grupo_descricao_mcc Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+      * @var string
+      */
+    protected $grupo_descricao_mcc;
     
     /**
       * $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
@@ -464,6 +484,8 @@ class TransacoesCorrentes implements ArrayAccess
             $this->codigo_referencia = $data["codigo_referencia"];
             $this->codigo_terminal = $data["codigo_terminal"];
             $this->codigo_mcc = $data["codigo_mcc"];
+            $this->grupo_mcc = $data["grupo_mcc"];
+            $this->grupo_descricao_mcc = $data["grupo_descricao_mcc"];
             $this->id_estabelecimento = $data["id_estabelecimento"];
             $this->nome_estabelecimento = $data["nome_estabelecimento"];
             $this->localidade_estabelecimento = $data["localidade_estabelecimento"];
@@ -647,7 +669,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_transacao_utc
-     * @return \DateTime
+     * @return string
      */
     public function getDataTransacaoUtc()
     {
@@ -656,7 +678,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_transacao_utc
-     * @param \DateTime $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+     * @param string $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
      * @return $this
      */
     public function setDataTransacaoUtc($data_transacao_utc)
@@ -668,7 +690,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_faturamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataFaturamento()
     {
@@ -677,7 +699,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_faturamento
-     * @param \DateTime $data_faturamento Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $data_faturamento Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
      * @return $this
      */
     public function setDataFaturamento($data_faturamento)
@@ -689,7 +711,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_vencimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimento()
     {
@@ -698,7 +720,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param \DateTime $data_vencimento Data de Vencimento da Fatura.
+     * @param string $data_vencimento Data de Vencimento da Fatura.
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -836,7 +858,7 @@ class TransacoesCorrentes implements ArrayAccess
     
     /**
      * Gets data_cotacao_usd
-     * @return \DateTime
+     * @return string
      */
     public function getDataCotacaoUsd()
     {
@@ -845,7 +867,7 @@ class TransacoesCorrentes implements ArrayAccess
   
     /**
      * Sets data_cotacao_usd
-     * @param \DateTime $data_cotacao_usd Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
+     * @param string $data_cotacao_usd Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
      * @return $this
      */
     public function setDataCotacaoUsd($data_cotacao_usd)
@@ -978,6 +1000,48 @@ class TransacoesCorrentes implements ArrayAccess
     {
         
         $this->codigo_mcc = $codigo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets grupo_mcc
+     * @return int
+     */
+    public function getGrupoMcc()
+    {
+        return $this->grupo_mcc;
+    }
+  
+    /**
+     * Sets grupo_mcc
+     * @param int $grupo_mcc C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+     * @return $this
+     */
+    public function setGrupoMcc($grupo_mcc)
+    {
+        
+        $this->grupo_mcc = $grupo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets grupo_descricao_mcc
+     * @return string
+     */
+    public function getGrupoDescricaoMcc()
+    {
+        return $this->grupo_descricao_mcc;
+    }
+  
+    /**
+     * Sets grupo_descricao_mcc
+     * @param string $grupo_descricao_mcc Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+     * @return $this
+     */
+    public function setGrupoDescricaoMcc($grupo_descricao_mcc)
+    {
+        
+        $this->grupo_descricao_mcc = $grupo_descricao_mcc;
         return $this;
     }
     

@@ -627,7 +627,7 @@ class CartaoApi
     }
     
     /**
-     * consultarDadosCartaoUsingGET
+     * consultarDadosReaisCartaoUsingGET
      *
      * Consultar Detalhes do Cart\u00C3\u00A3o
      *
@@ -635,15 +635,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\DadosCartO
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDadosCartaoUsingGET($id)
+    public function consultarDadosReaisCartaoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarDadosCartaoUsingGETWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarDadosReaisCartaoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarDadosCartaoUsingGETWithHttpInfo
+     * consultarDadosReaisCartaoUsingGETWithHttpInfo
      *
      * Consultar Detalhes do Cart\u00C3\u00A3o
      *
@@ -651,12 +651,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DadosCartO, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDadosCartaoUsingGETWithHttpInfo($id)
+    public function consultarDadosReaisCartaoUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarDadosCartaoUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarDadosReaisCartaoUsingGET');
         }
   
         // parse inputs
@@ -1007,36 +1007,36 @@ class CartaoApi
     }
     
     /**
-     * consultarUsingGET2
+     * consultarUsingGET3
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\Cartao
+     * @return \br.com.conductor.pier.api.v2.model\CartaoDetalhado
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET2($id)
+    public function consultarUsingGET3($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET3WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET2WithHttpInfo
+     * consultarUsingGET3WithHttpInfo
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\Cartao, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalhado, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET2WithHttpInfo($id)
+    public function consultarUsingGET3WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET3');
         }
   
         // parse inputs
@@ -1080,19 +1080,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\Cartao'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoDetalhado'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\Cartao', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoDetalhado', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\Cartao', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoDetalhado', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1509,14 +1509,14 @@ class CartaoApi
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
      * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
      * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
      * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
-     * @param \DateTime $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param string $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
      * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
      * @param int $status_processamento Indica o Status de Processamento do Lote. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse
@@ -1535,14 +1535,14 @@ class CartaoApi
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)
      * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
      * @param int $id_tipo_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_imagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)
      * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
      * @param int $quantidade_cartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)
-     * @param \DateTime $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
+     * @param string $data_cadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)
      * @param string $usuario_cadastro Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)
      * @param int $status_processamento Indica o Status de Processamento do Lote. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1651,12 +1651,12 @@ class CartaoApi
     }
     
     /**
-     * listarUsingGET3
+     * listarUsingGET4
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
@@ -1665,11 +1665,11 @@ class CartaoApi
      * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
      * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
-     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param string $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
      * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)
-     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
+     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
@@ -1678,20 +1678,20 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartoes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET4($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET3WithHttpInfo
+     * listarUsingGET4WithHttpInfo
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_estagio_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)
@@ -1700,11 +1700,11 @@ class CartaoApi
      * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)
      * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)
      * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)
-     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
-     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param string $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
+     * @param string $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)
      * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)
-     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
+     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)
      * @param string $arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)
      * @param int $flag_impressao_origem_comercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)
      * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)
@@ -1713,7 +1713,7 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartoes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3WithHttpInfo($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET4WithHttpInfo($page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
         
   

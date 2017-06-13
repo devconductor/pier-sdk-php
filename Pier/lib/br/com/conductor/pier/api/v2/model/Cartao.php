@@ -60,14 +60,14 @@ class Cartao implements ArrayAccess
         'tipo_portador' => 'string',
         'numero_cartao' => 'string',
         'nome_impresso' => 'string',
-        'data_geracao' => '\DateTime',
-        'data_status_cartao' => '\DateTime',
-        'data_estagio_cartao' => '\DateTime',
-        'data_validade' => '\DateTime',
-        'data_impressao' => '\DateTime',
+        'data_geracao' => 'string',
+        'data_status_cartao' => 'string',
+        'data_estagio_cartao' => 'string',
+        'data_validade' => 'string',
+        'data_impressao' => 'string',
         'arquivo_impressao' => 'string',
         'flag_impressao_origem_comercial' => 'int',
-        'flag_provisorio' => 'int',
+        'flag_virtual' => 'int',
         'codigo_desbloqueio' => 'string',
         'sequencial_cartao' => 'int'
     );
@@ -97,7 +97,7 @@ class Cartao implements ArrayAccess
         'data_impressao' => 'dataImpressao',
         'arquivo_impressao' => 'arquivoImpressao',
         'flag_impressao_origem_comercial' => 'flagImpressaoOrigemComercial',
-        'flag_provisorio' => 'flagProvisorio',
+        'flag_virtual' => 'flagVirtual',
         'codigo_desbloqueio' => 'codigoDesbloqueio',
         'sequencial_cartao' => 'sequencialCartao'
     );
@@ -127,7 +127,7 @@ class Cartao implements ArrayAccess
         'data_impressao' => 'setDataImpressao',
         'arquivo_impressao' => 'setArquivoImpressao',
         'flag_impressao_origem_comercial' => 'setFlagImpressaoOrigemComercial',
-        'flag_provisorio' => 'setFlagProvisorio',
+        'flag_virtual' => 'setFlagVirtual',
         'codigo_desbloqueio' => 'setCodigoDesbloqueio',
         'sequencial_cartao' => 'setSequencialCartao'
     );
@@ -157,7 +157,7 @@ class Cartao implements ArrayAccess
         'data_impressao' => 'getDataImpressao',
         'arquivo_impressao' => 'getArquivoImpressao',
         'flag_impressao_origem_comercial' => 'getFlagImpressaoOrigemComercial',
-        'flag_provisorio' => 'getFlagProvisorio',
+        'flag_virtual' => 'getFlagVirtual',
         'codigo_desbloqueio' => 'getCodigoDesbloqueio',
         'sequencial_cartao' => 'getSequencialCartao'
     );
@@ -223,31 +223,31 @@ class Cartao implements ArrayAccess
     
     /**
       * $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-      * @var \DateTime
+      * @var string
       */
     protected $data_geracao;
     
     /**
       * $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-      * @var \DateTime
+      * @var string
       */
     protected $data_status_cartao;
     
     /**
       * $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-      * @var \DateTime
+      * @var string
       */
     protected $data_estagio_cartao;
     
     /**
       * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
-      * @var \DateTime
+      * @var string
       */
     protected $data_validade;
     
     /**
       * $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-      * @var \DateTime
+      * @var string
       */
     protected $data_impressao;
     
@@ -264,10 +264,10 @@ class Cartao implements ArrayAccess
     protected $flag_impressao_origem_comercial;
     
     /**
-      * $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+      * $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
       * @var int
       */
-    protected $flag_provisorio;
+    protected $flag_virtual;
     
     /**
       * $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
@@ -306,7 +306,7 @@ class Cartao implements ArrayAccess
             $this->data_impressao = $data["data_impressao"];
             $this->arquivo_impressao = $data["arquivo_impressao"];
             $this->flag_impressao_origem_comercial = $data["flag_impressao_origem_comercial"];
-            $this->flag_provisorio = $data["flag_provisorio"];
+            $this->flag_virtual = $data["flag_virtual"];
             $this->codigo_desbloqueio = $data["codigo_desbloqueio"];
             $this->sequencial_cartao = $data["sequencial_cartao"];
         }
@@ -503,7 +503,7 @@ class Cartao implements ArrayAccess
     
     /**
      * Gets data_geracao
-     * @return \DateTime
+     * @return string
      */
     public function getDataGeracao()
     {
@@ -512,7 +512,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param \DateTime $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param string $data_geracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -524,7 +524,7 @@ class Cartao implements ArrayAccess
     
     /**
      * Gets data_status_cartao
-     * @return \DateTime
+     * @return string
      */
     public function getDataStatusCartao()
     {
@@ -533,7 +533,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_status_cartao
-     * @param \DateTime $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_status_cartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataStatusCartao($data_status_cartao)
@@ -545,7 +545,7 @@ class Cartao implements ArrayAccess
     
     /**
      * Gets data_estagio_cartao
-     * @return \DateTime
+     * @return string
      */
     public function getDataEstagioCartao()
     {
@@ -554,7 +554,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_estagio_cartao
-     * @param \DateTime $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_estagio_cartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataEstagioCartao($data_estagio_cartao)
@@ -566,7 +566,7 @@ class Cartao implements ArrayAccess
     
     /**
      * Gets data_validade
-     * @return \DateTime
+     * @return string
      */
     public function getDataValidade()
     {
@@ -575,7 +575,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \DateTime $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
+     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -587,7 +587,7 @@ class Cartao implements ArrayAccess
     
     /**
      * Gets data_impressao
-     * @return \DateTime
+     * @return string
      */
     public function getDataImpressao()
     {
@@ -596,7 +596,7 @@ class Cartao implements ArrayAccess
   
     /**
      * Sets data_impressao
-     * @param \DateTime $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
      * @return $this
      */
     public function setDataImpressao($data_impressao)
@@ -649,23 +649,23 @@ class Cartao implements ArrayAccess
     }
     
     /**
-     * Gets flag_provisorio
+     * Gets flag_virtual
      * @return int
      */
-    public function getFlagProvisorio()
+    public function getFlagVirtual()
     {
-        return $this->flag_provisorio;
+        return $this->flag_virtual;
     }
   
     /**
-     * Sets flag_provisorio
-     * @param int $flag_provisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+     * Sets flag_virtual
+     * @param int $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
      * @return $this
      */
-    public function setFlagProvisorio($flag_provisorio)
+    public function setFlagVirtual($flag_virtual)
     {
         
-        $this->flag_provisorio = $flag_provisorio;
+        $this->flag_virtual = $flag_virtual;
         return $this;
     }
     

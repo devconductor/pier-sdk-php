@@ -407,7 +407,7 @@ class UsuariosApi
     }
     
     /**
-     * consultarUsingGET22
+     * consultarUsingGET25
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
      *
@@ -415,15 +415,15 @@ class UsuariosApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22($id)
+    public function consultarUsingGET25($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET22WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
      *
@@ -431,12 +431,12 @@ class UsuariosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22WithHttpInfo($id)
+    public function consultarUsingGET25WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -597,12 +597,12 @@ class UsuariosApi
     }
     
     /**
-     * listarUsingGET24
+     * listarUsingGET29
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -610,20 +610,20 @@ class UsuariosApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarios
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET24($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET29($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET24WithHttpInfo ($page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET24WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -631,7 +631,7 @@ class UsuariosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarios, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET24WithHttpInfo($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET29WithHttpInfo($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   
@@ -809,7 +809,7 @@ class UsuariosApi
     }
     
     /**
-     * salvarUsingPOST12
+     * salvarUsingPOST13
      *
      * Cadastra Usu\u00C3\u00A1rio
      *
@@ -817,15 +817,15 @@ class UsuariosApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST12($persist)
+    public function salvarUsingPOST13($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST12WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST13WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST12WithHttpInfo
+     * salvarUsingPOST13WithHttpInfo
      *
      * Cadastra Usu\u00C3\u00A1rio
      *
@@ -833,12 +833,12 @@ class UsuariosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST12WithHttpInfo($persist)
+    public function salvarUsingPOST13WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST12');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST13');
         }
   
         // parse inputs

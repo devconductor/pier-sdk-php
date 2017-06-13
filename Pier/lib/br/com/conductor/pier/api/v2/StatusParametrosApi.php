@@ -282,7 +282,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET11
+     * consultarUsingGET13
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -290,15 +290,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusConta
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11($id)
+    public function consultarUsingGET13($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET11WithHttpInfo
+     * consultarUsingGET13WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -306,12 +306,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusConta, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11WithHttpInfo($id)
+    public function consultarUsingGET13WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
         }
   
         // parse inputs
@@ -377,7 +377,7 @@ class StatusParametrosApi
     }
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET14
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -385,15 +385,15 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET14($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET14WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -401,12 +401,12 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET14WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET14');
         }
   
         // parse inputs
@@ -477,7 +477,7 @@ class StatusParametrosApi
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageEstagiosCartoes
@@ -496,7 +496,7 @@ class StatusParametrosApi
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstagiosCartoes, HTTP status code, HTTP response headers (array of strings)
@@ -582,7 +582,7 @@ class StatusParametrosApi
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
      * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
@@ -607,7 +607,7 @@ class StatusParametrosApi
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
      * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
@@ -718,12 +718,12 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET15
+     * listarUsingGET19
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
@@ -732,20 +732,20 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContas
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET19($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET19WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
      * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
@@ -754,7 +754,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContas, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
+    public function listarUsingGET19WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null)
     {
         
   
@@ -841,37 +841,37 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET16
+     * listarUsingGET20
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressao
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET20($page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET16WithHttpInfo
+     * listarUsingGET20WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
      * @param string $nome Nome do status impress\u00C3\u00A3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressao, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET20WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
     {
         
   

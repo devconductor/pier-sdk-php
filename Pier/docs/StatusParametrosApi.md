@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametrosApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametrosApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET11**](StatusParametrosApi.md#consultarUsingGET11) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET12**](StatusParametrosApi.md#consultarUsingGET12) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET13**](StatusParametrosApi.md#consultarUsingGET13) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametrosApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametrosApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listarUsingGET15**](StatusParametrosApi.md#listarUsingGET15) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET16**](StatusParametrosApi.md#listarUsingGET16) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET19**](StatusParametrosApi.md#listarUsingGET19) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET20**](StatusParametrosApi.md#listarUsingGET20) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultarEstagioCartaoUsingGET**
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\StatusConta consultarUsingGET11($id)
+# **consultarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\StatusConta consultarUsingGET13($id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -120,10 +120,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET11($id);
+    $result = $api_instance->consultarUsingGET13($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->consultarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->consultarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -149,8 +149,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\StatusImpressao consultarUsingGET12($id)
+# **consultarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\StatusImpressao consultarUsingGET14($id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -165,10 +165,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET14($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->consultarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -208,7 +208,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
 
@@ -226,7 +226,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
  **nome** | **string**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
 
@@ -259,7 +259,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
 $flag_cancela_cartao = 56; // int | Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -283,7 +283,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  | [optional] 
  **nome** | **string**| Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. | [optional] 
  **flag_cancela_cartao** | **int**| Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. | [optional] 
@@ -308,8 +308,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET15($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao)
+# **listarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\PageStatusContas listarUsingGET19($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -322,7 +322,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 $nome = "nome_example"; // string | Nome atribu\u00C3\u00ADdo ao Status da Conta.
 $flag_altera_limite = 56; // int | Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
@@ -330,10 +330,10 @@ $mensagem_consulta_negada = "mensagem_consulta_negada_example"; // string | Apre
 $flag_permite_nova_via_cartao = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET15($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
+    $result = $api_instance->listarUsingGET19($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->listarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -343,7 +343,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). | [optional] 
  **nome** | **string**| Nome atribu\u00C3\u00ADdo ao Status da Conta. | [optional] 
  **flag_altera_limite** | **int**| Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. | [optional] 
@@ -365,8 +365,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PageStatusImpressao listarUsingGET16($page, $limit, $id, $nome)
+# **listarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\PageStatusImpressao listarUsingGET20($page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -379,15 +379,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do status impress\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET16($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET20($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->listarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -397,7 +397,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
  **nome** | **string**| Nome do status impress\u00C3\u00A3o | [optional] 
 

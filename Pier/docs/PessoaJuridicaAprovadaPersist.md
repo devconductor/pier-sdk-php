@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **nome_fantasia** | **string** | Apresenta o nome fantasia da empresa. | [optional] 
 **cnpj** | **string** | N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ) | 
 **inscricao_estadual** | **string** | N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE). | [optional] 
-**data_abertura_empresa** | [**\DateTime**](Date.md) | Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd. | 
+**data_abertura_empresa** | **string** | Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd. | 
 **id_origem_comercial** | **int** | Id da origem comercial | 
 **id_produto** | **int** | Id do produto | 
 **numero_agencia** | **int** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 

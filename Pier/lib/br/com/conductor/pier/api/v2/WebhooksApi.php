@@ -207,7 +207,7 @@ class WebhooksApi
     }
     
     /**
-     * consultarUsingGET23
+     * consultarUsingGET26
      *
      * Consultar Webhook
      *
@@ -215,15 +215,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET23WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -231,12 +231,12 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs
@@ -302,12 +302,12 @@ class WebhooksApi
     }
     
     /**
-     * listarUsingGET25
+     * listarUsingGET30
      *
      * Lista os Webhooks
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do WebHook (optional)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
@@ -315,20 +315,20 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET30($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET25WithHttpInfo
+     * listarUsingGET30WithHttpInfo
      *
      * Lista os Webhooks
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do WebHook (optional)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
@@ -336,7 +336,7 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25WithHttpInfo($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET30WithHttpInfo($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   
@@ -419,7 +419,7 @@ class WebhooksApi
     }
     
     /**
-     * salvarUsingPOST13
+     * salvarUsingPOST14
      *
      * Salvar Webhook
      *
@@ -428,15 +428,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHook
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13($tipo_evento, $url)
+    public function salvarUsingPOST14($tipo_evento, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST13WithHttpInfo ($tipo_evento, $url);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($tipo_evento, $url);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST13WithHttpInfo
+     * salvarUsingPOST14WithHttpInfo
      *
      * Salvar Webhook
      *
@@ -445,16 +445,16 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13WithHttpInfo($tipo_evento, $url)
+    public function salvarUsingPOST14WithHttpInfo($tipo_evento, $url)
     {
         
         // verify the required parameter 'tipo_evento' is set
         if ($tipo_evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling salvarUsingPOST13');
+            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling salvarUsingPOST14');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST13');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST14');
         }
   
         // parse inputs

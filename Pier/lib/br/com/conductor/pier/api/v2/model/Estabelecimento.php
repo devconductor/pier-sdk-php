@@ -65,7 +65,7 @@ class Estabelecimento implements ArrayAccess
         'cidade' => 'string',
         'uf' => 'string',
         'pais' => 'string',
-        'data_cadastramento' => '\DateTime',
+        'data_cadastramento' => 'string',
         'obs' => 'string',
         'contato' => 'string',
         'email' => 'string',
@@ -182,7 +182,7 @@ class Estabelecimento implements ArrayAccess
     protected $id;
     
     /**
-      * $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+      * $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
       * @var string
       */
     protected $numero_estabelecimento;
@@ -261,7 +261,7 @@ class Estabelecimento implements ArrayAccess
     
     /**
       * $data_cadastramento Data de Cadastro do Estabelecimento.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastramento;
     
@@ -366,7 +366,7 @@ class Estabelecimento implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+     * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -630,7 +630,7 @@ class Estabelecimento implements ArrayAccess
     
     /**
      * Gets data_cadastramento
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastramento()
     {
@@ -639,7 +639,7 @@ class Estabelecimento implements ArrayAccess
   
     /**
      * Sets data_cadastramento
-     * @param \DateTime $data_cadastramento Data de Cadastro do Estabelecimento.
+     * @param string $data_cadastramento Data de Cadastro do Estabelecimento.
      * @return $this
      */
     public function setDataCadastramento($data_cadastramento)

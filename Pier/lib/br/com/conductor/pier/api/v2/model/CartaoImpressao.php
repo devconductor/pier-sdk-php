@@ -51,6 +51,7 @@ class CartaoImpressao implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'flag_virtual' => 'int',
         'id_conta' => 'int',
         'id_pessoa' => 'int',
         'id_cartao' => 'int',
@@ -59,8 +60,8 @@ class CartaoImpressao implements ArrayAccess
         'numero_cartao' => 'string',
         'nome_plastico' => 'string',
         'cvv2' => 'string',
-        'data_geracao' => '\DateTime',
-        'data_validade' => '\DateTime',
+        'data_geracao' => 'string',
+        'data_validade' => 'string',
         'nome_origem_comercial' => 'string',
         'nome_empresa' => 'string',
         'numero_agencia' => 'int',
@@ -84,6 +85,7 @@ class CartaoImpressao implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'flag_virtual' => 'flagVirtual',
         'id_conta' => 'idConta',
         'id_pessoa' => 'idPessoa',
         'id_cartao' => 'idCartao',
@@ -117,6 +119,7 @@ class CartaoImpressao implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'flag_virtual' => 'setFlagVirtual',
         'id_conta' => 'setIdConta',
         'id_pessoa' => 'setIdPessoa',
         'id_cartao' => 'setIdCartao',
@@ -150,6 +153,7 @@ class CartaoImpressao implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'flag_virtual' => 'getFlagVirtual',
         'id_conta' => 'getIdConta',
         'id_pessoa' => 'getIdPessoa',
         'id_cartao' => 'getIdCartao',
@@ -178,6 +182,12 @@ class CartaoImpressao implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $flag_virtual 
+      * @var int
+      */
+    protected $flag_virtual;
     
     /**
       * $id_conta Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
@@ -229,13 +239,13 @@ class CartaoImpressao implements ArrayAccess
     
     /**
       * $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
-      * @var \DateTime
+      * @var string
       */
     protected $data_geracao;
     
     /**
       * $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
-      * @var \DateTime
+      * @var string
       */
     protected $data_validade;
     
@@ -320,6 +330,7 @@ class CartaoImpressao implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->flag_virtual = $data["flag_virtual"];
             $this->id_conta = $data["id_conta"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_cartao = $data["id_cartao"];
@@ -343,6 +354,27 @@ class CartaoImpressao implements ArrayAccess
             $this->trilha_cvv1 = $data["trilha_cvv1"];
             $this->trilha_cvv2 = $data["trilha_cvv2"];
         }
+    }
+    
+    /**
+     * Gets flag_virtual
+     * @return int
+     */
+    public function getFlagVirtual()
+    {
+        return $this->flag_virtual;
+    }
+  
+    /**
+     * Sets flag_virtual
+     * @param int $flag_virtual 
+     * @return $this
+     */
+    public function setFlagVirtual($flag_virtual)
+    {
+        
+        $this->flag_virtual = $flag_virtual;
+        return $this;
     }
     
     /**
@@ -515,7 +547,7 @@ class CartaoImpressao implements ArrayAccess
     
     /**
      * Gets data_geracao
-     * @return \DateTime
+     * @return string
      */
     public function getDataGeracao()
     {
@@ -524,7 +556,7 @@ class CartaoImpressao implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param \DateTime $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param string $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -536,7 +568,7 @@ class CartaoImpressao implements ArrayAccess
     
     /**
      * Gets data_validade
-     * @return \DateTime
+     * @return string
      */
     public function getDataValidade()
     {
@@ -545,7 +577,7 @@ class CartaoImpressao implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \DateTime $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
+     * @param string $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
      * @return $this
      */
     public function setDataValidade($data_validade)

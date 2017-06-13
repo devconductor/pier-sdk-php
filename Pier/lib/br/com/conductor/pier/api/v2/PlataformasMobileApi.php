@@ -197,35 +197,35 @@ class PlataformasMobileApi
     }
     
     /**
-     * listarUsingGET12
+     * listarUsingGET15
      *
      * Lista as plataformas mobile cadastradas
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome da Plataforma Mobile (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePlataformasMobile
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($page = null, $limit = null, $nome = null)
+    public function listarUsingGET15($page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET15WithHttpInfo
      *
      * Lista as plataformas mobile cadastradas
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome da Plataforma Mobile (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlataformasMobile, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($page = null, $limit = null, $nome = null)
+    public function listarUsingGET15WithHttpInfo($page = null, $limit = null, $nome = null)
     {
         
   
@@ -296,7 +296,7 @@ class PlataformasMobileApi
     }
     
     /**
-     * salvarUsingPOST8
+     * salvarUsingPOST9
      *
      * Cadastra Plataforma Mobile
      *
@@ -304,15 +304,15 @@ class PlataformasMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PlataformaMobile
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8($persist)
+    public function salvarUsingPOST9($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST8WithHttpInfo
+     * salvarUsingPOST9WithHttpInfo
      *
      * Cadastra Plataforma Mobile
      *
@@ -320,12 +320,12 @@ class PlataformasMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PlataformaMobile, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8WithHttpInfo($persist)
+    public function salvarUsingPOST9WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
         }
   
         // parse inputs

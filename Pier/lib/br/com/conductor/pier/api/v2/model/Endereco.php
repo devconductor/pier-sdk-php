@@ -63,8 +63,8 @@ class Endereco implements ArrayAccess
         'cidade' => 'string',
         'uf' => 'string',
         'pais' => 'string',
-        'data_inclusao' => '\DateTime',
-        'data_ultima_atualizacao' => '\DateTime'
+        'data_inclusao' => 'string',
+        'data_ultima_atualizacao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -221,13 +221,13 @@ class Endereco implements ArrayAccess
     
     /**
       * $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-      * @var \DateTime
+      * @var string
       */
     protected $data_inclusao;
     
     /**
       * $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-      * @var \DateTime
+      * @var string
       */
     protected $data_ultima_atualizacao;
     
@@ -511,7 +511,7 @@ class Endereco implements ArrayAccess
     
     /**
      * Gets data_inclusao
-     * @return \DateTime
+     * @return string
      */
     public function getDataInclusao()
     {
@@ -520,7 +520,7 @@ class Endereco implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param \DateTime $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -532,7 +532,7 @@ class Endereco implements ArrayAccess
     
     /**
      * Gets data_ultima_atualizacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataUltimaAtualizacao()
     {
@@ -541,7 +541,7 @@ class Endereco implements ArrayAccess
   
     /**
      * Sets data_ultima_atualizacao
-     * @param \DateTime $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
      * @return $this
      */
     public function setDataUltimaAtualizacao($data_ultima_atualizacao)

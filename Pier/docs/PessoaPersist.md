@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpf** | **string** | N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
-**data_emissao_identidade** | [**\DateTime**](Date.md) | Data emiss\u00C3\u00A3o da Identidade | [optional] 
-**data_nascimento** | [**\DateTime**](Date.md) | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
+**data_emissao_identidade** | **string** | Data emiss\u00C3\u00A3o da Identidade | [optional] 
+**data_nascimento** | **string** | Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
 **email** | **string** | Email do s\u00C3\u00B3cio | [optional] 
 **estado_civil** | **string** | Estado civil do s\u00C3\u00B3cio | [optional] 
 **nacionalidade** | **string** | Nacionalidade do s\u00C3\u00B3cio | [optional] 

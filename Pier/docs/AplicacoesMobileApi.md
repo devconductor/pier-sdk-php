@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageAplicacoesMobile listarUsingGET($page, $limit, $id, $id_plataforma_mobile, $id_emissor)
+> \br.com.conductor.pier.api.v2.model\PageAplicacoesMobile listarUsingGET($page, $limit, $id, $id_plataforma_mobile)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -70,13 +70,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\AplicacoesMobileApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = "id_example"; // string | Identificador da Aplicacao Mobile
 $id_plataforma_mobile = 789; // int | Identificador da Plataforma Mobile
-$id_emissor = 789; // int | Identificador do Emissor
 
 try { 
-    $result = $api_instance->listarUsingGET($page, $limit, $id, $id_plataforma_mobile, $id_emissor);
+    $result = $api_instance->listarUsingGET($page, $limit, $id, $id_plataforma_mobile);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AplicacoesMobileApi->listarUsingGET: ', $e->getMessage(), "\n";
@@ -89,10 +88,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **string**| Identificador da Aplicacao Mobile | [optional] 
  **id_plataforma_mobile** | **int**| Identificador da Plataforma Mobile | [optional] 
- **id_emissor** | **int**| Identificador do Emissor | [optional] 
 
 ### Return type
 

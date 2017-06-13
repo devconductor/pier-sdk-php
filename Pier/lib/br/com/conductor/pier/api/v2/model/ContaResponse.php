@@ -58,9 +58,9 @@ class ContaResponse implements ArrayAccess
         'id_status_conta' => 'int',
         'dia_vencimento' => 'int',
         'melhor_dia_compra' => 'int',
-        'data_status_conta' => '\DateTime',
-        'data_cadastro' => '\DateTime',
-        'data_ultima_alteracao_vencimento' => '\DateTime',
+        'data_status_conta' => 'string',
+        'data_cadastro' => 'string',
+        'data_ultima_alteracao_vencimento' => 'string',
         'valor_renda' => 'Number'
     );
   
@@ -179,19 +179,19 @@ class ContaResponse implements ArrayAccess
     
     /**
       * $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-      * @var \DateTime
+      * @var string
       */
     protected $data_status_conta;
     
     /**
       * $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastro;
     
     /**
       * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-      * @var \DateTime
+      * @var string
       */
     protected $data_ultima_alteracao_vencimento;
     
@@ -373,7 +373,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets data_status_conta
-     * @return \DateTime
+     * @return string
      */
     public function getDataStatusConta()
     {
@@ -382,7 +382,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_status_conta
-     * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
      * @return $this
      */
     public function setDataStatusConta($data_status_conta)
@@ -394,7 +394,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets data_cadastro
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastro()
     {
@@ -403,7 +403,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param string $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -415,7 +415,7 @@ class ContaResponse implements ArrayAccess
     
     /**
      * Gets data_ultima_alteracao_vencimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataUltimaAlteracaoVencimento()
     {
@@ -424,7 +424,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_ultima_alteracao_vencimento
-     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
      * @return $this
      */
     public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)

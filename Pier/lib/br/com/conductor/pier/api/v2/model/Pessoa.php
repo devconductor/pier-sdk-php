@@ -56,12 +56,12 @@ class Pessoa implements ArrayAccess
         'tipo' => 'string',
         'cpf' => 'string',
         'cnpj' => 'string',
-        'data_nascimento' => '\DateTime',
+        'data_nascimento' => 'string',
         'numero_identidade' => 'string',
         'orgao_expedidor_identidade' => 'string',
         'sexo' => 'string',
         'unidade_federativa_identidade' => 'string',
-        'data_emissao_identidade' => '\DateTime'
+        'data_emissao_identidade' => 'string'
     );
   
     static function swaggerTypes() {
@@ -167,7 +167,7 @@ class Pessoa implements ArrayAccess
     
     /**
       * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-      * @var \DateTime
+      * @var string
       */
     protected $data_nascimento;
     
@@ -197,7 +197,7 @@ class Pessoa implements ArrayAccess
     
     /**
       * $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-      * @var \DateTime
+      * @var string
       */
     protected $data_emissao_identidade;
     
@@ -331,7 +331,7 @@ class Pessoa implements ArrayAccess
     
     /**
      * Gets data_nascimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataNascimento()
     {
@@ -340,7 +340,7 @@ class Pessoa implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param \DateTime $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -436,7 +436,7 @@ class Pessoa implements ArrayAccess
     
     /**
      * Gets data_emissao_identidade
-     * @return \DateTime
+     * @return string
      */
     public function getDataEmissaoIdentidade()
     {
@@ -445,7 +445,7 @@ class Pessoa implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param \DateTime $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)

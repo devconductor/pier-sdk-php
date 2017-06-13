@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_processamento** | [**\DateTime**](\DateTime.md) | Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto | [optional] 
-**data_documento** | [**\DateTime**](\DateTime.md) | Data do documento (impress\u00C3\u00A3o) | [optional] 
-**data_vencimento** | [**\DateTime**](Date.md) | Data do vencimento | [optional] 
-**valor_boleto** | [**Number**](Number.md) |  | [optional] 
+**data_processamento** | **string** | Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto | [optional] 
+**data_documento** | **string** | Data do documento (impress\u00C3\u00A3o) | [optional] 
+**data_vencimento** | **string** | Data do vencimento | [optional] 
+**valor_boleto** | [**Number**](Number.md) | Valor do Boleto. | [optional] 
 **numero_do_documento** | **string** | N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente | [optional] 
 **nome_beneficiario** | **string** | Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto | [optional] 
-**agencia** | **string** | Ag\u00C3\u00AAncia | [optional] 
+**agencia** | **string** | Ag\u00C3\u00AAncia. | [optional] 
 **codigo_beneficiario** | **string** | C\u00C3\u00B3digo do benefici\u00C3\u00A1rio | [optional] 
 **digito_codigo_beneficiario** | **string** | D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio | [optional] 
 **numero_convenio** | **string** | N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos. | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **instrucoes** | **string[]** | Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio | [optional] 
 **locais_de_pagamento** | **string[]** | Locais de pagamento | [optional] 
 **nome_pagador** | **string** | Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto | [optional] 
-**documento_beneficiario** | **string** |  | [optional] 
+**documento_beneficiario** | **string** | Documento do Beneficiario. | [optional] 
 **documento_pagador** | **string** | Documento do pagador (CPF ou CNPJ) | [optional] 
 **logradouro_pagador** | **string** | Logradouro do pagador | [optional] 
 **bairro_pagador** | **string** | Bairro do pagador | [optional] 

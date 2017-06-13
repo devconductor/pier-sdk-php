@@ -186,32 +186,42 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET20
+     * Test case for consultarTaxasTarifasUsingGET
+     *
+     * Permite consultar a partir do ID da conta as taxas e tarifas
+     *
+     */
+    public function test_consultarTaxasTarifasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET23
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET20() {
+    public function test_consultarUsingGET23() {
 
     }
     
     /**
-     * Test case for consultarUsingGET21
+     * Test case for consultarUsingGET24
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET21() {
+    public function test_consultarUsingGET24() {
 
     }
     
     /**
-     * Test case for consultarUsingGET3
+     * Test case for consultarUsingGET4
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET3() {
+    public function test_consultarUsingGET4() {
 
     }
     
@@ -242,6 +252,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_gerarCartaoUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarCartaoVirtualUsingPOST
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+     *
+     */
+    public function test_gerarCartaoVirtualUsingPOST() {
 
     }
     
@@ -316,32 +336,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET22
+     * Test case for listarUsingGET27
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET22() {
+    public function test_listarUsingGET27() {
 
     }
     
     /**
-     * Test case for listarUsingGET23
+     * Test case for listarUsingGET28
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET23() {
+    public function test_listarUsingGET28() {
 
     }
     
     /**
-     * Test case for listarUsingGET4
+     * Test case for listarUsingGET6
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET4() {
+    public function test_listarUsingGET6() {
 
     }
     

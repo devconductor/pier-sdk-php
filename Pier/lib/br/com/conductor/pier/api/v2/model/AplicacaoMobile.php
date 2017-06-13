@@ -53,7 +53,6 @@ class AplicacaoMobile implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'id_plataforma_mobile' => 'int',
-        'id_emissor' => 'int',
         'token' => 'string',
         'cor' => 'string',
         'som' => 'string',
@@ -73,7 +72,6 @@ class AplicacaoMobile implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'id_plataforma_mobile' => 'idPlataformaMobile',
-        'id_emissor' => 'idEmissor',
         'token' => 'token',
         'cor' => 'cor',
         'som' => 'som',
@@ -93,7 +91,6 @@ class AplicacaoMobile implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'id_plataforma_mobile' => 'setIdPlataformaMobile',
-        'id_emissor' => 'setIdEmissor',
         'token' => 'setToken',
         'cor' => 'setCor',
         'som' => 'setSom',
@@ -113,7 +110,6 @@ class AplicacaoMobile implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'id_plataforma_mobile' => 'getIdPlataformaMobile',
-        'id_emissor' => 'getIdEmissor',
         'token' => 'getToken',
         'cor' => 'getCor',
         'som' => 'getSom',
@@ -138,12 +134,6 @@ class AplicacaoMobile implements ArrayAccess
       * @var int
       */
     protected $id_plataforma_mobile;
-    
-    /**
-      * $id_emissor Apresenta o identificador do emissor.
-      * @var int
-      */
-    protected $id_emissor;
     
     /**
       * $token Apresenta o token da aplicacao.
@@ -192,7 +182,6 @@ class AplicacaoMobile implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->id_plataforma_mobile = $data["id_plataforma_mobile"];
-            $this->id_emissor = $data["id_emissor"];
             $this->token = $data["token"];
             $this->cor = $data["cor"];
             $this->som = $data["som"];
@@ -241,27 +230,6 @@ class AplicacaoMobile implements ArrayAccess
     {
         
         $this->id_plataforma_mobile = $id_plataforma_mobile;
-        return $this;
-    }
-    
-    /**
-     * Gets id_emissor
-     * @return int
-     */
-    public function getIdEmissor()
-    {
-        return $this->id_emissor;
-    }
-  
-    /**
-     * Sets id_emissor
-     * @param int $id_emissor Apresenta o identificador do emissor.
-     * @return $this
-     */
-    public function setIdEmissor($id_emissor)
-    {
-        
-        $this->id_emissor = $id_emissor;
         return $this;
     }
     

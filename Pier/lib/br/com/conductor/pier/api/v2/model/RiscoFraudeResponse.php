@@ -58,7 +58,7 @@ class RiscoFraudeResponse implements ArrayAccess
         'id_conta' => 'int',
         'id_cartao' => 'int',
         'id_transacao' => 'int',
-        'data_transacao' => '\DateTime',
+        'data_transacao' => 'string',
         'valor_transacao' => 'Number',
         'nome_estabelecimento' => 'string'
     );
@@ -175,7 +175,7 @@ class RiscoFraudeResponse implements ArrayAccess
     
     /**
       * $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
-      * @var \DateTime
+      * @var string
       */
     protected $data_transacao;
     
@@ -362,7 +362,7 @@ class RiscoFraudeResponse implements ArrayAccess
     
     /**
      * Gets data_transacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataTransacao()
     {
@@ -371,7 +371,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets data_transacao
-     * @param \DateTime $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+     * @param string $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
      * @return $this
      */
     public function setDataTransacao($data_transacao)

@@ -66,9 +66,19 @@ class AutorizacoesApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for autorizarUsingPOST
+     *
+     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     *
+     */
+    public function test_autorizarUsingPOST() {
+
+    }
+    
+    /**
      * Test case for cancelarUsingPOST
      *
-     * Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
      */
     public function test_cancelarUsingPOST() {
@@ -76,29 +86,19 @@ class AutorizacoesApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for desfazerUsingPOST
+     * Test case for listarCodigosProcessamentoAutorizacaoUsingGET
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-     *
-     */
-    public function test_desfazerUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for desfazerUsingPOST1
-     *
-     * Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
+     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
      *
      */
-    public function test_desfazerUsingPOST1() {
+    public function test_listarCodigosProcessamentoAutorizacaoUsingGET() {
 
     }
     
     /**
      * Test case for simularUsingPOST
      *
-     * Simula Compra Parcelada
+     * Simula planos de pagamento
      *
      */
     public function test_simularUsingPOST() {

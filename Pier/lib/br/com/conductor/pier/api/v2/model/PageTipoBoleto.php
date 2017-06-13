@@ -51,7 +51,7 @@ class PageTipoBoleto implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => 'object[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\FaturaResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageTipoBoleto implements ArrayAccess
     
     /**
       * $content 
-      * @var object[]
+      * @var \br.com.conductor.pier.api.v2.model\FaturaResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageTipoBoleto implements ArrayAccess
     
     /**
      * Gets content
-     * @return object[]
+     * @return \br.com.conductor.pier.api.v2.model\FaturaResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageTipoBoleto implements ArrayAccess
   
     /**
      * Sets content
-     * @param object[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\FaturaResponse[] $content 
      * @return $this
      */
     public function setContent($content)

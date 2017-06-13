@@ -51,7 +51,7 @@ class LinkHistoricoAssessoriaResponse_ implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_hora_historico' => '\DateTime',
+        'data_hora_historico' => 'string',
         'tipo_historico' => 'string',
         'nome_assessoria' => 'string'
     );
@@ -105,7 +105,7 @@ class LinkHistoricoAssessoriaResponse_ implements ArrayAccess
     
     /**
       * $data_hora_historico Apresenta a data e hora do hist\u00C3\u00B3rico
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_historico;
     
@@ -138,7 +138,7 @@ class LinkHistoricoAssessoriaResponse_ implements ArrayAccess
     
     /**
      * Gets data_hora_historico
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraHistorico()
     {
@@ -147,7 +147,7 @@ class LinkHistoricoAssessoriaResponse_ implements ArrayAccess
   
     /**
      * Sets data_hora_historico
-     * @param \DateTime $data_hora_historico Apresenta a data e hora do hist\u00C3\u00B3rico
+     * @param string $data_hora_historico Apresenta a data e hora do hist\u00C3\u00B3rico
      * @return $this
      */
     public function setDataHoraHistorico($data_hora_historico)

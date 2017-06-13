@@ -58,8 +58,8 @@ class UsuarioResponse implements ArrayAccess
         'cpf' => 'string',
         'email' => 'string',
         'status' => 'string',
-        'data_criacao' => '\DateTime',
-        'data_modificacao' => '\DateTime',
+        'data_criacao' => 'string',
+        'data_modificacao' => 'string',
         'tentativas_incorretas' => 'int'
     );
   
@@ -175,13 +175,13 @@ class UsuarioResponse implements ArrayAccess
     
     /**
       * $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
-      * @var \DateTime
+      * @var string
       */
     protected $data_criacao;
     
     /**
       * $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
-      * @var \DateTime
+      * @var string
       */
     protected $data_modificacao;
     
@@ -365,7 +365,7 @@ class UsuarioResponse implements ArrayAccess
     
     /**
      * Gets data_criacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataCriacao()
     {
@@ -374,7 +374,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_criacao
-     * @param \DateTime $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+     * @param string $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
      * @return $this
      */
     public function setDataCriacao($data_criacao)
@@ -386,7 +386,7 @@ class UsuarioResponse implements ArrayAccess
     
     /**
      * Gets data_modificacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataModificacao()
     {
@@ -395,7 +395,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param \DateTime $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+     * @param string $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
      * @return $this
      */
     public function setDataModificacao($data_modificacao)

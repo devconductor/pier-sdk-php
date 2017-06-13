@@ -5,10 +5,10 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET**](RiscoFraudeApi.md#consultarUsingGET) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultarUsingGET10**](RiscoFraudeApi.md#consultarUsingGET10) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultarUsingGET12**](RiscoFraudeApi.md#consultarUsingGET12) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**informarRiscoFraudeUsingPOST**](RiscoFraudeApi.md#informarRiscoFraudeUsingPOST) | **POST** /api/riscos-fraudes | Receber Risco Fraude
 [**listarUsingGET1**](RiscoFraudeApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET14**](RiscoFraudeApi.md#listarUsingGET14) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+[**listarUsingGET18**](RiscoFraudeApi.md#listarUsingGET18) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 [**negarUsingPOST**](RiscoFraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 [**reconhecerUsingPOST**](RiscoFraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 [**salvarUsingPOST1**](RiscoFraudeApi.md#salvarUsingPOST1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse consultarUsingGET10($id)
+# **consultarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse consultarUsingGET12($id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -75,10 +75,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
 
 try { 
-    $result = $api_instance->consultarUsingGET10($id);
+    $result = $api_instance->consultarUsingGET12($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->consultarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -163,11 +163,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id_tipo_atendimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
 $id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
 $nome_atendente = "nome_atendente_example"; // string | Apresenta o nome do Atendente que registrou o Atendimento.
-$data_atendimento = new \DateTime(); // \DateTime | Apresenta a data em que o Atendimento foi realizado.
+$data_atendimento = "data_atendimento_example"; // string | Apresenta a data em que o Atendimento foi realizado.
 
 try { 
     $result = $api_instance->listarUsingGET1($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
@@ -183,11 +183,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_tipo_atendimento** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
  **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **nome_atendente** | **string**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **data_atendimento** | **\DateTime**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
+ **data_atendimento** | **string**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
 
 ### Return type
 
@@ -204,8 +204,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage listarUsingGET14($id_conta, $confirmacao_fraude, $page, $limit)
+# **listarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage listarUsingGET18($id_conta, $confirmacao_fraude, $page, $limit)
 
 Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 
@@ -220,13 +220,13 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id_conta = 789; // int | Id Conta
 $confirmacao_fraude = "confirmacao_fraude_example"; // string | Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET14($id_conta, $confirmacao_fraude, $page, $limit);
+    $result = $api_instance->listarUsingGET18($id_conta, $confirmacao_fraude, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->listarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
  **id_conta** | **int**| Id Conta | 
  **confirmacao_fraude** | **string**| Confirma\u00C3\u00A7\u00C3\u00A3o da fraude | 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -360,10 +360,10 @@ $id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A
 $conteudo_atendimento = "conteudo_atendimento_example"; // string | Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
 $detalhes_atendimento = "detalhes_atendimento_example"; // string | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
 $nome_atendente = "nome_atendente_example"; // string | Apresenta o nome do Atendente que registrou o Atendimento.
-$data_atendimento = new \DateTime(); // \DateTime | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-$data_agendamento = new \DateTime(); // \DateTime | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-$data_hora_inicio_atendimento = new \DateTime(); // \DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-$data_hora_fim_atendimento = new \DateTime(); // \DateTime | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_atendimento = "data_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_agendamento = "data_agendamento_example"; // string | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_hora_inicio_atendimento = "data_hora_inicio_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_hora_fim_atendimento = "data_hora_fim_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
 $flag_fila_fraude = 56; // int | Flag fila fraude
 
 try { 
@@ -383,10 +383,10 @@ Name | Type | Description  | Notes
  **conteudo_atendimento** | **string**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
  **detalhes_atendimento** | **string**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
  **nome_atendente** | **string**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **data_atendimento** | **\DateTime**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
- **data_agendamento** | **\DateTime**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
- **data_hora_inicio_atendimento** | **\DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
- **data_hora_fim_atendimento** | **\DateTime**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_agendamento** | **string**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_inicio_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_fim_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
  **flag_fila_fraude** | **int**| Flag fila fraude | [optional] 
 
 ### Return type

@@ -63,10 +63,10 @@ class SMS implements ArrayAccess
         'operadora' => 'string',
         'conteudo' => 'string',
         'resposta' => 'string',
-        'data_agendamento' => '\DateTime',
+        'data_agendamento' => 'string',
         'quantidade_tentativas_envio' => 'int',
-        'data_inclusao' => '\DateTime',
-        'data_alteracao_status' => '\DateTime',
+        'data_inclusao' => 'string',
+        'data_alteracao_status' => 'string',
         'protocolo' => 'string'
     );
   
@@ -233,7 +233,7 @@ class SMS implements ArrayAccess
     
     /**
       * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
-      * @var \DateTime
+      * @var string
       */
     protected $data_agendamento;
     
@@ -245,13 +245,13 @@ class SMS implements ArrayAccess
     
     /**
       * $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-      * @var \DateTime
+      * @var string
       */
     protected $data_inclusao;
     
     /**
       * $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
-      * @var \DateTime
+      * @var string
       */
     protected $data_alteracao_status;
     
@@ -550,7 +550,7 @@ class SMS implements ArrayAccess
     
     /**
      * Gets data_agendamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataAgendamento()
     {
@@ -559,7 +559,7 @@ class SMS implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param \DateTime $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -592,7 +592,7 @@ class SMS implements ArrayAccess
     
     /**
      * Gets data_inclusao
-     * @return \DateTime
+     * @return string
      */
     public function getDataInclusao()
     {
@@ -601,7 +601,7 @@ class SMS implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param \DateTime $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -613,7 +613,7 @@ class SMS implements ArrayAccess
     
     /**
      * Gets data_alteracao_status
-     * @return \DateTime
+     * @return string
      */
     public function getDataAlteracaoStatus()
     {
@@ -622,7 +622,7 @@ class SMS implements ArrayAccess
   
     /**
      * Sets data_alteracao_status
-     * @param \DateTime $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
+     * @param string $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
      * @return $this
      */
     public function setDataAlteracaoStatus($data_alteracao_status)

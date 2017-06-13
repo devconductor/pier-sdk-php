@@ -55,7 +55,8 @@ class ProdutoDetalhesResponse implements ArrayAccess
         'nome' => 'string',
         'status' => 'int',
         'id_fantasia_basica' => 'int',
-        'fantasia_basica' => 'string'
+        'fantasia_basica' => 'string',
+        'uso_exterior' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -71,7 +72,8 @@ class ProdutoDetalhesResponse implements ArrayAccess
         'nome' => 'nome',
         'status' => 'status',
         'id_fantasia_basica' => 'idFantasiaBasica',
-        'fantasia_basica' => 'fantasiaBasica'
+        'fantasia_basica' => 'fantasiaBasica',
+        'uso_exterior' => 'usoExterior'
     );
   
     static function attributeMap() {
@@ -87,7 +89,8 @@ class ProdutoDetalhesResponse implements ArrayAccess
         'nome' => 'setNome',
         'status' => 'setStatus',
         'id_fantasia_basica' => 'setIdFantasiaBasica',
-        'fantasia_basica' => 'setFantasiaBasica'
+        'fantasia_basica' => 'setFantasiaBasica',
+        'uso_exterior' => 'setUsoExterior'
     );
   
     static function setters() {
@@ -103,7 +106,8 @@ class ProdutoDetalhesResponse implements ArrayAccess
         'nome' => 'getNome',
         'status' => 'getStatus',
         'id_fantasia_basica' => 'getIdFantasiaBasica',
-        'fantasia_basica' => 'getFantasiaBasica'
+        'fantasia_basica' => 'getFantasiaBasica',
+        'uso_exterior' => 'getUsoExterior'
     );
   
     static function getters() {
@@ -141,6 +145,12 @@ class ProdutoDetalhesResponse implements ArrayAccess
       */
     protected $fantasia_basica;
     
+    /**
+      * $uso_exterior Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+      * @var bool
+      */
+    protected $uso_exterior;
+    
 
     /**
      * Constructor
@@ -155,6 +165,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
             $this->status = $data["status"];
             $this->id_fantasia_basica = $data["id_fantasia_basica"];
             $this->fantasia_basica = $data["fantasia_basica"];
+            $this->uso_exterior = $data["uso_exterior"];
         }
     }
     
@@ -260,6 +271,27 @@ class ProdutoDetalhesResponse implements ArrayAccess
     {
         
         $this->fantasia_basica = $fantasia_basica;
+        return $this;
+    }
+    
+    /**
+     * Gets uso_exterior
+     * @return bool
+     */
+    public function getUsoExterior()
+    {
+        return $this->uso_exterior;
+    }
+  
+    /**
+     * Sets uso_exterior
+     * @param bool $uso_exterior Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+     * @return $this
+     */
+    public function setUsoExterior($uso_exterior)
+    {
+        
+        $this->uso_exterior = $uso_exterior;
         return $this;
     }
     

@@ -54,11 +54,11 @@ class OportunidadeResponse implements ArrayAccess
         'id' => 'int',
         'id_tipo_oportunidade' => 'int',
         'id_status_oportunidade' => 'int',
-        'data_cadastro' => '\DateTime',
-        'data_atualizacao' => '\DateTime',
+        'data_cadastro' => 'string',
+        'data_atualizacao' => 'string',
         'numero_receita_federal' => 'string',
-        'data_inicio_vigencia' => '\DateTime',
-        'data_fim_vigencia' => '\DateTime',
+        'data_inicio_vigencia' => 'string',
+        'data_fim_vigencia' => 'string',
         'flag_ativo' => 'bool',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\DetalheOportunidadeResponse[]'
     );
@@ -151,13 +151,13 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
       * $data_cadastro Data cadastro da oportunidade.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastro;
     
     /**
       * $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
-      * @var \DateTime
+      * @var string
       */
     protected $data_atualizacao;
     
@@ -169,13 +169,13 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
       * $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-      * @var \DateTime
+      * @var string
       */
     protected $data_inicio_vigencia;
     
     /**
       * $data_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
-      * @var \DateTime
+      * @var string
       */
     protected $data_fim_vigencia;
     
@@ -278,7 +278,7 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
      * Gets data_cadastro
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastro()
     {
@@ -287,7 +287,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param \DateTime $data_cadastro Data cadastro da oportunidade.
+     * @param string $data_cadastro Data cadastro da oportunidade.
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -299,7 +299,7 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
      * Gets data_atualizacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataAtualizacao()
     {
@@ -308,7 +308,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_atualizacao
-     * @param \DateTime $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+     * @param string $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
      * @return $this
      */
     public function setDataAtualizacao($data_atualizacao)
@@ -341,7 +341,7 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
      * Gets data_inicio_vigencia
-     * @return \DateTime
+     * @return string
      */
     public function getDataInicioVigencia()
     {
@@ -350,7 +350,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_inicio_vigencia
-     * @param \DateTime $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @return $this
      */
     public function setDataInicioVigencia($data_inicio_vigencia)
@@ -362,7 +362,7 @@ class OportunidadeResponse implements ArrayAccess
     
     /**
      * Gets data_fim_vigencia
-     * @return \DateTime
+     * @return string
      */
     public function getDataFimVigencia()
     {
@@ -371,7 +371,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_fim_vigencia
-     * @param \DateTime $data_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade
      * @return $this
      */
     public function setDataFimVigencia($data_fim_vigencia)

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET5**](DispositivosApi.md#listarUsingGET5) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET7**](DispositivosApi.md#listarUsingGET7) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST3**](DispositivosApi.md#salvarUsingPOST3) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\PageDispositivos listarUsingGET5($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
+# **listarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\PageDispositivos listarUsingGET7($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
 
 Lista os dispositivos cadastrados
 
@@ -114,18 +114,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DispositivosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $token = "token_example"; // string | Token do Dispositivo
 $id_usuario = 789; // int | Identificador do Usu\u00C3\u00A1rio
 $id_aplicacao_mobile = 789; // int | Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-$data_criacao = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi criado.
-$data_desativacao = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi desativado.
+$data_criacao = "data_criacao_example"; // string | Apresenta a data e em que o registro foi criado.
+$data_desativacao = "data_desativacao_example"; // string | Apresenta a data e em que o registro foi desativado.
 
 try { 
-    $result = $api_instance->listarUsingGET5($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+    $result = $api_instance->listarUsingGET7($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DispositivosApi->listarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DispositivosApi->listarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -135,12 +135,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **token** | **string**| Token do Dispositivo | [optional] 
  **id_usuario** | **int**| Identificador do Usu\u00C3\u00A1rio | [optional] 
  **id_aplicacao_mobile** | **int**| Identificador da aplica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **data_criacao** | **\DateTime**| Apresenta a data e em que o registro foi criado. | [optional] 
- **data_desativacao** | **\DateTime**| Apresenta a data e em que o registro foi desativado. | [optional] 
+ **data_criacao** | **string**| Apresenta a data e em que o registro foi criado. | [optional] 
+ **data_desativacao** | **string**| Apresenta a data e em que o registro foi desativado. | [optional] 
 
 ### Return type
 

@@ -9,17 +9,17 @@ Method | HTTP request | Description
 [**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id}/atribuir-titular | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
 [**bloquearUsingPUT**](CartaoApi.md#bloquearUsingPUT) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrarAlterarSenhaUsingPOST**](CartaoApi.md#cadastrarAlterarSenhaUsingPOST) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
-[**consultarDadosCartaoUsingGET**](CartaoApi.md#consultarDadosCartaoUsingGET) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
+[**consultarDadosReaisCartaoUsingGET**](CartaoApi.md#consultarDadosReaisCartaoUsingGET) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultarUsingGET2**](CartaoApi.md#consultarUsingGET2) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultarUsingGET3**](CartaoApi.md#consultarUsingGET3) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET3**](CartaoApi.md#listarUsingGET3) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listarUsingGET4**](CartaoApi.md#listarUsingGET4) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -264,8 +264,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarDadosCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\DadosCartO consultarDadosCartaoUsingGET($id)
+# **consultarDadosReaisCartaoUsingGET**
+> \br.com.conductor.pier.api.v2.model\DadosCartO consultarDadosReaisCartaoUsingGET($id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -280,10 +280,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id = 789; // int | id
 
 try { 
-    $result = $api_instance->consultarDadosCartaoUsingGET($id);
+    $result = $api_instance->consultarDadosReaisCartaoUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarDadosCartaoUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->consultarDadosReaisCartaoUsingGET: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -444,8 +444,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\Cartao consultarUsingGET2($id)
+# **consultarUsingGET3**
+> \br.com.conductor.pier.api.v2.model\CartaoDetalhado consultarUsingGET3($id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -460,10 +460,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET2($id);
+    $result = $api_instance->consultarUsingGET3($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarUsingGET2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->consultarUsingGET3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoDetalhado**](CartaoDetalhado.md)
 
 ### Authorization
 
@@ -693,14 +693,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id_origem_comercial = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
 $id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
 $id_tipo_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
 $id_imagem = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
 $id_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 $quantidade_cartoes = 56; // int | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-$data_cadastro = new \DateTime(); // \DateTime | Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+$data_cadastro = "data_cadastro_example"; // string | Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
 $usuario_cadastro = "usuario_cadastro_example"; // string | Nome do Usu\u00C3\u00A1rio que criou o Lote.
 $status_processamento = 56; // int | Indica o Status de Processamento do Lote.
 
@@ -718,14 +718,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_origem_comercial** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). | [optional] 
  **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **id_tipo_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). | [optional] 
  **id_imagem** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). | [optional] 
  **id_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **quantidade_cartoes** | **int**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
- **data_cadastro** | **\DateTime**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
+ **data_cadastro** | **string**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
  **usuario_cadastro** | **string**| Nome do Usu\u00C3\u00A1rio que criou o Lote. | [optional] 
  **status_processamento** | **int**| Indica o Status de Processamento do Lote. | [optional] 
 
@@ -744,8 +744,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\PageCartoes listarUsingGET3($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
+# **listarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\PageCartoes listarUsingGET4($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -758,7 +758,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id_status_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
 $id_estagio_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 $id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -767,11 +767,11 @@ $id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u0
 $tipo_portador = "tipo_portador_example"; // string | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
 $numero_cartao = "numero_cartao_example"; // string | Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
 $nome_impresso = "nome_impresso_example"; // string | Apresenta o nome impresso no cart\u00C3\u00A3o.
-$data_geracao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-$data_status_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-$data_estagio_cartao = new \DateTime(); // \DateTime | Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+$data_geracao = "data_geracao_example"; // string | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+$data_status_cartao = "data_status_cartao_example"; // string | Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+$data_estagio_cartao = "data_estagio_cartao_example"; // string | Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
 $data_validade = "data_validade_example"; // string | Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
-$data_impressao = new \DateTime(); // \DateTime | Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+$data_impressao = "data_impressao_example"; // string | Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
 $arquivo_impressao = "arquivo_impressao_example"; // string | Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
 $flag_impressao_origem_comercial = 56; // int | Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
 $flag_provisorio = 56; // int | Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
@@ -779,10 +779,10 @@ $codigo_desbloqueio = "codigo_desbloqueio_example"; // string | Apresenta um c\u
 $sequencial_cartao = 56; // int | N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET3($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+    $result = $api_instance->listarUsingGET4($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->listarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->listarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -792,7 +792,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_status_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 
  **id_estagio_cartao** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
  **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
@@ -801,11 +801,11 @@ Name | Type | Description  | Notes
  **tipo_portador** | **string**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
  **numero_cartao** | **string**| Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. | [optional] 
  **nome_impresso** | **string**| Apresenta o nome impresso no cart\u00C3\u00A3o. | [optional] 
- **data_geracao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
- **data_status_cartao** | **\DateTime**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
- **data_estagio_cartao** | **\DateTime**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **data_geracao** | **string**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **data_status_cartao** | **string**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **data_estagio_cartao** | **string**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
  **data_validade** | **string**| Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. | [optional] 
- **data_impressao** | **\DateTime**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
+ **data_impressao** | **string**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
  **arquivo_impressao** | **string**| Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. | [optional] 
  **flag_impressao_origem_comercial** | **int**| Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. | [optional] 
  **flag_provisorio** | **int**| Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. | [optional] 

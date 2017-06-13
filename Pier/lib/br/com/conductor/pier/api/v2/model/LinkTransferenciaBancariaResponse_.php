@@ -55,25 +55,25 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
         'id_autorizacao' => 'int',
         'id_transferencia' => 'int',
         'codigo_autorizacao' => 'string',
-        'data_autorizacao' => '\DateTime',
+        'data_autorizacao' => 'string',
         'origem' => 'string',
         'valor' => 'Number',
         'id_operacao' => 'int',
         'terminal' => 'string',
         'id_cartao' => 'int',
-        'data_compra' => '\DateTime',
+        'data_compra' => 'string',
         'valor_compra' => 'Number',
         'numero_parcelas' => 'int',
         'valor_parcela' => 'Number',
         'id_estabelecimento' => 'int',
-        'data_movimento' => '\DateTime',
+        'data_movimento' => 'string',
         'valor_contrato' => 'Number',
         'taxa_juros' => 'Number',
         'valor_iof' => 'Number',
         'valor_tac' => 'Number',
         'id_conta' => 'int',
         'valor_entrada' => 'Number',
-        'data_vencimento_real' => '\DateTime',
+        'data_vencimento_real' => 'string',
         'data_vencimento_padrao' => 'string',
         'id_conta_portador' => 'int',
         'numero_estabelecimento' => 'int'
@@ -221,7 +221,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
       * $data_autorizacao Data da autoriza\u00C3\u00A7\u00C3\u00A3o
-      * @var \DateTime
+      * @var string
       */
     protected $data_autorizacao;
     
@@ -257,7 +257,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
       * $data_compra Data da transfer\u00C3\u00AAncia
-      * @var \DateTime
+      * @var string
       */
     protected $data_compra;
     
@@ -287,7 +287,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
       * $data_movimento Data do movimento
-      * @var \DateTime
+      * @var string
       */
     protected $data_movimento;
     
@@ -329,7 +329,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
       * $data_vencimento_real Data do vencimento real da fatura
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento_real;
     
@@ -346,7 +346,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     protected $id_conta_portador;
     
     /**
-      * $numero_estabelecimento 
+      * $numero_estabelecimento Atributo que representa o numero do estabelecimento.
       * @var int
       */
     protected $numero_estabelecimento;
@@ -475,7 +475,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
      * Gets data_autorizacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataAutorizacao()
     {
@@ -484,7 +484,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
   
     /**
      * Sets data_autorizacao
-     * @param \DateTime $data_autorizacao Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_autorizacao Data da autoriza\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
     public function setDataAutorizacao($data_autorizacao)
@@ -601,7 +601,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
      * Gets data_compra
-     * @return \DateTime
+     * @return string
      */
     public function getDataCompra()
     {
@@ -610,7 +610,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param \DateTime $data_compra Data da transfer\u00C3\u00AAncia
+     * @param string $data_compra Data da transfer\u00C3\u00AAncia
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -706,7 +706,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
      * Gets data_movimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataMovimento()
     {
@@ -715,7 +715,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
   
     /**
      * Sets data_movimento
-     * @param \DateTime $data_movimento Data do movimento
+     * @param string $data_movimento Data do movimento
      * @return $this
      */
     public function setDataMovimento($data_movimento)
@@ -853,7 +853,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
     
     /**
      * Gets data_vencimento_real
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimentoReal()
     {
@@ -862,7 +862,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
   
     /**
      * Sets data_vencimento_real
-     * @param \DateTime $data_vencimento_real Data do vencimento real da fatura
+     * @param string $data_vencimento_real Data do vencimento real da fatura
      * @return $this
      */
     public function setDataVencimentoReal($data_vencimento_real)
@@ -925,7 +925,7 @@ class LinkTransferenciaBancariaResponse_ implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento 
+     * @param int $numero_estabelecimento Atributo que representa o numero do estabelecimento.
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)

@@ -356,7 +356,7 @@ class FAQApi
     }
     
     /**
-     * consultarUsingGET6
+     * consultarUsingGET7
      *
      * Consultar FAQ por id
      *
@@ -364,15 +364,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\FAQ
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6($id)
+    public function consultarUsingGET7($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET6WithHttpInfo
+     * consultarUsingGET7WithHttpInfo
      *
      * Consultar FAQ por id
      *
@@ -380,12 +380,12 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FAQ, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6WithHttpInfo($id)
+    public function consultarUsingGET7WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
         }
   
         // parse inputs
@@ -451,12 +451,12 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET10
      *
      * Lista FAQs
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
@@ -467,20 +467,20 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\PageFaqs
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET10($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET10WithHttpInfo
      *
      * Lista FAQs
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
@@ -491,7 +491,7 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqs, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET10WithHttpInfo($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   

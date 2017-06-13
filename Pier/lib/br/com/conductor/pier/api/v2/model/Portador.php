@@ -59,8 +59,8 @@ class Portador implements ArrayAccess
         'nome_impresso' => 'string',
         'id_tipo_cartao' => 'int',
         'flag_ativo' => 'int',
-        'data_cadastro_portador' => '\DateTime',
-        'data_cancelamento_portador' => '\DateTime'
+        'data_cadastro_portador' => 'string',
+        'data_cancelamento_portador' => 'string'
     );
   
     static function swaggerTypes() {
@@ -181,13 +181,13 @@ class Portador implements ArrayAccess
     
     /**
       * $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastro_portador;
     
     /**
       * $data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cancelamento_portador;
     
@@ -383,7 +383,7 @@ class Portador implements ArrayAccess
     
     /**
      * Gets data_cadastro_portador
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastroPortador()
     {
@@ -392,7 +392,7 @@ class Portador implements ArrayAccess
   
     /**
      * Sets data_cadastro_portador
-     * @param \DateTime $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @return $this
      */
     public function setDataCadastroPortador($data_cadastro_portador)
@@ -404,7 +404,7 @@ class Portador implements ArrayAccess
     
     /**
      * Gets data_cancelamento_portador
-     * @return \DateTime
+     * @return string
      */
     public function getDataCancelamentoPortador()
     {
@@ -413,7 +413,7 @@ class Portador implements ArrayAccess
   
     /**
      * Sets data_cancelamento_portador
-     * @param \DateTime $data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @return $this
      */
     public function setDataCancelamentoPortador($data_cancelamento_portador)

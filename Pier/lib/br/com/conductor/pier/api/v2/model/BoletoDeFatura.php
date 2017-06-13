@@ -51,9 +51,9 @@ class BoletoDeFatura implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_processamento' => '\DateTime',
-        'data_documento' => '\DateTime',
-        'data_vencimento' => '\DateTime',
+        'data_processamento' => 'string',
+        'data_documento' => 'string',
+        'data_vencimento' => 'string',
         'valor_boleto' => 'Number',
         'numero_do_documento' => 'string',
         'nome_beneficiario' => 'string',
@@ -209,24 +209,24 @@ class BoletoDeFatura implements ArrayAccess
     
     /**
       * $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
-      * @var \DateTime
+      * @var string
       */
     protected $data_processamento;
     
     /**
       * $data_documento Data do documento (impress\u00C3\u00A3o)
-      * @var \DateTime
+      * @var string
       */
     protected $data_documento;
     
     /**
       * $data_vencimento Data do vencimento
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento;
     
     /**
-      * $valor_boleto 
+      * $valor_boleto Valor do Boleto.
       * @var Number
       */
     protected $valor_boleto;
@@ -244,7 +244,7 @@ class BoletoDeFatura implements ArrayAccess
     protected $nome_beneficiario;
     
     /**
-      * $agencia Ag\u00C3\u00AAncia
+      * $agencia Ag\u00C3\u00AAncia.
       * @var string
       */
     protected $agencia;
@@ -328,7 +328,7 @@ class BoletoDeFatura implements ArrayAccess
     protected $nome_pagador;
     
     /**
-      * $documento_beneficiario 
+      * $documento_beneficiario Documento do Beneficiario.
       * @var string
       */
     protected $documento_beneficiario;
@@ -424,7 +424,7 @@ class BoletoDeFatura implements ArrayAccess
     
     /**
      * Gets data_processamento
-     * @return \DateTime
+     * @return string
      */
     public function getDataProcessamento()
     {
@@ -433,7 +433,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets data_processamento
-     * @param \DateTime $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+     * @param string $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
      * @return $this
      */
     public function setDataProcessamento($data_processamento)
@@ -445,7 +445,7 @@ class BoletoDeFatura implements ArrayAccess
     
     /**
      * Gets data_documento
-     * @return \DateTime
+     * @return string
      */
     public function getDataDocumento()
     {
@@ -454,7 +454,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets data_documento
-     * @param \DateTime $data_documento Data do documento (impress\u00C3\u00A3o)
+     * @param string $data_documento Data do documento (impress\u00C3\u00A3o)
      * @return $this
      */
     public function setDataDocumento($data_documento)
@@ -466,7 +466,7 @@ class BoletoDeFatura implements ArrayAccess
     
     /**
      * Gets data_vencimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimento()
     {
@@ -475,7 +475,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param \DateTime $data_vencimento Data do vencimento
+     * @param string $data_vencimento Data do vencimento
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -496,7 +496,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets valor_boleto
-     * @param Number $valor_boleto 
+     * @param Number $valor_boleto Valor do Boleto.
      * @return $this
      */
     public function setValorBoleto($valor_boleto)
@@ -559,7 +559,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets agencia
-     * @param string $agencia Ag\u00C3\u00AAncia
+     * @param string $agencia Ag\u00C3\u00AAncia.
      * @return $this
      */
     public function setAgencia($agencia)
@@ -853,7 +853,7 @@ class BoletoDeFatura implements ArrayAccess
   
     /**
      * Sets documento_beneficiario
-     * @param string $documento_beneficiario 
+     * @param string $documento_beneficiario Documento do Beneficiario.
      * @return $this
      */
     public function setDocumentoBeneficiario($documento_beneficiario)

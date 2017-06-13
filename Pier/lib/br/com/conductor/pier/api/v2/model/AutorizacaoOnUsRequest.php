@@ -52,15 +52,15 @@ class AutorizacaoOnUsRequest implements ArrayAccess
       */
     static $swaggerTypes = array(
         'nsu_origem' => 'string',
+        'numero_parcelas' => 'int',
         'codigo_processamento' => 'string',
+        'codigo_seguranca_cartao' => 'string',
         'valor_transacao' => 'Number',
         'numero_real_cartao' => 'string',
         'data_validade_cartao' => 'string',
         'numero_estabelecimento' => 'int',
-        'data_hora_terminal' => '\DateTime',
-        'terminal_requisitante' => 'string',
-        'numero_parcelas' => 'int',
-        'codigo_seguranca_cartao' => 'int'
+        'data_hora_terminal' => 'string',
+        'terminal_requisitante' => 'string'
     );
   
     static function swaggerTypes() {
@@ -73,15 +73,15 @@ class AutorizacaoOnUsRequest implements ArrayAccess
       */
     static $attributeMap = array(
         'nsu_origem' => 'nsuOrigem',
+        'numero_parcelas' => 'numeroParcelas',
         'codigo_processamento' => 'codigoProcessamento',
+        'codigo_seguranca_cartao' => 'codigoSegurancaCartao',
         'valor_transacao' => 'valorTransacao',
         'numero_real_cartao' => 'numeroRealCartao',
         'data_validade_cartao' => 'dataValidadeCartao',
         'numero_estabelecimento' => 'numeroEstabelecimento',
         'data_hora_terminal' => 'dataHoraTerminal',
-        'terminal_requisitante' => 'terminalRequisitante',
-        'numero_parcelas' => 'numeroParcelas',
-        'codigo_seguranca_cartao' => 'codigoSegurancaCartao'
+        'terminal_requisitante' => 'terminalRequisitante'
     );
   
     static function attributeMap() {
@@ -94,15 +94,15 @@ class AutorizacaoOnUsRequest implements ArrayAccess
       */
     static $setters = array(
         'nsu_origem' => 'setNsuOrigem',
+        'numero_parcelas' => 'setNumeroParcelas',
         'codigo_processamento' => 'setCodigoProcessamento',
+        'codigo_seguranca_cartao' => 'setCodigoSegurancaCartao',
         'valor_transacao' => 'setValorTransacao',
         'numero_real_cartao' => 'setNumeroRealCartao',
         'data_validade_cartao' => 'setDataValidadeCartao',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
         'data_hora_terminal' => 'setDataHoraTerminal',
-        'terminal_requisitante' => 'setTerminalRequisitante',
-        'numero_parcelas' => 'setNumeroParcelas',
-        'codigo_seguranca_cartao' => 'setCodigoSegurancaCartao'
+        'terminal_requisitante' => 'setTerminalRequisitante'
     );
   
     static function setters() {
@@ -115,15 +115,15 @@ class AutorizacaoOnUsRequest implements ArrayAccess
       */
     static $getters = array(
         'nsu_origem' => 'getNsuOrigem',
+        'numero_parcelas' => 'getNumeroParcelas',
         'codigo_processamento' => 'getCodigoProcessamento',
+        'codigo_seguranca_cartao' => 'getCodigoSegurancaCartao',
         'valor_transacao' => 'getValorTransacao',
         'numero_real_cartao' => 'getNumeroRealCartao',
         'data_validade_cartao' => 'getDataValidadeCartao',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
         'data_hora_terminal' => 'getDataHoraTerminal',
-        'terminal_requisitante' => 'getTerminalRequisitante',
-        'numero_parcelas' => 'getNumeroParcelas',
-        'codigo_seguranca_cartao' => 'getCodigoSegurancaCartao'
+        'terminal_requisitante' => 'getTerminalRequisitante'
     );
   
     static function getters() {
@@ -138,10 +138,22 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     protected $nsu_origem;
     
     /**
+      * $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+      * @var int
+      */
+    protected $numero_parcelas;
+    
+    /**
       * $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
       * @var string
       */
     protected $codigo_processamento;
+    
+    /**
+      * $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+      * @var string
+      */
+    protected $codigo_seguranca_cartao;
     
     /**
       * $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -169,7 +181,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     
     /**
       * $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_terminal;
     
@@ -178,18 +190,6 @@ class AutorizacaoOnUsRequest implements ArrayAccess
       * @var string
       */
     protected $terminal_requisitante;
-    
-    /**
-      * $numero_parcelas N\u00C3\u00BAmero de Parcelas.
-      * @var int
-      */
-    protected $numero_parcelas;
-    
-    /**
-      * $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
-      * @var int
-      */
-    protected $codigo_seguranca_cartao;
     
 
     /**
@@ -201,15 +201,15 @@ class AutorizacaoOnUsRequest implements ArrayAccess
         
         if ($data != null) {
             $this->nsu_origem = $data["nsu_origem"];
+            $this->numero_parcelas = $data["numero_parcelas"];
             $this->codigo_processamento = $data["codigo_processamento"];
+            $this->codigo_seguranca_cartao = $data["codigo_seguranca_cartao"];
             $this->valor_transacao = $data["valor_transacao"];
             $this->numero_real_cartao = $data["numero_real_cartao"];
             $this->data_validade_cartao = $data["data_validade_cartao"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
             $this->data_hora_terminal = $data["data_hora_terminal"];
             $this->terminal_requisitante = $data["terminal_requisitante"];
-            $this->numero_parcelas = $data["numero_parcelas"];
-            $this->codigo_seguranca_cartao = $data["codigo_seguranca_cartao"];
         }
     }
     
@@ -235,6 +235,27 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     }
     
     /**
+     * Gets numero_parcelas
+     * @return int
+     */
+    public function getNumeroParcelas()
+    {
+        return $this->numero_parcelas;
+    }
+  
+    /**
+     * Sets numero_parcelas
+     * @param int $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+     * @return $this
+     */
+    public function setNumeroParcelas($numero_parcelas)
+    {
+        
+        $this->numero_parcelas = $numero_parcelas;
+        return $this;
+    }
+    
+    /**
      * Gets codigo_processamento
      * @return string
      */
@@ -252,6 +273,27 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     {
         
         $this->codigo_processamento = $codigo_processamento;
+        return $this;
+    }
+    
+    /**
+     * Gets codigo_seguranca_cartao
+     * @return string
+     */
+    public function getCodigoSegurancaCartao()
+    {
+        return $this->codigo_seguranca_cartao;
+    }
+  
+    /**
+     * Sets codigo_seguranca_cartao
+     * @param string $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setCodigoSegurancaCartao($codigo_seguranca_cartao)
+    {
+        
+        $this->codigo_seguranca_cartao = $codigo_seguranca_cartao;
         return $this;
     }
     
@@ -341,7 +383,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     
     /**
      * Gets data_hora_terminal
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraTerminal()
     {
@@ -350,7 +392,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets data_hora_terminal
-     * @param \DateTime $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+     * @param string $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
      * @return $this
      */
     public function setDataHoraTerminal($data_hora_terminal)
@@ -378,48 +420,6 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     {
         
         $this->terminal_requisitante = $terminal_requisitante;
-        return $this;
-    }
-    
-    /**
-     * Gets numero_parcelas
-     * @return int
-     */
-    public function getNumeroParcelas()
-    {
-        return $this->numero_parcelas;
-    }
-  
-    /**
-     * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmero de Parcelas.
-     * @return $this
-     */
-    public function setNumeroParcelas($numero_parcelas)
-    {
-        
-        $this->numero_parcelas = $numero_parcelas;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_seguranca_cartao
-     * @return int
-     */
-    public function getCodigoSegurancaCartao()
-    {
-        return $this->codigo_seguranca_cartao;
-    }
-  
-    /**
-     * Sets codigo_seguranca_cartao
-     * @param int $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setCodigoSegurancaCartao($codigo_seguranca_cartao)
-    {
-        
-        $this->codigo_seguranca_cartao = $codigo_seguranca_cartao;
         return $this;
     }
     

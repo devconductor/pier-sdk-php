@@ -52,7 +52,7 @@ class Transferencia implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'data_transferencia' => '\DateTime',
+        'data_transferencia' => 'string',
         'id_conta_origem' => 'int',
         'nome_pessoa_origem' => 'string',
         'id_conta_destino' => 'int',
@@ -131,7 +131,7 @@ class Transferencia implements ArrayAccess
     
     /**
       * $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-      * @var \DateTime
+      * @var string
       */
     protected $data_transferencia;
     
@@ -214,7 +214,7 @@ class Transferencia implements ArrayAccess
     
     /**
      * Gets data_transferencia
-     * @return \DateTime
+     * @return string
      */
     public function getDataTransferencia()
     {
@@ -223,7 +223,7 @@ class Transferencia implements ArrayAccess
   
     /**
      * Sets data_transferencia
-     * @param \DateTime $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
      * @return $this
      */
     public function setDataTransferencia($data_transferencia)

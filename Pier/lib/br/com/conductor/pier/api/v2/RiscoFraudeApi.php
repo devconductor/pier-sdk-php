@@ -187,7 +187,7 @@ class RiscoFraudeApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET12
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -195,15 +195,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET12($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET12WithHttpInfo
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -211,12 +211,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET12WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
         }
   
         // parse inputs
@@ -378,11 +378,11 @@ class RiscoFraudeApi
      * Lista todos os atendimentos
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
+     * @param string $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -399,11 +399,11 @@ class RiscoFraudeApi
      * Lista todos os atendimentos
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
+     * @param string $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -490,46 +490,46 @@ class RiscoFraudeApi
     }
     
     /**
-     * listarUsingGET14
+     * listarUsingGET18
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
      * @param int $id_conta Id Conta (required)
      * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET18($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET14WithHttpInfo
+     * listarUsingGET18WithHttpInfo
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
      * @param int $id_conta Id Conta (required)
      * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarUsingGET18WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET14');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET18');
         }
         // verify the required parameter 'confirmacao_fraude' is set
         if ($confirmacao_fraude === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET14');
+            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET18');
         }
   
         // parse inputs
@@ -801,10 +801,10 @@ class RiscoFraudeApi
      * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
      * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
      * @param int $flag_fila_fraude Flag fila fraude (optional)
      * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -825,10 +825,10 @@ class RiscoFraudeApi
      * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
      * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
      * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
      * @param int $flag_fila_fraude Flag fila fraude (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response

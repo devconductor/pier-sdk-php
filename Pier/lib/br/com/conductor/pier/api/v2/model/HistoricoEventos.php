@@ -52,7 +52,7 @@ class HistoricoEventos implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_historico' => 'int',
-        'data_historico' => '\DateTime',
+        'data_historico' => 'string',
         'tipo_historico' => 'string',
         'valor_anterior' => 'string',
         'valor_atribuido' => 'string'
@@ -119,7 +119,7 @@ class HistoricoEventos implements ArrayAccess
     
     /**
       * $data_historico Data do evento
-      * @var \DateTime
+      * @var string
       */
     protected $data_historico;
     
@@ -181,7 +181,7 @@ class HistoricoEventos implements ArrayAccess
     
     /**
      * Gets data_historico
-     * @return \DateTime
+     * @return string
      */
     public function getDataHistorico()
     {
@@ -190,7 +190,7 @@ class HistoricoEventos implements ArrayAccess
   
     /**
      * Sets data_historico
-     * @param \DateTime $data_historico Data do evento
+     * @param string $data_historico Data do evento
      * @return $this
      */
     public function setDataHistorico($data_historico)

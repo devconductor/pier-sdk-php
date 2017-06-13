@@ -51,15 +51,19 @@ class DadosCartO implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'flag_virtual' => 'int',
         'numero_cartao' => 'string',
-        'data_validade' => '\DateTime',
+        'data_validade' => 'string',
         'cvv2' => 'string',
         'nome_plastico' => 'string',
         'id_conta' => 'int',
         'id_cartao' => 'int',
-        'status' => 'int',
-        'status_descricao' => 'string',
-        'flag_provisorio' => 'int'
+        'numero_agencia' => 'int',
+        'numero_conta_corente' => 'string',
+        'id_status_conta' => 'int',
+        'status_conta' => 'string',
+        'id_status_cartao' => 'int',
+        'status_cartao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -71,15 +75,19 @@ class DadosCartO implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'flag_virtual' => 'flagVirtual',
         'numero_cartao' => 'numeroCartao',
         'data_validade' => 'dataValidade',
         'cvv2' => 'cvv2',
         'nome_plastico' => 'nomePlastico',
         'id_conta' => 'idConta',
         'id_cartao' => 'idCartao',
-        'status' => 'status',
-        'status_descricao' => 'statusDescricao',
-        'flag_provisorio' => 'flagProvisorio'
+        'numero_agencia' => 'numeroAgencia',
+        'numero_conta_corente' => 'numeroContaCorente',
+        'id_status_conta' => 'idStatusConta',
+        'status_conta' => 'statusConta',
+        'id_status_cartao' => 'idStatusCartao',
+        'status_cartao' => 'statusCartao'
     );
   
     static function attributeMap() {
@@ -91,15 +99,19 @@ class DadosCartO implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'flag_virtual' => 'setFlagVirtual',
         'numero_cartao' => 'setNumeroCartao',
         'data_validade' => 'setDataValidade',
         'cvv2' => 'setCvv2',
         'nome_plastico' => 'setNomePlastico',
         'id_conta' => 'setIdConta',
         'id_cartao' => 'setIdCartao',
-        'status' => 'setStatus',
-        'status_descricao' => 'setStatusDescricao',
-        'flag_provisorio' => 'setFlagProvisorio'
+        'numero_agencia' => 'setNumeroAgencia',
+        'numero_conta_corente' => 'setNumeroContaCorente',
+        'id_status_conta' => 'setIdStatusConta',
+        'status_conta' => 'setStatusConta',
+        'id_status_cartao' => 'setIdStatusCartao',
+        'status_cartao' => 'setStatusCartao'
     );
   
     static function setters() {
@@ -111,21 +123,31 @@ class DadosCartO implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'flag_virtual' => 'getFlagVirtual',
         'numero_cartao' => 'getNumeroCartao',
         'data_validade' => 'getDataValidade',
         'cvv2' => 'getCvv2',
         'nome_plastico' => 'getNomePlastico',
         'id_conta' => 'getIdConta',
         'id_cartao' => 'getIdCartao',
-        'status' => 'getStatus',
-        'status_descricao' => 'getStatusDescricao',
-        'flag_provisorio' => 'getFlagProvisorio'
+        'numero_agencia' => 'getNumeroAgencia',
+        'numero_conta_corente' => 'getNumeroContaCorente',
+        'id_status_conta' => 'getIdStatusConta',
+        'status_conta' => 'getStatusConta',
+        'id_status_cartao' => 'getIdStatusCartao',
+        'status_cartao' => 'getStatusCartao'
     );
   
     static function getters() {
         return self::$getters;
     }
 
+    
+    /**
+      * $flag_virtual 
+      * @var int
+      */
+    protected $flag_virtual;
     
     /**
       * $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o.
@@ -135,7 +157,7 @@ class DadosCartO implements ArrayAccess
     
     /**
       * $data_validade Data de validade.
-      * @var \DateTime
+      * @var string
       */
     protected $data_validade;
     
@@ -164,22 +186,40 @@ class DadosCartO implements ArrayAccess
     protected $id_cartao;
     
     /**
-      * $status Status da conta do portador.
+      * $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
       * @var int
       */
-    protected $status;
+    protected $numero_agencia;
     
     /**
-      * $status_descricao Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+      * $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
       * @var string
       */
-    protected $status_descricao;
+    protected $numero_conta_corente;
     
     /**
-      * $flag_provisorio Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
+      * $id_status_conta Status da conta do portador.
       * @var int
       */
-    protected $flag_provisorio;
+    protected $id_status_conta;
+    
+    /**
+      * $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+      * @var string
+      */
+    protected $status_conta;
+    
+    /**
+      * $id_status_cartao Status do cart\u00C3\u00A3o.
+      * @var int
+      */
+    protected $id_status_cartao;
+    
+    /**
+      * $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+      * @var string
+      */
+    protected $status_cartao;
     
 
     /**
@@ -190,16 +230,41 @@ class DadosCartO implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->flag_virtual = $data["flag_virtual"];
             $this->numero_cartao = $data["numero_cartao"];
             $this->data_validade = $data["data_validade"];
             $this->cvv2 = $data["cvv2"];
             $this->nome_plastico = $data["nome_plastico"];
             $this->id_conta = $data["id_conta"];
             $this->id_cartao = $data["id_cartao"];
-            $this->status = $data["status"];
-            $this->status_descricao = $data["status_descricao"];
-            $this->flag_provisorio = $data["flag_provisorio"];
+            $this->numero_agencia = $data["numero_agencia"];
+            $this->numero_conta_corente = $data["numero_conta_corente"];
+            $this->id_status_conta = $data["id_status_conta"];
+            $this->status_conta = $data["status_conta"];
+            $this->id_status_cartao = $data["id_status_cartao"];
+            $this->status_cartao = $data["status_cartao"];
         }
+    }
+    
+    /**
+     * Gets flag_virtual
+     * @return int
+     */
+    public function getFlagVirtual()
+    {
+        return $this->flag_virtual;
+    }
+  
+    /**
+     * Sets flag_virtual
+     * @param int $flag_virtual 
+     * @return $this
+     */
+    public function setFlagVirtual($flag_virtual)
+    {
+        
+        $this->flag_virtual = $flag_virtual;
+        return $this;
     }
     
     /**
@@ -225,7 +290,7 @@ class DadosCartO implements ArrayAccess
     
     /**
      * Gets data_validade
-     * @return \DateTime
+     * @return string
      */
     public function getDataValidade()
     {
@@ -234,7 +299,7 @@ class DadosCartO implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param \DateTime $data_validade Data de validade.
+     * @param string $data_validade Data de validade.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -329,65 +394,128 @@ class DadosCartO implements ArrayAccess
     }
     
     /**
-     * Gets status
+     * Gets numero_agencia
      * @return int
      */
-    public function getStatus()
+    public function getNumeroAgencia()
     {
-        return $this->status;
+        return $this->numero_agencia;
     }
   
     /**
-     * Sets status
-     * @param int $status Status da conta do portador.
+     * Sets numero_agencia
+     * @param int $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
      * @return $this
      */
-    public function setStatus($status)
+    public function setNumeroAgencia($numero_agencia)
     {
         
-        $this->status = $status;
+        $this->numero_agencia = $numero_agencia;
         return $this;
     }
     
     /**
-     * Gets status_descricao
+     * Gets numero_conta_corente
      * @return string
      */
-    public function getStatusDescricao()
+    public function getNumeroContaCorente()
     {
-        return $this->status_descricao;
+        return $this->numero_conta_corente;
     }
   
     /**
-     * Sets status_descricao
-     * @param string $status_descricao Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+     * Sets numero_conta_corente
+     * @param string $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
      * @return $this
      */
-    public function setStatusDescricao($status_descricao)
+    public function setNumeroContaCorente($numero_conta_corente)
     {
         
-        $this->status_descricao = $status_descricao;
+        $this->numero_conta_corente = $numero_conta_corente;
         return $this;
     }
     
     /**
-     * Gets flag_provisorio
+     * Gets id_status_conta
      * @return int
      */
-    public function getFlagProvisorio()
+    public function getIdStatusConta()
     {
-        return $this->flag_provisorio;
+        return $this->id_status_conta;
     }
   
     /**
-     * Sets flag_provisorio
-     * @param int $flag_provisorio Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
+     * Sets id_status_conta
+     * @param int $id_status_conta Status da conta do portador.
      * @return $this
      */
-    public function setFlagProvisorio($flag_provisorio)
+    public function setIdStatusConta($id_status_conta)
     {
         
-        $this->flag_provisorio = $flag_provisorio;
+        $this->id_status_conta = $id_status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets status_conta
+     * @return string
+     */
+    public function getStatusConta()
+    {
+        return $this->status_conta;
+    }
+  
+    /**
+     * Sets status_conta
+     * @param string $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+     * @return $this
+     */
+    public function setStatusConta($status_conta)
+    {
+        
+        $this->status_conta = $status_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_status_cartao
+     * @return int
+     */
+    public function getIdStatusCartao()
+    {
+        return $this->id_status_cartao;
+    }
+  
+    /**
+     * Sets id_status_cartao
+     * @param int $id_status_cartao Status do cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setIdStatusCartao($id_status_cartao)
+    {
+        
+        $this->id_status_cartao = $id_status_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets status_cartao
+     * @return string
+     */
+    public function getStatusCartao()
+    {
+        return $this->status_cartao;
+    }
+  
+    /**
+     * Sets status_cartao
+     * @param string $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setStatusCartao($status_cartao)
+    {
+        
+        $this->status_cartao = $status_cartao;
         return $this;
     }
     

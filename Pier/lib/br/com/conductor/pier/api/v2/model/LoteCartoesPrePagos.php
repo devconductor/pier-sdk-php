@@ -58,7 +58,7 @@ class LoteCartoesPrePagos implements ArrayAccess
         'id_imagem' => 'int',
         'id_endereco' => 'int',
         'quantidade' => 'int',
-        'data_cadastro' => '\DateTime',
+        'data_cadastro' => 'string',
         'usuario_cadastro' => 'string',
         'status_processamento' => 'int'
     );
@@ -175,7 +175,7 @@ class LoteCartoesPrePagos implements ArrayAccess
     
     /**
       * $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastro;
     
@@ -362,7 +362,7 @@ class LoteCartoesPrePagos implements ArrayAccess
     
     /**
      * Gets data_cadastro
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastro()
     {
@@ -371,7 +371,7 @@ class LoteCartoesPrePagos implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param \DateTime $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+     * @param string $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
      * @return $this
      */
     public function setDataCadastro($data_cadastro)

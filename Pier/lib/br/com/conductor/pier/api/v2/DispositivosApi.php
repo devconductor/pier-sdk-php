@@ -282,43 +282,43 @@ class DispositivosApi
     }
     
     /**
-     * listarUsingGET5
+     * listarUsingGET7
      *
      * Lista os dispositivos cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $token Token do Dispositivo (optional)
      * @param int $id_usuario Identificador do Usu\u00C3\u00A1rio (optional)
      * @param int $id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param \DateTime $data_criacao Apresenta a data e em que o registro foi criado. (optional)
-     * @param \DateTime $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
+     * @param string $data_criacao Apresenta a data e em que o registro foi criado. (optional)
+     * @param string $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageDispositivos
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET7($page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET5WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * Lista os dispositivos cadastrados
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $token Token do Dispositivo (optional)
      * @param int $id_usuario Identificador do Usu\u00C3\u00A1rio (optional)
      * @param int $id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param \DateTime $data_criacao Apresenta a data e em que o registro foi criado. (optional)
-     * @param \DateTime $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
+     * @param string $data_criacao Apresenta a data e em que o registro foi criado. (optional)
+     * @param string $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDispositivos, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET7WithHttpInfo($page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
         
   

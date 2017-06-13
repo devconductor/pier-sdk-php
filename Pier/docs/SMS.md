@@ -15,10 +15,10 @@ Name | Type | Description | Notes
 **operadora** | **string** | Apresenta a operadora do celular a ser eviado o SMS | 
 **conteudo** | **string** | Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado | 
 **resposta** | **string** | Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada | 
-**data_agendamento** | [**\DateTime**](\DateTime.md) | Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o | 
+**data_agendamento** | **string** | Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o | 
 **quantidade_tentativas_envio** | **int** | Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o | 
-**data_inclusao** | [**\DateTime**](\DateTime.md) | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | 
-**data_alteracao_status** | [**\DateTime**](\DateTime.md) | Apresenta a data e em que o Stattjus do registro foi modificado | 
+**data_inclusao** | **string** | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | 
+**data_alteracao_status** | **string** | Apresenta a data e em que o Stattjus do registro foi modificado | 
 **protocolo** | **string** | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

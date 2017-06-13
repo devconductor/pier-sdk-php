@@ -81,8 +81,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$data_envio = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi enviado para o dispositivo.
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$data_envio = "data_envio_example"; // string | Apresenta a data e em que o registro foi enviado para o dispositivo.
 $tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
 $status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
 $plataforma = "plataforma_example"; // string | Plataforma de Push notifications.
@@ -102,8 +102,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **data_envio** | **\DateTime**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **data_envio** | **string**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
  **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **plataforma** | **string**| Plataforma de Push notifications. | [optional] 
@@ -138,8 +138,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-$data_inclusao = new \DateTime(); // \DateTime | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$data_inclusao = "data_inclusao_example"; // string | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
 $tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
 $status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
 $operadora = "operadora_example"; // string | Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
@@ -160,8 +160,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **data_inclusao** | **\DateTime**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **data_inclusao** | **string**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
  **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **operadora** | **string**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 

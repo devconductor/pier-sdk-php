@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
 [**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
 [**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET22**](UsuariosApi.md#consultarUsingGET22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+[**consultarUsingGET25**](UsuariosApi.md#consultarUsingGET25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 [**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listarUsingGET24**](UsuariosApi.md#listarUsingGET24) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**listarUsingGET29**](UsuariosApi.md#listarUsingGET29) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST12**](UsuariosApi.md#salvarUsingPOST12) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
+[**salvarUsingPOST13**](UsuariosApi.md#salvarUsingPOST13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET22($id)
+# **consultarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET25($id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 
@@ -172,10 +172,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET22($id);
+    $result = $api_instance->consultarUsingGET25($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->consultarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->consultarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -246,8 +246,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\PageUsuarios listarUsingGET24($page, $limit, $nome, $cpf, $email, $status)
+# **listarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\PageUsuarios listarUsingGET29($page, $limit, $nome, $cpf, $email, $status)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -260,17 +260,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $nome = "nome_example"; // string | Nome do Usuario
 $cpf = "cpf_example"; // string | CPF do Usuario
 $email = "email_example"; // string | Email do Usuario
 $status = "status_example"; // string | Status do Usuario
 
 try { 
-    $result = $api_instance->listarUsingGET24($page, $limit, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET29($page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->listarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->listarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -280,7 +280,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **string**| Nome do Usuario | [optional] 
  **cpf** | **string**| CPF do Usuario | [optional] 
  **email** | **string**| Email do Usuario | [optional] 
@@ -346,8 +346,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST12**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST12($persist)
+# **salvarUsingPOST13**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST13($persist)
 
 Cadastra Usu\u00C3\u00A1rio
 
@@ -362,10 +362,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST12($persist);
+    $result = $api_instance->salvarUsingPOST13($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
 }
 ?>
 ```

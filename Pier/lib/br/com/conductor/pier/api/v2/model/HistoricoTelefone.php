@@ -55,7 +55,7 @@ class HistoricoTelefone implements ArrayAccess
         'telefone' => 'string',
         'id_tipo_telefone' => 'int',
         'tipo_telefone' => 'string',
-        'data_modificacao' => '\DateTime'
+        'data_modificacao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -137,7 +137,7 @@ class HistoricoTelefone implements ArrayAccess
     
     /**
       * $data_modificacao Apresenta a data que o telefone fora alterado.
-      * @var \DateTime
+      * @var string
       */
     protected $data_modificacao;
     
@@ -244,7 +244,7 @@ class HistoricoTelefone implements ArrayAccess
     
     /**
      * Gets data_modificacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataModificacao()
     {
@@ -253,7 +253,7 @@ class HistoricoTelefone implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param \DateTime $data_modificacao Apresenta a data que o telefone fora alterado.
+     * @param string $data_modificacao Apresenta a data que o telefone fora alterado.
      * @return $this
      */
     public function setDataModificacao($data_modificacao)

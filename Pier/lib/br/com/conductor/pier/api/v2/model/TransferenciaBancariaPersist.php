@@ -51,9 +51,9 @@ class TransferenciaBancariaPersist implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_compra' => '\DateTime',
-        'proximo_vencimento_padrao' => '\DateTime',
-        'proximo_vencimento_real' => '\DateTime',
+        'data_compra' => 'string',
+        'proximo_vencimento_padrao' => 'string',
+        'proximo_vencimento_real' => 'string',
         'valor_compra' => 'Number',
         'nome_favorecido' => 'string',
         'documento_favorecido' => 'string',
@@ -141,19 +141,19 @@ class TransferenciaBancariaPersist implements ArrayAccess
     
     /**
       * $data_compra Data da transfer\u00C3\u00AAncia
-      * @var \DateTime
+      * @var string
       */
     protected $data_compra;
     
     /**
       * $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-      * @var \DateTime
+      * @var string
       */
     protected $proximo_vencimento_padrao;
     
     /**
       * $proximo_vencimento_real Data do vencimento real da fatura
-      * @var \DateTime
+      * @var string
       */
     protected $proximo_vencimento_real;
     
@@ -237,7 +237,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
     
     /**
      * Gets data_compra
-     * @return \DateTime
+     * @return string
      */
     public function getDataCompra()
     {
@@ -246,7 +246,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param \DateTime $data_compra Data da transfer\u00C3\u00AAncia
+     * @param string $data_compra Data da transfer\u00C3\u00AAncia
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -258,7 +258,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
     
     /**
      * Gets proximo_vencimento_padrao
-     * @return \DateTime
+     * @return string
      */
     public function getProximoVencimentoPadrao()
     {
@@ -267,7 +267,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets proximo_vencimento_padrao
-     * @param \DateTime $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+     * @param string $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
      * @return $this
      */
     public function setProximoVencimentoPadrao($proximo_vencimento_padrao)
@@ -279,7 +279,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
     
     /**
      * Gets proximo_vencimento_real
-     * @return \DateTime
+     * @return string
      */
     public function getProximoVencimentoReal()
     {
@@ -288,7 +288,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets proximo_vencimento_real
-     * @param \DateTime $proximo_vencimento_real Data do vencimento real da fatura
+     * @param string $proximo_vencimento_real Data do vencimento real da fatura
      * @return $this
      */
     public function setProximoVencimentoReal($proximo_vencimento_real)

@@ -55,7 +55,7 @@ class HistoricoImpressaoCartao implements ArrayAccess
         'id_cartao' => 'int',
         'id_status_impressao_cartao' => 'int',
         'mensagem_historico' => 'string',
-        'data_historico' => '\DateTime'
+        'data_historico' => 'string'
     );
   
     static function swaggerTypes() {
@@ -137,7 +137,7 @@ class HistoricoImpressaoCartao implements ArrayAccess
     
     /**
       * $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-      * @var \DateTime
+      * @var string
       */
     protected $data_historico;
     
@@ -244,7 +244,7 @@ class HistoricoImpressaoCartao implements ArrayAccess
     
     /**
      * Gets data_historico
-     * @return \DateTime
+     * @return string
      */
     public function getDataHistorico()
     {
@@ -253,7 +253,7 @@ class HistoricoImpressaoCartao implements ArrayAccess
   
     /**
      * Sets data_historico
-     * @param \DateTime $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+     * @param string $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
      * @return $this
      */
     public function setDataHistorico($data_historico)

@@ -55,7 +55,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_fantasia' => 'string',
         'cnpj' => 'string',
         'inscricao_estadual' => 'string',
-        'data_abertura_empresa' => '\DateTime',
+        'data_abertura_empresa' => 'string',
         'id_origem_comercial' => 'int',
         'id_produto' => 'int',
         'numero_agencia' => 'int',
@@ -177,7 +177,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
       * $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
-      * @var \DateTime
+      * @var string
       */
     protected $data_abertura_empresa;
     
@@ -354,7 +354,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets data_abertura_empresa
-     * @return \DateTime
+     * @return string
      */
     public function getDataAberturaEmpresa()
     {
@@ -363,7 +363,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets data_abertura_empresa
-     * @param \DateTime $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+     * @param string $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
      * @return $this
      */
     public function setDataAberturaEmpresa($data_abertura_empresa)

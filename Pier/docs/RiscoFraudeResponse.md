@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **id_conta** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id) | [optional] 
 **id_cartao** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) | [optional] 
 **id_transacao** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id) | [optional] 
-**data_transacao** | [**\DateTime**](\DateTime.md) | Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada | [optional] 
+**data_transacao** | **string** | Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada | [optional] 
 **valor_transacao** | [**Number**](Number.md) | Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude | [optional] 
 **nome_estabelecimento** | **string** | Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude | [optional] 
 
