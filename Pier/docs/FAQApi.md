@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultarUsingGET7**](FAQApi.md#consultarUsingGET7) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET10**](FAQApi.md#listarUsingGET10) | **GET** /api/faqs | Lista FAQs
+[**listarUsingGET11**](FAQApi.md#listarUsingGET11) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\FAQ adicionarUsingPOST($pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+> \br.com.conductor.pier.api.v2.model\FaqResponse adicionarUsingPOST($pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Adiciona uma nova FAQ
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\FAQ**](FAQ.md)
+[**\br.com.conductor.pier.api.v2.model\FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarUsingPUT2**
-> \br.com.conductor.pier.api.v2.model\FAQ alterarUsingPUT2($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+> \br.com.conductor.pier.api.v2.model\FaqResponse alterarUsingPUT2($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Alterar FAQ
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\FAQ**](FAQ.md)
+[**\br.com.conductor.pier.api.v2.model\FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\FAQ consultarUsingGET7($id)
+> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET7($id)
 
 Consultar FAQ por id
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\FAQ**](FAQ.md)
+[**\br.com.conductor.pier.api.v2.model\FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -167,8 +167,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PageFaqs listarUsingGET10($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+# **listarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\PageFaqResponse listarUsingGET11($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Lista FAQs
 
@@ -191,10 +191,10 @@ $categoria = "categoria_example"; // string | Categoria de assunto do qual a FAQ
 $status = "status_example"; // string | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
 
 try { 
-    $result = $api_instance->listarUsingGET10($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+    $result = $api_instance->listarUsingGET11($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->listarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->listarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageFaqs**](PageFaqs.md)
+[**\br.com.conductor.pier.api.v2.model\PageFaqResponse**](PageFaqResponse.md)
 
 ### Authorization
 

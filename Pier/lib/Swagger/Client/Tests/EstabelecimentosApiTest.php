@@ -86,22 +86,22 @@ class EstabelecimentosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET22
-     *
-     * Lista os Terminais cadastrados no Emissor
-     *
-     */
-    public function test_listarUsingGET22() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET9
+     * Test case for listarUsingGET10
      *
      * Lista Estabelecimentos
      *
      */
-    public function test_listarUsingGET9() {
+    public function test_listarUsingGET10() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET23
+     *
+     * Lista os Terminais cadastrados no Emissor
+     *
+     */
+    public function test_listarUsingGET23() {
 
     }
     

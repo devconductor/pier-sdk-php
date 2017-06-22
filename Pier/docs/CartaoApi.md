@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET4**](CartaoApi.md#listarUsingGET4) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listarUsingGET5**](CartaoApi.md#listarUsingGET5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarStatusImpressaoUsingPUT**
-> \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao alterarStatusImpressaoUsingPUT($id, $id_status_impressao)
+> \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT($id, $id_status_impressao)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartao**](HistoricoImpressaoCartao.md)
+[**\br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse**](HistoricoImpressaoCartaoResponse.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **atribuirPessoaUsingPUT**
-> \br.com.conductor.pier.api.v2.model\Cartao atribuirPessoaUsingPUT($id, $id_pessoa)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse atribuirPessoaUsingPUT($id, $id_pessoa)
 
 Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bloquearUsingPUT**
-> \br.com.conductor.pier.api.v2.model\Cartao bloquearUsingPUT($id, $id_status, $observacao)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse bloquearUsingPUT($id, $id_status, $observacao)
 
 Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarDadosReaisCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\DadosCartO consultarDadosReaisCartaoUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\DadosCartaoResponse consultarDadosReaisCartaoUsingGET($id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\DadosCartO**](DadosCartO.md)
+[**\br.com.conductor.pier.api.v2.model\DadosCartaoResponse**](DadosCartaoResponse.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarLimiteDisponibilidadeUsingGET**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade consultarLimiteDisponibilidadeUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET($id)
 
 Apresenta os limites do Portador do Cart\u00C3\u00A3o
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade**](LimiteDisponibilidade.md)
+[**\br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarLotesCartoesPrePagosUsingGET**
-> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos consultarLotesCartoesPrePagosUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET($id)
 
 Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+[**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarPortadorUsingGET**
-> \br.com.conductor.pier.api.v2.model\Portador consultarPortadorUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\PortadorResponse consultarPortadorUsingGET($id)
 
 Apresenta os dados do Portador do Cart\u00C3\u00A3o
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Portador**](Portador.md)
+[**\br.com.conductor.pier.api.v2.model\PortadorResponse**](PortadorResponse.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\CartaoDetalhado consultarUsingGET3($id)
+> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET3($id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\CartaoDetalhado**](CartaoDetalhado.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoDetalheResponse**](CartaoDetalheResponse.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desbloquearSenhaIncorretaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Cartao desbloquearSenhaIncorretaUsingPOST($id)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearSenhaIncorretaUsingPOST($id)
 
 Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -535,7 +535,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desbloquearUsingPUT**
-> \br.com.conductor.pier.api.v2.model\Cartao desbloquearUsingPUT($id)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearUsingPUT($id)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -580,7 +580,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarLotesCartoesPrePagosUsingPOST**
-> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes)
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes)
 
 Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+[**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
 
 ### Authorization
 
@@ -635,7 +635,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarNovaViaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Cartao gerarNovaViaUsingPOST($id)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse gerarNovaViaUsingPOST($id)
 
 Gerar uma nova via de Cart\u00C3\u00A3o
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Cartao**](Cartao.md)
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -744,8 +744,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET4**
-> \br.com.conductor.pier.api.v2.model\PageCartoes listarUsingGET4($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
+# **listarUsingGET5**
+> \br.com.conductor.pier.api.v2.model\PageCartaoResponse listarUsingGET5($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -779,10 +779,10 @@ $codigo_desbloqueio = "codigo_desbloqueio_example"; // string | Apresenta um c\u
 $sequencial_cartao = 56; // int | N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET4($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+    $result = $api_instance->listarUsingGET5($page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->listarUsingGET4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->listarUsingGET5: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCartoes**](PageCartoes.md)
+[**\br.com.conductor.pier.api.v2.model\PageCartaoResponse**](PageCartaoResponse.md)
 
 ### Authorization
 
@@ -828,7 +828,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDadosImpressosBandeiradoUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartao validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
 
 Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 
@@ -865,7 +865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+[**\br.com.conductor.pier.api.v2.model\ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -879,7 +879,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDadosImpressosNaoBandeiradoUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartao validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
 
 Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 
@@ -916,7 +916,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+[**\br.com.conductor.pier.api.v2.model\ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -930,7 +930,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDe55CartaoMastercardUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartao validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma)
 
 Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
 
@@ -963,7 +963,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+[**\br.com.conductor.pier.api.v2.model\ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -977,7 +977,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarSenhaUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaSenhaCartao validarSenhaUsingGET($id, $senha)
+> \br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse validarSenhaUsingGET($id, $senha)
 
 Permite validar a senha de um Cart\u00C3\u00A3o
 
@@ -1010,7 +1010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ValidaSenhaCartao**](ValidaSenhaCartao.md)
+[**\br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse**](ValidaSenhaCartaoResponse.md)
 
 ### Authorization
 
@@ -1024,7 +1024,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarTarjaUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartao validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2)
 
 Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 
@@ -1059,7 +1059,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ValidaCartao**](ValidaCartao.md)
+[**\br.com.conductor.pier.api.v2.model\ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 

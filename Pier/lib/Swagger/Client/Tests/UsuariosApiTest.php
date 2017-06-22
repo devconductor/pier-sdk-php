@@ -116,12 +116,12 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET29
+     * Test case for listarUsingGET30
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
      */
-    public function test_listarUsingGET29() {
+    public function test_listarUsingGET30() {
 
     }
     

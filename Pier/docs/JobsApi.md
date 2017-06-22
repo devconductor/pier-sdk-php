@@ -7,12 +7,12 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobsApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT**](JobsApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobsApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET11**](JobsApi.md#listarUsingGET11) | **GET** /api/jobs | Listar Jobs
+[**listarUsingGET12**](JobsApi.md#listarUsingGET12) | **GET** /api/jobs | Listar Jobs
 [**salvarUsingPOST5**](JobsApi.md#salvarUsingPOST5) | **POST** /api/jobs | Cadastrar Job
 
 
 # **ativarJobUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Job ativarJobUsingPOST($id)
+> \br.com.conductor.pier.api.v2.model\JobResponse ativarJobUsingPOST($id)
 
 Ativar Job
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Job**](Job.md)
+[**\br.com.conductor.pier.api.v2.model\JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **atualizarUsingPUT**
-> \br.com.conductor.pier.api.v2.model\Job atualizarUsingPUT($id, $descricao, $cron, $groovy)
+> \br.com.conductor.pier.api.v2.model\JobResponse atualizarUsingPUT($id, $descricao, $cron, $groovy)
 
 Atualizar Job
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Job**](Job.md)
+[**\br.com.conductor.pier.api.v2.model\JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desativarJobUsingPOST**
-> \br.com.conductor.pier.api.v2.model\Job desativarJobUsingPOST($id)
+> \br.com.conductor.pier.api.v2.model\JobResponse desativarJobUsingPOST($id)
 
 Desativar Job
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Job**](Job.md)
+[**\br.com.conductor.pier.api.v2.model\JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -152,8 +152,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\PageJob listarUsingGET11($groovy, $descricao, $cron, $status, $page, $limit)
+# **listarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET12($groovy, $descricao, $cron, $status, $page, $limit)
 
 Listar Jobs
 
@@ -173,10 +173,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET11($groovy, $descricao, $cron, $status, $page, $limit);
+    $result = $api_instance->listarUsingGET12($groovy, $descricao, $cron, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobsApi->listarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobsApi->listarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageJob**](PageJob.md)
+[**\br.com.conductor.pier.api.v2.model\PageJobResponse**](PageJobResponse.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\Job salvarUsingPOST5($descricao, $cron, $groovy)
+> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST5($descricao, $cron, $groovy)
 
 Cadastrar Job
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Job**](Job.md)
+[**\br.com.conductor.pier.api.v2.model\JobResponse**](JobResponse.md)
 
 ### Authorization
 

@@ -77,7 +77,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'string',
         'cnpj' => 'string',
         'email' => 'string',
-        'tefefones' => '\br.com.conductor.pier.api.v2.model\Telefone[]'
+        'tefefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
     );
   
     static function swaggerTypes() {
@@ -357,7 +357,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     
     /**
       * $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
-      * @var \br.com.conductor.pier.api.v2.model\Telefone[]
+      * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
       */
     protected $tefefones;
     
@@ -948,7 +948,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     
     /**
      * Gets tefefones
-     * @return \br.com.conductor.pier.api.v2.model\Telefone[]
+     * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
      */
     public function getTefefones()
     {
@@ -957,7 +957,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets tefefones
-     * @param \br.com.conductor.pier.api.v2.model\Telefone[] $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
      * @return $this
      */
     public function setTefefones($tefefones)

@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET16**](EstabelecimentosApi.md#consultarUsingGET16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultarUsingGET6**](EstabelecimentosApi.md#consultarUsingGET6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET22**](EstabelecimentosApi.md#listarUsingGET22) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listarUsingGET9**](EstabelecimentosApi.md#listarUsingGET9) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 # **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\Terminal consultarUsingGET16($id)
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET16($id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Terminal**](Terminal.md)
+[**\br.com.conductor.pier.api.v2.model\TerminalResponse**](TerminalResponse.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\Estabelecimento consultarUsingGET6($id)
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET6($id)
 
 Consultar estabelecimento por id
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Estabelecimento**](Estabelecimento.md)
+[**\br.com.conductor.pier.api.v2.model\EstabelecimentoResponse**](EstabelecimentoResponse.md)
 
 ### Authorization
 
@@ -100,63 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\PageTerminal listarUsingGET22($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
-
-Lista os Terminais cadastrados no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi();
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-$terminal = "terminal_example"; // string | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-$numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-$id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-
-try { 
-    $result = $api_instance->listarUsingGET22($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->listarUsingGET22: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
- **terminal** | **string**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
- **numero_estabelecimento** | **int**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
- **id_estabelecimento** | **int**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PageTerminal**](PageTerminal.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentos listarUsingGET9($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
+# **listarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET10($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
 
 Lista Estabelecimentos
 
@@ -191,10 +136,10 @@ $flag_cartao_digitado = 56; // int | Indica se o estabelecimento poder\u00C3\u00
 $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 
 try { 
-    $result = $api_instance->listarUsingGET9($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+    $result = $api_instance->listarUsingGET10($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->listarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentosApi->listarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -227,7 +172,62 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageEstabelecimentos**](PageEstabelecimentos.md)
+[**\br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse**](PageEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET23($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+
+Lista os Terminais cadastrados no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+$terminal = "terminal_example"; // string | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+$numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+$id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+
+try { 
+    $result = $api_instance->listarUsingGET23($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EstabelecimentosApi->listarUsingGET23: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
+ **terminal** | **string**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
+ **numero_estabelecimento** | **int**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
+ **id_estabelecimento** | **int**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageTerminalResponse**](PageTerminalResponse.md)
 
 ### Authorization
 

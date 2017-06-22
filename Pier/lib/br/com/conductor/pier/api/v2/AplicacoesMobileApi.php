@@ -98,7 +98,7 @@ class AplicacoesMobileApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobileUpdate $update update (required)
-     * @return \br.com.conductor.pier.api.v2.model\AplicacaoMobile
+     * @return \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function atualizarUsingPUT($id, $update)
@@ -115,7 +115,7 @@ class AplicacoesMobileApi
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobileUpdate $update update (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AplicacaoMobile, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function atualizarUsingPUTWithHttpInfo($id, $update)
@@ -175,19 +175,19 @@ class AplicacoesMobileApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AplicacaoMobile'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AplicacaoMobile', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AplicacaoMobile', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -205,7 +205,7 @@ class AplicacoesMobileApi
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
      * @param int $id_plataforma_mobile Identificador da Plataforma Mobile (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageAplicacoesMobile
+     * @return \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarUsingGET($page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
@@ -224,7 +224,7 @@ class AplicacoesMobileApi
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
      * @param int $id_plataforma_mobile Identificador da Plataforma Mobile (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageAplicacoesMobile, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
@@ -280,19 +280,19 @@ class AplicacoesMobileApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageAplicacoesMobile'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageAplicacoesMobile', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageAplicacoesMobile', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -307,7 +307,7 @@ class AplicacoesMobileApi
      * Cadastra Aplicacao Mobile
      *
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobilePersist $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\AplicacaoMobile
+     * @return \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST($persist)
@@ -323,7 +323,7 @@ class AplicacoesMobileApi
      * Cadastra Aplicacao Mobile
      *
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobilePersist $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AplicacaoMobile, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOSTWithHttpInfo($persist)
@@ -371,19 +371,19 @@ class AplicacoesMobileApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AplicacaoMobile'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AplicacaoMobile', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AplicacaoMobile', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

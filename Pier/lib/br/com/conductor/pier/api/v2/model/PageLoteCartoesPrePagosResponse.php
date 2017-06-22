@@ -51,7 +51,7 @@ class PageLoteCartoesPrePagosResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PageLoteCartoesPrePagosResponse implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos[]
+      * @var \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PageLoteCartoesPrePagosResponse implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos[]
+     * @return \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PageLoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse[] $content 
      * @return $this
      */
     public function setContent($content)

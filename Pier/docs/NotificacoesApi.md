@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **atualizarSMSUsingPOST**
-> \br.com.conductor.pier.api.v2.model\SMS atualizarSMSUsingPOST($nsu, $status, $data, $texto_status, $operadora)
+> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse atualizarSMSUsingPOST($nsu, $status, $data, $texto_status, $operadora)
 
 Atualizar SMS
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\SMS**](SMS.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarPushUsingGET**
-> \br.com.conductor.pier.api.v2.model\PagePush listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo)
+> \br.com.conductor.pier.api.v2.model\PagePushResponse listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo)
 
 Listar Push
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PagePush**](PagePush.md)
+[**\br.com.conductor.pier.api.v2.model\PagePushResponse**](PagePushResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarSMSUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageSMS listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu)
+> \br.com.conductor.pier.api.v2.model\PageSMSResponse listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu)
 
 Listar SMS
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageSMS**](PageSMS.md)
+[**\br.com.conductor.pier.api.v2.model\PageSMSResponse**](PageSMSResponse.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **responderSMSUsingPOST**
-> \br.com.conductor.pier.api.v2.model\SMS responderSMSUsingPOST($nsu, $data, $resposta)
+> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse responderSMSUsingPOST($nsu, $data, $resposta)
 
 Responder SMS
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\SMS**](SMS.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarPushFCMUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse salvarPushFCMUsingPOST($push_persists)
+> \br.com.conductor.pier.api.v2.model\NotificacaoResponse salvarPushFCMUsingPOST($push_persists)
 
 Enviar Push FCM
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarPushGCMUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse salvarPushGCMUsingPOST($push_persists)
+> \br.com.conductor.pier.api.v2.model\NotificacaoResponse salvarPushGCMUsingPOST($push_persists)
 
 Enviar Push GCM
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarPushUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse salvarPushUsingPOST($push_persists)
+> \br.com.conductor.pier.api.v2.model\NotificacaoResponse salvarPushUsingPOST($push_persists)
 
 Enviar Push APNS
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -368,7 +368,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarSMSUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse salvarSMSUsingPOST($lista_sms)
+> \br.com.conductor.pier.api.v2.model\NotificacaoResponse salvarSMSUsingPOST($lista_sms)
 
 Enviar SMS
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**\br.com.conductor.pier.api.v2.model\NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 

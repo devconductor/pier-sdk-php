@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](CadastrosGeraisApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarOrigemComercialUsingGET**](CadastrosGeraisApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarTaxaAntecipacaoUsingGET**](CadastrosGeraisApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**consultarUsingGET**](CadastrosGeraisApi.md#consultarUsingGET) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultarUsingGET1**](CadastrosGeraisApi.md#consultarUsingGET1) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultarUsingGET10**](CadastrosGeraisApi.md#consultarUsingGET10) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
 [**consultarUsingGET11**](CadastrosGeraisApi.md#consultarUsingGET11) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
@@ -30,17 +31,19 @@ Method | HTTP request | Description
 [**listarNaturezasOcupacoesUsingGET**](CadastrosGeraisApi.md#listarNaturezasOcupacoesUsingGET) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProfissoesUsingGET**](CadastrosGeraisApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listarUsingGET13**](CadastrosGeraisApi.md#listarUsingGET13) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET16**](CadastrosGeraisApi.md#listarUsingGET16) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET1**](CadastrosGeraisApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET15**](CadastrosGeraisApi.md#listarUsingGET15) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET18**](CadastrosGeraisApi.md#listarUsingGET18) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listarUsingGET2**](CadastrosGeraisApi.md#listarUsingGET2) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET21**](CadastrosGeraisApi.md#listarUsingGET21) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET23**](CadastrosGeraisApi.md#listarUsingGET23) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET25**](CadastrosGeraisApi.md#listarUsingGET25) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET22**](CadastrosGeraisApi.md#listarUsingGET22) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET24**](CadastrosGeraisApi.md#listarUsingGET24) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET26**](CadastrosGeraisApi.md#listarUsingGET26) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+[**salvarUsingPOST1**](CadastrosGeraisApi.md#salvarUsingPOST1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 [**salvarUsingPOST10**](CadastrosGeraisApi.md#salvarUsingPOST10) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 [**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 [**salvarUsingPOST7**](CadastrosGeraisApi.md#salvarUsingPOST7) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
@@ -48,7 +51,7 @@ Method | HTTP request | Description
 
 
 # **alterarUsingPUT1**
-> \br.com.conductor.pier.api.v2.model\Endereco alterarUsingPUT1($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse alterarUsingPUT1($id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -101,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Endereco**](Endereco.md)
+[**\br.com.conductor.pier.api.v2.model\EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -178,7 +181,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarUsingPUT5**
-> \br.com.conductor.pier.api.v2.model\Pessoa alterarUsingPUT5($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+> \br.com.conductor.pier.api.v2.model\PessoaResponse alterarUsingPUT5($id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -229,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Pessoa**](Pessoa.md)
+[**\br.com.conductor.pier.api.v2.model\PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -243,7 +246,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarUsingPUT6**
-> \br.com.conductor.pier.api.v2.model\Telefone alterarUsingPUT6($id, $id_tipo_telefone, $ddd, $telefone, $ramal)
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse alterarUsingPUT6($id, $id_tipo_telefone, $ddd, $telefone, $ramal)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -282,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Telefone**](Telefone.md)
+[**\br.com.conductor.pier.api.v2.model\TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -388,7 +391,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarOrigemComercialUsingGET**
-> \br.com.conductor.pier.api.v2.model\OrigemComercial consultarOrigemComercialUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\OrigemComercialResponse consultarOrigemComercialUsingGET($id)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 
@@ -419,7 +422,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\OrigemComercial**](OrigemComercial.md)
+[**\br.com.conductor.pier.api.v2.model\OrigemComercialResponse**](OrigemComercialResponse.md)
 
 ### Authorization
 
@@ -479,8 +482,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **consultarUsingGET**
+> \br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse consultarUsingGET($id)
+
+Apresenta os dados de um determinado Atendimento
+
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+
+try { 
+    $result = $api_instance->consultarUsingGET($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->consultarUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **consultarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\Banco consultarUsingGET1($id)
+> \br.com.conductor.pier.api.v2.model\BancoResponse consultarUsingGET1($id)
 
 Apresenta os dados de um determinado Banco
 
@@ -511,7 +559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Banco**](Banco.md)
+[**\br.com.conductor.pier.api.v2.model\BancoResponse**](BancoResponse.md)
 
 ### Authorization
 
@@ -525,7 +573,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\Pessoa consultarUsingGET10($id)
+> \br.com.conductor.pier.api.v2.model\PessoaResponse consultarUsingGET10($id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -556,7 +604,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Pessoa**](Pessoa.md)
+[**\br.com.conductor.pier.api.v2.model\PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -615,7 +663,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\Telefone consultarUsingGET15($id)
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse consultarUsingGET15($id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -646,7 +694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Telefone**](Telefone.md)
+[**\br.com.conductor.pier.api.v2.model\TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -660,7 +708,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\PageTipoAjuste consultarUsingGET17($page, $limit, $id, $descricao)
+> \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse consultarUsingGET17($page, $limit, $id, $descricao)
 
 Lista os tipos de ajustes do emissor 
 
@@ -697,7 +745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTipoAjuste**](PageTipoAjuste.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse**](PageTipoAjusteResponse.md)
 
 ### Authorization
 
@@ -711,7 +759,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\PageTipoBoleto consultarUsingGET18($page, $limit, $id, $descricao, $banco)
+> \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse consultarUsingGET18($page, $limit, $id, $descricao, $banco)
 
 Lista os tipos de boletos do emissor 
 
@@ -750,7 +798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTipoBoleto**](PageTipoBoleto.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse**](PageTipoBoletoResponse.md)
 
 ### Authorization
 
@@ -764,7 +812,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\TipoEndereco consultarUsingGET19($id)
+> \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse consultarUsingGET19($id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -795,7 +843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TipoEndereco**](TipoEndereco.md)
+[**\br.com.conductor.pier.api.v2.model\TipoEnderecoResponse**](TipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -809,7 +857,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\TipoTelefone consultarUsingGET21($id)
+> \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse consultarUsingGET21($id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -840,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TipoTelefone**](TipoTelefone.md)
+[**\br.com.conductor.pier.api.v2.model\TipoTelefoneResponse**](TipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -854,7 +902,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\Endereco consultarUsingGET5($id)
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse consultarUsingGET5($id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -885,7 +933,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Endereco**](Endereco.md)
+[**\br.com.conductor.pier.api.v2.model\EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -989,7 +1037,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarContasPorPessoaUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageContasDetalhe listarContasPorPessoaUsingGET($numero_receita_federal, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageContaDetalheResponse listarContasPorPessoaUsingGET($numero_receita_federal, $page, $limit)
 
 Lista as contas da pessoa
 
@@ -1024,7 +1072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageContasDetalhe**](PageContasDetalhe.md)
+[**\br.com.conductor.pier.api.v2.model\PageContaDetalheResponse**](PageContaDetalheResponse.md)
 
 ### Authorization
 
@@ -1038,7 +1086,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarEstadosCivisUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao listarEstadosCivisUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse listarEstadosCivisUsingGET($page, $limit)
 
 Lista os Estados C\u00C3\u00ADvis
 
@@ -1071,7 +1119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1085,7 +1133,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarHistoricoTelefonesUsingGET**
-> \br.com.conductor.pier.api.v2.model\HistoricoTelefone listarHistoricoTelefonesUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\HistoricoTelefoneResponse listarHistoricoTelefonesUsingGET($id)
 
 Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 
@@ -1116,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\HistoricoTelefone**](HistoricoTelefone.md)
+[**\br.com.conductor.pier.api.v2.model\HistoricoTelefoneResponse**](HistoricoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1130,7 +1178,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarNacionalidadesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao listarNacionalidadesUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse listarNacionalidadesUsingGET($page, $limit)
 
 Lista nacionalidades
 
@@ -1163,7 +1211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1177,7 +1225,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarNaturezasOcupacoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao listarNaturezasOcupacoesUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse listarNaturezasOcupacoesUsingGET($page, $limit)
 
 Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 
@@ -1210,7 +1258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1224,7 +1272,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarOrigensComerciaisUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageOrigensComerciais listarOrigensComerciaisUsingGET($page, $limit, $id, $nome, $status)
+> \br.com.conductor.pier.api.v2.model\PageOrigemComercialResponse listarOrigensComerciaisUsingGET($page, $limit, $id, $nome, $status)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 
@@ -1263,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageOrigensComerciais**](PageOrigensComerciais.md)
+[**\br.com.conductor.pier.api.v2.model\PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
 
 ### Authorization
 
@@ -1277,7 +1325,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarProfissoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao listarProfissoesUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse listarProfissoesUsingGET($page, $limit)
 
 Lista profiss\u00C3\u00B5es
 
@@ -1310,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**\br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1323,8 +1371,63 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse listarUsingGET13($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+# **listarUsingGET1**
+> \br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse listarUsingGET1($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
+
+Lista todos os atendimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id_tipo_atendimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+$nome_atendente = "nome_atendente_example"; // string | Apresenta o nome do Atendente que registrou o Atendimento.
+$data_atendimento = "data_atendimento_example"; // string | Apresenta a data em que o Atendimento foi realizado.
+
+try { 
+    $result = $api_instance->listarUsingGET1($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET1: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_tipo_atendimento** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nome_atendente** | **string**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **data_atendimento** | **string**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse listarUsingGET14($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1350,10 +1453,10 @@ $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET13($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->listarUsingGET14($page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1377,7 +1480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
+[**\br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse**](PagePessoaDetalheResponse.md)
 
 ### Authorization
 
@@ -1390,8 +1493,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\PagePessoas listarUsingGET14($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+# **listarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\PagePessoaResponse listarUsingGET15($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1418,10 +1521,10 @@ $unidade_federativa_identidade = "unidade_federativa_identidade_example"; // str
 $data_emissao_identidade = "data_emissao_identidade_example"; // string | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
 
 try { 
-    $result = $api_instance->listarUsingGET14($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    $result = $api_instance->listarUsingGET15($page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1446,7 +1549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PagePessoas**](PagePessoas.md)
+[**\br.com.conductor.pier.api.v2.model\PagePessoaResponse**](PagePessoaResponse.md)
 
 ### Authorization
 
@@ -1459,8 +1562,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PagePortador listarUsingGET16($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
+# **listarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PagePortadorResponse listarUsingGET17($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
 
 Lista os Portadores existentes
 
@@ -1486,10 +1589,10 @@ $data_cadastro_portador = "data_cadastro_portador_example"; // string | Apresent
 $data_cancelamento_portador = "data_cancelamento_portador_example"; // string | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->listarUsingGET16($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+    $result = $api_instance->listarUsingGET17($page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1513,7 +1616,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PagePortador**](PagePortador.md)
+[**\br.com.conductor.pier.api.v2.model\PagePortadorResponse**](PagePortadorResponse.md)
 
 ### Authorization
 
@@ -1526,8 +1629,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\ListaProdutos listarUsingGET17($page, $limit, $nome, $status, $id_fantasia_basica)
+# **listarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\PageProdutoResponse listarUsingGET18($page, $limit, $nome, $status, $id_fantasia_basica)
 
 Lista os Produtos do Emissor
 
@@ -1546,10 +1649,10 @@ $status = 56; // int | Representa o Status do Produto, onde: (\"0\": Inativo), (
 $id_fantasia_basica = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET17($page, $limit, $nome, $status, $id_fantasia_basica);
+    $result = $api_instance->listarUsingGET18($page, $limit, $nome, $status, $id_fantasia_basica);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1566,7 +1669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\ListaProdutos**](ListaProdutos.md)
+[**\br.com.conductor.pier.api.v2.model\PageProdutoResponse**](PageProdutoResponse.md)
 
 ### Authorization
 
@@ -1580,7 +1683,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\PageBancos listarUsingGET2($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageBancoResponse listarUsingGET2($page, $limit)
 
 Lista os Bancos cadastrados para o Emissor
 
@@ -1613,7 +1716,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageBancos**](PageBancos.md)
+[**\br.com.conductor.pier.api.v2.model\PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 
@@ -1626,8 +1729,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PageTelefones listarUsingGET21($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
+# **listarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\PageTelefoneResponse listarUsingGET22($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1650,10 +1753,10 @@ $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 $status = 56; // int | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
 
 try { 
-    $result = $api_instance->listarUsingGET21($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+    $result = $api_instance->listarUsingGET22($page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1674,7 +1777,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTelefones**](PageTelefones.md)
+[**\br.com.conductor.pier.api.v2.model\PageTelefoneResponse**](PageTelefoneResponse.md)
 
 ### Authorization
 
@@ -1687,8 +1790,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PageTiposEndereco listarUsingGET23($page, $limit, $id, $nome)
+# **listarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse listarUsingGET24($page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1706,10 +1809,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Endere\u00C3\u00A7o
 
 try { 
-    $result = $api_instance->listarUsingGET23($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET24($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1725,7 +1828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTiposEndereco**](PageTiposEndereco.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -1738,8 +1841,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageTipoTelefones listarUsingGET25($page, $limit, $id, $nome)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse listarUsingGET26($page, $limit, $id, $nome)
 
 Lista os Tipos de Telefones
 
@@ -1757,10 +1860,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Telefone
 
 try { 
-    $result = $api_instance->listarUsingGET25($page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET26($page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1776,7 +1879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTipoTelefones**](PageTipoTelefones.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1789,8 +1892,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\PageEnderecos listarUsingGET8($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
+# **listarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\PageEnderecoResponse listarUsingGET9($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -1820,10 +1923,10 @@ $data_inclusao = "data_inclusao_example"; // string | Apresenta a data em que fo
 $data_ultima_atualizacao = "data_ultima_atualizacao_example"; // string | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
 
 try { 
-    $result = $api_instance->listarUsingGET8($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+    $result = $api_instance->listarUsingGET9($page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastrosGeraisApi->listarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1851,7 +1954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageEnderecos**](PageEnderecos.md)
+[**\br.com.conductor.pier.api.v2.model\PageEnderecoResponse**](PageEnderecoResponse.md)
 
 ### Authorization
 
@@ -1954,8 +2057,67 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **salvarUsingPOST1**
+> \br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse salvarUsingPOST1($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude)
+
+Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastrosGeraisApi();
+$id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+$conteudo_atendimento = "conteudo_atendimento_example"; // string | Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+$detalhes_atendimento = "detalhes_atendimento_example"; // string | Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+$nome_atendente = "nome_atendente_example"; // string | Apresenta o nome do Atendente que registrou o Atendimento.
+$data_atendimento = "data_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_agendamento = "data_agendamento_example"; // string | Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_hora_inicio_atendimento = "data_hora_inicio_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$data_hora_fim_atendimento = "data_hora_fim_atendimento_example"; // string | Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+$flag_fila_fraude = 56; // int | Flag fila fraude
+
+try { 
+    $result = $api_instance->salvarUsingPOST1($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastrosGeraisApi->salvarUsingPOST1: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado | [optional] 
+ **conteudo_atendimento** | **string**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
+ **detalhes_atendimento** | **string**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
+ **nome_atendente** | **string**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **data_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_agendamento** | **string**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_inicio_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **data_hora_fim_atendimento** | **string**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **flag_fila_fraude** | **int**| Flag fila fraude | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **salvarUsingPOST10**
-> \br.com.conductor.pier.api.v2.model\Telefone salvarUsingPOST10($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse salvarUsingPOST10($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1994,7 +2156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Telefone**](Telefone.md)
+[**\br.com.conductor.pier.api.v2.model\TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -2008,7 +2170,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST4**
-> \br.com.conductor.pier.api.v2.model\Endereco salvarUsingPOST4($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse salvarUsingPOST4($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -2059,7 +2221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Endereco**](Endereco.md)
+[**\br.com.conductor.pier.api.v2.model\EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -2136,7 +2298,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST8**
-> \br.com.conductor.pier.api.v2.model\Pessoa salvarUsingPOST8($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+> \br.com.conductor.pier.api.v2.model\PessoaResponse salvarUsingPOST8($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -2185,7 +2347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\Pessoa**](Pessoa.md)
+[**\br.com.conductor.pier.api.v2.model\PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 

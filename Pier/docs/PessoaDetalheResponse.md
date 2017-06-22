@@ -3,21 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse[]**](PessoaDetalheResponse.md) |  | [optional] 
-**first** | **bool** |  | [optional] 
-**first_page** | **bool** |  | [optional] 
-**has_content** | **bool** |  | [optional] 
-**has_next_page** | **bool** |  | [optional] 
-**has_previous_page** | **bool** |  | [optional] 
 **id_pessoa** | **int** | C\u00C3\u00B3digo identificador da pessoa | [optional] 
-**last** | **bool** |  | [optional] 
-**next_page** | **int** |  | [optional] 
-**number** | **int** |  | [optional] 
-**number_of_elements** | **int** |  | [optional] 
-**previous_page** | **int** |  | [optional] 
-**size** | **int** |  | [optional] 
-**total_elements** | **int** |  | [optional] 
-**total_pages** | **int** |  | [optional] 
 **nome_mae** | **string** | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
 **id_estado_civil** | **int** | Id Estado civil da pessoa fisica | [optional] 
 **profissao** | **string** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 

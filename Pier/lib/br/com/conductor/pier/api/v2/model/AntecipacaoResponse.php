@@ -56,7 +56,10 @@ class AntecipacaoResponse implements ArrayAccess
         'id_compra' => 'int',
         'quantidade_parcelas_total' => 'int',
         'quantidade_parcelas_antecipadas' => 'int',
-        'valor_parcelas' => 'Number'
+        'valor_parcela' => 'Number',
+        'valor_desconto_total' => 'Number',
+        'valor_total_com_desconto' => 'Number',
+        'taxa_desconto' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -73,7 +76,10 @@ class AntecipacaoResponse implements ArrayAccess
         'id_compra' => 'idCompra',
         'quantidade_parcelas_total' => 'quantidadeParcelasTotal',
         'quantidade_parcelas_antecipadas' => 'quantidadeParcelasAntecipadas',
-        'valor_parcelas' => 'valorParcelas'
+        'valor_parcela' => 'valorParcela',
+        'valor_desconto_total' => 'valorDescontoTotal',
+        'valor_total_com_desconto' => 'valorTotalComDesconto',
+        'taxa_desconto' => 'taxaDesconto'
     );
   
     static function attributeMap() {
@@ -90,7 +96,10 @@ class AntecipacaoResponse implements ArrayAccess
         'id_compra' => 'setIdCompra',
         'quantidade_parcelas_total' => 'setQuantidadeParcelasTotal',
         'quantidade_parcelas_antecipadas' => 'setQuantidadeParcelasAntecipadas',
-        'valor_parcelas' => 'setValorParcelas'
+        'valor_parcela' => 'setValorParcela',
+        'valor_desconto_total' => 'setValorDescontoTotal',
+        'valor_total_com_desconto' => 'setValorTotalComDesconto',
+        'taxa_desconto' => 'setTaxaDesconto'
     );
   
     static function setters() {
@@ -107,7 +116,10 @@ class AntecipacaoResponse implements ArrayAccess
         'id_compra' => 'getIdCompra',
         'quantidade_parcelas_total' => 'getQuantidadeParcelasTotal',
         'quantidade_parcelas_antecipadas' => 'getQuantidadeParcelasAntecipadas',
-        'valor_parcelas' => 'getValorParcelas'
+        'valor_parcela' => 'getValorParcela',
+        'valor_desconto_total' => 'getValorDescontoTotal',
+        'valor_total_com_desconto' => 'getValorTotalComDesconto',
+        'taxa_desconto' => 'getTaxaDesconto'
     );
   
     static function getters() {
@@ -134,7 +146,7 @@ class AntecipacaoResponse implements ArrayAccess
     protected $id_compra;
     
     /**
-      * $quantidade_parcelas_total Apresenta o numero total de parcelas da comprae
+      * $quantidade_parcelas_total Apresenta o numero total de parcelas da compra
       * @var int
       */
     protected $quantidade_parcelas_total;
@@ -146,10 +158,28 @@ class AntecipacaoResponse implements ArrayAccess
     protected $quantidade_parcelas_antecipadas;
     
     /**
-      * $valor_parcelas Apresenta o valor das parcelas efetivadas
+      * $valor_parcela Apresenta o valor de cada parcela antecipadas
       * @var Number
       */
-    protected $valor_parcelas;
+    protected $valor_parcela;
+    
+    /**
+      * $valor_desconto_total Apresenta o valor total do desconto
+      * @var Number
+      */
+    protected $valor_desconto_total;
+    
+    /**
+      * $valor_total_com_desconto Apresenta o valor total com desconto
+      * @var Number
+      */
+    protected $valor_total_com_desconto;
+    
+    /**
+      * $taxa_desconto Apresenta a taxa de desconto
+      * @var Number
+      */
+    protected $taxa_desconto;
     
 
     /**
@@ -165,7 +195,10 @@ class AntecipacaoResponse implements ArrayAccess
             $this->id_compra = $data["id_compra"];
             $this->quantidade_parcelas_total = $data["quantidade_parcelas_total"];
             $this->quantidade_parcelas_antecipadas = $data["quantidade_parcelas_antecipadas"];
-            $this->valor_parcelas = $data["valor_parcelas"];
+            $this->valor_parcela = $data["valor_parcela"];
+            $this->valor_desconto_total = $data["valor_desconto_total"];
+            $this->valor_total_com_desconto = $data["valor_total_com_desconto"];
+            $this->taxa_desconto = $data["taxa_desconto"];
         }
     }
     
@@ -243,7 +276,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas_total
-     * @param int $quantidade_parcelas_total Apresenta o numero total de parcelas da comprae
+     * @param int $quantidade_parcelas_total Apresenta o numero total de parcelas da compra
      * @return $this
      */
     public function setQuantidadeParcelasTotal($quantidade_parcelas_total)
@@ -275,23 +308,86 @@ class AntecipacaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets valor_parcelas
+     * Gets valor_parcela
      * @return Number
      */
-    public function getValorParcelas()
+    public function getValorParcela()
     {
-        return $this->valor_parcelas;
+        return $this->valor_parcela;
     }
   
     /**
-     * Sets valor_parcelas
-     * @param Number $valor_parcelas Apresenta o valor das parcelas efetivadas
+     * Sets valor_parcela
+     * @param Number $valor_parcela Apresenta o valor de cada parcela antecipadas
      * @return $this
      */
-    public function setValorParcelas($valor_parcelas)
+    public function setValorParcela($valor_parcela)
     {
         
-        $this->valor_parcelas = $valor_parcelas;
+        $this->valor_parcela = $valor_parcela;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_desconto_total
+     * @return Number
+     */
+    public function getValorDescontoTotal()
+    {
+        return $this->valor_desconto_total;
+    }
+  
+    /**
+     * Sets valor_desconto_total
+     * @param Number $valor_desconto_total Apresenta o valor total do desconto
+     * @return $this
+     */
+    public function setValorDescontoTotal($valor_desconto_total)
+    {
+        
+        $this->valor_desconto_total = $valor_desconto_total;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_total_com_desconto
+     * @return Number
+     */
+    public function getValorTotalComDesconto()
+    {
+        return $this->valor_total_com_desconto;
+    }
+  
+    /**
+     * Sets valor_total_com_desconto
+     * @param Number $valor_total_com_desconto Apresenta o valor total com desconto
+     * @return $this
+     */
+    public function setValorTotalComDesconto($valor_total_com_desconto)
+    {
+        
+        $this->valor_total_com_desconto = $valor_total_com_desconto;
+        return $this;
+    }
+    
+    /**
+     * Gets taxa_desconto
+     * @return Number
+     */
+    public function getTaxaDesconto()
+    {
+        return $this->taxa_desconto;
+    }
+  
+    /**
+     * Sets taxa_desconto
+     * @param Number $taxa_desconto Apresenta a taxa de desconto
+     * @return $this
+     */
+    public function setTaxaDesconto($taxa_desconto)
+    {
+        
+        $this->taxa_desconto = $taxa_desconto;
         return $this;
     }
     

@@ -62,7 +62,7 @@ class CompraResponse implements ArrayAccess
         'numero_parcelas' => 'int',
         'numero_parcelas_antecipaveis' => 'int',
         'nome_estabelecimento' => 'string',
-        'tipo_transacao' => 'string',
+        'tipo_origem_transacao' => 'string',
         'cidade' => 'string',
         'pais' => 'string',
         'latitude' => 'string',
@@ -96,7 +96,7 @@ class CompraResponse implements ArrayAccess
         'numero_parcelas' => 'numeroParcelas',
         'numero_parcelas_antecipaveis' => 'numeroParcelasAntecipaveis',
         'nome_estabelecimento' => 'nomeEstabelecimento',
-        'tipo_transacao' => 'tipoTransacao',
+        'tipo_origem_transacao' => 'tipoOrigemTransacao',
         'cidade' => 'cidade',
         'pais' => 'pais',
         'latitude' => 'latitude',
@@ -130,7 +130,7 @@ class CompraResponse implements ArrayAccess
         'numero_parcelas' => 'setNumeroParcelas',
         'numero_parcelas_antecipaveis' => 'setNumeroParcelasAntecipaveis',
         'nome_estabelecimento' => 'setNomeEstabelecimento',
-        'tipo_transacao' => 'setTipoTransacao',
+        'tipo_origem_transacao' => 'setTipoOrigemTransacao',
         'cidade' => 'setCidade',
         'pais' => 'setPais',
         'latitude' => 'setLatitude',
@@ -164,7 +164,7 @@ class CompraResponse implements ArrayAccess
         'numero_parcelas' => 'getNumeroParcelas',
         'numero_parcelas_antecipaveis' => 'getNumeroParcelasAntecipaveis',
         'nome_estabelecimento' => 'getNomeEstabelecimento',
-        'tipo_transacao' => 'getTipoTransacao',
+        'tipo_origem_transacao' => 'getTipoOrigemTransacao',
         'cidade' => 'getCidade',
         'pais' => 'getPais',
         'latitude' => 'getLatitude',
@@ -250,10 +250,10 @@ class CompraResponse implements ArrayAccess
     protected $nome_estabelecimento;
     
     /**
-      * $tipo_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
       * @var string
       */
-    protected $tipo_transacao;
+    protected $tipo_origem_transacao;
     
     /**
       * $cidade Cidade onde a compra foi realizada.
@@ -341,7 +341,7 @@ class CompraResponse implements ArrayAccess
             $this->numero_parcelas = $data["numero_parcelas"];
             $this->numero_parcelas_antecipaveis = $data["numero_parcelas_antecipaveis"];
             $this->nome_estabelecimento = $data["nome_estabelecimento"];
-            $this->tipo_transacao = $data["tipo_transacao"];
+            $this->tipo_origem_transacao = $data["tipo_origem_transacao"];
             $this->cidade = $data["cidade"];
             $this->pais = $data["pais"];
             $this->latitude = $data["latitude"];
@@ -588,23 +588,23 @@ class CompraResponse implements ArrayAccess
     }
     
     /**
-     * Gets tipo_transacao
+     * Gets tipo_origem_transacao
      * @return string
      */
-    public function getTipoTransacao()
+    public function getTipoOrigemTransacao()
     {
-        return $this->tipo_transacao;
+        return $this->tipo_origem_transacao;
     }
   
     /**
-     * Sets tipo_transacao
-     * @param string $tipo_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+     * Sets tipo_origem_transacao
+     * @param string $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
      * @return $this
      */
-    public function setTipoTransacao($tipo_transacao)
+    public function setTipoOrigemTransacao($tipo_origem_transacao)
     {
         
-        $this->tipo_transacao = $tipo_transacao;
+        $this->tipo_origem_transacao = $tipo_origem_transacao;
         return $this;
     }
     

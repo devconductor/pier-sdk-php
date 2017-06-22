@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listarAuditoriasUsingGET**](OportunidadesApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadesApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadesApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET12**](OportunidadesApi.md#listarUsingGET12) | **GET** /api/oportunidades | Lista as oportunidades
-[**listarUsingGET24**](OportunidadesApi.md#listarUsingGET24) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listarUsingGET13**](OportunidadesApi.md#listarUsingGET13) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET25**](OportunidadesApi.md#listarUsingGET25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadesApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvarUsingPOST11**](OportunidadesApi.md#salvarUsingPOST11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 [**salvarUsingPOST6**](OportunidadesApi.md#salvarUsingPOST6) | **POST** /api/oportunidades | Cadastra as oportunidade
@@ -302,7 +302,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarAuditoriasStatusUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageStatusOprtunidadesAUD listarAuditoriasStatusUsingGET($page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $nome, $descricao, $flag_ativo, $rev_user)
+> \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse listarAuditoriasStatusUsingGET($page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $nome, $descricao, $flag_ativo, $rev_user)
 
 Lista as auditorias dos status oportunidades
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageStatusOprtunidadesAUD**](PageStatusOprtunidadesAUD.md)
+[**\br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse**](PageStatusOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarAuditoriasUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageOprtunidadeAUD listarAuditoriasUsingGET($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type, $rev_user)
+> \br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse listarAuditoriasUsingGET($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type, $rev_user)
 
 Lista as auditorias das oportunidades
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageOprtunidadeAUD**](PageOprtunidadeAUD.md)
+[**\br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse**](PageOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarAuditoriasUsingGET1**
-> \br.com.conductor.pier.api.v2.model\PageTipoOprtunidadesAUD listarAuditoriasUsingGET1($page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo, $rev_user)
+> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse listarAuditoriasUsingGET1($page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo, $rev_user)
 
 Lista as auditorias dos tipos oportunidades
 
@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTipoOprtunidadesAUD**](PageTipoOprtunidadesAUD.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse**](PageTipoOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -491,7 +491,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageStatusOprtunidades listarStatusUsingGET($id, $page, $limit, $nome, $descricao, $flag_ativo)
+> \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse listarStatusUsingGET($id, $page, $limit, $nome, $descricao, $flag_ativo)
 
 Lista os status do tipo oportunidades
 
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageStatusOprtunidades**](PageStatusOprtunidades.md)
+[**\br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse**](PageStatusOportunidadeResponse.md)
 
 ### Authorization
 
@@ -545,8 +545,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\PageOprtunidadesResponse listarUsingGET12($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
+# **listarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse listarUsingGET13($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
 
 Lista as oportunidades
 
@@ -569,10 +569,10 @@ $data_fim_vigencia = "data_fim_vigencia_example"; // string | Data do fim da vig
 $flag_ativo = true; // bool | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 
 try { 
-    $result = $api_instance->listarUsingGET12($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+    $result = $api_instance->listarUsingGET13($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OportunidadesApi->listarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling OportunidadesApi->listarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageOprtunidadesResponse**](PageOprtunidadesResponse.md)
+[**\br.com.conductor.pier.api.v2.model\PageOportunidadeResponse**](PageOportunidadeResponse.md)
 
 ### Authorization
 
@@ -606,8 +606,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\PageTipoOprtunidades listarUsingGET24($page, $limit, $descricao, $flag_ativo)
+# **listarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse listarUsingGET25($page, $limit, $descricao, $flag_ativo)
 
 Lista os tipos oportunidades
 
@@ -625,10 +625,10 @@ $descricao = "descricao_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do
 $flag_ativo = true; // bool | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
 
 try { 
-    $result = $api_instance->listarUsingGET24($page, $limit, $descricao, $flag_ativo);
+    $result = $api_instance->listarUsingGET25($page, $limit, $descricao, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OportunidadesApi->listarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling OportunidadesApi->listarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -644,7 +644,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageTipoOprtunidades**](PageTipoOprtunidades.md)
+[**\br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse**](PageTipoOportunidadeResponse.md)
 
 ### Authorization
 

@@ -216,12 +216,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET4
+     * Test case for listarUsingGET5
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET4() {
+    public function test_listarUsingGET5() {
 
     }
     

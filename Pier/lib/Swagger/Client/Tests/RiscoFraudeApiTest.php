@@ -66,16 +66,6 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     */
-    public function test_consultarUsingGET() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET12
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
@@ -86,32 +76,12 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for informarRiscoFraudeUsingPOST
-     *
-     * Receber Risco Fraude
-     *
-     */
-    public function test_informarRiscoFraudeUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET1
-     *
-     * Lista todos os atendimentos
-     *
-     */
-    public function test_listarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET18
+     * Test case for listarUsingGET19
      *
      * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
      *
      */
-    public function test_listarUsingGET18() {
+    public function test_listarUsingGET19() {
 
     }
     
@@ -132,16 +102,6 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_reconhecerUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST1
-     *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-     *
-     */
-    public function test_salvarUsingPOST1() {
 
     }
     

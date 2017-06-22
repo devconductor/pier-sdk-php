@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **atualizarUsingPUT**
-> \br.com.conductor.pier.api.v2.model\AplicacaoMobile atualizarUsingPUT($id, $update)
+> \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse atualizarUsingPUT($id, $update)
 
 Atualiza Aplicacao Mobile
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\AplicacaoMobile**](AplicacaoMobile.md)
+[**\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageAplicacoesMobile listarUsingGET($page, $limit, $id, $id_plataforma_mobile)
+> \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse listarUsingGET($page, $limit, $id, $id_plataforma_mobile)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageAplicacoesMobile**](PageAplicacoesMobile.md)
+[**\br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse**](PageAplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\AplicacaoMobile salvarUsingPOST($persist)
+> \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse salvarUsingPOST($persist)
 
 Cadastra Aplicacao Mobile
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\AplicacaoMobile**](AplicacaoMobile.md)
+[**\br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 

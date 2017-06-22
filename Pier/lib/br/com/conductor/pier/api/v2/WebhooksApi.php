@@ -99,7 +99,7 @@ class WebhooksApi
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
-     * @return \br.com.conductor.pier.api.v2.model\WebHook
+     * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function alterarUsingPUT10($id, $tipo_evento, $url)
@@ -117,7 +117,7 @@ class WebhooksApi
      * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function alterarUsingPUT10WithHttpInfo($id, $tipo_evento, $url)
@@ -185,19 +185,19 @@ class WebhooksApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHook'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHookResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHook', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHookResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHook', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHookResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -212,7 +212,7 @@ class WebhooksApi
      * Consultar Webhook
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\WebHook
+     * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET26($id)
@@ -228,7 +228,7 @@ class WebhooksApi
      * Consultar Webhook
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET26WithHttpInfo($id)
@@ -280,19 +280,19 @@ class WebhooksApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHook'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHookResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHook', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHookResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHook', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHookResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -302,7 +302,7 @@ class WebhooksApi
     }
     
     /**
-     * listarUsingGET30
+     * listarUsingGET31
      *
      * Lista os Webhooks
      *
@@ -312,18 +312,18 @@ class WebhooksApi
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageWebHooks
+     * @return \br.com.conductor.pier.api.v2.model\PageWebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET31($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET30WithHttpInfo
+     * listarUsingGET31WithHttpInfo
      *
      * Lista os Webhooks
      *
@@ -333,10 +333,10 @@ class WebhooksApi
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
      * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHooks, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30WithHttpInfo($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET31WithHttpInfo($page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   
@@ -397,19 +397,19 @@ class WebhooksApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageWebHooks'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageWebHookResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageWebHooks', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageWebHookResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageWebHooks', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageWebHookResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -425,7 +425,7 @@ class WebhooksApi
      *
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
-     * @return \br.com.conductor.pier.api.v2.model\WebHook
+     * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST14($tipo_evento, $url)
@@ -442,7 +442,7 @@ class WebhooksApi
      *
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (required)
      * @param string $url URL que a ser consumida pelo WebHook (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\WebHook, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST14WithHttpInfo($tipo_evento, $url)
@@ -498,19 +498,19 @@ class WebhooksApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHook'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\WebHookResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHook', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\WebHookResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHook', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\WebHookResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

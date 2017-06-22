@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET26**](WebhooksApi.md#consultarUsingGET26) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET30**](WebhooksApi.md#listarUsingGET30) | **GET** /api/webhooks | Lista os Webhooks
+[**listarUsingGET31**](WebhooksApi.md#listarUsingGET31) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST14**](WebhooksApi.md#salvarUsingPOST14) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT10**
-> \br.com.conductor.pier.api.v2.model\WebHook alterarUsingPUT10($id, $tipo_evento, $url)
+> \br.com.conductor.pier.api.v2.model\WebHookResponse alterarUsingPUT10($id, $tipo_evento, $url)
 
 Alterar Webhook
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\WebHook**](WebHook.md)
+[**\br.com.conductor.pier.api.v2.model\WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\WebHook consultarUsingGET26($id)
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET26($id)
 
 Consultar Webhook
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\WebHook**](WebHook.md)
+[**\br.com.conductor.pier.api.v2.model\WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\PageWebHooks listarUsingGET30($page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET31**
+> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET31($page, $limit, $id, $tipo_evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -125,10 +125,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET30($page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET31($page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->listarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhooksApi->listarUsingGET31: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageWebHooks**](PageWebHooks.md)
+[**\br.com.conductor.pier.api.v2.model\PageWebHookResponse**](PageWebHookResponse.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST14**
-> \br.com.conductor.pier.api.v2.model\WebHook salvarUsingPOST14($tipo_evento, $url)
+> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST14($tipo_evento, $url)
 
 Salvar Webhook
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\WebHook**](WebHook.md)
+[**\br.com.conductor.pier.api.v2.model\WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 

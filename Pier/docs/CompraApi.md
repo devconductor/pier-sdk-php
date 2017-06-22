@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**efetivarAntecipacaoUsingPOST**](CompraApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET5**](CompraApi.md#listarUsingGET5) | **GET** /api/compras | Listar compras
+[**listarUsingGET6**](CompraApi.md#listarUsingGET6) | **GET** /api/compras | Listar compras
 [**simularAntecipacaoUsingGET**](CompraApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -23,8 +23,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CompraApi();
 $id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-$quantidade_parcelas = 789; // int | Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+$quantidade_parcelas = 789; // int | Quantidade de parcelas para serem antecipadas.
 
 try { 
     $result = $api_instance->efetivarAntecipacaoUsingPOST($id_conta, $id, $quantidade_parcelas);
@@ -40,8 +40,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. | 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
- **quantidade_parcelas** | **int**| Quantidade de parcelas para serem antecipadas (quantidadeParcelas). | 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
+ **quantidade_parcelas** | **int**| Quantidade de parcelas para serem antecipadas. | 
 
 ### Return type
 
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\PageCompras listarUsingGET5($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_transacao)
+# **listarUsingGET6**
+> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET6($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
 
 Listar compras
 
@@ -77,13 +77,13 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $id_compra = 789; // int | C\u00C3\u00B3digo identificador da Compra.
 $parcelada = true; // bool | Indica se a compra \u00C3\u00A9 parcelada.
 $juros = true; // bool | Indica se a compra \u00C3\u00A9 com ou sem juros.
-$tipo_transacao = "tipo_transacao_example"; // string | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+$tipo_origem_transacao = "tipo_origem_transacao_example"; // string | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 
 try { 
-    $result = $api_instance->listarUsingGET5($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_transacao);
+    $result = $api_instance->listarUsingGET6($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CompraApi->listarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CompraApi->listarUsingGET6: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -98,11 +98,11 @@ Name | Type | Description  | Notes
  **id_compra** | **int**| C\u00C3\u00B3digo identificador da Compra. | [optional] 
  **parcelada** | **bool**| Indica se a compra \u00C3\u00A9 parcelada. | [optional] 
  **juros** | **bool**| Indica se a compra \u00C3\u00A9 com ou sem juros. | [optional] 
- **tipo_transacao** | **string**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
+ **tipo_origem_transacao** | **string**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PageCompras**](PageCompras.md)
+[**\br.com.conductor.pier.api.v2.model\PageCompraResponse**](PageCompraResponse.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
-Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
 
 ### Example 
 ```php
@@ -128,8 +128,8 @@ Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CompraApi();
-$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
 
 try { 
     $result = $api_instance->simularAntecipacaoUsingGET($id_conta, $id);
@@ -144,8 +144,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
+ **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. | 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
 
 ### Return type
 

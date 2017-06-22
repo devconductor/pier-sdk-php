@@ -96,12 +96,12 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET10
+     * Test case for listarUsingGET11
      *
      * Lista FAQs
      *
      */
-    public function test_listarUsingGET10() {
+    public function test_listarUsingGET11() {
 
     }
     

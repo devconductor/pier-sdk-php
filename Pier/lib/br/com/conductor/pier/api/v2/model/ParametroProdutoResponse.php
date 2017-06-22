@@ -52,7 +52,7 @@ class ParametroProdutoResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_produto' => 'int',
-        'tipo_transacao' => 'string',
+        'tipo_origem_transacao' => 'string',
         'descricao' => 'string',
         'valor_parametro' => 'Number',
         'data_validade' => 'string'
@@ -68,7 +68,7 @@ class ParametroProdutoResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id_produto' => 'idProduto',
-        'tipo_transacao' => 'tipoTransacao',
+        'tipo_origem_transacao' => 'tipoOrigemTransacao',
         'descricao' => 'descricao',
         'valor_parametro' => 'valorParametro',
         'data_validade' => 'dataValidade'
@@ -84,7 +84,7 @@ class ParametroProdutoResponse implements ArrayAccess
       */
     static $setters = array(
         'id_produto' => 'setIdProduto',
-        'tipo_transacao' => 'setTipoTransacao',
+        'tipo_origem_transacao' => 'setTipoOrigemTransacao',
         'descricao' => 'setDescricao',
         'valor_parametro' => 'setValorParametro',
         'data_validade' => 'setDataValidade'
@@ -100,7 +100,7 @@ class ParametroProdutoResponse implements ArrayAccess
       */
     static $getters = array(
         'id_produto' => 'getIdProduto',
-        'tipo_transacao' => 'getTipoTransacao',
+        'tipo_origem_transacao' => 'getTipoOrigemTransacao',
         'descricao' => 'getDescricao',
         'valor_parametro' => 'getValorParametro',
         'data_validade' => 'getDataValidade'
@@ -118,10 +118,10 @@ class ParametroProdutoResponse implements ArrayAccess
     protected $id_produto;
     
     /**
-      * $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
+      * $tipo_origem_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
       * @var string
       */
-    protected $tipo_transacao;
+    protected $tipo_origem_transacao;
     
     /**
       * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -151,7 +151,7 @@ class ParametroProdutoResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id_produto = $data["id_produto"];
-            $this->tipo_transacao = $data["tipo_transacao"];
+            $this->tipo_origem_transacao = $data["tipo_origem_transacao"];
             $this->descricao = $data["descricao"];
             $this->valor_parametro = $data["valor_parametro"];
             $this->data_validade = $data["data_validade"];
@@ -180,26 +180,26 @@ class ParametroProdutoResponse implements ArrayAccess
     }
     
     /**
-     * Gets tipo_transacao
+     * Gets tipo_origem_transacao
      * @return string
      */
-    public function getTipoTransacao()
+    public function getTipoOrigemTransacao()
     {
-        return $this->tipo_transacao;
+        return $this->tipo_origem_transacao;
     }
   
     /**
-     * Sets tipo_transacao
-     * @param string $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
+     * Sets tipo_origem_transacao
+     * @param string $tipo_origem_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
      * @return $this
      */
-    public function setTipoTransacao($tipo_transacao)
+    public function setTipoOrigemTransacao($tipo_origem_transacao)
     {
         $allowed_values = array("ON_US", "OFF_US");
-        if (!in_array($tipo_transacao, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_transacao', must be one of 'ON_US', 'OFF_US'");
+        if (!in_array($tipo_origem_transacao, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_origem_transacao', must be one of 'ON_US', 'OFF_US'");
         }
-        $this->tipo_transacao = $tipo_transacao;
+        $this->tipo_origem_transacao = $tipo_origem_transacao;
         return $this;
     }
     

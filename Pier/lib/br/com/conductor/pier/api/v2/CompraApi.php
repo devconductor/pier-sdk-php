@@ -97,8 +97,8 @@ class CompraApi
      * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
      *
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. (required)
-     * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -115,8 +115,8 @@ class CompraApi
      * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
      *
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. (required)
-     * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas). (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -207,7 +207,7 @@ class CompraApi
     }
     
     /**
-     * listarUsingGET5
+     * listarUsingGET6
      *
      * Listar compras
      *
@@ -217,19 +217,19 @@ class CompraApi
      * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
      * @param bool $parcelada Indica se a compra \u00C3\u00A9 parcelada. (optional)
      * @param bool $juros Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)
-     * @param string $tipo_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageCompras
+     * @param string $tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageCompraResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_transacao = null)
+    public function listarUsingGET6($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET5WithHttpInfo
+     * listarUsingGET6WithHttpInfo
      *
      * Listar compras
      *
@@ -239,16 +239,16 @@ class CompraApi
      * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
      * @param bool $parcelada Indica se a compra \u00C3\u00A9 parcelada. (optional)
      * @param bool $juros Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)
-     * @param string $tipo_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageCompras, HTTP status code, HTTP response headers (array of strings)
+     * @param string $tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageCompraResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_transacao = null)
+    public function listarUsingGET6WithHttpInfo($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET6');
         }
   
         // parse inputs
@@ -289,8 +289,8 @@ class CompraApi
             $queryParams['juros'] = $this->apiClient->getSerializer()->toQueryValue($juros);
         }// query params
         
-        if ($tipo_transacao !== null) {
-            $queryParams['tipoTransacao'] = $this->apiClient->getSerializer()->toQueryValue($tipo_transacao);
+        if ($tipo_origem_transacao !== null) {
+            $queryParams['tipoOrigemTransacao'] = $this->apiClient->getSerializer()->toQueryValue($tipo_origem_transacao);
         }
         
         
@@ -312,19 +312,19 @@ class CompraApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageCompras'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageCompraResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageCompras', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageCompraResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageCompras', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageCompraResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -338,8 +338,8 @@ class CompraApi
      *
      * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. (required)
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -355,8 +355,8 @@ class CompraApi
      *
      * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. (required)
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

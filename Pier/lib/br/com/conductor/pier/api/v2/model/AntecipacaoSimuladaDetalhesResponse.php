@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaDetalhesResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,7 +51,6 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_simulacao_detalhe' => 'int',
         'quantidade_parcelas' => 'int',
         'valor_parcelas' => 'Number',
         'valor_desconto' => 'Number',
@@ -67,7 +66,6 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_simulacao_detalhe' => 'idSimulacaoDetalhe',
         'quantidade_parcelas' => 'quantidadeParcelas',
         'valor_parcelas' => 'valorParcelas',
         'valor_desconto' => 'valorDesconto',
@@ -83,7 +81,6 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_simulacao_detalhe' => 'setIdSimulacaoDetalhe',
         'quantidade_parcelas' => 'setQuantidadeParcelas',
         'valor_parcelas' => 'setValorParcelas',
         'valor_desconto' => 'setValorDesconto',
@@ -99,7 +96,6 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_simulacao_detalhe' => 'getIdSimulacaoDetalhe',
         'quantidade_parcelas' => 'getQuantidadeParcelas',
         'valor_parcelas' => 'getValorParcelas',
         'valor_desconto' => 'getValorDesconto',
@@ -110,12 +106,6 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
         return self::$getters;
     }
 
-    
-    /**
-      * $id_simulacao_detalhe C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_simulacao_detalhe;
     
     /**
       * $quantidade_parcelas Quantidade de parcelas do plano de parcelamento simulado.
@@ -150,33 +140,11 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_simulacao_detalhe = $data["id_simulacao_detalhe"];
             $this->quantidade_parcelas = $data["quantidade_parcelas"];
             $this->valor_parcelas = $data["valor_parcelas"];
             $this->valor_desconto = $data["valor_desconto"];
             $this->valor_parcelas_desconto = $data["valor_parcelas_desconto"];
         }
-    }
-    
-    /**
-     * Gets id_simulacao_detalhe
-     * @return int
-     */
-    public function getIdSimulacaoDetalhe()
-    {
-        return $this->id_simulacao_detalhe;
-    }
-  
-    /**
-     * Sets id_simulacao_detalhe
-     * @param int $id_simulacao_detalhe C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdSimulacaoDetalhe($id_simulacao_detalhe)
-    {
-        
-        $this->id_simulacao_detalhe = $id_simulacao_detalhe;
-        return $this;
     }
     
     /**

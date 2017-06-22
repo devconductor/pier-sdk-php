@@ -51,10 +51,14 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_simulacao' => 'int',
-        'id_compra' => 'int',
+        'id_antecipacao_simulada' => 'int',
         'id_conta' => 'int',
+        'id_evento_externo' => 'int',
+        'id_tipo_transacao' => 'int',
+        'qtde_parcelas_antecipaveis' => 'int',
+        'valor_parcela' => 'Number',
         'data_hora_simulacao' => 'string',
+        'taxa_antecipacao_ano' => 'Number',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[]'
     );
   
@@ -67,10 +71,14 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_simulacao' => 'idSimulacao',
-        'id_compra' => 'idCompra',
+        'id_antecipacao_simulada' => 'idAntecipacaoSimulada',
         'id_conta' => 'idConta',
+        'id_evento_externo' => 'idEventoExterno',
+        'id_tipo_transacao' => 'idTipoTransacao',
+        'qtde_parcelas_antecipaveis' => 'qtdeParcelasAntecipaveis',
+        'valor_parcela' => 'valorParcela',
         'data_hora_simulacao' => 'dataHoraSimulacao',
+        'taxa_antecipacao_ano' => 'taxaAntecipacaoAno',
         'detalhes' => 'detalhes'
     );
   
@@ -83,10 +91,14 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_simulacao' => 'setIdSimulacao',
-        'id_compra' => 'setIdCompra',
+        'id_antecipacao_simulada' => 'setIdAntecipacaoSimulada',
         'id_conta' => 'setIdConta',
+        'id_evento_externo' => 'setIdEventoExterno',
+        'id_tipo_transacao' => 'setIdTipoTransacao',
+        'qtde_parcelas_antecipaveis' => 'setQtdeParcelasAntecipaveis',
+        'valor_parcela' => 'setValorParcela',
         'data_hora_simulacao' => 'setDataHoraSimulacao',
+        'taxa_antecipacao_ano' => 'setTaxaAntecipacaoAno',
         'detalhes' => 'setDetalhes'
     );
   
@@ -99,10 +111,14 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_simulacao' => 'getIdSimulacao',
-        'id_compra' => 'getIdCompra',
+        'id_antecipacao_simulada' => 'getIdAntecipacaoSimulada',
         'id_conta' => 'getIdConta',
+        'id_evento_externo' => 'getIdEventoExterno',
+        'id_tipo_transacao' => 'getIdTipoTransacao',
+        'qtde_parcelas_antecipaveis' => 'getQtdeParcelasAntecipaveis',
+        'valor_parcela' => 'getValorParcela',
         'data_hora_simulacao' => 'getDataHoraSimulacao',
+        'taxa_antecipacao_ano' => 'getTaxaAntecipacaoAno',
         'detalhes' => 'getDetalhes'
     );
   
@@ -112,16 +128,10 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
 
     
     /**
-      * $id_simulacao C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
+      * $id_antecipacao_simulada C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
       * @var int
       */
-    protected $id_simulacao;
-    
-    /**
-      * $id_compra C\u00C3\u00B3digo identificador da compra.
-      * @var int
-      */
-    protected $id_compra;
+    protected $id_antecipacao_simulada;
     
     /**
       * $id_conta C\u00C3\u00B3digo identificador da conta.
@@ -130,10 +140,40 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $id_conta;
     
     /**
+      * $id_evento_externo C\u00C3\u00B3digo identificador do evento.
+      * @var int
+      */
+    protected $id_evento_externo;
+    
+    /**
+      * $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento.
+      * @var int
+      */
+    protected $id_tipo_transacao;
+    
+    /**
+      * $qtde_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+      * @var int
+      */
+    protected $qtde_parcelas_antecipaveis;
+    
+    /**
+      * $valor_parcela Valor da parcela.
+      * @var Number
+      */
+    protected $valor_parcela;
+    
+    /**
       * $data_hora_simulacao Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
       * @var string
       */
     protected $data_hora_simulacao;
+    
+    /**
+      * $taxa_antecipacao_ano Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+      * @var Number
+      */
+    protected $taxa_antecipacao_ano;
     
     /**
       * $detalhes Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
@@ -150,53 +190,36 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_simulacao = $data["id_simulacao"];
-            $this->id_compra = $data["id_compra"];
+            $this->id_antecipacao_simulada = $data["id_antecipacao_simulada"];
             $this->id_conta = $data["id_conta"];
+            $this->id_evento_externo = $data["id_evento_externo"];
+            $this->id_tipo_transacao = $data["id_tipo_transacao"];
+            $this->qtde_parcelas_antecipaveis = $data["qtde_parcelas_antecipaveis"];
+            $this->valor_parcela = $data["valor_parcela"];
             $this->data_hora_simulacao = $data["data_hora_simulacao"];
+            $this->taxa_antecipacao_ano = $data["taxa_antecipacao_ano"];
             $this->detalhes = $data["detalhes"];
         }
     }
     
     /**
-     * Gets id_simulacao
+     * Gets id_antecipacao_simulada
      * @return int
      */
-    public function getIdSimulacao()
+    public function getIdAntecipacaoSimulada()
     {
-        return $this->id_simulacao;
+        return $this->id_antecipacao_simulada;
     }
   
     /**
-     * Sets id_simulacao
-     * @param int $id_simulacao C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
+     * Sets id_antecipacao_simulada
+     * @param int $id_antecipacao_simulada C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
      * @return $this
      */
-    public function setIdSimulacao($id_simulacao)
+    public function setIdAntecipacaoSimulada($id_antecipacao_simulada)
     {
         
-        $this->id_simulacao = $id_simulacao;
-        return $this;
-    }
-    
-    /**
-     * Gets id_compra
-     * @return int
-     */
-    public function getIdCompra()
-    {
-        return $this->id_compra;
-    }
-  
-    /**
-     * Sets id_compra
-     * @param int $id_compra C\u00C3\u00B3digo identificador da compra.
-     * @return $this
-     */
-    public function setIdCompra($id_compra)
-    {
-        
-        $this->id_compra = $id_compra;
+        $this->id_antecipacao_simulada = $id_antecipacao_simulada;
         return $this;
     }
     
@@ -222,6 +245,90 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     }
     
     /**
+     * Gets id_evento_externo
+     * @return int
+     */
+    public function getIdEventoExterno()
+    {
+        return $this->id_evento_externo;
+    }
+  
+    /**
+     * Sets id_evento_externo
+     * @param int $id_evento_externo C\u00C3\u00B3digo identificador do evento.
+     * @return $this
+     */
+    public function setIdEventoExterno($id_evento_externo)
+    {
+        
+        $this->id_evento_externo = $id_evento_externo;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_transacao
+     * @return int
+     */
+    public function getIdTipoTransacao()
+    {
+        return $this->id_tipo_transacao;
+    }
+  
+    /**
+     * Sets id_tipo_transacao
+     * @param int $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento.
+     * @return $this
+     */
+    public function setIdTipoTransacao($id_tipo_transacao)
+    {
+        
+        $this->id_tipo_transacao = $id_tipo_transacao;
+        return $this;
+    }
+    
+    /**
+     * Gets qtde_parcelas_antecipaveis
+     * @return int
+     */
+    public function getQtdeParcelasAntecipaveis()
+    {
+        return $this->qtde_parcelas_antecipaveis;
+    }
+  
+    /**
+     * Sets qtde_parcelas_antecipaveis
+     * @param int $qtde_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+     * @return $this
+     */
+    public function setQtdeParcelasAntecipaveis($qtde_parcelas_antecipaveis)
+    {
+        
+        $this->qtde_parcelas_antecipaveis = $qtde_parcelas_antecipaveis;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_parcela
+     * @return Number
+     */
+    public function getValorParcela()
+    {
+        return $this->valor_parcela;
+    }
+  
+    /**
+     * Sets valor_parcela
+     * @param Number $valor_parcela Valor da parcela.
+     * @return $this
+     */
+    public function setValorParcela($valor_parcela)
+    {
+        
+        $this->valor_parcela = $valor_parcela;
+        return $this;
+    }
+    
+    /**
      * Gets data_hora_simulacao
      * @return string
      */
@@ -239,6 +346,27 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     {
         
         $this->data_hora_simulacao = $data_hora_simulacao;
+        return $this;
+    }
+    
+    /**
+     * Gets taxa_antecipacao_ano
+     * @return Number
+     */
+    public function getTaxaAntecipacaoAno()
+    {
+        return $this->taxa_antecipacao_ano;
+    }
+  
+    /**
+     * Sets taxa_antecipacao_ano
+     * @param Number $taxa_antecipacao_ano Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+     * @return $this
+     */
+    public function setTaxaAntecipacaoAno($taxa_antecipacao_ano)
+    {
+        
+        $this->taxa_antecipacao_ano = $taxa_antecipacao_ano;
         return $this;
     }
     

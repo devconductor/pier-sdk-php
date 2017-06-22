@@ -101,7 +101,7 @@ class NotificacoesApi
      * @param string $data Data (optional)
      * @param string $texto_status TextoStatus (optional)
      * @param string $operadora Operadora (optional)
-     * @return \br.com.conductor.pier.api.v2.model\SMS
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function atualizarSMSUsingPOST($nsu = null, $status = null, $data = null, $texto_status = null, $operadora = null)
@@ -121,7 +121,7 @@ class NotificacoesApi
      * @param string $data Data (optional)
      * @param string $texto_status TextoStatus (optional)
      * @param string $operadora Operadora (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function atualizarSMSUsingPOSTWithHttpInfo($nsu = null, $status = null, $data = null, $texto_status = null, $operadora = null)
@@ -181,19 +181,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\SMS'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\SMS', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\SMS', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -214,7 +214,7 @@ class NotificacoesApi
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PagePush
+     * @return \br.com.conductor.pier.api.v2.model\PagePushResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarPushUsingGET($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
@@ -236,7 +236,7 @@ class NotificacoesApi
      * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PagePush, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PagePushResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarPushUsingGETWithHttpInfo($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
@@ -304,19 +304,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PagePush'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PagePushResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PagePush', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PagePushResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePush', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePushResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -338,7 +338,7 @@ class NotificacoesApi
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageSMS
+     * @return \br.com.conductor.pier.api.v2.model\PageSMSResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
@@ -361,7 +361,7 @@ class NotificacoesApi
      * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
      * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
      * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageSMS, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageSMSResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
@@ -433,19 +433,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageSMS'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageSMSResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageSMS', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageSMSResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageSMS', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageSMSResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -462,7 +462,7 @@ class NotificacoesApi
      * @param string $nsu Seu n\u00C3\u00BAmero (optional)
      * @param string $data Data (optional)
      * @param string $resposta TextoStatus (optional)
-     * @return \br.com.conductor.pier.api.v2.model\SMS
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function responderSMSUsingPOST($nsu = null, $data = null, $resposta = null)
@@ -480,7 +480,7 @@ class NotificacoesApi
      * @param string $nsu Seu n\u00C3\u00BAmero (optional)
      * @param string $data Data (optional)
      * @param string $resposta TextoStatus (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\SMS, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function responderSMSUsingPOSTWithHttpInfo($nsu = null, $data = null, $resposta = null)
@@ -532,19 +532,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\SMS'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\SMS', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\SMS', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -559,7 +559,7 @@ class NotificacoesApi
      * Enviar Push FCM
      *
      * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushFCMUsingPOST($push_persists)
@@ -575,7 +575,7 @@ class NotificacoesApi
      * Enviar Push FCM
      *
      * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushFCMUsingPOSTWithHttpInfo($push_persists)
@@ -623,19 +623,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -650,7 +650,7 @@ class NotificacoesApi
      * Enviar Push GCM
      *
      * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushGCMUsingPOST($push_persists)
@@ -666,7 +666,7 @@ class NotificacoesApi
      * Enviar Push GCM
      *
      * @param \br.com.conductor.pier.api.v2.model\PushFCMEGCM[] $push_persists pushPersists (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushGCMUsingPOSTWithHttpInfo($push_persists)
@@ -714,19 +714,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -741,7 +741,7 @@ class NotificacoesApi
      * Enviar Push APNS
      *
      * @param \br.com.conductor.pier.api.v2.model\PushAPNS[] $push_persists pushPersists (required)
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushUsingPOST($push_persists)
@@ -757,7 +757,7 @@ class NotificacoesApi
      * Enviar Push APNS
      *
      * @param \br.com.conductor.pier.api.v2.model\PushAPNS[] $push_persists pushPersists (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarPushUsingPOSTWithHttpInfo($push_persists)
@@ -805,19 +805,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -832,7 +832,7 @@ class NotificacoesApi
      * Enviar SMS
      *
      * @param \br.com.conductor.pier.api.v2.model\NotificacaoSMSBody[] $lista_sms listaSMS (required)
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarSMSUsingPOST($lista_sms)
@@ -848,7 +848,7 @@ class NotificacoesApi
      * Enviar SMS
      *
      * @param \br.com.conductor.pier.api.v2.model\NotificacaoSMSBody[] $lista_sms listaSMS (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarSMSUsingPOSTWithHttpInfo($lista_sms)
@@ -896,19 +896,19 @@ class NotificacoesApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

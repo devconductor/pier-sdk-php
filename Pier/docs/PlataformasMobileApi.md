@@ -5,12 +5,12 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformasMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET15**](PlataformasMobileApi.md#listarUsingGET15) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listarUsingGET16**](PlataformasMobileApi.md#listarUsingGET16) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvarUsingPOST9**](PlataformasMobileApi.md#salvarUsingPOST9) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 # **atualizarUsingPUT1**
-> \br.com.conductor.pier.api.v2.model\PlataformaMobile atualizarUsingPUT1($id, $update)
+> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse atualizarUsingPUT1($id, $update)
 
 Atualiza Plataforma Mobile
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PlataformaMobile**](PlataformaMobile.md)
+[**\br.com.conductor.pier.api.v2.model\PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PagePlataformasMobile listarUsingGET15($page, $limit, $nome)
+# **listarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET16($page, $limit, $nome)
 
 Lista as plataformas mobile cadastradas
 
@@ -74,10 +74,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $nome = "nome_example"; // string | Nome da Plataforma Mobile
 
 try { 
-    $result = $api_instance->listarUsingGET15($page, $limit, $nome);
+    $result = $api_instance->listarUsingGET16($page, $limit, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlataformasMobileApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PlataformasMobileApi->listarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PagePlataformasMobile**](PagePlataformasMobile.md)
+[**\br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse**](PagePlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST9**
-> \br.com.conductor.pier.api.v2.model\PlataformaMobile salvarUsingPOST9($persist)
+> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST9($persist)
 
 Cadastra Plataforma Mobile
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\PlataformaMobile**](PlataformaMobile.md)
+[**\br.com.conductor.pier.api.v2.model\PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 

@@ -597,7 +597,7 @@ class UsuariosApi
     }
     
     /**
-     * listarUsingGET29
+     * listarUsingGET30
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
@@ -607,18 +607,18 @@ class UsuariosApi
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
      * @param string $status Status do Usuario (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageUsuarios
+     * @return \br.com.conductor.pier.api.v2.model\PageUsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET30($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET29WithHttpInfo
+     * listarUsingGET30WithHttpInfo
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados
      *
@@ -628,10 +628,10 @@ class UsuariosApi
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
      * @param string $status Status do Usuario (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarios, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29WithHttpInfo($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET30WithHttpInfo($page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   
@@ -692,19 +692,19 @@ class UsuariosApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageUsuarios'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageUsuarioResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageUsuarios', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageUsuarioResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageUsuarios', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageUsuarioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

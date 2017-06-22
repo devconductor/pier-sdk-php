@@ -336,19 +336,9 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET27
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     */
-    public function test_listarUsingGET27() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET28
      *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
     public function test_listarUsingGET28() {
@@ -356,19 +346,29 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET6
+     * Test case for listarUsingGET29
+     *
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     *
+     */
+    public function test_listarUsingGET29() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET7
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET6() {
+    public function test_listarUsingGET7() {
 
     }
     
     /**
      * Test case for reativarUsingPOST
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
      *
      */
     public function test_reativarUsingPOST() {
