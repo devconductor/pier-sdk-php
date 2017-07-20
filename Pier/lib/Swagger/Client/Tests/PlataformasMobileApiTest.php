@@ -86,12 +86,12 @@ class PlataformasMobileApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST9
+     * Test case for salvarUsingPOST11
      *
      * Cadastra Plataforma Mobile
      *
      */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST11() {
 
     }
     

@@ -59,7 +59,10 @@ class StatusCartaoResponse implements ArrayAccess
         'id_status_destino_conta' => 'int',
         'flag_cobra_tarifa' => 'int',
         'flag_permite_nova_via_cartao' => 'int',
-        'flag_permite_desbloqueio' => 'int'
+        'flag_permite_desbloqueio' => 'int',
+        'flag_cancelamento' => 'int',
+        'flag_permite_bloqueio' => 'int',
+        'flag_reativar' => 'int'
     );
   
     static function swaggerTypes() {
@@ -79,7 +82,10 @@ class StatusCartaoResponse implements ArrayAccess
         'id_status_destino_conta' => 'idStatusDestinoConta',
         'flag_cobra_tarifa' => 'flagCobraTarifa',
         'flag_permite_nova_via_cartao' => 'flagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'flagPermiteDesbloqueio'
+        'flag_permite_desbloqueio' => 'flagPermiteDesbloqueio',
+        'flag_cancelamento' => 'flagCancelamento',
+        'flag_permite_bloqueio' => 'flagPermiteBloqueio',
+        'flag_reativar' => 'flagReativar'
     );
   
     static function attributeMap() {
@@ -99,7 +105,10 @@ class StatusCartaoResponse implements ArrayAccess
         'id_status_destino_conta' => 'setIdStatusDestinoConta',
         'flag_cobra_tarifa' => 'setFlagCobraTarifa',
         'flag_permite_nova_via_cartao' => 'setFlagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'setFlagPermiteDesbloqueio'
+        'flag_permite_desbloqueio' => 'setFlagPermiteDesbloqueio',
+        'flag_cancelamento' => 'setFlagCancelamento',
+        'flag_permite_bloqueio' => 'setFlagPermiteBloqueio',
+        'flag_reativar' => 'setFlagReativar'
     );
   
     static function setters() {
@@ -119,7 +128,10 @@ class StatusCartaoResponse implements ArrayAccess
         'id_status_destino_conta' => 'getIdStatusDestinoConta',
         'flag_cobra_tarifa' => 'getFlagCobraTarifa',
         'flag_permite_nova_via_cartao' => 'getFlagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'getFlagPermiteDesbloqueio'
+        'flag_permite_desbloqueio' => 'getFlagPermiteDesbloqueio',
+        'flag_cancelamento' => 'getFlagCancelamento',
+        'flag_permite_bloqueio' => 'getFlagPermiteBloqueio',
+        'flag_reativar' => 'getFlagReativar'
     );
   
     static function getters() {
@@ -181,6 +193,24 @@ class StatusCartaoResponse implements ArrayAccess
       */
     protected $flag_permite_desbloqueio;
     
+    /**
+      * $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_cancelamento;
+    
+    /**
+      * $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_permite_bloqueio;
+    
+    /**
+      * $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $flag_reativar;
+    
 
     /**
      * Constructor
@@ -199,6 +229,9 @@ class StatusCartaoResponse implements ArrayAccess
             $this->flag_cobra_tarifa = $data["flag_cobra_tarifa"];
             $this->flag_permite_nova_via_cartao = $data["flag_permite_nova_via_cartao"];
             $this->flag_permite_desbloqueio = $data["flag_permite_desbloqueio"];
+            $this->flag_cancelamento = $data["flag_cancelamento"];
+            $this->flag_permite_bloqueio = $data["flag_permite_bloqueio"];
+            $this->flag_reativar = $data["flag_reativar"];
         }
     }
     
@@ -388,6 +421,69 @@ class StatusCartaoResponse implements ArrayAccess
     {
         
         $this->flag_permite_desbloqueio = $flag_permite_desbloqueio;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_cancelamento
+     * @return int
+     */
+    public function getFlagCancelamento()
+    {
+        return $this->flag_cancelamento;
+    }
+  
+    /**
+     * Sets flag_cancelamento
+     * @param int $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagCancelamento($flag_cancelamento)
+    {
+        
+        $this->flag_cancelamento = $flag_cancelamento;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_permite_bloqueio
+     * @return int
+     */
+    public function getFlagPermiteBloqueio()
+    {
+        return $this->flag_permite_bloqueio;
+    }
+  
+    /**
+     * Sets flag_permite_bloqueio
+     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagPermiteBloqueio($flag_permite_bloqueio)
+    {
+        
+        $this->flag_permite_bloqueio = $flag_permite_bloqueio;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_reativar
+     * @return int
+     */
+    public function getFlagReativar()
+    {
+        return $this->flag_reativar;
+    }
+  
+    /**
+     * Sets flag_reativar
+     * @param int $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setFlagReativar($flag_reativar)
+    {
+        
+        $this->flag_reativar = $flag_reativar;
         return $this;
     }
     

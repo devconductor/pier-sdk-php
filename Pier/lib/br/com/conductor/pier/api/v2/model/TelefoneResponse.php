@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneResponse Class Doc Comment
  *
  * @category    Class
- * @description ObjetoTelefone
+ * @description Objeto de Resposta de Telefone
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,25 +120,25 @@ class TelefoneResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $ddd C\u00C3\u00B3digo DDD do telefone (id).
+      * $ddd C\u00C3\u00B3digo DDD do telefone.
       * @var string
       */
     protected $ddd;
@@ -191,7 +191,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -233,7 +233,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -254,7 +254,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id).
+     * @param string $ddd C\u00C3\u00B3digo DDD do telefone.
      * @return $this
      */
     public function setDdd($ddd)

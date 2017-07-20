@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
 [**listarUsingGET8**](DispositivosApi.md#listarUsingGET8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvarUsingPOST3**](DispositivosApi.md#salvarUsingPOST3) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**salvarUsingPOST4**](DispositivosApi.md#salvarUsingPOST4) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 # **ativarUsingPOST**
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST3**
-> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST3($persist)
+# **salvarUsingPOST4**
+> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST4($persist)
 
 Cadastra Dispositivo
 
@@ -173,10 +173,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DispositivosApi();
 $persist = new \br.com.conductor.pier.api.v2.model\DispositivoPersist(); // \br.com.conductor.pier.api.v2.model\DispositivoPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST3($persist);
+    $result = $api_instance->salvarUsingPOST4($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DispositivosApi->salvarUsingPOST3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DispositivosApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
 }
 ?>
 ```

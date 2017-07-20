@@ -66,42 +66,22 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET12
+     * Test case for consultarUsingGET13
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
      */
-    public function test_consultarUsingGET12() {
+    public function test_consultarUsingGET13() {
 
     }
     
     /**
-     * Test case for listarUsingGET19
+     * Test case for listarTiposResolucaoUsingGET
      *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-     *
-     */
-    public function test_listarUsingGET19() {
-
-    }
-    
-    /**
-     * Test case for negarUsingPOST
-     *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
      */
-    public function test_negarUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for reconhecerUsingPOST
-     *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-     *
-     */
-    public function test_reconhecerUsingPOST() {
+    public function test_listarTiposResolucaoUsingGET() {
 
     }
     

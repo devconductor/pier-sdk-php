@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**atualizarUsingPUT**](JobsApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobsApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
 [**listarUsingGET12**](JobsApi.md#listarUsingGET12) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST5**](JobsApi.md#salvarUsingPOST5) | **POST** /api/jobs | Cadastrar Job
+[**salvarUsingPOST7**](JobsApi.md#salvarUsingPOST7) | **POST** /api/jobs | Cadastrar Job
 
 
 # **ativarJobUsingPOST**
@@ -207,8 +207,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST5($descricao, $cron, $groovy)
+# **salvarUsingPOST7**
+> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST7($descricao, $cron, $groovy)
 
 Cadastrar Job
 
@@ -225,10 +225,10 @@ $cron = "cron_example"; // string | Cron do Job.
 $groovy = "groovy_example"; // string | groovy
 
 try { 
-    $result = $api_instance->salvarUsingPOST5($descricao, $cron, $groovy);
+    $result = $api_instance->salvarUsingPOST7($descricao, $cron, $groovy);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobsApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobsApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

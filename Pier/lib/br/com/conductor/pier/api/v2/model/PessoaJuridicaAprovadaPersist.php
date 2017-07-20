@@ -63,6 +63,8 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'string',
         'dia_vencimento' => 'int',
         'nome_impresso' => 'string',
+        'valor_renda' => 'Number',
+        'canal_entrada' => 'string',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
         'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]'
@@ -89,6 +91,8 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'email',
         'dia_vencimento' => 'diaVencimento',
         'nome_impresso' => 'nomeImpresso',
+        'valor_renda' => 'valorRenda',
+        'canal_entrada' => 'canalEntrada',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
         'socios' => 'socios'
@@ -115,6 +119,8 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'setEmail',
         'dia_vencimento' => 'setDiaVencimento',
         'nome_impresso' => 'setNomeImpresso',
+        'valor_renda' => 'setValorRenda',
+        'canal_entrada' => 'setCanalEntrada',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
         'socios' => 'setSocios'
@@ -141,6 +147,8 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'getEmail',
         'dia_vencimento' => 'getDiaVencimento',
         'nome_impresso' => 'getNomeImpresso',
+        'valor_renda' => 'getValorRenda',
+        'canal_entrada' => 'getCanalEntrada',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
         'socios' => 'getSocios'
@@ -224,6 +232,18 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $nome_impresso;
     
     /**
+      * $valor_renda Apresenta o valor da renda compravada
+      * @var Number
+      */
+    protected $valor_renda;
+    
+    /**
+      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * @var string
+      */
+    protected $canal_entrada;
+    
+    /**
       * $telefones Apresenta os telefones da empresa
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
@@ -262,6 +282,8 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
             $this->email = $data["email"];
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->nome_impresso = $data["nome_impresso"];
+            $this->valor_renda = $data["valor_renda"];
+            $this->canal_entrada = $data["canal_entrada"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
             $this->socios = $data["socios"];
@@ -517,6 +539,48 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     {
         
         $this->nome_impresso = $nome_impresso;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_renda
+     * @return Number
+     */
+    public function getValorRenda()
+    {
+        return $this->valor_renda;
+    }
+  
+    /**
+     * Sets valor_renda
+     * @param Number $valor_renda Apresenta o valor da renda compravada
+     * @return $this
+     */
+    public function setValorRenda($valor_renda)
+    {
+        
+        $this->valor_renda = $valor_renda;
+        return $this;
+    }
+    
+    /**
+     * Gets canal_entrada
+     * @return string
+     */
+    public function getCanalEntrada()
+    {
+        return $this->canal_entrada;
+    }
+  
+    /**
+     * Sets canal_entrada
+     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @return $this
+     */
+    public function setCanalEntrada($canal_entrada)
+    {
+        
+        $this->canal_entrada = $canal_entrada;
         return $this;
     }
     

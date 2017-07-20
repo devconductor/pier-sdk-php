@@ -96,12 +96,12 @@ class DispositivosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST3
+     * Test case for salvarUsingPOST4
      *
      * Cadastra Dispositivo
      *
      */
-    public function test_salvarUsingPOST3() {
+    public function test_salvarUsingPOST4() {
 
     }
     

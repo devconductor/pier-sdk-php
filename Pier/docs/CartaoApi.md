@@ -7,19 +7,21 @@ Method | HTTP request | Description
 [**alterarAlterarSenhaUsingPUT**](CartaoApi.md#alterarAlterarSenhaUsingPUT) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**alterarStatusImpressaoUsingPUT**](CartaoApi.md#alterarStatusImpressaoUsingPUT) | **PUT** /api/cartoes/{id}/alterar-status-impressao | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 [**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id}/atribuir-titular | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
-[**bloquearUsingPUT**](CartaoApi.md#bloquearUsingPUT) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+[**bloquearUsingPOST**](CartaoApi.md#bloquearUsingPOST) | **POST** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrarAlterarSenhaUsingPOST**](CartaoApi.md#cadastrarAlterarSenhaUsingPOST) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+[**cancelarUsingPOST**](CartaoApi.md#cancelarUsingPOST) | **POST** /api/cartoes/{id}/cancelar | Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
 [**consultarDadosReaisCartaoUsingGET**](CartaoApi.md#consultarDadosReaisCartaoUsingGET) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultarUsingGET3**](CartaoApi.md#consultarUsingGET3) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultarUsingGET4**](CartaoApi.md#consultarUsingGET4) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
-[**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+[**desbloquearUsingPOST**](CartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listarUsingGET5**](CartaoApi.md#listarUsingGET5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**reativarUsingPOST**](CartaoApi.md#reativarUsingPOST) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -168,8 +170,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bloquearUsingPUT**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse bloquearUsingPUT($id, $id_status, $observacao)
+# **bloquearUsingPOST**
+> \br.com.conductor.pier.api.v2.model\CartaoResponse bloquearUsingPOST($id, $id_status, $observacao)
 
 Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -186,10 +188,10 @@ $id_status = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 $observacao = "observacao_example"; // string | Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
 
 try { 
-    $result = $api_instance->bloquearUsingPUT($id, $id_status, $observacao);
+    $result = $api_instance->bloquearUsingPOST($id, $id_status, $observacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->bloquearUsingPUT: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->bloquearUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -252,6 +254,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 **string**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cancelarUsingPOST**
+> \br.com.conductor.pier.api.v2.model\CartaoResponse cancelarUsingPOST($id, $id_status, $observacao)
+
+Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+$id_status = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+$observacao = "observacao_example"; // string | Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+
+try { 
+    $result = $api_instance->cancelarUsingPOST($id, $id_status, $observacao);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->cancelarUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **id_status** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. | 
+ **observacao** | **string**| Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -444,8 +495,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET3**
-> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET3($id)
+# **consultarUsingGET4**
+> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET4($id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -460,10 +511,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET3($id);
+    $result = $api_instance->consultarUsingGET4($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarUsingGET3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->consultarUsingGET4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -534,8 +585,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **desbloquearUsingPUT**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearUsingPUT($id)
+# **desbloquearUsingPOST**
+> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearUsingPOST($id)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -550,10 +601,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->desbloquearUsingPUT($id);
+    $result = $api_instance->desbloquearUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->desbloquearUsingPUT: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->desbloquearUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -815,6 +866,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageCartaoResponse**](PageCartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reativarUsingPOST**
+> \br.com.conductor.pier.api.v2.model\CartaoResponse reativarUsingPOST($id)
+
+Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+try { 
+    $result = $api_instance->reativarUsingPOST($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartaoApi->reativarUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 

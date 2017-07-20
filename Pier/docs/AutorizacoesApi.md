@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autorizarUsingPOST**](AutorizacoesApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**cancelarUsingPOST**](AutorizacoesApi.md#cancelarUsingPOST) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**cancelarUsingPOST2**](AutorizacoesApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacoesApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de pagamento
+[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
 
 # **autorizarUsingPOST**
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cancelarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse cancelarUsingPOST($cancelamento_request)
+# **cancelarUsingPOST2**
+> \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse cancelarUsingPOST2($cancelamento_request)
 
 Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 
@@ -71,10 +71,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\AutorizacoesApi();
 $cancelamento_request = new \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest(); // \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest | cancelamentoRequest
 
 try { 
-    $result = $api_instance->cancelarUsingPOST($cancelamento_request);
+    $result = $api_instance->cancelarUsingPOST2($cancelamento_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AutorizacoesApi->cancelarUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AutorizacoesApi->cancelarUsingPOST2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -144,9 +144,9 @@ No authorization required
 # **simularUsingPOST**
 > \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse simularUsingPOST($transacoes_request)
 
-Simula planos de pagamento
+Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
-Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
 
 ### Example 
 ```php

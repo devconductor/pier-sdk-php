@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id) | [optional] 
+**id** | **int** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id) | [optional] 
 **nome** | **string** | Apresenta o nome completo da pessoa fisica. | 
 **nome_mae** | **string** | Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
 **data_nascimento** | **string** | Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **unidade_federativa_identidade** | **string** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
 **data_emissao_identidade** | **string** | Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd | [optional] 
 **id_estado_civil** | **int** | Id Estado civil da pessoa fisica | [optional] 
-**profissao** | **string** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+**id_profissao** | **int** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **int** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_nacionalidade** | **int** | Id Nacionalidade da pessoa fisica | [optional] 
 **id_origem_comercial** | **int** | Id da origem comercial | 
@@ -24,7 +24,10 @@ Name | Type | Description | Notes
 **email** | **string** | Email da pessoa fisica | [optional] 
 **dia_vencimento** | **int** | Dia vencimento | 
 **nome_impresso** | **string** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-**nome_empresa** | **string** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+**nome_empresa** | **string** | Nome da empresa | [optional] 
+**id_conta** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada | [optional] 
+**id_proposta** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta | [optional] 
+**canal_entrada** | **string** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
 **telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]**](TelefonePessoaAprovadaResponse.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]**](EnderecoAprovadoResponse.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
 

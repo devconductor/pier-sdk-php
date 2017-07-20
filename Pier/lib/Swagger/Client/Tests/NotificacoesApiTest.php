@@ -66,12 +66,72 @@ class NotificacoesApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarConfiguracaoUsingPUT
+     *
+     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     */
+    public function test_alterarConfiguracaoUsingPUT() {
+
+    }
+    
+    /**
+     * Test case for alterarTemplateNotificacaoUsingPUT
+     *
+     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_alterarTemplateNotificacaoUsingPUT() {
+
+    }
+    
+    /**
      * Test case for atualizarSMSUsingPOST
      *
      * Atualizar SMS
      *
      */
     public function test_atualizarSMSUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarConfiguracaoUsingGET
+     *
+     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     *
+     */
+    public function test_consultarConfiguracaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarTemplateNotificacaoUsingGET
+     *
+     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultarTemplateNotificacaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for gerarTokenUsingPOST
+     *
+     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     *
+     */
+    public function test_gerarTokenUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for listarConfiguracaoUsingGET
+     *
+     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     *
+     */
+    public function test_listarConfiguracaoUsingGET() {
 
     }
     
@@ -96,12 +156,42 @@ class NotificacoesApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarTemplateNotificacaoUsingGET
+     *
+     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     *
+     */
+    public function test_listarTemplateNotificacaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarTiposLayoutsUsingGET
+     *
+     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_listarTiposLayoutsUsingGET() {
+
+    }
+    
+    /**
      * Test case for responderSMSUsingPOST
      *
      * Responder SMS
      *
      */
     public function test_responderSMSUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarConfiguracaoUsingPOST
+     *
+     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     */
+    public function test_salvarConfiguracaoUsingPOST() {
 
     }
     
@@ -142,6 +232,26 @@ class NotificacoesApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_salvarSMSUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for salvarTemplateNotificacaoUsingPOST
+     *
+     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_salvarTemplateNotificacaoUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for validarTokenUsingPOST
+     *
+     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     *
+     */
+    public function test_validarTokenUsingPOST() {
 
     }
     

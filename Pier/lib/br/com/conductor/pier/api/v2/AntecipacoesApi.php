@@ -1,6 +1,6 @@
 <?php
 /**
- * CompraApi
+ * AntecipacoesApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * CompraApi Class Doc Comment
+ * AntecipacoesApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CompraApi
+class AntecipacoesApi
 {
 
     /**
@@ -82,7 +82,7 @@ class CompraApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v2.invoker\ApiClient $apiClient set the API client
-     * @return CompraApi
+     * @return AntecipacoesApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
@@ -90,6 +90,216 @@ class CompraApi
         return $this;
     }
   
+    
+    /**
+     * configurarTaxaAntecipacaoUsingPOST
+     *
+     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     * @param int $id Id Produto (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaAntecipacaoRequest $taxa_antecipacao_request taxaAntecipacaoRequest (required)
+     * @return \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function configurarTaxaAntecipacaoUsingPOST($id, $taxa_antecipacao_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->configurarTaxaAntecipacaoUsingPOSTWithHttpInfo ($id, $taxa_antecipacao_request);
+        return $response; 
+    }
+
+
+    /**
+     * configurarTaxaAntecipacaoUsingPOSTWithHttpInfo
+     *
+     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     * @param int $id Id Produto (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaAntecipacaoRequest $taxa_antecipacao_request taxaAntecipacaoRequest (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function configurarTaxaAntecipacaoUsingPOSTWithHttpInfo($id, $taxa_antecipacao_request)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling configurarTaxaAntecipacaoUsingPOST');
+        }
+        // verify the required parameter 'taxa_antecipacao_request' is set
+        if ($taxa_antecipacao_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $taxa_antecipacao_request when calling configurarTaxaAntecipacaoUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/produtos/{id}/configurar-taxa-antecipacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($taxa_antecipacao_request)) {
+            $_tempBody = $taxa_antecipacao_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarTaxaAntecipacaoUsingGET
+     *
+     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     * @param int $id Id Produto (required)
+     * @param string $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) (required)
+     * @return \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTaxaAntecipacaoUsingGET($id, $tipo_transacao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarTaxaAntecipacaoUsingGETWithHttpInfo ($id, $tipo_transacao);
+        return $response; 
+    }
+
+
+    /**
+     * consultarTaxaAntecipacaoUsingGETWithHttpInfo
+     *
+     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     * @param int $id Id Produto (required)
+     * @param string $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTaxaAntecipacaoUsingGETWithHttpInfo($id, $tipo_transacao)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarTaxaAntecipacaoUsingGET');
+        }
+        // verify the required parameter 'tipo_transacao' is set
+        if ($tipo_transacao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tipo_transacao when calling consultarTaxaAntecipacaoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/produtos/{id}/consultar-taxa-antecipacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($tipo_transacao !== null) {
+            $queryParams['tipoTransacao'] = $this->apiClient->getSerializer()->toQueryValue($tipo_transacao);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
     
     /**
      * efetivarAntecipacaoUsingPOST
@@ -137,7 +347,7 @@ class CompraApi
         }
   
         // parse inputs
-        $resourcePath = "/api/compras/{id}/efetivar-antecipacao";
+        $resourcePath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -209,7 +419,7 @@ class CompraApi
     /**
      * listarUsingGET6
      *
-     * Listar compras
+     * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
@@ -231,7 +441,7 @@ class CompraApi
     /**
      * listarUsingGET6WithHttpInfo
      *
-     * Listar compras
+     * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
@@ -252,7 +462,7 @@ class CompraApi
         }
   
         // parse inputs
-        $resourcePath = "/api/compras";
+        $resourcePath = "/api/compras-antecipaveis";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -373,7 +583,7 @@ class CompraApi
         }
   
         // parse inputs
-        $resourcePath = "/api/compras/{id}/simular-antecipacao";
+        $resourcePath = "/api/compras-antecipaveis/{id}/simular-antecipacao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();

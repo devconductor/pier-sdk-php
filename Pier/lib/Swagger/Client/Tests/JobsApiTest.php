@@ -106,12 +106,12 @@ class JobsApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST5
+     * Test case for salvarUsingPOST7
      *
      * Cadastrar Job
      *
      */
-    public function test_salvarUsingPOST5() {
+    public function test_salvarUsingPOST7() {
 
     }
     

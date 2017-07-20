@@ -54,7 +54,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_pessoa' => 'int',
         'nome_mae' => 'string',
         'id_estado_civil' => 'int',
-        'profissao' => 'string',
+        'id_profissao' => 'int',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
         'numero_agencia' => 'int',
@@ -75,7 +75,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_pessoa' => 'idPessoa',
         'nome_mae' => 'nomeMae',
         'id_estado_civil' => 'idEstadoCivil',
-        'profissao' => 'profissao',
+        'id_profissao' => 'idProfissao',
         'id_natureza_ocupacao' => 'idNaturezaOcupacao',
         'id_nacionalidade' => 'idNacionalidade',
         'numero_agencia' => 'numeroAgencia',
@@ -96,7 +96,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_pessoa' => 'setIdPessoa',
         'nome_mae' => 'setNomeMae',
         'id_estado_civil' => 'setIdEstadoCivil',
-        'profissao' => 'setProfissao',
+        'id_profissao' => 'setIdProfissao',
         'id_natureza_ocupacao' => 'setIdNaturezaOcupacao',
         'id_nacionalidade' => 'setIdNacionalidade',
         'numero_agencia' => 'setNumeroAgencia',
@@ -117,7 +117,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_pessoa' => 'getIdPessoa',
         'nome_mae' => 'getNomeMae',
         'id_estado_civil' => 'getIdEstadoCivil',
-        'profissao' => 'getProfissao',
+        'id_profissao' => 'getIdProfissao',
         'id_natureza_ocupacao' => 'getIdNaturezaOcupacao',
         'id_nacionalidade' => 'getIdNacionalidade',
         'numero_agencia' => 'getNumeroAgencia',
@@ -150,10 +150,10 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o da pessoa fisica
-      * @var string
+      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * @var int
       */
-    protected $profissao;
+    protected $id_profissao;
     
     /**
       * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -203,7 +203,7 @@ class PessoaDetalheResponse implements ArrayAccess
             $this->id_pessoa = $data["id_pessoa"];
             $this->nome_mae = $data["nome_mae"];
             $this->id_estado_civil = $data["id_estado_civil"];
-            $this->profissao = $data["profissao"];
+            $this->id_profissao = $data["id_profissao"];
             $this->id_natureza_ocupacao = $data["id_natureza_ocupacao"];
             $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->numero_agencia = $data["numero_agencia"];
@@ -277,23 +277,23 @@ class PessoaDetalheResponse implements ArrayAccess
     }
     
     /**
-     * Gets profissao
-     * @return string
+     * Gets id_profissao
+     * @return int
      */
-    public function getProfissao()
+    public function getIdProfissao()
     {
-        return $this->profissao;
+        return $this->id_profissao;
     }
   
     /**
-     * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * Sets id_profissao
+     * @param int $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
      * @return $this
      */
-    public function setProfissao($profissao)
+    public function setIdProfissao($id_profissao)
     {
         
-        $this->profissao = $profissao;
+        $this->id_profissao = $id_profissao;
         return $this;
     }
     

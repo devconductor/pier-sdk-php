@@ -106,12 +106,42 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for ativarAnuidadeUsingPOST
+     *
+     * Atribuir Anuidade
+     *
+     */
+    public function test_ativarAnuidadeUsingPOST() {
+
+    }
+    
+    /**
      * Test case for ativarEnvioFaturaEmailUsingPOST
      *
      *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
      *
      */
     public function test_ativarEnvioFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for bloquearUsingPOST1
+     *
+     * Realiza o bloqueio de uma determinada Conta
+     *
+     */
+    public function test_bloquearUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for cancelarUsingPOST1
+     *
+     * Realiza o cancelamento de uma determinada Conta
+     *
+     */
+    public function test_cancelarUsingPOST1() {
 
     }
     
@@ -196,19 +226,9 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET23
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     */
-    public function test_consultarUsingGET23() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET24
      *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
     public function test_consultarUsingGET24() {
@@ -216,12 +236,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET4
+     * Test case for consultarUsingGET25
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     */
+    public function test_consultarUsingGET25() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET5
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET4() {
+    public function test_consultarUsingGET5() {
 
     }
     
@@ -366,12 +396,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for reativarUsingPOST
+     * Test case for reativarUsingPOST1
      *
      * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
      *
      */
-    public function test_reativarUsingPOST() {
+    public function test_reativarUsingPOST1() {
 
     }
     

@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET16**](EstabelecimentosApi.md#consultarUsingGET16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET6**](EstabelecimentosApi.md#consultarUsingGET6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET17**](EstabelecimentosApi.md#consultarUsingGET17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET7**](EstabelecimentosApi.md#consultarUsingGET7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
 [**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
 [**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-# **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET16($id)
+# **consultarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET17($id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -26,10 +26,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET16($id);
+    $result = $api_instance->consultarUsingGET17($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->consultarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentosApi->consultarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET6($id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET7($id)
 
 Consultar estabelecimento por id
 
@@ -71,10 +71,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET6($id);
+    $result = $api_instance->consultarUsingGET7($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentosApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

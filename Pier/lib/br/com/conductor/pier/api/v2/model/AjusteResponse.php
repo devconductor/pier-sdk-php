@@ -51,7 +51,11 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_ajuste' => 'int'
+        'id_ajuste' => 'int',
+        'id_tipo_ajuste' => 'int',
+        'id_conta' => 'int',
+        'data_ajuste' => 'string',
+        'valor' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -63,7 +67,11 @@ class AjusteResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_ajuste' => 'idAjuste'
+        'id_ajuste' => 'idAjuste',
+        'id_tipo_ajuste' => 'idTipoAjuste',
+        'id_conta' => 'idConta',
+        'data_ajuste' => 'dataAjuste',
+        'valor' => 'valor'
     );
   
     static function attributeMap() {
@@ -75,7 +83,11 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_ajuste' => 'setIdAjuste'
+        'id_ajuste' => 'setIdAjuste',
+        'id_tipo_ajuste' => 'setIdTipoAjuste',
+        'id_conta' => 'setIdConta',
+        'data_ajuste' => 'setDataAjuste',
+        'valor' => 'setValor'
     );
   
     static function setters() {
@@ -87,7 +99,11 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_ajuste' => 'getIdAjuste'
+        'id_ajuste' => 'getIdAjuste',
+        'id_tipo_ajuste' => 'getIdTipoAjuste',
+        'id_conta' => 'getIdConta',
+        'data_ajuste' => 'getDataAjuste',
+        'valor' => 'getValor'
     );
   
     static function getters() {
@@ -101,6 +117,30 @@ class AjusteResponse implements ArrayAccess
       */
     protected $id_ajuste;
     
+    /**
+      * $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+      * @var int
+      */
+    protected $id_tipo_ajuste;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $data_ajuste Data do ajuste
+      * @var string
+      */
+    protected $data_ajuste;
+    
+    /**
+      * $valor Valor do ajuste
+      * @var Number
+      */
+    protected $valor;
+    
 
     /**
      * Constructor
@@ -111,6 +151,10 @@ class AjusteResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id_ajuste = $data["id_ajuste"];
+            $this->id_tipo_ajuste = $data["id_tipo_ajuste"];
+            $this->id_conta = $data["id_conta"];
+            $this->data_ajuste = $data["data_ajuste"];
+            $this->valor = $data["valor"];
         }
     }
     
@@ -132,6 +176,90 @@ class AjusteResponse implements ArrayAccess
     {
         
         $this->id_ajuste = $id_ajuste;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_ajuste
+     * @return int
+     */
+    public function getIdTipoAjuste()
+    {
+        return $this->id_tipo_ajuste;
+    }
+  
+    /**
+     * Sets id_tipo_ajuste
+     * @param int $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+     * @return $this
+     */
+    public function setIdTipoAjuste($id_tipo_ajuste)
+    {
+        
+        $this->id_tipo_ajuste = $id_tipo_ajuste;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets data_ajuste
+     * @return string
+     */
+    public function getDataAjuste()
+    {
+        return $this->data_ajuste;
+    }
+  
+    /**
+     * Sets data_ajuste
+     * @param string $data_ajuste Data do ajuste
+     * @return $this
+     */
+    public function setDataAjuste($data_ajuste)
+    {
+        
+        $this->data_ajuste = $data_ajuste;
+        return $this;
+    }
+    
+    /**
+     * Gets valor
+     * @return Number
+     */
+    public function getValor()
+    {
+        return $this->valor;
+    }
+  
+    /**
+     * Sets valor
+     * @param Number $valor Valor do ajuste
+     * @return $this
+     */
+    public function setValor($valor)
+    {
+        
+        $this->valor = $valor;
         return $this;
     }
     

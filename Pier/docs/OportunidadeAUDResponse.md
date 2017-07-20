@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **detalhes** | [**\br.com.conductor.pier.api.v2.model\CdtDetalheOportunidadeAUD[]**](CdtDetalheOportunidadeAUD.md) | Lista de detalhes da oportunidade | [optional] 
 **rev_date** | **string** | Data da auditoria | [optional] 
 **rev_type** | **int** | Tipo da auditoria | [optional] 
+**rev** | **int** | Identificador da auditoria | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

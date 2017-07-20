@@ -64,6 +64,9 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'email' => 'string',
         'dia_vencimento' => 'int',
         'nome_impresso' => 'string',
+        'id_conta' => 'int',
+        'id_proposta' => 'int',
+        'canal_entrada' => 'string',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]',
         'socios' => '\br.com.conductor.pier.api.v2.model\SocioAprovadoResponse[]'
@@ -91,6 +94,9 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'email' => 'email',
         'dia_vencimento' => 'diaVencimento',
         'nome_impresso' => 'nomeImpresso',
+        'id_conta' => 'idConta',
+        'id_proposta' => 'idProposta',
+        'canal_entrada' => 'canalEntrada',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
         'socios' => 'socios'
@@ -118,6 +124,9 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'email' => 'setEmail',
         'dia_vencimento' => 'setDiaVencimento',
         'nome_impresso' => 'setNomeImpresso',
+        'id_conta' => 'setIdConta',
+        'id_proposta' => 'setIdProposta',
+        'canal_entrada' => 'setCanalEntrada',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
         'socios' => 'setSocios'
@@ -145,6 +154,9 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'email' => 'getEmail',
         'dia_vencimento' => 'getDiaVencimento',
         'nome_impresso' => 'getNomeImpresso',
+        'id_conta' => 'getIdConta',
+        'id_proposta' => 'getIdProposta',
+        'canal_entrada' => 'getCanalEntrada',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
         'socios' => 'getSocios'
@@ -156,7 +168,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
       * @var int
       */
     protected $id;
@@ -234,6 +246,24 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
     protected $nome_impresso;
     
     /**
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_proposta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+      * @var int
+      */
+    protected $id_proposta;
+    
+    /**
+      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * @var string
+      */
+    protected $canal_entrada;
+    
+    /**
       * $telefones Apresenta os telefones da empresa
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]
       */
@@ -273,6 +303,9 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
             $this->email = $data["email"];
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->nome_impresso = $data["nome_impresso"];
+            $this->id_conta = $data["id_conta"];
+            $this->id_proposta = $data["id_proposta"];
+            $this->canal_entrada = $data["canal_entrada"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
             $this->socios = $data["socios"];
@@ -290,7 +323,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
      * @return $this
      */
     public function setId($id)
@@ -549,6 +582,69 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
     {
         
         $this->nome_impresso = $nome_impresso;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_proposta
+     * @return int
+     */
+    public function getIdProposta()
+    {
+        return $this->id_proposta;
+    }
+  
+    /**
+     * Sets id_proposta
+     * @param int $id_proposta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+     * @return $this
+     */
+    public function setIdProposta($id_proposta)
+    {
+        
+        $this->id_proposta = $id_proposta;
+        return $this;
+    }
+    
+    /**
+     * Gets canal_entrada
+     * @return string
+     */
+    public function getCanalEntrada()
+    {
+        return $this->canal_entrada;
+    }
+  
+    /**
+     * Sets canal_entrada
+     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @return $this
+     */
+    public function setCanalEntrada($canal_entrada)
+    {
+        
+        $this->canal_entrada = $canal_entrada;
         return $this;
     }
     

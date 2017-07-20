@@ -53,9 +53,9 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id_antecipacao_simulada' => 'int',
         'id_conta' => 'int',
-        'id_evento_externo' => 'int',
+        'id_compra' => 'int',
         'id_tipo_transacao' => 'int',
-        'qtde_parcelas_antecipaveis' => 'int',
+        'quantidade_parcelas_antecipaveis' => 'int',
         'valor_parcela' => 'Number',
         'data_hora_simulacao' => 'string',
         'taxa_antecipacao_ano' => 'Number',
@@ -73,9 +73,9 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     static $attributeMap = array(
         'id_antecipacao_simulada' => 'idAntecipacaoSimulada',
         'id_conta' => 'idConta',
-        'id_evento_externo' => 'idEventoExterno',
+        'id_compra' => 'idCompra',
         'id_tipo_transacao' => 'idTipoTransacao',
-        'qtde_parcelas_antecipaveis' => 'qtdeParcelasAntecipaveis',
+        'quantidade_parcelas_antecipaveis' => 'quantidadeParcelasAntecipaveis',
         'valor_parcela' => 'valorParcela',
         'data_hora_simulacao' => 'dataHoraSimulacao',
         'taxa_antecipacao_ano' => 'taxaAntecipacaoAno',
@@ -93,9 +93,9 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     static $setters = array(
         'id_antecipacao_simulada' => 'setIdAntecipacaoSimulada',
         'id_conta' => 'setIdConta',
-        'id_evento_externo' => 'setIdEventoExterno',
+        'id_compra' => 'setIdCompra',
         'id_tipo_transacao' => 'setIdTipoTransacao',
-        'qtde_parcelas_antecipaveis' => 'setQtdeParcelasAntecipaveis',
+        'quantidade_parcelas_antecipaveis' => 'setQuantidadeParcelasAntecipaveis',
         'valor_parcela' => 'setValorParcela',
         'data_hora_simulacao' => 'setDataHoraSimulacao',
         'taxa_antecipacao_ano' => 'setTaxaAntecipacaoAno',
@@ -113,9 +113,9 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     static $getters = array(
         'id_antecipacao_simulada' => 'getIdAntecipacaoSimulada',
         'id_conta' => 'getIdConta',
-        'id_evento_externo' => 'getIdEventoExterno',
+        'id_compra' => 'getIdCompra',
         'id_tipo_transacao' => 'getIdTipoTransacao',
-        'qtde_parcelas_antecipaveis' => 'getQtdeParcelasAntecipaveis',
+        'quantidade_parcelas_antecipaveis' => 'getQuantidadeParcelasAntecipaveis',
         'valor_parcela' => 'getValorParcela',
         'data_hora_simulacao' => 'getDataHoraSimulacao',
         'taxa_antecipacao_ano' => 'getTaxaAntecipacaoAno',
@@ -140,22 +140,22 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $id_conta;
     
     /**
-      * $id_evento_externo C\u00C3\u00B3digo identificador do evento.
+      * $id_compra C\u00C3\u00B3digo identificador do evento compra.
       * @var int
       */
-    protected $id_evento_externo;
+    protected $id_compra;
     
     /**
-      * $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento.
+      * $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento compra.
       * @var int
       */
     protected $id_tipo_transacao;
     
     /**
-      * $qtde_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+      * $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
       * @var int
       */
-    protected $qtde_parcelas_antecipaveis;
+    protected $quantidade_parcelas_antecipaveis;
     
     /**
       * $valor_parcela Valor da parcela.
@@ -192,9 +192,9 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         if ($data != null) {
             $this->id_antecipacao_simulada = $data["id_antecipacao_simulada"];
             $this->id_conta = $data["id_conta"];
-            $this->id_evento_externo = $data["id_evento_externo"];
+            $this->id_compra = $data["id_compra"];
             $this->id_tipo_transacao = $data["id_tipo_transacao"];
-            $this->qtde_parcelas_antecipaveis = $data["qtde_parcelas_antecipaveis"];
+            $this->quantidade_parcelas_antecipaveis = $data["quantidade_parcelas_antecipaveis"];
             $this->valor_parcela = $data["valor_parcela"];
             $this->data_hora_simulacao = $data["data_hora_simulacao"];
             $this->taxa_antecipacao_ano = $data["taxa_antecipacao_ano"];
@@ -245,23 +245,23 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     }
     
     /**
-     * Gets id_evento_externo
+     * Gets id_compra
      * @return int
      */
-    public function getIdEventoExterno()
+    public function getIdCompra()
     {
-        return $this->id_evento_externo;
+        return $this->id_compra;
     }
   
     /**
-     * Sets id_evento_externo
-     * @param int $id_evento_externo C\u00C3\u00B3digo identificador do evento.
+     * Sets id_compra
+     * @param int $id_compra C\u00C3\u00B3digo identificador do evento compra.
      * @return $this
      */
-    public function setIdEventoExterno($id_evento_externo)
+    public function setIdCompra($id_compra)
     {
         
-        $this->id_evento_externo = $id_evento_externo;
+        $this->id_compra = $id_compra;
         return $this;
     }
     
@@ -276,7 +276,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_transacao
-     * @param int $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento.
+     * @param int $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento compra.
      * @return $this
      */
     public function setIdTipoTransacao($id_tipo_transacao)
@@ -287,23 +287,23 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     }
     
     /**
-     * Gets qtde_parcelas_antecipaveis
+     * Gets quantidade_parcelas_antecipaveis
      * @return int
      */
-    public function getQtdeParcelasAntecipaveis()
+    public function getQuantidadeParcelasAntecipaveis()
     {
-        return $this->qtde_parcelas_antecipaveis;
+        return $this->quantidade_parcelas_antecipaveis;
     }
   
     /**
-     * Sets qtde_parcelas_antecipaveis
-     * @param int $qtde_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+     * Sets quantidade_parcelas_antecipaveis
+     * @param int $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
      * @return $this
      */
-    public function setQtdeParcelasAntecipaveis($qtde_parcelas_antecipaveis)
+    public function setQuantidadeParcelasAntecipaveis($quantidade_parcelas_antecipaveis)
     {
         
-        $this->qtde_parcelas_antecipaveis = $qtde_parcelas_antecipaveis;
+        $this->quantidade_parcelas_antecipaveis = $quantidade_parcelas_antecipaveis;
         return $this;
     }
     

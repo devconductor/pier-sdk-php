@@ -207,7 +207,7 @@ class WebhooksApi
     }
     
     /**
-     * consultarUsingGET26
+     * consultarUsingGET27
      *
      * Consultar Webhook
      *
@@ -215,15 +215,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26($id)
+    public function consultarUsingGET27($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET26WithHttpInfo
+     * consultarUsingGET27WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -231,12 +231,12 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26WithHttpInfo($id)
+    public function consultarUsingGET27WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET27');
         }
   
         // parse inputs
@@ -419,7 +419,7 @@ class WebhooksApi
     }
     
     /**
-     * salvarUsingPOST14
+     * salvarUsingPOST16
      *
      * Salvar Webhook
      *
@@ -428,15 +428,15 @@ class WebhooksApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14($tipo_evento, $url)
+    public function salvarUsingPOST16($tipo_evento, $url)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($tipo_evento, $url);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST16WithHttpInfo ($tipo_evento, $url);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST14WithHttpInfo
+     * salvarUsingPOST16WithHttpInfo
      *
      * Salvar Webhook
      *
@@ -445,16 +445,16 @@ class WebhooksApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14WithHttpInfo($tipo_evento, $url)
+    public function salvarUsingPOST16WithHttpInfo($tipo_evento, $url)
     {
         
         // verify the required parameter 'tipo_evento' is set
         if ($tipo_evento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $tipo_evento when calling salvarUsingPOST16');
         }
         // verify the required parameter 'url' is set
         if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $url when calling salvarUsingPOST16');
         }
   
         // parse inputs

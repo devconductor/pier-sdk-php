@@ -296,7 +296,7 @@ class PlataformasMobileApi
     }
     
     /**
-     * salvarUsingPOST9
+     * salvarUsingPOST11
      *
      * Cadastra Plataforma Mobile
      *
@@ -304,15 +304,15 @@ class PlataformasMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9($persist)
+    public function salvarUsingPOST11($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST11WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST9WithHttpInfo
+     * salvarUsingPOST11WithHttpInfo
      *
      * Cadastra Plataforma Mobile
      *
@@ -320,12 +320,12 @@ class PlataformasMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9WithHttpInfo($persist)
+    public function salvarUsingPOST11WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST11');
         }
   
         // parse inputs

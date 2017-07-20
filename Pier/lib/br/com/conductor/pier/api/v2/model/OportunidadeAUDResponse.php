@@ -62,7 +62,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'bool',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\CdtDetalheOportunidadeAUD[]',
         'rev_date' => 'string',
-        'rev_type' => 'int'
+        'rev_type' => 'int',
+        'rev' => 'int'
     );
   
     static function swaggerTypes() {
@@ -85,7 +86,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'flagAtivo',
         'detalhes' => 'detalhes',
         'rev_date' => 'revDate',
-        'rev_type' => 'revType'
+        'rev_type' => 'revType',
+        'rev' => 'rev'
     );
   
     static function attributeMap() {
@@ -108,7 +110,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'setFlagAtivo',
         'detalhes' => 'setDetalhes',
         'rev_date' => 'setRevDate',
-        'rev_type' => 'setRevType'
+        'rev_type' => 'setRevType',
+        'rev' => 'setRev'
     );
   
     static function setters() {
@@ -131,7 +134,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'getFlagAtivo',
         'detalhes' => 'getDetalhes',
         'rev_date' => 'getRevDate',
-        'rev_type' => 'getRevType'
+        'rev_type' => 'getRevType',
+        'rev' => 'getRev'
     );
   
     static function getters() {
@@ -211,6 +215,12 @@ class OportunidadeAUDResponse implements ArrayAccess
       */
     protected $rev_type;
     
+    /**
+      * $rev Identificador da auditoria
+      * @var int
+      */
+    protected $rev;
+    
 
     /**
      * Constructor
@@ -232,6 +242,7 @@ class OportunidadeAUDResponse implements ArrayAccess
             $this->detalhes = $data["detalhes"];
             $this->rev_date = $data["rev_date"];
             $this->rev_type = $data["rev_type"];
+            $this->rev = $data["rev"];
         }
     }
     
@@ -484,6 +495,27 @@ class OportunidadeAUDResponse implements ArrayAccess
     {
         
         $this->rev_type = $rev_type;
+        return $this;
+    }
+    
+    /**
+     * Gets rev
+     * @return int
+     */
+    public function getRev()
+    {
+        return $this->rev;
+    }
+  
+    /**
+     * Sets rev
+     * @param int $rev Identificador da auditoria
+     * @return $this
+     */
+    public function setRev($rev)
+    {
+        
+        $this->rev = $rev;
         return $this;
     }
     

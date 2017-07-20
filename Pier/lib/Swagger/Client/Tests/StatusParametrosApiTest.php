@@ -86,22 +86,22 @@ class StatusParametrosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET14
      *
      * Apresenta os dados de um determinado Status Conta
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET14() {
 
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for consultarUsingGET15
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_consultarUsingGET15() {
 
     }
     

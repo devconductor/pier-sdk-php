@@ -405,7 +405,7 @@ class DispositivosApi
     }
     
     /**
-     * salvarUsingPOST3
+     * salvarUsingPOST4
      *
      * Cadastra Dispositivo
      *
@@ -413,15 +413,15 @@ class DispositivosApi
      * @return \br.com.conductor.pier.api.v2.model\DispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST3($persist)
+    public function salvarUsingPOST4($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST3WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST4WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST3WithHttpInfo
+     * salvarUsingPOST4WithHttpInfo
      *
      * Cadastra Dispositivo
      *
@@ -429,12 +429,12 @@ class DispositivosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST3WithHttpInfo($persist)
+    public function salvarUsingPOST4WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST3');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST4');
         }
   
         // parse inputs

@@ -355,9 +355,9 @@ class UsuarioResponse implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array("ATIVO", "INATIVO");
+        $allowed_values = array("INATIVO", "ATIVO");
         if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'ATIVO', 'INATIVO'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'INATIVO', 'ATIVO'");
         }
         $this->status = $status;
         return $this;

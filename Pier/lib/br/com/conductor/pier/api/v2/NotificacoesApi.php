@@ -92,6 +92,240 @@ class NotificacoesApi
   
     
     /**
+     * alterarConfiguracaoUsingPUT
+     *
+     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarConfiguracaoUsingPUT($id, $persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarConfiguracaoUsingPUTWithHttpInfo ($id, $persist);
+        return $response; 
+    }
+
+
+    /**
+     * alterarConfiguracaoUsingPUTWithHttpInfo
+     *
+     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarConfiguracaoUsingPUTWithHttpInfo($id, $persist)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarConfiguracaoUsingPUT');
+        }
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling alterarConfiguracaoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/configuracoes-email/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * alterarTemplateNotificacaoUsingPUT
+     *
+     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param string $conteudo Template HTML (required)
+     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param string $tipo_layout Tipo do layout. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email = null, $tipo_layout = null, $tipo_notificacao = null, $assunto = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarTemplateNotificacaoUsingPUTWithHttpInfo ($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto);
+        return $response; 
+    }
+
+
+    /**
+     * alterarTemplateNotificacaoUsingPUTWithHttpInfo
+     *
+     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param string $conteudo Template HTML (required)
+     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param string $tipo_layout Tipo do layout. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarTemplateNotificacaoUsingPUTWithHttpInfo($id, $conteudo, $id_configuracao_email = null, $tipo_layout = null, $tipo_notificacao = null, $assunto = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarTemplateNotificacaoUsingPUT');
+        }
+        // verify the required parameter 'conteudo' is set
+        if ($conteudo === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $conteudo when calling alterarTemplateNotificacaoUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/templates-notificacoes/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('text/plain'));
+  
+        // query params
+        
+        if ($id_configuracao_email !== null) {
+            $queryParams['idConfiguracaoEmail'] = $this->apiClient->getSerializer()->toQueryValue($id_configuracao_email);
+        }// query params
+        
+        if ($tipo_layout !== null) {
+            $queryParams['tipoLayout'] = $this->apiClient->getSerializer()->toQueryValue($tipo_layout);
+        }// query params
+        
+        if ($tipo_notificacao !== null) {
+            $queryParams['tipoNotificacao'] = $this->apiClient->getSerializer()->toQueryValue($tipo_notificacao);
+        }// query params
+        
+        if ($assunto !== null) {
+            $queryParams['assunto'] = $this->apiClient->getSerializer()->toQueryValue($assunto);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($conteudo)) {
+            $_tempBody = $conteudo;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * atualizarSMSUsingPOST
      *
      * Atualizar SMS
@@ -194,6 +428,380 @@ class NotificacoesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarConfiguracaoUsingGET
+     *
+     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarConfiguracaoUsingGET($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarConfiguracaoUsingGETWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarConfiguracaoUsingGETWithHttpInfo
+     *
+     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarConfiguracaoUsingGETWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarConfiguracaoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/configuracoes-email/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarTemplateNotificacaoUsingGET
+     *
+     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTemplateNotificacaoUsingGET($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarTemplateNotificacaoUsingGETWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarTemplateNotificacaoUsingGETWithHttpInfo
+     *
+     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTemplateNotificacaoUsingGETWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarTemplateNotificacaoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/templates-notificacoes/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * gerarTokenUsingPOST
+     *
+     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarTokenUsingPOST($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarTokenUsingPOSTWithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * gerarTokenUsingPOSTWithHttpInfo
+     *
+     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarTokenUsingPOSTWithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling gerarTokenUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes-sms/gerar-codigo-seguranca";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarConfiguracaoUsingGET
+     *
+     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarConfiguracaoUsingGET($page = null, $limit = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarConfiguracaoUsingGETWithHttpInfo ($page, $limit);
+        return $response; 
+    }
+
+
+    /**
+     * listarConfiguracaoUsingGETWithHttpInfo
+     *
+     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarConfiguracaoUsingGETWithHttpInfo($page = null, $limit = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/configuracoes-email";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -455,6 +1063,180 @@ class NotificacoesApi
     }
     
     /**
+     * listarTemplateNotificacaoUsingGET
+     *
+     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTemplateNotificacaoUsingGET($page = null, $limit = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarTemplateNotificacaoUsingGETWithHttpInfo ($page, $limit);
+        return $response; 
+    }
+
+
+    /**
+     * listarTemplateNotificacaoUsingGETWithHttpInfo
+     *
+     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     *
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTemplateNotificacaoUsingGETWithHttpInfo($page = null, $limit = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/templates-notificacoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarTiposLayoutsUsingGET
+     *
+     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @return object[]
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposLayoutsUsingGET()
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarTiposLayoutsUsingGETWithHttpInfo ();
+        return $response; 
+    }
+
+
+    /**
+     * listarTiposLayoutsUsingGETWithHttpInfo
+     *
+     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposLayoutsUsingGETWithHttpInfo()
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-layouts";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, 'object[]'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object[]', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object[]', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * responderSMSUsingPOST
      *
      * Responder SMS
@@ -545,6 +1327,97 @@ class NotificacoesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarConfiguracaoUsingPOST
+     *
+     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarConfiguracaoUsingPOST($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarConfiguracaoUsingPOSTWithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarConfiguracaoUsingPOSTWithHttpInfo
+     *
+     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     *
+     * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarConfiguracaoUsingPOSTWithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarConfiguracaoUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/configuracoes-email";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -909,6 +1782,212 @@ class NotificacoesApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\NotificacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarTemplateNotificacaoUsingPOST
+     *
+     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param string $conteudo Template HTML (required)
+     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param string $tipo_layout Tipo do layout. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email = null, $tipo_layout = null, $tipo_notificacao = null, $assunto = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarTemplateNotificacaoUsingPOSTWithHttpInfo ($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto);
+        return $response; 
+    }
+
+
+    /**
+     * salvarTemplateNotificacaoUsingPOSTWithHttpInfo
+     *
+     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param string $conteudo Template HTML (required)
+     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param string $tipo_layout Tipo do layout. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarTemplateNotificacaoUsingPOSTWithHttpInfo($conteudo, $id_configuracao_email = null, $tipo_layout = null, $tipo_notificacao = null, $assunto = null)
+    {
+        
+        // verify the required parameter 'conteudo' is set
+        if ($conteudo === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $conteudo when calling salvarTemplateNotificacaoUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/templates-notificacoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('text/plain'));
+  
+        // query params
+        
+        if ($id_configuracao_email !== null) {
+            $queryParams['idConfiguracaoEmail'] = $this->apiClient->getSerializer()->toQueryValue($id_configuracao_email);
+        }// query params
+        
+        if ($tipo_layout !== null) {
+            $queryParams['tipoLayout'] = $this->apiClient->getSerializer()->toQueryValue($tipo_layout);
+        }// query params
+        
+        if ($tipo_notificacao !== null) {
+            $queryParams['tipoNotificacao'] = $this->apiClient->getSerializer()->toQueryValue($tipo_notificacao);
+        }// query params
+        
+        if ($assunto !== null) {
+            $queryParams['assunto'] = $this->apiClient->getSerializer()->toQueryValue($assunto);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($conteudo)) {
+            $_tempBody = $conteudo;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarTokenUsingPOST
+     *
+     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest $request request (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarTokenUsingPOST($request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarTokenUsingPOSTWithHttpInfo ($request);
+        return $response; 
+    }
+
+
+    /**
+     * validarTokenUsingPOSTWithHttpInfo
+     *
+     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest $request request (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarTokenUsingPOSTWithHttpInfo($request)
+    {
+        
+        // verify the required parameter 'request' is set
+        if ($request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $request when calling validarTokenUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes-sms/validar-codigo-seguranca";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

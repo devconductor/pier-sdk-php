@@ -183,7 +183,7 @@ class AutorizacoesApi
     }
     
     /**
-     * cancelarUsingPOST
+     * cancelarUsingPOST2
      *
      * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
@@ -191,15 +191,15 @@ class AutorizacoesApi
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOST($cancelamento_request)
+    public function cancelarUsingPOST2($cancelamento_request)
     {
-        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOSTWithHttpInfo ($cancelamento_request);
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOST2WithHttpInfo ($cancelamento_request);
         return $response; 
     }
 
 
     /**
-     * cancelarUsingPOSTWithHttpInfo
+     * cancelarUsingPOST2WithHttpInfo
      *
      * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
@@ -207,12 +207,12 @@ class AutorizacoesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOSTWithHttpInfo($cancelamento_request)
+    public function cancelarUsingPOST2WithHttpInfo($cancelamento_request)
     {
         
         // verify the required parameter 'cancelamento_request' is set
         if ($cancelamento_request === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cancelamento_request when calling cancelarUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $cancelamento_request when calling cancelarUsingPOST2');
         }
   
         // parse inputs
@@ -357,7 +357,7 @@ class AutorizacoesApi
     /**
      * simularUsingPOST
      *
-     * Simula planos de pagamento
+     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -373,7 +373,7 @@ class AutorizacoesApi
     /**
      * simularUsingPOSTWithHttpInfo
      *
-     * Simula planos de pagamento
+     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)

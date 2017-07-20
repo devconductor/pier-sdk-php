@@ -54,7 +54,8 @@ class WebHookResponse implements ArrayAccess
         'id' => 'int',
         'tipo_evento' => 'string',
         'metodo' => 'string',
-        'url' => 'string'
+        'url' => 'string',
+        'status' => 'string'
     );
   
     static function swaggerTypes() {
@@ -69,7 +70,8 @@ class WebHookResponse implements ArrayAccess
         'id' => 'id',
         'tipo_evento' => 'tipoEvento',
         'metodo' => 'metodo',
-        'url' => 'url'
+        'url' => 'url',
+        'status' => 'status'
     );
   
     static function attributeMap() {
@@ -84,7 +86,8 @@ class WebHookResponse implements ArrayAccess
         'id' => 'setId',
         'tipo_evento' => 'setTipoEvento',
         'metodo' => 'setMetodo',
-        'url' => 'setUrl'
+        'url' => 'setUrl',
+        'status' => 'setStatus'
     );
   
     static function setters() {
@@ -99,7 +102,8 @@ class WebHookResponse implements ArrayAccess
         'id' => 'getId',
         'tipo_evento' => 'getTipoEvento',
         'metodo' => 'getMetodo',
-        'url' => 'getUrl'
+        'url' => 'getUrl',
+        'status' => 'getStatus'
     );
   
     static function getters() {
@@ -131,6 +135,12 @@ class WebHookResponse implements ArrayAccess
       */
     protected $url;
     
+    /**
+      * $status Status do WebHook
+      * @var string
+      */
+    protected $status;
+    
 
     /**
      * Constructor
@@ -144,6 +154,7 @@ class WebHookResponse implements ArrayAccess
             $this->tipo_evento = $data["tipo_evento"];
             $this->metodo = $data["metodo"];
             $this->url = $data["url"];
+            $this->status = $data["status"];
         }
     }
     
@@ -184,9 +195,9 @@ class WebHookResponse implements ArrayAccess
      */
     public function setTipoEvento($tipo_evento)
     {
-        $allowed_values = array("RISCO_FRAUDE", "OUTROS");
+        $allowed_values = array("RISCO_FRAUDE", "TOKEN_SMS", "OUTROS");
         if (!in_array($tipo_evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'OUTROS'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'TOKEN_SMS', 'OUTROS'");
         }
         $this->tipo_evento = $tipo_evento;
         return $this;
@@ -234,6 +245,30 @@ class WebHookResponse implements ArrayAccess
     {
         
         $this->url = $url;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param string $status Status do WebHook
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array("INATIVO", "ATIVO");
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'INATIVO', 'ATIVO'");
+        }
+        $this->status = $status;
         return $this;
     }
     

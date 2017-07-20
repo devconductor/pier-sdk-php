@@ -68,7 +68,7 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarSenhaUsingPUT
      *
-     * Alterar senha do usu\u00C3\u00A1rio
+     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
     public function test_alterarSenhaUsingPUT() {
@@ -78,7 +78,7 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT9
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
     public function test_alterarUsingPUT9() {
@@ -88,7 +88,7 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ativarUsuarioUsingPOST
      *
-     * Ativa os usu\u00C3\u00A1rios cadastrados
+     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
     public function test_ativarUsuarioUsingPOST() {
@@ -96,19 +96,19 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET26
      *
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET26() {
 
     }
     
     /**
      * Test case for desativarUsuarioUsingPOST
      *
-     * Desativa os usu\u00C3\u00A1rios cadastrados
+     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
     public function test_desativarUsuarioUsingPOST() {
@@ -118,7 +118,7 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET30
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados
+     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
     public function test_listarUsingGET30() {
@@ -128,7 +128,7 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for recuperarSenhaUsingPOST
      *
-     * Recuperar senha do usu\u00C3\u00A1rio
+     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
     public function test_recuperarSenhaUsingPOST() {
@@ -136,19 +136,19 @@ class UsuariosApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST13
+     * Test case for salvarUsingPOST15
      *
-     * Cadastra Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
-    public function test_salvarUsingPOST13() {
+    public function test_salvarUsingPOST15() {
 
     }
     
     /**
      * Test case for validarSenhaUsingGET1
      *
-     * Validar a senha do usu\u00C3\u00A1rio
+     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
     public function test_validarSenhaUsingGET1() {

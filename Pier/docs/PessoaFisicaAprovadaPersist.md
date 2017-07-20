@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **unidade_federativa_identidade** | **string** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
 **data_emissao_identidade** | **string** | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 **id_estado_civil** | **int** | Id Estado civil da pessoa fisica | [optional] 
-**profissao** | **string** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+**id_profissao** | **int** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **int** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_nacionalidade** | **int** | Id Nacionalidade da pessoa fisica | [optional] 
 **id_origem_comercial** | **int** | Id da origem comercial | 
@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **dia_vencimento** | **int** | Dia vencimento | 
 **nome_impresso** | **string** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
 **nome_empresa** | **string** | Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+**valor_renda** | [**Number**](Number.md) | Apresenta o valor da renda compravada | [optional] 
+**canal_entrada** | **string** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
 **telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
 

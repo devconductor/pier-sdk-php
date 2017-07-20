@@ -94,7 +94,7 @@ class UsuariosApi
     /**
      * alterarSenhaUsingPUT
      *
-     * Alterar senha do usu\u00C3\u00A1rio
+     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param string $senha_atual Senha Atual (required)
@@ -112,7 +112,7 @@ class UsuariosApi
     /**
      * alterarSenhaUsingPUTWithHttpInfo
      *
-     * Alterar senha do usu\u00C3\u00A1rio
+     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param string $senha_atual Senha Atual (required)
@@ -209,7 +209,7 @@ class UsuariosApi
     /**
      * alterarUsingPUT9
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
@@ -226,7 +226,7 @@ class UsuariosApi
     /**
      * alterarUsingPUT9WithHttpInfo
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
@@ -314,7 +314,7 @@ class UsuariosApi
     /**
      * ativarUsuarioUsingPOST
      *
-     * Ativa os usu\u00C3\u00A1rios cadastrados
+     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
@@ -330,7 +330,7 @@ class UsuariosApi
     /**
      * ativarUsuarioUsingPOSTWithHttpInfo
      *
-     * Ativa os usu\u00C3\u00A1rios cadastrados
+     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
@@ -407,36 +407,36 @@ class UsuariosApi
     }
     
     /**
-     * consultarUsingGET25
+     * consultarUsingGET26
      *
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET25WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs
@@ -504,7 +504,7 @@ class UsuariosApi
     /**
      * desativarUsuarioUsingPOST
      *
-     * Desativa os usu\u00C3\u00A1rios cadastrados
+     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
@@ -520,7 +520,7 @@ class UsuariosApi
     /**
      * desativarUsuarioUsingPOSTWithHttpInfo
      *
-     * Desativa os usu\u00C3\u00A1rios cadastrados
+     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
@@ -599,7 +599,7 @@ class UsuariosApi
     /**
      * listarUsingGET30
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados
+     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
@@ -620,7 +620,7 @@ class UsuariosApi
     /**
      * listarUsingGET30WithHttpInfo
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados
+     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
@@ -716,7 +716,7 @@ class UsuariosApi
     /**
      * recuperarSenhaUsingPOST
      *
-     * Recuperar senha do usu\u00C3\u00A1rio
+     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return string
@@ -732,7 +732,7 @@ class UsuariosApi
     /**
      * recuperarSenhaUsingPOSTWithHttpInfo
      *
-     * Recuperar senha do usu\u00C3\u00A1rio
+     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -809,36 +809,36 @@ class UsuariosApi
     }
     
     /**
-     * salvarUsingPOST13
+     * salvarUsingPOST15
      *
-     * Cadastra Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13($persist)
+    public function salvarUsingPOST15($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST13WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST15WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST13WithHttpInfo
+     * salvarUsingPOST15WithHttpInfo
      *
-     * Cadastra Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13WithHttpInfo($persist)
+    public function salvarUsingPOST15WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST13');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST15');
         }
   
         // parse inputs
@@ -902,7 +902,7 @@ class UsuariosApi
     /**
      * validarSenhaUsingGET1
      *
-     * Validar a senha do usu\u00C3\u00A1rio
+     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param string $senha Senha do usu\u00C3\u00A1rio (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
@@ -919,7 +919,7 @@ class UsuariosApi
     /**
      * validarSenhaUsingGET1WithHttpInfo
      *
-     * Validar a senha do usu\u00C3\u00A1rio
+     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      * @param string $senha Senha do usu\u00C3\u00A1rio (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)

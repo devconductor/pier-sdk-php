@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
-[**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET25**](UsuariosApi.md#consultarUsingGET25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
-[**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST13**](UsuariosApi.md#salvarUsingPOST13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
-[**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
+[**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**consultarUsingGET26**](UsuariosApi.md#consultarUsingGET26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST15**](UsuariosApi.md#salvarUsingPOST15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
 # **alterarSenhaUsingPUT**
 > string alterarSenhaUsingPUT($id, $senha_atual, $senha_nova)
 
-Alterar senha do usu\u00C3\u00A1rio
+Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
 
@@ -67,7 +67,7 @@ No authorization required
 # **alterarUsingPUT9**
 > \br.com.conductor.pier.api.v2.model\UsuarioResponse alterarUsingPUT9($id, $update)
 
-Altera os usu\u00C3\u00A1rios cadastrados
+Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -114,7 +114,7 @@ No authorization required
 # **ativarUsuarioUsingPOST**
 > \br.com.conductor.pier.api.v2.model\UsuarioResponse ativarUsuarioUsingPOST($id)
 
-Ativa os usu\u00C3\u00A1rios cadastrados
+Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -156,10 +156,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET25($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET26($id)
 
-Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
@@ -172,10 +172,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET25($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->consultarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -204,7 +204,7 @@ No authorization required
 # **desativarUsuarioUsingPOST**
 > \br.com.conductor.pier.api.v2.model\UsuarioResponse desativarUsuarioUsingPOST($id)
 
-Desativa os usu\u00C3\u00A1rios cadastrados
+Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -249,7 +249,7 @@ No authorization required
 # **listarUsingGET30**
 > \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET30($page, $limit, $nome, $cpf, $email, $status)
 
-Lista os Usu\u00C3\u00A1rios cadastrados
+Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
 
@@ -304,7 +304,7 @@ No authorization required
 # **recuperarSenhaUsingPOST**
 > string recuperarSenhaUsingPOST($id)
 
-Recuperar senha do usu\u00C3\u00A1rio
+Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
 
@@ -346,10 +346,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST13**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST13($persist)
+# **salvarUsingPOST15**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST15($persist)
 
-Cadastra Usu\u00C3\u00A1rio
+Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -362,10 +362,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST13($persist);
+    $result = $api_instance->salvarUsingPOST15($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->salvarUsingPOST15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -394,7 +394,7 @@ No authorization required
 # **validarSenhaUsingGET1**
 > string validarSenhaUsingGET1($senha, $id)
 
-Validar a senha do usu\u00C3\u00A1rio
+Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
 

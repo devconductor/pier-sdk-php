@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET7**](FAQApi.md#consultarUsingGET7) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**consultarUsingGET8**](FAQApi.md#consultarUsingGET8) | **GET** /api/faqs/{id} | Consultar FAQ por id
 [**listarUsingGET11**](FAQApi.md#listarUsingGET11) | **GET** /api/faqs | Lista FAQs
 
 
@@ -122,8 +122,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET7($id)
+# **consultarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET8($id)
 
 Consultar FAQ por id
 
@@ -138,10 +138,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET7($id);
+    $result = $api_instance->consultarUsingGET8($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->consultarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->consultarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```

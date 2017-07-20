@@ -62,7 +62,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'unidade_federativa_identidade' => 'string',
         'data_emissao_identidade' => 'string',
         'id_estado_civil' => 'int',
-        'profissao' => 'string',
+        'id_profissao' => 'int',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
         'id_origem_comercial' => 'int',
@@ -73,6 +73,9 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'dia_vencimento' => 'int',
         'nome_impresso' => 'string',
         'nome_empresa' => 'string',
+        'id_conta' => 'int',
+        'id_proposta' => 'int',
+        'canal_entrada' => 'string',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]'
     );
@@ -97,7 +100,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
         'data_emissao_identidade' => 'dataEmissaoIdentidade',
         'id_estado_civil' => 'idEstadoCivil',
-        'profissao' => 'profissao',
+        'id_profissao' => 'idProfissao',
         'id_natureza_ocupacao' => 'idNaturezaOcupacao',
         'id_nacionalidade' => 'idNacionalidade',
         'id_origem_comercial' => 'idOrigemComercial',
@@ -108,6 +111,9 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'dia_vencimento' => 'diaVencimento',
         'nome_impresso' => 'nomeImpresso',
         'nome_empresa' => 'nomeEmpresa',
+        'id_conta' => 'idConta',
+        'id_proposta' => 'idProposta',
+        'canal_entrada' => 'canalEntrada',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos'
     );
@@ -132,7 +138,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'setDataEmissaoIdentidade',
         'id_estado_civil' => 'setIdEstadoCivil',
-        'profissao' => 'setProfissao',
+        'id_profissao' => 'setIdProfissao',
         'id_natureza_ocupacao' => 'setIdNaturezaOcupacao',
         'id_nacionalidade' => 'setIdNacionalidade',
         'id_origem_comercial' => 'setIdOrigemComercial',
@@ -143,6 +149,9 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'dia_vencimento' => 'setDiaVencimento',
         'nome_impresso' => 'setNomeImpresso',
         'nome_empresa' => 'setNomeEmpresa',
+        'id_conta' => 'setIdConta',
+        'id_proposta' => 'setIdProposta',
+        'canal_entrada' => 'setCanalEntrada',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos'
     );
@@ -167,7 +176,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'getDataEmissaoIdentidade',
         'id_estado_civil' => 'getIdEstadoCivil',
-        'profissao' => 'getProfissao',
+        'id_profissao' => 'getIdProfissao',
         'id_natureza_ocupacao' => 'getIdNaturezaOcupacao',
         'id_nacionalidade' => 'getIdNacionalidade',
         'id_origem_comercial' => 'getIdOrigemComercial',
@@ -178,6 +187,9 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
         'dia_vencimento' => 'getDiaVencimento',
         'nome_impresso' => 'getNomeImpresso',
         'nome_empresa' => 'getNomeEmpresa',
+        'id_conta' => 'getIdConta',
+        'id_proposta' => 'getIdProposta',
+        'canal_entrada' => 'getCanalEntrada',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos'
     );
@@ -188,7 +200,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
       * @var int
       */
     protected $id;
@@ -254,10 +266,10 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o da pessoa fisica
-      * @var string
+      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * @var int
       */
-    protected $profissao;
+    protected $id_profissao;
     
     /**
       * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -314,10 +326,28 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     protected $nome_impresso;
     
     /**
-      * $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+      * $nome_empresa Nome da empresa
       * @var string
       */
     protected $nome_empresa;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_proposta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+      * @var int
+      */
+    protected $id_proposta;
+    
+    /**
+      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * @var string
+      */
+    protected $canal_entrada;
     
     /**
       * $telefones Apresenta os telefones da empresa
@@ -351,7 +381,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
             $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
             $this->data_emissao_identidade = $data["data_emissao_identidade"];
             $this->id_estado_civil = $data["id_estado_civil"];
-            $this->profissao = $data["profissao"];
+            $this->id_profissao = $data["id_profissao"];
             $this->id_natureza_ocupacao = $data["id_natureza_ocupacao"];
             $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
@@ -362,6 +392,9 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->nome_impresso = $data["nome_impresso"];
             $this->nome_empresa = $data["nome_empresa"];
+            $this->id_conta = $data["id_conta"];
+            $this->id_proposta = $data["id_proposta"];
+            $this->canal_entrada = $data["canal_entrada"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
         }
@@ -378,7 +411,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
      * @return $this
      */
     public function setId($id)
@@ -599,23 +632,23 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
     }
     
     /**
-     * Gets profissao
-     * @return string
+     * Gets id_profissao
+     * @return int
      */
-    public function getProfissao()
+    public function getIdProfissao()
     {
-        return $this->profissao;
+        return $this->id_profissao;
     }
   
     /**
-     * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * Sets id_profissao
+     * @param int $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
      * @return $this
      */
-    public function setProfissao($profissao)
+    public function setIdProfissao($id_profissao)
     {
         
-        $this->profissao = $profissao;
+        $this->id_profissao = $id_profissao;
         return $this;
     }
     
@@ -819,13 +852,76 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param string $nome_empresa Nome da empresa
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)
     {
         
         $this->nome_empresa = $nome_empresa;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_proposta
+     * @return int
+     */
+    public function getIdProposta()
+    {
+        return $this->id_proposta;
+    }
+  
+    /**
+     * Sets id_proposta
+     * @param int $id_proposta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+     * @return $this
+     */
+    public function setIdProposta($id_proposta)
+    {
+        
+        $this->id_proposta = $id_proposta;
+        return $this;
+    }
+    
+    /**
+     * Gets canal_entrada
+     * @return string
+     */
+    public function getCanalEntrada()
+    {
+        return $this->canal_entrada;
+    }
+  
+    /**
+     * Sets canal_entrada
+     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @return $this
+     */
+    public function setCanalEntrada($canal_entrada)
+    {
+        
+        $this->canal_entrada = $canal_entrada;
         return $this;
     }
     

@@ -53,7 +53,14 @@ class OrigemComercialResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'nome' => 'string',
-        'status' => 'int'
+        'descricao' => 'string',
+        'produtos_origem' => '\br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[]',
+        'id_estabelecimento' => 'int',
+        'id_tipo_origem_comercial' => 'int',
+        'nome_tipo_origem_comercial' => 'string',
+        'id_grupo_origem_comercial' => 'int',
+        'nome_grupo_origem_comercial' => 'string',
+        'status' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -67,6 +74,13 @@ class OrigemComercialResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'nome' => 'nome',
+        'descricao' => 'descricao',
+        'produtos_origem' => 'produtosOrigem',
+        'id_estabelecimento' => 'idEstabelecimento',
+        'id_tipo_origem_comercial' => 'idTipoOrigemComercial',
+        'nome_tipo_origem_comercial' => 'nomeTipoOrigemComercial',
+        'id_grupo_origem_comercial' => 'idGrupoOrigemComercial',
+        'nome_grupo_origem_comercial' => 'nomeGrupoOrigemComercial',
         'status' => 'status'
     );
   
@@ -81,6 +95,13 @@ class OrigemComercialResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'nome' => 'setNome',
+        'descricao' => 'setDescricao',
+        'produtos_origem' => 'setProdutosOrigem',
+        'id_estabelecimento' => 'setIdEstabelecimento',
+        'id_tipo_origem_comercial' => 'setIdTipoOrigemComercial',
+        'nome_tipo_origem_comercial' => 'setNomeTipoOrigemComercial',
+        'id_grupo_origem_comercial' => 'setIdGrupoOrigemComercial',
+        'nome_grupo_origem_comercial' => 'setNomeGrupoOrigemComercial',
         'status' => 'setStatus'
     );
   
@@ -95,6 +116,13 @@ class OrigemComercialResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'nome' => 'getNome',
+        'descricao' => 'getDescricao',
+        'produtos_origem' => 'getProdutosOrigem',
+        'id_estabelecimento' => 'getIdEstabelecimento',
+        'id_tipo_origem_comercial' => 'getIdTipoOrigemComercial',
+        'nome_tipo_origem_comercial' => 'getNomeTipoOrigemComercial',
+        'id_grupo_origem_comercial' => 'getIdGrupoOrigemComercial',
+        'nome_grupo_origem_comercial' => 'getNomeGrupoOrigemComercial',
         'status' => 'getStatus'
     );
   
@@ -104,7 +132,7 @@ class OrigemComercialResponse implements ArrayAccess
 
     
     /**
-      * $id Id da origem comercial
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
       * @var int
       */
     protected $id;
@@ -116,8 +144,50 @@ class OrigemComercialResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $status Status da origem comercial
+      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+      * @var string
+      */
+    protected $descricao;
+    
+    /**
+      * $produtos_origem Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+      * @var \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[]
+      */
+    protected $produtos_origem;
+    
+    /**
+      * $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
       * @var int
+      */
+    protected $id_estabelecimento;
+    
+    /**
+      * $id_tipo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+      * @var int
+      */
+    protected $id_tipo_origem_comercial;
+    
+    /**
+      * $nome_tipo_origem_comercial Nome do Tipo da Origem Comercial
+      * @var string
+      */
+    protected $nome_tipo_origem_comercial;
+    
+    /**
+      * $id_grupo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+      * @var int
+      */
+    protected $id_grupo_origem_comercial;
+    
+    /**
+      * $nome_grupo_origem_comercial Nome do Grupo a qual a Origem Comercial pertence
+      * @var string
+      */
+    protected $nome_grupo_origem_comercial;
+    
+    /**
+      * $status Status da origem comercial
+      * @var bool
       */
     protected $status;
     
@@ -132,6 +202,13 @@ class OrigemComercialResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->nome = $data["nome"];
+            $this->descricao = $data["descricao"];
+            $this->produtos_origem = $data["produtos_origem"];
+            $this->id_estabelecimento = $data["id_estabelecimento"];
+            $this->id_tipo_origem_comercial = $data["id_tipo_origem_comercial"];
+            $this->nome_tipo_origem_comercial = $data["nome_tipo_origem_comercial"];
+            $this->id_grupo_origem_comercial = $data["id_grupo_origem_comercial"];
+            $this->nome_grupo_origem_comercial = $data["nome_grupo_origem_comercial"];
             $this->status = $data["status"];
         }
     }
@@ -147,7 +224,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id da origem comercial
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
      * @return $this
      */
     public function setId($id)
@@ -179,8 +256,155 @@ class OrigemComercialResponse implements ArrayAccess
     }
     
     /**
-     * Gets status
+     * Gets descricao
+     * @return string
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+  
+    /**
+     * Sets descricao
+     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+     * @return $this
+     */
+    public function setDescricao($descricao)
+    {
+        
+        $this->descricao = $descricao;
+        return $this;
+    }
+    
+    /**
+     * Gets produtos_origem
+     * @return \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[]
+     */
+    public function getProdutosOrigem()
+    {
+        return $this->produtos_origem;
+    }
+  
+    /**
+     * Sets produtos_origem
+     * @param \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[] $produtos_origem Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+     * @return $this
+     */
+    public function setProdutosOrigem($produtos_origem)
+    {
+        
+        $this->produtos_origem = $produtos_origem;
+        return $this;
+    }
+    
+    /**
+     * Gets id_estabelecimento
      * @return int
+     */
+    public function getIdEstabelecimento()
+    {
+        return $this->id_estabelecimento;
+    }
+  
+    /**
+     * Sets id_estabelecimento
+     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+     * @return $this
+     */
+    public function setIdEstabelecimento($id_estabelecimento)
+    {
+        
+        $this->id_estabelecimento = $id_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_origem_comercial
+     * @return int
+     */
+    public function getIdTipoOrigemComercial()
+    {
+        return $this->id_tipo_origem_comercial;
+    }
+  
+    /**
+     * Sets id_tipo_origem_comercial
+     * @param int $id_tipo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+     * @return $this
+     */
+    public function setIdTipoOrigemComercial($id_tipo_origem_comercial)
+    {
+        
+        $this->id_tipo_origem_comercial = $id_tipo_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_tipo_origem_comercial
+     * @return string
+     */
+    public function getNomeTipoOrigemComercial()
+    {
+        return $this->nome_tipo_origem_comercial;
+    }
+  
+    /**
+     * Sets nome_tipo_origem_comercial
+     * @param string $nome_tipo_origem_comercial Nome do Tipo da Origem Comercial
+     * @return $this
+     */
+    public function setNomeTipoOrigemComercial($nome_tipo_origem_comercial)
+    {
+        
+        $this->nome_tipo_origem_comercial = $nome_tipo_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets id_grupo_origem_comercial
+     * @return int
+     */
+    public function getIdGrupoOrigemComercial()
+    {
+        return $this->id_grupo_origem_comercial;
+    }
+  
+    /**
+     * Sets id_grupo_origem_comercial
+     * @param int $id_grupo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+     * @return $this
+     */
+    public function setIdGrupoOrigemComercial($id_grupo_origem_comercial)
+    {
+        
+        $this->id_grupo_origem_comercial = $id_grupo_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_grupo_origem_comercial
+     * @return string
+     */
+    public function getNomeGrupoOrigemComercial()
+    {
+        return $this->nome_grupo_origem_comercial;
+    }
+  
+    /**
+     * Sets nome_grupo_origem_comercial
+     * @param string $nome_grupo_origem_comercial Nome do Grupo a qual a Origem Comercial pertence
+     * @return $this
+     */
+    public function setNomeGrupoOrigemComercial($nome_grupo_origem_comercial)
+    {
+        
+        $this->nome_grupo_origem_comercial = $nome_grupo_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return bool
      */
     public function getStatus()
     {
@@ -189,7 +413,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Status da origem comercial
+     * @param bool $status Status da origem comercial
      * @return $this
      */
     public function setStatus($status)

@@ -1,6 +1,6 @@
 <?php
 /**
- * CompraApiTest
+ * AntecipacoesApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * CompraApiTest Class Doc Comment
+ * AntecipacoesApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CompraApiTest extends \PHPUnit_Framework_TestCase
+class AntecipacoesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,6 +66,26 @@ class CompraApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for configurarTaxaAntecipacaoUsingPOST
+     *
+     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     */
+    public function test_configurarTaxaAntecipacaoUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarTaxaAntecipacaoUsingGET
+     *
+     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     *
+     */
+    public function test_consultarTaxaAntecipacaoUsingGET() {
+
+    }
+    
+    /**
      * Test case for efetivarAntecipacaoUsingPOST
      *
      * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
@@ -78,7 +98,7 @@ class CompraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET6
      *
-     * Listar compras
+     * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      */
     public function test_listarUsingGET6() {

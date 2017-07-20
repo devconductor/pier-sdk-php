@@ -407,7 +407,7 @@ class CartaoApi
     }
     
     /**
-     * bloquearUsingPUT
+     * bloquearUsingPOST
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -417,15 +417,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPUT($id, $id_status, $observacao)
+    public function bloquearUsingPOST($id, $id_status, $observacao)
     {
-        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPUTWithHttpInfo ($id, $id_status, $observacao);
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOSTWithHttpInfo ($id, $id_status, $observacao);
         return $response; 
     }
 
 
     /**
-     * bloquearUsingPUTWithHttpInfo
+     * bloquearUsingPOSTWithHttpInfo
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -435,20 +435,20 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPUTWithHttpInfo($id, $id_status, $observacao)
+    public function bloquearUsingPOSTWithHttpInfo($id, $id_status, $observacao)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling bloquearUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling bloquearUsingPOST');
         }
         // verify the required parameter 'id_status' is set
         if ($id_status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling bloquearUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling bloquearUsingPOST');
         }
         // verify the required parameter 'observacao' is set
         if ($observacao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $observacao when calling bloquearUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $observacao when calling bloquearUsingPOST');
         }
   
         // parse inputs
@@ -498,7 +498,7 @@ class CartaoApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoResponse'
             );
@@ -618,6 +618,121 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * cancelarUsingPOST
+     *
+     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
+     * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOST($id, $id_status, $observacao)
+    {
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOSTWithHttpInfo ($id, $id_status, $observacao);
+        return $response; 
+    }
+
+
+    /**
+     * cancelarUsingPOSTWithHttpInfo
+     *
+     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. (required)
+     * @param string $observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOSTWithHttpInfo($id, $id_status, $observacao)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cancelarUsingPOST');
+        }
+        // verify the required parameter 'id_status' is set
+        if ($id_status === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling cancelarUsingPOST');
+        }
+        // verify the required parameter 'observacao' is set
+        if ($observacao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $observacao when calling cancelarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/cancelar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_status !== null) {
+            $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
+        }// query params
+        
+        if ($observacao !== null) {
+            $queryParams['observacao'] = $this->apiClient->getSerializer()->toQueryValue($observacao);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1007,7 +1122,7 @@ class CartaoApi
     }
     
     /**
-     * consultarUsingGET3
+     * consultarUsingGET4
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1015,15 +1130,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3($id)
+    public function consultarUsingGET4($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET3WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET3WithHttpInfo
+     * consultarUsingGET4WithHttpInfo
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1031,12 +1146,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3WithHttpInfo($id)
+    public function consultarUsingGET4WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET4');
         }
   
         // parse inputs
@@ -1197,7 +1312,7 @@ class CartaoApi
     }
     
     /**
-     * desbloquearUsingPUT
+     * desbloquearUsingPOST
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -1205,15 +1320,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPUT($id)
+    public function desbloquearUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPUTWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * desbloquearUsingPUTWithHttpInfo
+     * desbloquearUsingPOSTWithHttpInfo
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
@@ -1221,12 +1336,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPUTWithHttpInfo($id)
+    public function desbloquearUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling desbloquearUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling desbloquearUsingPOST');
         }
   
         // parse inputs
@@ -1268,7 +1383,7 @@ class CartaoApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoResponse'
             );
@@ -1843,6 +1958,101 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageCartaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * reativarUsingPOST
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function reativarUsingPOST($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOSTWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * reativarUsingPOSTWithHttpInfo
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function reativarUsingPOSTWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling reativarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/reativar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

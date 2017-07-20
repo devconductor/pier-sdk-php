@@ -96,12 +96,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for bloquearUsingPUT
+     * Test case for bloquearUsingPOST
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_bloquearUsingPUT() {
+    public function test_bloquearUsingPOST() {
 
     }
     
@@ -112,6 +112,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_cadastrarAlterarSenhaUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for cancelarUsingPOST
+     *
+     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_cancelarUsingPOST() {
 
     }
     
@@ -156,12 +166,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET3
+     * Test case for consultarUsingGET4
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET3() {
+    public function test_consultarUsingGET4() {
 
     }
     
@@ -176,12 +186,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for desbloquearUsingPUT
+     * Test case for desbloquearUsingPOST
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_desbloquearUsingPUT() {
+    public function test_desbloquearUsingPOST() {
 
     }
     
@@ -222,6 +232,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarUsingGET5() {
+
+    }
+    
+    /**
+     * Test case for reativarUsingPOST
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_reativarUsingPOST() {
 
     }
     

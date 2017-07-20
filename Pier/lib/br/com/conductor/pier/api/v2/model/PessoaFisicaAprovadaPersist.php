@@ -61,7 +61,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'unidade_federativa_identidade' => 'string',
         'data_emissao_identidade' => 'string',
         'id_estado_civil' => 'int',
-        'profissao' => 'string',
+        'id_profissao' => 'int',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
         'id_origem_comercial' => 'int',
@@ -72,6 +72,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'dia_vencimento' => 'int',
         'nome_impresso' => 'string',
         'nome_empresa' => 'string',
+        'valor_renda' => 'Number',
+        'canal_entrada' => 'string',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]'
     );
@@ -95,7 +97,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
         'data_emissao_identidade' => 'dataEmissaoIdentidade',
         'id_estado_civil' => 'idEstadoCivil',
-        'profissao' => 'profissao',
+        'id_profissao' => 'idProfissao',
         'id_natureza_ocupacao' => 'idNaturezaOcupacao',
         'id_nacionalidade' => 'idNacionalidade',
         'id_origem_comercial' => 'idOrigemComercial',
@@ -106,6 +108,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'dia_vencimento' => 'diaVencimento',
         'nome_impresso' => 'nomeImpresso',
         'nome_empresa' => 'nomeEmpresa',
+        'valor_renda' => 'valorRenda',
+        'canal_entrada' => 'canalEntrada',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos'
     );
@@ -129,7 +133,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'setDataEmissaoIdentidade',
         'id_estado_civil' => 'setIdEstadoCivil',
-        'profissao' => 'setProfissao',
+        'id_profissao' => 'setIdProfissao',
         'id_natureza_ocupacao' => 'setIdNaturezaOcupacao',
         'id_nacionalidade' => 'setIdNacionalidade',
         'id_origem_comercial' => 'setIdOrigemComercial',
@@ -140,6 +144,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'dia_vencimento' => 'setDiaVencimento',
         'nome_impresso' => 'setNomeImpresso',
         'nome_empresa' => 'setNomeEmpresa',
+        'valor_renda' => 'setValorRenda',
+        'canal_entrada' => 'setCanalEntrada',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos'
     );
@@ -163,7 +169,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'getDataEmissaoIdentidade',
         'id_estado_civil' => 'getIdEstadoCivil',
-        'profissao' => 'getProfissao',
+        'id_profissao' => 'getIdProfissao',
         'id_natureza_ocupacao' => 'getIdNaturezaOcupacao',
         'id_nacionalidade' => 'getIdNacionalidade',
         'id_origem_comercial' => 'getIdOrigemComercial',
@@ -174,6 +180,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'dia_vencimento' => 'getDiaVencimento',
         'nome_impresso' => 'getNomeImpresso',
         'nome_empresa' => 'getNomeEmpresa',
+        'valor_renda' => 'getValorRenda',
+        'canal_entrada' => 'getCanalEntrada',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos'
     );
@@ -244,10 +252,10 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o da pessoa fisica
-      * @var string
+      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * @var int
       */
-    protected $profissao;
+    protected $id_profissao;
     
     /**
       * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -310,6 +318,18 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $nome_empresa;
     
     /**
+      * $valor_renda Apresenta o valor da renda compravada
+      * @var Number
+      */
+    protected $valor_renda;
+    
+    /**
+      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * @var string
+      */
+    protected $canal_entrada;
+    
+    /**
       * $telefones Apresenta os telefones da empresa
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
@@ -340,7 +360,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
             $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
             $this->data_emissao_identidade = $data["data_emissao_identidade"];
             $this->id_estado_civil = $data["id_estado_civil"];
-            $this->profissao = $data["profissao"];
+            $this->id_profissao = $data["id_profissao"];
             $this->id_natureza_ocupacao = $data["id_natureza_ocupacao"];
             $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
@@ -351,6 +371,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->nome_impresso = $data["nome_impresso"];
             $this->nome_empresa = $data["nome_empresa"];
+            $this->valor_renda = $data["valor_renda"];
+            $this->canal_entrada = $data["canal_entrada"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
         }
@@ -567,23 +589,23 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     }
     
     /**
-     * Gets profissao
-     * @return string
+     * Gets id_profissao
+     * @return int
      */
-    public function getProfissao()
+    public function getIdProfissao()
     {
-        return $this->profissao;
+        return $this->id_profissao;
     }
   
     /**
-     * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * Sets id_profissao
+     * @param int $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
      * @return $this
      */
-    public function setProfissao($profissao)
+    public function setIdProfissao($id_profissao)
     {
         
-        $this->profissao = $profissao;
+        $this->id_profissao = $id_profissao;
         return $this;
     }
     
@@ -794,6 +816,48 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     {
         
         $this->nome_empresa = $nome_empresa;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_renda
+     * @return Number
+     */
+    public function getValorRenda()
+    {
+        return $this->valor_renda;
+    }
+  
+    /**
+     * Sets valor_renda
+     * @param Number $valor_renda Apresenta o valor da renda compravada
+     * @return $this
+     */
+    public function setValorRenda($valor_renda)
+    {
+        
+        $this->valor_renda = $valor_renda;
+        return $this;
+    }
+    
+    /**
+     * Gets canal_entrada
+     * @return string
+     */
+    public function getCanalEntrada()
+    {
+        return $this->canal_entrada;
+    }
+  
+    /**
+     * Sets canal_entrada
+     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @return $this
+     */
+    public function setCanalEntrada($canal_entrada)
+    {
+        
+        $this->canal_entrada = $canal_entrada;
         return $this;
     }
     

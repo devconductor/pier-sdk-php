@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametrosApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametrosApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET13**](StatusParametrosApi.md#consultarUsingGET13) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET15**](StatusParametrosApi.md#consultarUsingGET15) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametrosApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametrosApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listarUsingGET20**](StatusParametrosApi.md#listarUsingGET20) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET13($id)
+# **consultarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET14($id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -120,10 +120,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET13($id);
+    $result = $api_instance->consultarUsingGET14($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->consultarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->consultarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -149,8 +149,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET14($id)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET15($id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -165,10 +165,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametrosApi
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET14($id);
+    $result = $api_instance->consultarUsingGET15($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametrosApi->consultarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametrosApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -246,7 +246,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarStatusCartoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageStatusCartaoResponse listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao, $flag_permite_desbloqueio)
+> \br.com.conductor.pier.api.v2.model\PageStatusCartaoResponse listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao, $flag_permite_desbloqueio, $flag_cancelamento, $flag_permite_bloqueio, $flag_reativar)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
@@ -269,9 +269,12 @@ $id_status_destino_conta = 789; // int | Indica qual o idStatusCartao que ser\u0
 $flag_cobra_tarifa = 56; // int | Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
 $flag_permite_nova_via_cartao = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
 $flag_permite_desbloqueio = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+$flag_cancelamento = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+$flag_permite_bloqueio = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+$flag_reativar = 56; // int | Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao, $flag_permite_desbloqueio);
+    $result = $api_instance->listarStatusCartoesUsingGET($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao, $flag_permite_desbloqueio, $flag_cancelamento, $flag_permite_bloqueio, $flag_reativar);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusParametrosApi->listarStatusCartoesUsingGET: ', $e->getMessage(), "\n";
@@ -294,6 +297,9 @@ Name | Type | Description  | Notes
  **flag_cobra_tarifa** | **int**| Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. | [optional] 
  **flag_permite_nova_via_cartao** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flag_permite_desbloqueio** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_cancelamento** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_permite_bloqueio** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_reativar** | **int**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 
@@ -311,7 +317,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET20($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao, $flag_faz_transferencia, $flag_recebe_transferencia)
+> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET20($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao, $flag_faz_transferencia, $flag_recebe_transferencia, $flag_permite_bloqueio, $flag_permite_desbloqueio, $flag_cancela_conta)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -332,9 +338,12 @@ $mensagem_consulta_negada = "mensagem_consulta_negada_example"; // string | Apre
 $flag_permite_nova_via_cartao = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
 $flag_faz_transferencia = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
 $flag_recebe_transferencia = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+$flag_permite_bloqueio = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+$flag_permite_desbloqueio = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+$flag_cancela_conta = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET20($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao, $flag_faz_transferencia, $flag_recebe_transferencia);
+    $result = $api_instance->listarUsingGET20($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao, $flag_faz_transferencia, $flag_recebe_transferencia, $flag_permite_bloqueio, $flag_permite_desbloqueio, $flag_cancela_conta);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusParametrosApi->listarUsingGET20: ', $e->getMessage(), "\n";
@@ -355,6 +364,9 @@ Name | Type | Description  | Notes
  **flag_permite_nova_via_cartao** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flag_faz_transferencia** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flag_recebe_transferencia** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_permite_bloqueio** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_permite_desbloqueio** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flag_cancela_conta** | **int**| Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 

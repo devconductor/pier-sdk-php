@@ -76,12 +76,12 @@ class AutorizacoesApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for cancelarUsingPOST
+     * Test case for cancelarUsingPOST2
      *
      * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      *
      */
-    public function test_cancelarUsingPOST() {
+    public function test_cancelarUsingPOST2() {
 
     }
     
@@ -98,7 +98,7 @@ class AutorizacoesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for simularUsingPOST
      *
-     * Simula planos de pagamento
+     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
      *
      */
     public function test_simularUsingPOST() {

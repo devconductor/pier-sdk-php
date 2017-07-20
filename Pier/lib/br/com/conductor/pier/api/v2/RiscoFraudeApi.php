@@ -92,7 +92,7 @@ class RiscoFraudeApi
   
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET13
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -100,15 +100,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET13($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET13WithHttpInfo
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -116,12 +116,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET13WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
         }
   
         // parse inputs
@@ -187,50 +187,38 @@ class RiscoFraudeApi
     }
     
     /**
-     * listarUsingGET19
+     * listarTiposResolucaoUsingGET
      *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
-     * @param int $id_conta Id Conta (required)
-     * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage
+     * @return \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET19($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarTiposResolucaoUsingGET($page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarTiposResolucaoUsingGETWithHttpInfo ($page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET19WithHttpInfo
+     * listarTiposResolucaoUsingGETWithHttpInfo
      *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
-     * @param int $id_conta Id Conta (required)
-     * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET19WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
+    public function listarTiposResolucaoUsingGETWithHttpInfo($page = null, $limit = null)
     {
         
-        // verify the required parameter 'id_conta' is set
-        if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET19');
-        }
-        // verify the required parameter 'confirmacao_fraude' is set
-        if ($confirmacao_fraude === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET19');
-        }
   
         // parse inputs
-        $resourcePath = "/api/riscos-fraudes";
+        $resourcePath = "/api/tipos-resolucao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -242,14 +230,6 @@ class RiscoFraudeApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
-        
-        if ($id_conta !== null) {
-            $queryParams['id_conta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
-        }// query params
-        
-        if ($confirmacao_fraude !== null) {
-            $queryParams['confirmacao_fraude'] = $this->apiClient->getSerializer()->toQueryValue($confirmacao_fraude);
-        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -278,209 +258,19 @@ class RiscoFraudeApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * negarUsingPOST
-     *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function negarUsingPOST($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->negarUsingPOSTWithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * negarUsingPOSTWithHttpInfo
-     *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function negarUsingPOSTWithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling negarUsingPOST');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/riscos-fraudes/{id}/negar";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * reconhecerUsingPOST
-     *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function reconhecerUsingPOST($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->reconhecerUsingPOSTWithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * reconhecerUsingPOSTWithHttpInfo
-     *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function reconhecerUsingPOSTWithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling reconhecerUsingPOST');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/riscos-fraudes/{id}/reconhecer";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

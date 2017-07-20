@@ -66,22 +66,22 @@ class EstabelecimentosApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET16
+     * Test case for consultarUsingGET17
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET16() {
+    public function test_consultarUsingGET17() {
 
     }
     
     /**
-     * Test case for consultarUsingGET6
+     * Test case for consultarUsingGET7
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET6() {
+    public function test_consultarUsingGET7() {
 
     }
     
