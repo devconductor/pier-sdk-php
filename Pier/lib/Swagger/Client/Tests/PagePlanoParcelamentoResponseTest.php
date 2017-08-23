@@ -1,6 +1,6 @@
 <?php
 /**
- * AtribuirAssinaturaClienteRequestTest
+ * PagePlanoParcelamentoResponseTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * AtribuirAssinaturaClienteRequestTest Class Doc Comment
+ * PagePlanoParcelamentoResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
+ * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AtribuirAssinaturaClienteRequestTest extends \PHPUnit_Framework_TestCase
+class PagePlanoParcelamentoResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class AtribuirAssinaturaClienteRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test AtribuirAssinaturaClienteRequest
+     * Test PagePlanoParcelamentoResponse
      */
-    public function testAtribuirAssinaturaClienteRequest() {
+    public function testPagePlanoParcelamentoResponse() {
 
     }
 

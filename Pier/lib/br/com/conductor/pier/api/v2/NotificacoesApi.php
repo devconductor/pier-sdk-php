@@ -722,14 +722,15 @@ class NotificacoesApi
      *
      * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarConfiguracaoUsingGET($page = null, $limit = null)
+    public function listarConfiguracaoUsingGET($sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarConfiguracaoUsingGETWithHttpInfo ($page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarConfiguracaoUsingGETWithHttpInfo ($sort, $page, $limit);
         return $response; 
     }
 
@@ -739,12 +740,13 @@ class NotificacoesApi
      *
      * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarConfiguracaoUsingGETWithHttpInfo($page = null, $limit = null)
+    public function listarConfiguracaoUsingGETWithHttpInfo($sort = null, $page = null, $limit = null)
     {
         
   
@@ -761,6 +763,14 @@ class NotificacoesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -815,6 +825,7 @@ class NotificacoesApi
      *
      * Listar Push
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
@@ -825,9 +836,9 @@ class NotificacoesApi
      * @return \br.com.conductor.pier.api.v2.model\PagePushResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPushUsingGET($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
+    public function listarPushUsingGET($sort = null, $page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarPushUsingGETWithHttpInfo ($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
+        list($response, $statusCode, $httpHeader) = $this->listarPushUsingGETWithHttpInfo ($sort, $page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
         return $response; 
     }
 
@@ -837,6 +848,7 @@ class NotificacoesApi
      *
      * Listar Push
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
@@ -847,7 +859,7 @@ class NotificacoesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePushResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPushUsingGETWithHttpInfo($page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
+    public function listarPushUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $data_envio = null, $tipo_evento = null, $status = null, $plataforma = null, $protocolo = null)
     {
         
   
@@ -864,6 +876,14 @@ class NotificacoesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -938,6 +958,7 @@ class NotificacoesApi
      *
      * Listar SMS
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
@@ -949,9 +970,9 @@ class NotificacoesApi
      * @return \br.com.conductor.pier.api.v2.model\PageSMSResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGET($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
+    public function listarSMSUsingGET($sort = null, $page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
+        list($response, $statusCode, $httpHeader) = $this->listarSMSUsingGETWithHttpInfo ($sort, $page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
         return $response; 
     }
 
@@ -961,6 +982,7 @@ class NotificacoesApi
      *
      * Listar SMS
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
@@ -972,7 +994,7 @@ class NotificacoesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageSMSResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarSMSUsingGETWithHttpInfo($page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
+    public function listarSMSUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $data_inclusao = null, $tipo_evento = null, $status = null, $operadora = null, $protocolo = null, $nsu = null)
     {
         
   
@@ -989,6 +1011,14 @@ class NotificacoesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1067,14 +1097,15 @@ class NotificacoesApi
      *
      * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarTemplateNotificacaoUsingGET($page = null, $limit = null)
+    public function listarTemplateNotificacaoUsingGET($sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarTemplateNotificacaoUsingGETWithHttpInfo ($page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarTemplateNotificacaoUsingGETWithHttpInfo ($sort, $page, $limit);
         return $response; 
     }
 
@@ -1084,12 +1115,13 @@ class NotificacoesApi
      *
      * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarTemplateNotificacaoUsingGETWithHttpInfo($page = null, $limit = null)
+    public function listarTemplateNotificacaoUsingGETWithHttpInfo($sort = null, $page = null, $limit = null)
     {
         
   
@@ -1106,6 +1138,14 @@ class NotificacoesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);

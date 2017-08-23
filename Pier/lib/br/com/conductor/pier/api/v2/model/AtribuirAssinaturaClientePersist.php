@@ -1,6 +1,6 @@
 <?php
 /**
- * AtribuirAssinaturaClienteRequest
+ * AtribuirAssinaturaClientePersist
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * AtribuirAssinaturaClienteRequest Class Doc Comment
+ * AtribuirAssinaturaClientePersist Class Doc Comment
  *
  * @category    Class
  * @description Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
@@ -44,14 +44,14 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AtribuirAssinaturaClienteRequest implements ArrayAccess
+class AtribuirAssinaturaClientePersist implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_imagem' => 'int'
+        'id_arquivo' => 'int'
     );
   
     static function swaggerTypes() {
@@ -63,7 +63,7 @@ class AtribuirAssinaturaClienteRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_imagem' => 'idImagem'
+        'id_arquivo' => 'idArquivo'
     );
   
     static function attributeMap() {
@@ -75,7 +75,7 @@ class AtribuirAssinaturaClienteRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_imagem' => 'setIdImagem'
+        'id_arquivo' => 'setIdArquivo'
     );
   
     static function setters() {
@@ -87,7 +87,7 @@ class AtribuirAssinaturaClienteRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_imagem' => 'getIdImagem'
+        'id_arquivo' => 'getIdArquivo'
     );
   
     static function getters() {
@@ -96,10 +96,10 @@ class AtribuirAssinaturaClienteRequest implements ArrayAccess
 
     
     /**
-      * $id_imagem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem
+      * $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
       * @var int
       */
-    protected $id_imagem;
+    protected $id_arquivo;
     
 
     /**
@@ -110,28 +110,28 @@ class AtribuirAssinaturaClienteRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_imagem = $data["id_imagem"];
+            $this->id_arquivo = $data["id_arquivo"];
         }
     }
     
     /**
-     * Gets id_imagem
+     * Gets id_arquivo
      * @return int
      */
-    public function getIdImagem()
+    public function getIdArquivo()
     {
-        return $this->id_imagem;
+        return $this->id_arquivo;
     }
   
     /**
-     * Sets id_imagem
-     * @param int $id_imagem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem
+     * Sets id_arquivo
+     * @param int $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
      * @return $this
      */
-    public function setIdImagem($id_imagem)
+    public function setIdArquivo($id_arquivo)
     {
         
-        $this->id_imagem = $id_imagem;
+        $this->id_arquivo = $id_arquivo;
         return $this;
     }
     

@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET17**](EstabelecimentosApi.md#consultarUsingGET17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultarUsingGET7**](EstabelecimentosApi.md#consultarUsingGET7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listarUsingGET11**](EstabelecimentosApi.md#listarUsingGET11) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET25**](EstabelecimentosApi.md#listarUsingGET25) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 # **consultarUsingGET17**
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET10($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
+# **listarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET11($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
 
 Lista Estabelecimentos
 
@@ -113,6 +113,7 @@ Lista todas os Estabelecimentos
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -136,10 +137,10 @@ $flag_cartao_digitado = 56; // int | Indica se o estabelecimento poder\u00C3\u00
 $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 
 try { 
-    $result = $api_instance->listarUsingGET10($page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+    $result = $api_instance->listarUsingGET11($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->listarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentosApi->listarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -148,6 +149,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
@@ -185,8 +187,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET23($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+# **listarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET25($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -198,6 +200,7 @@ Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na bas
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentosApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
@@ -206,10 +209,10 @@ $numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a q
 $id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET23($page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentosApi->listarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentosApi->listarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -218,6 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 

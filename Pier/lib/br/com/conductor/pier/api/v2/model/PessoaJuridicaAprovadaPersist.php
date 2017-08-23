@@ -65,9 +65,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_impresso' => 'string',
         'valor_renda' => 'Number',
         'canal_entrada' => 'string',
+        'valor_pontuacao' => 'int',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
-        'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]'
+        'limite_global' => 'Number',
+        'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]',
+        'limite_maximo' => 'Number',
+        'limite_parcelas' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -93,9 +97,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_impresso' => 'nomeImpresso',
         'valor_renda' => 'valorRenda',
         'canal_entrada' => 'canalEntrada',
+        'valor_pontuacao' => 'valorPontuacao',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
-        'socios' => 'socios'
+        'limite_global' => 'limiteGlobal',
+        'socios' => 'socios',
+        'limite_maximo' => 'limiteMaximo',
+        'limite_parcelas' => 'limiteParcelas'
     );
   
     static function attributeMap() {
@@ -121,9 +129,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_impresso' => 'setNomeImpresso',
         'valor_renda' => 'setValorRenda',
         'canal_entrada' => 'setCanalEntrada',
+        'valor_pontuacao' => 'setValorPontuacao',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
-        'socios' => 'setSocios'
+        'limite_global' => 'setLimiteGlobal',
+        'socios' => 'setSocios',
+        'limite_maximo' => 'setLimiteMaximo',
+        'limite_parcelas' => 'setLimiteParcelas'
     );
   
     static function setters() {
@@ -149,9 +161,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_impresso' => 'getNomeImpresso',
         'valor_renda' => 'getValorRenda',
         'canal_entrada' => 'getCanalEntrada',
+        'valor_pontuacao' => 'getValorPontuacao',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
-        'socios' => 'getSocios'
+        'limite_global' => 'getLimiteGlobal',
+        'socios' => 'getSocios',
+        'limite_maximo' => 'getLimiteMaximo',
+        'limite_parcelas' => 'getLimiteParcelas'
     );
   
     static function getters() {
@@ -244,6 +260,12 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $canal_entrada;
     
     /**
+      * $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+      * @var int
+      */
+    protected $valor_pontuacao;
+    
+    /**
       * $telefones Apresenta os telefones da empresa
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
@@ -256,10 +278,28 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $enderecos;
     
     /**
+      * $limite_global Valor do Limite Global
+      * @var Number
+      */
+    protected $limite_global;
+    
+    /**
       * $socios Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
       * @var \br.com.conductor.pier.api.v2.model\PessoaPersist[]
       */
     protected $socios;
+    
+    /**
+      * $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+      * @var Number
+      */
+    protected $limite_maximo;
+    
+    /**
+      * $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+      * @var Number
+      */
+    protected $limite_parcelas;
     
 
     /**
@@ -284,9 +324,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
             $this->nome_impresso = $data["nome_impresso"];
             $this->valor_renda = $data["valor_renda"];
             $this->canal_entrada = $data["canal_entrada"];
+            $this->valor_pontuacao = $data["valor_pontuacao"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
+            $this->limite_global = $data["limite_global"];
             $this->socios = $data["socios"];
+            $this->limite_maximo = $data["limite_maximo"];
+            $this->limite_parcelas = $data["limite_parcelas"];
         }
     }
     
@@ -585,6 +629,27 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     }
     
     /**
+     * Gets valor_pontuacao
+     * @return int
+     */
+    public function getValorPontuacao()
+    {
+        return $this->valor_pontuacao;
+    }
+  
+    /**
+     * Sets valor_pontuacao
+     * @param int $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+     * @return $this
+     */
+    public function setValorPontuacao($valor_pontuacao)
+    {
+        
+        $this->valor_pontuacao = $valor_pontuacao;
+        return $this;
+    }
+    
+    /**
      * Gets telefones
      * @return \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
      */
@@ -627,6 +692,27 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     }
     
     /**
+     * Gets limite_global
+     * @return Number
+     */
+    public function getLimiteGlobal()
+    {
+        return $this->limite_global;
+    }
+  
+    /**
+     * Sets limite_global
+     * @param Number $limite_global Valor do Limite Global
+     * @return $this
+     */
+    public function setLimiteGlobal($limite_global)
+    {
+        
+        $this->limite_global = $limite_global;
+        return $this;
+    }
+    
+    /**
      * Gets socios
      * @return \br.com.conductor.pier.api.v2.model\PessoaPersist[]
      */
@@ -644,6 +730,48 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     {
         
         $this->socios = $socios;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_maximo
+     * @return Number
+     */
+    public function getLimiteMaximo()
+    {
+        return $this->limite_maximo;
+    }
+  
+    /**
+     * Sets limite_maximo
+     * @param Number $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+     * @return $this
+     */
+    public function setLimiteMaximo($limite_maximo)
+    {
+        
+        $this->limite_maximo = $limite_maximo;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_parcelas
+     * @return Number
+     */
+    public function getLimiteParcelas()
+    {
+        return $this->limite_parcelas;
+    }
+  
+    /**
+     * Sets limite_parcelas
+     * @param Number $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+     * @return $this
+     */
+    public function setLimiteParcelas($limite_parcelas)
+    {
+        
+        $this->limite_parcelas = $limite_parcelas;
         return $this;
     }
     

@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**alterarUsingPUT10**](UsuariosApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultarUsingGET26**](UsuariosApi.md#consultarUsingGET26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET32**](UsuariosApi.md#listarUsingGET32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST15**](UsuariosApi.md#salvarUsingPOST15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST16**](UsuariosApi.md#salvarUsingPOST16) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **alterarUsingPUT9**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse alterarUsingPUT9($id, $update)
+# **alterarUsingPUT10**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse alterarUsingPUT10($id, $update)
 
 Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -81,10 +81,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $update = new \br.com.conductor.pier.api.v2.model\UsuarioUpdate(); // \br.com.conductor.pier.api.v2.model\UsuarioUpdate | update
 
 try { 
-    $result = $api_instance->alterarUsingPUT9($id, $update);
+    $result = $api_instance->alterarUsingPUT10($id, $update);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->alterarUsingPUT9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->alterarUsingPUT10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -246,8 +246,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET30($page, $limit, $nome, $cpf, $email, $status)
+# **listarUsingGET32**
+> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET32($sort, $page, $limit, $nome, $cpf, $email, $status)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -259,6 +259,7 @@ Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existen
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $nome = "nome_example"; // string | Nome do Usuario
@@ -267,10 +268,10 @@ $email = "email_example"; // string | Email do Usuario
 $status = "status_example"; // string | Status do Usuario
 
 try { 
-    $result = $api_instance->listarUsingGET30($page, $limit, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET32($sort, $page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->listarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->listarUsingGET32: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -279,6 +280,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **string**| Nome do Usuario | [optional] 
@@ -346,8 +348,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST15**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST15($persist)
+# **salvarUsingPOST16**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST16($persist)
 
 Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -362,10 +364,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuariosApi();
 $persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST15($persist);
+    $result = $api_instance->salvarUsingPOST16($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuariosApi->salvarUsingPOST15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuariosApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
 }
 ?>
 ```

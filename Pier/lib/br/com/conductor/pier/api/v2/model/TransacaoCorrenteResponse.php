@@ -52,7 +52,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'ultima_parcela_lancada' => 'int',
-        'id' => 'int',
         'id_conta' => 'int',
         'id_tipo_registro' => 'int',
         'ordem' => 'int',
@@ -82,7 +81,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'ultima_parcela_lancada' => 'ultimaParcelaLancada',
-        'id' => 'id',
         'id_conta' => 'idConta',
         'id_tipo_registro' => 'idTipoRegistro',
         'ordem' => 'ordem',
@@ -112,7 +110,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
       */
     static $setters = array(
         'ultima_parcela_lancada' => 'setUltimaParcelaLancada',
-        'id' => 'setId',
         'id_conta' => 'setIdConta',
         'id_tipo_registro' => 'setIdTipoRegistro',
         'ordem' => 'setOrdem',
@@ -142,7 +139,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
       */
     static $getters = array(
         'ultima_parcela_lancada' => 'getUltimaParcelaLancada',
-        'id' => 'getId',
         'id_conta' => 'getIdConta',
         'id_tipo_registro' => 'getIdTipoRegistro',
         'ordem' => 'getOrdem',
@@ -172,12 +168,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
       * @var int
       */
     protected $ultima_parcela_lancada;
-    
-    /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-      * @var int
-      */
-    protected $id;
     
     /**
       * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -291,7 +281,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
         
         if ($data != null) {
             $this->ultima_parcela_lancada = $data["ultima_parcela_lancada"];
-            $this->id = $data["id"];
             $this->id_conta = $data["id_conta"];
             $this->id_tipo_registro = $data["id_tipo_registro"];
             $this->ordem = $data["ordem"];
@@ -330,27 +319,6 @@ class TransacaoCorrenteResponse implements ArrayAccess
     {
         
         $this->ultima_parcela_lancada = $ultima_parcela_lancada;
-        return $this;
-    }
-    
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-  
-    /**
-     * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-     * @return $this
-     */
-    public function setId($id)
-    {
-        
-        $this->id = $id;
         return $this;
     }
     

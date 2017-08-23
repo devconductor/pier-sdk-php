@@ -417,11 +417,12 @@ class AntecipacoesApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET7
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
@@ -431,19 +432,20 @@ class AntecipacoesApi
      * @return \br.com.conductor.pier.api.v2.model\PageCompraResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET7($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
@@ -453,12 +455,12 @@ class AntecipacoesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCompraResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($id_conta, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET7WithHttpInfo($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET7');
         }
   
         // parse inputs
@@ -474,6 +476,14 @@ class AntecipacoesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);

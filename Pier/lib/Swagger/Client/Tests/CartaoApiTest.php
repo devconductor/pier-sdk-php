@@ -216,6 +216,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for lancarTarifaSegundaViaUsingPOST
+     *
+     * Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+     *
+     */
+    public function test_lancarTarifaSegundaViaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for listarLotesCartoesPrePagosUsingGET
      *
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -226,12 +236,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET5
+     * Test case for listarUsingGET6
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET5() {
+    public function test_listarUsingGET6() {
 
     }
     

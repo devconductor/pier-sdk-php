@@ -272,6 +272,7 @@ class PermissaoPaisesApi
      *
      * Lista os pa\u00C3\u00ADses
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
@@ -282,9 +283,9 @@ class PermissaoPaisesApi
      * @return \br.com.conductor.pier.api.v2.model\PagePaisResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPaisesUsingGET($page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
+    public function listarPaisesUsingGET($sort = null, $page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarPaisesUsingGETWithHttpInfo ($page, $limit, $codigo, $sigla, $descricao, $continente, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarPaisesUsingGETWithHttpInfo ($sort, $page, $limit, $codigo, $sigla, $descricao, $continente, $flag_ativo);
         return $response; 
     }
 
@@ -294,6 +295,7 @@ class PermissaoPaisesApi
      *
      * Lista os pa\u00C3\u00ADses
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
@@ -304,7 +306,7 @@ class PermissaoPaisesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePaisResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarPaisesUsingGETWithHttpInfo($page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
+    public function listarPaisesUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
     {
         
   
@@ -321,6 +323,14 @@ class PermissaoPaisesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);

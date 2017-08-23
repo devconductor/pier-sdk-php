@@ -66,12 +66,12 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT10
+     * Test case for alterarUsingPUT11
      *
      * Alterar Webhook
      *
      */
-    public function test_alterarUsingPUT10() {
+    public function test_alterarUsingPUT11() {
 
     }
     
@@ -86,22 +86,22 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET31
+     * Test case for listarUsingGET34
      *
      * Lista os Webhooks
      *
      */
-    public function test_listarUsingGET31() {
+    public function test_listarUsingGET34() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST16
+     * Test case for salvarUsingPOST17
      *
      * Salvar Webhook
      *
      */
-    public function test_salvarUsingPOST16() {
+    public function test_salvarUsingPOST17() {
 
     }
     

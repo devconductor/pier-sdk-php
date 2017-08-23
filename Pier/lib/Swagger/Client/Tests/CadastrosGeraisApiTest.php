@@ -206,6 +206,16 @@ class CadastrosGeraisApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarFantasiasBasicasUsingGET
+     *
+     * Listar Fantasias B\u00C3\u00A1sicas
+     *
+     */
+    public function test_listarFantasiasBasicasUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarHistoricoTelefonesUsingGET
      *
      * Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
@@ -266,29 +276,9 @@ class CadastrosGeraisApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET1
-     *
-     * Lista todos os atendimentos
-     *
-     */
-    public function test_listarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET17
-     *
-     * Lista os Portadores existentes
-     *
-     */
-    public function test_listarUsingGET17() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET18
      *
-     * Lista os Produtos do Emissor
+     * Lista os Portadores existentes
      *
      */
     public function test_listarUsingGET18() {
@@ -296,9 +286,19 @@ class CadastrosGeraisApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarUsingGET19
+     *
+     * Lista os Produtos do Emissor
+     *
+     */
+    public function test_listarUsingGET19() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET2
      *
-     * Lista os Bancos cadastrados para o Emissor
+     * Lista todos os atendimentos
      *
      */
     public function test_listarUsingGET2() {
@@ -306,22 +306,52 @@ class CadastrosGeraisApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET24
+     * Test case for listarUsingGET20
      *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Lista promotores cadastrados na base do emissor
      *
      */
-    public function test_listarUsingGET24() {
+    public function test_listarUsingGET20() {
 
     }
     
     /**
      * Test case for listarUsingGET26
      *
-     * Lista os Tipos de Telefones
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
      */
     public function test_listarUsingGET26() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET28
+     *
+     * Lista os Tipos de Telefones
+     *
+     */
+    public function test_listarUsingGET28() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET3
+     *
+     * Lista os Bancos cadastrados para o Emissor
+     *
+     */
+    public function test_listarUsingGET3() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET33
+     *
+     * Listar Vencimentos
+     *
+     */
+    public function test_listarUsingGET33() {
 
     }
     

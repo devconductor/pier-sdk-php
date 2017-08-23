@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **trilha2** | **string** | Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv1** | **string** | Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv2** | **string** | Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor. | [optional] 
+**numero_cartao_hash** | **int** | Apresenta o numero da hash do cart\u00C3\u00A3o  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

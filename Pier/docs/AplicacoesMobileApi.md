@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT**](AplicacoesMobileApi.md#atualizarUsingPUT) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listarUsingGET**](AplicacoesMobileApi.md#listarUsingGET) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listarUsingGET1**](AplicacoesMobileApi.md#listarUsingGET1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvarUsingPOST**](AplicacoesMobileApi.md#salvarUsingPOST) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse listarUsingGET($page, $limit, $id, $id_plataforma_mobile)
+# **listarUsingGET1**
+> \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse listarUsingGET1($sort, $page, $limit, $id, $id_plataforma_mobile)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -69,16 +69,17 @@ Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existente
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\AplicacoesMobileApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id = "id_example"; // string | Identificador da Aplicacao Mobile
 $id_plataforma_mobile = 789; // int | Identificador da Plataforma Mobile
 
 try { 
-    $result = $api_instance->listarUsingGET($page, $limit, $id, $id_plataforma_mobile);
+    $result = $api_instance->listarUsingGET1($sort, $page, $limit, $id, $id_plataforma_mobile);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AplicacoesMobileApi->listarUsingGET: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AplicacoesMobileApi->listarUsingGET1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -87,6 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **string**| Identificador da Aplicacao Mobile | [optional] 

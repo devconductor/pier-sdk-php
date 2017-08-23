@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **nsu_origem** | **string** | N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. | 
 **numero_parcelas** | **int** | N\u00C3\u00BAmero de Parcelas. | 
 **codigo_processamento** | **string** | C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. | 
-**codigo_seguranca_cartao** | **string** | C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o. | 
+**codigo_seguranca_cartao** | **string** | C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o. | [optional] 
 **valor_transacao** | [**Number**](Number.md) | Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. | 
 **numero_real_cartao** | **string** | N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. | 
 **data_validade_cartao** | **string** | Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM | 

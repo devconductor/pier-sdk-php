@@ -197,10 +197,11 @@ class AplicacoesMobileApi
     }
     
     /**
-     * listarUsingGET
+     * listarUsingGET1
      *
      * Lista os aplicacoes mobile cadastradas
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
@@ -208,18 +209,19 @@ class AplicacoesMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET1($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($page, $limit, $id, $id_plataforma_mobile);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($sort, $page, $limit, $id, $id_plataforma_mobile);
         return $response; 
     }
 
 
     /**
-     * listarUsingGETWithHttpInfo
+     * listarUsingGET1WithHttpInfo
      *
      * Lista os aplicacoes mobile cadastradas
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
@@ -227,7 +229,7 @@ class AplicacoesMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET1WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
         
   
@@ -244,6 +246,14 @@ class AplicacoesMobileApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);

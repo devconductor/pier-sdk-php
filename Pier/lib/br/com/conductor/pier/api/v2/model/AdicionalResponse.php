@@ -67,6 +67,7 @@ class AdicionalResponse implements ArrayAccess
         'id_nacionalidade' => 'int',
         'id_parentesco' => 'int',
         'email' => 'string',
+        'flag_ativo' => 'int',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
     );
   
@@ -95,6 +96,7 @@ class AdicionalResponse implements ArrayAccess
         'id_nacionalidade' => 'idNacionalidade',
         'id_parentesco' => 'idParentesco',
         'email' => 'email',
+        'flag_ativo' => 'flagAtivo',
         'telefones' => 'telefones'
     );
   
@@ -123,6 +125,7 @@ class AdicionalResponse implements ArrayAccess
         'id_nacionalidade' => 'setIdNacionalidade',
         'id_parentesco' => 'setIdParentesco',
         'email' => 'setEmail',
+        'flag_ativo' => 'setFlagAtivo',
         'telefones' => 'setTelefones'
     );
   
@@ -151,6 +154,7 @@ class AdicionalResponse implements ArrayAccess
         'id_nacionalidade' => 'getIdNacionalidade',
         'id_parentesco' => 'getIdParentesco',
         'email' => 'getEmail',
+        'flag_ativo' => 'getFlagAtivo',
         'telefones' => 'getTelefones'
     );
   
@@ -256,6 +260,12 @@ class AdicionalResponse implements ArrayAccess
     protected $email;
     
     /**
+      * $flag_ativo Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+      * @var int
+      */
+    protected $flag_ativo;
+    
+    /**
       * $telefones Lista dos telefones do adicional
       * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
       */
@@ -286,6 +296,7 @@ class AdicionalResponse implements ArrayAccess
             $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->id_parentesco = $data["id_parentesco"];
             $this->email = $data["email"];
+            $this->flag_ativo = $data["flag_ativo"];
             $this->telefones = $data["telefones"];
         }
     }
@@ -623,6 +634,27 @@ class AdicionalResponse implements ArrayAccess
     {
         
         $this->email = $email;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_ativo
+     * @return int
+     */
+    public function getFlagAtivo()
+    {
+        return $this->flag_ativo;
+    }
+  
+    /**
+     * Sets flag_ativo
+     * @param int $flag_ativo Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+     * @return $this
+     */
+    public function setFlagAtivo($flag_ativo)
+    {
+        
+        $this->flag_ativo = $flag_ativo;
         return $this;
     }
     

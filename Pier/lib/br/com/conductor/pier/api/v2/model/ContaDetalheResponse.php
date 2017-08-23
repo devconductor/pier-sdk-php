@@ -244,7 +244,7 @@ class ContaDetalheResponse implements ArrayAccess
     protected $nome_fantasia_basica;
     
     /**
-      * $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+      * $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
       * @var int
       */
     protected $id_status_conta;
@@ -568,7 +568,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_status_conta
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
      * @return $this
      */
     public function setIdStatusConta($id_status_conta)

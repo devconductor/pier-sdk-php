@@ -76,12 +76,12 @@ class AplicacoesMobileApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET
+     * Test case for listarUsingGET1
      *
      * Lista os aplicacoes mobile cadastradas
      *
      */
-    public function test_listarUsingGET() {
+    public function test_listarUsingGET1() {
 
     }
     

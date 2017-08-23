@@ -211,7 +211,7 @@ class OportunidadesApi
     }
     
     /**
-     * alterarUsingPUT3
+     * alterarUsingPUT4
      *
      * Altera as oportunidades
      *
@@ -220,15 +220,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3($id, $update)
+    public function alterarUsingPUT4($id, $update)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT3WithHttpInfo ($id, $update);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT4WithHttpInfo ($id, $update);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT3WithHttpInfo
+     * alterarUsingPUT4WithHttpInfo
      *
      * Altera as oportunidades
      *
@@ -237,16 +237,16 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3WithHttpInfo($id, $update)
+    public function alterarUsingPUT4WithHttpInfo($id, $update)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT4');
         }
         // verify the required parameter 'update' is set
         if ($update === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT4');
         }
   
         // parse inputs
@@ -316,7 +316,7 @@ class OportunidadesApi
     }
     
     /**
-     * alterarUsingPUT7
+     * alterarUsingPUT8
      *
      * Altera os tipos oportunidades
      *
@@ -325,15 +325,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT7($id, $persist)
+    public function alterarUsingPUT8($id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT7WithHttpInfo ($id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT8WithHttpInfo ($id, $persist);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT7WithHttpInfo
+     * alterarUsingPUT8WithHttpInfo
      *
      * Altera os tipos oportunidades
      *
@@ -342,16 +342,16 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT7WithHttpInfo($id, $persist)
+    public function alterarUsingPUT8WithHttpInfo($id, $persist)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT7');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT8');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling alterarUsingPUT7');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling alterarUsingPUT8');
         }
   
         // parse inputs
@@ -724,6 +724,7 @@ class OportunidadesApi
      *
      * Lista as auditorias dos status oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
@@ -737,9 +738,9 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasStatusUsingGET($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
+    public function listarAuditoriasStatusUsingGET($sort = null, $page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasStatusUsingGETWithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $nome, $descricao, $flag_ativo, $rev_user);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasStatusUsingGETWithHttpInfo ($sort, $page, $limit, $rev_type, $rev_date, $id, $id_tipo_oportunidade, $nome, $descricao, $flag_ativo, $rev_user);
         return $response; 
     }
 
@@ -749,6 +750,7 @@ class OportunidadesApi
      *
      * Lista as auditorias dos status oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
@@ -762,7 +764,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasStatusUsingGETWithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
+    public function listarAuditoriasStatusUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $id_tipo_oportunidade = null, $nome = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
         
   
@@ -779,6 +781,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -865,6 +875,7 @@ class OportunidadesApi
      *
      * Lista as auditorias das oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
@@ -880,9 +891,9 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
+    public function listarAuditoriasUsingGET($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGETWithHttpInfo ($page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type, $rev_user);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGETWithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $datat_fim_vigencia, $flag_ativo, $rev_date, $rev_type, $rev_user);
         return $response; 
     }
 
@@ -892,6 +903,7 @@ class OportunidadesApi
      *
      * Lista as auditorias das oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
@@ -907,7 +919,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGETWithHttpInfo($page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
+    public function listarAuditoriasUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $datat_fim_vigencia = null, $flag_ativo = null, $rev_date = null, $rev_type = null, $rev_user = null)
     {
         
   
@@ -924,6 +936,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1018,6 +1038,7 @@ class OportunidadesApi
      *
      * Lista as auditorias dos tipos oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
@@ -1029,9 +1050,9 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET1($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
+    public function listarAuditoriasUsingGET1($sort = null, $page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGET1WithHttpInfo ($page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo, $rev_user);
+        list($response, $statusCode, $httpHeader) = $this->listarAuditoriasUsingGET1WithHttpInfo ($sort, $page, $limit, $rev_type, $rev_date, $id, $descricao, $flag_ativo, $rev_user);
         return $response; 
     }
 
@@ -1041,6 +1062,7 @@ class OportunidadesApi
      *
      * Lista as auditorias dos tipos oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
@@ -1052,7 +1074,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarAuditoriasUsingGET1WithHttpInfo($page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
+    public function listarAuditoriasUsingGET1WithHttpInfo($sort = null, $page = null, $limit = null, $rev_type = null, $rev_date = null, $id = null, $descricao = null, $flag_ativo = null, $rev_user = null)
     {
         
   
@@ -1069,6 +1091,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1148,6 +1178,7 @@ class OportunidadesApi
      * Lista os status do tipo oportunidades
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do status oportunidade (optional)
@@ -1156,9 +1187,9 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusUsingGET($id, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
+    public function listarStatusUsingGET($id, $sort = null, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusUsingGETWithHttpInfo ($id, $page, $limit, $nome, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusUsingGETWithHttpInfo ($id, $sort, $page, $limit, $nome, $descricao, $flag_ativo);
         return $response; 
     }
 
@@ -1169,6 +1200,7 @@ class OportunidadesApi
      * Lista os status do tipo oportunidades
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do status oportunidade (optional)
@@ -1177,7 +1209,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusUsingGETWithHttpInfo($id, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
+    public function listarStatusUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $nome = null, $descricao = null, $flag_ativo = null)
     {
         
         // verify the required parameter 'id' is set
@@ -1198,6 +1230,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1268,53 +1308,51 @@ class OportunidadesApi
     }
     
     /**
-     * listarUsingGET13
+     * listarUsingGET14
      *
      * Lista as oportunidades
      *
-     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
      * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
      * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
      * @param string $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13($data_inicio_vigencia, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET14($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($data_inicio_vigencia, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET13WithHttpInfo
+     * listarUsingGET14WithHttpInfo
      *
      * Lista as oportunidades
      *
-     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
      * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
      * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
      * @param string $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)
      * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13WithHttpInfo($data_inicio_vigencia, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET14WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
-        // verify the required parameter 'data_inicio_vigencia' is set
-        if ($data_inicio_vigencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_inicio_vigencia when calling listarUsingGET13');
-        }
   
         // parse inputs
         $resourcePath = "/api/oportunidades";
@@ -1329,6 +1367,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1407,10 +1453,11 @@ class OportunidadesApi
     }
     
     /**
-     * listarUsingGET25
+     * listarUsingGET27
      *
      * Lista os tipos oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)
@@ -1418,18 +1465,19 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25($page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET27($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET25WithHttpInfo
+     * listarUsingGET27WithHttpInfo
      *
      * Lista os tipos oportunidades
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)
@@ -1437,7 +1485,7 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25WithHttpInfo($page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   
@@ -1454,6 +1502,14 @@ class OportunidadesApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -1617,7 +1673,7 @@ class OportunidadesApi
     }
     
     /**
-     * salvarUsingPOST13
+     * salvarUsingPOST14
      *
      * Cadastra tipos oportunidades
      *
@@ -1625,15 +1681,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13($persist)
+    public function salvarUsingPOST14($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST13WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST13WithHttpInfo
+     * salvarUsingPOST14WithHttpInfo
      *
      * Cadastra tipos oportunidades
      *
@@ -1641,12 +1697,12 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST13WithHttpInfo($persist)
+    public function salvarUsingPOST14WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST13');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST14');
         }
   
         // parse inputs
@@ -1708,7 +1764,7 @@ class OportunidadesApi
     }
     
     /**
-     * salvarUsingPOST8
+     * salvarUsingPOST9
      *
      * Cadastra as oportunidades
      *
@@ -1716,15 +1772,15 @@ class OportunidadesApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8($persist)
+    public function salvarUsingPOST9($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST8WithHttpInfo
+     * salvarUsingPOST9WithHttpInfo
      *
      * Cadastra as oportunidades
      *
@@ -1732,12 +1788,12 @@ class OportunidadesApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8WithHttpInfo($persist)
+    public function salvarUsingPOST9WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
         }
   
         // parse inputs

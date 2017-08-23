@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobsApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT**](JobsApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobsApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET12**](JobsApi.md#listarUsingGET12) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST7**](JobsApi.md#salvarUsingPOST7) | **POST** /api/jobs | Cadastrar Job
+[**listarUsingGET13**](JobsApi.md#listarUsingGET13) | **GET** /api/jobs | Listar Jobs
+[**salvarUsingPOST8**](JobsApi.md#salvarUsingPOST8) | **POST** /api/jobs | Cadastrar Job
 
 
 # **ativarJobUsingPOST**
@@ -152,8 +152,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET12($groovy, $descricao, $cron, $status, $page, $limit)
+# **listarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET13($groovy, $descricao, $cron, $status, $page, $limit)
 
 Listar Jobs
 
@@ -173,10 +173,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET12($groovy, $descricao, $cron, $status, $page, $limit);
+    $result = $api_instance->listarUsingGET13($groovy, $descricao, $cron, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobsApi->listarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobsApi->listarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -207,8 +207,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST7**
-> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST7($descricao, $cron, $groovy)
+# **salvarUsingPOST8**
+> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST8($descricao, $cron, $groovy)
 
 Cadastrar Job
 
@@ -225,10 +225,10 @@ $cron = "cron_example"; // string | Cron do Job.
 $groovy = "groovy_example"; // string | groovy
 
 try { 
-    $result = $api_instance->salvarUsingPOST7($descricao, $cron, $groovy);
+    $result = $api_instance->salvarUsingPOST8($descricao, $cron, $groovy);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobsApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobsApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -53,8 +53,10 @@ class IntegracaoEmissorResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'id_conta' => 'int',
-        'status' => 'int',
-        'data_evento' => 'string'
+        'id_arquivo' => 'int',
+        'status' => 'string',
+        'data_inclusao' => 'string',
+        'data_alteracao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -68,8 +70,10 @@ class IntegracaoEmissorResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'id_conta' => 'idConta',
+        'id_arquivo' => 'idArquivo',
         'status' => 'status',
-        'data_evento' => 'dataEvento'
+        'data_inclusao' => 'dataInclusao',
+        'data_alteracao' => 'dataAlteracao'
     );
   
     static function attributeMap() {
@@ -83,8 +87,10 @@ class IntegracaoEmissorResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'id_conta' => 'setIdConta',
+        'id_arquivo' => 'setIdArquivo',
         'status' => 'setStatus',
-        'data_evento' => 'setDataEvento'
+        'data_inclusao' => 'setDataInclusao',
+        'data_alteracao' => 'setDataAlteracao'
     );
   
     static function setters() {
@@ -98,8 +104,10 @@ class IntegracaoEmissorResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'id_conta' => 'getIdConta',
+        'id_arquivo' => 'getIdArquivo',
         'status' => 'getStatus',
-        'data_evento' => 'getDataEvento'
+        'data_inclusao' => 'getDataInclusao',
+        'data_alteracao' => 'getDataAlteracao'
     );
   
     static function getters() {
@@ -120,16 +128,28 @@ class IntegracaoEmissorResponse implements ArrayAccess
     protected $id_conta;
     
     /**
-      * $status Status do registro.
+      * $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
       * @var int
+      */
+    protected $id_arquivo;
+    
+    /**
+      * $status Status do registro.
+      * @var string
       */
     protected $status;
     
     /**
-      * $data_evento Data de inclus\u00C3\u00A3o do registro.
+      * $data_inclusao Data de inclus\u00C3\u00A3o do registro.
       * @var string
       */
-    protected $data_evento;
+    protected $data_inclusao;
+    
+    /**
+      * $data_alteracao Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+      * @var string
+      */
+    protected $data_alteracao;
     
 
     /**
@@ -142,8 +162,10 @@ class IntegracaoEmissorResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->id_conta = $data["id_conta"];
+            $this->id_arquivo = $data["id_arquivo"];
             $this->status = $data["status"];
-            $this->data_evento = $data["data_evento"];
+            $this->data_inclusao = $data["data_inclusao"];
+            $this->data_alteracao = $data["data_alteracao"];
         }
     }
     
@@ -190,8 +212,29 @@ class IntegracaoEmissorResponse implements ArrayAccess
     }
     
     /**
-     * Gets status
+     * Gets id_arquivo
      * @return int
+     */
+    public function getIdArquivo()
+    {
+        return $this->id_arquivo;
+    }
+  
+    /**
+     * Sets id_arquivo
+     * @param int $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+     * @return $this
+     */
+    public function setIdArquivo($id_arquivo)
+    {
+        
+        $this->id_arquivo = $id_arquivo;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return string
      */
     public function getStatus()
     {
@@ -200,7 +243,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Status do registro.
+     * @param string $status Status do registro.
      * @return $this
      */
     public function setStatus($status)
@@ -211,23 +254,44 @@ class IntegracaoEmissorResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_evento
+     * Gets data_inclusao
      * @return string
      */
-    public function getDataEvento()
+    public function getDataInclusao()
     {
-        return $this->data_evento;
+        return $this->data_inclusao;
     }
   
     /**
-     * Sets data_evento
-     * @param string $data_evento Data de inclus\u00C3\u00A3o do registro.
+     * Sets data_inclusao
+     * @param string $data_inclusao Data de inclus\u00C3\u00A3o do registro.
      * @return $this
      */
-    public function setDataEvento($data_evento)
+    public function setDataInclusao($data_inclusao)
     {
         
-        $this->data_evento = $data_evento;
+        $this->data_inclusao = $data_inclusao;
+        return $this;
+    }
+    
+    /**
+     * Gets data_alteracao
+     * @return string
+     */
+    public function getDataAlteracao()
+    {
+        return $this->data_alteracao;
+    }
+  
+    /**
+     * Sets data_alteracao
+     * @param string $data_alteracao Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+     * @return $this
+     */
+    public function setDataAlteracao($data_alteracao)
+    {
+        
+        $this->data_alteracao = $data_alteracao;
         return $this;
     }
     

@@ -60,7 +60,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'id_conta' => 'int',
         'cartao_mascarado' => 'string',
         'nome_portador' => 'string',
-        'data_transacao_utc' => 'string',
+        'data_transacao' => 'string',
         'data_faturamento' => 'string',
         'data_vencimento' => 'string',
         'modo_entrada_transacao' => 'string',
@@ -108,7 +108,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'id_conta' => 'idConta',
         'cartao_mascarado' => 'cartaoMascarado',
         'nome_portador' => 'nomePortador',
-        'data_transacao_utc' => 'dataTransacaoUTC',
+        'data_transacao' => 'dataTransacao',
         'data_faturamento' => 'dataFaturamento',
         'data_vencimento' => 'dataVencimento',
         'modo_entrada_transacao' => 'modoEntradaTransacao',
@@ -156,7 +156,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'id_conta' => 'setIdConta',
         'cartao_mascarado' => 'setCartaoMascarado',
         'nome_portador' => 'setNomePortador',
-        'data_transacao_utc' => 'setDataTransacaoUtc',
+        'data_transacao' => 'setDataTransacao',
         'data_faturamento' => 'setDataFaturamento',
         'data_vencimento' => 'setDataVencimento',
         'modo_entrada_transacao' => 'setModoEntradaTransacao',
@@ -204,7 +204,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'id_conta' => 'getIdConta',
         'cartao_mascarado' => 'getCartaoMascarado',
         'nome_portador' => 'getNomePortador',
-        'data_transacao_utc' => 'getDataTransacaoUtc',
+        'data_transacao' => 'getDataTransacao',
         'data_faturamento' => 'getDataFaturamento',
         'data_vencimento' => 'getDataVencimento',
         'modo_entrada_transacao' => 'getModoEntradaTransacao',
@@ -294,10 +294,10 @@ class TransacoesCorrentesResponse implements ArrayAccess
     protected $nome_portador;
     
     /**
-      * $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+      * $data_transacao Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
       * @var string
       */
-    protected $data_transacao_utc;
+    protected $data_transacao;
     
     /**
       * $data_faturamento Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -479,7 +479,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
             $this->id_conta = $data["id_conta"];
             $this->cartao_mascarado = $data["cartao_mascarado"];
             $this->nome_portador = $data["nome_portador"];
-            $this->data_transacao_utc = $data["data_transacao_utc"];
+            $this->data_transacao = $data["data_transacao"];
             $this->data_faturamento = $data["data_faturamento"];
             $this->data_vencimento = $data["data_vencimento"];
             $this->modo_entrada_transacao = $data["modo_entrada_transacao"];
@@ -700,23 +700,23 @@ class TransacoesCorrentesResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_transacao_utc
+     * Gets data_transacao
      * @return string
      */
-    public function getDataTransacaoUtc()
+    public function getDataTransacao()
     {
-        return $this->data_transacao_utc;
+        return $this->data_transacao;
     }
   
     /**
-     * Sets data_transacao_utc
-     * @param string $data_transacao_utc Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+     * Sets data_transacao
+     * @param string $data_transacao Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
      * @return $this
      */
-    public function setDataTransacaoUtc($data_transacao_utc)
+    public function setDataTransacao($data_transacao)
     {
         
-        $this->data_transacao_utc = $data_transacao_utc;
+        $this->data_transacao = $data_transacao;
         return $this;
     }
     

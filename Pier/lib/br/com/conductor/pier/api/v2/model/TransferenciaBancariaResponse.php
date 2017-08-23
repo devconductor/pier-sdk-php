@@ -76,7 +76,8 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_real' => 'string',
         'data_vencimento_padrao' => 'string',
         'id_conta_portador' => 'int',
-        'numero_estabelecimento' => 'int'
+        'numero_estabelecimento' => 'int',
+        'valor_taxa_saque' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -113,7 +114,8 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_real' => 'dataVencimentoReal',
         'data_vencimento_padrao' => 'dataVencimentoPadrao',
         'id_conta_portador' => 'idContaPortador',
-        'numero_estabelecimento' => 'numeroEstabelecimento'
+        'numero_estabelecimento' => 'numeroEstabelecimento',
+        'valor_taxa_saque' => 'valorTaxaSaque'
     );
   
     static function attributeMap() {
@@ -150,7 +152,8 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_real' => 'setDataVencimentoReal',
         'data_vencimento_padrao' => 'setDataVencimentoPadrao',
         'id_conta_portador' => 'setIdContaPortador',
-        'numero_estabelecimento' => 'setNumeroEstabelecimento'
+        'numero_estabelecimento' => 'setNumeroEstabelecimento',
+        'valor_taxa_saque' => 'setValorTaxaSaque'
     );
   
     static function setters() {
@@ -187,7 +190,8 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_real' => 'getDataVencimentoReal',
         'data_vencimento_padrao' => 'getDataVencimentoPadrao',
         'id_conta_portador' => 'getIdContaPortador',
-        'numero_estabelecimento' => 'getNumeroEstabelecimento'
+        'numero_estabelecimento' => 'getNumeroEstabelecimento',
+        'valor_taxa_saque' => 'getValorTaxaSaque'
     );
   
     static function getters() {
@@ -351,6 +355,12 @@ class TransferenciaBancariaResponse implements ArrayAccess
       */
     protected $numero_estabelecimento;
     
+    /**
+      * $valor_taxa_saque Valor da taxa saque.
+      * @var Number
+      */
+    protected $valor_taxa_saque;
+    
 
     /**
      * Constructor
@@ -386,6 +396,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
             $this->data_vencimento_padrao = $data["data_vencimento_padrao"];
             $this->id_conta_portador = $data["id_conta_portador"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
+            $this->valor_taxa_saque = $data["valor_taxa_saque"];
         }
     }
     
@@ -932,6 +943,27 @@ class TransferenciaBancariaResponse implements ArrayAccess
     {
         
         $this->numero_estabelecimento = $numero_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_taxa_saque
+     * @return Number
+     */
+    public function getValorTaxaSaque()
+    {
+        return $this->valor_taxa_saque;
+    }
+  
+    /**
+     * Sets valor_taxa_saque
+     * @param Number $valor_taxa_saque Valor da taxa saque.
+     * @return $this
+     */
+    public function setValorTaxaSaque($valor_taxa_saque)
+    {
+        
+        $this->valor_taxa_saque = $valor_taxa_saque;
         return $this;
     }
     

@@ -53,11 +53,15 @@ class StatusContaResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'nome' => 'string',
-        'flag_altera_limite' => 'int',
-        'mensagem_consulta_negada' => 'string',
-        'flag_permite_nova_via_cartao' => 'int',
-        'flag_faz_transferencia' => 'int',
-        'flag_recebe_transferencia' => 'int'
+        'permite_alterar_vencimento' => 'int',
+        'permite_alterar_limite' => 'int',
+        'permite_emitir_nova_via_cartao' => 'int',
+        'permite_fazer_transferencia' => 'int',
+        'permite_receber_transferencia' => 'int',
+        'permite_criar_acordo_cobranca' => 'int',
+        'permite_atribuir_como_bloqueio' => 'int',
+        'permite_desbloquear' => 'int',
+        'permite_atribuir_como_cancelamento' => 'int'
     );
   
     static function swaggerTypes() {
@@ -71,11 +75,15 @@ class StatusContaResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'nome' => 'nome',
-        'flag_altera_limite' => 'flagAlteraLimite',
-        'mensagem_consulta_negada' => 'mensagemConsultaNegada',
-        'flag_permite_nova_via_cartao' => 'flagPermiteNovaViaCartao',
-        'flag_faz_transferencia' => 'flagFazTransferencia',
-        'flag_recebe_transferencia' => 'flagRecebeTransferencia'
+        'permite_alterar_vencimento' => 'permiteAlterarVencimento',
+        'permite_alterar_limite' => 'permiteAlterarLimite',
+        'permite_emitir_nova_via_cartao' => 'permiteEmitirNovaViaCartao',
+        'permite_fazer_transferencia' => 'permiteFazerTransferencia',
+        'permite_receber_transferencia' => 'permiteReceberTransferencia',
+        'permite_criar_acordo_cobranca' => 'permiteCriarAcordoCobranca',
+        'permite_atribuir_como_bloqueio' => 'permiteAtribuirComoBloqueio',
+        'permite_desbloquear' => 'permiteDesbloquear',
+        'permite_atribuir_como_cancelamento' => 'permiteAtribuirComoCancelamento'
     );
   
     static function attributeMap() {
@@ -89,11 +97,15 @@ class StatusContaResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'nome' => 'setNome',
-        'flag_altera_limite' => 'setFlagAlteraLimite',
-        'mensagem_consulta_negada' => 'setMensagemConsultaNegada',
-        'flag_permite_nova_via_cartao' => 'setFlagPermiteNovaViaCartao',
-        'flag_faz_transferencia' => 'setFlagFazTransferencia',
-        'flag_recebe_transferencia' => 'setFlagRecebeTransferencia'
+        'permite_alterar_vencimento' => 'setPermiteAlterarVencimento',
+        'permite_alterar_limite' => 'setPermiteAlterarLimite',
+        'permite_emitir_nova_via_cartao' => 'setPermiteEmitirNovaViaCartao',
+        'permite_fazer_transferencia' => 'setPermiteFazerTransferencia',
+        'permite_receber_transferencia' => 'setPermiteReceberTransferencia',
+        'permite_criar_acordo_cobranca' => 'setPermiteCriarAcordoCobranca',
+        'permite_atribuir_como_bloqueio' => 'setPermiteAtribuirComoBloqueio',
+        'permite_desbloquear' => 'setPermiteDesbloquear',
+        'permite_atribuir_como_cancelamento' => 'setPermiteAtribuirComoCancelamento'
     );
   
     static function setters() {
@@ -107,11 +119,15 @@ class StatusContaResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'nome' => 'getNome',
-        'flag_altera_limite' => 'getFlagAlteraLimite',
-        'mensagem_consulta_negada' => 'getMensagemConsultaNegada',
-        'flag_permite_nova_via_cartao' => 'getFlagPermiteNovaViaCartao',
-        'flag_faz_transferencia' => 'getFlagFazTransferencia',
-        'flag_recebe_transferencia' => 'getFlagRecebeTransferencia'
+        'permite_alterar_vencimento' => 'getPermiteAlterarVencimento',
+        'permite_alterar_limite' => 'getPermiteAlterarLimite',
+        'permite_emitir_nova_via_cartao' => 'getPermiteEmitirNovaViaCartao',
+        'permite_fazer_transferencia' => 'getPermiteFazerTransferencia',
+        'permite_receber_transferencia' => 'getPermiteReceberTransferencia',
+        'permite_criar_acordo_cobranca' => 'getPermiteCriarAcordoCobranca',
+        'permite_atribuir_como_bloqueio' => 'getPermiteAtribuirComoBloqueio',
+        'permite_desbloquear' => 'getPermiteDesbloquear',
+        'permite_atribuir_como_cancelamento' => 'getPermiteAtribuirComoCancelamento'
     );
   
     static function getters() {
@@ -132,34 +148,58 @@ class StatusContaResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+      * $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_altera_limite;
+    protected $permite_alterar_vencimento;
     
     /**
-      * $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-      * @var string
-      */
-    protected $mensagem_consulta_negada;
-    
-    /**
-      * $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_permite_nova_via_cartao;
+    protected $permite_alterar_limite;
     
     /**
-      * $flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+      * $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_faz_transferencia;
+    protected $permite_emitir_nova_via_cartao;
     
     /**
-      * $flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+      * $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_recebe_transferencia;
+    protected $permite_fazer_transferencia;
+    
+    /**
+      * $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $permite_receber_transferencia;
+    
+    /**
+      * $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $permite_criar_acordo_cobranca;
+    
+    /**
+      * $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $permite_atribuir_como_bloqueio;
+    
+    /**
+      * $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $permite_desbloquear;
+    
+    /**
+      * $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+      * @var int
+      */
+    protected $permite_atribuir_como_cancelamento;
     
 
     /**
@@ -172,11 +212,15 @@ class StatusContaResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->nome = $data["nome"];
-            $this->flag_altera_limite = $data["flag_altera_limite"];
-            $this->mensagem_consulta_negada = $data["mensagem_consulta_negada"];
-            $this->flag_permite_nova_via_cartao = $data["flag_permite_nova_via_cartao"];
-            $this->flag_faz_transferencia = $data["flag_faz_transferencia"];
-            $this->flag_recebe_transferencia = $data["flag_recebe_transferencia"];
+            $this->permite_alterar_vencimento = $data["permite_alterar_vencimento"];
+            $this->permite_alterar_limite = $data["permite_alterar_limite"];
+            $this->permite_emitir_nova_via_cartao = $data["permite_emitir_nova_via_cartao"];
+            $this->permite_fazer_transferencia = $data["permite_fazer_transferencia"];
+            $this->permite_receber_transferencia = $data["permite_receber_transferencia"];
+            $this->permite_criar_acordo_cobranca = $data["permite_criar_acordo_cobranca"];
+            $this->permite_atribuir_como_bloqueio = $data["permite_atribuir_como_bloqueio"];
+            $this->permite_desbloquear = $data["permite_desbloquear"];
+            $this->permite_atribuir_como_cancelamento = $data["permite_atribuir_como_cancelamento"];
         }
     }
     
@@ -223,107 +267,191 @@ class StatusContaResponse implements ArrayAccess
     }
     
     /**
-     * Gets flag_altera_limite
+     * Gets permite_alterar_vencimento
      * @return int
      */
-    public function getFlagAlteraLimite()
+    public function getPermiteAlterarVencimento()
     {
-        return $this->flag_altera_limite;
+        return $this->permite_alterar_vencimento;
     }
   
     /**
-     * Sets flag_altera_limite
-     * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+     * Sets permite_alterar_vencimento
+     * @param int $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagAlteraLimite($flag_altera_limite)
+    public function setPermiteAlterarVencimento($permite_alterar_vencimento)
     {
         
-        $this->flag_altera_limite = $flag_altera_limite;
+        $this->permite_alterar_vencimento = $permite_alterar_vencimento;
         return $this;
     }
     
     /**
-     * Gets mensagem_consulta_negada
-     * @return string
+     * Gets permite_alterar_limite
+     * @return int
      */
-    public function getMensagemConsultaNegada()
+    public function getPermiteAlterarLimite()
     {
-        return $this->mensagem_consulta_negada;
+        return $this->permite_alterar_limite;
     }
   
     /**
-     * Sets mensagem_consulta_negada
-     * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+     * Sets permite_alterar_limite
+     * @param int $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setMensagemConsultaNegada($mensagem_consulta_negada)
+    public function setPermiteAlterarLimite($permite_alterar_limite)
     {
         
-        $this->mensagem_consulta_negada = $mensagem_consulta_negada;
+        $this->permite_alterar_limite = $permite_alterar_limite;
         return $this;
     }
     
     /**
-     * Gets flag_permite_nova_via_cartao
+     * Gets permite_emitir_nova_via_cartao
      * @return int
      */
-    public function getFlagPermiteNovaViaCartao()
+    public function getPermiteEmitirNovaViaCartao()
     {
-        return $this->flag_permite_nova_via_cartao;
+        return $this->permite_emitir_nova_via_cartao;
     }
   
     /**
-     * Sets flag_permite_nova_via_cartao
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * Sets permite_emitir_nova_via_cartao
+     * @param int $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagPermiteNovaViaCartao($flag_permite_nova_via_cartao)
+    public function setPermiteEmitirNovaViaCartao($permite_emitir_nova_via_cartao)
     {
         
-        $this->flag_permite_nova_via_cartao = $flag_permite_nova_via_cartao;
+        $this->permite_emitir_nova_via_cartao = $permite_emitir_nova_via_cartao;
         return $this;
     }
     
     /**
-     * Gets flag_faz_transferencia
+     * Gets permite_fazer_transferencia
      * @return int
      */
-    public function getFlagFazTransferencia()
+    public function getPermiteFazerTransferencia()
     {
-        return $this->flag_faz_transferencia;
+        return $this->permite_fazer_transferencia;
     }
   
     /**
-     * Sets flag_faz_transferencia
-     * @param int $flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+     * Sets permite_fazer_transferencia
+     * @param int $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagFazTransferencia($flag_faz_transferencia)
+    public function setPermiteFazerTransferencia($permite_fazer_transferencia)
     {
         
-        $this->flag_faz_transferencia = $flag_faz_transferencia;
+        $this->permite_fazer_transferencia = $permite_fazer_transferencia;
         return $this;
     }
     
     /**
-     * Gets flag_recebe_transferencia
+     * Gets permite_receber_transferencia
      * @return int
      */
-    public function getFlagRecebeTransferencia()
+    public function getPermiteReceberTransferencia()
     {
-        return $this->flag_recebe_transferencia;
+        return $this->permite_receber_transferencia;
     }
   
     /**
-     * Sets flag_recebe_transferencia
-     * @param int $flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+     * Sets permite_receber_transferencia
+     * @param int $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagRecebeTransferencia($flag_recebe_transferencia)
+    public function setPermiteReceberTransferencia($permite_receber_transferencia)
     {
         
-        $this->flag_recebe_transferencia = $flag_recebe_transferencia;
+        $this->permite_receber_transferencia = $permite_receber_transferencia;
+        return $this;
+    }
+    
+    /**
+     * Gets permite_criar_acordo_cobranca
+     * @return int
+     */
+    public function getPermiteCriarAcordoCobranca()
+    {
+        return $this->permite_criar_acordo_cobranca;
+    }
+  
+    /**
+     * Sets permite_criar_acordo_cobranca
+     * @param int $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setPermiteCriarAcordoCobranca($permite_criar_acordo_cobranca)
+    {
+        
+        $this->permite_criar_acordo_cobranca = $permite_criar_acordo_cobranca;
+        return $this;
+    }
+    
+    /**
+     * Gets permite_atribuir_como_bloqueio
+     * @return int
+     */
+    public function getPermiteAtribuirComoBloqueio()
+    {
+        return $this->permite_atribuir_como_bloqueio;
+    }
+  
+    /**
+     * Sets permite_atribuir_como_bloqueio
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setPermiteAtribuirComoBloqueio($permite_atribuir_como_bloqueio)
+    {
+        
+        $this->permite_atribuir_como_bloqueio = $permite_atribuir_como_bloqueio;
+        return $this;
+    }
+    
+    /**
+     * Gets permite_desbloquear
+     * @return int
+     */
+    public function getPermiteDesbloquear()
+    {
+        return $this->permite_desbloquear;
+    }
+  
+    /**
+     * Sets permite_desbloquear
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setPermiteDesbloquear($permite_desbloquear)
+    {
+        
+        $this->permite_desbloquear = $permite_desbloquear;
+        return $this;
+    }
+    
+    /**
+     * Gets permite_atribuir_como_cancelamento
+     * @return int
+     */
+    public function getPermiteAtribuirComoCancelamento()
+    {
+        return $this->permite_atribuir_como_cancelamento;
+    }
+  
+    /**
+     * Sets permite_atribuir_como_cancelamento
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+     * @return $this
+     */
+    public function setPermiteAtribuirComoCancelamento($permite_atribuir_como_cancelamento)
+    {
+        
+        $this->permite_atribuir_como_cancelamento = $permite_atribuir_como_cancelamento;
         return $this;
     }
     

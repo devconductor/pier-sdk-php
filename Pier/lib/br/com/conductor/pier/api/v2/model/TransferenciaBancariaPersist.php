@@ -51,18 +51,16 @@ class TransferenciaBancariaPersist implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_compra' => 'string',
-        'proximo_vencimento_padrao' => 'string',
-        'proximo_vencimento_real' => 'string',
         'valor_compra' => 'Number',
-        'nome_favorecido' => 'string',
+        'valor' => 'Number',
         'documento_favorecido' => 'string',
         'banco' => 'int',
         'numero_agencia' => 'string',
         'digito_agencia' => 'string',
         'numero_conta' => 'string',
         'digito_conta' => 'string',
-        'flag_conta_poupanca' => 'int'
+        'flag_conta_poupanca' => 'int',
+        'nome_favorecido' => 'string'
     );
   
     static function swaggerTypes() {
@@ -74,18 +72,16 @@ class TransferenciaBancariaPersist implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'data_compra' => 'dataCompra',
-        'proximo_vencimento_padrao' => 'proximoVencimentoPadrao',
-        'proximo_vencimento_real' => 'proximoVencimentoReal',
         'valor_compra' => 'valorCompra',
-        'nome_favorecido' => 'nomeFavorecido',
+        'valor' => 'valor',
         'documento_favorecido' => 'documentoFavorecido',
         'banco' => 'banco',
         'numero_agencia' => 'numeroAgencia',
         'digito_agencia' => 'digitoAgencia',
         'numero_conta' => 'numeroConta',
         'digito_conta' => 'digitoConta',
-        'flag_conta_poupanca' => 'flagContaPoupanca'
+        'flag_conta_poupanca' => 'flagContaPoupanca',
+        'nome_favorecido' => 'nomeFavorecido'
     );
   
     static function attributeMap() {
@@ -97,18 +93,16 @@ class TransferenciaBancariaPersist implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'data_compra' => 'setDataCompra',
-        'proximo_vencimento_padrao' => 'setProximoVencimentoPadrao',
-        'proximo_vencimento_real' => 'setProximoVencimentoReal',
         'valor_compra' => 'setValorCompra',
-        'nome_favorecido' => 'setNomeFavorecido',
+        'valor' => 'setValor',
         'documento_favorecido' => 'setDocumentoFavorecido',
         'banco' => 'setBanco',
         'numero_agencia' => 'setNumeroAgencia',
         'digito_agencia' => 'setDigitoAgencia',
         'numero_conta' => 'setNumeroConta',
         'digito_conta' => 'setDigitoConta',
-        'flag_conta_poupanca' => 'setFlagContaPoupanca'
+        'flag_conta_poupanca' => 'setFlagContaPoupanca',
+        'nome_favorecido' => 'setNomeFavorecido'
     );
   
     static function setters() {
@@ -120,18 +114,16 @@ class TransferenciaBancariaPersist implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'data_compra' => 'getDataCompra',
-        'proximo_vencimento_padrao' => 'getProximoVencimentoPadrao',
-        'proximo_vencimento_real' => 'getProximoVencimentoReal',
         'valor_compra' => 'getValorCompra',
-        'nome_favorecido' => 'getNomeFavorecido',
+        'valor' => 'getValor',
         'documento_favorecido' => 'getDocumentoFavorecido',
         'banco' => 'getBanco',
         'numero_agencia' => 'getNumeroAgencia',
         'digito_agencia' => 'getDigitoAgencia',
         'numero_conta' => 'getNumeroConta',
         'digito_conta' => 'getDigitoConta',
-        'flag_conta_poupanca' => 'getFlagContaPoupanca'
+        'flag_conta_poupanca' => 'getFlagContaPoupanca',
+        'nome_favorecido' => 'getNomeFavorecido'
     );
   
     static function getters() {
@@ -140,34 +132,16 @@ class TransferenciaBancariaPersist implements ArrayAccess
 
     
     /**
-      * $data_compra Data da transfer\u00C3\u00AAncia
-      * @var string
-      */
-    protected $data_compra;
-    
-    /**
-      * $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-      * @var string
-      */
-    protected $proximo_vencimento_padrao;
-    
-    /**
-      * $proximo_vencimento_real Data do vencimento real da fatura
-      * @var string
-      */
-    protected $proximo_vencimento_real;
-    
-    /**
       * $valor_compra Valor da transfer\u00C3\u00AAncia
       * @var Number
       */
     protected $valor_compra;
     
     /**
-      * $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-      * @var string
+      * $valor Valor da transfer\u00C3\u00AAncia
+      * @var Number
       */
-    protected $nome_favorecido;
+    protected $valor;
     
     /**
       * $documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
@@ -211,6 +185,12 @@ class TransferenciaBancariaPersist implements ArrayAccess
       */
     protected $flag_conta_poupanca;
     
+    /**
+      * $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+      * @var string
+      */
+    protected $nome_favorecido;
+    
 
     /**
      * Constructor
@@ -220,11 +200,8 @@ class TransferenciaBancariaPersist implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->data_compra = $data["data_compra"];
-            $this->proximo_vencimento_padrao = $data["proximo_vencimento_padrao"];
-            $this->proximo_vencimento_real = $data["proximo_vencimento_real"];
             $this->valor_compra = $data["valor_compra"];
-            $this->nome_favorecido = $data["nome_favorecido"];
+            $this->valor = $data["valor"];
             $this->documento_favorecido = $data["documento_favorecido"];
             $this->banco = $data["banco"];
             $this->numero_agencia = $data["numero_agencia"];
@@ -232,70 +209,8 @@ class TransferenciaBancariaPersist implements ArrayAccess
             $this->numero_conta = $data["numero_conta"];
             $this->digito_conta = $data["digito_conta"];
             $this->flag_conta_poupanca = $data["flag_conta_poupanca"];
+            $this->nome_favorecido = $data["nome_favorecido"];
         }
-    }
-    
-    /**
-     * Gets data_compra
-     * @return string
-     */
-    public function getDataCompra()
-    {
-        return $this->data_compra;
-    }
-  
-    /**
-     * Sets data_compra
-     * @param string $data_compra Data da transfer\u00C3\u00AAncia
-     * @return $this
-     */
-    public function setDataCompra($data_compra)
-    {
-        
-        $this->data_compra = $data_compra;
-        return $this;
-    }
-    
-    /**
-     * Gets proximo_vencimento_padrao
-     * @return string
-     */
-    public function getProximoVencimentoPadrao()
-    {
-        return $this->proximo_vencimento_padrao;
-    }
-  
-    /**
-     * Sets proximo_vencimento_padrao
-     * @param string $proximo_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
-     * @return $this
-     */
-    public function setProximoVencimentoPadrao($proximo_vencimento_padrao)
-    {
-        
-        $this->proximo_vencimento_padrao = $proximo_vencimento_padrao;
-        return $this;
-    }
-    
-    /**
-     * Gets proximo_vencimento_real
-     * @return string
-     */
-    public function getProximoVencimentoReal()
-    {
-        return $this->proximo_vencimento_real;
-    }
-  
-    /**
-     * Sets proximo_vencimento_real
-     * @param string $proximo_vencimento_real Data do vencimento real da fatura
-     * @return $this
-     */
-    public function setProximoVencimentoReal($proximo_vencimento_real)
-    {
-        
-        $this->proximo_vencimento_real = $proximo_vencimento_real;
-        return $this;
     }
     
     /**
@@ -320,23 +235,23 @@ class TransferenciaBancariaPersist implements ArrayAccess
     }
     
     /**
-     * Gets nome_favorecido
-     * @return string
+     * Gets valor
+     * @return Number
      */
-    public function getNomeFavorecido()
+    public function getValor()
     {
-        return $this->nome_favorecido;
+        return $this->valor;
     }
   
     /**
-     * Sets nome_favorecido
-     * @param string $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * Sets valor
+     * @param Number $valor Valor da transfer\u00C3\u00AAncia
      * @return $this
      */
-    public function setNomeFavorecido($nome_favorecido)
+    public function setValor($valor)
     {
         
-        $this->nome_favorecido = $nome_favorecido;
+        $this->valor = $valor;
         return $this;
     }
     
@@ -484,6 +399,27 @@ class TransferenciaBancariaPersist implements ArrayAccess
     {
         
         $this->flag_conta_poupanca = $flag_conta_poupanca;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_favorecido
+     * @return string
+     */
+    public function getNomeFavorecido()
+    {
+        return $this->nome_favorecido;
+    }
+  
+    /**
+     * Sets nome_favorecido
+     * @param string $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * @return $this
+     */
+    public function setNomeFavorecido($nome_favorecido)
+    {
+        
+        $this->nome_favorecido = $nome_favorecido;
         return $this;
     }
     

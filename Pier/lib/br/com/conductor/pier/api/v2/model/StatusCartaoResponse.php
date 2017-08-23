@@ -53,16 +53,10 @@ class StatusCartaoResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'nome' => 'string',
-        'flag_cancela_cartao' => 'int',
-        'flag_cancela_no_desbloqueio' => 'int',
-        'id_status_destino_desbloqueio' => 'int',
-        'id_status_destino_conta' => 'int',
-        'flag_cobra_tarifa' => 'int',
-        'flag_permite_nova_via_cartao' => 'int',
-        'flag_permite_desbloqueio' => 'int',
-        'flag_cancelamento' => 'int',
-        'flag_permite_bloqueio' => 'int',
-        'flag_reativar' => 'int'
+        'permite_desbloquear' => 'int',
+        'permite_atribuir_como_bloqueio' => 'int',
+        'permite_atribuir_como_cancelamento' => 'int',
+        'cobrar_tarifa_ao_emitir_nova_via' => 'int'
     );
   
     static function swaggerTypes() {
@@ -76,16 +70,10 @@ class StatusCartaoResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'nome' => 'nome',
-        'flag_cancela_cartao' => 'flagCancelaCartao',
-        'flag_cancela_no_desbloqueio' => 'flagCancelaNoDesbloqueio',
-        'id_status_destino_desbloqueio' => 'idStatusDestinoDesbloqueio',
-        'id_status_destino_conta' => 'idStatusDestinoConta',
-        'flag_cobra_tarifa' => 'flagCobraTarifa',
-        'flag_permite_nova_via_cartao' => 'flagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'flagPermiteDesbloqueio',
-        'flag_cancelamento' => 'flagCancelamento',
-        'flag_permite_bloqueio' => 'flagPermiteBloqueio',
-        'flag_reativar' => 'flagReativar'
+        'permite_desbloquear' => 'permiteDesbloquear',
+        'permite_atribuir_como_bloqueio' => 'permiteAtribuirComoBloqueio',
+        'permite_atribuir_como_cancelamento' => 'permiteAtribuirComoCancelamento',
+        'cobrar_tarifa_ao_emitir_nova_via' => 'cobrarTarifaAoEmitirNovaVia'
     );
   
     static function attributeMap() {
@@ -99,16 +87,10 @@ class StatusCartaoResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'nome' => 'setNome',
-        'flag_cancela_cartao' => 'setFlagCancelaCartao',
-        'flag_cancela_no_desbloqueio' => 'setFlagCancelaNoDesbloqueio',
-        'id_status_destino_desbloqueio' => 'setIdStatusDestinoDesbloqueio',
-        'id_status_destino_conta' => 'setIdStatusDestinoConta',
-        'flag_cobra_tarifa' => 'setFlagCobraTarifa',
-        'flag_permite_nova_via_cartao' => 'setFlagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'setFlagPermiteDesbloqueio',
-        'flag_cancelamento' => 'setFlagCancelamento',
-        'flag_permite_bloqueio' => 'setFlagPermiteBloqueio',
-        'flag_reativar' => 'setFlagReativar'
+        'permite_desbloquear' => 'setPermiteDesbloquear',
+        'permite_atribuir_como_bloqueio' => 'setPermiteAtribuirComoBloqueio',
+        'permite_atribuir_como_cancelamento' => 'setPermiteAtribuirComoCancelamento',
+        'cobrar_tarifa_ao_emitir_nova_via' => 'setCobrarTarifaAoEmitirNovaVia'
     );
   
     static function setters() {
@@ -122,16 +104,10 @@ class StatusCartaoResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'nome' => 'getNome',
-        'flag_cancela_cartao' => 'getFlagCancelaCartao',
-        'flag_cancela_no_desbloqueio' => 'getFlagCancelaNoDesbloqueio',
-        'id_status_destino_desbloqueio' => 'getIdStatusDestinoDesbloqueio',
-        'id_status_destino_conta' => 'getIdStatusDestinoConta',
-        'flag_cobra_tarifa' => 'getFlagCobraTarifa',
-        'flag_permite_nova_via_cartao' => 'getFlagPermiteNovaViaCartao',
-        'flag_permite_desbloqueio' => 'getFlagPermiteDesbloqueio',
-        'flag_cancelamento' => 'getFlagCancelamento',
-        'flag_permite_bloqueio' => 'getFlagPermiteBloqueio',
-        'flag_reativar' => 'getFlagReativar'
+        'permite_desbloquear' => 'getPermiteDesbloquear',
+        'permite_atribuir_como_bloqueio' => 'getPermiteAtribuirComoBloqueio',
+        'permite_atribuir_como_cancelamento' => 'getPermiteAtribuirComoCancelamento',
+        'cobrar_tarifa_ao_emitir_nova_via' => 'getCobrarTarifaAoEmitirNovaVia'
     );
   
     static function getters() {
@@ -152,64 +128,28 @@ class StatusCartaoResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
+      * $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_cancela_cartao;
+    protected $permite_desbloquear;
     
     /**
-      * $flag_cancela_no_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
+      * $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $flag_cancela_no_desbloqueio;
+    protected $permite_atribuir_como_bloqueio;
     
     /**
-      * $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+      * $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $id_status_destino_desbloqueio;
+    protected $permite_atribuir_como_cancelamento;
     
     /**
-      * $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
+      * $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
-    protected $id_status_destino_conta;
-    
-    /**
-      * $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-      * @var int
-      */
-    protected $flag_cobra_tarifa;
-    
-    /**
-      * $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_permite_nova_via_cartao;
-    
-    /**
-      * $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_permite_desbloqueio;
-    
-    /**
-      * $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_cancelamento;
-    
-    /**
-      * $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_permite_bloqueio;
-    
-    /**
-      * $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-      * @var int
-      */
-    protected $flag_reativar;
+    protected $cobrar_tarifa_ao_emitir_nova_via;
     
 
     /**
@@ -222,16 +162,10 @@ class StatusCartaoResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->nome = $data["nome"];
-            $this->flag_cancela_cartao = $data["flag_cancela_cartao"];
-            $this->flag_cancela_no_desbloqueio = $data["flag_cancela_no_desbloqueio"];
-            $this->id_status_destino_desbloqueio = $data["id_status_destino_desbloqueio"];
-            $this->id_status_destino_conta = $data["id_status_destino_conta"];
-            $this->flag_cobra_tarifa = $data["flag_cobra_tarifa"];
-            $this->flag_permite_nova_via_cartao = $data["flag_permite_nova_via_cartao"];
-            $this->flag_permite_desbloqueio = $data["flag_permite_desbloqueio"];
-            $this->flag_cancelamento = $data["flag_cancelamento"];
-            $this->flag_permite_bloqueio = $data["flag_permite_bloqueio"];
-            $this->flag_reativar = $data["flag_reativar"];
+            $this->permite_desbloquear = $data["permite_desbloquear"];
+            $this->permite_atribuir_como_bloqueio = $data["permite_atribuir_como_bloqueio"];
+            $this->permite_atribuir_como_cancelamento = $data["permite_atribuir_como_cancelamento"];
+            $this->cobrar_tarifa_ao_emitir_nova_via = $data["cobrar_tarifa_ao_emitir_nova_via"];
         }
     }
     
@@ -278,212 +212,86 @@ class StatusCartaoResponse implements ArrayAccess
     }
     
     /**
-     * Gets flag_cancela_cartao
+     * Gets permite_desbloquear
      * @return int
      */
-    public function getFlagCancelaCartao()
+    public function getPermiteDesbloquear()
     {
-        return $this->flag_cancela_cartao;
+        return $this->permite_desbloquear;
     }
   
     /**
-     * Sets flag_cancela_cartao
-     * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
+     * Sets permite_desbloquear
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagCancelaCartao($flag_cancela_cartao)
+    public function setPermiteDesbloquear($permite_desbloquear)
     {
         
-        $this->flag_cancela_cartao = $flag_cancela_cartao;
+        $this->permite_desbloquear = $permite_desbloquear;
         return $this;
     }
     
     /**
-     * Gets flag_cancela_no_desbloqueio
+     * Gets permite_atribuir_como_bloqueio
      * @return int
      */
-    public function getFlagCancelaNoDesbloqueio()
+    public function getPermiteAtribuirComoBloqueio()
     {
-        return $this->flag_cancela_no_desbloqueio;
+        return $this->permite_atribuir_como_bloqueio;
     }
   
     /**
-     * Sets flag_cancela_no_desbloqueio
-     * @param int $flag_cancela_no_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
+     * Sets permite_atribuir_como_bloqueio
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setFlagCancelaNoDesbloqueio($flag_cancela_no_desbloqueio)
+    public function setPermiteAtribuirComoBloqueio($permite_atribuir_como_bloqueio)
     {
         
-        $this->flag_cancela_no_desbloqueio = $flag_cancela_no_desbloqueio;
+        $this->permite_atribuir_como_bloqueio = $permite_atribuir_como_bloqueio;
         return $this;
     }
     
     /**
-     * Gets id_status_destino_desbloqueio
+     * Gets permite_atribuir_como_cancelamento
      * @return int
      */
-    public function getIdStatusDestinoDesbloqueio()
+    public function getPermiteAtribuirComoCancelamento()
     {
-        return $this->id_status_destino_desbloqueio;
+        return $this->permite_atribuir_como_cancelamento;
     }
   
     /**
-     * Sets id_status_destino_desbloqueio
-     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+     * Sets permite_atribuir_como_cancelamento
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setIdStatusDestinoDesbloqueio($id_status_destino_desbloqueio)
+    public function setPermiteAtribuirComoCancelamento($permite_atribuir_como_cancelamento)
     {
         
-        $this->id_status_destino_desbloqueio = $id_status_destino_desbloqueio;
+        $this->permite_atribuir_como_cancelamento = $permite_atribuir_como_cancelamento;
         return $this;
     }
     
     /**
-     * Gets id_status_destino_conta
+     * Gets cobrar_tarifa_ao_emitir_nova_via
      * @return int
      */
-    public function getIdStatusDestinoConta()
+    public function getCobrarTarifaAoEmitirNovaVia()
     {
-        return $this->id_status_destino_conta;
+        return $this->cobrar_tarifa_ao_emitir_nova_via;
     }
   
     /**
-     * Sets id_status_destino_conta
-     * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
+     * Sets cobrar_tarifa_ao_emitir_nova_via
+     * @param int $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
-    public function setIdStatusDestinoConta($id_status_destino_conta)
+    public function setCobrarTarifaAoEmitirNovaVia($cobrar_tarifa_ao_emitir_nova_via)
     {
         
-        $this->id_status_destino_conta = $id_status_destino_conta;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_cobra_tarifa
-     * @return int
-     */
-    public function getFlagCobraTarifa()
-    {
-        return $this->flag_cobra_tarifa;
-    }
-  
-    /**
-     * Sets flag_cobra_tarifa
-     * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-     * @return $this
-     */
-    public function setFlagCobraTarifa($flag_cobra_tarifa)
-    {
-        
-        $this->flag_cobra_tarifa = $flag_cobra_tarifa;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_permite_nova_via_cartao
-     * @return int
-     */
-    public function getFlagPermiteNovaViaCartao()
-    {
-        return $this->flag_permite_nova_via_cartao;
-    }
-  
-    /**
-     * Sets flag_permite_nova_via_cartao
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagPermiteNovaViaCartao($flag_permite_nova_via_cartao)
-    {
-        
-        $this->flag_permite_nova_via_cartao = $flag_permite_nova_via_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_permite_desbloqueio
-     * @return int
-     */
-    public function getFlagPermiteDesbloqueio()
-    {
-        return $this->flag_permite_desbloqueio;
-    }
-  
-    /**
-     * Sets flag_permite_desbloqueio
-     * @param int $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagPermiteDesbloqueio($flag_permite_desbloqueio)
-    {
-        
-        $this->flag_permite_desbloqueio = $flag_permite_desbloqueio;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_cancelamento
-     * @return int
-     */
-    public function getFlagCancelamento()
-    {
-        return $this->flag_cancelamento;
-    }
-  
-    /**
-     * Sets flag_cancelamento
-     * @param int $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagCancelamento($flag_cancelamento)
-    {
-        
-        $this->flag_cancelamento = $flag_cancelamento;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_permite_bloqueio
-     * @return int
-     */
-    public function getFlagPermiteBloqueio()
-    {
-        return $this->flag_permite_bloqueio;
-    }
-  
-    /**
-     * Sets flag_permite_bloqueio
-     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagPermiteBloqueio($flag_permite_bloqueio)
-    {
-        
-        $this->flag_permite_bloqueio = $flag_permite_bloqueio;
-        return $this;
-    }
-    
-    /**
-     * Gets flag_reativar
-     * @return int
-     */
-    public function getFlagReativar()
-    {
-        return $this->flag_reativar;
-    }
-  
-    /**
-     * Sets flag_reativar
-     * @param int $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-     * @return $this
-     */
-    public function setFlagReativar($flag_reativar)
-    {
-        
-        $this->flag_reativar = $flag_reativar;
+        $this->cobrar_tarifa_ao_emitir_nova_via = $cobrar_tarifa_ao_emitir_nova_via;
         return $this;
     }
     

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **id_conta** | **int** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
 **cartao_mascarado** | **string** | N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000. | [optional] 
 **nome_portador** | **string** | Nome completo do Portador do Cart\u00C3\u00A3o. | [optional] 
-**data_transacao_utc** | **string** | Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC). | [optional] 
+**data_transacao** | **string** | Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada. | [optional] 
 **data_faturamento** | **string** | Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 **data_vencimento** | **string** | Data de Vencimento da Fatura. | [optional] 
 **modo_entrada_transacao** | **string** | Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 

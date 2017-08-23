@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](AntecipacoesApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacoesApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacoesApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET6**](AntecipacoesApi.md#listarUsingGET6) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET7**](AntecipacoesApi.md#listarUsingGET7) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacoesApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -154,8 +154,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET6($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
+# **listarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET7($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -168,6 +168,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\AntecipacoesApi();
 $id_conta = 789; // int | C\u00C3\u00B3digo identificador da conta da Compra.
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $id_compra = 789; // int | C\u00C3\u00B3digo identificador da Compra.
@@ -176,10 +177,10 @@ $juros = true; // bool | Indica se a compra \u00C3\u00A9 com ou sem juros.
 $tipo_origem_transacao = "tipo_origem_transacao_example"; // string | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 
 try { 
-    $result = $api_instance->listarUsingGET6($id_conta, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+    $result = $api_instance->listarUsingGET7($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AntecipacoesApi->listarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AntecipacoesApi->listarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -189,6 +190,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_conta** | **int**| C\u00C3\u00B3digo identificador da conta da Compra. | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id_compra** | **int**| C\u00C3\u00B3digo identificador da Compra. | [optional] 

@@ -85,4 +85,24 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     }
     
+    /**
+     * Test case for negarUsingPOST
+     *
+     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     *
+     */
+    public function test_negarUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for reconhecerUsingPOST
+     *
+     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     *
+     */
+    public function test_reconhecerUsingPOST() {
+
+    }
+    
 }

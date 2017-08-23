@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **data_vencimento_padrao** | **string** | Dia do vencimento padr\u00C3\u00A3o da fatura | [optional] 
 **id_conta_portador** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
 **numero_estabelecimento** | **int** | Atributo que representa o numero do estabelecimento. | [optional] 
+**valor_taxa_saque** | [**Number**](Number.md) | Valor da taxa saque. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -76,12 +76,12 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT2
+     * Test case for alterarUsingPUT3
      *
      * Alterar FAQ
      *
      */
-    public function test_alterarUsingPUT2() {
+    public function test_alterarUsingPUT3() {
 
     }
     
@@ -96,12 +96,12 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET12
      *
      * Lista FAQs
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET12() {
 
     }
     

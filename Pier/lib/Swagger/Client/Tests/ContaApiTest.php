@@ -86,6 +86,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for alterarProdutoUsingPOST
+     *
+     * Altera o produto associado \u00C3\u00A0 conta.
+     *
+     */
+    public function test_alterarProdutoUsingPOST() {
+
+    }
+    
+    /**
      * Test case for alterarTitularUsingPOST
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
@@ -206,6 +216,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarLancamentosFuturosFaturaUsingGET1
+     *
+     * Listar planos de parcelamento
+     *
+     */
+    public function test_consultarLancamentosFuturosFaturaUsingGET1() {
+
+    }
+    
+    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET1
      *
      * Apresenta os limites da conta
@@ -266,12 +286,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for enviarFaturaEmailUsingPOST
+     *
+     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     *
+     */
+    public function test_enviarFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
      * Test case for gerarBoletoRecargaUsingPOST
      *
      * Gera um boleto de recarga
      *
      */
     public function test_gerarBoletoRecargaUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarCartaoEmbossingUsingPOST
+     *
+     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     *
+     */
+    public function test_gerarCartaoEmbossingUsingPOST() {
 
     }
     
@@ -356,6 +396,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarPagamentosUsingGET
+     *
+     * Lista hist\u00C3\u00B3rico de pagamentos da conta
+     *
+     */
+    public function test_listarPagamentosUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarProcessadasUsingGET
      *
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
@@ -366,32 +416,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET28
+     * Test case for listarUsingGET30
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET30() {
 
     }
     
     /**
-     * Test case for listarUsingGET29
+     * Test case for listarUsingGET31
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET29() {
+    public function test_listarUsingGET31() {
 
     }
     
     /**
-     * Test case for listarUsingGET7
+     * Test case for listarUsingGET8
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET7() {
+    public function test_listarUsingGET8() {
 
     }
     

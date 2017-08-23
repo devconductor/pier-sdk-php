@@ -316,7 +316,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarConfiguracaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse listarConfiguracaoUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse listarConfiguracaoUsingGET($sort, $page, $limit)
 
 Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
 
@@ -328,11 +328,12 @@ Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarConfiguracaoUsingGET($page, $limit);
+    $result = $api_instance->listarConfiguracaoUsingGET($sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarConfiguracaoUsingGET: ', $e->getMessage(), "\n";
@@ -344,6 +345,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -363,7 +365,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarPushUsingGET**
-> \br.com.conductor.pier.api.v2.model\PagePushResponse listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo)
+> \br.com.conductor.pier.api.v2.model\PagePushResponse listarPushUsingGET($sort, $page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo)
 
 Listar Push
 
@@ -375,6 +377,7 @@ Esse recurso permite listar os Pushes do emissor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $data_envio = "data_envio_example"; // string | Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -384,7 +387,7 @@ $plataforma = "plataforma_example"; // string | Plataforma de Push notifications
 $protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
 
 try { 
-    $result = $api_instance->listarPushUsingGET($page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
+    $result = $api_instance->listarPushUsingGET($sort, $page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarPushUsingGET: ', $e->getMessage(), "\n";
@@ -396,6 +399,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **data_envio** | **string**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
@@ -420,7 +424,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarSMSUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageSMSResponse listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu)
+> \br.com.conductor.pier.api.v2.model\PageSMSResponse listarSMSUsingGET($sort, $page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu)
 
 Listar SMS
 
@@ -432,6 +436,7 @@ Esse recurso permite listar os SMS do emissor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $data_inclusao = "data_inclusao_example"; // string | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -442,7 +447,7 @@ $protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de 
 $nsu = 789; // int | Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarSMSUsingGET($page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
+    $result = $api_instance->listarSMSUsingGET($sort, $page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarSMSUsingGET: ', $e->getMessage(), "\n";
@@ -454,6 +459,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **data_inclusao** | **string**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
@@ -479,7 +485,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarTemplateNotificacaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse listarTemplateNotificacaoUsingGET($page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse listarTemplateNotificacaoUsingGET($sort, $page, $limit)
 
 Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 
@@ -491,11 +497,12 @@ Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacoesApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarTemplateNotificacaoUsingGET($page, $limit);
+    $result = $api_instance->listarTemplateNotificacaoUsingGET($sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacoesApi->listarTemplateNotificacaoUsingGET: ', $e->getMessage(), "\n";
@@ -507,6 +514,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 

@@ -476,6 +476,7 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
@@ -483,9 +484,9 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageEstagioCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null)
+    public function listarEstagiosCartoesUsingGET($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarEstagiosCartoesUsingGETWithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
@@ -495,6 +496,7 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
@@ -502,7 +504,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstagioCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarEstagiosCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    public function listarEstagiosCartoesUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -519,6 +521,14 @@ class StatusParametrosApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -581,26 +591,21 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
-     * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
-     * @param int $flag_cancela_no_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado. (optional)
-     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
-     * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
-     * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGET($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_permite_nova_via_cartao = null, $flag_permite_desbloqueio = null, $flag_cancelamento = null, $flag_permite_bloqueio = null, $flag_reativar = null)
+    public function listarStatusCartoesUsingGET($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_desbloquear = null, $permite_atribuir_como_bloqueio = null, $permite_atribuir_como_cancelamento = null, $cobrar_tarifa_ao_emitir_nova_via = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($page, $limit, $id, $nome, $flag_cancela_cartao, $flag_cancela_no_desbloqueio, $id_status_destino_desbloqueio, $id_status_destino_conta, $flag_cobra_tarifa, $flag_permite_nova_via_cartao, $flag_permite_desbloqueio, $flag_cancelamento, $flag_permite_bloqueio, $flag_reativar);
+        list($response, $statusCode, $httpHeader) = $this->listarStatusCartoesUsingGETWithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_desbloquear, $permite_atribuir_como_bloqueio, $permite_atribuir_como_cancelamento, $cobrar_tarifa_ao_emitir_nova_via);
         return $response; 
     }
 
@@ -610,24 +615,19 @@ class StatusParametrosApi
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)
-     * @param int $flag_cancela_cartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)
-     * @param int $flag_cancela_no_desbloqueio Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado. (optional)
-     * @param int $id_status_destino_desbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)
-     * @param int $id_status_destino_conta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)
-     * @param int $flag_cobra_tarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_reativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusCartoesUsingGETWithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_cancela_cartao = null, $flag_cancela_no_desbloqueio = null, $id_status_destino_desbloqueio = null, $id_status_destino_conta = null, $flag_cobra_tarifa = null, $flag_permite_nova_via_cartao = null, $flag_permite_desbloqueio = null, $flag_cancelamento = null, $flag_permite_bloqueio = null, $flag_reativar = null)
+    public function listarStatusCartoesUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_desbloquear = null, $permite_atribuir_como_bloqueio = null, $permite_atribuir_como_cancelamento = null, $cobrar_tarifa_ao_emitir_nova_via = null)
     {
         
   
@@ -645,6 +645,14 @@ class StatusParametrosApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
@@ -661,44 +669,20 @@ class StatusParametrosApi
             $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }// query params
         
-        if ($flag_cancela_cartao !== null) {
-            $queryParams['flagCancelaCartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancela_cartao);
+        if ($permite_desbloquear !== null) {
+            $queryParams['permiteDesbloquear'] = $this->apiClient->getSerializer()->toQueryValue($permite_desbloquear);
         }// query params
         
-        if ($flag_cancela_no_desbloqueio !== null) {
-            $queryParams['flagCancelaNoDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancela_no_desbloqueio);
+        if ($permite_atribuir_como_bloqueio !== null) {
+            $queryParams['permiteAtribuirComoBloqueio'] = $this->apiClient->getSerializer()->toQueryValue($permite_atribuir_como_bloqueio);
         }// query params
         
-        if ($id_status_destino_desbloqueio !== null) {
-            $queryParams['idStatusDestinoDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($id_status_destino_desbloqueio);
+        if ($permite_atribuir_como_cancelamento !== null) {
+            $queryParams['permiteAtribuirComoCancelamento'] = $this->apiClient->getSerializer()->toQueryValue($permite_atribuir_como_cancelamento);
         }// query params
         
-        if ($id_status_destino_conta !== null) {
-            $queryParams['idStatusDestinoConta'] = $this->apiClient->getSerializer()->toQueryValue($id_status_destino_conta);
-        }// query params
-        
-        if ($flag_cobra_tarifa !== null) {
-            $queryParams['flagCobraTarifa'] = $this->apiClient->getSerializer()->toQueryValue($flag_cobra_tarifa);
-        }// query params
-        
-        if ($flag_permite_nova_via_cartao !== null) {
-            $queryParams['flagPermiteNovaViaCartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_nova_via_cartao);
-        }// query params
-        
-        if ($flag_permite_desbloqueio !== null) {
-            $queryParams['flagPermiteDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_desbloqueio);
-        }// query params
-        
-        if ($flag_cancelamento !== null) {
-            $queryParams['flagCancelamento'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancelamento);
-        }// query params
-        
-        if ($flag_permite_bloqueio !== null) {
-            $queryParams['flagPermiteBloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_bloqueio);
-        }// query params
-        
-        if ($flag_reativar !== null) {
-            $queryParams['flagReativar'] = $this->apiClient->getSerializer()->toQueryValue($flag_reativar);
+        if ($cobrar_tarifa_ao_emitir_nova_via !== null) {
+            $queryParams['cobrarTarifaAoEmitirNovaVia'] = $this->apiClient->getSerializer()->toQueryValue($cobrar_tarifa_ao_emitir_nova_via);
         }
         
         
@@ -742,53 +726,57 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET20
+     * listarUsingGET22
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
-     * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_cancela_conta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null, $flag_faz_transferencia = null, $flag_recebe_transferencia = null, $flag_permite_bloqueio = null, $flag_permite_desbloqueio = null, $flag_cancela_conta = null)
+    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($page, $limit, $id, $nome, $flag_altera_limite, $mensagem_consulta_negada, $flag_permite_nova_via_cartao, $flag_faz_transferencia, $flag_recebe_transferencia, $flag_permite_bloqueio, $flag_permite_desbloqueio, $flag_cancela_conta);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)
      * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)
-     * @param int $flag_altera_limite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param string $mensagem_consulta_negada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)
-     * @param int $flag_permite_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_faz_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_recebe_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_permite_desbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)
-     * @param int $flag_cancela_conta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo. (optional)
+     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($page = null, $limit = null, $id = null, $nome = null, $flag_altera_limite = null, $mensagem_consulta_negada = null, $flag_permite_nova_via_cartao = null, $flag_faz_transferencia = null, $flag_recebe_transferencia = null, $flag_permite_bloqueio = null, $flag_permite_desbloqueio = null, $flag_cancela_conta = null)
+    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
         
   
@@ -806,6 +794,14 @@ class StatusParametrosApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
@@ -822,36 +818,40 @@ class StatusParametrosApi
             $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
         }// query params
         
-        if ($flag_altera_limite !== null) {
-            $queryParams['flagAlteraLimite'] = $this->apiClient->getSerializer()->toQueryValue($flag_altera_limite);
+        if ($permite_alterar_vencimento !== null) {
+            $queryParams['permiteAlterarVencimento'] = $this->apiClient->getSerializer()->toQueryValue($permite_alterar_vencimento);
         }// query params
         
-        if ($mensagem_consulta_negada !== null) {
-            $queryParams['mensagemConsultaNegada'] = $this->apiClient->getSerializer()->toQueryValue($mensagem_consulta_negada);
+        if ($permite_alterar_limite !== null) {
+            $queryParams['permiteAlterarLimite'] = $this->apiClient->getSerializer()->toQueryValue($permite_alterar_limite);
         }// query params
         
-        if ($flag_permite_nova_via_cartao !== null) {
-            $queryParams['flagPermiteNovaViaCartao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_nova_via_cartao);
+        if ($permite_emitir_nova_via_cartao !== null) {
+            $queryParams['permiteEmitirNovaViaCartao'] = $this->apiClient->getSerializer()->toQueryValue($permite_emitir_nova_via_cartao);
         }// query params
         
-        if ($flag_faz_transferencia !== null) {
-            $queryParams['flagFazTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($flag_faz_transferencia);
+        if ($permite_fazer_transferencia !== null) {
+            $queryParams['permiteFazerTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($permite_fazer_transferencia);
         }// query params
         
-        if ($flag_recebe_transferencia !== null) {
-            $queryParams['flagRecebeTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($flag_recebe_transferencia);
+        if ($permite_receber_transferencia !== null) {
+            $queryParams['permiteReceberTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($permite_receber_transferencia);
         }// query params
         
-        if ($flag_permite_bloqueio !== null) {
-            $queryParams['flagPermiteBloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_bloqueio);
+        if ($permite_criar_acordo_cobranca !== null) {
+            $queryParams['permiteCriarAcordoCobranca'] = $this->apiClient->getSerializer()->toQueryValue($permite_criar_acordo_cobranca);
         }// query params
         
-        if ($flag_permite_desbloqueio !== null) {
-            $queryParams['flagPermiteDesbloqueio'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_desbloqueio);
+        if ($permite_atribuir_como_bloqueio !== null) {
+            $queryParams['permiteAtribuirComoBloqueio'] = $this->apiClient->getSerializer()->toQueryValue($permite_atribuir_como_bloqueio);
         }// query params
         
-        if ($flag_cancela_conta !== null) {
-            $queryParams['flagCancelaConta'] = $this->apiClient->getSerializer()->toQueryValue($flag_cancela_conta);
+        if ($permite_desbloquear !== null) {
+            $queryParams['permiteDesbloquear'] = $this->apiClient->getSerializer()->toQueryValue($permite_desbloquear);
+        }// query params
+        
+        if ($permite_atribuir_como_cancelamento !== null) {
+            $queryParams['permiteAtribuirComoCancelamento'] = $this->apiClient->getSerializer()->toQueryValue($permite_atribuir_como_cancelamento);
         }
         
         
@@ -895,10 +895,11 @@ class StatusParametrosApi
     }
     
     /**
-     * listarUsingGET21
+     * listarUsingGET23
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
@@ -906,18 +907,19 @@ class StatusParametrosApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET21WithHttpInfo
+     * listarUsingGET23WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)
@@ -925,7 +927,7 @@ class StatusParametrosApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -942,6 +944,14 @@ class StatusParametrosApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);

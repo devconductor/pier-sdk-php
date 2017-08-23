@@ -73,7 +73,8 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha1' => 'string',
         'trilha2' => 'string',
         'trilha_cvv1' => 'string',
-        'trilha_cvv2' => 'string'
+        'trilha_cvv2' => 'string',
+        'numero_cartao_hash' => 'int'
     );
   
     static function swaggerTypes() {
@@ -107,7 +108,8 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha1' => 'trilha1',
         'trilha2' => 'trilha2',
         'trilha_cvv1' => 'trilhaCVV1',
-        'trilha_cvv2' => 'trilhaCVV2'
+        'trilha_cvv2' => 'trilhaCVV2',
+        'numero_cartao_hash' => 'numeroCartaoHash'
     );
   
     static function attributeMap() {
@@ -141,7 +143,8 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha1' => 'setTrilha1',
         'trilha2' => 'setTrilha2',
         'trilha_cvv1' => 'setTrilhaCvv1',
-        'trilha_cvv2' => 'setTrilhaCvv2'
+        'trilha_cvv2' => 'setTrilhaCvv2',
+        'numero_cartao_hash' => 'setNumeroCartaoHash'
     );
   
     static function setters() {
@@ -175,7 +178,8 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha1' => 'getTrilha1',
         'trilha2' => 'getTrilha2',
         'trilha_cvv1' => 'getTrilhaCvv1',
-        'trilha_cvv2' => 'getTrilhaCvv2'
+        'trilha_cvv2' => 'getTrilhaCvv2',
+        'numero_cartao_hash' => 'getNumeroCartaoHash'
     );
   
     static function getters() {
@@ -321,6 +325,12 @@ class CartaoImpressaoResponse implements ArrayAccess
       */
     protected $trilha_cvv2;
     
+    /**
+      * $numero_cartao_hash Apresenta o numero da hash do cart\u00C3\u00A3o 
+      * @var int
+      */
+    protected $numero_cartao_hash;
+    
 
     /**
      * Constructor
@@ -353,6 +363,7 @@ class CartaoImpressaoResponse implements ArrayAccess
             $this->trilha2 = $data["trilha2"];
             $this->trilha_cvv1 = $data["trilha_cvv1"];
             $this->trilha_cvv2 = $data["trilha_cvv2"];
+            $this->numero_cartao_hash = $data["numero_cartao_hash"];
         }
     }
     
@@ -836,6 +847,27 @@ class CartaoImpressaoResponse implements ArrayAccess
     {
         
         $this->trilha_cvv2 = $trilha_cvv2;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_cartao_hash
+     * @return int
+     */
+    public function getNumeroCartaoHash()
+    {
+        return $this->numero_cartao_hash;
+    }
+  
+    /**
+     * Sets numero_cartao_hash
+     * @param int $numero_cartao_hash Apresenta o numero da hash do cart\u00C3\u00A3o 
+     * @return $this
+     */
+    public function setNumeroCartaoHash($numero_cartao_hash)
+    {
+        
+        $this->numero_cartao_hash = $numero_cartao_hash;
         return $this;
     }
     
