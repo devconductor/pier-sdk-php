@@ -51,7 +51,6 @@ class CartaoImpressaoResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'flag_virtual' => 'int',
         'id_conta' => 'int',
         'id_pessoa' => 'int',
         'id_cartao' => 'int',
@@ -74,6 +73,7 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha2' => 'string',
         'trilha_cvv1' => 'string',
         'trilha_cvv2' => 'string',
+        'flag_virtual' => 'int',
         'numero_cartao_hash' => 'int'
     );
   
@@ -86,7 +86,6 @@ class CartaoImpressaoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'flag_virtual' => 'flagVirtual',
         'id_conta' => 'idConta',
         'id_pessoa' => 'idPessoa',
         'id_cartao' => 'idCartao',
@@ -109,6 +108,7 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha2' => 'trilha2',
         'trilha_cvv1' => 'trilhaCVV1',
         'trilha_cvv2' => 'trilhaCVV2',
+        'flag_virtual' => 'flagVirtual',
         'numero_cartao_hash' => 'numeroCartaoHash'
     );
   
@@ -121,7 +121,6 @@ class CartaoImpressaoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'flag_virtual' => 'setFlagVirtual',
         'id_conta' => 'setIdConta',
         'id_pessoa' => 'setIdPessoa',
         'id_cartao' => 'setIdCartao',
@@ -144,6 +143,7 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha2' => 'setTrilha2',
         'trilha_cvv1' => 'setTrilhaCvv1',
         'trilha_cvv2' => 'setTrilhaCvv2',
+        'flag_virtual' => 'setFlagVirtual',
         'numero_cartao_hash' => 'setNumeroCartaoHash'
     );
   
@@ -156,7 +156,6 @@ class CartaoImpressaoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'flag_virtual' => 'getFlagVirtual',
         'id_conta' => 'getIdConta',
         'id_pessoa' => 'getIdPessoa',
         'id_cartao' => 'getIdCartao',
@@ -179,6 +178,7 @@ class CartaoImpressaoResponse implements ArrayAccess
         'trilha2' => 'getTrilha2',
         'trilha_cvv1' => 'getTrilhaCvv1',
         'trilha_cvv2' => 'getTrilhaCvv2',
+        'flag_virtual' => 'getFlagVirtual',
         'numero_cartao_hash' => 'getNumeroCartaoHash'
     );
   
@@ -186,12 +186,6 @@ class CartaoImpressaoResponse implements ArrayAccess
         return self::$getters;
     }
 
-    
-    /**
-      * $flag_virtual 
-      * @var int
-      */
-    protected $flag_virtual;
     
     /**
       * $id_conta Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
@@ -326,6 +320,12 @@ class CartaoImpressaoResponse implements ArrayAccess
     protected $trilha_cvv2;
     
     /**
+      * $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+      * @var int
+      */
+    protected $flag_virtual;
+    
+    /**
       * $numero_cartao_hash Apresenta o numero da hash do cart\u00C3\u00A3o 
       * @var int
       */
@@ -340,7 +340,6 @@ class CartaoImpressaoResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->flag_virtual = $data["flag_virtual"];
             $this->id_conta = $data["id_conta"];
             $this->id_pessoa = $data["id_pessoa"];
             $this->id_cartao = $data["id_cartao"];
@@ -363,29 +362,9 @@ class CartaoImpressaoResponse implements ArrayAccess
             $this->trilha2 = $data["trilha2"];
             $this->trilha_cvv1 = $data["trilha_cvv1"];
             $this->trilha_cvv2 = $data["trilha_cvv2"];
+            $this->flag_virtual = $data["flag_virtual"];
             $this->numero_cartao_hash = $data["numero_cartao_hash"];
         }
-    }
-    
-    /**
-     * Gets flag_virtual
-     * @return int
-     */
-    public function getFlagVirtual()
-    {
-        return $this->flag_virtual;
-    }
-  
-    /**
-     * Sets flag_virtual
-     * @param int $flag_virtual 
-     * @return $this
-     */
-    public function setFlagVirtual($flag_virtual)
-    {
-        
-        $this->flag_virtual = $flag_virtual;
-        return $this;
     }
     
     /**
@@ -847,6 +826,27 @@ class CartaoImpressaoResponse implements ArrayAccess
     {
         
         $this->trilha_cvv2 = $trilha_cvv2;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_virtual
+     * @return int
+     */
+    public function getFlagVirtual()
+    {
+        return $this->flag_virtual;
+    }
+  
+    /**
+     * Sets flag_virtual
+     * @param int $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+     * @return $this
+     */
+    public function setFlagVirtual($flag_virtual)
+    {
+        
+        $this->flag_virtual = $flag_virtual;
         return $this;
     }
     

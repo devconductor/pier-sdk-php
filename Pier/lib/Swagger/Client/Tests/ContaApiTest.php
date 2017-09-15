@@ -86,16 +86,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarProdutoUsingPOST
-     *
-     * Altera o produto associado \u00C3\u00A0 conta.
-     *
-     */
-    public function test_alterarProdutoUsingPOST() {
-
-    }
-    
-    /**
      * Test case for alterarTitularUsingPOST
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
@@ -216,16 +206,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarLancamentosFuturosFaturaUsingGET1
-     *
-     * Listar planos de parcelamento
-     *
-     */
-    public function test_consultarLancamentosFuturosFaturaUsingGET1() {
-
-    }
-    
-    /**
      * Test case for consultarLimiteDisponibilidadeUsingGET1
      *
      * Apresenta os limites da conta
@@ -246,32 +226,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET24
+     * Test case for consultarUsingGET26
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET24() {
+    public function test_consultarUsingGET26() {
 
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET27
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET27() {
 
     }
     
     /**
-     * Test case for consultarUsingGET5
+     * Test case for consultarUsingGET6
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET5() {
+    public function test_consultarUsingGET6() {
 
     }
     
@@ -282,16 +262,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_desativarEnvioFaturaEmailUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for enviarFaturaEmailUsingPOST
-     *
-     * Envia 2\u00C2\u00AA via de fatura por E-mail
-     *
-     */
-    public function test_enviarFaturaEmailUsingPOST() {
 
     }
     
@@ -312,6 +282,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_gerarCartaoEmbossingUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarCartaoProvisorioUsingPOST
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     *
+     */
+    public function test_gerarCartaoProvisorioUsingPOST() {
 
     }
     

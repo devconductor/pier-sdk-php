@@ -60,12 +60,8 @@ class AdicionalUpdate implements ArrayAccess
         'orgao_expedidor_identidade' => 'string',
         'unidade_federativa_identidade' => 'string',
         'data_emissao_identidade' => 'string',
-        'id_estado_civil' => 'int',
-        'id_profissao' => 'int',
-        'id_nacionalidade' => 'int',
         'id_parentesco' => 'int',
-        'email' => 'string',
-        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[]'
+        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[]'
     );
   
     static function swaggerTypes() {
@@ -86,11 +82,7 @@ class AdicionalUpdate implements ArrayAccess
         'orgao_expedidor_identidade' => 'orgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
         'data_emissao_identidade' => 'dataEmissaoIdentidade',
-        'id_estado_civil' => 'idEstadoCivil',
-        'id_profissao' => 'idProfissao',
-        'id_nacionalidade' => 'idNacionalidade',
         'id_parentesco' => 'idParentesco',
-        'email' => 'email',
         'telefones' => 'telefones'
     );
   
@@ -112,11 +104,7 @@ class AdicionalUpdate implements ArrayAccess
         'orgao_expedidor_identidade' => 'setOrgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'setDataEmissaoIdentidade',
-        'id_estado_civil' => 'setIdEstadoCivil',
-        'id_profissao' => 'setIdProfissao',
-        'id_nacionalidade' => 'setIdNacionalidade',
         'id_parentesco' => 'setIdParentesco',
-        'email' => 'setEmail',
         'telefones' => 'setTelefones'
     );
   
@@ -138,11 +126,7 @@ class AdicionalUpdate implements ArrayAccess
         'orgao_expedidor_identidade' => 'getOrgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'getDataEmissaoIdentidade',
-        'id_estado_civil' => 'getIdEstadoCivil',
-        'id_profissao' => 'getIdProfissao',
-        'id_nacionalidade' => 'getIdNacionalidade',
         'id_parentesco' => 'getIdParentesco',
-        'email' => 'getEmail',
         'telefones' => 'getTelefones'
     );
   
@@ -206,38 +190,14 @@ class AdicionalUpdate implements ArrayAccess
     protected $data_emissao_identidade;
     
     /**
-      * $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-      * @var int
-      */
-    protected $id_estado_civil;
-    
-    /**
-      * $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-      * @var int
-      */
-    protected $id_profissao;
-    
-    /**
-      * $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-      * @var int
-      */
-    protected $id_nacionalidade;
-    
-    /**
       * $id_parentesco C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
       * @var int
       */
     protected $id_parentesco;
     
     /**
-      * $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-      * @var string
-      */
-    protected $email;
-    
-    /**
       * $telefones Lista de telefones do adicional.
-      * @var \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[]
+      * @var \br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[]
       */
     protected $telefones;
     
@@ -259,11 +219,7 @@ class AdicionalUpdate implements ArrayAccess
             $this->orgao_expedidor_identidade = $data["orgao_expedidor_identidade"];
             $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
             $this->data_emissao_identidade = $data["data_emissao_identidade"];
-            $this->id_estado_civil = $data["id_estado_civil"];
-            $this->id_profissao = $data["id_profissao"];
-            $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->id_parentesco = $data["id_parentesco"];
-            $this->email = $data["email"];
             $this->telefones = $data["telefones"];
         }
     }
@@ -458,69 +414,6 @@ class AdicionalUpdate implements ArrayAccess
     }
     
     /**
-     * Gets id_estado_civil
-     * @return int
-     */
-    public function getIdEstadoCivil()
-    {
-        return $this->id_estado_civil;
-    }
-  
-    /**
-     * Sets id_estado_civil
-     * @param int $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-     * @return $this
-     */
-    public function setIdEstadoCivil($id_estado_civil)
-    {
-        
-        $this->id_estado_civil = $id_estado_civil;
-        return $this;
-    }
-    
-    /**
-     * Gets id_profissao
-     * @return int
-     */
-    public function getIdProfissao()
-    {
-        return $this->id_profissao;
-    }
-  
-    /**
-     * Sets id_profissao
-     * @param int $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-     * @return $this
-     */
-    public function setIdProfissao($id_profissao)
-    {
-        
-        $this->id_profissao = $id_profissao;
-        return $this;
-    }
-    
-    /**
-     * Gets id_nacionalidade
-     * @return int
-     */
-    public function getIdNacionalidade()
-    {
-        return $this->id_nacionalidade;
-    }
-  
-    /**
-     * Sets id_nacionalidade
-     * @param int $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-     * @return $this
-     */
-    public function setIdNacionalidade($id_nacionalidade)
-    {
-        
-        $this->id_nacionalidade = $id_nacionalidade;
-        return $this;
-    }
-    
-    /**
      * Gets id_parentesco
      * @return int
      */
@@ -542,29 +435,8 @@ class AdicionalUpdate implements ArrayAccess
     }
     
     /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-  
-    /**
-     * Sets email
-     * @param string $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        
-        $this->email = $email;
-        return $this;
-    }
-    
-    /**
      * Gets telefones
-     * @return \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[]
+     * @return \br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[]
      */
     public function getTelefones()
     {
@@ -573,7 +445,7 @@ class AdicionalUpdate implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[] $telefones Lista de telefones do adicional.
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[] $telefones Lista de telefones do adicional.
      * @return $this
      */
     public function setTelefones($telefones)

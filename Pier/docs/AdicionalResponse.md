@@ -14,13 +14,10 @@ Name | Type | Description | Notes
 **orgao_expedidor_identidade** | **string** | Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional | [optional] 
 **unidade_federativa_identidade** | **string** | Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido | [optional] 
 **data_emissao_identidade** | **string** | Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional | [optional] 
-**id_estado_civil** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional | [optional] 
-**id_profissao** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional | [optional] 
-**id_nacionalidade** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional | [optional] 
 **id_parentesco** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular | [optional] 
-**email** | **string** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular | [optional] 
 **flag_ativo** | **int** | Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0 | [optional] 
-**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefoneResponse[]**](TelefoneResponse.md) | Lista dos telefones do adicional | [optional] 
+**data_cadastro_portador** | **string** | Indica a data de cadastro do adicional | [optional] 
+**data_cancelamento_portador** | **string** | Indica a data de cancelamento do adicional | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

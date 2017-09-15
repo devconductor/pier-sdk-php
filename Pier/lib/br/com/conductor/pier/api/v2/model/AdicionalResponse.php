@@ -62,13 +62,10 @@ class AdicionalResponse implements ArrayAccess
         'orgao_expedidor_identidade' => 'string',
         'unidade_federativa_identidade' => 'string',
         'data_emissao_identidade' => 'string',
-        'id_estado_civil' => 'int',
-        'id_profissao' => 'int',
-        'id_nacionalidade' => 'int',
         'id_parentesco' => 'int',
-        'email' => 'string',
         'flag_ativo' => 'int',
-        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
+        'data_cadastro_portador' => 'string',
+        'data_cancelamento_portador' => 'string'
     );
   
     static function swaggerTypes() {
@@ -91,13 +88,10 @@ class AdicionalResponse implements ArrayAccess
         'orgao_expedidor_identidade' => 'orgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
         'data_emissao_identidade' => 'dataEmissaoIdentidade',
-        'id_estado_civil' => 'idEstadoCivil',
-        'id_profissao' => 'idProfissao',
-        'id_nacionalidade' => 'idNacionalidade',
         'id_parentesco' => 'idParentesco',
-        'email' => 'email',
         'flag_ativo' => 'flagAtivo',
-        'telefones' => 'telefones'
+        'data_cadastro_portador' => 'dataCadastroPortador',
+        'data_cancelamento_portador' => 'dataCancelamentoPortador'
     );
   
     static function attributeMap() {
@@ -120,13 +114,10 @@ class AdicionalResponse implements ArrayAccess
         'orgao_expedidor_identidade' => 'setOrgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'setDataEmissaoIdentidade',
-        'id_estado_civil' => 'setIdEstadoCivil',
-        'id_profissao' => 'setIdProfissao',
-        'id_nacionalidade' => 'setIdNacionalidade',
         'id_parentesco' => 'setIdParentesco',
-        'email' => 'setEmail',
         'flag_ativo' => 'setFlagAtivo',
-        'telefones' => 'setTelefones'
+        'data_cadastro_portador' => 'setDataCadastroPortador',
+        'data_cancelamento_portador' => 'setDataCancelamentoPortador'
     );
   
     static function setters() {
@@ -149,13 +140,10 @@ class AdicionalResponse implements ArrayAccess
         'orgao_expedidor_identidade' => 'getOrgaoExpedidorIdentidade',
         'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
         'data_emissao_identidade' => 'getDataEmissaoIdentidade',
-        'id_estado_civil' => 'getIdEstadoCivil',
-        'id_profissao' => 'getIdProfissao',
-        'id_nacionalidade' => 'getIdNacionalidade',
         'id_parentesco' => 'getIdParentesco',
-        'email' => 'getEmail',
         'flag_ativo' => 'getFlagAtivo',
-        'telefones' => 'getTelefones'
+        'data_cadastro_portador' => 'getDataCadastroPortador',
+        'data_cancelamento_portador' => 'getDataCancelamentoPortador'
     );
   
     static function getters() {
@@ -230,34 +218,10 @@ class AdicionalResponse implements ArrayAccess
     protected $data_emissao_identidade;
     
     /**
-      * $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
-      * @var int
-      */
-    protected $id_estado_civil;
-    
-    /**
-      * $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
-      * @var int
-      */
-    protected $id_profissao;
-    
-    /**
-      * $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
-      * @var int
-      */
-    protected $id_nacionalidade;
-    
-    /**
       * $id_parentesco C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
       * @var int
       */
     protected $id_parentesco;
-    
-    /**
-      * $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
-      * @var string
-      */
-    protected $email;
     
     /**
       * $flag_ativo Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
@@ -266,10 +230,16 @@ class AdicionalResponse implements ArrayAccess
     protected $flag_ativo;
     
     /**
-      * $telefones Lista dos telefones do adicional
-      * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
+      * $data_cadastro_portador Indica a data de cadastro do adicional
+      * @var string
       */
-    protected $telefones;
+    protected $data_cadastro_portador;
+    
+    /**
+      * $data_cancelamento_portador Indica a data de cancelamento do adicional
+      * @var string
+      */
+    protected $data_cancelamento_portador;
     
 
     /**
@@ -291,13 +261,10 @@ class AdicionalResponse implements ArrayAccess
             $this->orgao_expedidor_identidade = $data["orgao_expedidor_identidade"];
             $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
             $this->data_emissao_identidade = $data["data_emissao_identidade"];
-            $this->id_estado_civil = $data["id_estado_civil"];
-            $this->id_profissao = $data["id_profissao"];
-            $this->id_nacionalidade = $data["id_nacionalidade"];
             $this->id_parentesco = $data["id_parentesco"];
-            $this->email = $data["email"];
             $this->flag_ativo = $data["flag_ativo"];
-            $this->telefones = $data["telefones"];
+            $this->data_cadastro_portador = $data["data_cadastro_portador"];
+            $this->data_cancelamento_portador = $data["data_cancelamento_portador"];
         }
     }
     
@@ -533,69 +500,6 @@ class AdicionalResponse implements ArrayAccess
     }
     
     /**
-     * Gets id_estado_civil
-     * @return int
-     */
-    public function getIdEstadoCivil()
-    {
-        return $this->id_estado_civil;
-    }
-  
-    /**
-     * Sets id_estado_civil
-     * @param int $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
-     * @return $this
-     */
-    public function setIdEstadoCivil($id_estado_civil)
-    {
-        
-        $this->id_estado_civil = $id_estado_civil;
-        return $this;
-    }
-    
-    /**
-     * Gets id_profissao
-     * @return int
-     */
-    public function getIdProfissao()
-    {
-        return $this->id_profissao;
-    }
-  
-    /**
-     * Sets id_profissao
-     * @param int $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
-     * @return $this
-     */
-    public function setIdProfissao($id_profissao)
-    {
-        
-        $this->id_profissao = $id_profissao;
-        return $this;
-    }
-    
-    /**
-     * Gets id_nacionalidade
-     * @return int
-     */
-    public function getIdNacionalidade()
-    {
-        return $this->id_nacionalidade;
-    }
-  
-    /**
-     * Sets id_nacionalidade
-     * @param int $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
-     * @return $this
-     */
-    public function setIdNacionalidade($id_nacionalidade)
-    {
-        
-        $this->id_nacionalidade = $id_nacionalidade;
-        return $this;
-    }
-    
-    /**
      * Gets id_parentesco
      * @return int
      */
@@ -613,27 +517,6 @@ class AdicionalResponse implements ArrayAccess
     {
         
         $this->id_parentesco = $id_parentesco;
-        return $this;
-    }
-    
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-  
-    /**
-     * Sets email
-     * @param string $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        
-        $this->email = $email;
         return $this;
     }
     
@@ -659,23 +542,44 @@ class AdicionalResponse implements ArrayAccess
     }
     
     /**
-     * Gets telefones
-     * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
+     * Gets data_cadastro_portador
+     * @return string
      */
-    public function getTelefones()
+    public function getDataCadastroPortador()
     {
-        return $this->telefones;
+        return $this->data_cadastro_portador;
     }
   
     /**
-     * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $telefones Lista dos telefones do adicional
+     * Sets data_cadastro_portador
+     * @param string $data_cadastro_portador Indica a data de cadastro do adicional
      * @return $this
      */
-    public function setTelefones($telefones)
+    public function setDataCadastroPortador($data_cadastro_portador)
     {
         
-        $this->telefones = $telefones;
+        $this->data_cadastro_portador = $data_cadastro_portador;
+        return $this;
+    }
+    
+    /**
+     * Gets data_cancelamento_portador
+     * @return string
+     */
+    public function getDataCancelamentoPortador()
+    {
+        return $this->data_cancelamento_portador;
+    }
+  
+    /**
+     * Sets data_cancelamento_portador
+     * @param string $data_cancelamento_portador Indica a data de cancelamento do adicional
+     * @return $this
+     */
+    public function setDataCancelamentoPortador($data_cancelamento_portador)
+    {
+        
+        $this->data_cancelamento_portador = $data_cancelamento_portador;
         return $this;
     }
     

@@ -61,7 +61,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'unidade_federativa_identidade' => 'string',
         'data_emissao_identidade' => 'string',
         'id_estado_civil' => 'int',
-        'id_profissao' => 'int',
+        'id_profissao' => 'string',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
         'id_origem_comercial' => 'int',
@@ -269,7 +269,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     
     /**
       * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
-      * @var int
+      * @var string
       */
     protected $id_profissao;
     
@@ -634,7 +634,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets id_profissao
-     * @return int
+     * @return string
      */
     public function getIdProfissao()
     {
@@ -643,7 +643,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param int $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
      * @return $this
      */
     public function setIdProfissao($id_profissao)

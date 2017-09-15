@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flag_virtual** | **int** |  | [optional] 
 **id_conta** | **int** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence. | [optional] 
 **id_pessoa** | **int** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado. | [optional] 
 **id_cartao** | **int** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado. | [optional] 
@@ -26,6 +25,7 @@ Name | Type | Description | Notes
 **trilha2** | **string** | Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv1** | **string** | Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor. | [optional] 
 **trilha_cvv2** | **string** | Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor. | [optional] 
+**flag_virtual** | **int** | Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual  | [optional] 
 **numero_cartao_hash** | **int** | Apresenta o numero da hash do cart\u00C3\u00A3o  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

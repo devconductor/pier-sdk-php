@@ -51,27 +51,28 @@ class BoletoResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'numero_do_documento' => 'string',
         'data_processamento' => 'string',
         'data_documento' => 'string',
         'data_vencimento' => 'string',
+        'data_fechamento' => 'string',
         'valor_boleto' => 'Number',
-        'numero_do_documento' => 'string',
         'nome_beneficiario' => 'string',
+        'documento_beneficiario' => 'string',
         'agencia' => 'string',
         'codigo_beneficiario' => 'string',
-        'digito_codigo_beneficiario' => 'string',
         'numero_convenio' => 'string',
+        'digito_codigo_beneficiario' => 'string',
         'carteira' => 'string',
         'nosso_numero' => 'string',
-        'banco' => 'string',
         'digito_nosso_numero' => 'string',
+        'banco' => 'string',
         'aceite' => 'bool',
         'especie_do_documento' => 'string',
         'especie' => 'string',
         'instrucoes' => 'string[]',
         'locais_de_pagamento' => 'string[]',
         'nome_pagador' => 'string',
-        'documento_beneficiario' => 'string',
         'documento_pagador' => 'string',
         'logradouro_pagador' => 'string',
         'bairro_pagador' => 'string',
@@ -91,27 +92,28 @@ class BoletoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'numero_do_documento' => 'numeroDoDocumento',
         'data_processamento' => 'dataProcessamento',
         'data_documento' => 'dataDocumento',
         'data_vencimento' => 'dataVencimento',
+        'data_fechamento' => 'dataFechamento',
         'valor_boleto' => 'valorBoleto',
-        'numero_do_documento' => 'numeroDoDocumento',
         'nome_beneficiario' => 'nomeBeneficiario',
+        'documento_beneficiario' => 'documentoBeneficiario',
         'agencia' => 'agencia',
         'codigo_beneficiario' => 'codigoBeneficiario',
-        'digito_codigo_beneficiario' => 'digitoCodigoBeneficiario',
         'numero_convenio' => 'numeroConvenio',
+        'digito_codigo_beneficiario' => 'digitoCodigoBeneficiario',
         'carteira' => 'carteira',
         'nosso_numero' => 'nossoNumero',
-        'banco' => 'banco',
         'digito_nosso_numero' => 'digitoNossoNumero',
+        'banco' => 'banco',
         'aceite' => 'aceite',
         'especie_do_documento' => 'especieDoDocumento',
         'especie' => 'especie',
         'instrucoes' => 'instrucoes',
         'locais_de_pagamento' => 'locaisDePagamento',
         'nome_pagador' => 'nomePagador',
-        'documento_beneficiario' => 'documentoBeneficiario',
         'documento_pagador' => 'documentoPagador',
         'logradouro_pagador' => 'logradouroPagador',
         'bairro_pagador' => 'bairroPagador',
@@ -131,27 +133,28 @@ class BoletoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'numero_do_documento' => 'setNumeroDoDocumento',
         'data_processamento' => 'setDataProcessamento',
         'data_documento' => 'setDataDocumento',
         'data_vencimento' => 'setDataVencimento',
+        'data_fechamento' => 'setDataFechamento',
         'valor_boleto' => 'setValorBoleto',
-        'numero_do_documento' => 'setNumeroDoDocumento',
         'nome_beneficiario' => 'setNomeBeneficiario',
+        'documento_beneficiario' => 'setDocumentoBeneficiario',
         'agencia' => 'setAgencia',
         'codigo_beneficiario' => 'setCodigoBeneficiario',
-        'digito_codigo_beneficiario' => 'setDigitoCodigoBeneficiario',
         'numero_convenio' => 'setNumeroConvenio',
+        'digito_codigo_beneficiario' => 'setDigitoCodigoBeneficiario',
         'carteira' => 'setCarteira',
         'nosso_numero' => 'setNossoNumero',
-        'banco' => 'setBanco',
         'digito_nosso_numero' => 'setDigitoNossoNumero',
+        'banco' => 'setBanco',
         'aceite' => 'setAceite',
         'especie_do_documento' => 'setEspecieDoDocumento',
         'especie' => 'setEspecie',
         'instrucoes' => 'setInstrucoes',
         'locais_de_pagamento' => 'setLocaisDePagamento',
         'nome_pagador' => 'setNomePagador',
-        'documento_beneficiario' => 'setDocumentoBeneficiario',
         'documento_pagador' => 'setDocumentoPagador',
         'logradouro_pagador' => 'setLogradouroPagador',
         'bairro_pagador' => 'setBairroPagador',
@@ -171,27 +174,28 @@ class BoletoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'numero_do_documento' => 'getNumeroDoDocumento',
         'data_processamento' => 'getDataProcessamento',
         'data_documento' => 'getDataDocumento',
         'data_vencimento' => 'getDataVencimento',
+        'data_fechamento' => 'getDataFechamento',
         'valor_boleto' => 'getValorBoleto',
-        'numero_do_documento' => 'getNumeroDoDocumento',
         'nome_beneficiario' => 'getNomeBeneficiario',
+        'documento_beneficiario' => 'getDocumentoBeneficiario',
         'agencia' => 'getAgencia',
         'codigo_beneficiario' => 'getCodigoBeneficiario',
-        'digito_codigo_beneficiario' => 'getDigitoCodigoBeneficiario',
         'numero_convenio' => 'getNumeroConvenio',
+        'digito_codigo_beneficiario' => 'getDigitoCodigoBeneficiario',
         'carteira' => 'getCarteira',
         'nosso_numero' => 'getNossoNumero',
-        'banco' => 'getBanco',
         'digito_nosso_numero' => 'getDigitoNossoNumero',
+        'banco' => 'getBanco',
         'aceite' => 'getAceite',
         'especie_do_documento' => 'getEspecieDoDocumento',
         'especie' => 'getEspecie',
         'instrucoes' => 'getInstrucoes',
         'locais_de_pagamento' => 'getLocaisDePagamento',
         'nome_pagador' => 'getNomePagador',
-        'documento_beneficiario' => 'getDocumentoBeneficiario',
         'documento_pagador' => 'getDocumentoPagador',
         'logradouro_pagador' => 'getLogradouroPagador',
         'bairro_pagador' => 'getBairroPagador',
@@ -206,6 +210,12 @@ class BoletoResponse implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+      * @var string
+      */
+    protected $numero_do_documento;
     
     /**
       * $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
@@ -226,22 +236,28 @@ class BoletoResponse implements ArrayAccess
     protected $data_vencimento;
     
     /**
+      * $data_fechamento Data do fechamento
+      * @var string
+      */
+    protected $data_fechamento;
+    
+    /**
       * $valor_boleto Valor do Boleto.
       * @var Number
       */
     protected $valor_boleto;
     
     /**
-      * $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
-      * @var string
-      */
-    protected $numero_do_documento;
-    
-    /**
       * $nome_beneficiario Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
       * @var string
       */
     protected $nome_beneficiario;
+    
+    /**
+      * $documento_beneficiario Documento do Beneficiario.
+      * @var string
+      */
+    protected $documento_beneficiario;
     
     /**
       * $agencia Ag\u00C3\u00AAncia.
@@ -256,16 +272,16 @@ class BoletoResponse implements ArrayAccess
     protected $codigo_beneficiario;
     
     /**
-      * $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
-      * @var string
-      */
-    protected $digito_codigo_beneficiario;
-    
-    /**
       * $numero_convenio N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
       * @var string
       */
     protected $numero_convenio;
+    
+    /**
+      * $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+      * @var string
+      */
+    protected $digito_codigo_beneficiario;
     
     /**
       * $carteira Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
@@ -280,16 +296,16 @@ class BoletoResponse implements ArrayAccess
     protected $nosso_numero;
     
     /**
-      * $banco Banco
-      * @var string
-      */
-    protected $banco;
-    
-    /**
       * $digito_nosso_numero D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
       * @var string
       */
     protected $digito_nosso_numero;
+    
+    /**
+      * $banco Banco
+      * @var string
+      */
+    protected $banco;
     
     /**
       * $aceite Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
@@ -326,12 +342,6 @@ class BoletoResponse implements ArrayAccess
       * @var string
       */
     protected $nome_pagador;
-    
-    /**
-      * $documento_beneficiario Documento do Beneficiario.
-      * @var string
-      */
-    protected $documento_beneficiario;
     
     /**
       * $documento_pagador Documento do pagador (CPF ou CNPJ)
@@ -390,27 +400,28 @@ class BoletoResponse implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->numero_do_documento = $data["numero_do_documento"];
             $this->data_processamento = $data["data_processamento"];
             $this->data_documento = $data["data_documento"];
             $this->data_vencimento = $data["data_vencimento"];
+            $this->data_fechamento = $data["data_fechamento"];
             $this->valor_boleto = $data["valor_boleto"];
-            $this->numero_do_documento = $data["numero_do_documento"];
             $this->nome_beneficiario = $data["nome_beneficiario"];
+            $this->documento_beneficiario = $data["documento_beneficiario"];
             $this->agencia = $data["agencia"];
             $this->codigo_beneficiario = $data["codigo_beneficiario"];
-            $this->digito_codigo_beneficiario = $data["digito_codigo_beneficiario"];
             $this->numero_convenio = $data["numero_convenio"];
+            $this->digito_codigo_beneficiario = $data["digito_codigo_beneficiario"];
             $this->carteira = $data["carteira"];
             $this->nosso_numero = $data["nosso_numero"];
-            $this->banco = $data["banco"];
             $this->digito_nosso_numero = $data["digito_nosso_numero"];
+            $this->banco = $data["banco"];
             $this->aceite = $data["aceite"];
             $this->especie_do_documento = $data["especie_do_documento"];
             $this->especie = $data["especie"];
             $this->instrucoes = $data["instrucoes"];
             $this->locais_de_pagamento = $data["locais_de_pagamento"];
             $this->nome_pagador = $data["nome_pagador"];
-            $this->documento_beneficiario = $data["documento_beneficiario"];
             $this->documento_pagador = $data["documento_pagador"];
             $this->logradouro_pagador = $data["logradouro_pagador"];
             $this->bairro_pagador = $data["bairro_pagador"];
@@ -420,6 +431,27 @@ class BoletoResponse implements ArrayAccess
             $this->codigo_de_barras = $data["codigo_de_barras"];
             $this->linha_digitavel = $data["linha_digitavel"];
         }
+    }
+    
+    /**
+     * Gets numero_do_documento
+     * @return string
+     */
+    public function getNumeroDoDocumento()
+    {
+        return $this->numero_do_documento;
+    }
+  
+    /**
+     * Sets numero_do_documento
+     * @param string $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+     * @return $this
+     */
+    public function setNumeroDoDocumento($numero_do_documento)
+    {
+        
+        $this->numero_do_documento = $numero_do_documento;
+        return $this;
     }
     
     /**
@@ -486,6 +518,27 @@ class BoletoResponse implements ArrayAccess
     }
     
     /**
+     * Gets data_fechamento
+     * @return string
+     */
+    public function getDataFechamento()
+    {
+        return $this->data_fechamento;
+    }
+  
+    /**
+     * Sets data_fechamento
+     * @param string $data_fechamento Data do fechamento
+     * @return $this
+     */
+    public function setDataFechamento($data_fechamento)
+    {
+        
+        $this->data_fechamento = $data_fechamento;
+        return $this;
+    }
+    
+    /**
      * Gets valor_boleto
      * @return Number
      */
@@ -507,27 +560,6 @@ class BoletoResponse implements ArrayAccess
     }
     
     /**
-     * Gets numero_do_documento
-     * @return string
-     */
-    public function getNumeroDoDocumento()
-    {
-        return $this->numero_do_documento;
-    }
-  
-    /**
-     * Sets numero_do_documento
-     * @param string $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
-     * @return $this
-     */
-    public function setNumeroDoDocumento($numero_do_documento)
-    {
-        
-        $this->numero_do_documento = $numero_do_documento;
-        return $this;
-    }
-    
-    /**
      * Gets nome_beneficiario
      * @return string
      */
@@ -545,6 +577,27 @@ class BoletoResponse implements ArrayAccess
     {
         
         $this->nome_beneficiario = $nome_beneficiario;
+        return $this;
+    }
+    
+    /**
+     * Gets documento_beneficiario
+     * @return string
+     */
+    public function getDocumentoBeneficiario()
+    {
+        return $this->documento_beneficiario;
+    }
+  
+    /**
+     * Sets documento_beneficiario
+     * @param string $documento_beneficiario Documento do Beneficiario.
+     * @return $this
+     */
+    public function setDocumentoBeneficiario($documento_beneficiario)
+    {
+        
+        $this->documento_beneficiario = $documento_beneficiario;
         return $this;
     }
     
@@ -591,27 +644,6 @@ class BoletoResponse implements ArrayAccess
     }
     
     /**
-     * Gets digito_codigo_beneficiario
-     * @return string
-     */
-    public function getDigitoCodigoBeneficiario()
-    {
-        return $this->digito_codigo_beneficiario;
-    }
-  
-    /**
-     * Sets digito_codigo_beneficiario
-     * @param string $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
-     * @return $this
-     */
-    public function setDigitoCodigoBeneficiario($digito_codigo_beneficiario)
-    {
-        
-        $this->digito_codigo_beneficiario = $digito_codigo_beneficiario;
-        return $this;
-    }
-    
-    /**
      * Gets numero_convenio
      * @return string
      */
@@ -629,6 +661,27 @@ class BoletoResponse implements ArrayAccess
     {
         
         $this->numero_convenio = $numero_convenio;
+        return $this;
+    }
+    
+    /**
+     * Gets digito_codigo_beneficiario
+     * @return string
+     */
+    public function getDigitoCodigoBeneficiario()
+    {
+        return $this->digito_codigo_beneficiario;
+    }
+  
+    /**
+     * Sets digito_codigo_beneficiario
+     * @param string $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+     * @return $this
+     */
+    public function setDigitoCodigoBeneficiario($digito_codigo_beneficiario)
+    {
+        
+        $this->digito_codigo_beneficiario = $digito_codigo_beneficiario;
         return $this;
     }
     
@@ -675,27 +728,6 @@ class BoletoResponse implements ArrayAccess
     }
     
     /**
-     * Gets banco
-     * @return string
-     */
-    public function getBanco()
-    {
-        return $this->banco;
-    }
-  
-    /**
-     * Sets banco
-     * @param string $banco Banco
-     * @return $this
-     */
-    public function setBanco($banco)
-    {
-        
-        $this->banco = $banco;
-        return $this;
-    }
-    
-    /**
      * Gets digito_nosso_numero
      * @return string
      */
@@ -713,6 +745,27 @@ class BoletoResponse implements ArrayAccess
     {
         
         $this->digito_nosso_numero = $digito_nosso_numero;
+        return $this;
+    }
+    
+    /**
+     * Gets banco
+     * @return string
+     */
+    public function getBanco()
+    {
+        return $this->banco;
+    }
+  
+    /**
+     * Sets banco
+     * @param string $banco Banco
+     * @return $this
+     */
+    public function setBanco($banco)
+    {
+        
+        $this->banco = $banco;
         return $this;
     }
     
@@ -839,27 +892,6 @@ class BoletoResponse implements ArrayAccess
     {
         
         $this->nome_pagador = $nome_pagador;
-        return $this;
-    }
-    
-    /**
-     * Gets documento_beneficiario
-     * @return string
-     */
-    public function getDocumentoBeneficiario()
-    {
-        return $this->documento_beneficiario;
-    }
-  
-    /**
-     * Sets documento_beneficiario
-     * @param string $documento_beneficiario Documento do Beneficiario.
-     * @return $this
-     */
-    public function setDocumentoBeneficiario($documento_beneficiario)
-    {
-        
-        $this->documento_beneficiario = $documento_beneficiario;
         return $this;
     }
     

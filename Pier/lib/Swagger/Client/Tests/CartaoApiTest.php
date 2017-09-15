@@ -166,12 +166,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET4
+     * Test case for consultarUsingGET5
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET4() {
+    public function test_consultarUsingGET5() {
 
     }
     

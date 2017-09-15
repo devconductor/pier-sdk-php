@@ -249,9 +249,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
      */
     public function setTipoLayout($tipo_layout)
     {
-        $allowed_values = array("RECUPERAR_SENHA", "VALIDAR_DISPOSITIVO");
+        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO");
         if (!in_array($tipo_layout, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'VALIDAR_DISPOSITIVO'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO'");
         }
         $this->tipo_layout = $tipo_layout;
         return $this;
