@@ -379,6 +379,111 @@ class AutorizacaoApi
     }
     
     /**
+     * cancelarUsingPOST3
+     *
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     *
+     * @param int $id Id Cartao (required)
+     * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
+     * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOST3($id, $cancelamento_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOST3WithHttpInfo ($id, $cancelamento_request);
+        return $response; 
+    }
+
+
+    /**
+     * cancelarUsingPOST3WithHttpInfo
+     *
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     *
+     * @param int $id Id Cartao (required)
+     * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOST3WithHttpInfo($id, $cancelamento_request)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cancelarUsingPOST3');
+        }
+        // verify the required parameter 'cancelamento_request' is set
+        if ($cancelamento_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cancelamento_request when calling cancelarUsingPOST3');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/cancelar-transacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($cancelamento_request)) {
+            $_tempBody = $cancelamento_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarCodigosProcessamentoAutorizacaoUsingGET
      *
      * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o

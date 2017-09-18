@@ -1,6 +1,6 @@
 <?php
 /**
- * TipoOperacaoResponseTest
+ * CancelamentoTransacaoPorIdCartaoRequestTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * TipoOperacaoResponseTest Class Doc Comment
+ * CancelamentoTransacaoPorIdCartaoRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
+ * @description Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o por idCartao
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TipoOperacaoResponseTest extends \PHPUnit_Framework_TestCase
+class CancelamentoTransacaoPorIdCartaoRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class TipoOperacaoResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test TipoOperacaoResponse
+     * Test CancelamentoTransacaoPorIdCartaoRequest
      */
-    public function testTipoOperacaoResponse() {
+    public function testCancelamentoTransacaoPorIdCartaoRequest() {
 
     }
 

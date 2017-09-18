@@ -96,6 +96,16 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for cancelarUsingPOST3
+     *
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     *
+     */
+    public function test_cancelarUsingPOST3() {
+
+    }
+    
+    /**
      * Test case for listarCodigosProcessamentoAutorizacaoUsingGET
      *
      * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o

@@ -116,12 +116,12 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET23
+     * Test case for consultarUsingGET22
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
      */
-    public function test_consultarUsingGET23() {
+    public function test_consultarUsingGET22() {
 
     }
     

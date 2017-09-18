@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **visualizarDocumentoUsingPOST**
-> ByteArray[] visualizarDocumentoUsingPOST($id, $data_vencimento)
+> object visualizarDocumentoUsingPOST($id, $data_vencimento)
 
 Permite visualizar o extrato da fatura em formato PDF
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ByteArray[]**](ByteArray.md)
+**object**
 
 ### Authorization
 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**autorizarUsingPOST**](AutorizacaoApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**autorizarUsingPOST1**](AutorizacaoApi.md#autorizarUsingPOST1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
 [**cancelarUsingPOST2**](AutorizacaoApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**cancelarUsingPOST3**](AutorizacaoApi.md#cancelarUsingPOST3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
 [**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacaoApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
 [**simularUsingPOST**](AutorizacaoApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
@@ -132,6 +133,53 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cancelamento_request** | [**\br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest**](\br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest.md)| cancelamentoRequest | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cancelarUsingPOST3**
+> \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse cancelarUsingPOST3($id, $cancelamento_request)
+
+Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+
+Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\AutorizacaoApi();
+$id = 789; // int | Id Cartao
+$cancelamento_request = new \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest(); // \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest | cancelamentoRequest
+
+try { 
+    $result = $api_instance->cancelarUsingPOST3($id, $cancelamento_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AutorizacaoApi->cancelarUsingPOST3: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| Id Cartao | 
+ **cancelamento_request** | [**\br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest**](\br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
 ### Return type
 

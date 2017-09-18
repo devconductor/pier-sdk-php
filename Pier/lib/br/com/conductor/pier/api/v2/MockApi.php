@@ -413,7 +413,7 @@ class MockApi
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura. (required)
-     * @return ByteArray[]
+     * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function visualizarDocumentoUsingPOST($id, $data_vencimento)
@@ -430,7 +430,7 @@ class MockApi
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura. (required)
-     * @return Array of ByteArray[], HTTP status code, HTTP response headers (array of strings)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function visualizarDocumentoUsingPOSTWithHttpInfo($id, $data_vencimento)
@@ -494,23 +494,23 @@ class MockApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, 'ByteArray[]'
+                $headerParams, 'object'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'ByteArray[]', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'ByteArray[]', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             case 201:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'ByteArray[]', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

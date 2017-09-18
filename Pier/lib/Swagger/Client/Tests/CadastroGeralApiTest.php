@@ -156,22 +156,12 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET22
-     *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     *
-     */
-    public function test_consultarUsingGET22() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET24
+     * Test case for consultarUsingGET23
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
      */
-    public function test_consultarUsingGET24() {
+    public function test_consultarUsingGET23() {
 
     }
     

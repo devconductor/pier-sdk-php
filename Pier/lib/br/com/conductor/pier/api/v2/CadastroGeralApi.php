@@ -1013,118 +1013,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET22
-     *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     *
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). (required)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). (required)
-     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. (required)
-     * @return \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET22($id_cartao, $id_estabelecimento, $codigo_processamento)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id_cartao, $id_estabelecimento, $codigo_processamento);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET22WithHttpInfo
-     *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     *
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). (required)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). (required)
-     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET22WithHttpInfo($id_cartao, $id_estabelecimento, $codigo_processamento)
-    {
-        
-        // verify the required parameter 'id_cartao' is set
-        if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarUsingGET22');
-        }
-        // verify the required parameter 'id_estabelecimento' is set
-        if ($id_estabelecimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_estabelecimento when calling consultarUsingGET22');
-        }
-        // verify the required parameter 'codigo_processamento' is set
-        if ($codigo_processamento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $codigo_processamento when calling consultarUsingGET22');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/tipo-operacao";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($id_cartao !== null) {
-            $queryParams['idCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
-        }// query params
-        
-        if ($id_estabelecimento !== null) {
-            $queryParams['idEstabelecimento'] = $this->apiClient->getSerializer()->toQueryValue($id_estabelecimento);
-        }// query params
-        
-        if ($codigo_processamento !== null) {
-            $queryParams['codigoProcessamento'] = $this->apiClient->getSerializer()->toQueryValue($codigo_processamento);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET24
+     * consultarUsingGET23
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
@@ -1132,15 +1021,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id)
+    public function consultarUsingGET23($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET23WithHttpInfo
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
@@ -1148,12 +1037,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id)
+    public function consultarUsingGET23WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
         }
   
         // parse inputs

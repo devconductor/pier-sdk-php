@@ -226,22 +226,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET25
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET25() {
 
     }
     
     /**
-     * Test case for consultarUsingGET27
+     * Test case for consultarUsingGET26
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET27() {
+    public function test_consultarUsingGET26() {
 
     }
     
