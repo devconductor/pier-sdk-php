@@ -75,4 +75,24 @@ class FaturaApiTest extends \PHPUnit_Framework_TestCase
 
     }
     
+    /**
+     * Test case for enviarFaturaEmailUsingPOST
+     *
+     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     *
+     */
+    public function test_enviarFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for visualizarDocumentoUsingGET
+     *
+     * Permite visualizar o extrato da fatura em formato PDF
+     *
+     */
+    public function test_visualizarDocumentoUsingGET() {
+
+    }
+    
 }

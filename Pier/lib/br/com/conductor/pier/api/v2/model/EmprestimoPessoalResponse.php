@@ -53,10 +53,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
     static $swaggerTypes = array(
         'planos_parcelamentos' => '\br.com.conductor.pier.api.v2.model\PlanoParcelamentoEmprestimoResponse[]',
         'valor_solicitado' => 'Number',
-        'valor_total' => 'Number',
-        'sistema_amortizacao' => 'string',
+        'valor_maximo_solicitacao' => 'Number',
+        'numero_parcelas' => 'int',
+        'valor_maximo_parcela' => 'Number',
+        'data_primeira_parcela' => 'string',
         'periodo_taxa' => 'string',
-        'data_primeira_parcela' => 'string'
+        'sistema_amortizacao' => 'string',
+        'taxa_juros' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -70,10 +73,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
     static $attributeMap = array(
         'planos_parcelamentos' => 'planosParcelamentos',
         'valor_solicitado' => 'valorSolicitado',
-        'valor_total' => 'valorTotal',
-        'sistema_amortizacao' => 'sistemaAmortizacao',
+        'valor_maximo_solicitacao' => 'valorMaximoSolicitacao',
+        'numero_parcelas' => 'numeroParcelas',
+        'valor_maximo_parcela' => 'valorMaximoParcela',
+        'data_primeira_parcela' => 'dataPrimeiraParcela',
         'periodo_taxa' => 'periodoTaxa',
-        'data_primeira_parcela' => 'dataPrimeiraParcela'
+        'sistema_amortizacao' => 'sistemaAmortizacao',
+        'taxa_juros' => 'taxaJuros'
     );
   
     static function attributeMap() {
@@ -87,10 +93,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
     static $setters = array(
         'planos_parcelamentos' => 'setPlanosParcelamentos',
         'valor_solicitado' => 'setValorSolicitado',
-        'valor_total' => 'setValorTotal',
-        'sistema_amortizacao' => 'setSistemaAmortizacao',
+        'valor_maximo_solicitacao' => 'setValorMaximoSolicitacao',
+        'numero_parcelas' => 'setNumeroParcelas',
+        'valor_maximo_parcela' => 'setValorMaximoParcela',
+        'data_primeira_parcela' => 'setDataPrimeiraParcela',
         'periodo_taxa' => 'setPeriodoTaxa',
-        'data_primeira_parcela' => 'setDataPrimeiraParcela'
+        'sistema_amortizacao' => 'setSistemaAmortizacao',
+        'taxa_juros' => 'setTaxaJuros'
     );
   
     static function setters() {
@@ -104,10 +113,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
     static $getters = array(
         'planos_parcelamentos' => 'getPlanosParcelamentos',
         'valor_solicitado' => 'getValorSolicitado',
-        'valor_total' => 'getValorTotal',
-        'sistema_amortizacao' => 'getSistemaAmortizacao',
+        'valor_maximo_solicitacao' => 'getValorMaximoSolicitacao',
+        'numero_parcelas' => 'getNumeroParcelas',
+        'valor_maximo_parcela' => 'getValorMaximoParcela',
+        'data_primeira_parcela' => 'getDataPrimeiraParcela',
         'periodo_taxa' => 'getPeriodoTaxa',
-        'data_primeira_parcela' => 'getDataPrimeiraParcela'
+        'sistema_amortizacao' => 'getSistemaAmortizacao',
+        'taxa_juros' => 'getTaxaJuros'
     );
   
     static function getters() {
@@ -128,16 +140,28 @@ class EmprestimoPessoalResponse implements ArrayAccess
     protected $valor_solicitado;
     
     /**
-      * $valor_total Valor total do empr\u00C3\u00A9stimo/financiamento
+      * $valor_maximo_solicitacao Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
       * @var Number
       */
-    protected $valor_total;
+    protected $valor_maximo_solicitacao;
     
     /**
-      * $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+      * $numero_parcelas N\u00C3\u00BAmero de parcelas solicitado
+      * @var int
+      */
+    protected $numero_parcelas;
+    
+    /**
+      * $valor_maximo_parcela Limite m\u00C3\u00A1ximo de parcela permitido
+      * @var Number
+      */
+    protected $valor_maximo_parcela;
+    
+    /**
+      * $data_primeira_parcela Data do desconto da primeira parcela
       * @var string
       */
-    protected $sistema_amortizacao;
+    protected $data_primeira_parcela;
     
     /**
       * $periodo_taxa Per\u00C3\u00ADodo de aplica da taxa de juros
@@ -146,10 +170,16 @@ class EmprestimoPessoalResponse implements ArrayAccess
     protected $periodo_taxa;
     
     /**
-      * $data_primeira_parcela Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
+      * $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
       * @var string
       */
-    protected $data_primeira_parcela;
+    protected $sistema_amortizacao;
+    
+    /**
+      * $taxa_juros Valor percentual da taxa de juros a ser aplicada
+      * @var Number
+      */
+    protected $taxa_juros;
     
 
     /**
@@ -162,10 +192,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
         if ($data != null) {
             $this->planos_parcelamentos = $data["planos_parcelamentos"];
             $this->valor_solicitado = $data["valor_solicitado"];
-            $this->valor_total = $data["valor_total"];
-            $this->sistema_amortizacao = $data["sistema_amortizacao"];
-            $this->periodo_taxa = $data["periodo_taxa"];
+            $this->valor_maximo_solicitacao = $data["valor_maximo_solicitacao"];
+            $this->numero_parcelas = $data["numero_parcelas"];
+            $this->valor_maximo_parcela = $data["valor_maximo_parcela"];
             $this->data_primeira_parcela = $data["data_primeira_parcela"];
+            $this->periodo_taxa = $data["periodo_taxa"];
+            $this->sistema_amortizacao = $data["sistema_amortizacao"];
+            $this->taxa_juros = $data["taxa_juros"];
         }
     }
     
@@ -212,44 +245,86 @@ class EmprestimoPessoalResponse implements ArrayAccess
     }
     
     /**
-     * Gets valor_total
+     * Gets valor_maximo_solicitacao
      * @return Number
      */
-    public function getValorTotal()
+    public function getValorMaximoSolicitacao()
     {
-        return $this->valor_total;
+        return $this->valor_maximo_solicitacao;
     }
   
     /**
-     * Sets valor_total
-     * @param Number $valor_total Valor total do empr\u00C3\u00A9stimo/financiamento
+     * Sets valor_maximo_solicitacao
+     * @param Number $valor_maximo_solicitacao Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
      * @return $this
      */
-    public function setValorTotal($valor_total)
+    public function setValorMaximoSolicitacao($valor_maximo_solicitacao)
     {
         
-        $this->valor_total = $valor_total;
+        $this->valor_maximo_solicitacao = $valor_maximo_solicitacao;
         return $this;
     }
     
     /**
-     * Gets sistema_amortizacao
-     * @return string
+     * Gets numero_parcelas
+     * @return int
      */
-    public function getSistemaAmortizacao()
+    public function getNumeroParcelas()
     {
-        return $this->sistema_amortizacao;
+        return $this->numero_parcelas;
     }
   
     /**
-     * Sets sistema_amortizacao
-     * @param string $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+     * Sets numero_parcelas
+     * @param int $numero_parcelas N\u00C3\u00BAmero de parcelas solicitado
      * @return $this
      */
-    public function setSistemaAmortizacao($sistema_amortizacao)
+    public function setNumeroParcelas($numero_parcelas)
     {
         
-        $this->sistema_amortizacao = $sistema_amortizacao;
+        $this->numero_parcelas = $numero_parcelas;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_maximo_parcela
+     * @return Number
+     */
+    public function getValorMaximoParcela()
+    {
+        return $this->valor_maximo_parcela;
+    }
+  
+    /**
+     * Sets valor_maximo_parcela
+     * @param Number $valor_maximo_parcela Limite m\u00C3\u00A1ximo de parcela permitido
+     * @return $this
+     */
+    public function setValorMaximoParcela($valor_maximo_parcela)
+    {
+        
+        $this->valor_maximo_parcela = $valor_maximo_parcela;
+        return $this;
+    }
+    
+    /**
+     * Gets data_primeira_parcela
+     * @return string
+     */
+    public function getDataPrimeiraParcela()
+    {
+        return $this->data_primeira_parcela;
+    }
+  
+    /**
+     * Sets data_primeira_parcela
+     * @param string $data_primeira_parcela Data do desconto da primeira parcela
+     * @return $this
+     */
+    public function setDataPrimeiraParcela($data_primeira_parcela)
+    {
+        
+        $this->data_primeira_parcela = $data_primeira_parcela;
         return $this;
     }
     
@@ -275,23 +350,44 @@ class EmprestimoPessoalResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_primeira_parcela
+     * Gets sistema_amortizacao
      * @return string
      */
-    public function getDataPrimeiraParcela()
+    public function getSistemaAmortizacao()
     {
-        return $this->data_primeira_parcela;
+        return $this->sistema_amortizacao;
     }
   
     /**
-     * Sets data_primeira_parcela
-     * @param string $data_primeira_parcela Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
+     * Sets sistema_amortizacao
+     * @param string $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
      * @return $this
      */
-    public function setDataPrimeiraParcela($data_primeira_parcela)
+    public function setSistemaAmortizacao($sistema_amortizacao)
     {
         
-        $this->data_primeira_parcela = $data_primeira_parcela;
+        $this->sistema_amortizacao = $sistema_amortizacao;
+        return $this;
+    }
+    
+    /**
+     * Gets taxa_juros
+     * @return Number
+     */
+    public function getTaxaJuros()
+    {
+        return $this->taxa_juros;
+    }
+  
+    /**
+     * Sets taxa_juros
+     * @param Number $taxa_juros Valor percentual da taxa de juros a ser aplicada
+     * @return $this
+     */
+    public function setTaxaJuros($taxa_juros)
+    {
+        
+        $this->taxa_juros = $taxa_juros;
         return $this;
     }
     

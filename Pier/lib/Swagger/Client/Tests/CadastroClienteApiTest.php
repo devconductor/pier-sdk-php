@@ -278,7 +278,7 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for salvarUsingPOST10
      *
-     * Salvar os detalhes de uma determinada Pessoa
+     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
      *
      */
     public function test_salvarUsingPOST10() {
@@ -286,19 +286,9 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST11
-     *
-     * Realiza o cadastro de um nova Pessoa
-     *
-     */
-    public function test_salvarUsingPOST11() {
-
-    }
-    
-    /**
      * Test case for salvarUsingPOST13
      *
-     * Realiza o cadastro de um novo Telefone
+     * Salvar os detalhes de uma determinada Pessoa
      *
      */
     public function test_salvarUsingPOST13() {
@@ -306,22 +296,32 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST5
+     * Test case for salvarUsingPOST14
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Realiza o cadastro de um nova Pessoa
      *
      */
-    public function test_salvarUsingPOST5() {
+    public function test_salvarUsingPOST14() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST16
      *
-     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+     * Realiza o cadastro de um novo Telefone
      *
      */
-    public function test_salvarUsingPOST7() {
+    public function test_salvarUsingPOST16() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST8
+     *
+     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     *
+     */
+    public function test_salvarUsingPOST8() {
 
     }
     

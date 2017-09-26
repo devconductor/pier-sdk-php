@@ -146,6 +146,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarBeneficioPagamentoAtrasoUsingGET
+     *
+     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     *
+     */
+    public function test_consultarBeneficioPagamentoAtrasoUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarBoletoEmitidoUsingGET
      *
      * Consulta os dados de um determinado boleto da fatura
@@ -432,6 +442,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_reativarUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for simularEmprestimoFinanciamentoUsingPOST
+     *
+     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     *
+     */
+    public function test_simularEmprestimoFinanciamentoUsingPOST() {
 
     }
     

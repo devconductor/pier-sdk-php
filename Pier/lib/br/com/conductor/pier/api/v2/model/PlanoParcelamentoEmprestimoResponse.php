@@ -54,8 +54,8 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
         'numero_parcelas' => 'int',
         'valor_parcelas' => 'Number',
         'taxa_juros' => 'Number',
-        'valor_percentual_cet' => 'Number',
-        'valor_tributos_iof' => 'Number'
+        'valor_tributos_iof' => 'Number',
+        'valor_percentual_cet' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -70,8 +70,8 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
         'numero_parcelas' => 'numeroParcelas',
         'valor_parcelas' => 'valorParcelas',
         'taxa_juros' => 'taxaJuros',
-        'valor_percentual_cet' => 'valorPercentualCET',
-        'valor_tributos_iof' => 'valorTributosIOF'
+        'valor_tributos_iof' => 'valorTributosIOF',
+        'valor_percentual_cet' => 'valorPercentualCET'
     );
   
     static function attributeMap() {
@@ -86,8 +86,8 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
         'numero_parcelas' => 'setNumeroParcelas',
         'valor_parcelas' => 'setValorParcelas',
         'taxa_juros' => 'setTaxaJuros',
-        'valor_percentual_cet' => 'setValorPercentualCet',
-        'valor_tributos_iof' => 'setValorTributosIof'
+        'valor_tributos_iof' => 'setValorTributosIof',
+        'valor_percentual_cet' => 'setValorPercentualCet'
     );
   
     static function setters() {
@@ -102,8 +102,8 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
         'numero_parcelas' => 'getNumeroParcelas',
         'valor_parcelas' => 'getValorParcelas',
         'taxa_juros' => 'getTaxaJuros',
-        'valor_percentual_cet' => 'getValorPercentualCet',
-        'valor_tributos_iof' => 'getValorTributosIof'
+        'valor_tributos_iof' => 'getValorTributosIof',
+        'valor_percentual_cet' => 'getValorPercentualCet'
     );
   
     static function getters() {
@@ -130,16 +130,16 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
     protected $taxa_juros;
     
     /**
-      * $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-      * @var Number
-      */
-    protected $valor_percentual_cet;
-    
-    /**
       * $valor_tributos_iof valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
       * @var Number
       */
     protected $valor_tributos_iof;
+    
+    /**
+      * $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+      * @var Number
+      */
+    protected $valor_percentual_cet;
     
 
     /**
@@ -153,8 +153,8 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
             $this->numero_parcelas = $data["numero_parcelas"];
             $this->valor_parcelas = $data["valor_parcelas"];
             $this->taxa_juros = $data["taxa_juros"];
-            $this->valor_percentual_cet = $data["valor_percentual_cet"];
             $this->valor_tributos_iof = $data["valor_tributos_iof"];
+            $this->valor_percentual_cet = $data["valor_percentual_cet"];
         }
     }
     
@@ -222,27 +222,6 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
     }
     
     /**
-     * Gets valor_percentual_cet
-     * @return Number
-     */
-    public function getValorPercentualCet()
-    {
-        return $this->valor_percentual_cet;
-    }
-  
-    /**
-     * Sets valor_percentual_cet
-     * @param Number $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-     * @return $this
-     */
-    public function setValorPercentualCet($valor_percentual_cet)
-    {
-        
-        $this->valor_percentual_cet = $valor_percentual_cet;
-        return $this;
-    }
-    
-    /**
      * Gets valor_tributos_iof
      * @return Number
      */
@@ -260,6 +239,27 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
     {
         
         $this->valor_tributos_iof = $valor_tributos_iof;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_percentual_cet
+     * @return Number
+     */
+    public function getValorPercentualCet()
+    {
+        return $this->valor_percentual_cet;
+    }
+  
+    /**
+     * Sets valor_percentual_cet
+     * @param Number $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+     * @return $this
+     */
+    public function setValorPercentualCet($valor_percentual_cet)
+    {
+        
+        $this->valor_percentual_cet = $valor_percentual_cet;
         return $this;
     }
     

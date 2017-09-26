@@ -218,4 +218,236 @@ class FaturaApi
         }
     }
     
+    /**
+     * enviarFaturaEmailUsingPOST
+     *
+     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string $data_vencimento Data de Vencimento da fatura (yyyy-MM-dd). (required)
+     * @param string $email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function enviarFaturaEmailUsingPOST($id, $data_vencimento, $email = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->enviarFaturaEmailUsingPOSTWithHttpInfo ($id, $data_vencimento, $email);
+        return $response; 
+    }
+
+
+    /**
+     * enviarFaturaEmailUsingPOSTWithHttpInfo
+     *
+     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string $data_vencimento Data de Vencimento da fatura (yyyy-MM-dd). (required)
+     * @param string $email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function enviarFaturaEmailUsingPOSTWithHttpInfo($id, $data_vencimento, $email = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling enviarFaturaEmailUsingPOST');
+        }
+        // verify the required parameter 'data_vencimento' is set
+        if ($data_vencimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling enviarFaturaEmailUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/faturas/{dataVencimento}/enviar-email";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($email !== null) {
+            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($email);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($data_vencimento !== null) {
+            $resourcePath = str_replace(
+                "{" . "dataVencimento" . "}",
+                $this->apiClient->getSerializer()->toPathValue($data_vencimento),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            case 201:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * visualizarDocumentoUsingGET
+     *
+     * Permite visualizar o extrato da fatura em formato PDF
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string $data_vencimento Data de Vencimento da fatura. (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function visualizarDocumentoUsingGET($id, $data_vencimento)
+    {
+        list($response, $statusCode, $httpHeader) = $this->visualizarDocumentoUsingGETWithHttpInfo ($id, $data_vencimento);
+        return $response; 
+    }
+
+
+    /**
+     * visualizarDocumentoUsingGETWithHttpInfo
+     *
+     * Permite visualizar o extrato da fatura em formato PDF
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string $data_vencimento Data de Vencimento da fatura. (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function visualizarDocumentoUsingGETWithHttpInfo($id, $data_vencimento)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling visualizarDocumentoUsingGET');
+        }
+        // verify the required parameter 'data_vencimento' is set
+        if ($data_vencimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling visualizarDocumentoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/pdf'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($data_vencimento !== null) {
+            $resourcePath = str_replace(
+                "{" . "dataVencimento" . "}",
+                $this->apiClient->getSerializer()->toPathValue($data_vencimento),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            case 201:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
 }

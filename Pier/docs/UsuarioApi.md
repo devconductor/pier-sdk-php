@@ -4,16 +4,65 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultarUsingGET27**](UsuarioApi.md#consultarUsingGET27) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**listarUsingGET32**](UsuarioApi.md#listarUsingGET32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST16**](UsuarioApi.md#salvarUsingPOST16) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST19**](UsuarioApi.md#salvarUsingPOST19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
+
+# **alterarSenhaLoginUsingPOST**
+> string alterarSenhaLoginUsingPOST($login, $senha_nova)
+
+Alterar senha do usu\u00C3\u00A1rio.
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
+$login = "login_example"; // string | Login do usu\u00C3\u00A1rio.
+$senha_nova = "senha_nova_example"; // string | Senha Nova
+
+try { 
+    $result = $api_instance->alterarSenhaLoginUsingPOST($login, $senha_nova);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsuarioApi->alterarSenhaLoginUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **login** | **string**| Login do usu\u00C3\u00A1rio. | 
+ **senha_nova** | **string**| Senha Nova | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarSenhaUsingPUT**
 > string alterarSenhaUsingPUT($id, $senha_atual, $senha_nova)
@@ -67,7 +116,7 @@ No authorization required
 # **alterarUsingPUT10**
 > \br.com.conductor.pier.api.v2.model\UsuarioResponse alterarUsingPUT10($id, $update)
 
-Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Altera os usu\u00C3\u00A1rios cadastrados na base.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -348,10 +397,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST16**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST16($persist)
+# **salvarUsingPOST19**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST19($persist)
 
-Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+Cadastra Usu\u00C3\u00A1rio na base.
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -364,10 +413,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
 $persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST16($persist);
+    $result = $api_instance->salvarUsingPOST19($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->salvarUsingPOST19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -381,6 +430,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarSenhaLoginUsingPOST**
+> object validarSenhaLoginUsingPOST($login, $senha)
+
+Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+
+O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
+$login = "login_example"; // string | Login identificador do usu\u00C3\u00A1rio (login).
+$senha = "senha_example"; // string | Senha do usu\u00C3\u00A1rio
+
+try { 
+    $result = $api_instance->validarSenhaLoginUsingPOST($login, $senha);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsuarioApi->validarSenhaLoginUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **login** | **string**| Login identificador do usu\u00C3\u00A1rio (login). | 
+ **senha** | **string**| Senha do usu\u00C3\u00A1rio | 
+
+### Return type
+
+**object**
 
 ### Authorization
 

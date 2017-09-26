@@ -75,34 +75,4 @@ class MockApiTest extends \PHPUnit_Framework_TestCase
 
     }
     
-    /**
-     * Test case for enviarFaturaEmailUsingPOST
-     *
-     * Envia 2\u00C2\u00AA via de fatura por E-mail
-     *
-     */
-    public function test_enviarFaturaEmailUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for simularEmprestimoFinanciamentoUsingPOST
-     *
-     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
-     *
-     */
-    public function test_simularEmprestimoFinanciamentoUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for visualizarDocumentoUsingPOST
-     *
-     * Permite visualizar o extrato da fatura em formato PDF
-     *
-     */
-    public function test_visualizarDocumentoUsingPOST() {
-
-    }
-    
 }

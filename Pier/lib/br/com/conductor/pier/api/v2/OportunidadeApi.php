@@ -1673,98 +1673,7 @@ class OportunidadeApi
     }
     
     /**
-     * salvarUsingPOST14
-     *
-     * Cadastra tipos oportunidades
-     *
-     * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST14($persist)
-    {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($persist);
-        return $response; 
-    }
-
-
-    /**
-     * salvarUsingPOST14WithHttpInfo
-     *
-     * Cadastra tipos oportunidades
-     *
-     * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST14WithHttpInfo($persist)
-    {
-        
-        // verify the required parameter 'persist' is set
-        if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST14');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/tipos-oportunidades";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($persist)) {
-            $_tempBody = $persist;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * salvarUsingPOST9
+     * salvarUsingPOST12
      *
      * Cadastra as oportunidades
      *
@@ -1772,15 +1681,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9($persist)
+    public function salvarUsingPOST12($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST12WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST9WithHttpInfo
+     * salvarUsingPOST12WithHttpInfo
      *
      * Cadastra as oportunidades
      *
@@ -1788,12 +1697,12 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9WithHttpInfo($persist)
+    public function salvarUsingPOST12WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST12');
         }
   
         // parse inputs
@@ -1846,6 +1755,97 @@ class OportunidadeApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\OportunidadeResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarUsingPOST17
+     *
+     * Cadastra tipos oportunidades
+     *
+     * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST17($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST17WithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarUsingPOST17WithHttpInfo
+     *
+     * Cadastra tipos oportunidades
+     *
+     * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST17WithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST17');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-oportunidades";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

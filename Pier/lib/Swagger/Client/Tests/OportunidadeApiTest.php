@@ -196,22 +196,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST14
-     *
-     * Cadastra tipos oportunidades
-     *
-     */
-    public function test_salvarUsingPOST14() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST9
+     * Test case for salvarUsingPOST12
      *
      * Cadastra as oportunidades
      *
      */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST12() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST17
+     *
+     * Cadastra tipos oportunidades
+     *
+     */
+    public function test_salvarUsingPOST17() {
 
     }
     

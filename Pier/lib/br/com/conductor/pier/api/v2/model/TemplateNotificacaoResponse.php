@@ -55,6 +55,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'int',
         'tipo_layout' => 'string',
         'tipo_notificacao' => 'string',
+        'remetente' => 'string',
         'assunto' => 'string',
         'conteudo' => 'string',
         'data_inclusao' => 'string',
@@ -74,6 +75,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'idConfiguracaoEmail',
         'tipo_layout' => 'tipoLayout',
         'tipo_notificacao' => 'tipoNotificacao',
+        'remetente' => 'remetente',
         'assunto' => 'assunto',
         'conteudo' => 'conteudo',
         'data_inclusao' => 'dataInclusao',
@@ -93,6 +95,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'setIdConfiguracaoEmail',
         'tipo_layout' => 'setTipoLayout',
         'tipo_notificacao' => 'setTipoNotificacao',
+        'remetente' => 'setRemetente',
         'assunto' => 'setAssunto',
         'conteudo' => 'setConteudo',
         'data_inclusao' => 'setDataInclusao',
@@ -112,6 +115,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'getIdConfiguracaoEmail',
         'tipo_layout' => 'getTipoLayout',
         'tipo_notificacao' => 'getTipoNotificacao',
+        'remetente' => 'getRemetente',
         'assunto' => 'getAssunto',
         'conteudo' => 'getConteudo',
         'data_inclusao' => 'getDataInclusao',
@@ -146,6 +150,12 @@ class TemplateNotificacaoResponse implements ArrayAccess
       * @var string
       */
     protected $tipo_notificacao;
+    
+    /**
+      * $remetente Remetente.
+      * @var string
+      */
+    protected $remetente;
     
     /**
       * $assunto Assunto do e-mail.
@@ -184,6 +194,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
             $this->id_configuracao_email = $data["id_configuracao_email"];
             $this->tipo_layout = $data["tipo_layout"];
             $this->tipo_notificacao = $data["tipo_notificacao"];
+            $this->remetente = $data["remetente"];
             $this->assunto = $data["assunto"];
             $this->conteudo = $data["conteudo"];
             $this->data_inclusao = $data["data_inclusao"];
@@ -249,9 +260,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
      */
     public function setTipoLayout($tipo_layout)
     {
-        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO");
+        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL");
         if (!in_array($tipo_layout, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL'");
         }
         $this->tipo_layout = $tipo_layout;
         return $this;
@@ -278,6 +289,27 @@ class TemplateNotificacaoResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'tipo_notificacao', must be one of 'SMS', 'PUSH_APNS', 'PUSH_FCM', 'PUSH_GCM', 'EMAIL'");
         }
         $this->tipo_notificacao = $tipo_notificacao;
+        return $this;
+    }
+    
+    /**
+     * Gets remetente
+     * @return string
+     */
+    public function getRemetente()
+    {
+        return $this->remetente;
+    }
+  
+    /**
+     * Sets remetente
+     * @param string $remetente Remetente.
+     * @return $this
+     */
+    public function setRemetente($remetente)
+    {
+        
+        $this->remetente = $remetente;
         return $this;
     }
     

@@ -66,6 +66,16 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarSenhaLoginUsingPOST
+     *
+     * Alterar senha do usu\u00C3\u00A1rio.
+     *
+     */
+    public function test_alterarSenhaLoginUsingPOST() {
+
+    }
+    
+    /**
      * Test case for alterarSenhaUsingPUT
      *
      * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -78,7 +88,7 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT10
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
      */
     public function test_alterarUsingPUT10() {
@@ -136,12 +146,22 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST16
+     * Test case for salvarUsingPOST19
      *
-     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Cadastra Usu\u00C3\u00A1rio na base.
      *
      */
-    public function test_salvarUsingPOST16() {
+    public function test_salvarUsingPOST19() {
+
+    }
+    
+    /**
+     * Test case for validarSenhaLoginUsingPOST
+     *
+     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     *
+     */
+    public function test_validarSenhaLoginUsingPOST() {
 
     }
     

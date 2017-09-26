@@ -92,6 +92,111 @@ class UsuarioApi
   
     
     /**
+     * alterarSenhaLoginUsingPOST
+     *
+     * Alterar senha do usu\u00C3\u00A1rio.
+     *
+     * @param string $login Login do usu\u00C3\u00A1rio. (required)
+     * @param string $senha_nova Senha Nova (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarSenhaLoginUsingPOST($login, $senha_nova)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarSenhaLoginUsingPOSTWithHttpInfo ($login, $senha_nova);
+        return $response; 
+    }
+
+
+    /**
+     * alterarSenhaLoginUsingPOSTWithHttpInfo
+     *
+     * Alterar senha do usu\u00C3\u00A1rio.
+     *
+     * @param string $login Login do usu\u00C3\u00A1rio. (required)
+     * @param string $senha_nova Senha Nova (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarSenhaLoginUsingPOSTWithHttpInfo($login, $senha_nova)
+    {
+        
+        // verify the required parameter 'login' is set
+        if ($login === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $login when calling alterarSenhaLoginUsingPOST');
+        }
+        // verify the required parameter 'senha_nova' is set
+        if ($senha_nova === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $senha_nova when calling alterarSenhaLoginUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/usuarios/{login}/alterar-senha";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        // header params
+        
+        if ($senha_nova !== null) {
+            $headerParams['senhaNova'] = $this->apiClient->getSerializer()->toHeaderValue($senha_nova);
+        }
+        // path params
+        
+        if ($login !== null) {
+            $resourcePath = str_replace(
+                "{" . "login" . "}",
+                $this->apiClient->getSerializer()->toPathValue($login),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * alterarSenhaUsingPUT
      *
      * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -209,7 +314,7 @@ class UsuarioApi
     /**
      * alterarUsingPUT10
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
@@ -226,7 +331,7 @@ class UsuarioApi
     /**
      * alterarUsingPUT10WithHttpInfo
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
@@ -819,36 +924,36 @@ class UsuarioApi
     }
     
     /**
-     * salvarUsingPOST16
+     * salvarUsingPOST19
      *
-     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Cadastra Usu\u00C3\u00A1rio na base.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST16($persist)
+    public function salvarUsingPOST19($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST16WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST19WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST16WithHttpInfo
+     * salvarUsingPOST19WithHttpInfo
      *
-     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Cadastra Usu\u00C3\u00A1rio na base.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST16WithHttpInfo($persist)
+    public function salvarUsingPOST19WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST16');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST19');
         }
   
         // parse inputs
@@ -901,6 +1006,111 @@ class UsuarioApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarSenhaLoginUsingPOST
+     *
+     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     *
+     * @param string $login Login identificador do usu\u00C3\u00A1rio (login). (required)
+     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarSenhaLoginUsingPOST($login, $senha)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarSenhaLoginUsingPOSTWithHttpInfo ($login, $senha);
+        return $response; 
+    }
+
+
+    /**
+     * validarSenhaLoginUsingPOSTWithHttpInfo
+     *
+     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     *
+     * @param string $login Login identificador do usu\u00C3\u00A1rio (login). (required)
+     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarSenhaLoginUsingPOSTWithHttpInfo($login, $senha)
+    {
+        
+        // verify the required parameter 'login' is set
+        if ($login === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $login when calling validarSenhaLoginUsingPOST');
+        }
+        // verify the required parameter 'senha' is set
+        if ($senha === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $senha when calling validarSenhaLoginUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/usuarios/{login}/validar-senha";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        // header params
+        
+        if ($senha !== null) {
+            $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
+        }
+        // path params
+        
+        if ($login !== null) {
+            $resourcePath = str_replace(
+                "{" . "login" . "}",
+                $this->apiClient->getSerializer()->toPathValue($login),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

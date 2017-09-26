@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**alterarUsingPUT11**](WebhookApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET28**](WebhookApi.md#consultarUsingGET28) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET34**](WebhookApi.md#listarUsingGET34) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST17**](WebhookApi.md#salvarUsingPOST17) | **POST** /api/webhooks | Salvar Webhook
+[**salvarUsingPOST20**](WebhookApi.md#salvarUsingPOST20) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT11**
@@ -163,8 +163,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST17**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST17($tipo_evento, $url)
+# **salvarUsingPOST20**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST20($tipo_evento, $url)
 
 Salvar Webhook
 
@@ -180,10 +180,10 @@ $tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo 
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->salvarUsingPOST17($tipo_evento, $url);
+    $result = $api_instance->salvarUsingPOST20($tipo_evento, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->salvarUsingPOST17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->salvarUsingPOST20: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**listarSMSUsingGET**](NotificacaoApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+[**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 [**responderSMSUsingPOST**](NotificacaoApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
 [**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -73,7 +74,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarTemplateNotificacaoUsingPUT**
-> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto)
+> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto)
 
 Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -90,10 +91,11 @@ $conteudo = "conteudo_example"; // string | Template HTML
 $id_configuracao_email = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
 $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
 $tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+$remetente = "remetente_example"; // string | Remetente
 $assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto);
+    $result = $api_instance->alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacaoApi->alterarTemplateNotificacaoUsingPUT: ', $e->getMessage(), "\n";
@@ -110,6 +112,7 @@ Name | Type | Description  | Notes
  **id_configuracao_email** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipo_layout** | **string**| Tipo do layout. | [optional] 
  **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **string**| Remetente | [optional] 
  **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 ### Return type
@@ -574,6 +577,51 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **notificacaoEmailUsingPOST**
+> \br.com.conductor.pier.api.v2.model\NotificacaoEmailResponse notificacaoEmailUsingPOST($request)
+
+Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$request = new \br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest(); // \br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest | request
+
+try { 
+    $result = $api_instance->notificacaoEmailUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->notificacaoEmailUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**\br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest**](\br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest.md)| request | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **responderSMSUsingPOST**
 > \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse responderSMSUsingPOST($nsu, $data, $resposta)
 
@@ -849,7 +897,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarTemplateNotificacaoUsingPOST**
-> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto)
+> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto)
 
 Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -865,10 +913,11 @@ $conteudo = "conteudo_example"; // string | Template HTML
 $id_configuracao_email = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
 $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
 $tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+$remetente = "remetente_example"; // string | Remetente
 $assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $assunto);
+    $result = $api_instance->salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacaoApi->salvarTemplateNotificacaoUsingPOST: ', $e->getMessage(), "\n";
@@ -884,6 +933,7 @@ Name | Type | Description  | Notes
  **id_configuracao_email** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipo_layout** | **string**| Tipo do layout. | [optional] 
  **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **string**| Remetente | [optional] 
  **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 ### Return type

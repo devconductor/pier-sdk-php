@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id_configuracao_email** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail. | [optional] 
 **tipo_layout** | **string** | Tipo do layout de e-mail. | [optional] 
 **tipo_notificacao** | **string** | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+**remetente** | **string** | Remetente. | [optional] 
 **assunto** | **string** | Assunto do e-mail. | [optional] 
 **conteudo** | **string** | Conteudo do e-mail. | [optional] 
 **data_inclusao** | **string** | Data da inclus\u00C3\u00A3o. | [optional] 

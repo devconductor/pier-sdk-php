@@ -96,12 +96,12 @@ class WebhookApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST17
+     * Test case for salvarUsingPOST20
      *
      * Salvar Webhook
      *
      */
-    public function test_salvarUsingPOST17() {
+    public function test_salvarUsingPOST20() {
 
     }
     

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformaMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
 [**listarUsingGET17**](PlataformaMobileApi.md#listarUsingGET17) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvarUsingPOST12**](PlataformaMobileApi.md#salvarUsingPOST12) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**salvarUsingPOST15**](PlataformaMobileApi.md#salvarUsingPOST15) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 # **atualizarUsingPUT1**
@@ -107,8 +107,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST12**
-> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST12($persist)
+# **salvarUsingPOST15**
+> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST15($persist)
 
 Cadastra Plataforma Mobile
 
@@ -123,10 +123,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\PlataformaMobileApi
 $persist = new \br.com.conductor.pier.api.v2.model\PlataformaMobilePersist(); // \br.com.conductor.pier.api.v2.model\PlataformaMobilePersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST12($persist);
+    $result = $api_instance->salvarUsingPOST15($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlataformaMobileApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PlataformaMobileApi->salvarUsingPOST15: ', $e->getMessage(), "\n";
 }
 ?>
 ```

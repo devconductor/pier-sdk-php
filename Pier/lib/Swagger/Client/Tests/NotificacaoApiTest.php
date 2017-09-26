@@ -176,6 +176,16 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for notificacaoEmailUsingPOST
+     *
+     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+     *
+     */
+    public function test_notificacaoEmailUsingPOST() {
+
+    }
+    
+    /**
      * Test case for responderSMSUsingPOST
      *
      * Responder SMS

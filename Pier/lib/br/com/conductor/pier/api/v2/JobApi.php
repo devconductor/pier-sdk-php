@@ -524,7 +524,7 @@ class JobApi
     }
     
     /**
-     * salvarUsingPOST8
+     * salvarUsingPOST11
      *
      * Cadastrar Job
      *
@@ -534,15 +534,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8($descricao, $cron, $groovy)
+    public function salvarUsingPOST11($descricao, $cron, $groovy)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($descricao, $cron, $groovy);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST11WithHttpInfo ($descricao, $cron, $groovy);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST8WithHttpInfo
+     * salvarUsingPOST11WithHttpInfo
      *
      * Cadastrar Job
      *
@@ -552,20 +552,20 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8WithHttpInfo($descricao, $cron, $groovy)
+    public function salvarUsingPOST11WithHttpInfo($descricao, $cron, $groovy)
     {
         
         // verify the required parameter 'descricao' is set
         if ($descricao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST11');
         }
         // verify the required parameter 'cron' is set
         if ($cron === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST11');
         }
         // verify the required parameter 'groovy' is set
         if ($groovy === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST11');
         }
   
         // parse inputs

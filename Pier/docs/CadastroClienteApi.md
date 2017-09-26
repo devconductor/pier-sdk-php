@@ -25,11 +25,11 @@ Method | HTTP request | Description
 [**listarUsingGET24**](CadastroClienteApi.md#listarUsingGET24) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvarUsingPOST5**](CadastroClienteApi.md#salvarUsingPOST5) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST7**](CadastroClienteApi.md#salvarUsingPOST7) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST14**](CadastroClienteApi.md#salvarUsingPOST14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST8**](CadastroClienteApi.md#salvarUsingPOST8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
 # **alterarUsingPUT**
@@ -1170,7 +1170,54 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST10**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST10($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+> \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse salvarUsingPOST10($id, $body)
+
+Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi();
+$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$body = new \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist(); // \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+
+try { 
+    $result = $api_instance->salvarUsingPOST10($id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST10: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **body** | [**\br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist**](\br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salvarUsingPOST13**
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST13($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1194,10 +1241,10 @@ $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->salvarUsingPOST10($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->salvarUsingPOST13($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1232,8 +1279,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST11**
-> \br.com.conductor.pier.api.v2.model\PessoaResponse salvarUsingPOST11($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+# **salvarUsingPOST14**
+> \br.com.conductor.pier.api.v2.model\PessoaResponse salvarUsingPOST14($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1257,10 +1304,10 @@ $unidade_federativa_identidade = "unidade_federativa_identidade_example"; // str
 $data_emissao_identidade = "data_emissao_identidade_example"; // string | Data emiss\u00C3\u00A3o da Identidade.
 
 try { 
-    $result = $api_instance->salvarUsingPOST11($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    $result = $api_instance->salvarUsingPOST14($nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1295,8 +1342,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST13**
-> \br.com.conductor.pier.api.v2.model\TelefoneResponse salvarUsingPOST13($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+# **salvarUsingPOST16**
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse salvarUsingPOST16($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1315,10 +1362,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST13($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST16($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1348,8 +1395,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\EnderecoResponse salvarUsingPOST5($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+# **salvarUsingPOST8**
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse salvarUsingPOST8($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1374,10 +1421,10 @@ $uf = "uf_example"; // string | Apresenta sigla da Unidade Federativa
 $pais = "pais_example"; // string | Apresenta nome do Pais
 
 try { 
-    $result = $api_instance->salvarUsingPOST5($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
+    $result = $api_instance->salvarUsingPOST8($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1401,53 +1448,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **salvarUsingPOST7**
-> \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse salvarUsingPOST7($id, $body)
-
-Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$body = new \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist(); // \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-
-try { 
-    $result = $api_instance->salvarUsingPOST7($id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **body** | [**\br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist**](\br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
 
 ### Authorization
 

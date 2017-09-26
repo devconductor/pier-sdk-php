@@ -56,7 +56,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
         'taxa_juros' => 'Number',
         'periodo_taxa' => 'string',
         'sistema_amortizacao' => 'string',
-        'dia_vencimento' => 'int',
         'numero_meses_carencia' => 'int'
     );
   
@@ -74,7 +73,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
         'taxa_juros' => 'taxaJuros',
         'periodo_taxa' => 'periodoTaxa',
         'sistema_amortizacao' => 'sistemaAmortizacao',
-        'dia_vencimento' => 'diaVencimento',
         'numero_meses_carencia' => 'numeroMesesCarencia'
     );
   
@@ -92,7 +90,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
         'taxa_juros' => 'setTaxaJuros',
         'periodo_taxa' => 'setPeriodoTaxa',
         'sistema_amortizacao' => 'setSistemaAmortizacao',
-        'dia_vencimento' => 'setDiaVencimento',
         'numero_meses_carencia' => 'setNumeroMesesCarencia'
     );
   
@@ -110,7 +107,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
         'taxa_juros' => 'getTaxaJuros',
         'periodo_taxa' => 'getPeriodoTaxa',
         'sistema_amortizacao' => 'getSistemaAmortizacao',
-        'dia_vencimento' => 'getDiaVencimento',
         'numero_meses_carencia' => 'getNumeroMesesCarencia'
     );
   
@@ -150,12 +146,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
     protected $sistema_amortizacao;
     
     /**
-      * $dia_vencimento Dia para cobran\u00C3\u00A7a da primeira parcela
-      * @var int
-      */
-    protected $dia_vencimento;
-    
-    /**
       * $numero_meses_carencia N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
       * @var int
       */
@@ -175,7 +165,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
             $this->taxa_juros = $data["taxa_juros"];
             $this->periodo_taxa = $data["periodo_taxa"];
             $this->sistema_amortizacao = $data["sistema_amortizacao"];
-            $this->dia_vencimento = $data["dia_vencimento"];
             $this->numero_meses_carencia = $data["numero_meses_carencia"];
         }
     }
@@ -282,27 +271,6 @@ class EmprestimoPessoalRequest implements ArrayAccess
     {
         
         $this->sistema_amortizacao = $sistema_amortizacao;
-        return $this;
-    }
-    
-    /**
-     * Gets dia_vencimento
-     * @return int
-     */
-    public function getDiaVencimento()
-    {
-        return $this->dia_vencimento;
-    }
-  
-    /**
-     * Sets dia_vencimento
-     * @param int $dia_vencimento Dia para cobran\u00C3\u00A7a da primeira parcela
-     * @return $this
-     */
-    public function setDiaVencimento($dia_vencimento)
-    {
-        
-        $this->dia_vencimento = $dia_vencimento;
         return $this;
     }
     

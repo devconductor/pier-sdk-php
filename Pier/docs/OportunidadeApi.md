@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**listarUsingGET14**](OportunidadeApi.md#listarUsingGET14) | **GET** /api/oportunidades | Lista as oportunidades
 [**listarUsingGET27**](OportunidadeApi.md#listarUsingGET27) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvarUsingPOST14**](OportunidadeApi.md#salvarUsingPOST14) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvarUsingPOST9**](OportunidadeApi.md#salvarUsingPOST9) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvarUsingPOST12**](OportunidadeApi.md#salvarUsingPOST12) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvarUsingPOST17**](OportunidadeApi.md#salvarUsingPOST17) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 
 
 # **alterarStatusUsingPUT**
@@ -716,53 +716,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST14**
-> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse salvarUsingPOST14($persist)
-
-Cadastra tipos oportunidades
-
-Esse recurso permite cadastrar tipos oportunidades.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\OportunidadeApi();
-$persist = new \br.com.conductor.pier.api.v2.model\TipoOportunidade(); // \br.com.conductor.pier.api.v2.model\TipoOportunidade | persist
-
-try { 
-    $result = $api_instance->salvarUsingPOST14($persist);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OportunidadeApi->salvarUsingPOST14: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**\br.com.conductor.pier.api.v2.model\TipoOportunidade**](\br.com.conductor.pier.api.v2.model\TipoOportunidade.md)| persist | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **salvarUsingPOST9**
-> \br.com.conductor.pier.api.v2.model\OportunidadeResponse salvarUsingPOST9($persist)
+# **salvarUsingPOST12**
+> \br.com.conductor.pier.api.v2.model\OportunidadeResponse salvarUsingPOST12($persist)
 
 Cadastra as oportunidades
 
@@ -777,10 +732,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\OportunidadeApi();
 $persist = new \br.com.conductor.pier.api.v2.model\OportunidadePersist(); // \br.com.conductor.pier.api.v2.model\OportunidadePersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST9($persist);
+    $result = $api_instance->salvarUsingPOST12($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OportunidadeApi->salvarUsingPOST9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling OportunidadeApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -794,6 +749,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\OportunidadeResponse**](OportunidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salvarUsingPOST17**
+> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse salvarUsingPOST17($persist)
+
+Cadastra tipos oportunidades
+
+Esse recurso permite cadastrar tipos oportunidades.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\OportunidadeApi();
+$persist = new \br.com.conductor.pier.api.v2.model\TipoOportunidade(); // \br.com.conductor.pier.api.v2.model\TipoOportunidade | persist
+
+try { 
+    $result = $api_instance->salvarUsingPOST17($persist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OportunidadeApi->salvarUsingPOST17: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**\br.com.conductor.pier.api.v2.model\TipoOportunidade**](\br.com.conductor.pier.api.v2.model\TipoOportunidade.md)| persist | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
 
 ### Authorization
 
