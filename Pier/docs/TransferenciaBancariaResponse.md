@@ -30,6 +30,14 @@ Name | Type | Description | Notes
 **id_conta_portador** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
 **numero_estabelecimento** | **int** | Atributo que representa o numero do estabelecimento. | [optional] 
 **valor_taxa_saque** | [**Number**](Number.md) | Valor da taxa saque. | [optional] 
+**banco** | **int** | C\u00C3\u00B3digo do Banco | [optional] 
+**numero_agencia** | **string** | N\u00C3\u00BAmero da Ag\u00C3\u00AAncia | [optional] 
+**digito_agencia** | **string** | D\u00C3\u00ADgito da Ag\u00C3\u00AAncia | [optional] 
+**numero_conta** | **string** | N\u00C3\u00BAmero da Conta | [optional] 
+**digito_conta** | **string** | D\u00C3\u00ADgito da Conta | [optional] 
+**flag_conta_poupanca** | **int** | Tipo da Conta | [optional] 
+**documento_favorecido** | **string** | Documento do Favorecido | [optional] 
+**nome_favorecido** | **string** | Nome do Favorecido | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

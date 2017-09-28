@@ -51,8 +51,9 @@ class AlterarProdutoRequest implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id_produto' => 'int',
         'id_origem_comercial' => 'int',
-        'id_produto' => 'int'
+        'limite_global' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -64,8 +65,9 @@ class AlterarProdutoRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id_produto' => 'idProduto',
         'id_origem_comercial' => 'idOrigemComercial',
-        'id_produto' => 'idProduto'
+        'limite_global' => 'limiteGlobal'
     );
   
     static function attributeMap() {
@@ -77,8 +79,9 @@ class AlterarProdutoRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id_produto' => 'setIdProduto',
         'id_origem_comercial' => 'setIdOrigemComercial',
-        'id_produto' => 'setIdProduto'
+        'limite_global' => 'setLimiteGlobal'
     );
   
     static function setters() {
@@ -90,8 +93,9 @@ class AlterarProdutoRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id_produto' => 'getIdProduto',
         'id_origem_comercial' => 'getIdOrigemComercial',
-        'id_produto' => 'getIdProduto'
+        'limite_global' => 'getLimiteGlobal'
     );
   
     static function getters() {
@@ -100,16 +104,22 @@ class AlterarProdutoRequest implements ArrayAccess
 
     
     /**
+      * $id_produto C\u00C3\u00B3digo identificador do produto.
+      * @var int
+      */
+    protected $id_produto;
+    
+    /**
       * $id_origem_comercial C\u00C3\u00B3digo identificador da origem comercial.
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $id_produto C\u00C3\u00B3digo identificador do produto.
-      * @var int
+      * $limite_global Valor do novo limite Global.
+      * @var Number
       */
-    protected $id_produto;
+    protected $limite_global;
     
 
     /**
@@ -120,9 +130,31 @@ class AlterarProdutoRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_origem_comercial = $data["id_origem_comercial"];
             $this->id_produto = $data["id_produto"];
+            $this->id_origem_comercial = $data["id_origem_comercial"];
+            $this->limite_global = $data["limite_global"];
         }
+    }
+    
+    /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo identificador do produto.
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
+        return $this;
     }
     
     /**
@@ -147,23 +179,23 @@ class AlterarProdutoRequest implements ArrayAccess
     }
     
     /**
-     * Gets id_produto
-     * @return int
+     * Gets limite_global
+     * @return Number
      */
-    public function getIdProduto()
+    public function getLimiteGlobal()
     {
-        return $this->id_produto;
+        return $this->limite_global;
     }
   
     /**
-     * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo identificador do produto.
+     * Sets limite_global
+     * @param Number $limite_global Valor do novo limite Global.
      * @return $this
      */
-    public function setIdProduto($id_produto)
+    public function setLimiteGlobal($limite_global)
     {
         
-        $this->id_produto = $id_produto;
+        $this->limite_global = $limite_global;
         return $this;
     }
     

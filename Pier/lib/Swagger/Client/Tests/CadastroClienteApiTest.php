@@ -146,19 +146,9 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
-     *
-     * Apresenta os detalhes de uma determinada Pessoa
-     *
-     */
-    public function test_consultarUsingGET11() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET12
      *
-     * Apresenta os dados de uma determinada Pessoa
+     * Apresenta os detalhes de uma determinada Pessoa
      *
      */
     public function test_consultarUsingGET12() {
@@ -166,22 +156,32 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET17
+     * Test case for consultarUsingGET13
      *
-     * Apresenta os dados de um determinado Telefone
+     * Apresenta os dados de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET17() {
+    public function test_consultarUsingGET13() {
 
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET18
+     *
+     * Apresenta os dados de um determinado Telefone
+     *
+     */
+    public function test_consultarUsingGET18() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET8
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET8() {
 
     }
     
@@ -216,29 +216,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET10
+     * Test case for listarUsingGET11
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET10() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET15
-     *
-     * Lista os Detalhes das Pessoas cadastradas no Emissor
-     *
-     */
-    public function test_listarUsingGET15() {
+    public function test_listarUsingGET11() {
 
     }
     
     /**
      * Test case for listarUsingGET16
      *
-     * Lista as Pessoas cadastradas no Emissor
+     * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
      */
     public function test_listarUsingGET16() {
@@ -246,12 +236,22 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET24
+     * Test case for listarUsingGET17
+     *
+     * Lista as Pessoas cadastradas no Emissor
+     *
+     */
+    public function test_listarUsingGET17() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET25
      *
      * Lista os Telefones cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET24() {
+    public function test_listarUsingGET25() {
 
     }
     

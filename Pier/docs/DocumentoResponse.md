@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | ID do Documento. | [optional] 
-**id_documento_tipo** | **int** | ID do Tipo de Documento associado. | [optional] 
-**id_documento_template** | **int** | ID do Template de Documento associado. | [optional] 
+**id_tipo_documento** | **int** | ID do Tipo de Documento associado. | [optional] 
+**id_template_documento** | **int** | ID do Template de Documento associado. | [optional] 
 **nome** | **string** | Nome do Documento. | [optional] 
 **documento** | **string** | Nome do Documento. | [optional] 
 **extensao** | **string** | Extens\u00C3\u00A3o do Documento. | [optional] 

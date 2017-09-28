@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentosApiTest
+ * DocumentoApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * DocumentosApiTest Class Doc Comment
+ * DocumentoApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DocumentosApiTest extends \PHPUnit_Framework_TestCase
+class DocumentoApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -64,6 +64,36 @@ class DocumentosApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    
+    /**
+     * Test case for atualizarUsingPUT
+     *
+     * Atualizar templates dos documentos
+     *
+     */
+    public function test_atualizarUsingPUT() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET7
+     *
+     * Consultar templates dos documentos
+     *
+     */
+    public function test_consultarUsingGET7() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET10
+     *
+     * Lista os templates dos documentos
+     *
+     */
+    public function test_listarUsingGET10() {
+
+    }
     
     /**
      * Test case for salvarUsingPOST5

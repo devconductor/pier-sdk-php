@@ -8,9 +8,9 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET27**](UsuarioApi.md#consultarUsingGET27) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET29**](UsuarioApi.md#consultarUsingGET29) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET32**](UsuarioApi.md#listarUsingGET32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET33**](UsuarioApi.md#listarUsingGET33) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**salvarUsingPOST19**](UsuarioApi.md#salvarUsingPOST19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET27**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET27($id)
+# **consultarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET29($id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -221,10 +221,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET27($id);
+    $result = $api_instance->consultarUsingGET29($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->consultarUsingGET27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->consultarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -295,8 +295,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET32**
-> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET32($sort, $page, $limit, $nome, $cpf, $email, $status)
+# **listarUsingGET33**
+> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET33($sort, $page, $limit, $nome, $cpf, $email, $status)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -317,10 +317,10 @@ $email = "email_example"; // string | Email do Usuario
 $status = "status_example"; // string | Status do Usuario
 
 try { 
-    $result = $api_instance->listarUsingGET32($sort, $page, $limit, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET33($sort, $page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->listarUsingGET32: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->listarUsingGET33: ', $e->getMessage(), "\n";
 }
 ?>
 ```

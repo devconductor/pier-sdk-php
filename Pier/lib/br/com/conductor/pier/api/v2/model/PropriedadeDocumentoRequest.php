@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentoTemplateRequest
+ * PropriedadeDocumentoRequest
  *
  * PHP version 5
  *
@@ -35,24 +35,25 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * DocumentoTemplateRequest Class Doc Comment
+ * PropriedadeDocumentoRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+ * @description Objeto que encapsula as propriedades do detalhamento do documento.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DocumentoTemplateRequest implements ArrayAccess
+class PropriedadeDocumentoRequest implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_tipo_documento' => 'int',
-        'template' => 'string'
+        'chave' => 'string',
+        'valor' => 'string',
+        'detalhes_tipo' => 'string'
     );
   
     static function swaggerTypes() {
@@ -64,8 +65,9 @@ class DocumentoTemplateRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_tipo_documento' => 'idTipoDocumento',
-        'template' => 'template'
+        'chave' => 'chave',
+        'valor' => 'valor',
+        'detalhes_tipo' => 'detalhesTipo'
     );
   
     static function attributeMap() {
@@ -77,8 +79,9 @@ class DocumentoTemplateRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_tipo_documento' => 'setIdTipoDocumento',
-        'template' => 'setTemplate'
+        'chave' => 'setChave',
+        'valor' => 'setValor',
+        'detalhes_tipo' => 'setDetalhesTipo'
     );
   
     static function setters() {
@@ -90,8 +93,9 @@ class DocumentoTemplateRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_tipo_documento' => 'getIdTipoDocumento',
-        'template' => 'getTemplate'
+        'chave' => 'getChave',
+        'valor' => 'getValor',
+        'detalhes_tipo' => 'getDetalhesTipo'
     );
   
     static function getters() {
@@ -100,16 +104,22 @@ class DocumentoTemplateRequest implements ArrayAccess
 
     
     /**
-      * $id_tipo_documento ID para o Tipo de Documento vinculado ao template.
-      * @var int
-      */
-    protected $id_tipo_documento;
-    
-    /**
-      * $template Template para o conte\u00C3\u00BAdo do documento.
+      * $chave Valor da propriedade do Documento.
       * @var string
       */
-    protected $template;
+    protected $chave;
+    
+    /**
+      * $valor Valor da propriedade do Documento.
+      * @var string
+      */
+    protected $valor;
+    
+    /**
+      * $detalhes_tipo Tipo da propriedade do Documento.
+      * @var string
+      */
+    protected $detalhes_tipo;
     
 
     /**
@@ -120,50 +130,75 @@ class DocumentoTemplateRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_tipo_documento = $data["id_tipo_documento"];
-            $this->template = $data["template"];
+            $this->chave = $data["chave"];
+            $this->valor = $data["valor"];
+            $this->detalhes_tipo = $data["detalhes_tipo"];
         }
     }
     
     /**
-     * Gets id_tipo_documento
-     * @return int
+     * Gets chave
+     * @return string
      */
-    public function getIdTipoDocumento()
+    public function getChave()
     {
-        return $this->id_tipo_documento;
+        return $this->chave;
     }
   
     /**
-     * Sets id_tipo_documento
-     * @param int $id_tipo_documento ID para o Tipo de Documento vinculado ao template.
+     * Sets chave
+     * @param string $chave Valor da propriedade do Documento.
      * @return $this
      */
-    public function setIdTipoDocumento($id_tipo_documento)
+    public function setChave($chave)
     {
         
-        $this->id_tipo_documento = $id_tipo_documento;
+        $this->chave = $chave;
         return $this;
     }
     
     /**
-     * Gets template
+     * Gets valor
      * @return string
      */
-    public function getTemplate()
+    public function getValor()
     {
-        return $this->template;
+        return $this->valor;
     }
   
     /**
-     * Sets template
-     * @param string $template Template para o conte\u00C3\u00BAdo do documento.
+     * Sets valor
+     * @param string $valor Valor da propriedade do Documento.
      * @return $this
      */
-    public function setTemplate($template)
+    public function setValor($valor)
     {
         
-        $this->template = $template;
+        $this->valor = $valor;
+        return $this;
+    }
+    
+    /**
+     * Gets detalhes_tipo
+     * @return string
+     */
+    public function getDetalhesTipo()
+    {
+        return $this->detalhes_tipo;
+    }
+  
+    /**
+     * Sets detalhes_tipo
+     * @param string $detalhes_tipo Tipo da propriedade do Documento.
+     * @return $this
+     */
+    public function setDetalhesTipo($detalhes_tipo)
+    {
+        $allowed_values = array("LIST", "IMAGEM", "TEXTO", "NUMERO");
+        if (!in_array($detalhes_tipo, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'detalhes_tipo', must be one of 'LIST', 'IMAGEM', 'TEXTO', 'NUMERO'");
+        }
+        $this->detalhes_tipo = $detalhes_tipo;
         return $this;
     }
     

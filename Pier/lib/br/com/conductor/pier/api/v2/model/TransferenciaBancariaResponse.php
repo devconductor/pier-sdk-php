@@ -77,7 +77,15 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_padrao' => 'string',
         'id_conta_portador' => 'int',
         'numero_estabelecimento' => 'int',
-        'valor_taxa_saque' => 'Number'
+        'valor_taxa_saque' => 'Number',
+        'banco' => 'int',
+        'numero_agencia' => 'string',
+        'digito_agencia' => 'string',
+        'numero_conta' => 'string',
+        'digito_conta' => 'string',
+        'flag_conta_poupanca' => 'int',
+        'documento_favorecido' => 'string',
+        'nome_favorecido' => 'string'
     );
   
     static function swaggerTypes() {
@@ -115,7 +123,15 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_padrao' => 'dataVencimentoPadrao',
         'id_conta_portador' => 'idContaPortador',
         'numero_estabelecimento' => 'numeroEstabelecimento',
-        'valor_taxa_saque' => 'valorTaxaSaque'
+        'valor_taxa_saque' => 'valorTaxaSaque',
+        'banco' => 'banco',
+        'numero_agencia' => 'numeroAgencia',
+        'digito_agencia' => 'digitoAgencia',
+        'numero_conta' => 'numeroConta',
+        'digito_conta' => 'digitoConta',
+        'flag_conta_poupanca' => 'flagContaPoupanca',
+        'documento_favorecido' => 'documentoFavorecido',
+        'nome_favorecido' => 'nomeFavorecido'
     );
   
     static function attributeMap() {
@@ -153,7 +169,15 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_padrao' => 'setDataVencimentoPadrao',
         'id_conta_portador' => 'setIdContaPortador',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
-        'valor_taxa_saque' => 'setValorTaxaSaque'
+        'valor_taxa_saque' => 'setValorTaxaSaque',
+        'banco' => 'setBanco',
+        'numero_agencia' => 'setNumeroAgencia',
+        'digito_agencia' => 'setDigitoAgencia',
+        'numero_conta' => 'setNumeroConta',
+        'digito_conta' => 'setDigitoConta',
+        'flag_conta_poupanca' => 'setFlagContaPoupanca',
+        'documento_favorecido' => 'setDocumentoFavorecido',
+        'nome_favorecido' => 'setNomeFavorecido'
     );
   
     static function setters() {
@@ -191,7 +215,15 @@ class TransferenciaBancariaResponse implements ArrayAccess
         'data_vencimento_padrao' => 'getDataVencimentoPadrao',
         'id_conta_portador' => 'getIdContaPortador',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
-        'valor_taxa_saque' => 'getValorTaxaSaque'
+        'valor_taxa_saque' => 'getValorTaxaSaque',
+        'banco' => 'getBanco',
+        'numero_agencia' => 'getNumeroAgencia',
+        'digito_agencia' => 'getDigitoAgencia',
+        'numero_conta' => 'getNumeroConta',
+        'digito_conta' => 'getDigitoConta',
+        'flag_conta_poupanca' => 'getFlagContaPoupanca',
+        'documento_favorecido' => 'getDocumentoFavorecido',
+        'nome_favorecido' => 'getNomeFavorecido'
     );
   
     static function getters() {
@@ -361,6 +393,54 @@ class TransferenciaBancariaResponse implements ArrayAccess
       */
     protected $valor_taxa_saque;
     
+    /**
+      * $banco C\u00C3\u00B3digo do Banco
+      * @var int
+      */
+    protected $banco;
+    
+    /**
+      * $numero_agencia N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+      * @var string
+      */
+    protected $numero_agencia;
+    
+    /**
+      * $digito_agencia D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+      * @var string
+      */
+    protected $digito_agencia;
+    
+    /**
+      * $numero_conta N\u00C3\u00BAmero da Conta
+      * @var string
+      */
+    protected $numero_conta;
+    
+    /**
+      * $digito_conta D\u00C3\u00ADgito da Conta
+      * @var string
+      */
+    protected $digito_conta;
+    
+    /**
+      * $flag_conta_poupanca Tipo da Conta
+      * @var int
+      */
+    protected $flag_conta_poupanca;
+    
+    /**
+      * $documento_favorecido Documento do Favorecido
+      * @var string
+      */
+    protected $documento_favorecido;
+    
+    /**
+      * $nome_favorecido Nome do Favorecido
+      * @var string
+      */
+    protected $nome_favorecido;
+    
 
     /**
      * Constructor
@@ -397,6 +477,14 @@ class TransferenciaBancariaResponse implements ArrayAccess
             $this->id_conta_portador = $data["id_conta_portador"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
             $this->valor_taxa_saque = $data["valor_taxa_saque"];
+            $this->banco = $data["banco"];
+            $this->numero_agencia = $data["numero_agencia"];
+            $this->digito_agencia = $data["digito_agencia"];
+            $this->numero_conta = $data["numero_conta"];
+            $this->digito_conta = $data["digito_conta"];
+            $this->flag_conta_poupanca = $data["flag_conta_poupanca"];
+            $this->documento_favorecido = $data["documento_favorecido"];
+            $this->nome_favorecido = $data["nome_favorecido"];
         }
     }
     
@@ -964,6 +1052,174 @@ class TransferenciaBancariaResponse implements ArrayAccess
     {
         
         $this->valor_taxa_saque = $valor_taxa_saque;
+        return $this;
+    }
+    
+    /**
+     * Gets banco
+     * @return int
+     */
+    public function getBanco()
+    {
+        return $this->banco;
+    }
+  
+    /**
+     * Sets banco
+     * @param int $banco C\u00C3\u00B3digo do Banco
+     * @return $this
+     */
+    public function setBanco($banco)
+    {
+        
+        $this->banco = $banco;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_agencia
+     * @return string
+     */
+    public function getNumeroAgencia()
+    {
+        return $this->numero_agencia;
+    }
+  
+    /**
+     * Sets numero_agencia
+     * @param string $numero_agencia N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+     * @return $this
+     */
+    public function setNumeroAgencia($numero_agencia)
+    {
+        
+        $this->numero_agencia = $numero_agencia;
+        return $this;
+    }
+    
+    /**
+     * Gets digito_agencia
+     * @return string
+     */
+    public function getDigitoAgencia()
+    {
+        return $this->digito_agencia;
+    }
+  
+    /**
+     * Sets digito_agencia
+     * @param string $digito_agencia D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+     * @return $this
+     */
+    public function setDigitoAgencia($digito_agencia)
+    {
+        
+        $this->digito_agencia = $digito_agencia;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_conta
+     * @return string
+     */
+    public function getNumeroConta()
+    {
+        return $this->numero_conta;
+    }
+  
+    /**
+     * Sets numero_conta
+     * @param string $numero_conta N\u00C3\u00BAmero da Conta
+     * @return $this
+     */
+    public function setNumeroConta($numero_conta)
+    {
+        
+        $this->numero_conta = $numero_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets digito_conta
+     * @return string
+     */
+    public function getDigitoConta()
+    {
+        return $this->digito_conta;
+    }
+  
+    /**
+     * Sets digito_conta
+     * @param string $digito_conta D\u00C3\u00ADgito da Conta
+     * @return $this
+     */
+    public function setDigitoConta($digito_conta)
+    {
+        
+        $this->digito_conta = $digito_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_conta_poupanca
+     * @return int
+     */
+    public function getFlagContaPoupanca()
+    {
+        return $this->flag_conta_poupanca;
+    }
+  
+    /**
+     * Sets flag_conta_poupanca
+     * @param int $flag_conta_poupanca Tipo da Conta
+     * @return $this
+     */
+    public function setFlagContaPoupanca($flag_conta_poupanca)
+    {
+        
+        $this->flag_conta_poupanca = $flag_conta_poupanca;
+        return $this;
+    }
+    
+    /**
+     * Gets documento_favorecido
+     * @return string
+     */
+    public function getDocumentoFavorecido()
+    {
+        return $this->documento_favorecido;
+    }
+  
+    /**
+     * Sets documento_favorecido
+     * @param string $documento_favorecido Documento do Favorecido
+     * @return $this
+     */
+    public function setDocumentoFavorecido($documento_favorecido)
+    {
+        
+        $this->documento_favorecido = $documento_favorecido;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_favorecido
+     * @return string
+     */
+    public function getNomeFavorecido()
+    {
+        return $this->nome_favorecido;
+    }
+  
+    /**
+     * Sets nome_favorecido
+     * @param string $nome_favorecido Nome do Favorecido
+     * @return $this
+     */
+    public function setNomeFavorecido($nome_favorecido)
+    {
+        
+        $this->nome_favorecido = $nome_favorecido;
         return $this;
     }
     

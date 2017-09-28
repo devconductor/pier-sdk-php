@@ -86,6 +86,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for alterarProdutoUsingPOST
+     *
+     * Altera o produto associado \u00C3\u00A0 conta.
+     *
+     */
+    public function test_alterarProdutoUsingPOST() {
+
+    }
+    
+    /**
      * Test case for alterarTitularUsingPOST
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
@@ -236,22 +246,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET27
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET27() {
 
     }
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET28
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET28() {
 
     }
     
@@ -406,22 +416,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET30
+     * Test case for listarUsingGET31
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET30() {
+    public function test_listarUsingGET31() {
 
     }
     
     /**
-     * Test case for listarUsingGET31
+     * Test case for listarUsingGET32
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET31() {
+    public function test_listarUsingGET32() {
 
     }
     

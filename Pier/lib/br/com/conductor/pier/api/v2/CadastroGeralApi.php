@@ -492,7 +492,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET13
+     * consultarUsingGET14
      *
      * Apresenta os dados de um determinado Produto
      *
@@ -500,15 +500,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13($id)
+    public function consultarUsingGET14($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET13WithHttpInfo
+     * consultarUsingGET14WithHttpInfo
      *
      * Apresenta os dados de um determinado Produto
      *
@@ -516,12 +516,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13WithHttpInfo($id)
+    public function consultarUsingGET14WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET14');
         }
   
         // parse inputs
@@ -578,121 +578,6 @@ class CadastroGeralApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET19
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET19($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET19WithHttpInfo ($sort, $page, $limit, $id, $descricao);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET19WithHttpInfo
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET19WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/api/tipos-ajustes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if (is_array($sort)) {
-            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
-        }
-        
-        if ($sort !== null) {
-            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id !== null) {
-            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
-        }// query params
-        
-        if ($descricao !== null) {
-            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -799,6 +684,121 @@ class CadastroGeralApi
     /**
      * consultarUsingGET20
      *
+     * Lista os tipos de ajustes do emissor 
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
+     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET20($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($sort, $page, $limit, $id, $descricao);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET20WithHttpInfo
+     *
+     * Lista os tipos de ajustes do emissor 
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
+     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-ajustes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($descricao !== null) {
+            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET21
+     *
      * Lista os tipos de boletos do emissor 
      *
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
@@ -810,15 +810,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
+    public function consultarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($sort, $page, $limit, $id, $descricao, $banco);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $descricao, $banco);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET20WithHttpInfo
+     * consultarUsingGET21WithHttpInfo
      *
      * Lista os tipos de boletos do emissor 
      *
@@ -831,7 +831,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
+    public function consultarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
     {
         
   
@@ -918,7 +918,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET21
+     * consultarUsingGET22
      *
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
@@ -926,15 +926,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21($id)
+    public function consultarUsingGET22($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET21WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
@@ -942,12 +942,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21WithHttpInfo($id)
+    public function consultarUsingGET22WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
         }
   
         // parse inputs
@@ -1015,15 +1015,17 @@ class CadastroGeralApi
     /**
      * consultarUsingGET23
      *
-     * Apresenta os dados de um determinado Tipo de Telefone
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) (required)
-     * @return \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). (required)
+     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). (required)
+     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id)
+    public function consultarUsingGET23($id_cartao, $id_estabelecimento, $codigo_processamento)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id_cartao, $id_estabelecimento, $codigo_processamento);
         return $response; 
     }
 
@@ -1031,18 +1033,127 @@ class CadastroGeralApi
     /**
      * consultarUsingGET23WithHttpInfo
      *
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). (required)
+     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). (required)
+     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET23WithHttpInfo($id_cartao, $id_estabelecimento, $codigo_processamento)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarUsingGET23');
+        }
+        // verify the required parameter 'id_estabelecimento' is set
+        if ($id_estabelecimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_estabelecimento when calling consultarUsingGET23');
+        }
+        // verify the required parameter 'codigo_processamento' is set
+        if ($codigo_processamento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $codigo_processamento when calling consultarUsingGET23');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-operacoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_cartao !== null) {
+            $queryParams['idCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
+        }// query params
+        
+        if ($id_estabelecimento !== null) {
+            $queryParams['idEstabelecimento'] = $this->apiClient->getSerializer()->toQueryValue($id_estabelecimento);
+        }// query params
+        
+        if ($codigo_processamento !== null) {
+            $queryParams['codigoProcessamento'] = $this->apiClient->getSerializer()->toQueryValue($codigo_processamento);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoOperacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET25
+     *
+     * Apresenta os dados de um determinado Tipo de Telefone
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET25($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET25WithHttpInfo
+     *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id)
+    public function consultarUsingGET25WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -2257,7 +2368,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET18
+     * listarUsingGET19
      *
      * Lista os Portadores existentes
      *
@@ -2277,15 +2388,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PagePortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET18($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
+    public function listarUsingGET19($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET18WithHttpInfo
+     * listarUsingGET19WithHttpInfo
      *
      * Lista os Portadores existentes
      *
@@ -2305,7 +2416,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET18WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
+    public function listarUsingGET19WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
     {
         
   
@@ -2411,127 +2522,6 @@ class CadastroGeralApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePortadorResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET19
-     *
-     * Lista os Produtos do Emissor
-     *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
-     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
-     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageProdutoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET19($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET19WithHttpInfo
-     *
-     * Lista os Produtos do Emissor
-     *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
-     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
-     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageProdutoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET19WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/api/produtos";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if (is_array($sort)) {
-            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
-        }
-        
-        if ($sort !== null) {
-            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($nome !== null) {
-            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
-        }// query params
-        
-        if ($status !== null) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
-        }// query params
-        
-        if ($id_fantasia_basica !== null) {
-            $queryParams['idFantasiaBasica'] = $this->apiClient->getSerializer()->toQueryValue($id_fantasia_basica);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageProdutoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageProdutoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageProdutoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2670,6 +2660,127 @@ class CadastroGeralApi
     /**
      * listarUsingGET20
      *
+     * Lista os Produtos do Emissor
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
+     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageProdutoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET20($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET20WithHttpInfo
+     *
+     * Lista os Produtos do Emissor
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)
+     * @param int $status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)
+     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageProdutoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/produtos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }// query params
+        
+        if ($id_fantasia_basica !== null) {
+            $queryParams['idFantasiaBasica'] = $this->apiClient->getSerializer()->toQueryValue($id_fantasia_basica);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageProdutoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageProdutoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageProdutoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET21
+     *
      * Lista promotores cadastrados na base do emissor
      *
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
@@ -2683,15 +2794,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PagePromotorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
+    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET21WithHttpInfo
      *
      * Lista promotores cadastrados na base do emissor
      *
@@ -2706,7 +2817,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePromotorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
+    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
     {
         
   
@@ -2801,7 +2912,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET26
+     * listarUsingGET27
      *
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
@@ -2813,15 +2924,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET26WithHttpInfo
+     * listarUsingGET27WithHttpInfo
      *
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
@@ -2833,7 +2944,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -2916,7 +3027,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET28
+     * listarUsingGET29
      *
      * Lista os Tipos de Telefones
      *
@@ -2928,15 +3039,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET29($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET28WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
      * Lista os Tipos de Telefones
      *
@@ -2948,7 +3059,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -3134,7 +3245,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET33
+     * listarUsingGET34
      *
      * Listar Vencimentos
      *
@@ -3145,15 +3256,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33($sort = null, $page = null, $limit = null, $data_vencimento = null)
+    public function listarUsingGET34($sort = null, $page = null, $limit = null, $data_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET33WithHttpInfo ($sort, $page, $limit, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET34WithHttpInfo ($sort, $page, $limit, $data_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET33WithHttpInfo
+     * listarUsingGET34WithHttpInfo
      *
      * Listar Vencimentos
      *
@@ -3164,7 +3275,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33WithHttpInfo($sort = null, $page = null, $limit = null, $data_vencimento = null)
+    public function listarUsingGET34WithHttpInfo($sort = null, $page = null, $limit = null, $data_vencimento = null)
     {
         
   

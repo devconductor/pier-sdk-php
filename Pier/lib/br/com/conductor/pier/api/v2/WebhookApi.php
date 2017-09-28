@@ -213,7 +213,7 @@ class WebhookApi
     }
     
     /**
-     * consultarUsingGET28
+     * consultarUsingGET30
      *
      * Consultar Webhook
      *
@@ -221,15 +221,15 @@ class WebhookApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET28($id)
+    public function consultarUsingGET30($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET28WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET30WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET28WithHttpInfo
+     * consultarUsingGET30WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -237,12 +237,12 @@ class WebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET28WithHttpInfo($id)
+    public function consultarUsingGET30WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET28');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET30');
         }
   
         // parse inputs
@@ -308,7 +308,7 @@ class WebhookApi
     }
     
     /**
-     * listarUsingGET34
+     * listarUsingGET35
      *
      * Lista os Webhooks
      *
@@ -322,15 +322,15 @@ class WebhookApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET34($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET35($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET34WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET35WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET34WithHttpInfo
+     * listarUsingGET35WithHttpInfo
      *
      * Lista os Webhooks
      *
@@ -344,7 +344,7 @@ class WebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET34WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET35WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   

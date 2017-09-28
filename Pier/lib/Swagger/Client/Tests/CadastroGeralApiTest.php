@@ -106,22 +106,12 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET14
      *
      * Apresenta os dados de um determinado Produto
      *
      */
-    public function test_consultarUsingGET13() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET19
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET14() {
 
     }
     
@@ -138,7 +128,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET20
      *
-     * Lista os tipos de boletos do emissor 
+     * Lista os tipos de ajustes do emissor 
      *
      */
     public function test_consultarUsingGET20() {
@@ -148,7 +138,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET21
      *
-     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     * Lista os tipos de boletos do emissor 
      *
      */
     public function test_consultarUsingGET21() {
@@ -156,12 +146,32 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarUsingGET22
+     *
+     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     *
+     */
+    public function test_consultarUsingGET22() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET23
+     *
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultarUsingGET23() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET25
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
      */
-    public function test_consultarUsingGET23() {
+    public function test_consultarUsingGET25() {
 
     }
     
@@ -276,19 +286,9 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET18
-     *
-     * Lista os Portadores existentes
-     *
-     */
-    public function test_listarUsingGET18() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET19
      *
-     * Lista os Produtos do Emissor
+     * Lista os Portadores existentes
      *
      */
     public function test_listarUsingGET19() {
@@ -308,7 +308,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET20
      *
-     * Lista promotores cadastrados na base do emissor
+     * Lista os Produtos do Emissor
      *
      */
     public function test_listarUsingGET20() {
@@ -316,22 +316,32 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET26
+     * Test case for listarUsingGET21
      *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Lista promotores cadastrados na base do emissor
      *
      */
-    public function test_listarUsingGET26() {
+    public function test_listarUsingGET21() {
 
     }
     
     /**
-     * Test case for listarUsingGET28
+     * Test case for listarUsingGET27
+     *
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     *
+     */
+    public function test_listarUsingGET27() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET29
      *
      * Lista os Tipos de Telefones
      *
      */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET29() {
 
     }
     
@@ -346,12 +356,12 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET33
+     * Test case for listarUsingGET34
      *
      * Listar Vencimentos
      *
      */
-    public function test_listarUsingGET33() {
+    public function test_listarUsingGET34() {
 
     }
     

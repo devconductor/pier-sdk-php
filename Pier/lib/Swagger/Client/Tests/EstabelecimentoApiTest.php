@@ -66,42 +66,42 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET19() {
 
     }
     
     /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarUsingGET9
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarUsingGET9() {
 
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET12
      *
      * Lista Estabelecimentos
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET12() {
 
     }
     
     /**
-     * Test case for listarUsingGET25
+     * Test case for listarUsingGET26
      *
      * Lista os Terminais cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET25() {
+    public function test_listarUsingGET26() {
 
     }
     

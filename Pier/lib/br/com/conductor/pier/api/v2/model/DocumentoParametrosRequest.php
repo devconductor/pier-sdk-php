@@ -54,7 +54,7 @@ class DocumentoParametrosRequest implements ArrayAccess
         'id_tipo_documento' => 'int',
         'id_template_documento' => 'int',
         'nome' => 'string',
-        'parametros_conteudo' => 'map[string,object]'
+        'parametros_conteudo' => '\br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]'
     );
   
     static function swaggerTypes() {
@@ -126,8 +126,8 @@ class DocumentoParametrosRequest implements ArrayAccess
     protected $nome;
     
     /**
-      * $parametros_conteudo Mapa de par\u00C3\u00A2metros para montagem do documento.
-      * @var map[string,object]
+      * $parametros_conteudo Lista de par\u00C3\u00A2metros para montagem do documento.
+      * @var \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
       */
     protected $parametros_conteudo;
     
@@ -212,7 +212,7 @@ class DocumentoParametrosRequest implements ArrayAccess
     
     /**
      * Gets parametros_conteudo
-     * @return map[string,object]
+     * @return \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
      */
     public function getParametrosConteudo()
     {
@@ -221,7 +221,7 @@ class DocumentoParametrosRequest implements ArrayAccess
   
     /**
      * Sets parametros_conteudo
-     * @param map[string,object] $parametros_conteudo Mapa de par\u00C3\u00A2metros para montagem do documento.
+     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $parametros_conteudo Lista de par\u00C3\u00A2metros para montagem do documento.
      * @return $this
      */
     public function setParametrosConteudo($parametros_conteudo)

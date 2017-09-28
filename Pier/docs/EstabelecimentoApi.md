@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET18**](EstabelecimentoApi.md#consultarUsingGET18) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET8**](EstabelecimentoApi.md#consultarUsingGET8) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET11**](EstabelecimentoApi.md#listarUsingGET11) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET9**](EstabelecimentoApi.md#consultarUsingGET9) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**listarUsingGET12**](EstabelecimentoApi.md#listarUsingGET12) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-# **consultarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET18($id)
+# **consultarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET19($id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -26,10 +26,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET18($id);
+    $result = $api_instance->consultarUsingGET19($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET8($id)
+# **consultarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET9($id)
 
 Consultar estabelecimento por id
 
@@ -71,10 +71,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET8($id);
+    $result = $api_instance->consultarUsingGET9($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET11($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
+# **listarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET12($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
 
 Lista Estabelecimentos
 
@@ -137,10 +137,10 @@ $flag_cartao_digitado = 56; // int | Indica se o estabelecimento poder\u00C3\u00
 $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 
 try { 
-    $result = $api_instance->listarUsingGET11($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+    $result = $api_instance->listarUsingGET12($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -187,8 +187,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET25($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET26($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -209,10 +209,10 @@ $numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a q
 $id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
