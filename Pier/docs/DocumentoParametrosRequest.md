@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_tipo_documento** | **int** | ID para o tipo de documento. | [optional] 
 **id_template_documento** | **int** | ID para o template do documento. | [optional] 
 **nome** | **string** | Nome para o arquivo. | [optional] 
 **parametros_conteudo** | [**\br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]**](PropriedadeDocumentoRequest.md) | Lista de par\u00C3\u00A2metros para montagem do documento. | [optional] 

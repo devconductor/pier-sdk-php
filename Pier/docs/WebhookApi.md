@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT11**](WebhookApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET30**](WebhookApi.md#consultarUsingGET30) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET35**](WebhookApi.md#listarUsingGET35) | **GET** /api/webhooks | Lista os Webhooks
+[**alterarUsingPUT12**](WebhookApi.md#alterarUsingPUT12) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**consultarUsingGET32**](WebhookApi.md#consultarUsingGET32) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET37**](WebhookApi.md#listarUsingGET37) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST20**](WebhookApi.md#salvarUsingPOST20) | **POST** /api/webhooks | Salvar Webhook
 
 
-# **alterarUsingPUT11**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse alterarUsingPUT11($id, $tipo_evento, $url, $status)
+# **alterarUsingPUT12**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse alterarUsingPUT12($id, $tipo_evento, $url, $status)
 
 Alterar Webhook
 
@@ -29,10 +29,10 @@ $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 $status = "status_example"; // string | Status
 
 try { 
-    $result = $api_instance->alterarUsingPUT11($id, $tipo_evento, $url, $status);
+    $result = $api_instance->alterarUsingPUT12($id, $tipo_evento, $url, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->alterarUsingPUT11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->alterarUsingPUT12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -61,8 +61,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET30($id)
+# **consultarUsingGET32**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET32($id)
 
 Consultar Webhook
 
@@ -77,10 +77,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhookApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET30($id);
+    $result = $api_instance->consultarUsingGET32($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->consultarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->consultarUsingGET32: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -106,8 +106,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET35**
-> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET35($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET37**
+> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET37($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -128,10 +128,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET35($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET37($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->listarUsingGET35: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->listarUsingGET37: ', $e->getMessage(), "\n";
 }
 ?>
 ```

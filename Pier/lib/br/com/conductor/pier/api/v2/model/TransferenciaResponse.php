@@ -54,11 +54,8 @@ class TransferenciaResponse implements ArrayAccess
         'id' => 'int',
         'data_transferencia' => 'string',
         'id_conta_origem' => 'int',
-        'nome_pessoa_origem' => 'string',
         'id_conta_destino' => 'int',
-        'nome_pessoa_destino' => 'string',
-        'valor_transferencia' => 'Number',
-        'valor_tarifa' => 'Number'
+        'valor_transferencia' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -73,11 +70,8 @@ class TransferenciaResponse implements ArrayAccess
         'id' => 'id',
         'data_transferencia' => 'dataTransferencia',
         'id_conta_origem' => 'idContaOrigem',
-        'nome_pessoa_origem' => 'nomePessoaOrigem',
         'id_conta_destino' => 'idContaDestino',
-        'nome_pessoa_destino' => 'nomePessoaDestino',
-        'valor_transferencia' => 'valorTransferencia',
-        'valor_tarifa' => 'valorTarifa'
+        'valor_transferencia' => 'valorTransferencia'
     );
   
     static function attributeMap() {
@@ -92,11 +86,8 @@ class TransferenciaResponse implements ArrayAccess
         'id' => 'setId',
         'data_transferencia' => 'setDataTransferencia',
         'id_conta_origem' => 'setIdContaOrigem',
-        'nome_pessoa_origem' => 'setNomePessoaOrigem',
         'id_conta_destino' => 'setIdContaDestino',
-        'nome_pessoa_destino' => 'setNomePessoaDestino',
-        'valor_transferencia' => 'setValorTransferencia',
-        'valor_tarifa' => 'setValorTarifa'
+        'valor_transferencia' => 'setValorTransferencia'
     );
   
     static function setters() {
@@ -111,11 +102,8 @@ class TransferenciaResponse implements ArrayAccess
         'id' => 'getId',
         'data_transferencia' => 'getDataTransferencia',
         'id_conta_origem' => 'getIdContaOrigem',
-        'nome_pessoa_origem' => 'getNomePessoaOrigem',
         'id_conta_destino' => 'getIdContaDestino',
-        'nome_pessoa_destino' => 'getNomePessoaDestino',
-        'valor_transferencia' => 'getValorTransferencia',
-        'valor_tarifa' => 'getValorTarifa'
+        'valor_transferencia' => 'getValorTransferencia'
     );
   
     static function getters() {
@@ -142,34 +130,16 @@ class TransferenciaResponse implements ArrayAccess
     protected $id_conta_origem;
     
     /**
-      * $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
-      * @var string
-      */
-    protected $nome_pessoa_origem;
-    
-    /**
       * $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
       * @var int
       */
     protected $id_conta_destino;
     
     /**
-      * $nome_pessoa_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cliente Portador Cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-      * @var string
-      */
-    protected $nome_pessoa_destino;
-    
-    /**
       * $valor_transferencia Valor estabelecido para ser transferido.
       * @var Number
       */
     protected $valor_transferencia;
-    
-    /**
-      * $valor_tarifa Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
-      * @var Number
-      */
-    protected $valor_tarifa;
     
 
     /**
@@ -183,11 +153,8 @@ class TransferenciaResponse implements ArrayAccess
             $this->id = $data["id"];
             $this->data_transferencia = $data["data_transferencia"];
             $this->id_conta_origem = $data["id_conta_origem"];
-            $this->nome_pessoa_origem = $data["nome_pessoa_origem"];
             $this->id_conta_destino = $data["id_conta_destino"];
-            $this->nome_pessoa_destino = $data["nome_pessoa_destino"];
             $this->valor_transferencia = $data["valor_transferencia"];
-            $this->valor_tarifa = $data["valor_tarifa"];
         }
     }
     
@@ -255,27 +222,6 @@ class TransferenciaResponse implements ArrayAccess
     }
     
     /**
-     * Gets nome_pessoa_origem
-     * @return string
-     */
-    public function getNomePessoaOrigem()
-    {
-        return $this->nome_pessoa_origem;
-    }
-  
-    /**
-     * Sets nome_pessoa_origem
-     * @param string $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
-     * @return $this
-     */
-    public function setNomePessoaOrigem($nome_pessoa_origem)
-    {
-        
-        $this->nome_pessoa_origem = $nome_pessoa_origem;
-        return $this;
-    }
-    
-    /**
      * Gets id_conta_destino
      * @return int
      */
@@ -297,27 +243,6 @@ class TransferenciaResponse implements ArrayAccess
     }
     
     /**
-     * Gets nome_pessoa_destino
-     * @return string
-     */
-    public function getNomePessoaDestino()
-    {
-        return $this->nome_pessoa_destino;
-    }
-  
-    /**
-     * Sets nome_pessoa_destino
-     * @param string $nome_pessoa_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cliente Portador Cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-     * @return $this
-     */
-    public function setNomePessoaDestino($nome_pessoa_destino)
-    {
-        
-        $this->nome_pessoa_destino = $nome_pessoa_destino;
-        return $this;
-    }
-    
-    /**
      * Gets valor_transferencia
      * @return Number
      */
@@ -335,27 +260,6 @@ class TransferenciaResponse implements ArrayAccess
     {
         
         $this->valor_transferencia = $valor_transferencia;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_tarifa
-     * @return Number
-     */
-    public function getValorTarifa()
-    {
-        return $this->valor_tarifa;
-    }
-  
-    /**
-     * Sets valor_tarifa
-     * @param Number $valor_tarifa Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
-     * @return $this
-     */
-    public function setValorTarifa($valor_tarifa)
-    {
-        
-        $this->valor_tarifa = $valor_tarifa;
         return $this;
     }
     

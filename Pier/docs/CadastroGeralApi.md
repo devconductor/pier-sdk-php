@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](CadastroGeralApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarOrigemComercialUsingGET**](CadastroGeralApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarTaxaAntecipacaoUsingGET**](CadastroGeralApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-[**consultarUsingGET14**](CadastroGeralApi.md#consultarUsingGET14) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultarUsingGET15**](CadastroGeralApi.md#consultarUsingGET15) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
 [**consultarUsingGET2**](CadastroGeralApi.md#consultarUsingGET2) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultarUsingGET20**](CadastroGeralApi.md#consultarUsingGET20) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
-[**consultarUsingGET21**](CadastroGeralApi.md#consultarUsingGET21) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultarUsingGET22**](CadastroGeralApi.md#consultarUsingGET22) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET23**](CadastroGeralApi.md#consultarUsingGET23) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET25**](CadastroGeralApi.md#consultarUsingGET25) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET21**](CadastroGeralApi.md#consultarUsingGET21) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultarUsingGET22**](CadastroGeralApi.md#consultarUsingGET22) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultarUsingGET23**](CadastroGeralApi.md#consultarUsingGET23) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultarUsingGET24**](CadastroGeralApi.md#consultarUsingGET24) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET26**](CadastroGeralApi.md#consultarUsingGET26) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**consultarUsingGET3**](CadastroGeralApi.md#consultarUsingGET3) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**desativarUsoExteriorUsingPOST**](CadastroGeralApi.md#desativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listarContasPorPessoaUsingGET**](CadastroGeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
@@ -26,14 +26,14 @@ Method | HTTP request | Description
 [**listarOrigensComerciaisUsingGET**](CadastroGeralApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarParentescosUsingGET**](CadastroGeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | Lista os Parentescos
 [**listarProfissoesUsingGET**](CadastroGeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listarUsingGET19**](CadastroGeralApi.md#listarUsingGET19) | **GET** /api/portadores | Lista os Portadores existentes
 [**listarUsingGET2**](CadastroGeralApi.md#listarUsingGET2) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET20**](CadastroGeralApi.md#listarUsingGET20) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET21**](CadastroGeralApi.md#listarUsingGET21) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
-[**listarUsingGET27**](CadastroGeralApi.md#listarUsingGET27) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET29**](CadastroGeralApi.md#listarUsingGET29) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET20**](CadastroGeralApi.md#listarUsingGET20) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET21**](CadastroGeralApi.md#listarUsingGET21) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET22**](CadastroGeralApi.md#listarUsingGET22) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listarUsingGET28**](CadastroGeralApi.md#listarUsingGET28) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 [**listarUsingGET3**](CadastroGeralApi.md#listarUsingGET3) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET34**](CadastroGeralApi.md#listarUsingGET34) | **GET** /api/vencimentos | Listar Vencimentos
+[**listarUsingGET30**](CadastroGeralApi.md#listarUsingGET30) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET36**](CadastroGeralApi.md#listarUsingGET36) | **GET** /api/vencimentos | Listar Vencimentos
 [**salvarUsingPOST2**](CadastroGeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
@@ -221,8 +221,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse consultarUsingGET14($id)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse consultarUsingGET15($id)
 
 Apresenta os dados de um determinado Produto
 
@@ -237,10 +237,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET14($id);
+    $result = $api_instance->consultarUsingGET15($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -311,8 +311,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse consultarUsingGET20($sort, $page, $limit, $id, $descricao)
+# **consultarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse consultarUsingGET21($sort, $page, $limit, $id, $descricao)
 
 Lista os tipos de ajustes do emissor 
 
@@ -331,10 +331,10 @@ $id = 789; // int | C\u00C3\u00B3digo identificador do tipo de ajuste.
 $descricao = "descricao_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
 
 try { 
-    $result = $api_instance->consultarUsingGET20($sort, $page, $limit, $id, $descricao);
+    $result = $api_instance->consultarUsingGET21($sort, $page, $limit, $id, $descricao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -364,8 +364,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse consultarUsingGET21($sort, $page, $limit, $id, $descricao, $banco)
+# **consultarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse consultarUsingGET22($sort, $page, $limit, $id, $descricao, $banco)
 
 Lista os tipos de boletos do emissor 
 
@@ -385,10 +385,10 @@ $descricao = "descricao_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do
 $banco = 789; // int | C\u00C3\u00B3digo identificador do banco.
 
 try { 
-    $result = $api_instance->consultarUsingGET21($sort, $page, $limit, $id, $descricao, $banco);
+    $result = $api_instance->consultarUsingGET22($sort, $page, $limit, $id, $descricao, $banco);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -419,8 +419,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse consultarUsingGET22($id)
+# **consultarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse consultarUsingGET23($id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -435,10 +435,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET22($id);
+    $result = $api_instance->consultarUsingGET23($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET23: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -464,8 +464,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse consultarUsingGET23($id_cartao, $id_estabelecimento, $codigo_processamento)
+# **consultarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse consultarUsingGET24($id_cartao, $id_estabelecimento, $codigo_processamento)
 
 Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -482,10 +482,10 @@ $id_estabelecimento = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\
 $codigo_processamento = "codigo_processamento_example"; // string | C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->consultarUsingGET23($id_cartao, $id_estabelecimento, $codigo_processamento);
+    $result = $api_instance->consultarUsingGET24($id_cartao, $id_estabelecimento, $codigo_processamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -513,8 +513,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse consultarUsingGET25($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse consultarUsingGET26($id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -529,10 +529,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET25($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->consultarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1097,75 +1097,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\PagePortadorResponse listarUsingGET19($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
-
-Lista os Portadores existentes
-
-Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-$id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-$id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-$id_parentesco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-$tipo_portador = "tipo_portador_example"; // string | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-$nome_impresso = "nome_impresso_example"; // string | Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-$id_tipo_cartao = 789; // int | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-$flag_ativo = 56; // int | Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-$data_cadastro_portador = "data_cadastro_portador_example"; // string | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-$data_cancelamento_portador = "data_cancelamento_portador_example"; // string | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-
-try { 
-    $result = $api_instance->listarUsingGET19($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET19: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
- **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
- **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
- **id_parentesco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
- **tipo_portador** | **string**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
- **nome_impresso** | **string**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
- **id_tipo_cartao** | **int**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
- **flag_ativo** | **int**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
- **data_cadastro_portador** | **string**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **data_cancelamento_portador** | **string**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PagePortadorResponse**](PagePortadorResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **listarUsingGET2**
 > \br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse listarUsingGET2($sort, $page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
 
@@ -1224,7 +1155,76 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PageProdutoResponse listarUsingGET20($sort, $page, $limit, $nome, $status, $id_fantasia_basica)
+> \br.com.conductor.pier.api.v2.model\PagePortadorResponse listarUsingGET20($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
+
+Lista os Portadores existentes
+
+Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+$id_produto = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+$id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+$id_parentesco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+$tipo_portador = "tipo_portador_example"; // string | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+$nome_impresso = "nome_impresso_example"; // string | Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+$id_tipo_cartao = 789; // int | Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+$flag_ativo = 56; // int | Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+$data_cadastro_portador = "data_cadastro_portador_example"; // string | Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+$data_cancelamento_portador = "data_cancelamento_portador_example"; // string | Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+
+try { 
+    $result = $api_instance->listarUsingGET20($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET20: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
+ **id_produto** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
+ **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
+ **id_parentesco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
+ **tipo_portador** | **string**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
+ **nome_impresso** | **string**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
+ **id_tipo_cartao** | **int**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
+ **flag_ativo** | **int**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
+ **data_cadastro_portador** | **string**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **data_cancelamento_portador** | **string**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PagePortadorResponse**](PagePortadorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageProdutoResponse listarUsingGET21($sort, $page, $limit, $nome, $status, $id_fantasia_basica)
 
 Lista os Produtos do Emissor
 
@@ -1244,10 +1244,10 @@ $status = 56; // int | Representa o Status do Produto, onde: (\"0\": Inativo), (
 $id_fantasia_basica = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET20($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
+    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1278,8 +1278,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PagePromotorResponse listarUsingGET21($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario)
+# **listarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\PagePromotorResponse listarUsingGET22($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario)
 
 Lista promotores cadastrados na base do emissor
 
@@ -1301,10 +1301,10 @@ $id_estabelecimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\
 $id_usuario = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
 
 try { 
-    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
+    $result = $api_instance->listarUsingGET22($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1337,8 +1337,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET27**
-> \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse listarUsingGET27($sort, $page, $limit, $id, $nome)
+# **listarUsingGET28**
+> \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse listarUsingGET28($sort, $page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1357,10 +1357,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do 
 $nome = "nome_example"; // string | Nome do Tipo do Endere\u00C3\u00A7o
 
 try { 
-    $result = $api_instance->listarUsingGET27($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET28($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET28: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1378,59 +1378,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **listarUsingGET29**
-> \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse listarUsingGET29($sort, $page, $limit, $id, $nome)
-
-Lista os Tipos de Telefones
-
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-$nome = "nome_example"; // string | Nome do Tipo do Telefone
-
-try { 
-    $result = $api_instance->listarUsingGET29($sort, $page, $limit, $id, $nome);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET29: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
- **nome** | **string**| Nome do Tipo do Telefone | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1492,8 +1439,61 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET34**
-> \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse listarUsingGET34($sort, $page, $limit, $data_vencimento)
+# **listarUsingGET30**
+> \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse listarUsingGET30($sort, $page, $limit, $id, $nome)
+
+Lista os Tipos de Telefones
+
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroGeralApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+$nome = "nome_example"; // string | Nome do Tipo do Telefone
+
+try { 
+    $result = $api_instance->listarUsingGET30($sort, $page, $limit, $id, $nome);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET30: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **nome** | **string**| Nome do Tipo do Telefone | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse listarUsingGET36($sort, $page, $limit, $data_vencimento)
 
 Listar Vencimentos
 
@@ -1511,10 +1511,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $data_vencimento = "data_vencimento_example"; // string | Indica a data de vencimento das faturas
 
 try { 
-    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $data_vencimento);
+    $result = $api_instance->listarUsingGET36($sort, $page, $limit, $data_vencimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroGeralApi->listarUsingGET34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroGeralApi->listarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```

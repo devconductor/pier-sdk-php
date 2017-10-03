@@ -52,7 +52,7 @@ class DocumentoTemplateResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'id_tipo_documento' => 'int'
+        'id_tipo_template' => 'int'
     );
   
     static function swaggerTypes() {
@@ -65,7 +65,7 @@ class DocumentoTemplateResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'id_tipo_documento' => 'idTipoDocumento'
+        'id_tipo_template' => 'idTipoTemplate'
     );
   
     static function attributeMap() {
@@ -78,7 +78,7 @@ class DocumentoTemplateResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'id_tipo_documento' => 'setIdTipoDocumento'
+        'id_tipo_template' => 'setIdTipoTemplate'
     );
   
     static function setters() {
@@ -91,7 +91,7 @@ class DocumentoTemplateResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'id_tipo_documento' => 'getIdTipoDocumento'
+        'id_tipo_template' => 'getIdTipoTemplate'
     );
   
     static function getters() {
@@ -106,10 +106,10 @@ class DocumentoTemplateResponse implements ArrayAccess
     protected $id;
     
     /**
-      * $id_tipo_documento ID do Tipo de Documento.
+      * $id_tipo_template ID do Tipo de Template.
       * @var int
       */
-    protected $id_tipo_documento;
+    protected $id_tipo_template;
     
 
     /**
@@ -121,7 +121,7 @@ class DocumentoTemplateResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->id_tipo_documento = $data["id_tipo_documento"];
+            $this->id_tipo_template = $data["id_tipo_template"];
         }
     }
     
@@ -147,23 +147,23 @@ class DocumentoTemplateResponse implements ArrayAccess
     }
     
     /**
-     * Gets id_tipo_documento
+     * Gets id_tipo_template
      * @return int
      */
-    public function getIdTipoDocumento()
+    public function getIdTipoTemplate()
     {
-        return $this->id_tipo_documento;
+        return $this->id_tipo_template;
     }
   
     /**
-     * Sets id_tipo_documento
-     * @param int $id_tipo_documento ID do Tipo de Documento.
+     * Sets id_tipo_template
+     * @param int $id_tipo_template ID do Tipo de Template.
      * @return $this
      */
-    public function setIdTipoDocumento($id_tipo_documento)
+    public function setIdTipoTemplate($id_tipo_template)
     {
         
-        $this->id_tipo_documento = $id_tipo_documento;
+        $this->id_tipo_template = $id_tipo_template;
         return $this;
     }
     

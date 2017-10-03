@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET16**](StatusParametroApi.md#consultarUsingGET16) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET17**](StatusParametroApi.md#consultarUsingGET17) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET17**](StatusParametroApi.md#consultarUsingGET17) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET18**](StatusParametroApi.md#consultarUsingGET18) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listarUsingGET23**](StatusParametroApi.md#listarUsingGET23) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET24**](StatusParametroApi.md#listarUsingGET24) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET24**](StatusParametroApi.md#listarUsingGET24) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET25**](StatusParametroApi.md#listarUsingGET25) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultarEstagioCartaoUsingGET**
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET16($id)
+# **consultarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET17($id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -120,10 +120,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET16($id);
+    $result = $api_instance->consultarUsingGET17($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -149,8 +149,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET17($id)
+# **consultarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET18($id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -165,10 +165,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET17($id);
+    $result = $api_instance->consultarUsingGET18($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -308,8 +308,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET23($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
+# **listarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET24($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -337,10 +337,10 @@ $permite_desbloquear = 56; // int | Par\u00C3\u00A2metro que define se o Status 
 $permite_atribuir_como_cancelamento = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
+    $result = $api_instance->listarUsingGET24($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -379,8 +379,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET24($sort, $page, $limit, $id, $nome)
+# **listarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET25($sort, $page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -399,10 +399,10 @@ $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do status impress\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET24($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```

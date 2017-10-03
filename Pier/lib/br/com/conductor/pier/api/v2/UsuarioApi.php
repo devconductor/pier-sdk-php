@@ -312,7 +312,7 @@ class UsuarioApi
     }
     
     /**
-     * alterarUsingPUT10
+     * alterarUsingPUT11
      *
      * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
@@ -321,15 +321,15 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT10($id, $update)
+    public function alterarUsingPUT11($id, $update)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT10WithHttpInfo ($id, $update);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT11WithHttpInfo ($id, $update);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT10WithHttpInfo
+     * alterarUsingPUT11WithHttpInfo
      *
      * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
@@ -338,16 +338,16 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT10WithHttpInfo($id, $update)
+    public function alterarUsingPUT11WithHttpInfo($id, $update)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT11');
         }
         // verify the required parameter 'update' is set
         if ($update === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT10');
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling alterarUsingPUT11');
         }
   
         // parse inputs
@@ -512,7 +512,7 @@ class UsuarioApi
     }
     
     /**
-     * consultarUsingGET29
+     * consultarUsingGET31
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
@@ -520,15 +520,15 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29($id)
+    public function consultarUsingGET31($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET29WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET31WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET29WithHttpInfo
+     * consultarUsingGET31WithHttpInfo
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
@@ -536,12 +536,12 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29WithHttpInfo($id)
+    public function consultarUsingGET31WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET29');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET31');
         }
   
         // parse inputs
@@ -702,7 +702,7 @@ class UsuarioApi
     }
     
     /**
-     * listarUsingGET33
+     * listarUsingGET35
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
@@ -716,15 +716,15 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET35($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET33WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET35WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET33WithHttpInfo
+     * listarUsingGET35WithHttpInfo
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
@@ -738,7 +738,7 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET35WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   

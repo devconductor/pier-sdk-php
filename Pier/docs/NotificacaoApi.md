@@ -8,9 +8,14 @@ Method | HTTP request | Description
 [**alterarTemplateNotificacaoUsingPUT**](NotificacaoApi.md#alterarTemplateNotificacaoUsingPUT) | **PUT** /api/templates-notificacoes/{id} | Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 [**atualizarSMSUsingPOST**](NotificacaoApi.md#atualizarSMSUsingPOST) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
 [**consultarConfiguracaoUsingGET**](NotificacaoApi.md#consultarConfiguracaoUsingGET) | **GET** /api/configuracoes-email/{id} | Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+[**consultarPorEmailUsingGET**](NotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+[**consultarPorSMSUsingGET**](NotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
 [**consultarTemplateNotificacaoUsingGET**](NotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**gerarTokenUsingPOST**](NotificacaoApi.md#gerarTokenUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+[**gerarTokenEMAILUsingPOST**](NotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+[**gerarTokenSMSUsingPOST**](NotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
 [**listarConfiguracaoUsingGET**](NotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+[**listarPorEmailUsingGET**](NotificacaoApi.md#listarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+[**listarPorSMSUsingGET**](NotificacaoApi.md#listarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
 [**listarPushUsingGET**](NotificacaoApi.md#listarPushUsingGET) | **GET** /api/notificacoes/push | Listar Push
 [**listarSMSUsingGET**](NotificacaoApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -23,7 +28,8 @@ Method | HTTP request | Description
 [**salvarPushUsingPOST**](NotificacaoApi.md#salvarPushUsingPOST) | **POST** /api/notificacoes/push/apns | Enviar Push APNS
 [**salvarSMSUsingPOST**](NotificacaoApi.md#salvarSMSUsingPOST) | **POST** /api/notificacoes/sms | Enviar SMS
 [**salvarTemplateNotificacaoUsingPOST**](NotificacaoApi.md#salvarTemplateNotificacaoUsingPOST) | **POST** /api/templates-notificacoes | Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**validarTokenUsingPOST**](NotificacaoApi.md#validarTokenUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+[**validarTokenEMAILUsingPOST**](NotificacaoApi.md#validarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+[**validarTokenSMSUsingPOST**](NotificacaoApi.md#validarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
 
 
 # **alterarConfiguracaoUsingPUT**
@@ -74,7 +80,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarTemplateNotificacaoUsingPUT**
-> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto)
+> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao)
 
 Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -93,9 +99,10 @@ $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
 $tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
 $remetente = "remetente_example"; // string | Remetente
 $assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+$template_padrao = true; // bool | Template Padr\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto);
+    $result = $api_instance->alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacaoApi->alterarTemplateNotificacaoUsingPUT: ', $e->getMessage(), "\n";
@@ -114,10 +121,11 @@ Name | Type | Description  | Notes
  **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **remetente** | **string**| Remetente | [optional] 
  **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **template_padrao** | **bool**| Template Padr\u00C3\u00A3o. | [optional] 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -228,8 +236,98 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **consultarPorEmailUsingGET**
+> \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse consultarPorEmailUsingGET($id)
+
+Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+
+Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+try { 
+    $result = $api_instance->consultarPorEmailUsingGET($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->consultarPorEmailUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **consultarPorSMSUsingGET**
+> \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse consultarPorSMSUsingGET($id)
+
+Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+
+Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+try { 
+    $result = $api_instance->consultarPorSMSUsingGET($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->consultarPorSMSUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **consultarTemplateNotificacaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse consultarTemplateNotificacaoUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse consultarTemplateNotificacaoUsingGET($id)
 
 Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -260,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -273,8 +371,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **gerarTokenUsingPOST**
-> string gerarTokenUsingPOST($persist)
+# **gerarTokenEMAILUsingPOST**
+> string gerarTokenEMAILUsingPOST($email)
+
+Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+
+Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$email = "email_example"; // string | email
+
+try { 
+    $result = $api_instance->gerarTokenEMAILUsingPOST($email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->gerarTokenEMAILUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**| email | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **gerarTokenSMSUsingPOST**
+> string gerarTokenSMSUsingPOST($persist)
 
 Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
 
@@ -289,10 +432,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
 $persist = new \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist(); // \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist | persist
 
 try { 
-    $result = $api_instance->gerarTokenUsingPOST($persist);
+    $result = $api_instance->gerarTokenSMSUsingPOST($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificacaoApi->gerarTokenUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling NotificacaoApi->gerarTokenSMSUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -355,6 +498,104 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse**](PageConfiguracaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarPorEmailUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse listarPorEmailUsingGET($sort, $page, $limit)
+
+Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+
+Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+
+try { 
+    $result = $api_instance->listarPorEmailUsingGET($sort, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->listarPorEmailUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarPorSMSUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse listarPorSMSUsingGET($sort, $page, $limit)
+
+Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+
+Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+
+try { 
+    $result = $api_instance->listarPorSMSUsingGET($sort, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->listarPorSMSUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
 
 ### Authorization
 
@@ -897,7 +1138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarTemplateNotificacaoUsingPOST**
-> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto)
+> \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao)
 
 Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -915,9 +1156,10 @@ $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
 $tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
 $remetente = "remetente_example"; // string | Remetente
 $assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+$template_padrao = true; // bool | Template Padr\u00C3\u00A3o.
 
 try { 
-    $result = $api_instance->salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto);
+    $result = $api_instance->salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificacaoApi->salvarTemplateNotificacaoUsingPOST: ', $e->getMessage(), "\n";
@@ -935,10 +1177,11 @@ Name | Type | Description  | Notes
  **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **remetente** | **string**| Remetente | [optional] 
  **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **template_padrao** | **bool**| Template Padr\u00C3\u00A3o. | [optional] 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -951,8 +1194,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **validarTokenUsingPOST**
-> string validarTokenUsingPOST($request)
+# **validarTokenEMAILUsingPOST**
+> string validarTokenEMAILUsingPOST($request)
+
+Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+
+Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
+$request = new \br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist(); // \br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist | request
+
+try { 
+    $result = $api_instance->validarTokenEMAILUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificacaoApi->validarTokenEMAILUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**\br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist**](\br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist.md)| request | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validarTokenSMSUsingPOST**
+> string validarTokenSMSUsingPOST($request)
 
 Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
 
@@ -967,10 +1255,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
 $request = new \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest(); // \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest | request
 
 try { 
-    $result = $api_instance->validarTokenUsingPOST($request);
+    $result = $api_instance->validarTokenSMSUsingPOST($request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificacaoApi->validarTokenUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling NotificacaoApi->validarTokenSMSUsingPOST: ', $e->getMessage(), "\n";
 }
 ?>
 ```

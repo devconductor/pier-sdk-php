@@ -106,6 +106,26 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarPorEmailUsingGET
+     *
+     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+     *
+     */
+    public function test_consultarPorEmailUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarPorSMSUsingGET
+     *
+     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+     *
+     */
+    public function test_consultarPorSMSUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarTemplateNotificacaoUsingGET
      *
      * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -116,12 +136,22 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for gerarTokenUsingPOST
+     * Test case for gerarTokenEMAILUsingPOST
+     *
+     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+     *
+     */
+    public function test_gerarTokenEMAILUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarTokenSMSUsingPOST
      *
      * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
      *
      */
-    public function test_gerarTokenUsingPOST() {
+    public function test_gerarTokenSMSUsingPOST() {
 
     }
     
@@ -132,6 +162,26 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarConfiguracaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarPorEmailUsingGET
+     *
+     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+     *
+     */
+    public function test_listarPorEmailUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarPorSMSUsingGET
+     *
+     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+     *
+     */
+    public function test_listarPorSMSUsingGET() {
 
     }
     
@@ -256,12 +306,22 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for validarTokenUsingPOST
+     * Test case for validarTokenEMAILUsingPOST
+     *
+     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+     *
+     */
+    public function test_validarTokenEMAILUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for validarTokenSMSUsingPOST
      *
      * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
      *
      */
-    public function test_validarTokenUsingPOST() {
+    public function test_validarTokenSMSUsingPOST() {
 
     }
     

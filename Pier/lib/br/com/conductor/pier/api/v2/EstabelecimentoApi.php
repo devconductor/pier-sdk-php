@@ -92,102 +92,7 @@ class EstabelecimentoApi
   
     
     /**
-     * consultarUsingGET19
-     *
-     * Apresenta os dados de um determinado Terminal
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET19($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET19WithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET19WithHttpInfo
-     *
-     * Apresenta os dados de um determinado Terminal
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET19WithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET19');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/terminais/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\TerminalResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TerminalResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TerminalResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET9
+     * consultarUsingGET10
      *
      * Consultar estabelecimento por id
      *
@@ -195,15 +100,15 @@ class EstabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9($id)
+    public function consultarUsingGET10($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET9WithHttpInfo
+     * consultarUsingGET10WithHttpInfo
      *
      * Consultar estabelecimento por id
      *
@@ -211,12 +116,12 @@ class EstabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9WithHttpInfo($id)
+    public function consultarUsingGET10WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
         }
   
         // parse inputs
@@ -282,7 +187,102 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET12
+     * consultarUsingGET20
+     *
+     * Apresenta os dados de um determinado Terminal
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET20($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET20WithHttpInfo
+     *
+     * Apresenta os dados de um determinado Terminal
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET20WithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/terminais/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TerminalResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TerminalResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TerminalResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET13
      *
      * Lista Estabelecimentos
      *
@@ -311,15 +311,15 @@ class EstabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($sort = null, $page = null, $limit = null, $id = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null)
+    public function listarUsingGET13($sort = null, $page = null, $limit = null, $id = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET13WithHttpInfo
      *
      * Lista Estabelecimentos
      *
@@ -348,7 +348,7 @@ class EstabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null)
+    public function listarUsingGET13WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null)
     {
         
   
@@ -499,7 +499,7 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET26
+     * listarUsingGET27
      *
      * Lista os Terminais cadastrados no Emissor
      *
@@ -513,15 +513,15 @@ class EstabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageTerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET26WithHttpInfo
+     * listarUsingGET27WithHttpInfo
      *
      * Lista os Terminais cadastrados no Emissor
      *
@@ -535,7 +535,7 @@ class EstabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
         
   

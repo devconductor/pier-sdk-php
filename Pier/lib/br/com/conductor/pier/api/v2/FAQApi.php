@@ -356,7 +356,7 @@ class FAQApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET11
      *
      * Consultar FAQ por id
      *
@@ -364,15 +364,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET11($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * Consultar FAQ por id
      *
@@ -380,12 +380,12 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET11WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -451,7 +451,7 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET13
+     * listarUsingGET14
      *
      * Lista FAQs
      *
@@ -468,15 +468,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\PageFaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET14($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET13WithHttpInfo
+     * listarUsingGET14WithHttpInfo
      *
      * Lista FAQs
      *
@@ -493,7 +493,7 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET14WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   

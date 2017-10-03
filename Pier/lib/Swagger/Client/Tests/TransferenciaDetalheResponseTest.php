@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentoTipoResponseTest
+ * TransferenciaDetalheResponseTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * DocumentoTipoResponseTest Class Doc Comment
+ * TransferenciaDetalheResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento
+ * @description Objeto transferencia
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DocumentoTipoResponseTest extends \PHPUnit_Framework_TestCase
+class TransferenciaDetalheResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class DocumentoTipoResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test DocumentoTipoResponse
+     * Test TransferenciaDetalheResponse
      */
-    public function testDocumentoTipoResponse() {
+    public function testTransferenciaDetalheResponse() {
 
     }
 

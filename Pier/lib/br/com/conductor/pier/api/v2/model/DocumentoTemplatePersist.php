@@ -51,8 +51,9 @@ class DocumentoTemplatePersist implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_tipo_documento' => 'int',
-        'template' => 'string'
+        'id_tipo_template' => 'int',
+        'template' => 'string',
+        'integracoes' => '\br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]'
     );
   
     static function swaggerTypes() {
@@ -64,8 +65,9 @@ class DocumentoTemplatePersist implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_tipo_documento' => 'idTipoDocumento',
-        'template' => 'template'
+        'id_tipo_template' => 'idTipoTemplate',
+        'template' => 'template',
+        'integracoes' => 'integracoes'
     );
   
     static function attributeMap() {
@@ -77,8 +79,9 @@ class DocumentoTemplatePersist implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_tipo_documento' => 'setIdTipoDocumento',
-        'template' => 'setTemplate'
+        'id_tipo_template' => 'setIdTipoTemplate',
+        'template' => 'setTemplate',
+        'integracoes' => 'setIntegracoes'
     );
   
     static function setters() {
@@ -90,8 +93,9 @@ class DocumentoTemplatePersist implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_tipo_documento' => 'getIdTipoDocumento',
-        'template' => 'getTemplate'
+        'id_tipo_template' => 'getIdTipoTemplate',
+        'template' => 'getTemplate',
+        'integracoes' => 'getIntegracoes'
     );
   
     static function getters() {
@@ -100,16 +104,22 @@ class DocumentoTemplatePersist implements ArrayAccess
 
     
     /**
-      * $id_tipo_documento ID para o Tipo de Documento vinculado ao template.
+      * $id_tipo_template ID para o Tipo de Template vinculado ao template.
       * @var int
       */
-    protected $id_tipo_documento;
+    protected $id_tipo_template;
     
     /**
       * $template Template para o conte\u00C3\u00BAdo do documento.
       * @var string
       */
     protected $template;
+    
+    /**
+      * $integracoes Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+      * @var \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
+      */
+    protected $integracoes;
     
 
     /**
@@ -120,29 +130,30 @@ class DocumentoTemplatePersist implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_tipo_documento = $data["id_tipo_documento"];
+            $this->id_tipo_template = $data["id_tipo_template"];
             $this->template = $data["template"];
+            $this->integracoes = $data["integracoes"];
         }
     }
     
     /**
-     * Gets id_tipo_documento
+     * Gets id_tipo_template
      * @return int
      */
-    public function getIdTipoDocumento()
+    public function getIdTipoTemplate()
     {
-        return $this->id_tipo_documento;
+        return $this->id_tipo_template;
     }
   
     /**
-     * Sets id_tipo_documento
-     * @param int $id_tipo_documento ID para o Tipo de Documento vinculado ao template.
+     * Sets id_tipo_template
+     * @param int $id_tipo_template ID para o Tipo de Template vinculado ao template.
      * @return $this
      */
-    public function setIdTipoDocumento($id_tipo_documento)
+    public function setIdTipoTemplate($id_tipo_template)
     {
         
-        $this->id_tipo_documento = $id_tipo_documento;
+        $this->id_tipo_template = $id_tipo_template;
         return $this;
     }
     
@@ -164,6 +175,27 @@ class DocumentoTemplatePersist implements ArrayAccess
     {
         
         $this->template = $template;
+        return $this;
+    }
+    
+    /**
+     * Gets integracoes
+     * @return \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
+     */
+    public function getIntegracoes()
+    {
+        return $this->integracoes;
+    }
+  
+    /**
+     * Sets integracoes
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $integracoes Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setIntegracoes($integracoes)
+    {
+        
+        $this->integracoes = $integracoes;
         return $this;
     }
     

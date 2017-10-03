@@ -92,6 +92,111 @@ class DocumentoApi
   
     
     /**
+     * alterarUsingPUT9
+     *
+     * Altera o tipo de template
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\TipoTemplateRequest $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarUsingPUT9($id, $persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT9WithHttpInfo ($id, $persist);
+        return $response; 
+    }
+
+
+    /**
+     * alterarUsingPUT9WithHttpInfo
+     *
+     * Altera o tipo de template
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\TipoTemplateRequest $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function alterarUsingPUT9WithHttpInfo($id, $persist)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT9');
+        }
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling alterarUsingPUT9');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-templates/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * atualizarUsingPUT
      *
      * Atualizar templates dos documentos
@@ -197,12 +302,107 @@ class DocumentoApi
     }
     
     /**
+     * consultarUsingGET27
+     *
+     * Consultar tipo de template
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET27($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET27WithHttpInfo
+     *
+     * Consultar tipo de template
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET27WithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET27');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-templates/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarUsingGET7
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET7($id)
@@ -215,10 +415,10 @@ class DocumentoApi
     /**
      * consultarUsingGET7WithHttpInfo
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET7WithHttpInfo($id)
@@ -227,6 +427,101 @@ class DocumentoApi
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/documentos/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET8
+     *
+     * Consultar templates dos documentos
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET8($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET8WithHttpInfo
+     *
+     * Consultar templates dos documentos
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET8WithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
         }
   
         // parse inputs
@@ -292,20 +587,113 @@ class DocumentoApi
     }
     
     /**
+     * integrarUsingPOST
+     *
+     * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+     *
+     * @param \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest $integrar_documento_request integrarDocumentoRequest (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function integrarUsingPOST($integrar_documento_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->integrarUsingPOSTWithHttpInfo ($integrar_documento_request);
+        return $response; 
+    }
+
+
+    /**
+     * integrarUsingPOSTWithHttpInfo
+     *
+     * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+     *
+     * @param \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest $integrar_documento_request integrarDocumentoRequest (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function integrarUsingPOSTWithHttpInfo($integrar_documento_request)
+    {
+        
+        // verify the required parameter 'integrar_documento_request' is set
+        if ($integrar_documento_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $integrar_documento_request when calling integrarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/documentos/integrar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($integrar_documento_request)) {
+            $_tempBody = $integrar_documento_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarUsingGET10
      *
-     * Lista os templates dos documentos
+     * Lista documentos
      *
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do documento. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse
+     * @param int $id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento. (optional)
+     * @param string $nome Nome do documento. (optional)
+     * @param string $extensao Extensao do documento. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageDocumentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10($sort = null, $page = null, $limit = null, $id_tipo_documento = null)
+    public function listarUsingGET10($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($sort, $page, $limit, $id_tipo_documento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($sort, $page, $limit, $id_template_documento, $nome, $extensao);
         return $response; 
     }
 
@@ -313,16 +701,135 @@ class DocumentoApi
     /**
      * listarUsingGET10WithHttpInfo
      *
+     * Lista documentos
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_template_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento. (optional)
+     * @param string $nome Nome do documento. (optional)
+     * @param string $extensao Extensao do documento. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET10WithHttpInfo($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/documentos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id_template_documento !== null) {
+            $queryParams['idTemplateDocumento'] = $this->apiClient->getSerializer()->toQueryValue($id_template_documento);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($extensao !== null) {
+            $queryParams['extensao'] = $this->apiClient->getSerializer()->toQueryValue($extensao);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageDocumentoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageDocumentoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageDocumentoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET11
+     *
      * Lista os templates dos documentos
      *
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_documento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do documento. (optional)
+     * @param int $id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET11($sort = null, $page = null, $limit = null, $id_tipo_template = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($sort, $page, $limit, $id_tipo_template);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET11WithHttpInfo
+     *
+     * Lista os templates dos documentos
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_template C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_documento = null)
+    public function listarUsingGET11WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_template = null)
     {
         
   
@@ -356,8 +863,8 @@ class DocumentoApi
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }// query params
         
-        if ($id_tipo_documento !== null) {
-            $queryParams['idTipoDocumento'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_documento);
+        if ($id_tipo_template !== null) {
+            $queryParams['idTipoTemplate'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_template);
         }
         
         
@@ -401,12 +908,206 @@ class DocumentoApi
     }
     
     /**
+     * listarUsingGET31
+     *
+     * Lista os tipos de templates
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET31($sort = null, $page = null, $limit = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET31WithHttpInfo
+     *
+     * Lista os tipos de templates
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarUsingPOST17
+     *
+     * Cadastra os tipos de templates
+     *
+     * @param \br.com.conductor.pier.api.v2.model\TipoTemplateRequest $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST17($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST17WithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarUsingPOST17WithHttpInfo
+     *
+     * Cadastra os tipos de templates
+     *
+     * @param \br.com.conductor.pier.api.v2.model\TipoTemplateRequest $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST17WithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST17');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-templates";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoTemplateResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * salvarUsingPOST5
      *
      * Cadastra documentos
      *
      * @param \br.com.conductor.pier.api.v2.model\DocumentoParametrosRequest $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\DocumentoResponse
+     * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST5($persist)
@@ -422,7 +1123,7 @@ class DocumentoApi
      * Cadastra documentos
      *
      * @param \br.com.conductor.pier.api.v2.model\DocumentoParametrosRequest $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST5WithHttpInfo($persist)
@@ -470,19 +1171,19 @@ class DocumentoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\DocumentoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DocumentoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -574,97 +1275,6 @@ class DocumentoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * salvarUsingPOST7
-     *
-     * Cadastra os tipos de documentos
-     *
-     * @param \br.com.conductor.pier.api.v2.model\DocumentoTipoRequest $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\DocumentoTipoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST7($persist)
-    {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST7WithHttpInfo ($persist);
-        return $response; 
-    }
-
-
-    /**
-     * salvarUsingPOST7WithHttpInfo
-     *
-     * Cadastra os tipos de documentos
-     *
-     * @param \br.com.conductor.pier.api.v2.model\DocumentoTipoRequest $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTipoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST7WithHttpInfo($persist)
-    {
-        
-        // verify the required parameter 'persist' is set
-        if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST7');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/tipos-documentos";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($persist)) {
-            $_tempBody = $persist;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\DocumentoTipoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DocumentoTipoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoTipoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentoTipoResponse
+ * CodigoSegurancaResponse
  *
  * PHP version 5
  *
@@ -35,16 +35,16 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * DocumentoTipoResponse Class Doc Comment
+ * CodigoSegurancaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento
+ * @description Objeto codigo seguranca
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DocumentoTipoResponse implements ArrayAccess
+class CodigoSegurancaResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -52,9 +52,11 @@ class DocumentoTipoResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'nome' => 'string',
-        'descricao' => 'string',
-        'sigla' => 'string'
+        'id_emissor' => 'int',
+        'modo_envio' => 'string',
+        'contato' => 'string',
+        'ativo' => 'bool',
+        'data_validade' => 'string'
     );
   
     static function swaggerTypes() {
@@ -67,9 +69,11 @@ class DocumentoTipoResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'nome' => 'nome',
-        'descricao' => 'descricao',
-        'sigla' => 'sigla'
+        'id_emissor' => 'idEmissor',
+        'modo_envio' => 'modoEnvio',
+        'contato' => 'contato',
+        'ativo' => 'ativo',
+        'data_validade' => 'dataValidade'
     );
   
     static function attributeMap() {
@@ -82,9 +86,11 @@ class DocumentoTipoResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'nome' => 'setNome',
-        'descricao' => 'setDescricao',
-        'sigla' => 'setSigla'
+        'id_emissor' => 'setIdEmissor',
+        'modo_envio' => 'setModoEnvio',
+        'contato' => 'setContato',
+        'ativo' => 'setAtivo',
+        'data_validade' => 'setDataValidade'
     );
   
     static function setters() {
@@ -97,9 +103,11 @@ class DocumentoTipoResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'nome' => 'getNome',
-        'descricao' => 'getDescricao',
-        'sigla' => 'getSigla'
+        'id_emissor' => 'getIdEmissor',
+        'modo_envio' => 'getModoEnvio',
+        'contato' => 'getContato',
+        'ativo' => 'getAtivo',
+        'data_validade' => 'getDataValidade'
     );
   
     static function getters() {
@@ -108,28 +116,40 @@ class DocumentoTipoResponse implements ArrayAccess
 
     
     /**
-      * $id ID do Tipo de Documento.
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Tipo de Documento.
-      * @var string
+      * $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+      * @var int
       */
-    protected $nome;
+    protected $id_emissor;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.
+      * $modo_envio Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
       * @var string
       */
-    protected $descricao;
+    protected $modo_envio;
     
     /**
-      * $sigla Sigla do Tipo de Documento.
+      * $contato Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
       * @var string
       */
-    protected $sigla;
+    protected $contato;
+    
+    /**
+      * $ativo Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+      * @var bool
+      */
+    protected $ativo;
+    
+    /**
+      * $data_validade Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+      * @var string
+      */
+    protected $data_validade;
     
 
     /**
@@ -141,9 +161,11 @@ class DocumentoTipoResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->nome = $data["nome"];
-            $this->descricao = $data["descricao"];
-            $this->sigla = $data["sigla"];
+            $this->id_emissor = $data["id_emissor"];
+            $this->modo_envio = $data["modo_envio"];
+            $this->contato = $data["contato"];
+            $this->ativo = $data["ativo"];
+            $this->data_validade = $data["data_validade"];
         }
     }
     
@@ -158,7 +180,7 @@ class DocumentoTipoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID do Tipo de Documento.
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
      * @return $this
      */
     public function setId($id)
@@ -169,65 +191,107 @@ class DocumentoTipoResponse implements ArrayAccess
     }
     
     /**
-     * Gets nome
-     * @return string
+     * Gets id_emissor
+     * @return int
      */
-    public function getNome()
+    public function getIdEmissor()
     {
-        return $this->nome;
+        return $this->id_emissor;
     }
   
     /**
-     * Sets nome
-     * @param string $nome Nome do Tipo de Documento.
+     * Sets id_emissor
+     * @param int $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
      * @return $this
      */
-    public function setNome($nome)
+    public function setIdEmissor($id_emissor)
     {
         
-        $this->nome = $nome;
+        $this->id_emissor = $id_emissor;
         return $this;
     }
     
     /**
-     * Gets descricao
+     * Gets modo_envio
      * @return string
      */
-    public function getDescricao()
+    public function getModoEnvio()
     {
-        return $this->descricao;
+        return $this->modo_envio;
     }
   
     /**
-     * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.
+     * Sets modo_envio
+     * @param string $modo_envio Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
      * @return $this
      */
-    public function setDescricao($descricao)
+    public function setModoEnvio($modo_envio)
     {
         
-        $this->descricao = $descricao;
+        $this->modo_envio = $modo_envio;
         return $this;
     }
     
     /**
-     * Gets sigla
+     * Gets contato
      * @return string
      */
-    public function getSigla()
+    public function getContato()
     {
-        return $this->sigla;
+        return $this->contato;
     }
   
     /**
-     * Sets sigla
-     * @param string $sigla Sigla do Tipo de Documento.
+     * Sets contato
+     * @param string $contato Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
      * @return $this
      */
-    public function setSigla($sigla)
+    public function setContato($contato)
     {
         
-        $this->sigla = $sigla;
+        $this->contato = $contato;
+        return $this;
+    }
+    
+    /**
+     * Gets ativo
+     * @return bool
+     */
+    public function getAtivo()
+    {
+        return $this->ativo;
+    }
+  
+    /**
+     * Sets ativo
+     * @param bool $ativo Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+     * @return $this
+     */
+    public function setAtivo($ativo)
+    {
+        
+        $this->ativo = $ativo;
+        return $this;
+    }
+    
+    /**
+     * Gets data_validade
+     * @return string
+     */
+    public function getDataValidade()
+    {
+        return $this->data_validade;
+    }
+  
+    /**
+     * Sets data_validade
+     * @param string $data_validade Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+     * @return $this
+     */
+    public function setDataValidade($data_validade)
+    {
+        
+        $this->data_validade = $data_validade;
         return $this;
     }
     

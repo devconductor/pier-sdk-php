@@ -53,7 +53,8 @@ class PropriedadeDocumentoRequest implements ArrayAccess
     static $swaggerTypes = array(
         'chave' => 'string',
         'valor' => 'string',
-        'detalhes_tipo' => 'string'
+        'detalhes_tipo' => 'string',
+        'flag_indice' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -67,7 +68,8 @@ class PropriedadeDocumentoRequest implements ArrayAccess
     static $attributeMap = array(
         'chave' => 'chave',
         'valor' => 'valor',
-        'detalhes_tipo' => 'detalhesTipo'
+        'detalhes_tipo' => 'detalhesTipo',
+        'flag_indice' => 'flagIndice'
     );
   
     static function attributeMap() {
@@ -81,7 +83,8 @@ class PropriedadeDocumentoRequest implements ArrayAccess
     static $setters = array(
         'chave' => 'setChave',
         'valor' => 'setValor',
-        'detalhes_tipo' => 'setDetalhesTipo'
+        'detalhes_tipo' => 'setDetalhesTipo',
+        'flag_indice' => 'setFlagIndice'
     );
   
     static function setters() {
@@ -95,7 +98,8 @@ class PropriedadeDocumentoRequest implements ArrayAccess
     static $getters = array(
         'chave' => 'getChave',
         'valor' => 'getValor',
-        'detalhes_tipo' => 'getDetalhesTipo'
+        'detalhes_tipo' => 'getDetalhesTipo',
+        'flag_indice' => 'getFlagIndice'
     );
   
     static function getters() {
@@ -121,6 +125,12 @@ class PropriedadeDocumentoRequest implements ArrayAccess
       */
     protected $detalhes_tipo;
     
+    /**
+      * $flag_indice Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+      * @var bool
+      */
+    protected $flag_indice;
+    
 
     /**
      * Constructor
@@ -133,6 +143,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
             $this->chave = $data["chave"];
             $this->valor = $data["valor"];
             $this->detalhes_tipo = $data["detalhes_tipo"];
+            $this->flag_indice = $data["flag_indice"];
         }
     }
     
@@ -194,11 +205,32 @@ class PropriedadeDocumentoRequest implements ArrayAccess
      */
     public function setDetalhesTipo($detalhes_tipo)
     {
-        $allowed_values = array("LIST", "IMAGEM", "TEXTO", "NUMERO");
+        $allowed_values = array("IMAGEM", "TEXTO", "NUMERO");
         if (!in_array($detalhes_tipo, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'detalhes_tipo', must be one of 'LIST', 'IMAGEM', 'TEXTO', 'NUMERO'");
+            throw new \InvalidArgumentException("Invalid value for 'detalhes_tipo', must be one of 'IMAGEM', 'TEXTO', 'NUMERO'");
         }
         $this->detalhes_tipo = $detalhes_tipo;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_indice
+     * @return bool
+     */
+    public function getFlagIndice()
+    {
+        return $this->flag_indice;
+    }
+  
+    /**
+     * Sets flag_indice
+     * @param bool $flag_indice Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+     * @return $this
+     */
+    public function setFlagIndice($flag_indice)
+    {
+        
+        $this->flag_indice = $flag_indice;
         return $this;
     }
     

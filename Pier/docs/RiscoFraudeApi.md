@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET15**](RiscoFraudeApi.md#consultarUsingGET15) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultarUsingGET16**](RiscoFraudeApi.md#consultarUsingGET16) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**listarTiposResolucaoUsingGET**](RiscoFraudeApi.md#listarTiposResolucaoUsingGET) | **GET** /api/tipos-resolucao | Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
 [**negarUsingPOST**](RiscoFraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 [**reconhecerUsingPOST**](RiscoFraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 
 
-# **consultarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse consultarUsingGET15($id)
+# **consultarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse consultarUsingGET16($id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -26,10 +26,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\RiscoFraudeApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
 
 try { 
-    $result = $api_instance->consultarUsingGET15($id);
+    $result = $api_instance->consultarUsingGET16($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RiscoFraudeApi->consultarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling RiscoFraudeApi->consultarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```

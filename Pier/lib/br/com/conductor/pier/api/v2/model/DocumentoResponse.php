@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+ * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -52,12 +52,9 @@ class DocumentoResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'id_tipo_documento' => 'int',
         'id_template_documento' => 'int',
         'nome' => 'string',
-        'documento' => 'string',
-        'extensao' => 'string',
-        'documento_detalhes' => '\br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[]'
+        'extensao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -70,12 +67,9 @@ class DocumentoResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'id_tipo_documento' => 'idTipoDocumento',
         'id_template_documento' => 'idTemplateDocumento',
         'nome' => 'nome',
-        'documento' => 'documento',
-        'extensao' => 'extensao',
-        'documento_detalhes' => 'documentoDetalhes'
+        'extensao' => 'extensao'
     );
   
     static function attributeMap() {
@@ -88,12 +82,9 @@ class DocumentoResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'id_tipo_documento' => 'setIdTipoDocumento',
         'id_template_documento' => 'setIdTemplateDocumento',
         'nome' => 'setNome',
-        'documento' => 'setDocumento',
-        'extensao' => 'setExtensao',
-        'documento_detalhes' => 'setDocumentoDetalhes'
+        'extensao' => 'setExtensao'
     );
   
     static function setters() {
@@ -106,12 +97,9 @@ class DocumentoResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'id_tipo_documento' => 'getIdTipoDocumento',
         'id_template_documento' => 'getIdTemplateDocumento',
         'nome' => 'getNome',
-        'documento' => 'getDocumento',
-        'extensao' => 'getExtensao',
-        'documento_detalhes' => 'getDocumentoDetalhes'
+        'extensao' => 'getExtensao'
     );
   
     static function getters() {
@@ -126,12 +114,6 @@ class DocumentoResponse implements ArrayAccess
     protected $id;
     
     /**
-      * $id_tipo_documento ID do Tipo de Documento associado.
-      * @var int
-      */
-    protected $id_tipo_documento;
-    
-    /**
       * $id_template_documento ID do Template de Documento associado.
       * @var int
       */
@@ -144,22 +126,10 @@ class DocumentoResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $documento Nome do Documento.
-      * @var string
-      */
-    protected $documento;
-    
-    /**
       * $extensao Extens\u00C3\u00A3o do Documento.
       * @var string
       */
     protected $extensao;
-    
-    /**
-      * $documento_detalhes Detalhamento do documento.
-      * @var \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[]
-      */
-    protected $documento_detalhes;
     
 
     /**
@@ -171,12 +141,9 @@ class DocumentoResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->id_tipo_documento = $data["id_tipo_documento"];
             $this->id_template_documento = $data["id_template_documento"];
             $this->nome = $data["nome"];
-            $this->documento = $data["documento"];
             $this->extensao = $data["extensao"];
-            $this->documento_detalhes = $data["documento_detalhes"];
         }
     }
     
@@ -198,27 +165,6 @@ class DocumentoResponse implements ArrayAccess
     {
         
         $this->id = $id;
-        return $this;
-    }
-    
-    /**
-     * Gets id_tipo_documento
-     * @return int
-     */
-    public function getIdTipoDocumento()
-    {
-        return $this->id_tipo_documento;
-    }
-  
-    /**
-     * Sets id_tipo_documento
-     * @param int $id_tipo_documento ID do Tipo de Documento associado.
-     * @return $this
-     */
-    public function setIdTipoDocumento($id_tipo_documento)
-    {
-        
-        $this->id_tipo_documento = $id_tipo_documento;
         return $this;
     }
     
@@ -265,27 +211,6 @@ class DocumentoResponse implements ArrayAccess
     }
     
     /**
-     * Gets documento
-     * @return string
-     */
-    public function getDocumento()
-    {
-        return $this->documento;
-    }
-  
-    /**
-     * Sets documento
-     * @param string $documento Nome do Documento.
-     * @return $this
-     */
-    public function setDocumento($documento)
-    {
-        
-        $this->documento = $documento;
-        return $this;
-    }
-    
-    /**
      * Gets extensao
      * @return string
      */
@@ -303,27 +228,6 @@ class DocumentoResponse implements ArrayAccess
     {
         
         $this->extensao = $extensao;
-        return $this;
-    }
-    
-    /**
-     * Gets documento_detalhes
-     * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[]
-     */
-    public function getDocumentoDetalhes()
-    {
-        return $this->documento_detalhes;
-    }
-  
-    /**
-     * Sets documento_detalhes
-     * @param \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[] $documento_detalhes Detalhamento do documento.
-     * @return $this
-     */
-    public function setDocumentoDetalhes($documento_detalhes)
-    {
-        
-        $this->documento_detalhes = $documento_detalhes;
         return $this;
     }
     

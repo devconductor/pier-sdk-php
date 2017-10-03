@@ -106,12 +106,12 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for consultarUsingGET15
      *
      * Apresenta os dados de um determinado Produto
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_consultarUsingGET15() {
 
     }
     
@@ -126,19 +126,9 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET20
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     */
-    public function test_consultarUsingGET20() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET21
      *
-     * Lista os tipos de boletos do emissor 
+     * Lista os tipos de ajustes do emissor 
      *
      */
     public function test_consultarUsingGET21() {
@@ -148,7 +138,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET22
      *
-     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     * Lista os tipos de boletos do emissor 
      *
      */
     public function test_consultarUsingGET22() {
@@ -158,7 +148,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET23
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
      */
     public function test_consultarUsingGET23() {
@@ -166,12 +156,22 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET24
+     *
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultarUsingGET24() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET26
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET26() {
 
     }
     
@@ -286,16 +286,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET19
-     *
-     * Lista os Portadores existentes
-     *
-     */
-    public function test_listarUsingGET19() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET2
      *
      * Lista todos os atendimentos
@@ -308,7 +298,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET20
      *
-     * Lista os Produtos do Emissor
+     * Lista os Portadores existentes
      *
      */
     public function test_listarUsingGET20() {
@@ -318,7 +308,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET21
      *
-     * Lista promotores cadastrados na base do emissor
+     * Lista os Produtos do Emissor
      *
      */
     public function test_listarUsingGET21() {
@@ -326,22 +316,22 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET27
+     * Test case for listarUsingGET22
      *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Lista promotores cadastrados na base do emissor
      *
      */
-    public function test_listarUsingGET27() {
+    public function test_listarUsingGET22() {
 
     }
     
     /**
-     * Test case for listarUsingGET29
+     * Test case for listarUsingGET28
      *
-     * Lista os Tipos de Telefones
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
      */
-    public function test_listarUsingGET29() {
+    public function test_listarUsingGET28() {
 
     }
     
@@ -356,12 +346,22 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET34
+     * Test case for listarUsingGET30
+     *
+     * Lista os Tipos de Telefones
+     *
+     */
+    public function test_listarUsingGET30() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET36
      *
      * Listar Vencimentos
      *
      */
-    public function test_listarUsingGET34() {
+    public function test_listarUsingGET36() {
 
     }
     

@@ -106,22 +106,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for consultarUsingGET12
      *
      * Apresenta dados de uma determinada oportunidade
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET12() {
 
     }
     
     /**
-     * Test case for consultarUsingGET24
+     * Test case for consultarUsingGET25
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
      */
-    public function test_consultarUsingGET24() {
+    public function test_consultarUsingGET25() {
 
     }
     
@@ -166,22 +166,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET15
+     * Test case for listarUsingGET16
      *
      * Lista as oportunidades
      *
      */
-    public function test_listarUsingGET15() {
+    public function test_listarUsingGET16() {
 
     }
     
     /**
-     * Test case for listarUsingGET28
+     * Test case for listarUsingGET29
      *
      * Lista os tipos oportunidades
      *
      */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET29() {
 
     }
     
@@ -196,22 +196,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST12
+     * Test case for salvarUsingPOST11
      *
      * Cadastra as oportunidades
      *
      */
-    public function test_salvarUsingPOST12() {
+    public function test_salvarUsingPOST11() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST17
+     * Test case for salvarUsingPOST16
      *
      * Cadastra tipos oportunidades
      *
      */
-    public function test_salvarUsingPOST17() {
+    public function test_salvarUsingPOST16() {
 
     }
     

@@ -4,59 +4,14 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET9**](EstabelecimentoApi.md#consultarUsingGET9) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET12**](EstabelecimentoApi.md#listarUsingGET12) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultarUsingGET10**](EstabelecimentoApi.md#consultarUsingGET10) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listarUsingGET13**](EstabelecimentoApi.md#listarUsingGET13) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET27**](EstabelecimentoApi.md#listarUsingGET27) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-# **consultarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET19($id)
-
-Apresenta os dados de um determinado Terminal
-
-Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-
-try { 
-    $result = $api_instance->consultarUsingGET19($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET19: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\TerminalResponse**](TerminalResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET9($id)
+# **consultarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET10($id)
 
 Consultar estabelecimento por id
 
@@ -71,10 +26,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET9($id);
+    $result = $api_instance->consultarUsingGET10($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -100,8 +55,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET12($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
+# **consultarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET20($id)
+
+Apresenta os dados de um determinado Terminal
+
+Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi();
+$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+
+try { 
+    $result = $api_instance->consultarUsingGET20($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET13($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo)
 
 Lista Estabelecimentos
 
@@ -137,10 +137,10 @@ $flag_cartao_digitado = 56; // int | Indica se o estabelecimento poder\u00C3\u00
 $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 
 try { 
-    $result = $api_instance->listarUsingGET12($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
+    $result = $api_instance->listarUsingGET13($sort, $page, $limit, $id, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -187,8 +187,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET26($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+# **listarUsingGET27**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET27($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -209,10 +209,10 @@ $numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a q
 $id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET27($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET27: ', $e->getMessage(), "\n";
 }
 ?>
 ```

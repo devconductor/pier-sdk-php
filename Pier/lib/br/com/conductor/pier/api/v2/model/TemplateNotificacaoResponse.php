@@ -55,9 +55,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'int',
         'tipo_layout' => 'string',
         'tipo_notificacao' => 'string',
+        'template_padrao' => 'string',
         'remetente' => 'string',
         'assunto' => 'string',
-        'conteudo' => 'string',
         'data_inclusao' => 'string',
         'data_alteracao' => 'string'
     );
@@ -75,9 +75,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'idConfiguracaoEmail',
         'tipo_layout' => 'tipoLayout',
         'tipo_notificacao' => 'tipoNotificacao',
+        'template_padrao' => 'templatePadrao',
         'remetente' => 'remetente',
         'assunto' => 'assunto',
-        'conteudo' => 'conteudo',
         'data_inclusao' => 'dataInclusao',
         'data_alteracao' => 'dataAlteracao'
     );
@@ -95,9 +95,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'setIdConfiguracaoEmail',
         'tipo_layout' => 'setTipoLayout',
         'tipo_notificacao' => 'setTipoNotificacao',
+        'template_padrao' => 'setTemplatePadrao',
         'remetente' => 'setRemetente',
         'assunto' => 'setAssunto',
-        'conteudo' => 'setConteudo',
         'data_inclusao' => 'setDataInclusao',
         'data_alteracao' => 'setDataAlteracao'
     );
@@ -115,9 +115,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
         'id_configuracao_email' => 'getIdConfiguracaoEmail',
         'tipo_layout' => 'getTipoLayout',
         'tipo_notificacao' => 'getTipoNotificacao',
+        'template_padrao' => 'getTemplatePadrao',
         'remetente' => 'getRemetente',
         'assunto' => 'getAssunto',
-        'conteudo' => 'getConteudo',
         'data_inclusao' => 'getDataInclusao',
         'data_alteracao' => 'getDataAlteracao'
     );
@@ -152,6 +152,12 @@ class TemplateNotificacaoResponse implements ArrayAccess
     protected $tipo_notificacao;
     
     /**
+      * $template_padrao Template padr\u00C3\u00A3o.
+      * @var string
+      */
+    protected $template_padrao;
+    
+    /**
       * $remetente Remetente.
       * @var string
       */
@@ -162,12 +168,6 @@ class TemplateNotificacaoResponse implements ArrayAccess
       * @var string
       */
     protected $assunto;
-    
-    /**
-      * $conteudo Conteudo do e-mail.
-      * @var string
-      */
-    protected $conteudo;
     
     /**
       * $data_inclusao Data da inclus\u00C3\u00A3o.
@@ -194,9 +194,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
             $this->id_configuracao_email = $data["id_configuracao_email"];
             $this->tipo_layout = $data["tipo_layout"];
             $this->tipo_notificacao = $data["tipo_notificacao"];
+            $this->template_padrao = $data["template_padrao"];
             $this->remetente = $data["remetente"];
             $this->assunto = $data["assunto"];
-            $this->conteudo = $data["conteudo"];
             $this->data_inclusao = $data["data_inclusao"];
             $this->data_alteracao = $data["data_alteracao"];
         }
@@ -293,6 +293,27 @@ class TemplateNotificacaoResponse implements ArrayAccess
     }
     
     /**
+     * Gets template_padrao
+     * @return string
+     */
+    public function getTemplatePadrao()
+    {
+        return $this->template_padrao;
+    }
+  
+    /**
+     * Sets template_padrao
+     * @param string $template_padrao Template padr\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setTemplatePadrao($template_padrao)
+    {
+        
+        $this->template_padrao = $template_padrao;
+        return $this;
+    }
+    
+    /**
      * Gets remetente
      * @return string
      */
@@ -331,27 +352,6 @@ class TemplateNotificacaoResponse implements ArrayAccess
     {
         
         $this->assunto = $assunto;
-        return $this;
-    }
-    
-    /**
-     * Gets conteudo
-     * @return string
-     */
-    public function getConteudo()
-    {
-        return $this->conteudo;
-    }
-  
-    /**
-     * Sets conteudo
-     * @param string $conteudo Conteudo do e-mail.
-     * @return $this
-     */
-    public function setConteudo($conteudo)
-    {
-        
-        $this->conteudo = $conteudo;
         return $this;
     }
     

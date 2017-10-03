@@ -51,7 +51,6 @@ class DocumentoParametrosRequest implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_tipo_documento' => 'int',
         'id_template_documento' => 'int',
         'nome' => 'string',
         'parametros_conteudo' => '\br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]'
@@ -66,7 +65,6 @@ class DocumentoParametrosRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_tipo_documento' => 'idTipoDocumento',
         'id_template_documento' => 'idTemplateDocumento',
         'nome' => 'nome',
         'parametros_conteudo' => 'parametrosConteudo'
@@ -81,7 +79,6 @@ class DocumentoParametrosRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_tipo_documento' => 'setIdTipoDocumento',
         'id_template_documento' => 'setIdTemplateDocumento',
         'nome' => 'setNome',
         'parametros_conteudo' => 'setParametrosConteudo'
@@ -96,7 +93,6 @@ class DocumentoParametrosRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_tipo_documento' => 'getIdTipoDocumento',
         'id_template_documento' => 'getIdTemplateDocumento',
         'nome' => 'getNome',
         'parametros_conteudo' => 'getParametrosConteudo'
@@ -106,12 +102,6 @@ class DocumentoParametrosRequest implements ArrayAccess
         return self::$getters;
     }
 
-    
-    /**
-      * $id_tipo_documento ID para o tipo de documento.
-      * @var int
-      */
-    protected $id_tipo_documento;
     
     /**
       * $id_template_documento ID para o template do documento.
@@ -140,32 +130,10 @@ class DocumentoParametrosRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_tipo_documento = $data["id_tipo_documento"];
             $this->id_template_documento = $data["id_template_documento"];
             $this->nome = $data["nome"];
             $this->parametros_conteudo = $data["parametros_conteudo"];
         }
-    }
-    
-    /**
-     * Gets id_tipo_documento
-     * @return int
-     */
-    public function getIdTipoDocumento()
-    {
-        return $this->id_tipo_documento;
-    }
-  
-    /**
-     * Sets id_tipo_documento
-     * @param int $id_tipo_documento ID para o tipo de documento.
-     * @return $this
-     */
-    public function setIdTipoDocumento($id_tipo_documento)
-    {
-        
-        $this->id_tipo_documento = $id_tipo_documento;
-        return $this;
     }
     
     /**
