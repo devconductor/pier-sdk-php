@@ -5,10 +5,10 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarJobUsingPOST**](JobApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
-[**atualizarUsingPUT1**](JobApi.md#atualizarUsingPUT1) | **PUT** /api/jobs/{id} | Atualizar Job
+[**atualizarUsingPUT2**](JobApi.md#atualizarUsingPUT2) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET15**](JobApi.md#listarUsingGET15) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST10**](JobApi.md#salvarUsingPOST10) | **POST** /api/jobs | Cadastrar Job
+[**listarUsingGET16**](JobApi.md#listarUsingGET16) | **GET** /api/jobs | Listar Jobs
+[**salvarUsingPOST11**](JobApi.md#salvarUsingPOST11) | **POST** /api/jobs | Cadastrar Job
 
 
 # **ativarJobUsingPOST**
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **atualizarUsingPUT1**
-> \br.com.conductor.pier.api.v2.model\JobResponse atualizarUsingPUT1($id, $descricao, $cron, $groovy)
+# **atualizarUsingPUT2**
+> \br.com.conductor.pier.api.v2.model\JobResponse atualizarUsingPUT2($id, $descricao, $cron, $groovy)
 
 Atualizar Job
 
@@ -75,10 +75,10 @@ $cron = "cron_example"; // string | Cron do Job.
 $groovy = "groovy_example"; // string | groovy
 
 try { 
-    $result = $api_instance->atualizarUsingPUT1($id, $descricao, $cron, $groovy);
+    $result = $api_instance->atualizarUsingPUT2($id, $descricao, $cron, $groovy);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobApi->atualizarUsingPUT1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobApi->atualizarUsingPUT2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -152,8 +152,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET15($groovy, $descricao, $cron, $status, $page, $limit)
+# **listarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET16($groovy, $descricao, $cron, $status, $page, $limit)
 
 Listar Jobs
 
@@ -173,10 +173,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET15($groovy, $descricao, $cron, $status, $page, $limit);
+    $result = $api_instance->listarUsingGET16($groovy, $descricao, $cron, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobApi->listarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -207,8 +207,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST10**
-> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST10($descricao, $cron, $groovy)
+# **salvarUsingPOST11**
+> \br.com.conductor.pier.api.v2.model\JobResponse salvarUsingPOST11($descricao, $cron, $groovy)
 
 Cadastrar Job
 
@@ -225,10 +225,10 @@ $cron = "cron_example"; // string | Cron do Job.
 $groovy = "groovy_example"; // string | groovy
 
 try { 
-    $result = $api_instance->salvarUsingPOST10($descricao, $cron, $groovy);
+    $result = $api_instance->salvarUsingPOST11($descricao, $cron, $groovy);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobApi->salvarUsingPOST10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobApi->salvarUsingPOST11: ', $e->getMessage(), "\n";
 }
 ?>
 ```

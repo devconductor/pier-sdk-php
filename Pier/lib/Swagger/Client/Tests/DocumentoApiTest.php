@@ -76,42 +76,42 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT
+     * Test case for atualizarUsingPUT1
      *
      * Atualizar templates dos documentos
      *
      */
-    public function test_atualizarUsingPUT() {
+    public function test_atualizarUsingPUT1() {
 
     }
     
     /**
-     * Test case for consultarUsingGET27
+     * Test case for consultarUsingGET28
      *
      * Consultar tipo de template
      *
      */
-    public function test_consultarUsingGET27() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET7
-     *
-     * Consulta documentos
-     *
-     */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET28() {
 
     }
     
     /**
      * Test case for consultarUsingGET8
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
      */
     public function test_consultarUsingGET8() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET9
+     *
+     * Consultar templates dos documentos
+     *
+     */
+    public function test_consultarUsingGET9() {
 
     }
     
@@ -126,19 +126,9 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET10
-     *
-     * Lista documentos
-     *
-     */
-    public function test_listarUsingGET10() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET11
      *
-     * Lista os templates dos documentos
+     * Lista documentos
      *
      */
     public function test_listarUsingGET11() {
@@ -146,42 +136,52 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET31
+     * Test case for listarUsingGET12
+     *
+     * Lista os templates dos documentos
+     *
+     */
+    public function test_listarUsingGET12() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET32
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET31() {
+    public function test_listarUsingGET32() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST17
+     * Test case for salvarUsingPOST18
      *
      * Cadastra os tipos de templates
      *
      */
-    public function test_salvarUsingPOST17() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST5
-     *
-     * Cadastra documentos
-     *
-     */
-    public function test_salvarUsingPOST5() {
+    public function test_salvarUsingPOST18() {
 
     }
     
     /**
      * Test case for salvarUsingPOST6
      *
-     * Cadastra os templates dos documentos
+     * Cadastra documentos
      *
      */
     public function test_salvarUsingPOST6() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST7
+     *
+     * Cadastra os templates dos documentos
+     *
+     */
+    public function test_salvarUsingPOST7() {
 
     }
     

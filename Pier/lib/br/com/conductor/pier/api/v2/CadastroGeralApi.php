@@ -492,7 +492,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET15
+     * consultarUsingGET16
      *
      * Apresenta os dados de um determinado Produto
      *
@@ -500,15 +500,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15($id)
+    public function consultarUsingGET16($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET15WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET15WithHttpInfo
+     * consultarUsingGET16WithHttpInfo
      *
      * Apresenta os dados de um determinado Produto
      *
@@ -516,12 +516,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15WithHttpInfo($id)
+    public function consultarUsingGET16WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET15');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
         }
   
         // parse inputs
@@ -682,7 +682,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET21
+     * consultarUsingGET22
      *
      * Lista os tipos de ajustes do emissor 
      *
@@ -694,15 +694,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
+    public function consultarUsingGET22($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $descricao);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($sort, $page, $limit, $id, $descricao);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET21WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
      * Lista os tipos de ajustes do emissor 
      *
@@ -714,7 +714,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
+    public function consultarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null)
     {
         
   
@@ -797,7 +797,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET22
+     * consultarUsingGET23
      *
      * Lista os tipos de boletos do emissor 
      *
@@ -810,15 +810,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
+    public function consultarUsingGET23($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($sort, $page, $limit, $id, $descricao, $banco);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($sort, $page, $limit, $id, $descricao, $banco);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET22WithHttpInfo
+     * consultarUsingGET23WithHttpInfo
      *
      * Lista os tipos de boletos do emissor 
      *
@@ -831,7 +831,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
+    public function consultarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $banco = null)
     {
         
   
@@ -918,7 +918,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET23
+     * consultarUsingGET24
      *
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
@@ -926,15 +926,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id)
+    public function consultarUsingGET24($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET23WithHttpInfo
+     * consultarUsingGET24WithHttpInfo
      *
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
@@ -942,12 +942,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id)
+    public function consultarUsingGET24WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
         }
   
         // parse inputs
@@ -1013,7 +1013,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET24
+     * consultarUsingGET25
      *
      * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
      *
@@ -1023,15 +1023,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id_cartao, $id_estabelecimento, $codigo_processamento)
+    public function consultarUsingGET25($id_cartao, $id_estabelecimento, $codigo_processamento)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id_cartao, $id_estabelecimento, $codigo_processamento);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id_cartao, $id_estabelecimento, $codigo_processamento);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
      *
@@ -1041,20 +1041,20 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id_cartao, $id_estabelecimento, $codigo_processamento)
+    public function consultarUsingGET25WithHttpInfo($id_cartao, $id_estabelecimento, $codigo_processamento)
     {
         
         // verify the required parameter 'id_cartao' is set
         if ($id_cartao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling consultarUsingGET25');
         }
         // verify the required parameter 'id_estabelecimento' is set
         if ($id_estabelecimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_estabelecimento when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id_estabelecimento when calling consultarUsingGET25');
         }
         // verify the required parameter 'codigo_processamento' is set
         if ($codigo_processamento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $codigo_processamento when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $codigo_processamento when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -1124,7 +1124,7 @@ class CadastroGeralApi
     }
     
     /**
-     * consultarUsingGET26
+     * consultarUsingGET27
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
@@ -1132,15 +1132,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26($id)
+    public function consultarUsingGET27($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET26WithHttpInfo
+     * consultarUsingGET27WithHttpInfo
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
@@ -1148,12 +1148,12 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26WithHttpInfo($id)
+    public function consultarUsingGET27WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET27');
         }
   
         // parse inputs
@@ -2495,7 +2495,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET20
+     * listarUsingGET21
      *
      * Lista os Portadores existentes
      *
@@ -2515,15 +2515,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PagePortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
+    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET21WithHttpInfo
      *
      * Lista os Portadores existentes
      *
@@ -2543,7 +2543,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
+    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $id_produto = null, $id_pessoa = null, $id_parentesco = null, $tipo_portador = null, $nome_impresso = null, $id_tipo_cartao = null, $flag_ativo = null, $data_cadastro_portador = null, $data_cancelamento_portador = null)
     {
         
   
@@ -2658,7 +2658,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET21
+     * listarUsingGET22
      *
      * Lista os Produtos do Emissor
      *
@@ -2671,15 +2671,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageProdutoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
+    public function listarUsingGET22($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET21WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * Lista os Produtos do Emissor
      *
@@ -2692,7 +2692,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageProdutoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
+    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $status = null, $id_fantasia_basica = null)
     {
         
   
@@ -2779,7 +2779,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET22
+     * listarUsingGET23
      *
      * Lista promotores cadastrados na base do emissor
      *
@@ -2794,15 +2794,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PagePromotorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
+    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET22WithHttpInfo
+     * listarUsingGET23WithHttpInfo
      *
      * Lista promotores cadastrados na base do emissor
      *
@@ -2817,7 +2817,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePromotorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
+    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $data_cadastro = null, $id_estabelecimento = null, $id_usuario = null)
     {
         
   
@@ -2912,7 +2912,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET28
+     * listarUsingGET29
      *
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
@@ -2924,15 +2924,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET29($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET28WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
@@ -2944,7 +2944,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -3130,7 +3130,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET30
+     * listarUsingGET31
      *
      * Lista os Tipos de Telefones
      *
@@ -3142,15 +3142,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET31($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET30WithHttpInfo
+     * listarUsingGET31WithHttpInfo
      *
      * Lista os Tipos de Telefones
      *
@@ -3162,7 +3162,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   
@@ -3245,7 +3245,7 @@ class CadastroGeralApi
     }
     
     /**
-     * listarUsingGET36
+     * listarUsingGET37
      *
      * Listar Vencimentos
      *
@@ -3256,15 +3256,15 @@ class CadastroGeralApi
      * @return \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36($sort = null, $page = null, $limit = null, $data_vencimento = null)
+    public function listarUsingGET37($sort = null, $page = null, $limit = null, $data_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET36WithHttpInfo ($sort, $page, $limit, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET37WithHttpInfo ($sort, $page, $limit, $data_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET36WithHttpInfo
+     * listarUsingGET37WithHttpInfo
      *
      * Listar Vencimentos
      *
@@ -3275,7 +3275,7 @@ class CadastroGeralApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36WithHttpInfo($sort = null, $page = null, $limit = null, $data_vencimento = null)
+    public function listarUsingGET37WithHttpInfo($sort = null, $page = null, $limit = null, $data_vencimento = null)
     {
         
   

@@ -187,7 +187,7 @@ class JobApi
     }
     
     /**
-     * atualizarUsingPUT1
+     * atualizarUsingPUT2
      *
      * Atualizar Job
      *
@@ -198,15 +198,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT1($id, $descricao, $cron, $groovy)
+    public function atualizarUsingPUT2($id, $descricao, $cron, $groovy)
     {
-        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT1WithHttpInfo ($id, $descricao, $cron, $groovy);
+        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT2WithHttpInfo ($id, $descricao, $cron, $groovy);
         return $response; 
     }
 
 
     /**
-     * atualizarUsingPUT1WithHttpInfo
+     * atualizarUsingPUT2WithHttpInfo
      *
      * Atualizar Job
      *
@@ -217,24 +217,24 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT1WithHttpInfo($id, $descricao, $cron, $groovy)
+    public function atualizarUsingPUT2WithHttpInfo($id, $descricao, $cron, $groovy)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT1');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT2');
         }
         // verify the required parameter 'descricao' is set
         if ($descricao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling atualizarUsingPUT1');
+            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling atualizarUsingPUT2');
         }
         // verify the required parameter 'cron' is set
         if ($cron === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cron when calling atualizarUsingPUT1');
+            throw new \InvalidArgumentException('Missing the required parameter $cron when calling atualizarUsingPUT2');
         }
         // verify the required parameter 'groovy' is set
         if ($groovy === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling atualizarUsingPUT1');
+            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling atualizarUsingPUT2');
         }
   
         // parse inputs
@@ -407,7 +407,7 @@ class JobApi
     }
     
     /**
-     * listarUsingGET15
+     * listarUsingGET16
      *
      * Listar Jobs
      *
@@ -420,15 +420,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\PageJobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET16($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET16WithHttpInfo
      *
      * Listar Jobs
      *
@@ -441,7 +441,7 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageJobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET16WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
         
   
@@ -524,7 +524,7 @@ class JobApi
     }
     
     /**
-     * salvarUsingPOST10
+     * salvarUsingPOST11
      *
      * Cadastrar Job
      *
@@ -534,15 +534,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST10($descricao, $cron, $groovy)
+    public function salvarUsingPOST11($descricao, $cron, $groovy)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST10WithHttpInfo ($descricao, $cron, $groovy);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST11WithHttpInfo ($descricao, $cron, $groovy);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST10WithHttpInfo
+     * salvarUsingPOST11WithHttpInfo
      *
      * Cadastrar Job
      *
@@ -552,20 +552,20 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST10WithHttpInfo($descricao, $cron, $groovy)
+    public function salvarUsingPOST11WithHttpInfo($descricao, $cron, $groovy)
     {
         
         // verify the required parameter 'descricao' is set
         if ($descricao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST10');
+            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST11');
         }
         // verify the required parameter 'cron' is set
         if ($cron === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST10');
+            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST11');
         }
         // verify the required parameter 'groovy' is set
         if ($groovy === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST10');
+            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST11');
         }
   
         // parse inputs

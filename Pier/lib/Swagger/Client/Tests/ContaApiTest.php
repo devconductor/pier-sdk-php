@@ -246,19 +246,9 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET29
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     */
-    public function test_consultarUsingGET29() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET30
      *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
     public function test_consultarUsingGET30() {
@@ -266,12 +256,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET6
+     * Test case for consultarUsingGET31
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     */
+    public function test_consultarUsingGET31() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET7
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET6() {
+    public function test_consultarUsingGET7() {
 
     }
     
@@ -416,19 +416,9 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET33
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     */
-    public function test_listarUsingGET33() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET34
      *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
     public function test_listarUsingGET34() {
@@ -436,12 +426,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET8
+     * Test case for listarUsingGET35
+     *
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     *
+     */
+    public function test_listarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET9
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET8() {
+    public function test_listarUsingGET9() {
 
     }
     

@@ -86,22 +86,22 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET17
+     * Test case for consultarUsingGET18
      *
      * Apresenta os dados de um determinado Status Conta
      *
      */
-    public function test_consultarUsingGET17() {
+    public function test_consultarUsingGET18() {
 
     }
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET19() {
 
     }
     
@@ -126,22 +126,22 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET24
+     * Test case for listarUsingGET25
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET24() {
+    public function test_listarUsingGET25() {
 
     }
     
     /**
-     * Test case for listarUsingGET25
+     * Test case for listarUsingGET26
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
      */
-    public function test_listarUsingGET25() {
+    public function test_listarUsingGET26() {
 
     }
     

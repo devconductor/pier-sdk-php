@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET9**](DispositivoApi.md#listarUsingGET9) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvarUsingPOST4**](DispositivoApi.md#salvarUsingPOST4) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**listarUsingGET10**](DispositivoApi.md#listarUsingGET10) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**salvarUsingPOST5**](DispositivoApi.md#salvarUsingPOST5) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 # **ativarUsingPOST**
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET9($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
+# **listarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET10($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
 
 Lista os dispositivos cadastrados
 
@@ -123,10 +123,10 @@ $data_criacao = "data_criacao_example"; // string | Apresenta a data e em que o 
 $data_desativacao = "data_desativacao_example"; // string | Apresenta a data e em que o registro foi desativado.
 
 try { 
-    $result = $api_instance->listarUsingGET9($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+    $result = $api_instance->listarUsingGET10($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DispositivoApi->listarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DispositivoApi->listarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -159,8 +159,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST4**
-> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST4($persist)
+# **salvarUsingPOST5**
+> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST5($persist)
 
 Cadastra Dispositivo
 
@@ -175,10 +175,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DispositivoApi();
 $persist = new \br.com.conductor.pier.api.v2.model\DispositivoPersist(); // \br.com.conductor.pier.api.v2.model\DispositivoPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST4($persist);
+    $result = $api_instance->salvarUsingPOST5($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DispositivoApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DispositivoApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
 }
 ?>
 ```

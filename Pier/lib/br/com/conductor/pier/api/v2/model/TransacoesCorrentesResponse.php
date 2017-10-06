@@ -80,6 +80,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'grupo_descricao_mcc' => 'string',
         'id_estabelecimento' => 'int',
         'nome_estabelecimento' => 'string',
+        'nome_fantasia_estabelecimento' => 'string',
         'localidade_estabelecimento' => 'string',
         'plano_parcelamento' => 'int',
         'numero_parcela' => 'int',
@@ -128,6 +129,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'grupo_descricao_mcc' => 'grupoDescricaoMCC',
         'id_estabelecimento' => 'idEstabelecimento',
         'nome_estabelecimento' => 'nomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'nomeFantasiaEstabelecimento',
         'localidade_estabelecimento' => 'localidadeEstabelecimento',
         'plano_parcelamento' => 'planoParcelamento',
         'numero_parcela' => 'numeroParcela',
@@ -176,6 +178,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'grupo_descricao_mcc' => 'setGrupoDescricaoMcc',
         'id_estabelecimento' => 'setIdEstabelecimento',
         'nome_estabelecimento' => 'setNomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'setNomeFantasiaEstabelecimento',
         'localidade_estabelecimento' => 'setLocalidadeEstabelecimento',
         'plano_parcelamento' => 'setPlanoParcelamento',
         'numero_parcela' => 'setNumeroParcela',
@@ -224,6 +227,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
         'grupo_descricao_mcc' => 'getGrupoDescricaoMcc',
         'id_estabelecimento' => 'getIdEstabelecimento',
         'nome_estabelecimento' => 'getNomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'getNomeFantasiaEstabelecimento',
         'localidade_estabelecimento' => 'getLocalidadeEstabelecimento',
         'plano_parcelamento' => 'getPlanoParcelamento',
         'numero_parcela' => 'getNumeroParcela',
@@ -414,6 +418,12 @@ class TransacoesCorrentesResponse implements ArrayAccess
     protected $nome_estabelecimento;
     
     /**
+      * $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+      * @var string
+      */
+    protected $nome_fantasia_estabelecimento;
+    
+    /**
       * $localidade_estabelecimento Localidade do Estabelecimento.
       * @var string
       */
@@ -499,6 +509,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
             $this->grupo_descricao_mcc = $data["grupo_descricao_mcc"];
             $this->id_estabelecimento = $data["id_estabelecimento"];
             $this->nome_estabelecimento = $data["nome_estabelecimento"];
+            $this->nome_fantasia_estabelecimento = $data["nome_fantasia_estabelecimento"];
             $this->localidade_estabelecimento = $data["localidade_estabelecimento"];
             $this->plano_parcelamento = $data["plano_parcelamento"];
             $this->numero_parcela = $data["numero_parcela"];
@@ -1116,6 +1127,27 @@ class TransacoesCorrentesResponse implements ArrayAccess
     {
         
         $this->nome_estabelecimento = $nome_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_fantasia_estabelecimento
+     * @return string
+     */
+    public function getNomeFantasiaEstabelecimento()
+    {
+        return $this->nome_fantasia_estabelecimento;
+    }
+  
+    /**
+     * Sets nome_fantasia_estabelecimento
+     * @param string $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+     * @return $this
+     */
+    public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
+    {
+        
+        $this->nome_fantasia_estabelecimento = $nome_fantasia_estabelecimento;
         return $this;
     }
     

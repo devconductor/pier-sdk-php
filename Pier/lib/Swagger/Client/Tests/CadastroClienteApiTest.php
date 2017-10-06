@@ -146,19 +146,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET10
      *
-     * Apresenta os detalhes de uma determinada Pessoa
+     * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET10() {
 
     }
     
     /**
      * Test case for consultarUsingGET14
      *
-     * Apresenta os dados de uma determinada Pessoa
+     * Apresenta os detalhes de uma determinada Pessoa
      *
      */
     public function test_consultarUsingGET14() {
@@ -166,22 +166,22 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET19
+     * Test case for consultarUsingGET15
      *
-     * Apresenta os dados de um determinado Telefone
+     * Apresenta os dados de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET15() {
 
     }
     
     /**
-     * Test case for consultarUsingGET9
+     * Test case for consultarUsingGET20
      *
-     * Apresenta os dados de um determinado Endere\u00C3\u00A7o
+     * Apresenta os dados de um determinado Telefone
      *
      */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET20() {
 
     }
     
@@ -216,29 +216,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET12
+     * Test case for listarUsingGET13
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET12() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET17
-     *
-     * Lista os Detalhes das Pessoas cadastradas no Emissor
-     *
-     */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET13() {
 
     }
     
     /**
      * Test case for listarUsingGET18
      *
-     * Lista as Pessoas cadastradas no Emissor
+     * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
      */
     public function test_listarUsingGET18() {
@@ -246,12 +236,22 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET26
+     * Test case for listarUsingGET19
+     *
+     * Lista as Pessoas cadastradas no Emissor
+     *
+     */
+    public function test_listarUsingGET19() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET27
      *
      * Lista os Telefones cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET26() {
+    public function test_listarUsingGET27() {
 
     }
     
@@ -276,19 +276,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST12
+     * Test case for salvarUsingPOST10
      *
-     * Salvar os detalhes de uma determinada Pessoa
+     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
      *
      */
-    public function test_salvarUsingPOST12() {
+    public function test_salvarUsingPOST10() {
 
     }
     
     /**
      * Test case for salvarUsingPOST13
      *
-     * Realiza o cadastro de um nova Pessoa
+     * Salvar os detalhes de uma determinada Pessoa
      *
      */
     public function test_salvarUsingPOST13() {
@@ -296,32 +296,32 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST15
+     * Test case for salvarUsingPOST14
+     *
+     * Realiza o cadastro de um nova Pessoa
+     *
+     */
+    public function test_salvarUsingPOST14() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST16
      *
      * Realiza o cadastro de um novo Telefone
      *
      */
-    public function test_salvarUsingPOST15() {
+    public function test_salvarUsingPOST16() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST8
      *
      * Realiza o cadastro de um novo Endere\u00C3\u00A7o
      *
      */
-    public function test_salvarUsingPOST7() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST9
-     *
-     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-     *
-     */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST8() {
 
     }
     

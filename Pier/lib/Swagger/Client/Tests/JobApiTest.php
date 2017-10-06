@@ -76,12 +76,12 @@ class JobApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT1
+     * Test case for atualizarUsingPUT2
      *
      * Atualizar Job
      *
      */
-    public function test_atualizarUsingPUT1() {
+    public function test_atualizarUsingPUT2() {
 
     }
     
@@ -96,22 +96,22 @@ class JobApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET15
+     * Test case for listarUsingGET16
      *
      * Listar Jobs
      *
      */
-    public function test_listarUsingGET15() {
+    public function test_listarUsingGET16() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST10
+     * Test case for salvarUsingPOST11
      *
      * Cadastrar Job
      *
      */
-    public function test_salvarUsingPOST10() {
+    public function test_salvarUsingPOST11() {
 
     }
     

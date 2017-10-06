@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](AntecipacaoApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET7**](AntecipacaoApi.md#listarUsingGET7) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET8**](AntecipacaoApi.md#listarUsingGET8) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -154,8 +154,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET7($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
+# **listarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET8($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -177,10 +177,10 @@ $juros = true; // bool | Indica se a compra \u00C3\u00A9 com ou sem juros.
 $tipo_origem_transacao = "tipo_origem_transacao_example"; // string | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 
 try { 
-    $result = $api_instance->listarUsingGET7($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+    $result = $api_instance->listarUsingGET8($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AntecipacaoApi->listarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AntecipacaoApi->listarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
