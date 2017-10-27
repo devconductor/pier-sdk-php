@@ -186,26 +186,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarFaturaConsignadaAbertaUsingGET
-     *
-     * Consultar a fatura consignadas abertas da conta
-     *
-     */
-    public function test_consultarFaturaConsignadaAbertaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarFaturaConsignadaUsingGET
-     *
-     * Apresenta dados de uma determinada fatura consignada
-     *
-     */
-    public function test_consultarFaturaConsignadaUsingGET() {
-
-    }
-    
-    /**
      * Test case for consultarFaturaUsingGET
      *
      * Consultar Fatura da Conta
@@ -332,16 +312,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_gerarCartaoVirtualUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for listarFaturasConsignadasUsingGET
-     *
-     * Lista as faturas consignadas da conta
-     *
-     */
-    public function test_listarFaturasConsignadasUsingGET() {
 
     }
     

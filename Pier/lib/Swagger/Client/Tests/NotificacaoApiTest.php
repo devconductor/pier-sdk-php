@@ -236,12 +236,12 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for responderSMSUsingPOST
+     * Test case for responderSMSGetUsingGET
      *
      * Responder SMS
      *
      */
-    public function test_responderSMSUsingPOST() {
+    public function test_responderSMSGetUsingGET() {
 
     }
     

@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]**](TelefonePessoaAprovadaResponse.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]**](EnderecoAprovadoResponse.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | [optional] 
 **socios** | [**\br.com.conductor.pier.api.v2.model\SocioAprovadoResponse[]**](SocioAprovadoResponse.md) | Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista | [optional] 
+**referencias** | [**\br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoResponse[]**](ReferenciaComercialAprovadoResponse.md) | Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista | [optional] 
 **limite_global** | [**Number**](Number.md) | Valor do Limite Global | 
 **limite_maximo** | [**Number**](Number.md) | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 
 **limite_parcelas** | [**Number**](Number.md) | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 

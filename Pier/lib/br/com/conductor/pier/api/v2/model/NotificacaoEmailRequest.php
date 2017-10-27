@@ -51,10 +51,9 @@ class NotificacaoEmailRequest implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_documento' => 'int',
         'id_template_notificacao' => 'int',
-        'destinatario' => 'string',
-        'tipo_layout' => 'string',
+        'destinatarios' => 'string[]',
+        'anexos' => '\br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[]',
         'parametros_conteudo' => 'map[string,object]'
     );
   
@@ -67,10 +66,9 @@ class NotificacaoEmailRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_documento' => 'idDocumento',
         'id_template_notificacao' => 'idTemplateNotificacao',
-        'destinatario' => 'destinatario',
-        'tipo_layout' => 'tipoLayout',
+        'destinatarios' => 'destinatarios',
+        'anexos' => 'anexos',
         'parametros_conteudo' => 'parametrosConteudo'
     );
   
@@ -83,10 +81,9 @@ class NotificacaoEmailRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_documento' => 'setIdDocumento',
         'id_template_notificacao' => 'setIdTemplateNotificacao',
-        'destinatario' => 'setDestinatario',
-        'tipo_layout' => 'setTipoLayout',
+        'destinatarios' => 'setDestinatarios',
+        'anexos' => 'setAnexos',
         'parametros_conteudo' => 'setParametrosConteudo'
     );
   
@@ -99,10 +96,9 @@ class NotificacaoEmailRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_documento' => 'getIdDocumento',
         'id_template_notificacao' => 'getIdTemplateNotificacao',
-        'destinatario' => 'getDestinatario',
-        'tipo_layout' => 'getTipoLayout',
+        'destinatarios' => 'getDestinatarios',
+        'anexos' => 'getAnexos',
         'parametros_conteudo' => 'getParametrosConteudo'
     );
   
@@ -112,28 +108,22 @@ class NotificacaoEmailRequest implements ArrayAccess
 
     
     /**
-      * $id_documento ID para o documento a ser enviado.
-      * @var int
-      */
-    protected $id_documento;
-    
-    /**
       * $id_template_notificacao ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
       * @var int
       */
     protected $id_template_notificacao;
     
     /**
-      * $destinatario Email do destinat\u00C3\u00A1rio.
-      * @var string
+      * $destinatarios Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+      * @var string[]
       */
-    protected $destinatario;
+    protected $destinatarios;
     
     /**
-      * $tipo_layout Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
-      * @var string
+      * $anexos Lista de ids dos anexos a serem enviados.
+      * @var \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[]
       */
-    protected $tipo_layout;
+    protected $anexos;
     
     /**
       * $parametros_conteudo Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
@@ -150,33 +140,11 @@ class NotificacaoEmailRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_documento = $data["id_documento"];
             $this->id_template_notificacao = $data["id_template_notificacao"];
-            $this->destinatario = $data["destinatario"];
-            $this->tipo_layout = $data["tipo_layout"];
+            $this->destinatarios = $data["destinatarios"];
+            $this->anexos = $data["anexos"];
             $this->parametros_conteudo = $data["parametros_conteudo"];
         }
-    }
-    
-    /**
-     * Gets id_documento
-     * @return int
-     */
-    public function getIdDocumento()
-    {
-        return $this->id_documento;
-    }
-  
-    /**
-     * Sets id_documento
-     * @param int $id_documento ID para o documento a ser enviado.
-     * @return $this
-     */
-    public function setIdDocumento($id_documento)
-    {
-        
-        $this->id_documento = $id_documento;
-        return $this;
     }
     
     /**
@@ -201,47 +169,44 @@ class NotificacaoEmailRequest implements ArrayAccess
     }
     
     /**
-     * Gets destinatario
-     * @return string
+     * Gets destinatarios
+     * @return string[]
      */
-    public function getDestinatario()
+    public function getDestinatarios()
     {
-        return $this->destinatario;
+        return $this->destinatarios;
     }
   
     /**
-     * Sets destinatario
-     * @param string $destinatario Email do destinat\u00C3\u00A1rio.
+     * Sets destinatarios
+     * @param string[] $destinatarios Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
      * @return $this
      */
-    public function setDestinatario($destinatario)
+    public function setDestinatarios($destinatarios)
     {
         
-        $this->destinatario = $destinatario;
+        $this->destinatarios = $destinatarios;
         return $this;
     }
     
     /**
-     * Gets tipo_layout
-     * @return string
+     * Gets anexos
+     * @return \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[]
      */
-    public function getTipoLayout()
+    public function getAnexos()
     {
-        return $this->tipo_layout;
+        return $this->anexos;
     }
   
     /**
-     * Sets tipo_layout
-     * @param string $tipo_layout Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * Sets anexos
+     * @param \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[] $anexos Lista de ids dos anexos a serem enviados.
      * @return $this
      */
-    public function setTipoLayout($tipo_layout)
+    public function setAnexos($anexos)
     {
-        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL");
-        if (!in_array($tipo_layout, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL'");
-        }
-        $this->tipo_layout = $tipo_layout;
+        
+        $this->anexos = $anexos;
         return $this;
     }
     

@@ -941,17 +941,18 @@ class ConductorPayApi
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
-     * @param string $device_id Device id criptografado (required)
+     * @param string $device_id Device id criptografado (optional)
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $status Status do cart\u00C3\u00A3o tokenizado (optional)
+     * @param string $numero_cartao Numero do cart\u00C3\u00A3o tokenizado (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($device_id, $sort = null, $page = null, $limit = null, $status = null)
+    public function listarUsingGET6($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($device_id, $sort, $page, $limit, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
         return $response; 
     }
 
@@ -961,21 +962,18 @@ class ConductorPayApi
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
-     * @param string $device_id Device id criptografado (required)
+     * @param string $device_id Device id criptografado (optional)
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
      * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param string $status Status do cart\u00C3\u00A3o tokenizado (optional)
+     * @param string $numero_cartao Numero do cart\u00C3\u00A3o tokenizado (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($device_id, $sort = null, $page = null, $limit = null, $status = null)
+    public function listarUsingGET6WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
         
-        // verify the required parameter 'device_id' is set
-        if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling listarUsingGET6');
-        }
   
         // parse inputs
         $resourcePath = "/api/cartoes-tokenizados";
@@ -1009,6 +1007,10 @@ class ConductorPayApi
         
         if ($status !== null) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }// query params
+        
+        if ($numero_cartao !== null) {
+            $queryParams['numeroCartao'] = $this->apiClient->getSerializer()->toQueryValue($numero_cartao);
         }
         // header params
         

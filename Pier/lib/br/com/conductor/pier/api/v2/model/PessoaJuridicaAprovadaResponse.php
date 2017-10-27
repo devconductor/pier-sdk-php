@@ -71,6 +71,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]',
         'socios' => '\br.com.conductor.pier.api.v2.model\SocioAprovadoResponse[]',
+        'referencias' => '\br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoResponse[]',
         'limite_global' => 'Number',
         'limite_maximo' => 'Number',
         'limite_parcelas' => 'Number'
@@ -105,6 +106,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
         'socios' => 'socios',
+        'referencias' => 'referencias',
         'limite_global' => 'limiteGlobal',
         'limite_maximo' => 'limiteMaximo',
         'limite_parcelas' => 'limiteParcelas'
@@ -139,6 +141,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
         'socios' => 'setSocios',
+        'referencias' => 'setReferencias',
         'limite_global' => 'setLimiteGlobal',
         'limite_maximo' => 'setLimiteMaximo',
         'limite_parcelas' => 'setLimiteParcelas'
@@ -173,6 +176,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
         'socios' => 'getSocios',
+        'referencias' => 'getReferencias',
         'limite_global' => 'getLimiteGlobal',
         'limite_maximo' => 'getLimiteMaximo',
         'limite_parcelas' => 'getLimiteParcelas'
@@ -304,6 +308,12 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
     protected $socios;
     
     /**
+      * $referencias Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+      * @var \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoResponse[]
+      */
+    protected $referencias;
+    
+    /**
       * $limite_global Valor do Limite Global
       * @var Number
       */
@@ -350,6 +360,7 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
             $this->socios = $data["socios"];
+            $this->referencias = $data["referencias"];
             $this->limite_global = $data["limite_global"];
             $this->limite_maximo = $data["limite_maximo"];
             $this->limite_parcelas = $data["limite_parcelas"];
@@ -773,6 +784,27 @@ class PessoaJuridicaAprovadaResponse implements ArrayAccess
     {
         
         $this->socios = $socios;
+        return $this;
+    }
+    
+    /**
+     * Gets referencias
+     * @return \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoResponse[]
+     */
+    public function getReferencias()
+    {
+        return $this->referencias;
+    }
+  
+    /**
+     * Sets referencias
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoResponse[] $referencias Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+     * @return $this
+     */
+    public function setReferencias($referencias)
+    {
+        
+        $this->referencias = $referencias;
         return $this;
     }
     

@@ -309,12 +309,13 @@ class AntecipacaoApi
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
      * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function efetivarAntecipacaoUsingPOST($id_conta, $id, $quantidade_parcelas)
+    public function efetivarAntecipacaoUsingPOST($id_conta, $id, $quantidade_parcelas, $complemento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->efetivarAntecipacaoUsingPOSTWithHttpInfo ($id_conta, $id, $quantidade_parcelas);
+        list($response, $statusCode, $httpHeader) = $this->efetivarAntecipacaoUsingPOSTWithHttpInfo ($id_conta, $id, $quantidade_parcelas, $complemento);
         return $response; 
     }
 
@@ -327,10 +328,11 @@ class AntecipacaoApi
      * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
      * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function efetivarAntecipacaoUsingPOSTWithHttpInfo($id_conta, $id, $quantidade_parcelas)
+    public function efetivarAntecipacaoUsingPOSTWithHttpInfo($id_conta, $id, $quantidade_parcelas, $complemento = null)
     {
         
         // verify the required parameter 'id_conta' is set
@@ -366,6 +368,10 @@ class AntecipacaoApi
         
         if ($quantidade_parcelas !== null) {
             $queryParams['quantidadeParcelas'] = $this->apiClient->getSerializer()->toQueryValue($quantidade_parcelas);
+        }// query params
+        
+        if ($complemento !== null) {
+            $queryParams['complemento'] = $this->apiClient->getSerializer()->toQueryValue($complemento);
         }
         
         // path params
@@ -408,6 +414,103 @@ class AntecipacaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AntecipacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * efetivarAntecipacoesUsingPOST
+     *
+     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function efetivarAntecipacoesUsingPOST($id_conta, $complemento = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->efetivarAntecipacoesUsingPOSTWithHttpInfo ($id_conta, $complemento);
+        return $response; 
+    }
+
+
+    /**
+     * efetivarAntecipacoesUsingPOSTWithHttpInfo
+     *
+     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function efetivarAntecipacoesUsingPOSTWithHttpInfo($id_conta, $complemento = null)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling efetivarAntecipacoesUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/compras-antecipaveis/efetivar-antecipacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_conta !== null) {
+            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
+        }// query params
+        
+        if ($complemento !== null) {
+            $queryParams['complemento'] = $this->apiClient->getSerializer()->toQueryValue($complemento);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -560,12 +663,13 @@ class AntecipacaoApi
      *
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function simularAntecipacaoUsingGET($id_conta, $id)
+    public function simularAntecipacaoUsingGET($id_conta, $id, $complemento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->simularAntecipacaoUsingGETWithHttpInfo ($id_conta, $id);
+        list($response, $statusCode, $httpHeader) = $this->simularAntecipacaoUsingGETWithHttpInfo ($id_conta, $id, $complemento);
         return $response; 
     }
 
@@ -577,10 +681,11 @@ class AntecipacaoApi
      *
      * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function simularAntecipacaoUsingGETWithHttpInfo($id_conta, $id)
+    public function simularAntecipacaoUsingGETWithHttpInfo($id_conta, $id, $complemento = null)
     {
         
         // verify the required parameter 'id_conta' is set
@@ -608,6 +713,10 @@ class AntecipacaoApi
         
         if ($id_conta !== null) {
             $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
+        }// query params
+        
+        if ($complemento !== null) {
+            $queryParams['complemento'] = $this->apiClient->getSerializer()->toQueryValue($complemento);
         }
         
         // path params
@@ -650,6 +759,103 @@ class AntecipacaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * simularAntecipacoesUsingGET
+     *
+     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function simularAntecipacoesUsingGET($id_conta, $complemento = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->simularAntecipacoesUsingGETWithHttpInfo ($id_conta, $complemento);
+        return $response; 
+    }
+
+
+    /**
+     * simularAntecipacoesUsingGETWithHttpInfo
+     *
+     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     *
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function simularAntecipacoesUsingGETWithHttpInfo($id_conta, $complemento = null)
+    {
+        
+        // verify the required parameter 'id_conta' is set
+        if ($id_conta === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling simularAntecipacoesUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/compras-antecipaveis/simular-antecipacao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_conta !== null) {
+            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
+        }// query params
+        
+        if ($complemento !== null) {
+            $queryParams['complemento'] = $this->apiClient->getSerializer()->toQueryValue($complemento);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

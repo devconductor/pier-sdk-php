@@ -126,6 +126,16 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarTiposEventosTransacoesUsingGET
+     *
+     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     *
+     */
+    public function test_listarTiposEventosTransacoesUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET25
      *
      * Lista os Status Contas cadastrados para o Emissor

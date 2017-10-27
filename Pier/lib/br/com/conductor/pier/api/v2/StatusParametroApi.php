@@ -726,6 +726,87 @@ class StatusParametroApi
     }
     
     /**
+     * listarTiposEventosTransacoesUsingGET
+     *
+     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     *
+     * @return object[]
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposEventosTransacoesUsingGET()
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarTiposEventosTransacoesUsingGETWithHttpInfo ();
+        return $response; 
+    }
+
+
+    /**
+     * listarTiposEventosTransacoesUsingGETWithHttpInfo
+     *
+     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     *
+     * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposEventosTransacoesUsingGETWithHttpInfo()
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-eventos-transacoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, 'object[]'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object[]', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object[]', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarUsingGET25
      *
      * Lista os Status Contas cadastrados para o Emissor

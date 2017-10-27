@@ -908,6 +908,111 @@ class CadastroClienteApi
     }
     
     /**
+     * atualizarUsingPOST
+     *
+     * Atualiza conta integrada com o emissor
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @return \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function atualizarUsingPOST($id, $body = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPOSTWithHttpInfo ($id, $body);
+        return $response; 
+    }
+
+
+    /**
+     * atualizarUsingPOSTWithHttpInfo
+     *
+     * Atualiza conta integrada com o emissor
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function atualizarUsingPOSTWithHttpInfo($id, $body = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/atualizar-registro-integracao";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            case 201:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * cadastrarUsingPOST
      *
      * Realiza o cadastro de Adicionais para uma Conta

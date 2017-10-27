@@ -66,6 +66,16 @@ class FaturaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for consultarFaturaUsingGET1
+     *
+     * Consulta fatura de um cliente
+     *
+     */
+    public function test_consultarFaturaUsingGET1() {
+
+    }
+    
+    /**
      * Test case for consultarLancamentosFuturosFaturaUsingGET1
      *
      * Listar planos de parcelamento
@@ -82,6 +92,16 @@ class FaturaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_enviarFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for listarFaturasUsingGET1
+     *
+     * Listar faturas de um cliente.
+     *
+     */
+    public function test_listarFaturasUsingGET1() {
 
     }
     

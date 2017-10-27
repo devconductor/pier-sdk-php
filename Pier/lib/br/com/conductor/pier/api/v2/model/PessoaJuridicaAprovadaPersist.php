@@ -68,8 +68,9 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'valor_pontuacao' => 'int',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
-        'limite_global' => 'Number',
         'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]',
+        'referencias_comerciais' => '\br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]',
+        'limite_global' => 'Number',
         'limite_maximo' => 'Number',
         'limite_parcelas' => 'Number'
     );
@@ -100,8 +101,9 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'valor_pontuacao' => 'valorPontuacao',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
-        'limite_global' => 'limiteGlobal',
         'socios' => 'socios',
+        'referencias_comerciais' => 'referenciasComerciais',
+        'limite_global' => 'limiteGlobal',
         'limite_maximo' => 'limiteMaximo',
         'limite_parcelas' => 'limiteParcelas'
     );
@@ -132,8 +134,9 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'valor_pontuacao' => 'setValorPontuacao',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
-        'limite_global' => 'setLimiteGlobal',
         'socios' => 'setSocios',
+        'referencias_comerciais' => 'setReferenciasComerciais',
+        'limite_global' => 'setLimiteGlobal',
         'limite_maximo' => 'setLimiteMaximo',
         'limite_parcelas' => 'setLimiteParcelas'
     );
@@ -164,8 +167,9 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'valor_pontuacao' => 'getValorPontuacao',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
-        'limite_global' => 'getLimiteGlobal',
         'socios' => 'getSocios',
+        'referencias_comerciais' => 'getReferenciasComerciais',
+        'limite_global' => 'getLimiteGlobal',
         'limite_maximo' => 'getLimiteMaximo',
         'limite_parcelas' => 'getLimiteParcelas'
     );
@@ -278,16 +282,22 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $enderecos;
     
     /**
-      * $limite_global Valor do Limite Global
-      * @var Number
-      */
-    protected $limite_global;
-    
-    /**
       * $socios Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
       * @var \br.com.conductor.pier.api.v2.model\PessoaPersist[]
       */
     protected $socios;
+    
+    /**
+      * $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+      * @var \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+      */
+    protected $referencias_comerciais;
+    
+    /**
+      * $limite_global Valor do Limite Global
+      * @var Number
+      */
+    protected $limite_global;
     
     /**
       * $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
@@ -327,8 +337,9 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
             $this->valor_pontuacao = $data["valor_pontuacao"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
-            $this->limite_global = $data["limite_global"];
             $this->socios = $data["socios"];
+            $this->referencias_comerciais = $data["referencias_comerciais"];
+            $this->limite_global = $data["limite_global"];
             $this->limite_maximo = $data["limite_maximo"];
             $this->limite_parcelas = $data["limite_parcelas"];
         }
@@ -692,27 +703,6 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     }
     
     /**
-     * Gets limite_global
-     * @return Number
-     */
-    public function getLimiteGlobal()
-    {
-        return $this->limite_global;
-    }
-  
-    /**
-     * Sets limite_global
-     * @param Number $limite_global Valor do Limite Global
-     * @return $this
-     */
-    public function setLimiteGlobal($limite_global)
-    {
-        
-        $this->limite_global = $limite_global;
-        return $this;
-    }
-    
-    /**
      * Gets socios
      * @return \br.com.conductor.pier.api.v2.model\PessoaPersist[]
      */
@@ -730,6 +720,48 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     {
         
         $this->socios = $socios;
+        return $this;
+    }
+    
+    /**
+     * Gets referencias_comerciais
+     * @return \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+     */
+    public function getReferenciasComerciais()
+    {
+        return $this->referencias_comerciais;
+    }
+  
+    /**
+     * Sets referencias_comerciais
+     * @param \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[] $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+     * @return $this
+     */
+    public function setReferenciasComerciais($referencias_comerciais)
+    {
+        
+        $this->referencias_comerciais = $referencias_comerciais;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_global
+     * @return Number
+     */
+    public function getLimiteGlobal()
+    {
+        return $this->limite_global;
+    }
+  
+    /**
+     * Sets limite_global
+     * @param Number $limite_global Valor do Limite Global
+     * @return $this
+     */
+    public function setLimiteGlobal($limite_global)
+    {
+        
+        $this->limite_global = $limite_global;
         return $this;
     }
     

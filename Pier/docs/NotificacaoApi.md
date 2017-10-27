@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-[**responderSMSUsingPOST**](NotificacaoApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
+[**responderSMSGetUsingGET**](NotificacaoApi.md#responderSMSGetUsingGET) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
 [**salvarPushGCMUsingPOST**](NotificacaoApi.md#salvarPushGCMUsingPOST) | **POST** /api/notificacoes/push/gcm | Enviar Push GCM
@@ -819,7 +819,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificacaoEmailUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoEmailResponse notificacaoEmailUsingPOST($request)
+> object notificacaoEmailUsingPOST($request)
 
 Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 
@@ -850,7 +850,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+**object**
 
 ### Authorization
 
@@ -863,8 +863,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **responderSMSUsingPOST**
-> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse responderSMSUsingPOST($nsu, $data, $resposta)
+# **responderSMSGetUsingGET**
+> \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse responderSMSGetUsingGET($nsu, $data, $resposta)
 
 Responder SMS
 
@@ -881,10 +881,10 @@ $data = "data_example"; // string | Data
 $resposta = "resposta_example"; // string | TextoStatus
 
 try { 
-    $result = $api_instance->responderSMSUsingPOST($nsu, $data, $resposta);
+    $result = $api_instance->responderSMSGetUsingGET($nsu, $data, $resposta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificacaoApi->responderSMSUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling NotificacaoApi->responderSMSGetUsingGET: ', $e->getMessage(), "\n";
 }
 ?>
 ```

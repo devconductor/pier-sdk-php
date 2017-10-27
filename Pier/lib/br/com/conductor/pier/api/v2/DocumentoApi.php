@@ -592,7 +592,7 @@ class DocumentoApi
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      *
      * @param \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest $integrar_documento_request integrarDocumentoRequest (required)
-     * @return string
+     * @return \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function integrarUsingPOST($integrar_documento_request)
@@ -608,7 +608,7 @@ class DocumentoApi
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      *
      * @param \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest $integrar_documento_request integrarDocumentoRequest (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function integrarUsingPOSTWithHttpInfo($integrar_documento_request)
@@ -656,19 +656,19 @@ class DocumentoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, 'string'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

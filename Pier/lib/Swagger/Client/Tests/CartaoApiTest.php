@@ -126,6 +126,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarCartaoImpressaoUsingGET
+     *
+     * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+     *
+     */
+    public function test_consultarCartaoImpressaoUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarDadosReaisCartaoUsingGET
      *
      * Consultar Detalhes do Cart\u00C3\u00A3o

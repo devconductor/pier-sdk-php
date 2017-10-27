@@ -51,19 +51,19 @@ class PessoaPersist implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cpf' => 'string',
-        'data_emissao_identidade' => 'string',
-        'data_nascimento' => 'string',
-        'email' => 'string',
-        'estado_civil' => 'string',
-        'nacionalidade' => 'string',
         'nome' => 'string',
+        'cpf' => 'string',
+        'data_nascimento' => 'string',
+        'sexo' => 'string',
         'numero_identidade' => 'string',
         'orgao_expedidor_identidade' => 'string',
+        'unidade_federativa_identidade' => 'string',
+        'data_emissao_identidade' => 'string',
+        'estado_civil' => 'string',
         'profissao' => 'string',
-        'sexo' => 'string',
-        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
-        'unidade_federativa_identidade' => 'string'
+        'nacionalidade' => 'string',
+        'email' => 'string',
+        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]'
     );
   
     static function swaggerTypes() {
@@ -75,19 +75,19 @@ class PessoaPersist implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cpf' => 'cpf',
-        'data_emissao_identidade' => 'dataEmissaoIdentidade',
-        'data_nascimento' => 'dataNascimento',
-        'email' => 'email',
-        'estado_civil' => 'estadoCivil',
-        'nacionalidade' => 'nacionalidade',
         'nome' => 'nome',
+        'cpf' => 'cpf',
+        'data_nascimento' => 'dataNascimento',
+        'sexo' => 'sexo',
         'numero_identidade' => 'numeroIdentidade',
         'orgao_expedidor_identidade' => 'orgaoExpedidorIdentidade',
+        'unidade_federativa_identidade' => 'unidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'dataEmissaoIdentidade',
+        'estado_civil' => 'estadoCivil',
         'profissao' => 'profissao',
-        'sexo' => 'sexo',
-        'telefones' => 'telefones',
-        'unidade_federativa_identidade' => 'unidadeFederativaIdentidade'
+        'nacionalidade' => 'nacionalidade',
+        'email' => 'email',
+        'telefones' => 'telefones'
     );
   
     static function attributeMap() {
@@ -99,19 +99,19 @@ class PessoaPersist implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cpf' => 'setCpf',
-        'data_emissao_identidade' => 'setDataEmissaoIdentidade',
-        'data_nascimento' => 'setDataNascimento',
-        'email' => 'setEmail',
-        'estado_civil' => 'setEstadoCivil',
-        'nacionalidade' => 'setNacionalidade',
         'nome' => 'setNome',
+        'cpf' => 'setCpf',
+        'data_nascimento' => 'setDataNascimento',
+        'sexo' => 'setSexo',
         'numero_identidade' => 'setNumeroIdentidade',
         'orgao_expedidor_identidade' => 'setOrgaoExpedidorIdentidade',
+        'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'setDataEmissaoIdentidade',
+        'estado_civil' => 'setEstadoCivil',
         'profissao' => 'setProfissao',
-        'sexo' => 'setSexo',
-        'telefones' => 'setTelefones',
-        'unidade_federativa_identidade' => 'setUnidadeFederativaIdentidade'
+        'nacionalidade' => 'setNacionalidade',
+        'email' => 'setEmail',
+        'telefones' => 'setTelefones'
     );
   
     static function setters() {
@@ -123,19 +123,19 @@ class PessoaPersist implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cpf' => 'getCpf',
-        'data_emissao_identidade' => 'getDataEmissaoIdentidade',
-        'data_nascimento' => 'getDataNascimento',
-        'email' => 'getEmail',
-        'estado_civil' => 'getEstadoCivil',
-        'nacionalidade' => 'getNacionalidade',
         'nome' => 'getNome',
+        'cpf' => 'getCpf',
+        'data_nascimento' => 'getDataNascimento',
+        'sexo' => 'getSexo',
         'numero_identidade' => 'getNumeroIdentidade',
         'orgao_expedidor_identidade' => 'getOrgaoExpedidorIdentidade',
+        'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade',
+        'data_emissao_identidade' => 'getDataEmissaoIdentidade',
+        'estado_civil' => 'getEstadoCivil',
         'profissao' => 'getProfissao',
-        'sexo' => 'getSexo',
-        'telefones' => 'getTelefones',
-        'unidade_federativa_identidade' => 'getUnidadeFederativaIdentidade'
+        'nacionalidade' => 'getNacionalidade',
+        'email' => 'getEmail',
+        'telefones' => 'getTelefones'
     );
   
     static function getters() {
@@ -144,16 +144,16 @@ class PessoaPersist implements ArrayAccess
 
     
     /**
+      * $nome Apresenta o Nome do Socio
+      * @var string
+      */
+    protected $nome;
+    
+    /**
       * $cpf N\u00C3\u00BAmero do CPF, quando PF.
       * @var string
       */
     protected $cpf;
-    
-    /**
-      * $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
-      * @var string
-      */
-    protected $data_emissao_identidade;
     
     /**
       * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
@@ -162,28 +162,10 @@ class PessoaPersist implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $email Email do s\u00C3\u00B3cio
+      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
       * @var string
       */
-    protected $email;
-    
-    /**
-      * $estado_civil Estado civil do s\u00C3\u00B3cio
-      * @var string
-      */
-    protected $estado_civil;
-    
-    /**
-      * $nacionalidade Nacionalidade do s\u00C3\u00B3cio
-      * @var string
-      */
-    protected $nacionalidade;
-    
-    /**
-      * $nome Apresenta o Nome do Socio
-      * @var string
-      */
-    protected $nome;
+    protected $sexo;
     
     /**
       * $numero_identidade N\u00C3\u00BAmero da Identidade.
@@ -198,28 +180,46 @@ class PessoaPersist implements ArrayAccess
     protected $orgao_expedidor_identidade;
     
     /**
+      * $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+      * @var string
+      */
+    protected $unidade_federativa_identidade;
+    
+    /**
+      * $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+      * @var string
+      */
+    protected $data_emissao_identidade;
+    
+    /**
+      * $estado_civil Estado civil do s\u00C3\u00B3cio
+      * @var string
+      */
+    protected $estado_civil;
+    
+    /**
       * $profissao Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
       * @var string
       */
     protected $profissao;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+      * $nacionalidade Nacionalidade do s\u00C3\u00B3cio
       * @var string
       */
-    protected $sexo;
+    protected $nacionalidade;
+    
+    /**
+      * $email Email do s\u00C3\u00B3cio
+      * @var string
+      */
+    protected $email;
     
     /**
       * $telefones Informa os telefones do s\u00C3\u00B3cio
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
     protected $telefones;
-    
-    /**
-      * $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-      * @var string
-      */
-    protected $unidade_federativa_identidade;
     
 
     /**
@@ -230,20 +230,41 @@ class PessoaPersist implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cpf = $data["cpf"];
-            $this->data_emissao_identidade = $data["data_emissao_identidade"];
-            $this->data_nascimento = $data["data_nascimento"];
-            $this->email = $data["email"];
-            $this->estado_civil = $data["estado_civil"];
-            $this->nacionalidade = $data["nacionalidade"];
             $this->nome = $data["nome"];
+            $this->cpf = $data["cpf"];
+            $this->data_nascimento = $data["data_nascimento"];
+            $this->sexo = $data["sexo"];
             $this->numero_identidade = $data["numero_identidade"];
             $this->orgao_expedidor_identidade = $data["orgao_expedidor_identidade"];
-            $this->profissao = $data["profissao"];
-            $this->sexo = $data["sexo"];
-            $this->telefones = $data["telefones"];
             $this->unidade_federativa_identidade = $data["unidade_federativa_identidade"];
+            $this->data_emissao_identidade = $data["data_emissao_identidade"];
+            $this->estado_civil = $data["estado_civil"];
+            $this->profissao = $data["profissao"];
+            $this->nacionalidade = $data["nacionalidade"];
+            $this->email = $data["email"];
+            $this->telefones = $data["telefones"];
         }
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome Apresenta o Nome do Socio
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
+        return $this;
     }
     
     /**
@@ -264,27 +285,6 @@ class PessoaPersist implements ArrayAccess
     {
         
         $this->cpf = $cpf;
-        return $this;
-    }
-    
-    /**
-     * Gets data_emissao_identidade
-     * @return string
-     */
-    public function getDataEmissaoIdentidade()
-    {
-        return $this->data_emissao_identidade;
-    }
-  
-    /**
-     * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
-     * @return $this
-     */
-    public function setDataEmissaoIdentidade($data_emissao_identidade)
-    {
-        
-        $this->data_emissao_identidade = $data_emissao_identidade;
         return $this;
     }
     
@@ -310,86 +310,23 @@ class PessoaPersist implements ArrayAccess
     }
     
     /**
-     * Gets email
+     * Gets sexo
      * @return string
      */
-    public function getEmail()
+    public function getSexo()
     {
-        return $this->email;
+        return $this->sexo;
     }
   
     /**
-     * Sets email
-     * @param string $email Email do s\u00C3\u00B3cio
+     * Sets sexo
+     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
      * @return $this
      */
-    public function setEmail($email)
+    public function setSexo($sexo)
     {
         
-        $this->email = $email;
-        return $this;
-    }
-    
-    /**
-     * Gets estado_civil
-     * @return string
-     */
-    public function getEstadoCivil()
-    {
-        return $this->estado_civil;
-    }
-  
-    /**
-     * Sets estado_civil
-     * @param string $estado_civil Estado civil do s\u00C3\u00B3cio
-     * @return $this
-     */
-    public function setEstadoCivil($estado_civil)
-    {
-        
-        $this->estado_civil = $estado_civil;
-        return $this;
-    }
-    
-    /**
-     * Gets nacionalidade
-     * @return string
-     */
-    public function getNacionalidade()
-    {
-        return $this->nacionalidade;
-    }
-  
-    /**
-     * Sets nacionalidade
-     * @param string $nacionalidade Nacionalidade do s\u00C3\u00B3cio
-     * @return $this
-     */
-    public function setNacionalidade($nacionalidade)
-    {
-        
-        $this->nacionalidade = $nacionalidade;
-        return $this;
-    }
-    
-    /**
-     * Gets nome
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-  
-    /**
-     * Sets nome
-     * @param string $nome Apresenta o Nome do Socio
-     * @return $this
-     */
-    public function setNome($nome)
-    {
-        
-        $this->nome = $nome;
+        $this->sexo = $sexo;
         return $this;
     }
     
@@ -436,6 +373,69 @@ class PessoaPersist implements ArrayAccess
     }
     
     /**
+     * Gets unidade_federativa_identidade
+     * @return string
+     */
+    public function getUnidadeFederativaIdentidade()
+    {
+        return $this->unidade_federativa_identidade;
+    }
+  
+    /**
+     * Sets unidade_federativa_identidade
+     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @return $this
+     */
+    public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
+    {
+        
+        $this->unidade_federativa_identidade = $unidade_federativa_identidade;
+        return $this;
+    }
+    
+    /**
+     * Gets data_emissao_identidade
+     * @return string
+     */
+    public function getDataEmissaoIdentidade()
+    {
+        return $this->data_emissao_identidade;
+    }
+  
+    /**
+     * Sets data_emissao_identidade
+     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+     * @return $this
+     */
+    public function setDataEmissaoIdentidade($data_emissao_identidade)
+    {
+        
+        $this->data_emissao_identidade = $data_emissao_identidade;
+        return $this;
+    }
+    
+    /**
+     * Gets estado_civil
+     * @return string
+     */
+    public function getEstadoCivil()
+    {
+        return $this->estado_civil;
+    }
+  
+    /**
+     * Sets estado_civil
+     * @param string $estado_civil Estado civil do s\u00C3\u00B3cio
+     * @return $this
+     */
+    public function setEstadoCivil($estado_civil)
+    {
+        
+        $this->estado_civil = $estado_civil;
+        return $this;
+    }
+    
+    /**
      * Gets profissao
      * @return string
      */
@@ -457,23 +457,44 @@ class PessoaPersist implements ArrayAccess
     }
     
     /**
-     * Gets sexo
+     * Gets nacionalidade
      * @return string
      */
-    public function getSexo()
+    public function getNacionalidade()
     {
-        return $this->sexo;
+        return $this->nacionalidade;
     }
   
     /**
-     * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+     * Sets nacionalidade
+     * @param string $nacionalidade Nacionalidade do s\u00C3\u00B3cio
      * @return $this
      */
-    public function setSexo($sexo)
+    public function setNacionalidade($nacionalidade)
     {
         
-        $this->sexo = $sexo;
+        $this->nacionalidade = $nacionalidade;
+        return $this;
+    }
+    
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+  
+    /**
+     * Sets email
+     * @param string $email Email do s\u00C3\u00B3cio
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        
+        $this->email = $email;
         return $this;
     }
     
@@ -495,27 +516,6 @@ class PessoaPersist implements ArrayAccess
     {
         
         $this->telefones = $telefones;
-        return $this;
-    }
-    
-    /**
-     * Gets unidade_federativa_identidade
-     * @return string
-     */
-    public function getUnidadeFederativaIdentidade()
-    {
-        return $this->unidade_federativa_identidade;
-    }
-  
-    /**
-     * Sets unidade_federativa_identidade
-     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-     * @return $this
-     */
-    public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
-    {
-        
-        $this->unidade_federativa_identidade = $unidade_federativa_identidade;
         return $this;
     }
     

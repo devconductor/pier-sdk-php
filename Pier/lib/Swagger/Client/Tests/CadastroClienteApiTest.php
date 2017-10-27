@@ -126,6 +126,16 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for atualizarUsingPOST
+     *
+     * Atualiza conta integrada com o emissor
+     *
+     */
+    public function test_atualizarUsingPOST() {
+
+    }
+    
+    /**
      * Test case for cadastrarUsingPOST
      *
      * Realiza o cadastro de Adicionais para uma Conta

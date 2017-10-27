@@ -248,7 +248,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **integrarUsingPOST**
-> string integrarUsingPOST($integrar_documento_request)
+> \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse integrarUsingPOST($integrar_documento_request)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse**](DocumentoIntegracaoResponse.md)
 
 ### Authorization
 

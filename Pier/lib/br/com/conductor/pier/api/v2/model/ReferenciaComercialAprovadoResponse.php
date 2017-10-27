@@ -1,6 +1,6 @@
 <?php
 /**
- * NotificacaoEmailResponse
+ * ReferenciaComercialAprovadoResponse
  *
  * PHP version 5
  *
@@ -35,27 +35,27 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * NotificacaoEmailResponse Class Doc Comment
+ * ReferenciaComercialAprovadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Notifica\u00C3\u00A7\u00C3\u00A3o do envio do email
+ * @description ReferenciaComercialAprovadoResponse
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NotificacaoEmailResponse implements ArrayAccess
+class ReferenciaComercialAprovadoResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id' => 'int',
-        'id_template_notificacao' => 'int',
-        'id_documento' => 'int',
-        'destinatario' => 'string',
-        'remetente' => 'string'
+        'razao_social' => 'string',
+        'nome_contrato' => 'string',
+        'ddd' => 'string',
+        'telefone' => 'string',
+        'email' => 'string'
     );
   
     static function swaggerTypes() {
@@ -67,11 +67,11 @@ class NotificacaoEmailResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id' => 'id',
-        'id_template_notificacao' => 'idTemplateNotificacao',
-        'id_documento' => 'idDocumento',
-        'destinatario' => 'destinatario',
-        'remetente' => 'remetente'
+        'razao_social' => 'razaoSocial',
+        'nome_contrato' => 'nomeContrato',
+        'ddd' => 'ddd',
+        'telefone' => 'telefone',
+        'email' => 'email'
     );
   
     static function attributeMap() {
@@ -83,11 +83,11 @@ class NotificacaoEmailResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id' => 'setId',
-        'id_template_notificacao' => 'setIdTemplateNotificacao',
-        'id_documento' => 'setIdDocumento',
-        'destinatario' => 'setDestinatario',
-        'remetente' => 'setRemetente'
+        'razao_social' => 'setRazaoSocial',
+        'nome_contrato' => 'setNomeContrato',
+        'ddd' => 'setDdd',
+        'telefone' => 'setTelefone',
+        'email' => 'setEmail'
     );
   
     static function setters() {
@@ -99,11 +99,11 @@ class NotificacaoEmailResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id' => 'getId',
-        'id_template_notificacao' => 'getIdTemplateNotificacao',
-        'id_documento' => 'getIdDocumento',
-        'destinatario' => 'getDestinatario',
-        'remetente' => 'getRemetente'
+        'razao_social' => 'getRazaoSocial',
+        'nome_contrato' => 'getNomeContrato',
+        'ddd' => 'getDdd',
+        'telefone' => 'getTelefone',
+        'email' => 'getEmail'
     );
   
     static function getters() {
@@ -112,34 +112,34 @@ class NotificacaoEmailResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da notifica\u00C3\u00A7\u00C3\u00A3o gerada.
-      * @var int
-      */
-    protected $id;
-    
-    /**
-      * $id_template_notificacao C\u00C3\u00B3digo identificador do template da notifica\u00C3\u00A7\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_template_notificacao;
-    
-    /**
-      * $id_documento C\u00C3\u00B3digo identificador do Documento.
-      * @var int
-      */
-    protected $id_documento;
-    
-    /**
-      * $destinatario Email do destinat\u00C3\u00A1rio da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
       * @var string
       */
-    protected $destinatario;
+    protected $razao_social;
     
     /**
-      * $remetente Email do remetente da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $nome_contrato Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
       * @var string
       */
-    protected $remetente;
+    protected $nome_contrato;
+    
+    /**
+      * $ddd Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+      * @var string
+      */
+    protected $ddd;
+    
+    /**
+      * $telefone Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+      * @var string
+      */
+    protected $telefone;
+    
+    /**
+      * $email Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+      * @var string
+      */
+    protected $email;
     
 
     /**
@@ -150,116 +150,116 @@ class NotificacaoEmailResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id = $data["id"];
-            $this->id_template_notificacao = $data["id_template_notificacao"];
-            $this->id_documento = $data["id_documento"];
-            $this->destinatario = $data["destinatario"];
-            $this->remetente = $data["remetente"];
+            $this->razao_social = $data["razao_social"];
+            $this->nome_contrato = $data["nome_contrato"];
+            $this->ddd = $data["ddd"];
+            $this->telefone = $data["telefone"];
+            $this->email = $data["email"];
         }
     }
     
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-  
-    /**
-     * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da notifica\u00C3\u00A7\u00C3\u00A3o gerada.
-     * @return $this
-     */
-    public function setId($id)
-    {
-        
-        $this->id = $id;
-        return $this;
-    }
-    
-    /**
-     * Gets id_template_notificacao
-     * @return int
-     */
-    public function getIdTemplateNotificacao()
-    {
-        return $this->id_template_notificacao;
-    }
-  
-    /**
-     * Sets id_template_notificacao
-     * @param int $id_template_notificacao C\u00C3\u00B3digo identificador do template da notifica\u00C3\u00A7\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdTemplateNotificacao($id_template_notificacao)
-    {
-        
-        $this->id_template_notificacao = $id_template_notificacao;
-        return $this;
-    }
-    
-    /**
-     * Gets id_documento
-     * @return int
-     */
-    public function getIdDocumento()
-    {
-        return $this->id_documento;
-    }
-  
-    /**
-     * Sets id_documento
-     * @param int $id_documento C\u00C3\u00B3digo identificador do Documento.
-     * @return $this
-     */
-    public function setIdDocumento($id_documento)
-    {
-        
-        $this->id_documento = $id_documento;
-        return $this;
-    }
-    
-    /**
-     * Gets destinatario
+     * Gets razao_social
      * @return string
      */
-    public function getDestinatario()
+    public function getRazaoSocial()
     {
-        return $this->destinatario;
+        return $this->razao_social;
     }
   
     /**
-     * Sets destinatario
-     * @param string $destinatario Email do destinat\u00C3\u00A1rio da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * Sets razao_social
+     * @param string $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
      * @return $this
      */
-    public function setDestinatario($destinatario)
+    public function setRazaoSocial($razao_social)
     {
         
-        $this->destinatario = $destinatario;
+        $this->razao_social = $razao_social;
         return $this;
     }
     
     /**
-     * Gets remetente
+     * Gets nome_contrato
      * @return string
      */
-    public function getRemetente()
+    public function getNomeContrato()
     {
-        return $this->remetente;
+        return $this->nome_contrato;
     }
   
     /**
-     * Sets remetente
-     * @param string $remetente Email do remetente da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * Sets nome_contrato
+     * @param string $nome_contrato Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
      * @return $this
      */
-    public function setRemetente($remetente)
+    public function setNomeContrato($nome_contrato)
     {
         
-        $this->remetente = $remetente;
+        $this->nome_contrato = $nome_contrato;
+        return $this;
+    }
+    
+    /**
+     * Gets ddd
+     * @return string
+     */
+    public function getDdd()
+    {
+        return $this->ddd;
+    }
+  
+    /**
+     * Sets ddd
+     * @param string $ddd Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+     * @return $this
+     */
+    public function setDdd($ddd)
+    {
+        
+        $this->ddd = $ddd;
+        return $this;
+    }
+    
+    /**
+     * Gets telefone
+     * @return string
+     */
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+  
+    /**
+     * Sets telefone
+     * @param string $telefone Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+     * @return $this
+     */
+    public function setTelefone($telefone)
+    {
+        
+        $this->telefone = $telefone;
+        return $this;
+    }
+    
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+  
+    /**
+     * Sets email
+     * @param string $email Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        
+        $this->email = $email;
         return $this;
     }
     

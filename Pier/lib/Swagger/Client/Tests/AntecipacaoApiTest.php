@@ -96,6 +96,16 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for efetivarAntecipacoesUsingPOST
+     *
+     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_efetivarAntecipacoesUsingPOST() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET8
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
@@ -112,6 +122,16 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_simularAntecipacaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for simularAntecipacoesUsingGET
+     *
+     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     *
+     */
+    public function test_simularAntecipacoesUsingGET() {
 
     }
     

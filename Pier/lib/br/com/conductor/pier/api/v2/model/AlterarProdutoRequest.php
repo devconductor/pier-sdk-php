@@ -52,8 +52,7 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_produto' => 'int',
-        'id_origem_comercial' => 'int',
-        'limite_global' => 'Number'
+        'id_origem_comercial' => 'int'
     );
   
     static function swaggerTypes() {
@@ -66,8 +65,7 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $attributeMap = array(
         'id_produto' => 'idProduto',
-        'id_origem_comercial' => 'idOrigemComercial',
-        'limite_global' => 'limiteGlobal'
+        'id_origem_comercial' => 'idOrigemComercial'
     );
   
     static function attributeMap() {
@@ -80,8 +78,7 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $setters = array(
         'id_produto' => 'setIdProduto',
-        'id_origem_comercial' => 'setIdOrigemComercial',
-        'limite_global' => 'setLimiteGlobal'
+        'id_origem_comercial' => 'setIdOrigemComercial'
     );
   
     static function setters() {
@@ -94,8 +91,7 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $getters = array(
         'id_produto' => 'getIdProduto',
-        'id_origem_comercial' => 'getIdOrigemComercial',
-        'limite_global' => 'getLimiteGlobal'
+        'id_origem_comercial' => 'getIdOrigemComercial'
     );
   
     static function getters() {
@@ -115,12 +111,6 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     protected $id_origem_comercial;
     
-    /**
-      * $limite_global Valor do novo limite Global.
-      * @var Number
-      */
-    protected $limite_global;
-    
 
     /**
      * Constructor
@@ -132,7 +122,6 @@ class AlterarProdutoRequest implements ArrayAccess
         if ($data != null) {
             $this->id_produto = $data["id_produto"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
-            $this->limite_global = $data["limite_global"];
         }
     }
     
@@ -175,27 +164,6 @@ class AlterarProdutoRequest implements ArrayAccess
     {
         
         $this->id_origem_comercial = $id_origem_comercial;
-        return $this;
-    }
-    
-    /**
-     * Gets limite_global
-     * @return Number
-     */
-    public function getLimiteGlobal()
-    {
-        return $this->limite_global;
-    }
-  
-    /**
-     * Sets limite_global
-     * @param Number $limite_global Valor do novo limite Global.
-     * @return $this
-     */
-    public function setLimiteGlobal($limite_global)
-    {
-        
-        $this->limite_global = $limite_global;
         return $this;
     }
     

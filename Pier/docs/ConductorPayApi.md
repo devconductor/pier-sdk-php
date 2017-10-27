@@ -415,7 +415,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET6($device_id, $sort, $page, $limit, $status)
+> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET6($device_id, $sort, $page, $limit, $status, $numero_cartao)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -432,9 +432,10 @@ $sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u0
 $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 $status = "status_example"; // string | Status do cart\u00C3\u00A3o tokenizado
+$numero_cartao = "numero_cartao_example"; // string | Numero do cart\u00C3\u00A3o tokenizado
 
 try { 
-    $result = $api_instance->listarUsingGET6($device_id, $sort, $page, $limit, $status);
+    $result = $api_instance->listarUsingGET6($device_id, $sort, $page, $limit, $status, $numero_cartao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConductorPayApi->listarUsingGET6: ', $e->getMessage(), "\n";
@@ -446,11 +447,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **string**| Device id criptografado | 
+ **device_id** | **string**| Device id criptografado | [optional] 
  **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **status** | **string**| Status do cart\u00C3\u00A3o tokenizado | [optional] 
+ **numero_cartao** | **string**| Numero do cart\u00C3\u00A3o tokenizado | [optional] 
 
 ### Return type
 
