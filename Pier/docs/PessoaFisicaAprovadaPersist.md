@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **limite_global** | [**Number**](Number.md) | Valor do Limite Global | 
 **limite_maximo** | [**Number**](Number.md) | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 
 **limite_parcelas** | [**Number**](Number.md) | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 
+**limite_consignado** | [**Number**](Number.md) | Valor do limite de margem consignado | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -79,7 +79,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
         'limite_global' => 'Number',
         'limite_maximo' => 'Number',
-        'limite_parcelas' => 'Number'
+        'limite_parcelas' => 'Number',
+        'limite_consignado' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -119,7 +120,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'enderecos' => 'enderecos',
         'limite_global' => 'limiteGlobal',
         'limite_maximo' => 'limiteMaximo',
-        'limite_parcelas' => 'limiteParcelas'
+        'limite_parcelas' => 'limiteParcelas',
+        'limite_consignado' => 'limiteConsignado'
     );
   
     static function attributeMap() {
@@ -159,7 +161,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'enderecos' => 'setEnderecos',
         'limite_global' => 'setLimiteGlobal',
         'limite_maximo' => 'setLimiteMaximo',
-        'limite_parcelas' => 'setLimiteParcelas'
+        'limite_parcelas' => 'setLimiteParcelas',
+        'limite_consignado' => 'setLimiteConsignado'
     );
   
     static function setters() {
@@ -199,7 +202,8 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
         'enderecos' => 'getEnderecos',
         'limite_global' => 'getLimiteGlobal',
         'limite_maximo' => 'getLimiteMaximo',
-        'limite_parcelas' => 'getLimiteParcelas'
+        'limite_parcelas' => 'getLimiteParcelas',
+        'limite_consignado' => 'getLimiteConsignado'
     );
   
     static function getters() {
@@ -381,6 +385,12 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
       */
     protected $limite_parcelas;
     
+    /**
+      * $limite_consignado Valor do limite de margem consignado
+      * @var Number
+      */
+    protected $limite_consignado;
+    
 
     /**
      * Constructor
@@ -419,6 +429,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
             $this->limite_global = $data["limite_global"];
             $this->limite_maximo = $data["limite_maximo"];
             $this->limite_parcelas = $data["limite_parcelas"];
+            $this->limite_consignado = $data["limite_consignado"];
         }
     }
     
@@ -1028,6 +1039,27 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     {
         
         $this->limite_parcelas = $limite_parcelas;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_consignado
+     * @return Number
+     */
+    public function getLimiteConsignado()
+    {
+        return $this->limite_consignado;
+    }
+  
+    /**
+     * Sets limite_consignado
+     * @param Number $limite_consignado Valor do limite de margem consignado
+     * @return $this
+     */
+    public function setLimiteConsignado($limite_consignado)
+    {
+        
+        $this->limite_consignado = $limite_consignado;
         return $this;
     }
     

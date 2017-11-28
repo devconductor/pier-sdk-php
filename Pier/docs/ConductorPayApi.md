@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listarUsingGET6**](ConductorPayApi.md#listarUsingGET6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvarUsingPOST4**](ConductorPayApi.md#salvarUsingPOST4) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 # **atualizarChaveUsingPOST**
@@ -469,8 +469,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST4**
-> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST4($device_id, $persist)
+# **salvarUsingPOST5**
+> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST5($device_id, $persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -486,10 +486,10 @@ $device_id = "device_id_example"; // string | Device id criptografado
 $persist = new \br.com.conductor.pier.api.v2.model\CartaoPayPersist(); // \br.com.conductor.pier.api.v2.model\CartaoPayPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST4($device_id, $persist);
+    $result = $api_instance->salvarUsingPOST5($device_id, $persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
 }
 ?>
 ```

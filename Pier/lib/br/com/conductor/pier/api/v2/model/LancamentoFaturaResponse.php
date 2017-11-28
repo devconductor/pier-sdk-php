@@ -74,7 +74,8 @@ class LancamentoFaturaResponse implements ArrayAccess
         'nome_portador' => 'string',
         'numero_cartao_mascarado' => 'string',
         'flag_solicitou_contestacao' => 'bool',
-        'valor_taxa_embarque' => 'Number'
+        'valor_taxa_embarque' => 'Number',
+        'descricao_abreviada' => 'string'
     );
   
     static function swaggerTypes() {
@@ -109,7 +110,8 @@ class LancamentoFaturaResponse implements ArrayAccess
         'nome_portador' => 'nomePortador',
         'numero_cartao_mascarado' => 'numeroCartaoMascarado',
         'flag_solicitou_contestacao' => 'flagSolicitouContestacao',
-        'valor_taxa_embarque' => 'valorTaxaEmbarque'
+        'valor_taxa_embarque' => 'valorTaxaEmbarque',
+        'descricao_abreviada' => 'descricaoAbreviada'
     );
   
     static function attributeMap() {
@@ -144,7 +146,8 @@ class LancamentoFaturaResponse implements ArrayAccess
         'nome_portador' => 'setNomePortador',
         'numero_cartao_mascarado' => 'setNumeroCartaoMascarado',
         'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao',
-        'valor_taxa_embarque' => 'setValorTaxaEmbarque'
+        'valor_taxa_embarque' => 'setValorTaxaEmbarque',
+        'descricao_abreviada' => 'setDescricaoAbreviada'
     );
   
     static function setters() {
@@ -179,7 +182,8 @@ class LancamentoFaturaResponse implements ArrayAccess
         'nome_portador' => 'getNomePortador',
         'numero_cartao_mascarado' => 'getNumeroCartaoMascarado',
         'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao',
-        'valor_taxa_embarque' => 'getValorTaxaEmbarque'
+        'valor_taxa_embarque' => 'getValorTaxaEmbarque',
+        'descricao_abreviada' => 'getDescricaoAbreviada'
     );
   
     static function getters() {
@@ -331,6 +335,12 @@ class LancamentoFaturaResponse implements ArrayAccess
       */
     protected $valor_taxa_embarque;
     
+    /**
+      * $descricao_abreviada Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $descricao_abreviada;
+    
 
     /**
      * Constructor
@@ -364,6 +374,7 @@ class LancamentoFaturaResponse implements ArrayAccess
             $this->numero_cartao_mascarado = $data["numero_cartao_mascarado"];
             $this->flag_solicitou_contestacao = $data["flag_solicitou_contestacao"];
             $this->valor_taxa_embarque = $data["valor_taxa_embarque"];
+            $this->descricao_abreviada = $data["descricao_abreviada"];
         }
     }
     
@@ -868,6 +879,27 @@ class LancamentoFaturaResponse implements ArrayAccess
     {
         
         $this->valor_taxa_embarque = $valor_taxa_embarque;
+        return $this;
+    }
+    
+    /**
+     * Gets descricao_abreviada
+     * @return string
+     */
+    public function getDescricaoAbreviada()
+    {
+        return $this->descricao_abreviada;
+    }
+  
+    /**
+     * Sets descricao_abreviada
+     * @param string $descricao_abreviada Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setDescricaoAbreviada($descricao_abreviada)
+    {
+        
+        $this->descricao_abreviada = $descricao_abreviada;
         return $this;
     }
     

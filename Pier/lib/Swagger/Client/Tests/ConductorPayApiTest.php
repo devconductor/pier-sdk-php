@@ -166,12 +166,12 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST4
+     * Test case for salvarUsingPOST5
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
      */
-    public function test_salvarUsingPOST4() {
+    public function test_salvarUsingPOST5() {
 
     }
     

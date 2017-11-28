@@ -197,7 +197,7 @@ class PlataformaMobileApi
     }
     
     /**
-     * listarUsingGET20
+     * listarUsingGET25
      *
      * Lista as plataformas mobile cadastradas
      *
@@ -208,15 +208,15 @@ class PlataformaMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET25($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET25WithHttpInfo
      *
      * Lista as plataformas mobile cadastradas
      *
@@ -227,7 +227,7 @@ class PlataformaMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET25WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
     {
         
   
@@ -306,7 +306,7 @@ class PlataformaMobileApi
     }
     
     /**
-     * salvarUsingPOST15
+     * salvarUsingPOST18
      *
      * Cadastra Plataforma Mobile
      *
@@ -314,15 +314,15 @@ class PlataformaMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST15($persist)
+    public function salvarUsingPOST18($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST15WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST18WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST15WithHttpInfo
+     * salvarUsingPOST18WithHttpInfo
      *
      * Cadastra Plataforma Mobile
      *
@@ -330,12 +330,12 @@ class PlataformaMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST15WithHttpInfo($persist)
+    public function salvarUsingPOST18WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST15');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST18');
         }
   
         // parse inputs

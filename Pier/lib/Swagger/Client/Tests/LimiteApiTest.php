@@ -66,26 +66,6 @@ class LimiteApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarLimiteUsingPUT
-     *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-     *
-     */
-    public function test_alterarLimiteUsingPUT() {
-
-    }
-    
-    /**
-     * Test case for consultarLimiteDisponibilidadeUsingGET1
-     *
-     * Apresenta os limites da conta
-     *
-     */
-    public function test_consultarLimiteDisponibilidadeUsingGET1() {
-
-    }
-    
-    /**
      * Test case for listarHistoricoAlteracoesLimitesUsingGET
      *
      * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta

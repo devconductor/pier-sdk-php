@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
-[**alterarUsingPUT3**](FAQApi.md#alterarUsingPUT3) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET12**](FAQApi.md#consultarUsingGET12) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET15**](FAQApi.md#listarUsingGET15) | **GET** /api/faqs | Lista FAQs
+[**alterarUsingPUT6**](FAQApi.md#alterarUsingPUT6) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultarUsingGET15**](FAQApi.md#consultarUsingGET15) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET19**](FAQApi.md#listarUsingGET19) | **GET** /api/faqs | Lista FAQs
 
 
 # **adicionarUsingPOST**
@@ -65,8 +65,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **alterarUsingPUT3**
-> \br.com.conductor.pier.api.v2.model\FaqResponse alterarUsingPUT3($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+# **alterarUsingPUT6**
+> \br.com.conductor.pier.api.v2.model\FaqResponse alterarUsingPUT6($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Alterar FAQ
 
@@ -87,10 +87,10 @@ $categoria = "categoria_example"; // string | Categoria de assunto do qual a FAQ
 $status = "status_example"; // string | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
 
 try { 
-    $result = $api_instance->alterarUsingPUT3($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+    $result = $api_instance->alterarUsingPUT6($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->alterarUsingPUT3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->alterarUsingPUT6: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -122,8 +122,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET12($id)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET15($id)
 
 Consultar FAQ por id
 
@@ -138,10 +138,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FAQApi();
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET15($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -167,8 +167,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageFaqResponse listarUsingGET15($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+# **listarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\PageFaqResponse listarUsingGET19($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 Lista FAQs
 
@@ -192,10 +192,10 @@ $categoria = "categoria_example"; // string | Categoria de assunto do qual a FAQ
 $status = "status_example"; // string | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
 
 try { 
-    $result = $api_instance->listarUsingGET15($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+    $result = $api_instance->listarUsingGET19($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FAQApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling FAQApi->listarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```

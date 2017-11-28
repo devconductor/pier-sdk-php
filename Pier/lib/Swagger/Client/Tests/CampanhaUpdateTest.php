@@ -1,6 +1,6 @@
 <?php
 /**
- * AntecipacaoMockResponseTest
+ * CampanhaUpdateTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * AntecipacaoMockResponseTest Class Doc Comment
+ * CampanhaUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Objeto Campanha
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AntecipacaoMockResponseTest extends \PHPUnit_Framework_TestCase
+class CampanhaUpdateTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class AntecipacaoMockResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test AntecipacaoMockResponse
+     * Test CampanhaUpdate
      */
-    public function testAntecipacaoMockResponse() {
+    public function testCampanhaUpdate() {
 
     }
 

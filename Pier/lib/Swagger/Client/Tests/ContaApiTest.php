@@ -76,16 +76,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarLimiteUsingPUT
-     *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-     *
-     */
-    public function test_alterarLimiteUsingPUT() {
-
-    }
-    
-    /**
      * Test case for alterarProdutoUsingPOST
      *
      * Altera o produto associado \u00C3\u00A0 conta.
@@ -186,36 +176,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarFaturaUsingGET
-     *
-     * Consultar Fatura da Conta
-     *
-     */
-    public function test_consultarFaturaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarLancamentosFuturosFaturaUsingGET
-     *
-     * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-     *
-     */
-    public function test_consultarLancamentosFuturosFaturaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarLimiteDisponibilidadeUsingGET1
-     *
-     * Apresenta os limites da conta
-     *
-     */
-    public function test_consultarLimiteDisponibilidadeUsingGET1() {
-
-    }
-    
-    /**
      * Test case for consultarTaxasTarifasUsingGET
      *
      * Permite consultar a partir do ID da conta as taxas e tarifas
@@ -226,32 +186,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET30
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     */
-    public function test_consultarUsingGET30() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET31
-     *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-     *
-     */
-    public function test_consultarUsingGET31() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET10
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET10() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET35
+     *
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     *
+     */
+    public function test_consultarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET36
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     */
+    public function test_consultarUsingGET36() {
 
     }
     
@@ -316,16 +276,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarFaturasUsingGET
-     *
-     * Lista as faturas da conta
-     *
-     */
-    public function test_listarFaturasUsingGET() {
-
-    }
-    
-    /**
      * Test case for listarHistoricoAlteracoesLimitesUsingGET
      *
      * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
@@ -386,32 +336,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET34
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     */
-    public function test_listarUsingGET34() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET35
-     *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
-     *
-     */
-    public function test_listarUsingGET35() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET9
+     * Test case for listarUsingGET13
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET9() {
+    public function test_listarUsingGET13() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET40
+     *
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     *
+     */
+    public function test_listarUsingGET40() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET41
+     *
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     *
+     */
+    public function test_listarUsingGET41() {
 
     }
     

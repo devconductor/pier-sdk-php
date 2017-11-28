@@ -66,52 +66,52 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT9
+     * Test case for alterarUsingPUT15
      *
      * Altera o tipo de template
      *
      */
-    public function test_alterarUsingPUT9() {
+    public function test_alterarUsingPUT15() {
 
     }
     
     /**
-     * Test case for atualizarUsingPUT1
+     * Test case for atualizarUsingPUT2
      *
      * Atualizar templates dos documentos
      *
      */
-    public function test_atualizarUsingPUT1() {
+    public function test_atualizarUsingPUT2() {
 
     }
     
     /**
-     * Test case for consultarUsingGET28
-     *
-     * Consultar tipo de template
-     *
-     */
-    public function test_consultarUsingGET28() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarUsingGET11
      *
      * Consulta documentos
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarUsingGET11() {
 
     }
     
     /**
-     * Test case for consultarUsingGET9
+     * Test case for consultarUsingGET12
      *
      * Consultar templates dos documentos
      *
      */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET12() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET33
+     *
+     * Consultar tipo de template
+     *
+     */
+    public function test_consultarUsingGET33() {
 
     }
     
@@ -126,62 +126,62 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET15
      *
      * Lista documentos
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET15() {
 
     }
     
     /**
-     * Test case for listarUsingGET12
+     * Test case for listarUsingGET16
      *
      * Lista os templates dos documentos
      *
      */
-    public function test_listarUsingGET12() {
+    public function test_listarUsingGET16() {
 
     }
     
     /**
-     * Test case for listarUsingGET32
+     * Test case for listarUsingGET38
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET32() {
+    public function test_listarUsingGET38() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST18
-     *
-     * Cadastra os tipos de templates
-     *
-     */
-    public function test_salvarUsingPOST18() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST6
-     *
-     * Cadastra documentos
-     *
-     */
-    public function test_salvarUsingPOST6() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST10
      *
      * Cadastra os templates dos documentos
      *
      */
-    public function test_salvarUsingPOST7() {
+    public function test_salvarUsingPOST10() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST22
+     *
+     * Cadastra os tipos de templates
+     *
+     */
+    public function test_salvarUsingPOST22() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST9
+     *
+     * Cadastra documentos
+     *
+     */
+    public function test_salvarUsingPOST9() {
 
     }
     

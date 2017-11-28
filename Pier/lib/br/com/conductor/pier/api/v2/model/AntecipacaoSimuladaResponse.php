@@ -51,6 +51,8 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'mcc' => 'int',
+        'uf' => 'string',
         'id_antecipacao_simulada' => 'int',
         'id_conta' => 'int',
         'id_compra' => 'int',
@@ -59,6 +61,20 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         'valor_parcela' => 'Number',
         'data_hora_simulacao' => 'string',
         'taxa_antecipacao_ano' => 'Number',
+        'nome_estabelecimento' => 'string',
+        'status' => 'string',
+        'data_compra' => 'string',
+        'tipo_origem_transacao' => 'string',
+        'cidade' => 'string',
+        'pais' => 'string',
+        'latitude' => 'string',
+        'longitude' => 'string',
+        'id_grupo_mcc' => 'int',
+        'descricao_grupo_mcc' => 'string',
+        'id_produto' => 'int',
+        'descricao_produto' => 'string',
+        'descricao_estabelecimento' => 'string',
+        'nome_fantasia_estabelecimento' => 'string',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[]'
     );
   
@@ -71,6 +87,8 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'mcc' => 'mcc',
+        'uf' => 'uf',
         'id_antecipacao_simulada' => 'idAntecipacaoSimulada',
         'id_conta' => 'idConta',
         'id_compra' => 'idCompra',
@@ -79,6 +97,20 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         'valor_parcela' => 'valorParcela',
         'data_hora_simulacao' => 'dataHoraSimulacao',
         'taxa_antecipacao_ano' => 'taxaAntecipacaoAno',
+        'nome_estabelecimento' => 'nomeEstabelecimento',
+        'status' => 'status',
+        'data_compra' => 'dataCompra',
+        'tipo_origem_transacao' => 'tipoOrigemTransacao',
+        'cidade' => 'cidade',
+        'pais' => 'pais',
+        'latitude' => 'latitude',
+        'longitude' => 'longitude',
+        'id_grupo_mcc' => 'idGrupoMCC',
+        'descricao_grupo_mcc' => 'descricaoGrupoMCC',
+        'id_produto' => 'idProduto',
+        'descricao_produto' => 'descricaoProduto',
+        'descricao_estabelecimento' => 'descricaoEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'nomeFantasiaEstabelecimento',
         'detalhes' => 'detalhes'
     );
   
@@ -91,6 +123,8 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'mcc' => 'setMcc',
+        'uf' => 'setUf',
         'id_antecipacao_simulada' => 'setIdAntecipacaoSimulada',
         'id_conta' => 'setIdConta',
         'id_compra' => 'setIdCompra',
@@ -99,6 +133,20 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         'valor_parcela' => 'setValorParcela',
         'data_hora_simulacao' => 'setDataHoraSimulacao',
         'taxa_antecipacao_ano' => 'setTaxaAntecipacaoAno',
+        'nome_estabelecimento' => 'setNomeEstabelecimento',
+        'status' => 'setStatus',
+        'data_compra' => 'setDataCompra',
+        'tipo_origem_transacao' => 'setTipoOrigemTransacao',
+        'cidade' => 'setCidade',
+        'pais' => 'setPais',
+        'latitude' => 'setLatitude',
+        'longitude' => 'setLongitude',
+        'id_grupo_mcc' => 'setIdGrupoMcc',
+        'descricao_grupo_mcc' => 'setDescricaoGrupoMcc',
+        'id_produto' => 'setIdProduto',
+        'descricao_produto' => 'setDescricaoProduto',
+        'descricao_estabelecimento' => 'setDescricaoEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'setNomeFantasiaEstabelecimento',
         'detalhes' => 'setDetalhes'
     );
   
@@ -111,6 +159,8 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'mcc' => 'getMcc',
+        'uf' => 'getUf',
         'id_antecipacao_simulada' => 'getIdAntecipacaoSimulada',
         'id_conta' => 'getIdConta',
         'id_compra' => 'getIdCompra',
@@ -119,6 +169,20 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         'valor_parcela' => 'getValorParcela',
         'data_hora_simulacao' => 'getDataHoraSimulacao',
         'taxa_antecipacao_ano' => 'getTaxaAntecipacaoAno',
+        'nome_estabelecimento' => 'getNomeEstabelecimento',
+        'status' => 'getStatus',
+        'data_compra' => 'getDataCompra',
+        'tipo_origem_transacao' => 'getTipoOrigemTransacao',
+        'cidade' => 'getCidade',
+        'pais' => 'getPais',
+        'latitude' => 'getLatitude',
+        'longitude' => 'getLongitude',
+        'id_grupo_mcc' => 'getIdGrupoMcc',
+        'descricao_grupo_mcc' => 'getDescricaoGrupoMcc',
+        'id_produto' => 'getIdProduto',
+        'descricao_produto' => 'getDescricaoProduto',
+        'descricao_estabelecimento' => 'getDescricaoEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'getNomeFantasiaEstabelecimento',
         'detalhes' => 'getDetalhes'
     );
   
@@ -126,6 +190,18 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $mcc 
+      * @var int
+      */
+    protected $mcc;
+    
+    /**
+      * $uf 
+      * @var string
+      */
+    protected $uf;
     
     /**
       * $id_antecipacao_simulada C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
@@ -176,6 +252,90 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $taxa_antecipacao_ano;
     
     /**
+      * $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $nome_estabelecimento;
+    
+    /**
+      * $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * @var string
+      */
+    protected $status;
+    
+    /**
+      * $data_compra Data da compra.
+      * @var string
+      */
+    protected $data_compra;
+    
+    /**
+      * $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+      * @var string
+      */
+    protected $tipo_origem_transacao;
+    
+    /**
+      * $cidade Cidade onde a compra foi realizada.
+      * @var string
+      */
+    protected $cidade;
+    
+    /**
+      * $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+      * @var string
+      */
+    protected $pais;
+    
+    /**
+      * $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * @var string
+      */
+    protected $latitude;
+    
+    /**
+      * $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * @var string
+      */
+    protected $longitude;
+    
+    /**
+      * $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * @var int
+      */
+    protected $id_grupo_mcc;
+    
+    /**
+      * $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * @var string
+      */
+    protected $descricao_grupo_mcc;
+    
+    /**
+      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * @var int
+      */
+    protected $id_produto;
+    
+    /**
+      * $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * @var string
+      */
+    protected $descricao_produto;
+    
+    /**
+      * $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+      * @var string
+      */
+    protected $descricao_estabelecimento;
+    
+    /**
+      * $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+      * @var string
+      */
+    protected $nome_fantasia_estabelecimento;
+    
+    /**
       * $detalhes Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
       * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[]
       */
@@ -190,6 +350,8 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->mcc = $data["mcc"];
+            $this->uf = $data["uf"];
             $this->id_antecipacao_simulada = $data["id_antecipacao_simulada"];
             $this->id_conta = $data["id_conta"];
             $this->id_compra = $data["id_compra"];
@@ -198,8 +360,64 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
             $this->valor_parcela = $data["valor_parcela"];
             $this->data_hora_simulacao = $data["data_hora_simulacao"];
             $this->taxa_antecipacao_ano = $data["taxa_antecipacao_ano"];
+            $this->nome_estabelecimento = $data["nome_estabelecimento"];
+            $this->status = $data["status"];
+            $this->data_compra = $data["data_compra"];
+            $this->tipo_origem_transacao = $data["tipo_origem_transacao"];
+            $this->cidade = $data["cidade"];
+            $this->pais = $data["pais"];
+            $this->latitude = $data["latitude"];
+            $this->longitude = $data["longitude"];
+            $this->id_grupo_mcc = $data["id_grupo_mcc"];
+            $this->descricao_grupo_mcc = $data["descricao_grupo_mcc"];
+            $this->id_produto = $data["id_produto"];
+            $this->descricao_produto = $data["descricao_produto"];
+            $this->descricao_estabelecimento = $data["descricao_estabelecimento"];
+            $this->nome_fantasia_estabelecimento = $data["nome_fantasia_estabelecimento"];
             $this->detalhes = $data["detalhes"];
         }
+    }
+    
+    /**
+     * Gets mcc
+     * @return int
+     */
+    public function getMcc()
+    {
+        return $this->mcc;
+    }
+  
+    /**
+     * Sets mcc
+     * @param int $mcc 
+     * @return $this
+     */
+    public function setMcc($mcc)
+    {
+        
+        $this->mcc = $mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets uf
+     * @return string
+     */
+    public function getUf()
+    {
+        return $this->uf;
+    }
+  
+    /**
+     * Sets uf
+     * @param string $uf 
+     * @return $this
+     */
+    public function setUf($uf)
+    {
+        
+        $this->uf = $uf;
+        return $this;
     }
     
     /**
@@ -367,6 +585,300 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     {
         
         $this->taxa_antecipacao_ano = $taxa_antecipacao_ano;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_estabelecimento
+     * @return string
+     */
+    public function getNomeEstabelecimento()
+    {
+        return $this->nome_estabelecimento;
+    }
+  
+    /**
+     * Sets nome_estabelecimento
+     * @param string $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setNomeEstabelecimento($nome_estabelecimento)
+    {
+        
+        $this->nome_estabelecimento = $nome_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param string $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        
+        $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets data_compra
+     * @return string
+     */
+    public function getDataCompra()
+    {
+        return $this->data_compra;
+    }
+  
+    /**
+     * Sets data_compra
+     * @param string $data_compra Data da compra.
+     * @return $this
+     */
+    public function setDataCompra($data_compra)
+    {
+        
+        $this->data_compra = $data_compra;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_origem_transacao
+     * @return string
+     */
+    public function getTipoOrigemTransacao()
+    {
+        return $this->tipo_origem_transacao;
+    }
+  
+    /**
+     * Sets tipo_origem_transacao
+     * @param string $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setTipoOrigemTransacao($tipo_origem_transacao)
+    {
+        
+        $this->tipo_origem_transacao = $tipo_origem_transacao;
+        return $this;
+    }
+    
+    /**
+     * Gets cidade
+     * @return string
+     */
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+  
+    /**
+     * Sets cidade
+     * @param string $cidade Cidade onde a compra foi realizada.
+     * @return $this
+     */
+    public function setCidade($cidade)
+    {
+        
+        $this->cidade = $cidade;
+        return $this;
+    }
+    
+    /**
+     * Gets pais
+     * @return string
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+  
+    /**
+     * Sets pais
+     * @param string $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+     * @return $this
+     */
+    public function setPais($pais)
+    {
+        
+        $this->pais = $pais;
+        return $this;
+    }
+    
+    /**
+     * Gets latitude
+     * @return string
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+  
+    /**
+     * Sets latitude
+     * @param string $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setLatitude($latitude)
+    {
+        
+        $this->latitude = $latitude;
+        return $this;
+    }
+    
+    /**
+     * Gets longitude
+     * @return string
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+  
+    /**
+     * Sets longitude
+     * @param string $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setLongitude($longitude)
+    {
+        
+        $this->longitude = $longitude;
+        return $this;
+    }
+    
+    /**
+     * Gets id_grupo_mcc
+     * @return int
+     */
+    public function getIdGrupoMcc()
+    {
+        return $this->id_grupo_mcc;
+    }
+  
+    /**
+     * Sets id_grupo_mcc
+     * @param int $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @return $this
+     */
+    public function setIdGrupoMcc($id_grupo_mcc)
+    {
+        
+        $this->id_grupo_mcc = $id_grupo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets descricao_grupo_mcc
+     * @return string
+     */
+    public function getDescricaoGrupoMcc()
+    {
+        return $this->descricao_grupo_mcc;
+    }
+  
+    /**
+     * Sets descricao_grupo_mcc
+     * @param string $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @return $this
+     */
+    public function setDescricaoGrupoMcc($descricao_grupo_mcc)
+    {
+        
+        $this->descricao_grupo_mcc = $descricao_grupo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets id_produto
+     * @return int
+     */
+    public function getIdProduto()
+    {
+        return $this->id_produto;
+    }
+  
+    /**
+     * Sets id_produto
+     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @return $this
+     */
+    public function setIdProduto($id_produto)
+    {
+        
+        $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
+     * Gets descricao_produto
+     * @return string
+     */
+    public function getDescricaoProduto()
+    {
+        return $this->descricao_produto;
+    }
+  
+    /**
+     * Sets descricao_produto
+     * @param string $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @return $this
+     */
+    public function setDescricaoProduto($descricao_produto)
+    {
+        
+        $this->descricao_produto = $descricao_produto;
+        return $this;
+    }
+    
+    /**
+     * Gets descricao_estabelecimento
+     * @return string
+     */
+    public function getDescricaoEstabelecimento()
+    {
+        return $this->descricao_estabelecimento;
+    }
+  
+    /**
+     * Sets descricao_estabelecimento
+     * @param string $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+     * @return $this
+     */
+    public function setDescricaoEstabelecimento($descricao_estabelecimento)
+    {
+        
+        $this->descricao_estabelecimento = $descricao_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_fantasia_estabelecimento
+     * @return string
+     */
+    public function getNomeFantasiaEstabelecimento()
+    {
+        return $this->nome_fantasia_estabelecimento;
+    }
+  
+    /**
+     * Sets nome_fantasia_estabelecimento
+     * @param string $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+     * @return $this
+     */
+    public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
+    {
+        
+        $this->nome_fantasia_estabelecimento = $nome_fantasia_estabelecimento;
         return $this;
     }
     

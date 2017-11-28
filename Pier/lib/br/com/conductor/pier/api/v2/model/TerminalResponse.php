@@ -54,7 +54,9 @@ class TerminalResponse implements ArrayAccess
         'id' => 'int',
         'terminal' => 'string',
         'numero_estabelecimento' => 'int',
-        'id_estabelecimento' => 'int'
+        'id_estabelecimento' => 'int',
+        'flag_consulta_extrato' => 'bool',
+        'flag_terminal_virtual' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -69,7 +71,9 @@ class TerminalResponse implements ArrayAccess
         'id' => 'id',
         'terminal' => 'terminal',
         'numero_estabelecimento' => 'numeroEstabelecimento',
-        'id_estabelecimento' => 'idEstabelecimento'
+        'id_estabelecimento' => 'idEstabelecimento',
+        'flag_consulta_extrato' => 'flagConsultaExtrato',
+        'flag_terminal_virtual' => 'flagTerminalVirtual'
     );
   
     static function attributeMap() {
@@ -84,7 +88,9 @@ class TerminalResponse implements ArrayAccess
         'id' => 'setId',
         'terminal' => 'setTerminal',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
-        'id_estabelecimento' => 'setIdEstabelecimento'
+        'id_estabelecimento' => 'setIdEstabelecimento',
+        'flag_consulta_extrato' => 'setFlagConsultaExtrato',
+        'flag_terminal_virtual' => 'setFlagTerminalVirtual'
     );
   
     static function setters() {
@@ -99,7 +105,9 @@ class TerminalResponse implements ArrayAccess
         'id' => 'getId',
         'terminal' => 'getTerminal',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
-        'id_estabelecimento' => 'getIdEstabelecimento'
+        'id_estabelecimento' => 'getIdEstabelecimento',
+        'flag_consulta_extrato' => 'getFlagConsultaExtrato',
+        'flag_terminal_virtual' => 'getFlagTerminalVirtual'
     );
   
     static function getters() {
@@ -131,6 +139,18 @@ class TerminalResponse implements ArrayAccess
       */
     protected $id_estabelecimento;
     
+    /**
+      * $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * @var bool
+      */
+    protected $flag_consulta_extrato;
+    
+    /**
+      * $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * @var bool
+      */
+    protected $flag_terminal_virtual;
+    
 
     /**
      * Constructor
@@ -144,6 +164,8 @@ class TerminalResponse implements ArrayAccess
             $this->terminal = $data["terminal"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
             $this->id_estabelecimento = $data["id_estabelecimento"];
+            $this->flag_consulta_extrato = $data["flag_consulta_extrato"];
+            $this->flag_terminal_virtual = $data["flag_terminal_virtual"];
         }
     }
     
@@ -228,6 +250,48 @@ class TerminalResponse implements ArrayAccess
     {
         
         $this->id_estabelecimento = $id_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_consulta_extrato
+     * @return bool
+     */
+    public function getFlagConsultaExtrato()
+    {
+        return $this->flag_consulta_extrato;
+    }
+  
+    /**
+     * Sets flag_consulta_extrato
+     * @param bool $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @return $this
+     */
+    public function setFlagConsultaExtrato($flag_consulta_extrato)
+    {
+        
+        $this->flag_consulta_extrato = $flag_consulta_extrato;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_terminal_virtual
+     * @return bool
+     */
+    public function getFlagTerminalVirtual()
+    {
+        return $this->flag_terminal_virtual;
+    }
+  
+    /**
+     * Sets flag_terminal_virtual
+     * @param bool $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @return $this
+     */
+    public function setFlagTerminalVirtual($flag_terminal_virtual)
+    {
+        
+        $this->flag_terminal_virtual = $flag_terminal_virtual;
         return $this;
     }
     

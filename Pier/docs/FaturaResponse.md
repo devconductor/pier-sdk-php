@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **data_fechamento** | **string** | Data de fechamento da fatura. | [optional] 
 **valor_total** | [**Number**](Number.md) | Valor total da fatura. | [optional] 
 **valor_pagamento_minimo** | [**Number**](Number.md) | Valor do pagamento m\u00C3\u00ADnimo. | [optional] 
+**saldo_anterior** | [**Number**](Number.md) | Valor do saldo anterior. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

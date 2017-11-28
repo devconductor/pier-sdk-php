@@ -76,19 +76,19 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT4
+     * Test case for alterarUsingPUT14
      *
-     * Altera as oportunidades
+     * Altera os tipos oportunidades
      *
      */
-    public function test_alterarUsingPUT4() {
+    public function test_alterarUsingPUT14() {
 
     }
     
     /**
      * Test case for alterarUsingPUT8
      *
-     * Altera os tipos oportunidades
+     * Altera as oportunidades
      *
      */
     public function test_alterarUsingPUT8() {
@@ -106,22 +106,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET17
      *
      * Apresenta dados de uma determinada oportunidade
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET17() {
 
     }
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET31
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET31() {
 
     }
     
@@ -166,22 +166,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET21
      *
      * Lista as oportunidades
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET21() {
 
     }
     
     /**
-     * Test case for listarUsingGET30
+     * Test case for listarUsingGET36
      *
      * Lista os tipos oportunidades
      *
      */
-    public function test_listarUsingGET30() {
+    public function test_listarUsingGET36() {
 
     }
     
@@ -196,22 +196,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST12
+     * Test case for salvarUsingPOST15
      *
      * Cadastra as oportunidades
      *
      */
-    public function test_salvarUsingPOST12() {
+    public function test_salvarUsingPOST15() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST17
+     * Test case for salvarUsingPOST21
      *
      * Cadastra tipos oportunidades
      *
      */
-    public function test_salvarUsingPOST17() {
+    public function test_salvarUsingPOST21() {
 
     }
     

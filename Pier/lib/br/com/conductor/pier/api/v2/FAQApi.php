@@ -217,7 +217,7 @@ class FAQApi
     }
     
     /**
-     * alterarUsingPUT3
+     * alterarUsingPUT6
      *
      * Alterar FAQ
      *
@@ -231,15 +231,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function alterarUsingPUT6($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT3WithHttpInfo ($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT6WithHttpInfo ($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT3WithHttpInfo
+     * alterarUsingPUT6WithHttpInfo
      *
      * Alterar FAQ
      *
@@ -253,20 +253,20 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT3WithHttpInfo($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function alterarUsingPUT6WithHttpInfo($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT6');
         }
         // verify the required parameter 'pergunta' is set
         if ($pergunta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pergunta when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $pergunta when calling alterarUsingPUT6');
         }
         // verify the required parameter 'resposta' is set
         if ($resposta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling alterarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling alterarUsingPUT6');
         }
   
         // parse inputs
@@ -356,7 +356,7 @@ class FAQApi
     }
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET15
      *
      * Consultar FAQ por id
      *
@@ -364,15 +364,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET15($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET15WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET15WithHttpInfo
      *
      * Consultar FAQ por id
      *
@@ -380,12 +380,12 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET15WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET15');
         }
   
         // parse inputs
@@ -451,7 +451,7 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET15
+     * listarUsingGET19
      *
      * Lista FAQs
      *
@@ -468,15 +468,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\PageFaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET19($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET19WithHttpInfo
      *
      * Lista FAQs
      *
@@ -493,7 +493,7 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET19WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   

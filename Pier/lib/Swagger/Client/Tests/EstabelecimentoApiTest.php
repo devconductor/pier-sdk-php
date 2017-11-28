@@ -66,42 +66,102 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for alterarUsingPUT10
+     *
+     * Alterar Pessoa Jur\u00C3\u00ADdica
+     *
+     */
+    public function test_alterarUsingPUT10() {
+
+    }
+    
+    /**
+     * Test case for alterarUsingPUT13
+     *
+     * Altera um Terminal
+     *
+     */
+    public function test_alterarUsingPUT13() {
+
+    }
+    
+    /**
+     * Test case for cadastrarUsingPOST2
+     *
+     * Cadastrar Pessoa Jur\u00C3\u00ADdica
+     *
+     */
+    public function test_cadastrarUsingPOST2() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET14
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET14() {
 
     }
     
     /**
-     * Test case for consultarUsingGET21
+     * Test case for consultarUsingGET19
+     *
+     * Consultar pessoa jur\u00C3\u00ADdica
+     *
+     */
+    public function test_consultarUsingGET19() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET26
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET21() {
+    public function test_consultarUsingGET26() {
 
     }
     
     /**
-     * Test case for listarUsingGET14
+     * Test case for listarUsingGET18
      *
      * Lista Estabelecimentos
      *
      */
-    public function test_listarUsingGET14() {
+    public function test_listarUsingGET18() {
 
     }
     
     /**
-     * Test case for listarUsingGET28
+     * Test case for listarUsingGET23
+     *
+     * Listar pessoas jur\u00C3\u00ADdicas
+     *
+     */
+    public function test_listarUsingGET23() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET33
      *
      * Lista os Terminais cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET33() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST20
+     *
+     * Realiza o cadastro de um novo Terminal
+     *
+     */
+    public function test_salvarUsingPOST20() {
 
     }
     

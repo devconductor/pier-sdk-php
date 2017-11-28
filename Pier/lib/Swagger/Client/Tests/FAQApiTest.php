@@ -76,32 +76,32 @@ class FAQApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT3
+     * Test case for alterarUsingPUT6
      *
      * Alterar FAQ
      *
      */
-    public function test_alterarUsingPUT3() {
+    public function test_alterarUsingPUT6() {
 
     }
     
     /**
-     * Test case for consultarUsingGET12
+     * Test case for consultarUsingGET15
      *
      * Consultar FAQ por id
      *
      */
-    public function test_consultarUsingGET12() {
+    public function test_consultarUsingGET15() {
 
     }
     
     /**
-     * Test case for listarUsingGET15
+     * Test case for listarUsingGET19
      *
      * Lista FAQs
      *
      */
-    public function test_listarUsingGET15() {
+    public function test_listarUsingGET19() {
 
     }
     

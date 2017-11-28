@@ -159,7 +159,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **efetivarAntecipacoesUsingPOST**
-> \br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse efetivarAntecipacoesUsingPOST($id_conta, $complemento)
+> \br.com.conductor.pier.api.v2.model\AntecipacaoResponse efetivarAntecipacoesUsingPOST($id_conta, $complemento)
 
 Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\AntecipacaoMockResponse**](AntecipacaoMockResponse.md)
+[**\br.com.conductor.pier.api.v2.model\AntecipacaoResponse**](AntecipacaoResponse.md)
 
 ### Authorization
 

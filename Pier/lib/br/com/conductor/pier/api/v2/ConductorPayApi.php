@@ -1058,7 +1058,7 @@ class ConductorPayApi
     }
     
     /**
-     * salvarUsingPOST4
+     * salvarUsingPOST5
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
@@ -1067,15 +1067,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST4($device_id, $persist)
+    public function salvarUsingPOST5($device_id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST4WithHttpInfo ($device_id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST5WithHttpInfo ($device_id, $persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST4WithHttpInfo
+     * salvarUsingPOST5WithHttpInfo
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
@@ -1084,16 +1084,16 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST4WithHttpInfo($device_id, $persist)
+    public function salvarUsingPOST5WithHttpInfo($device_id, $persist)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST4');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST5');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST4');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST5');
         }
   
         // parse inputs

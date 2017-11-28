@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **numero_cartao_mascarado** | **string** | N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado | [optional] 
 **flag_solicitou_contestacao** | **bool** | Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **valor_taxa_embarque** | [**Number**](Number.md) | Valor da taxa de embarque | [optional] 
+**descricao_abreviada** | **string** | Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

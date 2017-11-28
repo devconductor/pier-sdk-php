@@ -54,7 +54,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
         'valor_total_antecipado' => 'Number',
         'valor_total_desconto' => 'Number',
         'valor_total_com_desconto' => 'Number',
-        'antecipacoes_simuladas' => '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaMockResponse[]'
+        'antecipacoes_simuladas' => '\br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[]'
     );
   
     static function swaggerTypes() {
@@ -127,7 +127,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
     
     /**
       * $antecipacoes_simuladas Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
-      * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaMockResponse[]
+      * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[]
       */
     protected $antecipacoes_simuladas;
     
@@ -212,7 +212,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
     
     /**
      * Gets antecipacoes_simuladas
-     * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaMockResponse[]
+     * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[]
      */
     public function getAntecipacoesSimuladas()
     {
@@ -221,7 +221,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets antecipacoes_simuladas
-     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaMockResponse[] $antecipacoes_simuladas Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[] $antecipacoes_simuladas Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
      * @return $this
      */
     public function setAntecipacoesSimuladas($antecipacoes_simuladas)

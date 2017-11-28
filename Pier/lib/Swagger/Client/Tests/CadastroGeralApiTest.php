@@ -66,6 +66,36 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for alterarUsingPUT2
+     *
+     * Alterar campanha
+     *
+     */
+    public function test_alterarUsingPUT2() {
+
+    }
+    
+    /**
+     * Test case for alterarUsingPUT3
+     *
+     * Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     *
+     */
+    public function test_alterarUsingPUT3() {
+
+    }
+    
+    /**
+     * Test case for alterarUsingPUT4
+     *
+     * Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     *
+     */
+    public function test_alterarUsingPUT4() {
+
+    }
+    
+    /**
      * Test case for ativarUsoExteriorUsingPOST
      *
      * Ativa o par\u00C3\u00A2metro uso exterior para o produto
@@ -76,12 +106,32 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for cadastrarUsingPOST1
+     *
+     * Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     *
+     */
+    public function test_cadastrarUsingPOST1() {
+
+    }
+    
+    /**
      * Test case for configurarTaxaAntecipacaoUsingPOST
      *
      * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
      *
      */
     public function test_configurarTaxaAntecipacaoUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarCampanhaUsingGET
+     *
+     * Consultar campanha
+     *
+     */
+    public function test_consultarCampanhaUsingGET() {
 
     }
     
@@ -106,16 +156,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET16
-     *
-     * Apresenta os dados de um determinado Produto
-     *
-     */
-    public function test_consultarUsingGET16() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET2
      *
      * Apresenta os dados de um determinado Atendimento
@@ -126,52 +166,42 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET22
+     * Test case for consultarUsingGET21
      *
-     * Lista os tipos de ajustes do emissor 
-     *
-     */
-    public function test_consultarUsingGET22() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET23
-     *
-     * Lista os tipos de boletos do emissor 
+     * Apresenta os dados de um determinado Produto
      *
      */
-    public function test_consultarUsingGET23() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET24
-     *
-     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-     *
-     */
-    public function test_consultarUsingGET24() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET25
-     *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     *
-     */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET21() {
 
     }
     
     /**
      * Test case for consultarUsingGET27
      *
-     * Apresenta os dados de um determinado Tipo de Telefone
+     * Lista os tipos de ajustes do emissor 
      *
      */
     public function test_consultarUsingGET27() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET28
+     *
+     * Lista os tipos de boletos do emissor 
+     *
+     */
+    public function test_consultarUsingGET28() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET29
+     *
+     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     *
+     */
+    public function test_consultarUsingGET29() {
 
     }
     
@@ -186,12 +216,62 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarUsingGET30
+     *
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultarUsingGET30() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET32
+     *
+     * Apresenta os dados de um determinado Tipo de Telefone
+     *
+     */
+    public function test_consultarUsingGET32() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET7
+     *
+     * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     *
+     */
+    public function test_consultarUsingGET7() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET8
+     *
+     * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+     *
+     */
+    public function test_consultarUsingGET8() {
+
+    }
+    
+    /**
      * Test case for desativarUsoExteriorUsingPOST
      *
      * Desativa o par\u00C3\u00A2metro uso exterior para o produto
      *
      */
     public function test_desativarUsoExteriorUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for listarCampanhasUsingGET
+     *
+     * Listar Campanhas
+     *
+     */
+    public function test_listarCampanhasUsingGET() {
 
     }
     
@@ -286,6 +366,26 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarTiposCampanhasUsingGET
+     *
+     * Listar Tipos de Campanhas
+     *
+     */
+    public function test_listarTiposCampanhasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET10
+     *
+     * Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+     *
+     */
+    public function test_listarUsingGET10() {
+
+    }
+    
+    /**
      * Test case for listarUsingGET2
      *
      * Lista todos os atendimentos
@@ -296,42 +396,32 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET21
+     * Test case for listarUsingGET26
      *
      * Lista os Portadores existentes
      *
      */
-    public function test_listarUsingGET21() {
+    public function test_listarUsingGET26() {
 
     }
     
     /**
-     * Test case for listarUsingGET22
+     * Test case for listarUsingGET27
      *
      * Lista os Produtos do Emissor
      *
      */
-    public function test_listarUsingGET22() {
+    public function test_listarUsingGET27() {
 
     }
     
     /**
-     * Test case for listarUsingGET23
+     * Test case for listarUsingGET28
      *
      * Lista promotores cadastrados na base do emissor
      *
      */
-    public function test_listarUsingGET23() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET29
-     *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-     *
-     */
-    public function test_listarUsingGET29() {
+    public function test_listarUsingGET28() {
 
     }
     
@@ -346,22 +436,42 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET31
+     * Test case for listarUsingGET35
      *
-     * Lista os Tipos de Telefones
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      *
      */
-    public function test_listarUsingGET31() {
+    public function test_listarUsingGET35() {
 
     }
     
     /**
      * Test case for listarUsingGET37
      *
-     * Listar Vencimentos
+     * Lista os Tipos de Telefones
      *
      */
     public function test_listarUsingGET37() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET43
+     *
+     * Listar Vencimentos
+     *
+     */
+    public function test_listarUsingGET43() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET9
+     *
+     * Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+     *
+     */
+    public function test_listarUsingGET9() {
 
     }
     
@@ -372,6 +482,26 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_salvarUsingPOST2() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST4
+     *
+     * Inserir campanha
+     *
+     */
+    public function test_salvarUsingPOST4() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST6
+     *
+     * Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     *
+     */
+    public function test_salvarUsingPOST6() {
 
     }
     

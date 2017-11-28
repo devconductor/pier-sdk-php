@@ -58,7 +58,8 @@ class FaturaResponse implements ArrayAccess
         'data_vencimento_real' => 'string',
         'data_fechamento' => 'string',
         'valor_total' => 'Number',
-        'valor_pagamento_minimo' => 'Number'
+        'valor_pagamento_minimo' => 'Number',
+        'saldo_anterior' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -77,7 +78,8 @@ class FaturaResponse implements ArrayAccess
         'data_vencimento_real' => 'dataVencimentoReal',
         'data_fechamento' => 'dataFechamento',
         'valor_total' => 'valorTotal',
-        'valor_pagamento_minimo' => 'valorPagamentoMinimo'
+        'valor_pagamento_minimo' => 'valorPagamentoMinimo',
+        'saldo_anterior' => 'saldoAnterior'
     );
   
     static function attributeMap() {
@@ -96,7 +98,8 @@ class FaturaResponse implements ArrayAccess
         'data_vencimento_real' => 'setDataVencimentoReal',
         'data_fechamento' => 'setDataFechamento',
         'valor_total' => 'setValorTotal',
-        'valor_pagamento_minimo' => 'setValorPagamentoMinimo'
+        'valor_pagamento_minimo' => 'setValorPagamentoMinimo',
+        'saldo_anterior' => 'setSaldoAnterior'
     );
   
     static function setters() {
@@ -115,7 +118,8 @@ class FaturaResponse implements ArrayAccess
         'data_vencimento_real' => 'getDataVencimentoReal',
         'data_fechamento' => 'getDataFechamento',
         'valor_total' => 'getValorTotal',
-        'valor_pagamento_minimo' => 'getValorPagamentoMinimo'
+        'valor_pagamento_minimo' => 'getValorPagamentoMinimo',
+        'saldo_anterior' => 'getSaldoAnterior'
     );
   
     static function getters() {
@@ -171,6 +175,12 @@ class FaturaResponse implements ArrayAccess
       */
     protected $valor_pagamento_minimo;
     
+    /**
+      * $saldo_anterior Valor do saldo anterior.
+      * @var Number
+      */
+    protected $saldo_anterior;
+    
 
     /**
      * Constructor
@@ -188,6 +198,7 @@ class FaturaResponse implements ArrayAccess
             $this->data_fechamento = $data["data_fechamento"];
             $this->valor_total = $data["valor_total"];
             $this->valor_pagamento_minimo = $data["valor_pagamento_minimo"];
+            $this->saldo_anterior = $data["saldo_anterior"];
         }
     }
     
@@ -359,6 +370,27 @@ class FaturaResponse implements ArrayAccess
     {
         
         $this->valor_pagamento_minimo = $valor_pagamento_minimo;
+        return $this;
+    }
+    
+    /**
+     * Gets saldo_anterior
+     * @return Number
+     */
+    public function getSaldoAnterior()
+    {
+        return $this->saldo_anterior;
+    }
+  
+    /**
+     * Sets saldo_anterior
+     * @param Number $saldo_anterior Valor do saldo anterior.
+     * @return $this
+     */
+    public function setSaldoAnterior($saldo_anterior)
+    {
+        
+        $this->saldo_anterior = $saldo_anterior;
         return $this;
     }
     
