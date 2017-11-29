@@ -747,7 +747,7 @@ class CartaoApi
      * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
-     * @return object
+     * @return \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarCartaoImpressaoUsingGET($id)
@@ -763,7 +763,7 @@ class CartaoApi
      * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
-     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarCartaoImpressaoUsingGETWithHttpInfo($id)
@@ -815,19 +815,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, 'object'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

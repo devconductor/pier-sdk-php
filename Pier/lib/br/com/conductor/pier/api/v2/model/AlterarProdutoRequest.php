@@ -52,7 +52,9 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_produto' => 'int',
-        'id_origem_comercial' => 'int'
+        'id_origem_comercial' => 'int',
+        'id_estabelecimento' => 'int',
+        'id_promotor' => 'int'
     );
   
     static function swaggerTypes() {
@@ -65,7 +67,9 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $attributeMap = array(
         'id_produto' => 'idProduto',
-        'id_origem_comercial' => 'idOrigemComercial'
+        'id_origem_comercial' => 'idOrigemComercial',
+        'id_estabelecimento' => 'idEstabelecimento',
+        'id_promotor' => 'idPromotor'
     );
   
     static function attributeMap() {
@@ -78,7 +82,9 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $setters = array(
         'id_produto' => 'setIdProduto',
-        'id_origem_comercial' => 'setIdOrigemComercial'
+        'id_origem_comercial' => 'setIdOrigemComercial',
+        'id_estabelecimento' => 'setIdEstabelecimento',
+        'id_promotor' => 'setIdPromotor'
     );
   
     static function setters() {
@@ -91,7 +97,9 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     static $getters = array(
         'id_produto' => 'getIdProduto',
-        'id_origem_comercial' => 'getIdOrigemComercial'
+        'id_origem_comercial' => 'getIdOrigemComercial',
+        'id_estabelecimento' => 'getIdEstabelecimento',
+        'id_promotor' => 'getIdPromotor'
     );
   
     static function getters() {
@@ -111,6 +119,18 @@ class AlterarProdutoRequest implements ArrayAccess
       */
     protected $id_origem_comercial;
     
+    /**
+      * $id_estabelecimento Identificador do estabelecimento.
+      * @var int
+      */
+    protected $id_estabelecimento;
+    
+    /**
+      * $id_promotor Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+      * @var int
+      */
+    protected $id_promotor;
+    
 
     /**
      * Constructor
@@ -122,6 +142,8 @@ class AlterarProdutoRequest implements ArrayAccess
         if ($data != null) {
             $this->id_produto = $data["id_produto"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
+            $this->id_estabelecimento = $data["id_estabelecimento"];
+            $this->id_promotor = $data["id_promotor"];
         }
     }
     
@@ -164,6 +186,48 @@ class AlterarProdutoRequest implements ArrayAccess
     {
         
         $this->id_origem_comercial = $id_origem_comercial;
+        return $this;
+    }
+    
+    /**
+     * Gets id_estabelecimento
+     * @return int
+     */
+    public function getIdEstabelecimento()
+    {
+        return $this->id_estabelecimento;
+    }
+  
+    /**
+     * Sets id_estabelecimento
+     * @param int $id_estabelecimento Identificador do estabelecimento.
+     * @return $this
+     */
+    public function setIdEstabelecimento($id_estabelecimento)
+    {
+        
+        $this->id_estabelecimento = $id_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets id_promotor
+     * @return int
+     */
+    public function getIdPromotor()
+    {
+        return $this->id_promotor;
+    }
+  
+    /**
+     * Sets id_promotor
+     * @param int $id_promotor Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+     * @return $this
+     */
+    public function setIdPromotor($id_promotor)
+    {
+        
+        $this->id_promotor = $id_promotor;
         return $this;
     }
     

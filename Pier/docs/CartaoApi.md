@@ -318,7 +318,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarCartaoImpressaoUsingGET**
-> object consultarCartaoImpressaoUsingGET($id)
+> \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET($id)
 
 Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse**](DadosCartaoImpressaoResponse.md)
 
 ### Authorization
 
