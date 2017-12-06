@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformaMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET25**](PlataformaMobileApi.md#listarUsingGET25) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listarUsingGET26**](PlataformaMobileApi.md#listarUsingGET26) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvarUsingPOST18**](PlataformaMobileApi.md#salvarUsingPOST18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET25($sort, $page, $limit, $nome)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET26($sort, $page, $limit, $nome)
 
 Lista as plataformas mobile cadastradas
 
@@ -75,10 +75,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $nome = "nome_example"; // string | Nome da Plataforma Mobile
 
 try { 
-    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $nome);
+    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlataformaMobileApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PlataformaMobileApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -282,7 +282,7 @@ class StatusParametroApi
     }
     
     /**
-     * consultarUsingGET23
+     * consultarUsingGET24
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -290,15 +290,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id)
+    public function consultarUsingGET24($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET23WithHttpInfo
+     * consultarUsingGET24WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -306,12 +306,12 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id)
+    public function consultarUsingGET24WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
         }
   
         // parse inputs
@@ -377,7 +377,7 @@ class StatusParametroApi
     }
     
     /**
-     * consultarUsingGET24
+     * consultarUsingGET25
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -385,15 +385,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id)
+    public function consultarUsingGET25($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -401,12 +401,12 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id)
+    public function consultarUsingGET25WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -807,7 +807,7 @@ class StatusParametroApi
     }
     
     /**
-     * listarUsingGET30
+     * listarUsingGET31
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -828,15 +828,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
+    public function listarUsingGET31($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET30WithHttpInfo
+     * listarUsingGET31WithHttpInfo
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
@@ -857,7 +857,7 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
+    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
         
   
@@ -976,7 +976,7 @@ class StatusParametroApi
     }
     
     /**
-     * listarUsingGET31
+     * listarUsingGET32
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -988,15 +988,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET31($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET32($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET32WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET31WithHttpInfo
+     * listarUsingGET32WithHttpInfo
      *
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      *
@@ -1008,7 +1008,7 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET32WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   

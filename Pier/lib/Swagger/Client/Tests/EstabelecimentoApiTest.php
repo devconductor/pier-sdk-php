@@ -66,19 +66,19 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT10
+     * Test case for alterarUsingPUT11
      *
      * Alterar Pessoa Jur\u00C3\u00ADdica
      *
      */
-    public function test_alterarUsingPUT10() {
+    public function test_alterarUsingPUT11() {
 
     }
     
     /**
      * Test case for alterarUsingPUT13
      *
-     * Altera um Terminal
+     * Altera um Telefone do estabelecimento
      *
      */
     public function test_alterarUsingPUT13() {
@@ -86,9 +86,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for alterarUsingPUT15
+     *
+     * Altera um Terminal
+     *
+     */
+    public function test_alterarUsingPUT15() {
+
+    }
+    
+    /**
+     * Test case for alterarUsingPUT5
+     *
+     * Alterar Credor
+     *
+     */
+    public function test_alterarUsingPUT5() {
+
+    }
+    
+    /**
      * Test case for cadastrarUsingPOST2
      *
-     * Cadastrar Pessoa Jur\u00C3\u00ADdica
+     * Cadastrar Credor
      *
      */
     public function test_cadastrarUsingPOST2() {
@@ -96,29 +116,49 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for cadastrarUsingPOST3
      *
-     * Consultar estabelecimento por id
+     * Cadastrar Pessoa Jur\u00C3\u00ADdica
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_cadastrarUsingPOST3() {
 
     }
     
     /**
-     * Test case for consultarUsingGET19
+     * Test case for consultarUsingGET11
+     *
+     * Consultar credor
+     *
+     */
+    public function test_consultarUsingGET11() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET15
+     *
+     * Consultar estabelecimento por id
+     *
+     */
+    public function test_consultarUsingGET15() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET20
      *
      * Consultar pessoa jur\u00C3\u00ADdica
      *
      */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET20() {
 
     }
     
     /**
      * Test case for consultarUsingGET26
      *
-     * Apresenta os dados de um determinado Terminal
+     * Apresenta os dados de um determinado telefone de um estabelecimento
      *
      */
     public function test_consultarUsingGET26() {
@@ -126,29 +166,49 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET18
+     * Test case for consultarUsingGET28
      *
-     * Lista Estabelecimentos
+     * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_listarUsingGET18() {
+    public function test_consultarUsingGET28() {
 
     }
     
     /**
-     * Test case for listarUsingGET23
+     * Test case for listarUsingGET14
+     *
+     * Listar credores
+     *
+     */
+    public function test_listarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET19
+     *
+     * Lista Estabelecimentos
+     *
+     */
+    public function test_listarUsingGET19() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET24
      *
      * Listar pessoas jur\u00C3\u00ADdicas
      *
      */
-    public function test_listarUsingGET23() {
+    public function test_listarUsingGET24() {
 
     }
     
     /**
      * Test case for listarUsingGET33
      *
-     * Lista os Terminais cadastrados no Emissor
+     * Lista os Telefones Estabelecimentos
      *
      */
     public function test_listarUsingGET33() {
@@ -156,12 +216,32 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST20
+     * Test case for listarUsingGET35
+     *
+     * Lista os Terminais cadastrados no Emissor
+     *
+     */
+    public function test_listarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST19
+     *
+     * Realiza o cadastro de um novo telefone para um estabelecimento 
+     *
+     */
+    public function test_salvarUsingPOST19() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST21
      *
      * Realiza o cadastro de um novo Terminal
      *
      */
-    public function test_salvarUsingPOST20() {
+    public function test_salvarUsingPOST21() {
 
     }
     

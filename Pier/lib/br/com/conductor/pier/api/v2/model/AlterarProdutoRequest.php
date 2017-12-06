@@ -120,13 +120,13 @@ class AlterarProdutoRequest implements ArrayAccess
     protected $id_origem_comercial;
     
     /**
-      * $id_estabelecimento Identificador do estabelecimento.
+      * $id_estabelecimento Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_promotor Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+      * $id_promotor Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.
       * @var int
       */
     protected $id_promotor;
@@ -200,7 +200,7 @@ class AlterarProdutoRequest implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento Identificador do estabelecimento.
+     * @param int $id_estabelecimento Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -221,7 +221,7 @@ class AlterarProdutoRequest implements ArrayAccess
   
     /**
      * Sets id_promotor
-     * @param int $id_promotor Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+     * @param int $id_promotor Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.
      * @return $this
      */
     public function setIdPromotor($id_promotor)

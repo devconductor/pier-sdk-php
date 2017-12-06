@@ -76,12 +76,12 @@ class DebitoRecorrenteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET34
+     * Test case for listarUsingGET36
      *
      * Listar Tipos Debitos Recorrentes
      *
      */
-    public function test_listarUsingGET34() {
+    public function test_listarUsingGET36() {
 
     }
     

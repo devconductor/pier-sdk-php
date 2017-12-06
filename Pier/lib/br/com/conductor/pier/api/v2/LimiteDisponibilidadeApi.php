@@ -92,7 +92,7 @@ class LimiteDisponibilidadeApi
   
     
     /**
-     * alterarUsingPUT7
+     * alterarUsingPUT8
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
      *
@@ -113,15 +113,15 @@ class LimiteDisponibilidadeApi
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT7($id_conta, $limite_global = null, $limite_compra = null, $limite_parcelado = null, $limite_parcelas = null, $limite_saque_global = null, $limite_saque_periodo = null, $limite_consignado = null, $limite_internacional_compra = null, $limite_internacional_parcelado = null, $limite_internacional_parcelas = null, $limite_internacional_saque_global = null, $limite_internacional_saque_periodo = null, $limite_maximo = null)
+    public function alterarUsingPUT8($id_conta, $limite_global = null, $limite_compra = null, $limite_parcelado = null, $limite_parcelas = null, $limite_saque_global = null, $limite_saque_periodo = null, $limite_consignado = null, $limite_internacional_compra = null, $limite_internacional_parcelado = null, $limite_internacional_parcelas = null, $limite_internacional_saque_global = null, $limite_internacional_saque_periodo = null, $limite_maximo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT7WithHttpInfo ($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT8WithHttpInfo ($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT7WithHttpInfo
+     * alterarUsingPUT8WithHttpInfo
      *
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
      *
@@ -142,12 +142,12 @@ class LimiteDisponibilidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT7WithHttpInfo($id_conta, $limite_global = null, $limite_compra = null, $limite_parcelado = null, $limite_parcelas = null, $limite_saque_global = null, $limite_saque_periodo = null, $limite_consignado = null, $limite_internacional_compra = null, $limite_internacional_parcelado = null, $limite_internacional_parcelas = null, $limite_internacional_saque_global = null, $limite_internacional_saque_periodo = null, $limite_maximo = null)
+    public function alterarUsingPUT8WithHttpInfo($id_conta, $limite_global = null, $limite_compra = null, $limite_parcelado = null, $limite_parcelas = null, $limite_saque_global = null, $limite_saque_periodo = null, $limite_consignado = null, $limite_internacional_compra = null, $limite_internacional_parcelado = null, $limite_internacional_parcelas = null, $limite_internacional_saque_global = null, $limite_internacional_saque_periodo = null, $limite_maximo = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling alterarUsingPUT7');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling alterarUsingPUT8');
         }
   
         // parse inputs
@@ -261,7 +261,7 @@ class LimiteDisponibilidadeApi
     }
     
     /**
-     * consultarUsingGET16
+     * consultarUsingGET17
      *
      * Apresenta os limites da conta
      *
@@ -269,15 +269,15 @@ class LimiteDisponibilidadeApi
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16($id_conta)
+    public function consultarUsingGET17($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id_conta);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET16WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * Apresenta os limites da conta
      *
@@ -285,12 +285,12 @@ class LimiteDisponibilidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16WithHttpInfo($id_conta)
+    public function consultarUsingGET17WithHttpInfo($id_conta)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET16');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET17');
         }
   
         // parse inputs

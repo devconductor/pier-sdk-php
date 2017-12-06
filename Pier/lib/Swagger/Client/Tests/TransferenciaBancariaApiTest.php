@@ -76,12 +76,42 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarTransferenciaBancariaUsingGET
+     *
+     * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+     *
+     */
+    public function test_consultarTransferenciaBancariaUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET37
+     *
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     *
+     */
+    public function test_consultarUsingGET37() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET9
      *
      * Consulta conta banc\u00C3\u00A1ria portador
      *
      */
     public function test_consultarUsingGET9() {
+
+    }
+    
+    /**
+     * Test case for listarTransferenciaBancariaUsingGET
+     *
+     * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     *
+     */
+    public function test_listarTransferenciaBancariaUsingGET() {
 
     }
     
@@ -96,12 +126,42 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarUsingGET42
+     *
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     *
+     */
+    public function test_listarUsingGET42() {
+
+    }
+    
+    /**
      * Test case for salvarUsingPOST7
      *
      * Cadastra uma conta banc\u00C3\u00A1ria do portador
      *
      */
     public function test_salvarUsingPOST7() {
+
+    }
+    
+    /**
+     * Test case for transferenciaCreditoContaBancariaUsingPOST
+     *
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     *
+     */
+    public function test_transferenciaCreditoContaBancariaUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for transferirUsingPOST
+     *
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     *
+     */
+    public function test_transferirUsingPOST() {
 
     }
     

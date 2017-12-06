@@ -282,7 +282,7 @@ class DispositivoApi
     }
     
     /**
-     * listarUsingGET14
+     * listarUsingGET15
      *
      * Lista os dispositivos cadastrados
      *
@@ -297,15 +297,15 @@ class DispositivoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET15($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET14WithHttpInfo
+     * listarUsingGET15WithHttpInfo
      *
      * Lista os dispositivos cadastrados
      *
@@ -320,7 +320,7 @@ class DispositivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET15WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
         
   

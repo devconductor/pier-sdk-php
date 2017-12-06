@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**listarUsingGET12**](DebitoRecorrenteApi.md#listarUsingGET12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listarUsingGET34**](DebitoRecorrenteApi.md#listarUsingGET34) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listarUsingGET36**](DebitoRecorrenteApi.md#listarUsingGET36) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
 # **listarUsingGET12**
@@ -69,8 +69,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET34**
-> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET34($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
+# **listarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET36($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
 
 Listar Tipos Debitos Recorrentes
 
@@ -91,10 +91,10 @@ $valor = new Number(); // Number | Valor do tipo de d\u00C3\u00A9bito recorrente
 $flag_ativo = true; // bool | Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+    $result = $api_instance->listarUsingGET36($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```

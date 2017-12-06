@@ -76,12 +76,12 @@ class PlataformaMobileApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET25
+     * Test case for listarUsingGET26
      *
      * Lista as plataformas mobile cadastradas
      *
      */
-    public function test_listarUsingGET25() {
+    public function test_listarUsingGET26() {
 
     }
     

@@ -76,19 +76,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT11
+     * Test case for alterarUsingPUT10
      *
-     * Atualiza os dados de uma determinada Pessoa
+     * Atualiza os detalhes de uma determinada Pessoa
      *
      */
-    public function test_alterarUsingPUT11() {
+    public function test_alterarUsingPUT10() {
 
     }
     
     /**
      * Test case for alterarUsingPUT12
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+     * Atualiza os dados de uma determinada Pessoa
      *
      */
     public function test_alterarUsingPUT12() {
@@ -96,22 +96,22 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT5
+     * Test case for alterarUsingPUT14
      *
-     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
      *
      */
-    public function test_alterarUsingPUT5() {
+    public function test_alterarUsingPUT14() {
 
     }
     
     /**
-     * Test case for alterarUsingPUT9
+     * Test case for alterarUsingPUT6
      *
-     * Atualiza os detalhes de uma determinada Pessoa
+     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_alterarUsingPUT9() {
+    public function test_alterarUsingPUT6() {
 
     }
     
@@ -156,42 +156,42 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET14
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET14() {
 
     }
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
      * Apresenta os detalhes de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET19() {
 
     }
     
     /**
-     * Test case for consultarUsingGET20
+     * Test case for consultarUsingGET21
      *
      * Apresenta os dados de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET20() {
+    public function test_consultarUsingGET21() {
 
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET27
      *
      * Apresenta os dados de um determinado Telefone
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET27() {
 
     }
     
@@ -226,42 +226,42 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET18
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET18() {
 
     }
     
     /**
-     * Test case for listarUsingGET22
+     * Test case for listarUsingGET23
      *
      * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
      */
-    public function test_listarUsingGET22() {
+    public function test_listarUsingGET23() {
 
     }
     
     /**
-     * Test case for listarUsingGET24
+     * Test case for listarUsingGET25
      *
      * Lista as Pessoas cadastradas no Emissor
      *
      */
-    public function test_listarUsingGET24() {
+    public function test_listarUsingGET25() {
 
     }
     
     /**
-     * Test case for listarUsingGET32
+     * Test case for listarUsingGET34
      *
      * Lista os Telefones cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET32() {
+    public function test_listarUsingGET34() {
 
     }
     
@@ -326,12 +326,12 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST19
+     * Test case for salvarUsingPOST20
      *
      * Realiza o cadastro de um novo Telefone
      *
      */
-    public function test_salvarUsingPOST19() {
+    public function test_salvarUsingPOST20() {
 
     }
     

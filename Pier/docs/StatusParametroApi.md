@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET23**](StatusParametroApi.md#consultarUsingGET23) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET24**](StatusParametroApi.md#consultarUsingGET24) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET24**](StatusParametroApi.md#consultarUsingGET24) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET25**](StatusParametroApi.md#consultarUsingGET25) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listarTiposEventosTransacoesUsingGET**](StatusParametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET30**](StatusParametroApi.md#listarUsingGET30) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET31**](StatusParametroApi.md#listarUsingGET31) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET31**](StatusParametroApi.md#listarUsingGET31) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET32**](StatusParametroApi.md#listarUsingGET32) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultarEstagioCartaoUsingGET**
@@ -105,8 +105,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET23($id)
+# **consultarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET24($id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -121,10 +121,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET23($id);
+    $result = $api_instance->consultarUsingGET24($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -150,8 +150,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET24($id)
+# **consultarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET25($id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -166,10 +166,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET24($id);
+    $result = $api_instance->consultarUsingGET25($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -350,8 +350,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET30($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
+# **listarUsingGET31**
+> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET31($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -379,10 +379,10 @@ $permite_desbloquear = 56; // int | Par\u00C3\u00A2metro que define se o Status 
 $permite_atribuir_como_cancelamento = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET30($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
+    $result = $api_instance->listarUsingGET31($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET31: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -421,8 +421,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET31**
-> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET31($sort, $page, $limit, $id, $nome)
+# **listarUsingGET32**
+> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET32($sort, $page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -441,10 +441,10 @@ $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do status impress\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET31($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET32($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET31: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET32: ', $e->getMessage(), "\n";
 }
 ?>
 ```

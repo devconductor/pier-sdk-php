@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET14**](DispositivoApi.md#listarUsingGET14) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET15**](DispositivoApi.md#listarUsingGET15) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST8**](DispositivoApi.md#salvarUsingPOST8) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET14($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
+# **listarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET15($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
 
 Lista os dispositivos cadastrados
 
@@ -123,10 +123,10 @@ $data_criacao = "data_criacao_example"; // string | Apresenta a data e em que o 
 $data_desativacao = "data_desativacao_example"; // string | Apresenta a data e em que o registro foi desativado.
 
 try { 
-    $result = $api_instance->listarUsingGET14($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+    $result = $api_instance->listarUsingGET15($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DispositivoApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DispositivoApi->listarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```

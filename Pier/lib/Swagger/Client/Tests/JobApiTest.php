@@ -96,12 +96,12 @@ class JobApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET20
+     * Test case for listarUsingGET21
      *
      * Listar Jobs
      *
      */
-    public function test_listarUsingGET20() {
+    public function test_listarUsingGET21() {
 
     }
     

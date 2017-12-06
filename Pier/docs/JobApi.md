@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT3**](JobApi.md#atualizarUsingPUT3) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET20**](JobApi.md#listarUsingGET20) | **GET** /api/jobs | Listar Jobs
+[**listarUsingGET21**](JobApi.md#listarUsingGET21) | **GET** /api/jobs | Listar Jobs
 [**salvarUsingPOST14**](JobApi.md#salvarUsingPOST14) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -152,8 +152,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET20($groovy, $descricao, $cron, $status, $page, $limit)
+# **listarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageJobResponse listarUsingGET21($groovy, $descricao, $cron, $status, $page, $limit)
 
 Listar Jobs
 
@@ -173,10 +173,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET20($groovy, $descricao, $cron, $status, $page, $limit);
+    $result = $api_instance->listarUsingGET21($groovy, $descricao, $cron, $status, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling JobApi->listarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling JobApi->listarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```

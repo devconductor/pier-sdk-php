@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT7**](LimiteDisponibilidadeApi.md#alterarUsingPUT7) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultarUsingGET16**](LimiteDisponibilidadeApi.md#consultarUsingGET16) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
+[**alterarUsingPUT8**](LimiteDisponibilidadeApi.md#alterarUsingPUT8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**consultarUsingGET17**](LimiteDisponibilidadeApi.md#consultarUsingGET17) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
-# **alterarUsingPUT7**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse alterarUsingPUT7($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo)
+# **alterarUsingPUT8**
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse alterarUsingPUT8($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -37,10 +37,10 @@ $limite_internacional_saque_periodo = new Number(); // Number | Quando utilizado
 $limite_maximo = new Number(); // Number | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
 
 try { 
-    $result = $api_instance->alterarUsingPUT7($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
+    $result = $api_instance->alterarUsingPUT8($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LimiteDisponibilidadeApi->alterarUsingPUT7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling LimiteDisponibilidadeApi->alterarUsingPUT8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -79,8 +79,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET16($id_conta)
+# **consultarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET17($id_conta)
 
 Apresenta os limites da conta
 
@@ -95,10 +95,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\LimiteDisponibilida
 $id_conta = 789; // int | Id Conta
 
 try { 
-    $result = $api_instance->consultarUsingGET16($id_conta);
+    $result = $api_instance->consultarUsingGET17($id_conta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LimiteDisponibilidadeApi->consultarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling LimiteDisponibilidadeApi->consultarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```

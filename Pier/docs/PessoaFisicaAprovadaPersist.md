@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **valor_renda** | [**Number**](Number.md) | Apresenta o valor da renda compravada | [optional] 
 **canal_entrada** | **string** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
 **valor_pontuacao** | **int** | Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0) | [optional] 
-**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
+**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | 
 **enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
 **limite_global** | [**Number**](Number.md) | Valor do Limite Global | 
 **limite_maximo** | [**Number**](Number.md) | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 

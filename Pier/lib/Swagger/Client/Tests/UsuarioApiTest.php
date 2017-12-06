@@ -86,12 +86,12 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for alterarUsingPUT17
+     * Test case for alterarUsingPUT19
      *
      * Altera os usu\u00C3\u00A1rios cadastrados na base.
      *
      */
-    public function test_alterarUsingPUT17() {
+    public function test_alterarUsingPUT19() {
 
     }
     
@@ -106,12 +106,12 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET37
+     * Test case for consultarUsingGET39
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
      */
-    public function test_consultarUsingGET37() {
+    public function test_consultarUsingGET39() {
 
     }
     
@@ -126,12 +126,12 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET42
+     * Test case for listarUsingGET44
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
-    public function test_listarUsingGET42() {
+    public function test_listarUsingGET44() {
 
     }
     
@@ -146,12 +146,12 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST24
+     * Test case for salvarUsingPOST25
      *
      * Cadastra Usu\u00C3\u00A1rio na base.
      *
      */
-    public function test_salvarUsingPOST24() {
+    public function test_salvarUsingPOST25() {
 
     }
     

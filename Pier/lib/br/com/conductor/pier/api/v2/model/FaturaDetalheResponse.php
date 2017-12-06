@@ -51,7 +51,6 @@ class FaturaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'lancamentos_fatura_response' => '\br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]',
         'id_conta' => 'int',
         'situacao_processamento' => 'string',
         'pagamento_efetuado' => 'bool',
@@ -60,6 +59,7 @@ class FaturaDetalheResponse implements ArrayAccess
         'data_fechamento' => 'string',
         'valor_total' => 'Number',
         'valor_pagamento_minimo' => 'Number',
+        'lancamentos_fatura_response' => '\br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]',
         'saldo_anterior' => 'Number'
     );
   
@@ -72,7 +72,6 @@ class FaturaDetalheResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'lancamentos_fatura_response' => 'lancamentosFaturaResponse',
         'id_conta' => 'idConta',
         'situacao_processamento' => 'situacaoProcessamento',
         'pagamento_efetuado' => 'pagamentoEfetuado',
@@ -81,6 +80,7 @@ class FaturaDetalheResponse implements ArrayAccess
         'data_fechamento' => 'dataFechamento',
         'valor_total' => 'valorTotal',
         'valor_pagamento_minimo' => 'valorPagamentoMinimo',
+        'lancamentos_fatura_response' => 'lancamentosFaturaResponse',
         'saldo_anterior' => 'saldoAnterior'
     );
   
@@ -93,7 +93,6 @@ class FaturaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'lancamentos_fatura_response' => 'setLancamentosFaturaResponse',
         'id_conta' => 'setIdConta',
         'situacao_processamento' => 'setSituacaoProcessamento',
         'pagamento_efetuado' => 'setPagamentoEfetuado',
@@ -102,6 +101,7 @@ class FaturaDetalheResponse implements ArrayAccess
         'data_fechamento' => 'setDataFechamento',
         'valor_total' => 'setValorTotal',
         'valor_pagamento_minimo' => 'setValorPagamentoMinimo',
+        'lancamentos_fatura_response' => 'setLancamentosFaturaResponse',
         'saldo_anterior' => 'setSaldoAnterior'
     );
   
@@ -114,7 +114,6 @@ class FaturaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'lancamentos_fatura_response' => 'getLancamentosFaturaResponse',
         'id_conta' => 'getIdConta',
         'situacao_processamento' => 'getSituacaoProcessamento',
         'pagamento_efetuado' => 'getPagamentoEfetuado',
@@ -123,6 +122,7 @@ class FaturaDetalheResponse implements ArrayAccess
         'data_fechamento' => 'getDataFechamento',
         'valor_total' => 'getValorTotal',
         'valor_pagamento_minimo' => 'getValorPagamentoMinimo',
+        'lancamentos_fatura_response' => 'getLancamentosFaturaResponse',
         'saldo_anterior' => 'getSaldoAnterior'
     );
   
@@ -130,12 +130,6 @@ class FaturaDetalheResponse implements ArrayAccess
         return self::$getters;
     }
 
-    
-    /**
-      * $lancamentos_fatura_response 
-      * @var \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]
-      */
-    protected $lancamentos_fatura_response;
     
     /**
       * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
@@ -186,6 +180,12 @@ class FaturaDetalheResponse implements ArrayAccess
     protected $valor_pagamento_minimo;
     
     /**
+      * $lancamentos_fatura_response Lista de lan\u00C3\u00A7amentos da fatura.
+      * @var \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]
+      */
+    protected $lancamentos_fatura_response;
+    
+    /**
       * $saldo_anterior Valor do saldo anterior.
       * @var Number
       */
@@ -200,7 +200,6 @@ class FaturaDetalheResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->lancamentos_fatura_response = $data["lancamentos_fatura_response"];
             $this->id_conta = $data["id_conta"];
             $this->situacao_processamento = $data["situacao_processamento"];
             $this->pagamento_efetuado = $data["pagamento_efetuado"];
@@ -209,29 +208,9 @@ class FaturaDetalheResponse implements ArrayAccess
             $this->data_fechamento = $data["data_fechamento"];
             $this->valor_total = $data["valor_total"];
             $this->valor_pagamento_minimo = $data["valor_pagamento_minimo"];
+            $this->lancamentos_fatura_response = $data["lancamentos_fatura_response"];
             $this->saldo_anterior = $data["saldo_anterior"];
         }
-    }
-    
-    /**
-     * Gets lancamentos_fatura_response
-     * @return \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]
-     */
-    public function getLancamentosFaturaResponse()
-    {
-        return $this->lancamentos_fatura_response;
-    }
-  
-    /**
-     * Sets lancamentos_fatura_response
-     * @param \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[] $lancamentos_fatura_response 
-     * @return $this
-     */
-    public function setLancamentosFaturaResponse($lancamentos_fatura_response)
-    {
-        
-        $this->lancamentos_fatura_response = $lancamentos_fatura_response;
-        return $this;
     }
     
     /**
@@ -402,6 +381,27 @@ class FaturaDetalheResponse implements ArrayAccess
     {
         
         $this->valor_pagamento_minimo = $valor_pagamento_minimo;
+        return $this;
+    }
+    
+    /**
+     * Gets lancamentos_fatura_response
+     * @return \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]
+     */
+    public function getLancamentosFaturaResponse()
+    {
+        return $this->lancamentos_fatura_response;
+    }
+  
+    /**
+     * Sets lancamentos_fatura_response
+     * @param \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[] $lancamentos_fatura_response Lista de lan\u00C3\u00A7amentos da fatura.
+     * @return $this
+     */
+    public function setLancamentosFaturaResponse($lancamentos_fatura_response)
+    {
+        
+        $this->lancamentos_fatura_response = $lancamentos_fatura_response;
         return $this;
     }
     
