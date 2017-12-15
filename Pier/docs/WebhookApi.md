@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT20**](WebhookApi.md#alterarUsingPUT20) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET40**](WebhookApi.md#consultarUsingGET40) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultarUsingGET41**](WebhookApi.md#consultarUsingGET41) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET46**](WebhookApi.md#listarUsingGET46) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST26**](WebhookApi.md#salvarUsingPOST26) | **POST** /api/webhooks | Salvar Webhook
 
@@ -61,8 +61,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET40**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET40($id)
+# **consultarUsingGET41**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET41($id)
 
 Consultar Webhook
 
@@ -77,10 +77,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhookApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET40($id);
+    $result = $api_instance->consultarUsingGET41($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->consultarUsingGET40: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->consultarUsingGET41: ', $e->getMessage(), "\n";
 }
 ?>
 ```

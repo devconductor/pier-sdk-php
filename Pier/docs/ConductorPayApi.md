@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**atualizarChaveUsingPOST**](ConductorPayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
 [**atualizarUsingPUT**](ConductorPayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
 [**confirmaAtualizacaoChaveUsingPOST**](ConductorPayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET5**](ConductorPayApi.md#consultarUsingGET5) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
+[**consultarUsingGET6**](ConductorPayApi.md#consultarUsingGET6) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
 [**listarCodigosRespostaUsingGET**](ConductorPayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
 [**listarModosEntradaUsingGET**](ConductorPayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | Lista os modos entradas
 [**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
@@ -162,8 +162,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET5($device_id, $id)
+# **consultarUsingGET6**
+> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET6($device_id, $id)
 
 Apresenta os dados de um determinado cart\u00C3\u00A3o
 
@@ -179,10 +179,10 @@ $device_id = "device_id_example"; // string | Device id criptografado
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET5($device_id, $id);
+    $result = $api_instance->consultarUsingGET6($device_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->consultarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->consultarUsingGET6: ', $e->getMessage(), "\n";
 }
 ?>
 ```

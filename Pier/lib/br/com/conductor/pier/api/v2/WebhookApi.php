@@ -213,7 +213,7 @@ class WebhookApi
     }
     
     /**
-     * consultarUsingGET40
+     * consultarUsingGET41
      *
      * Consultar Webhook
      *
@@ -221,15 +221,15 @@ class WebhookApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40($id)
+    public function consultarUsingGET41($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET41WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET40WithHttpInfo
+     * consultarUsingGET41WithHttpInfo
      *
      * Consultar Webhook
      *
@@ -237,12 +237,12 @@ class WebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40WithHttpInfo($id)
+    public function consultarUsingGET41WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET41');
         }
   
         // parse inputs

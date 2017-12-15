@@ -1,6 +1,6 @@
 <?php
 /**
- * AjusteResponse
+ * AjusteFinanceiroResponse
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * AjusteResponse Class Doc Comment
+ * AjusteFinanceiroResponse Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -44,18 +44,20 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AjusteResponse implements ArrayAccess
+class AjusteFinanceiroResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_ajuste' => 'int',
+        'id' => 'int',
         'id_tipo_ajuste' => 'int',
         'id_conta' => 'int',
         'data_ajuste' => 'string',
-        'valor' => 'Number'
+        'valor' => 'Number',
+        'identificador_externo' => 'string',
+        'status' => 'int'
     );
   
     static function swaggerTypes() {
@@ -67,11 +69,13 @@ class AjusteResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_ajuste' => 'idAjuste',
+        'id' => 'id',
         'id_tipo_ajuste' => 'idTipoAjuste',
         'id_conta' => 'idConta',
         'data_ajuste' => 'dataAjuste',
-        'valor' => 'valor'
+        'valor' => 'valor',
+        'identificador_externo' => 'identificadorExterno',
+        'status' => 'status'
     );
   
     static function attributeMap() {
@@ -83,11 +87,13 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_ajuste' => 'setIdAjuste',
+        'id' => 'setId',
         'id_tipo_ajuste' => 'setIdTipoAjuste',
         'id_conta' => 'setIdConta',
         'data_ajuste' => 'setDataAjuste',
-        'valor' => 'setValor'
+        'valor' => 'setValor',
+        'identificador_externo' => 'setIdentificadorExterno',
+        'status' => 'setStatus'
     );
   
     static function setters() {
@@ -99,11 +105,13 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_ajuste' => 'getIdAjuste',
+        'id' => 'getId',
         'id_tipo_ajuste' => 'getIdTipoAjuste',
         'id_conta' => 'getIdConta',
         'data_ajuste' => 'getDataAjuste',
-        'valor' => 'getValor'
+        'valor' => 'getValor',
+        'identificador_externo' => 'getIdentificadorExterno',
+        'status' => 'getStatus'
     );
   
     static function getters() {
@@ -112,10 +120,10 @@ class AjusteResponse implements ArrayAccess
 
     
     /**
-      * $id_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
       * @var int
       */
-    protected $id_ajuste;
+    protected $id;
     
     /**
       * $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
@@ -141,6 +149,18 @@ class AjusteResponse implements ArrayAccess
       */
     protected $valor;
     
+    /**
+      * $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * @var string
+      */
+    protected $identificador_externo;
+    
+    /**
+      * $status Status do ajuste.
+      * @var int
+      */
+    protected $status;
+    
 
     /**
      * Constructor
@@ -150,32 +170,34 @@ class AjusteResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_ajuste = $data["id_ajuste"];
+            $this->id = $data["id"];
             $this->id_tipo_ajuste = $data["id_tipo_ajuste"];
             $this->id_conta = $data["id_conta"];
             $this->data_ajuste = $data["data_ajuste"];
             $this->valor = $data["valor"];
+            $this->identificador_externo = $data["identificador_externo"];
+            $this->status = $data["status"];
         }
     }
     
     /**
-     * Gets id_ajuste
+     * Gets id
      * @return int
      */
-    public function getIdAjuste()
+    public function getId()
     {
-        return $this->id_ajuste;
+        return $this->id;
     }
   
     /**
-     * Sets id_ajuste
-     * @param int $id_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
      * @return $this
      */
-    public function setIdAjuste($id_ajuste)
+    public function setId($id)
     {
         
-        $this->id_ajuste = $id_ajuste;
+        $this->id = $id;
         return $this;
     }
     
@@ -260,6 +282,48 @@ class AjusteResponse implements ArrayAccess
     {
         
         $this->valor = $valor;
+        return $this;
+    }
+    
+    /**
+     * Gets identificador_externo
+     * @return string
+     */
+    public function getIdentificadorExterno()
+    {
+        return $this->identificador_externo;
+    }
+  
+    /**
+     * Sets identificador_externo
+     * @param string $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setIdentificadorExterno($identificador_externo)
+    {
+        
+        $this->identificador_externo = $identificador_externo;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param int $status Status do ajuste.
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        
+        $this->status = $status;
         return $this;
     }
     

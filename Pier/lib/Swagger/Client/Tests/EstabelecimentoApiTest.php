@@ -126,52 +126,72 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for consultaOperacaoUsingGET
+     *
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultaOperacaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET12
      *
      * Consultar credor
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET12() {
 
     }
     
     /**
-     * Test case for consultarUsingGET15
+     * Test case for consultarUsingGET16
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET15() {
+    public function test_consultarUsingGET16() {
 
     }
     
     /**
-     * Test case for consultarUsingGET20
+     * Test case for consultarUsingGET21
      *
      * Consultar pessoa jur\u00C3\u00ADdica
      *
      */
-    public function test_consultarUsingGET20() {
+    public function test_consultarUsingGET21() {
 
     }
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET27
      *
      * Apresenta os dados de um determinado telefone de um estabelecimento
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET27() {
 
     }
     
     /**
-     * Test case for consultarUsingGET28
+     * Test case for consultarUsingGET29
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET28() {
+    public function test_consultarUsingGET29() {
+
+    }
+    
+    /**
+     * Test case for listaOperacaoUsingGET
+     *
+     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+     *
+     */
+    public function test_listaOperacaoUsingGET() {
 
     }
     

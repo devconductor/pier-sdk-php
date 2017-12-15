@@ -6,12 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](TransferenciaBancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | Atualiza conta banc\u00C3\u00A1ria portador
 [**consultarTransferenciaBancariaUsingGET**](TransferenciaBancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-[**consultarUsingGET37**](TransferenciaBancariaApi.md#consultarUsingGET37) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultarUsingGET9**](TransferenciaBancariaApi.md#consultarUsingGET9) | **GET** /api/contas-bancarias-portador/{id} | Consulta conta banc\u00C3\u00A1ria portador
+[**consultarUsingGET10**](TransferenciaBancariaApi.md#consultarUsingGET10) | **GET** /api/contas-bancarias-portador/{id} | Consulta conta banc\u00C3\u00A1ria portador
+[**consultarUsingGET38**](TransferenciaBancariaApi.md#consultarUsingGET38) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 [**listarTransferenciaBancariaUsingGET**](TransferenciaBancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
 [**listarUsingGET11**](TransferenciaBancariaApi.md#listarUsingGET11) | **GET** /api/contas-bancarias-portador | Lista contas banc\u00C3\u00A1rias portador
 [**listarUsingGET42**](TransferenciaBancariaApi.md#listarUsingGET42) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**salvarUsingPOST7**](TransferenciaBancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | Cadastra uma conta banc\u00C3\u00A1ria do portador
+[**simularTransferenciaBancariaUsingPOST**](TransferenciaBancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
 [**transferenciaCreditoContaBancariaUsingPOST**](TransferenciaBancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferirUsingPOST**](TransferenciaBancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 
@@ -108,8 +109,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET37**
-> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET37($id, $id_transferencia, $id_conta_bancaria_destino)
+# **consultarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET10($id)
+
+Consulta conta banc\u00C3\u00A1ria portador
+
+Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TransferenciaBancariaApi();
+$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+
+try { 
+    $result = $api_instance->consultarUsingGET10($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **consultarUsingGET38**
+> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET38($id, $id_transferencia, $id_conta_bancaria_destino)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -126,10 +172,10 @@ $id_transferencia = 789; // int | Id Transfer\u00C3\u00AAncia
 $id_conta_bancaria_destino = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET37($id, $id_transferencia, $id_conta_bancaria_destino);
+    $result = $api_instance->consultarUsingGET38($id, $id_transferencia, $id_conta_bancaria_destino);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET37: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET38: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -145,51 +191,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET9($id)
-
-Consulta conta banc\u00C3\u00A1ria portador
-
-Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TransferenciaBancariaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-
-try { 
-    $result = $api_instance->consultarUsingGET9($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET9: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id). | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
 
 ### Authorization
 
@@ -408,6 +409,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse**](ContaBancariaPortadorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **simularTransferenciaBancariaUsingPOST**
+> \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaResponse simularTransferenciaBancariaUsingPOST($request)
+
+Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+
+Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TransferenciaBancariaApi();
+$request = new \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest(); // \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest | request
+
+try { 
+    $result = $api_instance->simularTransferenciaBancariaUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TransferenciaBancariaApi->simularTransferenciaBancariaUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest**](\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest.md)| request | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaResponse**](PlanoParcelamentoTransferenciaCreditoContaBancariaResponse.md)
 
 ### Authorization
 

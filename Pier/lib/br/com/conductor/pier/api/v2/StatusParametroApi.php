@@ -282,7 +282,7 @@ class StatusParametroApi
     }
     
     /**
-     * consultarUsingGET24
+     * consultarUsingGET25
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -290,15 +290,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id)
+    public function consultarUsingGET25($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Conta
      *
@@ -306,12 +306,12 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id)
+    public function consultarUsingGET25WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -377,7 +377,7 @@ class StatusParametroApi
     }
     
     /**
-     * consultarUsingGET25
+     * consultarUsingGET26
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -385,15 +385,15 @@ class StatusParametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET25WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      *
@@ -401,12 +401,12 @@ class StatusParametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs

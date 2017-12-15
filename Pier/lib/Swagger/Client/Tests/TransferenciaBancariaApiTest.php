@@ -86,22 +86,22 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET37
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     */
-    public function test_consultarUsingGET37() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET9
+     * Test case for consultarUsingGET10
      *
      * Consulta conta banc\u00C3\u00A1ria portador
      *
      */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET10() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET38
+     *
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     *
+     */
+    public function test_consultarUsingGET38() {
 
     }
     
@@ -142,6 +142,16 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_salvarUsingPOST7() {
+
+    }
+    
+    /**
+     * Test case for simularTransferenciaBancariaUsingPOST
+     *
+     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     *
+     */
+    public function test_simularTransferenciaBancariaUsingPOST() {
 
     }
     

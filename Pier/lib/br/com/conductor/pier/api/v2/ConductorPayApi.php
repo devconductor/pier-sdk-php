@@ -427,7 +427,7 @@ class ConductorPayApi
     }
     
     /**
-     * consultarUsingGET5
+     * consultarUsingGET6
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
@@ -436,15 +436,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($device_id, $id)
+    public function consultarUsingGET6($device_id, $id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($device_id, $id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($device_id, $id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET5WithHttpInfo
+     * consultarUsingGET6WithHttpInfo
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
@@ -453,16 +453,16 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($device_id, $id)
+    public function consultarUsingGET6WithHttpInfo($device_id, $id)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET6');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
         }
   
         // parse inputs

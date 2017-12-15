@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultarUsingGET6**](CartaoApi.md#consultarUsingGET6) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultarUsingGET7**](CartaoApi.md#consultarUsingGET7) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquearUsingPOST**](CartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -542,8 +542,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET6($id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET7($id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -558,10 +558,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CartaoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET6($id);
+    $result = $api_instance->consultarUsingGET7($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CartaoApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CartaoApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

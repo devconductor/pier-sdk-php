@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustarContaUsingPOST**](ContaApi.md#ajustarContaUsingPOST) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
+[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET10**](ContaApi.md#consultarUsingGET10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET38**](ContaApi.md#consultarUsingGET38) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET11**](ContaApi.md#consultarUsingGET11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET39**](ContaApi.md#consultarUsingGET39) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -38,8 +38,8 @@ Method | HTTP request | Description
 [**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
 
-# **ajustarContaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\AjusteResponse ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
+# **ajustarContaUsingPOST1**
+> \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo)
 
 Lan\u00C3\u00A7a um ajuste para a conta do id informado
 
@@ -55,12 +55,13 @@ $id = 789; // int | Id Conta
 $id_tipo_ajuste = 789; // int | C\u00C3\u00B3digo identificador do tipo de ajuste.
 $data_ajuste = "data_ajuste_example"; // string | Data do ajuste no formato yyyy-MM-dd'T'HH:mm:ss.SSSZ.
 $valor_ajuste = new Number(); // Number | Valor do ajuste
+$identificador_externo = "identificador_externo_example"; // string | Identificador Externo
 
 try { 
-    $result = $api_instance->ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste);
+    $result = $api_instance->ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->ajustarContaUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->ajustarContaUsingPOST1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -73,10 +74,11 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **int**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **string**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valor_ajuste** | [**Number**](.md)| Valor do ajuste | 
+ **identificador_externo** | **string**| Identificador Externo | [optional] 
 
 ### Return type
 
-[**\br.com.conductor.pier.api.v2.model\AjusteResponse**](AjusteResponse.md)
+[**\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
 
 ### Authorization
 
@@ -626,8 +628,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET10($id)
+# **consultarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET11($id)
 
 Apresenta dados de uma determinada conta
 
@@ -642,10 +644,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET10($id);
+    $result = $api_instance->consultarUsingGET11($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -671,8 +673,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET38**
-> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET38($id, $id_transferencia)
+# **consultarUsingGET39**
+> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET39($id, $id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -688,10 +690,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da 
 $id_transferencia = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
 
 try { 
-    $result = $api_instance->consultarUsingGET38($id, $id_transferencia);
+    $result = $api_instance->consultarUsingGET39($id, $id_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET38: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET39: ', $e->getMessage(), "\n";
 }
 ?>
 ```

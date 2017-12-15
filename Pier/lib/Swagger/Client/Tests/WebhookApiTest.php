@@ -76,12 +76,12 @@ class WebhookApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET40
+     * Test case for consultarUsingGET41
      *
      * Consultar Webhook
      *
      */
-    public function test_consultarUsingGET40() {
+    public function test_consultarUsingGET41() {
 
     }
     

@@ -66,12 +66,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for ajustarContaUsingPOST
+     * Test case for ajustarContaUsingPOST1
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
      */
-    public function test_ajustarContaUsingPOST() {
+    public function test_ajustarContaUsingPOST1() {
 
     }
     
@@ -186,22 +186,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET10
+     * Test case for consultarUsingGET11
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET10() {
+    public function test_consultarUsingGET11() {
 
     }
     
     /**
-     * Test case for consultarUsingGET38
+     * Test case for consultarUsingGET39
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET38() {
+    public function test_consultarUsingGET39() {
 
     }
     

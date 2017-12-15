@@ -96,12 +96,12 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET5
+     * Test case for consultarUsingGET6
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET5() {
+    public function test_consultarUsingGET6() {
 
     }
     

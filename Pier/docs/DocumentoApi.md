@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT17**](DocumentoApi.md#alterarUsingPUT17) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
 [**atualizarUsingPUT2**](DocumentoApi.md#atualizarUsingPUT2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
-[**consultarUsingGET35**](DocumentoApi.md#consultarUsingGET35) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultarUsingGET14**](DocumentoApi.md#consultarUsingGET14) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultarUsingGET36**](DocumentoApi.md#consultarUsingGET36) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
 [**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 [**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/documentos | Lista documentos
 [**listarUsingGET17**](DocumentoApi.md#listarUsingGET17) | **GET** /api/templates-documentos | Lista os templates dos documentos
@@ -112,8 +112,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET12($id)
+# **consultarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET13($id)
 
 Consulta documentos
 
@@ -128,10 +128,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DocumentoApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET13($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->consultarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET13($id)
+# **consultarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET14($id)
 
 Consultar templates dos documentos
 
@@ -173,10 +173,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DocumentoApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET13($id);
+    $result = $api_instance->consultarUsingGET14($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->consultarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->consultarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -202,8 +202,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET35**
-> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET35($id)
+# **consultarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET36($id)
 
 Consultar tipo de template
 
@@ -218,10 +218,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DocumentoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET35($id);
+    $result = $api_instance->consultarUsingGET36($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->consultarUsingGET35: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->consultarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```

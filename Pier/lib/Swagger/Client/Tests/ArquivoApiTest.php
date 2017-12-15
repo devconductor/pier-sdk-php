@@ -66,12 +66,12 @@ class ArquivoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET1
+     * Test case for consultarUsingGET2
      *
      * Consulta de arquivo no PIER Cloud
      *
      */
-    public function test_consultarUsingGET1() {
+    public function test_consultarUsingGET2() {
 
     }
     

@@ -302,7 +302,7 @@ class DocumentoApi
     }
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET13
      *
      * Consulta documentos
      *
@@ -310,15 +310,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET13($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET13WithHttpInfo
      *
      * Consulta documentos
      *
@@ -326,12 +326,12 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET13WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
         }
   
         // parse inputs
@@ -397,7 +397,7 @@ class DocumentoApi
     }
     
     /**
-     * consultarUsingGET13
+     * consultarUsingGET14
      *
      * Consultar templates dos documentos
      *
@@ -405,15 +405,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13($id)
+    public function consultarUsingGET14($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET13WithHttpInfo
+     * consultarUsingGET14WithHttpInfo
      *
      * Consultar templates dos documentos
      *
@@ -421,12 +421,12 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13WithHttpInfo($id)
+    public function consultarUsingGET14WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET14');
         }
   
         // parse inputs
@@ -492,7 +492,7 @@ class DocumentoApi
     }
     
     /**
-     * consultarUsingGET35
+     * consultarUsingGET36
      *
      * Consultar tipo de template
      *
@@ -500,15 +500,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35($id)
+    public function consultarUsingGET36($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET35WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET36WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET35WithHttpInfo
+     * consultarUsingGET36WithHttpInfo
      *
      * Consultar tipo de template
      *
@@ -516,12 +516,12 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35WithHttpInfo($id)
+    public function consultarUsingGET36WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET35');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET36');
         }
   
         // parse inputs
