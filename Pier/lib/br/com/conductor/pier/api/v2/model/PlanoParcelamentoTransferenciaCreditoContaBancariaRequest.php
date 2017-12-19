@@ -53,8 +53,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     static $swaggerTypes = array(
         'nsu_origem' => 'string',
         'valor_transacao' => 'Number',
-        'numero_real_cartao' => 'string',
-        'data_validade_cartao' => 'string',
+        'id_cartao' => 'int',
         'numero_meses_carencia' => 'int',
         'numero_estabelecimento' => 'int',
         'data_hora_terminal' => 'string',
@@ -72,8 +71,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     static $attributeMap = array(
         'nsu_origem' => 'nsuOrigem',
         'valor_transacao' => 'valorTransacao',
-        'numero_real_cartao' => 'numeroRealCartao',
-        'data_validade_cartao' => 'dataValidadeCartao',
+        'id_cartao' => 'idCartao',
         'numero_meses_carencia' => 'numeroMesesCarencia',
         'numero_estabelecimento' => 'numeroEstabelecimento',
         'data_hora_terminal' => 'dataHoraTerminal',
@@ -91,8 +89,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     static $setters = array(
         'nsu_origem' => 'setNsuOrigem',
         'valor_transacao' => 'setValorTransacao',
-        'numero_real_cartao' => 'setNumeroRealCartao',
-        'data_validade_cartao' => 'setDataValidadeCartao',
+        'id_cartao' => 'setIdCartao',
         'numero_meses_carencia' => 'setNumeroMesesCarencia',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
         'data_hora_terminal' => 'setDataHoraTerminal',
@@ -110,8 +107,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     static $getters = array(
         'nsu_origem' => 'getNsuOrigem',
         'valor_transacao' => 'getValorTransacao',
-        'numero_real_cartao' => 'getNumeroRealCartao',
-        'data_validade_cartao' => 'getDataValidadeCartao',
+        'id_cartao' => 'getIdCartao',
         'numero_meses_carencia' => 'getNumeroMesesCarencia',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
         'data_hora_terminal' => 'getDataHoraTerminal',
@@ -136,16 +132,10 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     protected $valor_transacao;
     
     /**
-      * $numero_real_cartao N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
-      * @var string
+      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+      * @var int
       */
-    protected $numero_real_cartao;
-    
-    /**
-      * $data_validade_cartao Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-      * @var string
-      */
-    protected $data_validade_cartao;
+    protected $id_cartao;
     
     /**
       * $numero_meses_carencia Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
@@ -182,8 +172,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
         if ($data != null) {
             $this->nsu_origem = $data["nsu_origem"];
             $this->valor_transacao = $data["valor_transacao"];
-            $this->numero_real_cartao = $data["numero_real_cartao"];
-            $this->data_validade_cartao = $data["data_validade_cartao"];
+            $this->id_cartao = $data["id_cartao"];
             $this->numero_meses_carencia = $data["numero_meses_carencia"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
             $this->data_hora_terminal = $data["data_hora_terminal"];
@@ -234,44 +223,23 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     }
     
     /**
-     * Gets numero_real_cartao
-     * @return string
+     * Gets id_cartao
+     * @return int
      */
-    public function getNumeroRealCartao()
+    public function getIdCartao()
     {
-        return $this->numero_real_cartao;
+        return $this->id_cartao;
     }
   
     /**
-     * Sets numero_real_cartao
-     * @param string $numero_real_cartao N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+     * Sets id_cartao
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
      * @return $this
      */
-    public function setNumeroRealCartao($numero_real_cartao)
+    public function setIdCartao($id_cartao)
     {
         
-        $this->numero_real_cartao = $numero_real_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets data_validade_cartao
-     * @return string
-     */
-    public function getDataValidadeCartao()
-    {
-        return $this->data_validade_cartao;
-    }
-  
-    /**
-     * Sets data_validade_cartao
-     * @param string $data_validade_cartao Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-     * @return $this
-     */
-    public function setDataValidadeCartao($data_validade_cartao)
-    {
-        
-        $this->data_validade_cartao = $data_validade_cartao;
+        $this->id_cartao = $id_cartao;
         return $this;
     }
     

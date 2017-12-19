@@ -52,10 +52,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       */
     static $swaggerTypes = array(
         'nsu_origem' => 'string',
-        'nsu_autorizacao' => 'string',
-        'codigo_autorizacao' => 'string',
         'numero_mascarado_cartao' => 'string',
-        'nome_portador_cartao' => 'string',
         'terminal_requisitante' => 'string',
         'plano_parcelamentos' => '\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]'
     );
@@ -70,10 +67,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       */
     static $attributeMap = array(
         'nsu_origem' => 'nsuOrigem',
-        'nsu_autorizacao' => 'nsuAutorizacao',
-        'codigo_autorizacao' => 'codigoAutorizacao',
         'numero_mascarado_cartao' => 'numeroMascaradoCartao',
-        'nome_portador_cartao' => 'nomePortadorCartao',
         'terminal_requisitante' => 'terminalRequisitante',
         'plano_parcelamentos' => 'planoParcelamentos'
     );
@@ -88,10 +82,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       */
     static $setters = array(
         'nsu_origem' => 'setNsuOrigem',
-        'nsu_autorizacao' => 'setNsuAutorizacao',
-        'codigo_autorizacao' => 'setCodigoAutorizacao',
         'numero_mascarado_cartao' => 'setNumeroMascaradoCartao',
-        'nome_portador_cartao' => 'setNomePortadorCartao',
         'terminal_requisitante' => 'setTerminalRequisitante',
         'plano_parcelamentos' => 'setPlanoParcelamentos'
     );
@@ -106,10 +97,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       */
     static $getters = array(
         'nsu_origem' => 'getNsuOrigem',
-        'nsu_autorizacao' => 'getNsuAutorizacao',
-        'codigo_autorizacao' => 'getCodigoAutorizacao',
         'numero_mascarado_cartao' => 'getNumeroMascaradoCartao',
-        'nome_portador_cartao' => 'getNomePortadorCartao',
         'terminal_requisitante' => 'getTerminalRequisitante',
         'plano_parcelamentos' => 'getPlanoParcelamentos'
     );
@@ -126,28 +114,10 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     protected $nsu_origem;
     
     /**
-      * $nsu_autorizacao N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-      * @var string
-      */
-    protected $nsu_autorizacao;
-    
-    /**
-      * $codigo_autorizacao C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-      * @var string
-      */
-    protected $codigo_autorizacao;
-    
-    /**
       * $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
       * @var string
       */
     protected $numero_mascarado_cartao;
-    
-    /**
-      * $nome_portador_cartao Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-      * @var string
-      */
-    protected $nome_portador_cartao;
     
     /**
       * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
@@ -171,10 +141,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
         
         if ($data != null) {
             $this->nsu_origem = $data["nsu_origem"];
-            $this->nsu_autorizacao = $data["nsu_autorizacao"];
-            $this->codigo_autorizacao = $data["codigo_autorizacao"];
             $this->numero_mascarado_cartao = $data["numero_mascarado_cartao"];
-            $this->nome_portador_cartao = $data["nome_portador_cartao"];
             $this->terminal_requisitante = $data["terminal_requisitante"];
             $this->plano_parcelamentos = $data["plano_parcelamentos"];
         }
@@ -202,48 +169,6 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     }
     
     /**
-     * Gets nsu_autorizacao
-     * @return string
-     */
-    public function getNsuAutorizacao()
-    {
-        return $this->nsu_autorizacao;
-    }
-  
-    /**
-     * Sets nsu_autorizacao
-     * @param string $nsu_autorizacao N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setNsuAutorizacao($nsu_autorizacao)
-    {
-        
-        $this->nsu_autorizacao = $nsu_autorizacao;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_autorizacao
-     * @return string
-     */
-    public function getCodigoAutorizacao()
-    {
-        return $this->codigo_autorizacao;
-    }
-  
-    /**
-     * Sets codigo_autorizacao
-     * @param string $codigo_autorizacao C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-     * @return $this
-     */
-    public function setCodigoAutorizacao($codigo_autorizacao)
-    {
-        
-        $this->codigo_autorizacao = $codigo_autorizacao;
-        return $this;
-    }
-    
-    /**
      * Gets numero_mascarado_cartao
      * @return string
      */
@@ -261,27 +186,6 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     {
         
         $this->numero_mascarado_cartao = $numero_mascarado_cartao;
-        return $this;
-    }
-    
-    /**
-     * Gets nome_portador_cartao
-     * @return string
-     */
-    public function getNomePortadorCartao()
-    {
-        return $this->nome_portador_cartao;
-    }
-  
-    /**
-     * Sets nome_portador_cartao
-     * @param string $nome_portador_cartao Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setNomePortadorCartao($nome_portador_cartao)
-    {
-        
-        $this->nome_portador_cartao = $nome_portador_cartao;
         return $this;
     }
     

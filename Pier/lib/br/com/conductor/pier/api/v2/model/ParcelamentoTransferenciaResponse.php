@@ -54,6 +54,9 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
         'numero_parcela' => 'string',
         'valor_primeira_parcela' => 'Number',
         'valor_demais_parcelas' => 'Number',
+        'valor_total' => 'Number',
+        'valor_tac' => 'Number',
+        'valor_iof' => 'Number',
         'taxa_juros' => 'Number',
         'cet_anual' => 'Number'
     );
@@ -70,6 +73,9 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
         'numero_parcela' => 'numeroParcela',
         'valor_primeira_parcela' => 'valorPrimeiraParcela',
         'valor_demais_parcelas' => 'valorDemaisParcelas',
+        'valor_total' => 'valorTotal',
+        'valor_tac' => 'valorTAC',
+        'valor_iof' => 'valorIOF',
         'taxa_juros' => 'taxaJuros',
         'cet_anual' => 'cetAnual'
     );
@@ -86,6 +92,9 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
         'numero_parcela' => 'setNumeroParcela',
         'valor_primeira_parcela' => 'setValorPrimeiraParcela',
         'valor_demais_parcelas' => 'setValorDemaisParcelas',
+        'valor_total' => 'setValorTotal',
+        'valor_tac' => 'setValorTac',
+        'valor_iof' => 'setValorIof',
         'taxa_juros' => 'setTaxaJuros',
         'cet_anual' => 'setCetAnual'
     );
@@ -102,6 +111,9 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
         'numero_parcela' => 'getNumeroParcela',
         'valor_primeira_parcela' => 'getValorPrimeiraParcela',
         'valor_demais_parcelas' => 'getValorDemaisParcelas',
+        'valor_total' => 'getValorTotal',
+        'valor_tac' => 'getValorTac',
+        'valor_iof' => 'getValorIof',
         'taxa_juros' => 'getTaxaJuros',
         'cet_anual' => 'getCetAnual'
     );
@@ -130,6 +142,24 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     protected $valor_demais_parcelas;
     
     /**
+      * $valor_total Valor total do financiamento.
+      * @var Number
+      */
+    protected $valor_total;
+    
+    /**
+      * $valor_tac Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+      * @var Number
+      */
+    protected $valor_tac;
+    
+    /**
+      * $valor_iof IOF
+      * @var Number
+      */
+    protected $valor_iof;
+    
+    /**
       * $taxa_juros Valor da taxa de juros.
       * @var Number
       */
@@ -153,6 +183,9 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
             $this->numero_parcela = $data["numero_parcela"];
             $this->valor_primeira_parcela = $data["valor_primeira_parcela"];
             $this->valor_demais_parcelas = $data["valor_demais_parcelas"];
+            $this->valor_total = $data["valor_total"];
+            $this->valor_tac = $data["valor_tac"];
+            $this->valor_iof = $data["valor_iof"];
             $this->taxa_juros = $data["taxa_juros"];
             $this->cet_anual = $data["cet_anual"];
         }
@@ -218,6 +251,69 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     {
         
         $this->valor_demais_parcelas = $valor_demais_parcelas;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_total
+     * @return Number
+     */
+    public function getValorTotal()
+    {
+        return $this->valor_total;
+    }
+  
+    /**
+     * Sets valor_total
+     * @param Number $valor_total Valor total do financiamento.
+     * @return $this
+     */
+    public function setValorTotal($valor_total)
+    {
+        
+        $this->valor_total = $valor_total;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_tac
+     * @return Number
+     */
+    public function getValorTac()
+    {
+        return $this->valor_tac;
+    }
+  
+    /**
+     * Sets valor_tac
+     * @param Number $valor_tac Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setValorTac($valor_tac)
+    {
+        
+        $this->valor_tac = $valor_tac;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_iof
+     * @return Number
+     */
+    public function getValorIof()
+    {
+        return $this->valor_iof;
+    }
+  
+    /**
+     * Sets valor_iof
+     * @param Number $valor_iof IOF
+     * @return $this
+     */
+    public function setValorIof($valor_iof)
+    {
+        
+        $this->valor_iof = $valor_iof;
         return $this;
     }
     
