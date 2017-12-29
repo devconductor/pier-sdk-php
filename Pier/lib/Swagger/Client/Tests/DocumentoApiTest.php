@@ -86,19 +86,9 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET12
-     *
-     * Consulta documentos
-     *
-     */
-    public function test_consultarUsingGET12() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET13
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
      */
     public function test_consultarUsingGET13() {
@@ -106,12 +96,22 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET35
+     * Test case for consultarUsingGET14
+     *
+     * Consultar templates dos documentos
+     *
+     */
+    public function test_consultarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET36
      *
      * Consultar tipo de template
      *
      */
-    public function test_consultarUsingGET35() {
+    public function test_consultarUsingGET36() {
 
     }
     

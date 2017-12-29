@@ -10,11 +10,13 @@ Method | HTTP request | Description
 [**alterarUsingPUT5**](EstabelecimentoApi.md#alterarUsingPUT5) | **PUT** /api/credores/{id} | Alterar Credor
 [**cadastrarUsingPOST2**](EstabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/credores | Cadastrar Credor
 [**cadastrarUsingPOST3**](EstabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
-[**consultarUsingGET11**](EstabelecimentoApi.md#consultarUsingGET11) | **GET** /api/credores/{id} | Consultar credor
-[**consultarUsingGET15**](EstabelecimentoApi.md#consultarUsingGET15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
-[**consultarUsingGET26**](EstabelecimentoApi.md#consultarUsingGET26) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultarUsingGET28**](EstabelecimentoApi.md#consultarUsingGET28) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultaOperacaoUsingGET**](EstabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET12**](EstabelecimentoApi.md#consultarUsingGET12) | **GET** /api/credores/{id} | Consultar credor
+[**consultarUsingGET16**](EstabelecimentoApi.md#consultarUsingGET16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET21**](EstabelecimentoApi.md#consultarUsingGET21) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
+[**consultarUsingGET27**](EstabelecimentoApi.md#consultarUsingGET27) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultarUsingGET29**](EstabelecimentoApi.md#consultarUsingGET29) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listaOperacaoUsingGET**](EstabelecimentoApi.md#listaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos | Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
 [**listarUsingGET14**](EstabelecimentoApi.md#listarUsingGET14) | **GET** /api/credores | Listar credores
 [**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
 [**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
@@ -336,8 +338,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\CredorResponse consultarUsingGET11($id)
+# **consultaOperacaoUsingGET**
+> \br.com.conductor.pier.api.v2.model\DetalheOperacaoResponse consultaOperacaoUsingGET($id)
+
+Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi();
+$id = 789; // int | C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+
+try { 
+    $result = $api_instance->consultaOperacaoUsingGET($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EstabelecimentoApi->consultaOperacaoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\DetalheOperacaoResponse**](DetalheOperacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **consultarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\CredorResponse consultarUsingGET12($id)
 
 Consultar credor
 
@@ -352,10 +399,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
 
 try { 
-    $result = $api_instance->consultarUsingGET11($id);
+    $result = $api_instance->consultarUsingGET12($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -381,8 +428,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET15($id)
+# **consultarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET16($id)
 
 Consultar estabelecimento por id
 
@@ -397,10 +444,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET15($id);
+    $result = $api_instance->consultarUsingGET16($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -426,8 +473,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PessoaJuridicaResponse consultarUsingGET20($id)
+# **consultarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PessoaJuridicaResponse consultarUsingGET21($id)
 
 Consultar pessoa jur\u00C3\u00ADdica
 
@@ -442,10 +489,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
 
 try { 
-    $result = $api_instance->consultarUsingGET20($id);
+    $result = $api_instance->consultarUsingGET21($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -471,8 +518,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET26($id)
+# **consultarUsingGET27**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET27($id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
@@ -487,10 +534,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET26($id);
+    $result = $api_instance->consultarUsingGET27($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET27: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -516,8 +563,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET28**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET28($id)
+# **consultarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET29($id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -532,10 +579,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET28($id);
+    $result = $api_instance->consultarUsingGET29($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET28: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -549,6 +596,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listaOperacaoUsingGET**
+> \br.com.conductor.pier.api.v2.model\PageOperacaoResponse listaOperacaoUsingGET($sort, $page, $limit, $id_operacao, $codigo_processamento)
+
+Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+
+Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi();
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id_operacao = 789; // int | C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+$codigo_processamento = "codigo_processamento_example"; // string | C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+
+try { 
+    $result = $api_instance->listaOperacaoUsingGET($sort, $page, $limit, $id_operacao, $codigo_processamento);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EstabelecimentoApi->listaOperacaoUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id_operacao** | **int**| C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **codigo_processamento** | **string**| C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageOperacaoResponse**](PageOperacaoResponse.md)
 
 ### Authorization
 

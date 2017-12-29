@@ -1867,6 +1867,97 @@ class NotificacaoApi
     }
     
     /**
+     * reenviarTokenSMSUsingPOST
+     *
+     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function reenviarTokenSMSUsingPOST($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->reenviarTokenSMSUsingPOSTWithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * reenviarTokenSMSUsingPOSTWithHttpInfo
+     *
+     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function reenviarTokenSMSUsingPOSTWithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling reenviarTokenSMSUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes-sms/reenviar-codigo-seguranca";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * responderSMSGetUsingGET
      *
      * Responder SMS

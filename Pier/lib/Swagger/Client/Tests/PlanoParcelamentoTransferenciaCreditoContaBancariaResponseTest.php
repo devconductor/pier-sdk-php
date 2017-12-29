@@ -1,6 +1,6 @@
 <?php
 /**
- * PaisResponseTest
+ * PlanoParcelamentoTransferenciaCreditoContaBancariaResponseTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * PaisResponseTest Class Doc Comment
+ * PlanoParcelamentoTransferenciaCreditoContaBancariaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso pa\u00C3\u00ADses
+ * @description Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaisResponseTest extends \PHPUnit_Framework_TestCase
+class PlanoParcelamentoTransferenciaCreditoContaBancariaResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class PaisResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test PaisResponse
+     * Test PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
      */
-    public function testPaisResponse() {
+    public function testPlanoParcelamentoTransferenciaCreditoContaBancariaResponse() {
 
     }
 

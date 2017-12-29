@@ -96,16 +96,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for ativarUsoExteriorUsingPOST
-     *
-     * Ativa o par\u00C3\u00A2metro uso exterior para o produto
-     *
-     */
-    public function test_ativarUsoExteriorUsingPOST() {
-
-    }
-    
-    /**
      * Test case for cadastrarUsingPOST1
      *
      * Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
@@ -156,39 +146,19 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET2
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     */
-    public function test_consultarUsingGET2() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET22
+     * Test case for consultarUsingGET23
      *
      * Apresenta os dados de um determinado Produto
      *
      */
-    public function test_consultarUsingGET22() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET29
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     */
-    public function test_consultarUsingGET29() {
+    public function test_consultarUsingGET23() {
 
     }
     
     /**
      * Test case for consultarUsingGET3
      *
-     * Apresenta os dados de um determinado Banco
+     * Apresenta os dados de um determinado Atendimento
      *
      */
     public function test_consultarUsingGET3() {
@@ -198,7 +168,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET30
      *
-     * Lista os tipos de boletos do emissor 
+     * Lista os tipos de ajustes do emissor 
      *
      */
     public function test_consultarUsingGET30() {
@@ -208,7 +178,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET31
      *
-     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     * Lista os tipos de boletos do emissor 
      *
      */
     public function test_consultarUsingGET31() {
@@ -218,7 +188,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET32
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      *
      */
     public function test_consultarUsingGET32() {
@@ -226,29 +196,39 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET34
+     * Test case for consultarUsingGET33
      *
-     * Apresenta os dados de um determinado Tipo de Telefone
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET34() {
+    public function test_consultarUsingGET33() {
 
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET35
      *
-     * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Apresenta os dados de um determinado Tipo de Telefone
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET4
+     *
+     * Apresenta os dados de um determinado Banco
+     *
+     */
+    public function test_consultarUsingGET4() {
 
     }
     
     /**
      * Test case for consultarUsingGET8
      *
-     * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+     * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
      *
      */
     public function test_consultarUsingGET8() {
@@ -256,12 +236,12 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for desativarUsoExteriorUsingPOST
+     * Test case for consultarUsingGET9
      *
-     * Desativa o par\u00C3\u00A2metro uso exterior para o produto
+     * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
      *
      */
-    public function test_desativarUsoExteriorUsingPOST() {
+    public function test_consultarUsingGET9() {
 
     }
     
@@ -386,16 +366,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET2
-     *
-     * Lista todos os atendimentos
-     *
-     */
-    public function test_listarUsingGET2() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET27
      *
      * Lista os Portadores existentes
@@ -428,7 +398,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET3
      *
-     * Lista os Bancos cadastrados para o Emissor
+     * Lista todos os atendimentos
      *
      */
     public function test_listarUsingGET3() {
@@ -452,6 +422,16 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarUsingGET39() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET4
+     *
+     * Lista os Bancos cadastrados para o Emissor
+     *
+     */
+    public function test_listarUsingGET4() {
 
     }
     

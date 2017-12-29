@@ -1,6 +1,6 @@
 <?php
 /**
- * PermissaoPaisApiTest
+ * AjusteFinanceiroApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * PermissaoPaisApiTest Class Doc Comment
+ * AjusteFinanceiroApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PermissaoPaisApiTest extends \PHPUnit_Framework_TestCase
+class AjusteFinanceiroApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,32 +66,32 @@ class PermissaoPaisApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarPaisUsingGET
+     * Test case for ajustarContaUsingPOST
      *
-     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     * Lan\u00C3\u00A7a um ajuste para a conta informada
      *
      */
-    public function test_consultarPaisUsingGET() {
+    public function test_ajustarContaUsingPOST() {
 
     }
     
     /**
-     * Test case for listarContinentesUsingGET
+     * Test case for consultarUsingGET1
      *
-     * Lista os continentes
+     * Apresenta dados de um determinado ajuste financeiro
      *
      */
-    public function test_listarContinentesUsingGET() {
+    public function test_consultarUsingGET1() {
 
     }
     
     /**
-     * Test case for listarPaisesUsingGET
+     * Test case for listarUsingGET1
      *
-     * Lista os pa\u00C3\u00ADses
+     * Lista ajustes existentes na base de dados do Emissor
      *
      */
-    public function test_listarPaisesUsingGET() {
+    public function test_listarUsingGET1() {
 
     }
     

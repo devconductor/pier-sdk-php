@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](ArquivoApi.md#consultarUsingGET1) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
+[**consultarUsingGET2**](ArquivoApi.md#consultarUsingGET2) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
 [**salvarUsingPOST1**](ArquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
-# **consultarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\ArquivoResponse consultarUsingGET1($id)
+# **consultarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\ArquivoResponse consultarUsingGET2($id)
 
 Consulta de arquivo no PIER Cloud
 
@@ -24,10 +24,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ArquivoApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
 
 try { 
-    $result = $api_instance->consultarUsingGET1($id);
+    $result = $api_instance->consultarUsingGET2($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ArquivoApi->consultarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ArquivoApi->consultarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```

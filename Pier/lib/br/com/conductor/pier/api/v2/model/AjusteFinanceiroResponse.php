@@ -1,6 +1,6 @@
 <?php
 /**
- * PaisResponse
+ * AjusteFinanceiroResponse
  *
  * PHP version 5
  *
@@ -35,16 +35,16 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * PaisResponse Class Doc Comment
+ * AjusteFinanceiroResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso pa\u00C3\u00ADses
+ * @description 
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaisResponse implements ArrayAccess
+class AjusteFinanceiroResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -52,10 +52,12 @@ class PaisResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'codigo' => 'string',
-        'sigla' => 'string',
-        'descricao' => 'string',
-        'continente' => 'string'
+        'id_tipo_ajuste' => 'int',
+        'id_conta' => 'int',
+        'data_ajuste' => 'string',
+        'valor' => 'Number',
+        'identificador_externo' => 'string',
+        'status' => 'int'
     );
   
     static function swaggerTypes() {
@@ -68,10 +70,12 @@ class PaisResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'codigo' => 'codigo',
-        'sigla' => 'sigla',
-        'descricao' => 'descricao',
-        'continente' => 'continente'
+        'id_tipo_ajuste' => 'idTipoAjuste',
+        'id_conta' => 'idConta',
+        'data_ajuste' => 'dataAjuste',
+        'valor' => 'valor',
+        'identificador_externo' => 'identificadorExterno',
+        'status' => 'status'
     );
   
     static function attributeMap() {
@@ -84,10 +88,12 @@ class PaisResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'codigo' => 'setCodigo',
-        'sigla' => 'setSigla',
-        'descricao' => 'setDescricao',
-        'continente' => 'setContinente'
+        'id_tipo_ajuste' => 'setIdTipoAjuste',
+        'id_conta' => 'setIdConta',
+        'data_ajuste' => 'setDataAjuste',
+        'valor' => 'setValor',
+        'identificador_externo' => 'setIdentificadorExterno',
+        'status' => 'setStatus'
     );
   
     static function setters() {
@@ -100,10 +106,12 @@ class PaisResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'codigo' => 'getCodigo',
-        'sigla' => 'getSigla',
-        'descricao' => 'getDescricao',
-        'continente' => 'getContinente'
+        'id_tipo_ajuste' => 'getIdTipoAjuste',
+        'id_conta' => 'getIdConta',
+        'data_ajuste' => 'getDataAjuste',
+        'valor' => 'getValor',
+        'identificador_externo' => 'getIdentificadorExterno',
+        'status' => 'getStatus'
     );
   
     static function getters() {
@@ -112,34 +120,46 @@ class PaisResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do pa\u00C3\u00ADs na base
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
       * @var int
       */
     protected $id;
     
     /**
-      * $codigo C\u00C3\u00B3digo identificador do pa\u00C3\u00ADs
-      * @var string
+      * $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+      * @var int
       */
-    protected $codigo;
+    protected $id_tipo_ajuste;
     
     /**
-      * $sigla Sigla do pa\u00C3\u00ADs
-      * @var string
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+      * @var int
       */
-    protected $sigla;
+    protected $id_conta;
     
     /**
-      * $descricao Nome do pa\u00C3\u00ADs
+      * $data_ajuste Data do ajuste
       * @var string
       */
-    protected $descricao;
+    protected $data_ajuste;
     
     /**
-      * $continente Continente no qual o pa\u00C3\u00ADs faz parte
+      * $valor Valor do ajuste
+      * @var Number
+      */
+    protected $valor;
+    
+    /**
+      * $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
       * @var string
       */
-    protected $continente;
+    protected $identificador_externo;
+    
+    /**
+      * $status Status do ajuste.
+      * @var int
+      */
+    protected $status;
     
 
     /**
@@ -151,10 +171,12 @@ class PaisResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id = $data["id"];
-            $this->codigo = $data["codigo"];
-            $this->sigla = $data["sigla"];
-            $this->descricao = $data["descricao"];
-            $this->continente = $data["continente"];
+            $this->id_tipo_ajuste = $data["id_tipo_ajuste"];
+            $this->id_conta = $data["id_conta"];
+            $this->data_ajuste = $data["data_ajuste"];
+            $this->valor = $data["valor"];
+            $this->identificador_externo = $data["identificador_externo"];
+            $this->status = $data["status"];
         }
     }
     
@@ -169,7 +191,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do pa\u00C3\u00ADs na base
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
      * @return $this
      */
     public function setId($id)
@@ -180,89 +202,128 @@ class PaisResponse implements ArrayAccess
     }
     
     /**
-     * Gets codigo
-     * @return string
+     * Gets id_tipo_ajuste
+     * @return int
      */
-    public function getCodigo()
+    public function getIdTipoAjuste()
     {
-        return $this->codigo;
+        return $this->id_tipo_ajuste;
     }
   
     /**
-     * Sets codigo
-     * @param string $codigo C\u00C3\u00B3digo identificador do pa\u00C3\u00ADs
+     * Sets id_tipo_ajuste
+     * @param int $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
      * @return $this
      */
-    public function setCodigo($codigo)
+    public function setIdTipoAjuste($id_tipo_ajuste)
     {
         
-        $this->codigo = $codigo;
+        $this->id_tipo_ajuste = $id_tipo_ajuste;
         return $this;
     }
     
     /**
-     * Gets sigla
-     * @return string
+     * Gets id_conta
+     * @return int
      */
-    public function getSigla()
+    public function getIdConta()
     {
-        return $this->sigla;
+        return $this->id_conta;
     }
   
     /**
-     * Sets sigla
-     * @param string $sigla Sigla do pa\u00C3\u00ADs
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
      * @return $this
      */
-    public function setSigla($sigla)
+    public function setIdConta($id_conta)
     {
         
-        $this->sigla = $sigla;
+        $this->id_conta = $id_conta;
         return $this;
     }
     
     /**
-     * Gets descricao
+     * Gets data_ajuste
      * @return string
      */
-    public function getDescricao()
+    public function getDataAjuste()
     {
-        return $this->descricao;
+        return $this->data_ajuste;
     }
   
     /**
-     * Sets descricao
-     * @param string $descricao Nome do pa\u00C3\u00ADs
+     * Sets data_ajuste
+     * @param string $data_ajuste Data do ajuste
      * @return $this
      */
-    public function setDescricao($descricao)
+    public function setDataAjuste($data_ajuste)
     {
         
-        $this->descricao = $descricao;
+        $this->data_ajuste = $data_ajuste;
         return $this;
     }
     
     /**
-     * Gets continente
-     * @return string
+     * Gets valor
+     * @return Number
      */
-    public function getContinente()
+    public function getValor()
     {
-        return $this->continente;
+        return $this->valor;
     }
   
     /**
-     * Sets continente
-     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte
+     * Sets valor
+     * @param Number $valor Valor do ajuste
      * @return $this
      */
-    public function setContinente($continente)
+    public function setValor($valor)
     {
-        $allowed_values = array("AFRICA", "AMERICA_LATINA", "AMERICA_NORTE", "ASIA", "EUROPA", "OCEANIA");
-        if (!in_array($continente, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'continente', must be one of 'AFRICA', 'AMERICA_LATINA', 'AMERICA_NORTE', 'ASIA', 'EUROPA', 'OCEANIA'");
-        }
-        $this->continente = $continente;
+        
+        $this->valor = $valor;
+        return $this;
+    }
+    
+    /**
+     * Gets identificador_externo
+     * @return string
+     */
+    public function getIdentificadorExterno()
+    {
+        return $this->identificador_externo;
+    }
+  
+    /**
+     * Sets identificador_externo
+     * @param string $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @return $this
+     */
+    public function setIdentificadorExterno($identificador_externo)
+    {
+        
+        $this->identificador_externo = $identificador_externo;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param int $status Status do ajuste.
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        
+        $this->status = $status;
         return $this;
     }
     

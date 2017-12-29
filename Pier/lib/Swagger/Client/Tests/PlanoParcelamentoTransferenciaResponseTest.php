@@ -1,6 +1,6 @@
 <?php
 /**
- * AjusteResponseTest
+ * PlanoParcelamentoTransferenciaResponseTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * AjusteResponseTest Class Doc Comment
+ * PlanoParcelamentoTransferenciaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AjusteResponseTest extends \PHPUnit_Framework_TestCase
+class PlanoParcelamentoTransferenciaResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class AjusteResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test AjusteResponse
+     * Test PlanoParcelamentoTransferenciaResponse
      */
-    public function testAjusteResponse() {
+    public function testPlanoParcelamentoTransferenciaResponse() {
 
     }
 

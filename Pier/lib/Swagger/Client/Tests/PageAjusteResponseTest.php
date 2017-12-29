@@ -1,6 +1,6 @@
 <?php
 /**
- * PagePaisResponseTest
+ * PageAjusteResponseTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * PagePaisResponseTest Class Doc Comment
+ * PageAjusteResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de Pa\u00C3\u00ADses
+ * @description Lista de Ajustes
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PagePaisResponseTest extends \PHPUnit_Framework_TestCase
+class PageAjusteResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class PagePaisResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test PagePaisResponse
+     * Test PageAjusteResponse
      */
-    public function testPagePaisResponse() {
+    public function testPageAjusteResponse() {
 
     }
 

@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT**](AplicacaoMobileApi.md#atualizarUsingPUT) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listarUsingGET1**](AplicacaoMobileApi.md#listarUsingGET1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listarUsingGET2**](AplicacaoMobileApi.md#listarUsingGET2) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvarUsingPOST**](AplicacaoMobileApi.md#salvarUsingPOST) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET1**
-> \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse listarUsingGET1($sort, $page, $limit, $id, $id_plataforma_mobile)
+# **listarUsingGET2**
+> \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse listarUsingGET2($sort, $page, $limit, $id, $id_plataforma_mobile)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -76,10 +76,10 @@ $id = "id_example"; // string | Identificador da Aplicacao Mobile
 $id_plataforma_mobile = 789; // int | Identificador da Plataforma Mobile
 
 try { 
-    $result = $api_instance->listarUsingGET1($sort, $page, $limit, $id, $id_plataforma_mobile);
+    $result = $api_instance->listarUsingGET2($sort, $page, $limit, $id, $id_plataforma_mobile);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AplicacaoMobileApi->listarUsingGET1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AplicacaoMobileApi->listarUsingGET2: ', $e->getMessage(), "\n";
 }
 ?>
 ```

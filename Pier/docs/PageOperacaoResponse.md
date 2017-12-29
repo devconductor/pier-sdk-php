@@ -1,9 +1,9 @@
-# PagePaisResponse
+# PageOperacaoResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v2.model\PaisResponse[]**](PaisResponse.md) |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v2.model\OperacaoResponse[]**](OperacaoResponse.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

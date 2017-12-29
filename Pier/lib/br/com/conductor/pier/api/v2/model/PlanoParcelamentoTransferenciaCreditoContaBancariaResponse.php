@@ -1,6 +1,6 @@
 <?php
 /**
- * AjusteResponse
+ * PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
  *
  * PHP version 5
  *
@@ -35,27 +35,26 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * AjusteResponse Class Doc Comment
+ * PlanoParcelamentoTransferenciaCreditoContaBancariaResponse Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AjusteResponse implements ArrayAccess
+class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_ajuste' => 'int',
-        'id_tipo_ajuste' => 'int',
-        'id_conta' => 'int',
-        'data_ajuste' => 'string',
-        'valor' => 'Number'
+        'nsu_origem' => 'string',
+        'numero_mascarado_cartao' => 'string',
+        'terminal_requisitante' => 'string',
+        'plano_parcelamentos' => '\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]'
     );
   
     static function swaggerTypes() {
@@ -67,11 +66,10 @@ class AjusteResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_ajuste' => 'idAjuste',
-        'id_tipo_ajuste' => 'idTipoAjuste',
-        'id_conta' => 'idConta',
-        'data_ajuste' => 'dataAjuste',
-        'valor' => 'valor'
+        'nsu_origem' => 'nsuOrigem',
+        'numero_mascarado_cartao' => 'numeroMascaradoCartao',
+        'terminal_requisitante' => 'terminalRequisitante',
+        'plano_parcelamentos' => 'planoParcelamentos'
     );
   
     static function attributeMap() {
@@ -83,11 +81,10 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_ajuste' => 'setIdAjuste',
-        'id_tipo_ajuste' => 'setIdTipoAjuste',
-        'id_conta' => 'setIdConta',
-        'data_ajuste' => 'setDataAjuste',
-        'valor' => 'setValor'
+        'nsu_origem' => 'setNsuOrigem',
+        'numero_mascarado_cartao' => 'setNumeroMascaradoCartao',
+        'terminal_requisitante' => 'setTerminalRequisitante',
+        'plano_parcelamentos' => 'setPlanoParcelamentos'
     );
   
     static function setters() {
@@ -99,11 +96,10 @@ class AjusteResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_ajuste' => 'getIdAjuste',
-        'id_tipo_ajuste' => 'getIdTipoAjuste',
-        'id_conta' => 'getIdConta',
-        'data_ajuste' => 'getDataAjuste',
-        'valor' => 'getValor'
+        'nsu_origem' => 'getNsuOrigem',
+        'numero_mascarado_cartao' => 'getNumeroMascaradoCartao',
+        'terminal_requisitante' => 'getTerminalRequisitante',
+        'plano_parcelamentos' => 'getPlanoParcelamentos'
     );
   
     static function getters() {
@@ -112,34 +108,28 @@ class AjusteResponse implements ArrayAccess
 
     
     /**
-      * $id_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
-      * @var int
-      */
-    protected $id_ajuste;
-    
-    /**
-      * $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
-      * @var int
-      */
-    protected $id_tipo_ajuste;
-    
-    /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
-      * @var int
-      */
-    protected $id_conta;
-    
-    /**
-      * $data_ajuste Data do ajuste
+      * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
       * @var string
       */
-    protected $data_ajuste;
+    protected $nsu_origem;
     
     /**
-      * $valor Valor do ajuste
-      * @var Number
+      * $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+      * @var string
       */
-    protected $valor;
+    protected $numero_mascarado_cartao;
+    
+    /**
+      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+      * @var string
+      */
+    protected $terminal_requisitante;
+    
+    /**
+      * $plano_parcelamentos Lista os planos de parcelamentos
+      * @var \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]
+      */
+    protected $plano_parcelamentos;
     
 
     /**
@@ -150,116 +140,94 @@ class AjusteResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_ajuste = $data["id_ajuste"];
-            $this->id_tipo_ajuste = $data["id_tipo_ajuste"];
-            $this->id_conta = $data["id_conta"];
-            $this->data_ajuste = $data["data_ajuste"];
-            $this->valor = $data["valor"];
+            $this->nsu_origem = $data["nsu_origem"];
+            $this->numero_mascarado_cartao = $data["numero_mascarado_cartao"];
+            $this->terminal_requisitante = $data["terminal_requisitante"];
+            $this->plano_parcelamentos = $data["plano_parcelamentos"];
         }
     }
     
     /**
-     * Gets id_ajuste
-     * @return int
-     */
-    public function getIdAjuste()
-    {
-        return $this->id_ajuste;
-    }
-  
-    /**
-     * Sets id_ajuste
-     * @param int $id_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
-     * @return $this
-     */
-    public function setIdAjuste($id_ajuste)
-    {
-        
-        $this->id_ajuste = $id_ajuste;
-        return $this;
-    }
-    
-    /**
-     * Gets id_tipo_ajuste
-     * @return int
-     */
-    public function getIdTipoAjuste()
-    {
-        return $this->id_tipo_ajuste;
-    }
-  
-    /**
-     * Sets id_tipo_ajuste
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
-     * @return $this
-     */
-    public function setIdTipoAjuste($id_tipo_ajuste)
-    {
-        
-        $this->id_tipo_ajuste = $id_tipo_ajuste;
-        return $this;
-    }
-    
-    /**
-     * Gets id_conta
-     * @return int
-     */
-    public function getIdConta()
-    {
-        return $this->id_conta;
-    }
-  
-    /**
-     * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
-     * @return $this
-     */
-    public function setIdConta($id_conta)
-    {
-        
-        $this->id_conta = $id_conta;
-        return $this;
-    }
-    
-    /**
-     * Gets data_ajuste
+     * Gets nsu_origem
      * @return string
      */
-    public function getDataAjuste()
+    public function getNsuOrigem()
     {
-        return $this->data_ajuste;
+        return $this->nsu_origem;
     }
   
     /**
-     * Sets data_ajuste
-     * @param string $data_ajuste Data do ajuste
+     * Sets nsu_origem
+     * @param string $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
      * @return $this
      */
-    public function setDataAjuste($data_ajuste)
+    public function setNsuOrigem($nsu_origem)
     {
         
-        $this->data_ajuste = $data_ajuste;
+        $this->nsu_origem = $nsu_origem;
         return $this;
     }
     
     /**
-     * Gets valor
-     * @return Number
+     * Gets numero_mascarado_cartao
+     * @return string
      */
-    public function getValor()
+    public function getNumeroMascaradoCartao()
     {
-        return $this->valor;
+        return $this->numero_mascarado_cartao;
     }
   
     /**
-     * Sets valor
-     * @param Number $valor Valor do ajuste
+     * Sets numero_mascarado_cartao
+     * @param string $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
      * @return $this
      */
-    public function setValor($valor)
+    public function setNumeroMascaradoCartao($numero_mascarado_cartao)
     {
         
-        $this->valor = $valor;
+        $this->numero_mascarado_cartao = $numero_mascarado_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets terminal_requisitante
+     * @return string
+     */
+    public function getTerminalRequisitante()
+    {
+        return $this->terminal_requisitante;
+    }
+  
+    /**
+     * Sets terminal_requisitante
+     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+     * @return $this
+     */
+    public function setTerminalRequisitante($terminal_requisitante)
+    {
+        
+        $this->terminal_requisitante = $terminal_requisitante;
+        return $this;
+    }
+    
+    /**
+     * Gets plano_parcelamentos
+     * @return \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]
+     */
+    public function getPlanoParcelamentos()
+    {
+        return $this->plano_parcelamentos;
+    }
+  
+    /**
+     * Sets plano_parcelamentos
+     * @param \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[] $plano_parcelamentos Lista os planos de parcelamentos
+     * @return $this
+     */
+    public function setPlanoParcelamentos($plano_parcelamentos)
+    {
+        
+        $this->plano_parcelamentos = $plano_parcelamentos;
         return $this;
     }
     

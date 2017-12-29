@@ -512,7 +512,7 @@ class UsuarioApi
     }
     
     /**
-     * consultarUsingGET39
+     * consultarUsingGET40
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
@@ -520,15 +520,15 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET39($id)
+    public function consultarUsingGET40($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET39WithHttpInfo
+     * consultarUsingGET40WithHttpInfo
      *
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      *
@@ -536,12 +536,12 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET39WithHttpInfo($id)
+    public function consultarUsingGET40WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
         }
   
         // parse inputs

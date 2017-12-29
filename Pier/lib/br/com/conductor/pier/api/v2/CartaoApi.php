@@ -1217,7 +1217,7 @@ class CartaoApi
     }
     
     /**
-     * consultarUsingGET6
+     * consultarUsingGET7
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1225,15 +1225,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6($id)
+    public function consultarUsingGET7($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET6WithHttpInfo
+     * consultarUsingGET7WithHttpInfo
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1241,12 +1241,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6WithHttpInfo($id)
+    public function consultarUsingGET7WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
         }
   
         // parse inputs

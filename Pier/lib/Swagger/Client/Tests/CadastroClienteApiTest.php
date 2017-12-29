@@ -156,42 +156,42 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for consultarUsingGET15
      *
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_consultarUsingGET15() {
 
     }
     
     /**
-     * Test case for consultarUsingGET19
+     * Test case for consultarUsingGET20
      *
      * Apresenta os detalhes de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET20() {
 
     }
     
     /**
-     * Test case for consultarUsingGET21
+     * Test case for consultarUsingGET22
      *
      * Apresenta os dados de uma determinada Pessoa
      *
      */
-    public function test_consultarUsingGET21() {
+    public function test_consultarUsingGET22() {
 
     }
     
     /**
-     * Test case for consultarUsingGET27
+     * Test case for consultarUsingGET28
      *
      * Apresenta os dados de um determinado Telefone
      *
      */
-    public function test_consultarUsingGET27() {
+    public function test_consultarUsingGET28() {
 
     }
     

@@ -92,7 +92,7 @@ class ContaApi
   
     
     /**
-     * ajustarContaUsingPOST
+     * ajustarContaUsingPOST1
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
@@ -100,18 +100,19 @@ class ContaApi
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @return \br.com.conductor.pier.api.v2.model\AjusteResponse
+     * @param string $identificador_externo Identificador Externo (optional)
+     * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
+    public function ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOSTWithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste);
+        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOST1WithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo);
         return $response; 
     }
 
 
     /**
-     * ajustarContaUsingPOSTWithHttpInfo
+     * ajustarContaUsingPOST1WithHttpInfo
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
@@ -119,27 +120,28 @@ class ContaApi
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AjusteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param string $identificador_externo Identificador Externo (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOSTWithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
+    public function ajustarContaUsingPOST1WithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'id_tipo_ajuste' is set
         if ($id_tipo_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_tipo_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id_tipo_ajuste when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'data_ajuste' is set
         if ($data_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $data_ajuste when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'valor_ajuste' is set
         if ($valor_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $valor_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $valor_ajuste when calling ajustarContaUsingPOST1');
         }
   
         // parse inputs
@@ -166,6 +168,10 @@ class ContaApi
         
         if ($valor_ajuste !== null) {
             $queryParams['valorAjuste'] = $this->apiClient->getSerializer()->toQueryValue($valor_ajuste);
+        }// query params
+        
+        if ($identificador_externo !== null) {
+            $queryParams['identificadorExterno'] = $this->apiClient->getSerializer()->toQueryValue($identificador_externo);
         }
         
         // path params
@@ -195,19 +201,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AjusteResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AjusteResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AjusteResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1424,7 +1430,7 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET11
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1432,15 +1438,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET11($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1448,12 +1454,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET11WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -1519,7 +1525,7 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET38
+     * consultarUsingGET39
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
@@ -1528,15 +1534,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38($id, $id_transferencia)
+    public function consultarUsingGET39($id, $id_transferencia)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET38WithHttpInfo ($id, $id_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id, $id_transferencia);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET38WithHttpInfo
+     * consultarUsingGET39WithHttpInfo
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
@@ -1545,16 +1551,16 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38WithHttpInfo($id, $id_transferencia)
+    public function consultarUsingGET39WithHttpInfo($id, $id_transferencia)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET38');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET38');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET39');
         }
   
         // parse inputs

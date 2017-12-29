@@ -197,7 +197,7 @@ class AplicacaoMobileApi
     }
     
     /**
-     * listarUsingGET1
+     * listarUsingGET2
      *
      * Lista os aplicacoes mobile cadastradas
      *
@@ -209,15 +209,15 @@ class AplicacaoMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET2($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($sort, $page, $limit, $id, $id_plataforma_mobile);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($sort, $page, $limit, $id, $id_plataforma_mobile);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarUsingGET2WithHttpInfo
      *
      * Lista os aplicacoes mobile cadastradas
      *
@@ -229,7 +229,7 @@ class AplicacaoMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET2WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
         
   

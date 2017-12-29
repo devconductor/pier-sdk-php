@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterarUsingPUT19**](UsuarioApi.md#alterarUsingPUT19) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET39**](UsuarioApi.md#consultarUsingGET39) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET40**](UsuarioApi.md#consultarUsingGET40) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**listarUsingGET44**](UsuarioApi.md#listarUsingGET44) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET39**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET39($id)
+# **consultarUsingGET40**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET40($id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -221,10 +221,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET39($id);
+    $result = $api_instance->consultarUsingGET40($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->consultarUsingGET39: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->consultarUsingGET40: ', $e->getMessage(), "\n";
 }
 ?>
 ```

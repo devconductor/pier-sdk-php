@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET24**](StatusParametroApi.md#consultarUsingGET24) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET25**](StatusParametroApi.md#consultarUsingGET25) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET25**](StatusParametroApi.md#consultarUsingGET25) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET26**](StatusParametroApi.md#consultarUsingGET26) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listarTiposEventosTransacoesUsingGET**](StatusParametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
@@ -105,8 +105,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET24($id)
+# **consultarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET25($id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -121,10 +121,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET24($id);
+    $result = $api_instance->consultarUsingGET25($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -150,8 +150,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET25($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET26($id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -166,10 +166,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\StatusParametroApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET25($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->consultarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```

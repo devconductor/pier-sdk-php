@@ -261,7 +261,7 @@ class LimiteDisponibilidadeApi
     }
     
     /**
-     * consultarUsingGET17
+     * consultarUsingGET18
      *
      * Apresenta os limites da conta
      *
@@ -269,15 +269,15 @@ class LimiteDisponibilidadeApi
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17($id_conta)
+    public function consultarUsingGET18($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id_conta);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET17WithHttpInfo
+     * consultarUsingGET18WithHttpInfo
      *
      * Apresenta os limites da conta
      *
@@ -285,12 +285,12 @@ class LimiteDisponibilidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17WithHttpInfo($id_conta)
+    public function consultarUsingGET18WithHttpInfo($id_conta)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET17');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET18');
         }
   
         // parse inputs

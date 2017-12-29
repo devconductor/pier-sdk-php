@@ -92,7 +92,7 @@ class ArquivoApi
   
     
     /**
-     * consultarUsingGET1
+     * consultarUsingGET2
      *
      * Consulta de arquivo no PIER Cloud
      *
@@ -100,15 +100,15 @@ class ArquivoApi
      * @return \br.com.conductor.pier.api.v2.model\ArquivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id)
+    public function consultarUsingGET2($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET1WithHttpInfo
+     * consultarUsingGET2WithHttpInfo
      *
      * Consulta de arquivo no PIER Cloud
      *
@@ -116,12 +116,12 @@ class ArquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id)
+    public function consultarUsingGET2WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
         }
   
         // parse inputs
