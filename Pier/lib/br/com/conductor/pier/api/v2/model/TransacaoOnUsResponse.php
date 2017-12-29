@@ -56,7 +56,8 @@ class TransacaoOnUsResponse implements ArrayAccess
         'plano_de_parcelamento' => '\br.com.conductor.pier.api.v2.model\MapOfstringAndstring[]',
         'codigo_autorizacao' => 'string',
         'numero_mascarado_cartao' => 'string',
-        'nome_portador_cartao' => 'string'
+        'nome_portador_cartao' => 'string',
+        'terminal_requisitante' => 'string'
     );
   
     static function swaggerTypes() {
@@ -73,7 +74,8 @@ class TransacaoOnUsResponse implements ArrayAccess
         'plano_de_parcelamento' => 'planoDeParcelamento',
         'codigo_autorizacao' => 'codigoAutorizacao',
         'numero_mascarado_cartao' => 'numeroMascaradoCartao',
-        'nome_portador_cartao' => 'nomePortadorCartao'
+        'nome_portador_cartao' => 'nomePortadorCartao',
+        'terminal_requisitante' => 'terminalRequisitante'
     );
   
     static function attributeMap() {
@@ -90,7 +92,8 @@ class TransacaoOnUsResponse implements ArrayAccess
         'plano_de_parcelamento' => 'setPlanoDeParcelamento',
         'codigo_autorizacao' => 'setCodigoAutorizacao',
         'numero_mascarado_cartao' => 'setNumeroMascaradoCartao',
-        'nome_portador_cartao' => 'setNomePortadorCartao'
+        'nome_portador_cartao' => 'setNomePortadorCartao',
+        'terminal_requisitante' => 'setTerminalRequisitante'
     );
   
     static function setters() {
@@ -107,7 +110,8 @@ class TransacaoOnUsResponse implements ArrayAccess
         'plano_de_parcelamento' => 'getPlanoDeParcelamento',
         'codigo_autorizacao' => 'getCodigoAutorizacao',
         'numero_mascarado_cartao' => 'getNumeroMascaradoCartao',
-        'nome_portador_cartao' => 'getNomePortadorCartao'
+        'nome_portador_cartao' => 'getNomePortadorCartao',
+        'terminal_requisitante' => 'getTerminalRequisitante'
     );
   
     static function getters() {
@@ -151,6 +155,12 @@ class TransacaoOnUsResponse implements ArrayAccess
       */
     protected $nome_portador_cartao;
     
+    /**
+      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+      * @var string
+      */
+    protected $terminal_requisitante;
+    
 
     /**
      * Constructor
@@ -166,6 +176,7 @@ class TransacaoOnUsResponse implements ArrayAccess
             $this->codigo_autorizacao = $data["codigo_autorizacao"];
             $this->numero_mascarado_cartao = $data["numero_mascarado_cartao"];
             $this->nome_portador_cartao = $data["nome_portador_cartao"];
+            $this->terminal_requisitante = $data["terminal_requisitante"];
         }
     }
     
@@ -292,6 +303,27 @@ class TransacaoOnUsResponse implements ArrayAccess
     {
         
         $this->nome_portador_cartao = $nome_portador_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets terminal_requisitante
+     * @return string
+     */
+    public function getTerminalRequisitante()
+    {
+        return $this->terminal_requisitante;
+    }
+  
+    /**
+     * Sets terminal_requisitante
+     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+     * @return $this
+     */
+    public function setTerminalRequisitante($terminal_requisitante)
+    {
+        
+        $this->terminal_requisitante = $terminal_requisitante;
         return $this;
     }
     

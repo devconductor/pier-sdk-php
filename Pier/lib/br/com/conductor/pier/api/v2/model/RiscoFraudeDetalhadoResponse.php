@@ -38,7 +38,7 @@ use \ArrayAccess;
  * RiscoFraudeDetalhadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Par\u00C3\u00A2metros de resposta de risco de fraude detalhado
+ * @description Objeto de resposta de Risco de Fraude Detalhado
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -59,7 +59,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'id_cartao' => 'int',
         'id_produto' => 'int',
         'id_transacao' => 'int',
-        'data_transacao' => '\DateTime',
+        'data_transacao' => 'string',
         'valor_transacao' => 'Number',
         'codigo_moeda_origem' => 'string',
         'valor_origem' => 'Number',
@@ -77,7 +77,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'string',
         'cnpj' => 'string',
         'email' => 'string',
-        'tefefones' => '\br.com.conductor.pier.api.v2.model\Telefone[]'
+        'tefefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
     );
   
     static function swaggerTypes() {
@@ -200,13 +200,13 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+      * $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
       * @var int
       */
     protected $id_tipo_resolucao;
@@ -218,38 +218,38 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     protected $descricao_tipo_resolucao;
     
     /**
-      * $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+      * $flag_alto_risco Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
       * @var bool
       */
     protected $flag_alto_risco;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)
+      * $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+      * $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
       * @var int
       */
     protected $id_transacao;
     
     /**
       * $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
-      * @var \DateTime
+      * @var string
       */
     protected $data_transacao;
     
@@ -278,7 +278,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     protected $codigo_moeda_destino;
     
     /**
-      * $valor_destino Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+      * $valor_destino Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
       * @var Number
       */
     protected $valor_destino;
@@ -356,8 +356,8 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     protected $email;
     
     /**
-      * $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
-      * @var \br.com.conductor.pier.api.v2.model\Telefone[]
+      * $tefefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+      * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
       */
     protected $tefefones;
     
@@ -411,7 +411,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
      * @return $this
      */
     public function setId($id)
@@ -432,7 +432,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_resolucao
-     * @param int $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+     * @param int $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
      * @return $this
      */
     public function setIdTipoResolucao($id_tipo_resolucao)
@@ -474,7 +474,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets flag_alto_risco
-     * @param bool $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+     * @param bool $flag_alto_risco Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
      * @return $this
      */
     public function setFlagAltoRisco($flag_alto_risco)
@@ -495,7 +495,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -516,7 +516,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -537,7 +537,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)
+     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -558,7 +558,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+     * @param int $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -570,7 +570,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     
     /**
      * Gets data_transacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataTransacao()
     {
@@ -579,7 +579,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets data_transacao
-     * @param \DateTime $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+     * @param string $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
      * @return $this
      */
     public function setDataTransacao($data_transacao)
@@ -684,7 +684,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets valor_destino
-     * @param Number $valor_destino Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+     * @param Number $valor_destino Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
      * @return $this
      */
     public function setValorDestino($valor_destino)
@@ -948,7 +948,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     
     /**
      * Gets tefefones
-     * @return \br.com.conductor.pier.api.v2.model\Telefone[]
+     * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
      */
     public function getTefefones()
     {
@@ -957,7 +957,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets tefefones
-     * @param \br.com.conductor.pier.api.v2.model\Telefone[] $tefefones Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $tefefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
      * @return $this
      */
     public function setTefefones($tefefones)

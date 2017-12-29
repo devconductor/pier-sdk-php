@@ -53,7 +53,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
     static $swaggerTypes = array(
         'rev' => 'int',
         'rev_type' => 'int',
-        'rev_date' => '\DateTime',
+        'rev_date' => 'string',
         'id' => 'int',
         'id_tipo_oportunidade' => 'int',
         'nome' => 'string',
@@ -137,7 +137,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
     
     /**
       * $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-      * @var \DateTime
+      * @var string
       */
     protected $rev_date;
     
@@ -235,7 +235,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets rev_date
-     * @return \DateTime
+     * @return string
      */
     public function getRevDate()
     {
@@ -244,7 +244,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_date
-     * @param \DateTime $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
      * @return $this
      */
     public function setRevDate($rev_date)

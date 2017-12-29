@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **rev** | **int** | C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades | [optional] 
 **rev_type** | **int** | C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
-**rev_date** | [**\DateTime**](\DateTime.md) | Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
+**rev_date** | **string** | Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
 **id** | **int** | C\u00C3\u00B3digo identificador do StatusOportunidade | [optional] 
 **id_tipo_oportunidade** | **int** | C\u00C3\u00B3digo identificador do TipoOportunidade | [optional] 
 **nome** | **string** | Nome do status oportunidade | [optional] 

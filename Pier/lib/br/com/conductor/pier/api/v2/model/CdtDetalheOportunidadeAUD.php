@@ -56,7 +56,7 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
         'id_oportunidade' => 'int',
         'nome_campo' => 'string',
         'rev' => 'int',
-        'rev_date' => '\DateTime',
+        'rev_date' => 'string',
         'rev_oportunidade' => 'int',
         'rev_type' => 'int',
         'rev_user' => 'string'
@@ -159,7 +159,7 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
     
     /**
       * $rev_date 
-      * @var \DateTime
+      * @var string
       */
     protected $rev_date;
     
@@ -309,7 +309,7 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
     
     /**
      * Gets rev_date
-     * @return \DateTime
+     * @return string
      */
     public function getRevDate()
     {
@@ -318,7 +318,7 @@ class CdtDetalheOportunidadeAUD implements ArrayAccess
   
     /**
      * Sets rev_date
-     * @param \DateTime $rev_date 
+     * @param string $rev_date 
      * @return $this
      */
     public function setRevDate($rev_date)

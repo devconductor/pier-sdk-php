@@ -58,7 +58,7 @@ class RiscoFraudeResponse implements ArrayAccess
         'id_conta' => 'int',
         'id_cartao' => 'int',
         'id_transacao' => 'int',
-        'data_transacao' => '\DateTime',
+        'data_transacao' => 'string',
         'valor_transacao' => 'Number',
         'nome_estabelecimento' => 'string'
     );
@@ -132,13 +132,13 @@ class RiscoFraudeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+      * $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
       * @var int
       */
     protected $id_tipo_resolucao;
@@ -150,32 +150,32 @@ class RiscoFraudeResponse implements ArrayAccess
     protected $descricao_tipo_resolucao;
     
     /**
-      * $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+      * $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
       * @var bool
       */
     protected $flag_alto_risco;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+      * $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
       * @var int
       */
     protected $id_transacao;
     
     /**
-      * $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
-      * @var \DateTime
+      * $data_transacao Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+      * @var string
       */
     protected $data_transacao;
     
@@ -224,7 +224,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
      * @return $this
      */
     public function setId($id)
@@ -245,7 +245,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_resolucao
-     * @param int $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+     * @param int $id_tipo_resolucao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
      * @return $this
      */
     public function setIdTipoResolucao($id_tipo_resolucao)
@@ -287,7 +287,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets flag_alto_risco
-     * @param bool $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+     * @param bool $flag_alto_risco Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
      * @return $this
      */
     public function setFlagAltoRisco($flag_alto_risco)
@@ -308,7 +308,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -329,7 +329,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -350,7 +350,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+     * @param int $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -362,7 +362,7 @@ class RiscoFraudeResponse implements ArrayAccess
     
     /**
      * Gets data_transacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataTransacao()
     {
@@ -371,7 +371,7 @@ class RiscoFraudeResponse implements ArrayAccess
   
     /**
      * Sets data_transacao
-     * @param \DateTime $data_transacao Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+     * @param string $data_transacao Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
      * @return $this
      */
     public function setDataTransacao($data_transacao)

@@ -102,7 +102,7 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\FAQ
+     * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function adicionarUsingPOST($pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
@@ -123,7 +123,7 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\FAQ, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function adicionarUsingPOSTWithHttpInfo($pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
@@ -195,19 +195,19 @@ class FAQApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\FAQ'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\FaqResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FAQ', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FaqResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FAQ', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FaqResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -217,7 +217,7 @@ class FAQApi
     }
     
     /**
-     * alterarUsingPUT2
+     * alterarUsingPUT7
      *
      * Alterar FAQ
      *
@@ -228,18 +228,18 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\FAQ
+     * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT2($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function alterarUsingPUT7($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT2WithHttpInfo ($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT7WithHttpInfo ($id, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * alterarUsingPUT2WithHttpInfo
+     * alterarUsingPUT7WithHttpInfo
      *
      * Alterar FAQ
      *
@@ -250,23 +250,23 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\FAQ, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT2WithHttpInfo($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function alterarUsingPUT7WithHttpInfo($id, $pergunta, $resposta, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT7');
         }
         // verify the required parameter 'pergunta' is set
         if ($pergunta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pergunta when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $pergunta when calling alterarUsingPUT7');
         }
         // verify the required parameter 'resposta' is set
         if ($resposta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling alterarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $resposta when calling alterarUsingPUT7');
         }
   
         // parse inputs
@@ -334,19 +334,19 @@ class FAQApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'PUT',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\FAQ'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\FaqResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FAQ', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FaqResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FAQ', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FaqResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -356,36 +356,36 @@ class FAQApi
     }
     
     /**
-     * consultarUsingGET6
+     * consultarUsingGET17
      *
      * Consultar FAQ por id
      *
      * @param int $id Id (required)
-     * @return \br.com.conductor.pier.api.v2.model\FAQ
+     * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6($id)
+    public function consultarUsingGET17($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET6WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * Consultar FAQ por id
      *
      * @param int $id Id (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\FAQ, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6WithHttpInfo($id)
+    public function consultarUsingGET17WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
         }
   
         // parse inputs
@@ -429,19 +429,19 @@ class FAQApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\FAQ'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\FaqResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FAQ', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FaqResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FAQ', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FaqResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -451,12 +451,13 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET20
      *
      * Lista FAQs
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
@@ -464,23 +465,24 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageFaqs
+     * @return \br.com.conductor.pier.api.v2.model\PageFaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET20($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET20WithHttpInfo
      *
      * Lista FAQs
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
      * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
      * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
@@ -488,10 +490,10 @@ class FAQApi
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
      * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqs, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   
@@ -508,6 +510,14 @@ class FAQApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -564,19 +574,19 @@ class FAQApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageFaqs'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageFaqResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageFaqs', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageFaqResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageFaqs', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageFaqResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

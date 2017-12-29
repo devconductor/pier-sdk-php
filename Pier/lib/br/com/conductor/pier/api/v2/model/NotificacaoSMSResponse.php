@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoSMSResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Notifica\u00C3\u00A7\u00C3\u00A3o SMS
+ * @description Objeto SMS
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,8 +51,23 @@ class NotificacaoSMSResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'protocolo' => 'string',
-        'mensagem' => 'string'
+        'id' => 'int',
+        'nsu' => 'int',
+        'id_emissor' => 'int',
+        'tipo_evento' => 'string',
+        'status' => 'string',
+        'descricao_status' => 'string',
+        'id_pessoa' => 'int',
+        'id_conta' => 'int',
+        'celular' => 'string',
+        'operadora' => 'string',
+        'conteudo' => 'string',
+        'resposta' => 'string',
+        'data_agendamento' => 'string',
+        'quantidade_tentativas_envio' => 'int',
+        'data_inclusao' => 'string',
+        'data_alteracao_status' => 'string',
+        'protocolo' => 'string'
     );
   
     static function swaggerTypes() {
@@ -64,8 +79,23 @@ class NotificacaoSMSResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'protocolo' => 'protocolo',
-        'mensagem' => 'mensagem'
+        'id' => 'id',
+        'nsu' => 'nsu',
+        'id_emissor' => 'idEmissor',
+        'tipo_evento' => 'tipoEvento',
+        'status' => 'status',
+        'descricao_status' => 'descricaoStatus',
+        'id_pessoa' => 'idPessoa',
+        'id_conta' => 'idConta',
+        'celular' => 'celular',
+        'operadora' => 'operadora',
+        'conteudo' => 'conteudo',
+        'resposta' => 'resposta',
+        'data_agendamento' => 'dataAgendamento',
+        'quantidade_tentativas_envio' => 'quantidadeTentativasEnvio',
+        'data_inclusao' => 'dataInclusao',
+        'data_alteracao_status' => 'dataAlteracaoStatus',
+        'protocolo' => 'protocolo'
     );
   
     static function attributeMap() {
@@ -77,8 +107,23 @@ class NotificacaoSMSResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'protocolo' => 'setProtocolo',
-        'mensagem' => 'setMensagem'
+        'id' => 'setId',
+        'nsu' => 'setNsu',
+        'id_emissor' => 'setIdEmissor',
+        'tipo_evento' => 'setTipoEvento',
+        'status' => 'setStatus',
+        'descricao_status' => 'setDescricaoStatus',
+        'id_pessoa' => 'setIdPessoa',
+        'id_conta' => 'setIdConta',
+        'celular' => 'setCelular',
+        'operadora' => 'setOperadora',
+        'conteudo' => 'setConteudo',
+        'resposta' => 'setResposta',
+        'data_agendamento' => 'setDataAgendamento',
+        'quantidade_tentativas_envio' => 'setQuantidadeTentativasEnvio',
+        'data_inclusao' => 'setDataInclusao',
+        'data_alteracao_status' => 'setDataAlteracaoStatus',
+        'protocolo' => 'setProtocolo'
     );
   
     static function setters() {
@@ -90,8 +135,23 @@ class NotificacaoSMSResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'protocolo' => 'getProtocolo',
-        'mensagem' => 'getMensagem'
+        'id' => 'getId',
+        'nsu' => 'getNsu',
+        'id_emissor' => 'getIdEmissor',
+        'tipo_evento' => 'getTipoEvento',
+        'status' => 'getStatus',
+        'descricao_status' => 'getDescricaoStatus',
+        'id_pessoa' => 'getIdPessoa',
+        'id_conta' => 'getIdConta',
+        'celular' => 'getCelular',
+        'operadora' => 'getOperadora',
+        'conteudo' => 'getConteudo',
+        'resposta' => 'getResposta',
+        'data_agendamento' => 'getDataAgendamento',
+        'quantidade_tentativas_envio' => 'getQuantidadeTentativasEnvio',
+        'data_inclusao' => 'getDataInclusao',
+        'data_alteracao_status' => 'getDataAlteracaoStatus',
+        'protocolo' => 'getProtocolo'
     );
   
     static function getters() {
@@ -100,16 +160,106 @@ class NotificacaoSMSResponse implements ArrayAccess
 
     
     /**
+      * $id C\u00C3\u00B3digo Identificador.
+      * @var int
+      */
+    protected $id;
+    
+    /**
+      * $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+      * @var int
+      */
+    protected $nsu;
+    
+    /**
+      * $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+      * @var int
+      */
+    protected $id_emissor;
+    
+    /**
+      * $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $tipo_evento;
+    
+    /**
+      * $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $status;
+    
+    /**
+      * $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $descricao_status;
+    
+    /**
+      * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+      * @var int
+      */
+    protected $id_pessoa;
+    
+    /**
+      * $id_conta C\u00C3\u00B3digo identificador da conta
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $celular Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+      * @var string
+      */
+    protected $celular;
+    
+    /**
+      * $operadora Apresenta a operadora do celular a ser eviado o SMS
+      * @var string
+      */
+    protected $operadora;
+    
+    /**
+      * $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+      * @var string
+      */
+    protected $conteudo;
+    
+    /**
+      * $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+      * @var string
+      */
+    protected $resposta;
+    
+    /**
+      * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $data_agendamento;
+    
+    /**
+      * $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * @var int
+      */
+    protected $quantidade_tentativas_envio;
+    
+    /**
+      * $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+      * @var string
+      */
+    protected $data_inclusao;
+    
+    /**
+      * $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
+      * @var string
+      */
+    protected $data_alteracao_status;
+    
+    /**
       * $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
       * @var string
       */
     protected $protocolo;
-    
-    /**
-      * $mensagem Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
-      * @var string
-      */
-    protected $mensagem;
     
 
     /**
@@ -120,9 +270,366 @@ class NotificacaoSMSResponse implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id = $data["id"];
+            $this->nsu = $data["nsu"];
+            $this->id_emissor = $data["id_emissor"];
+            $this->tipo_evento = $data["tipo_evento"];
+            $this->status = $data["status"];
+            $this->descricao_status = $data["descricao_status"];
+            $this->id_pessoa = $data["id_pessoa"];
+            $this->id_conta = $data["id_conta"];
+            $this->celular = $data["celular"];
+            $this->operadora = $data["operadora"];
+            $this->conteudo = $data["conteudo"];
+            $this->resposta = $data["resposta"];
+            $this->data_agendamento = $data["data_agendamento"];
+            $this->quantidade_tentativas_envio = $data["quantidade_tentativas_envio"];
+            $this->data_inclusao = $data["data_inclusao"];
+            $this->data_alteracao_status = $data["data_alteracao_status"];
             $this->protocolo = $data["protocolo"];
-            $this->mensagem = $data["mensagem"];
         }
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id C\u00C3\u00B3digo Identificador.
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
+    }
+    
+    /**
+     * Gets nsu
+     * @return int
+     */
+    public function getNsu()
+    {
+        return $this->nsu;
+    }
+  
+    /**
+     * Sets nsu
+     * @param int $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+     * @return $this
+     */
+    public function setNsu($nsu)
+    {
+        
+        $this->nsu = $nsu;
+        return $this;
+    }
+    
+    /**
+     * Gets id_emissor
+     * @return int
+     */
+    public function getIdEmissor()
+    {
+        return $this->id_emissor;
+    }
+  
+    /**
+     * Sets id_emissor
+     * @param int $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+     * @return $this
+     */
+    public function setIdEmissor($id_emissor)
+    {
+        
+        $this->id_emissor = $id_emissor;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_evento
+     * @return string
+     */
+    public function getTipoEvento()
+    {
+        return $this->tipo_evento;
+    }
+  
+    /**
+     * Sets tipo_evento
+     * @param string $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setTipoEvento($tipo_evento)
+    {
+        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS");
+        if (!in_array($tipo_evento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'");
+        }
+        $this->tipo_evento = $tipo_evento;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowed_values = array("PENDENTE", "ENCAMINHADO", "ENVIADO", "RESPONDIDO", "ERRO", "ERRO_RESPOSTA", "SUCESSO_RESPOSTA");
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'PENDENTE', 'ENCAMINHADO', 'ENVIADO', 'RESPONDIDO', 'ERRO', 'ERRO_RESPOSTA', 'SUCESSO_RESPOSTA'");
+        }
+        $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets descricao_status
+     * @return string
+     */
+    public function getDescricaoStatus()
+    {
+        return $this->descricao_status;
+    }
+  
+    /**
+     * Sets descricao_status
+     * @param string $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setDescricaoStatus($descricao_status)
+    {
+        
+        $this->descricao_status = $descricao_status;
+        return $this;
+    }
+    
+    /**
+     * Gets id_pessoa
+     * @return int
+     */
+    public function getIdPessoa()
+    {
+        return $this->id_pessoa;
+    }
+  
+    /**
+     * Sets id_pessoa
+     * @param int $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+     * @return $this
+     */
+    public function setIdPessoa($id_pessoa)
+    {
+        
+        $this->id_pessoa = $id_pessoa;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00C3\u00B3digo identificador da conta
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets celular
+     * @return string
+     */
+    public function getCelular()
+    {
+        return $this->celular;
+    }
+  
+    /**
+     * Sets celular
+     * @param string $celular Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+     * @return $this
+     */
+    public function setCelular($celular)
+    {
+        
+        $this->celular = $celular;
+        return $this;
+    }
+    
+    /**
+     * Gets operadora
+     * @return string
+     */
+    public function getOperadora()
+    {
+        return $this->operadora;
+    }
+  
+    /**
+     * Sets operadora
+     * @param string $operadora Apresenta a operadora do celular a ser eviado o SMS
+     * @return $this
+     */
+    public function setOperadora($operadora)
+    {
+        
+        $this->operadora = $operadora;
+        return $this;
+    }
+    
+    /**
+     * Gets conteudo
+     * @return string
+     */
+    public function getConteudo()
+    {
+        return $this->conteudo;
+    }
+  
+    /**
+     * Sets conteudo
+     * @param string $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+     * @return $this
+     */
+    public function setConteudo($conteudo)
+    {
+        
+        $this->conteudo = $conteudo;
+        return $this;
+    }
+    
+    /**
+     * Gets resposta
+     * @return string
+     */
+    public function getResposta()
+    {
+        return $this->resposta;
+    }
+  
+    /**
+     * Sets resposta
+     * @param string $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+     * @return $this
+     */
+    public function setResposta($resposta)
+    {
+        
+        $this->resposta = $resposta;
+        return $this;
+    }
+    
+    /**
+     * Gets data_agendamento
+     * @return string
+     */
+    public function getDataAgendamento()
+    {
+        return $this->data_agendamento;
+    }
+  
+    /**
+     * Sets data_agendamento
+     * @param string $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setDataAgendamento($data_agendamento)
+    {
+        
+        $this->data_agendamento = $data_agendamento;
+        return $this;
+    }
+    
+    /**
+     * Gets quantidade_tentativas_envio
+     * @return int
+     */
+    public function getQuantidadeTentativasEnvio()
+    {
+        return $this->quantidade_tentativas_envio;
+    }
+  
+    /**
+     * Sets quantidade_tentativas_envio
+     * @param int $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setQuantidadeTentativasEnvio($quantidade_tentativas_envio)
+    {
+        
+        $this->quantidade_tentativas_envio = $quantidade_tentativas_envio;
+        return $this;
+    }
+    
+    /**
+     * Gets data_inclusao
+     * @return string
+     */
+    public function getDataInclusao()
+    {
+        return $this->data_inclusao;
+    }
+  
+    /**
+     * Sets data_inclusao
+     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+     * @return $this
+     */
+    public function setDataInclusao($data_inclusao)
+    {
+        
+        $this->data_inclusao = $data_inclusao;
+        return $this;
+    }
+    
+    /**
+     * Gets data_alteracao_status
+     * @return string
+     */
+    public function getDataAlteracaoStatus()
+    {
+        return $this->data_alteracao_status;
+    }
+  
+    /**
+     * Sets data_alteracao_status
+     * @param string $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
+     * @return $this
+     */
+    public function setDataAlteracaoStatus($data_alteracao_status)
+    {
+        
+        $this->data_alteracao_status = $data_alteracao_status;
+        return $this;
     }
     
     /**
@@ -143,27 +650,6 @@ class NotificacaoSMSResponse implements ArrayAccess
     {
         
         $this->protocolo = $protocolo;
-        return $this;
-    }
-    
-    /**
-     * Gets mensagem
-     * @return string
-     */
-    public function getMensagem()
-    {
-        return $this->mensagem;
-    }
-  
-    /**
-     * Sets mensagem
-     * @param string $mensagem Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
-     * @return $this
-     */
-    public function setMensagem($mensagem)
-    {
-        
-        $this->mensagem = $mensagem;
         return $this;
     }
     

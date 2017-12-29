@@ -92,102 +92,7 @@ class RiscoFraudeApi
   
     
     /**
-     * consultarUsingGET
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). (required)
-     * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGETWithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGETWithHttpInfo
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGETWithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/atendimento-clientes/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET10
+     * consultarUsingGET24
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -195,15 +100,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET24($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET24WithHttpInfo
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -211,12 +116,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET24WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
         }
   
         // parse inputs
@@ -282,137 +187,38 @@ class RiscoFraudeApi
     }
     
     /**
-     * informarRiscoFraudeUsingPOST
+     * listarTiposResolucaoUsingGET
      *
-     * Receber Risco Fraude
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
-     * @param \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse[] $detalhado_responses detalhadoResponses (required)
-     * @return string
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function informarRiscoFraudeUsingPOST($detalhado_responses)
+    public function listarTiposResolucaoUsingGET($page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->informarRiscoFraudeUsingPOSTWithHttpInfo ($detalhado_responses);
+        list($response, $statusCode, $httpHeader) = $this->listarTiposResolucaoUsingGETWithHttpInfo ($page, $limit);
         return $response; 
     }
 
 
     /**
-     * informarRiscoFraudeUsingPOSTWithHttpInfo
+     * listarTiposResolucaoUsingGETWithHttpInfo
      *
-     * Receber Risco Fraude
-     *
-     * @param \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse[] $detalhado_responses detalhadoResponses (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function informarRiscoFraudeUsingPOSTWithHttpInfo($detalhado_responses)
-    {
-        
-        // verify the required parameter 'detalhado_responses' is set
-        if ($detalhado_responses === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $detalhado_responses when calling informarRiscoFraudeUsingPOST');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/riscos-fraudes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($detalhado_responses)) {
-            $_tempBody = $detalhado_responses;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, 'string'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET1
-     *
-     * Lista todos os atendimentos
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
-     * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET1WithHttpInfo
-     *
-     * Lista todos os atendimentos
-     *
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)
-     * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data em que o Atendimento foi realizado. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageAtendimentoClientes, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET1WithHttpInfo($page = null, $limit = null, $id_tipo_atendimento = null, $id_conta = null, $nome_atendente = null, $data_atendimento = null)
+    public function listarTiposResolucaoUsingGETWithHttpInfo($page = null, $limit = null)
     {
         
   
         // parse inputs
-        $resourcePath = "/api/atendimento-clientes";
+        $resourcePath = "/api/tipos-resolucao";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -424,135 +230,6 @@ class RiscoFraudeApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id_tipo_atendimento !== null) {
-            $queryParams['idTipoAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_atendimento);
-        }// query params
-        
-        if ($id_conta !== null) {
-            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
-        }// query params
-        
-        if ($nome_atendente !== null) {
-            $queryParams['nomeAtendente'] = $this->apiClient->getSerializer()->toQueryValue($nome_atendente);
-        }// query params
-        
-        if ($data_atendimento !== null) {
-            $queryParams['dataAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($data_atendimento);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageAtendimentoClientes', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET14
-     *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-     *
-     * @param int $id_conta Id Conta (required)
-     * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET14($id_conta, $confirmacao_fraude, $page = null, $limit = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($id_conta, $confirmacao_fraude, $page, $limit);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET14WithHttpInfo
-     *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-     *
-     * @param int $id_conta Id Conta (required)
-     * @param string $confirmacao_fraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET14WithHttpInfo($id_conta, $confirmacao_fraude, $page = null, $limit = null)
-    {
-        
-        // verify the required parameter 'id_conta' is set
-        if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET14');
-        }
-        // verify the required parameter 'confirmacao_fraude' is set
-        if ($confirmacao_fraude === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmacao_fraude when calling listarUsingGET14');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/riscos-fraudes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($id_conta !== null) {
-            $queryParams['id_conta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
-        }// query params
-        
-        if ($confirmacao_fraude !== null) {
-            $queryParams['confirmacao_fraude'] = $this->apiClient->getSerializer()->toQueryValue($confirmacao_fraude);
-        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -581,19 +258,19 @@ class RiscoFraudeApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeResponsePage', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TipoResolucaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -605,10 +282,10 @@ class RiscoFraudeApi
     /**
      * negarUsingPOST
      *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
+     * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function negarUsingPOST($id)
@@ -621,10 +298,10 @@ class RiscoFraudeApi
     /**
      * negarUsingPOSTWithHttpInfo
      *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function negarUsingPOSTWithHttpInfo($id)
@@ -676,19 +353,19 @@ class RiscoFraudeApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
+                $headerParams, 'object'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -700,10 +377,10 @@ class RiscoFraudeApi
     /**
      * reconhecerUsingPOST
      *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
+     * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function reconhecerUsingPOST($id)
@@ -716,10 +393,10 @@ class RiscoFraudeApi
     /**
      * reconhecerUsingPOSTWithHttpInfo
      *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function reconhecerUsingPOSTWithHttpInfo($id)
@@ -771,154 +448,19 @@ class RiscoFraudeApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse'
+                $headerParams, 'object'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * salvarUsingPOST1
-     *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-     *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado (optional)
-     * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
-     * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
-     * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param int $flag_fila_fraude Flag fila fraude (optional)
-     * @return \br.com.conductor.pier.api.v2.model\AtendimentoCliente
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST1($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST1WithHttpInfo ($id_conta, $conteudo_atendimento, $detalhes_atendimento, $nome_atendente, $data_atendimento, $data_agendamento, $data_hora_inicio_atendimento, $data_hora_fim_atendimento, $flag_fila_fraude);
-        return $response; 
-    }
-
-
-    /**
-     * salvarUsingPOST1WithHttpInfo
-     *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-     *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado (optional)
-     * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. (optional)
-     * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. (optional)
-     * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento. (optional)
-     * @param \DateTime $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param \DateTime $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param int $flag_fila_fraude Flag fila fraude (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AtendimentoCliente, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST1WithHttpInfo($id_conta = null, $conteudo_atendimento = null, $detalhes_atendimento = null, $nome_atendente = null, $data_atendimento = null, $data_agendamento = null, $data_hora_inicio_atendimento = null, $data_hora_fim_atendimento = null, $flag_fila_fraude = null)
-    {
-        
-  
-        // parse inputs
-        $resourcePath = "/api/atendimento-clientes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($id_conta !== null) {
-            $queryParams['idConta'] = $this->apiClient->getSerializer()->toQueryValue($id_conta);
-        }// query params
-        
-        if ($conteudo_atendimento !== null) {
-            $queryParams['conteudoAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($conteudo_atendimento);
-        }// query params
-        
-        if ($detalhes_atendimento !== null) {
-            $queryParams['detalhesAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($detalhes_atendimento);
-        }// query params
-        
-        if ($nome_atendente !== null) {
-            $queryParams['nomeAtendente'] = $this->apiClient->getSerializer()->toQueryValue($nome_atendente);
-        }// query params
-        
-        if ($data_atendimento !== null) {
-            $queryParams['dataAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($data_atendimento);
-        }// query params
-        
-        if ($data_agendamento !== null) {
-            $queryParams['dataAgendamento'] = $this->apiClient->getSerializer()->toQueryValue($data_agendamento);
-        }// query params
-        
-        if ($data_hora_inicio_atendimento !== null) {
-            $queryParams['dataHoraInicioAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($data_hora_inicio_atendimento);
-        }// query params
-        
-        if ($data_hora_fim_atendimento !== null) {
-            $queryParams['dataHoraFimAtendimento'] = $this->apiClient->getSerializer()->toQueryValue($data_hora_fim_atendimento);
-        }// query params
-        
-        if ($flag_fila_fraude !== null) {
-            $queryParams['flagFilaFraude'] = $this->apiClient->getSerializer()->toQueryValue($flag_fila_fraude);
-        }
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AtendimentoCliente', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

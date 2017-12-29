@@ -52,9 +52,9 @@ class DividaClienteResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'data_vencimento_fatura_atraso' => '\DateTime',
+        'data_vencimento_fatura_atraso' => 'string',
         'quantidade_dias_atraso' => 'int',
-        'data_vencimento_acordo' => '\DateTime',
+        'data_vencimento_acordo' => 'string',
         'quantidade_dias_atraso_corrigido' => 'int',
         'valor_saldo_devedor' => 'Number',
         'taxa_correcao' => 'Number',
@@ -167,7 +167,7 @@ class DividaClienteResponse implements ArrayAccess
     
     /**
       * $data_vencimento_fatura_atraso Data de vencimento da cobran\u00C3\u00A7a
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento_fatura_atraso;
     
@@ -179,7 +179,7 @@ class DividaClienteResponse implements ArrayAccess
     
     /**
       * $data_vencimento_acordo Data de vencimento do acordo
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento_acordo;
     
@@ -313,7 +313,7 @@ class DividaClienteResponse implements ArrayAccess
     
     /**
      * Gets data_vencimento_fatura_atraso
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimentoFaturaAtraso()
     {
@@ -322,7 +322,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_fatura_atraso
-     * @param \DateTime $data_vencimento_fatura_atraso Data de vencimento da cobran\u00C3\u00A7a
+     * @param string $data_vencimento_fatura_atraso Data de vencimento da cobran\u00C3\u00A7a
      * @return $this
      */
     public function setDataVencimentoFaturaAtraso($data_vencimento_fatura_atraso)
@@ -355,7 +355,7 @@ class DividaClienteResponse implements ArrayAccess
     
     /**
      * Gets data_vencimento_acordo
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimentoAcordo()
     {
@@ -364,7 +364,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_acordo
-     * @param \DateTime $data_vencimento_acordo Data de vencimento do acordo
+     * @param string $data_vencimento_acordo Data de vencimento do acordo
      * @return $this
      */
     public function setDataVencimentoAcordo($data_vencimento_acordo)

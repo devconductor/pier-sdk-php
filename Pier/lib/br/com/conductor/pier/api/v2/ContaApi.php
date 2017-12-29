@@ -92,54 +92,56 @@ class ContaApi
   
     
     /**
-     * ajustarContaUsingPOST
+     * ajustarContaUsingPOST1
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
      * @param int $id Id Conta (required)
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
-     * @param \DateTime $data_ajuste Data do ajuste. (required)
+     * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @return \br.com.conductor.pier.api.v2.model\AjusteResponse
+     * @param string $identificador_externo Identificador Externo (optional)
+     * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOST($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
+    public function ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOSTWithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste);
+        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOST1WithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo);
         return $response; 
     }
 
 
     /**
-     * ajustarContaUsingPOSTWithHttpInfo
+     * ajustarContaUsingPOST1WithHttpInfo
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
      * @param int $id Id Conta (required)
      * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
-     * @param \DateTime $data_ajuste Data do ajuste. (required)
+     * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\AjusteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param string $identificador_externo Identificador Externo (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOSTWithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste)
+    public function ajustarContaUsingPOST1WithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'id_tipo_ajuste' is set
         if ($id_tipo_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_tipo_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id_tipo_ajuste when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'data_ajuste' is set
         if ($data_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $data_ajuste when calling ajustarContaUsingPOST1');
         }
         // verify the required parameter 'valor_ajuste' is set
         if ($valor_ajuste === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $valor_ajuste when calling ajustarContaUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $valor_ajuste when calling ajustarContaUsingPOST1');
         }
   
         // parse inputs
@@ -166,6 +168,10 @@ class ContaApi
         
         if ($valor_ajuste !== null) {
             $queryParams['valorAjuste'] = $this->apiClient->getSerializer()->toQueryValue($valor_ajuste);
+        }// query params
+        
+        if ($identificador_externo !== null) {
+            $queryParams['identificadorExterno'] = $this->apiClient->getSerializer()->toQueryValue($identificador_externo);
         }
         
         // path params
@@ -195,19 +201,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\AjusteResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AjusteResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AjusteResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -217,112 +223,46 @@ class ContaApi
     }
     
     /**
-     * alterarLimiteUsingPUT
+     * alterarProdutoUsingPOST
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+     * Altera o produto associado \u00C3\u00A0 conta.
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param Number $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (required)
-     * @param Number $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required)
-     * @param Number $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required)
-     * @param Number $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (required)
-     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required)
-     * @param Number $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required)
-     * @param Number $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (required)
-     * @param Number $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (required)
-     * @param Number $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (required)
-     * @param Number $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required)
-     * @param Number $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required)
-     * @param Number $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (required)
-     * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade
+     * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
+     * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarLimiteUsingPUT($id, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo)
+    public function alterarProdutoUsingPOST($id, $request)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarLimiteUsingPUTWithHttpInfo ($id, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo);
+        list($response, $statusCode, $httpHeader) = $this->alterarProdutoUsingPOSTWithHttpInfo ($id, $request);
         return $response; 
     }
 
 
     /**
-     * alterarLimiteUsingPUTWithHttpInfo
+     * alterarProdutoUsingPOSTWithHttpInfo
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+     * Altera o produto associado \u00C3\u00A0 conta.
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param Number $limite_global Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (required)
-     * @param Number $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required)
-     * @param Number $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required)
-     * @param Number $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (required)
-     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required)
-     * @param Number $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required)
-     * @param Number $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (required)
-     * @param Number $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (required)
-     * @param Number $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (required)
-     * @param Number $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required)
-     * @param Number $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required)
-     * @param Number $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade, HTTP status code, HTTP response headers (array of strings)
+     * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarLimiteUsingPUTWithHttpInfo($id, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo)
+    public function alterarProdutoUsingPOSTWithHttpInfo($id, $request)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarLimiteUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarProdutoUsingPOST');
         }
-        // verify the required parameter 'limite_global' is set
-        if ($limite_global === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_global when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_compra' is set
-        if ($limite_compra === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_compra when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_parcelado' is set
-        if ($limite_parcelado === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_parcelado when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_parcelas' is set
-        if ($limite_parcelas === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_parcelas when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_saque_global' is set
-        if ($limite_saque_global === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_saque_global when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_saque_periodo' is set
-        if ($limite_saque_periodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_saque_periodo when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_consignado' is set
-        if ($limite_consignado === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_consignado when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_internacional_compra' is set
-        if ($limite_internacional_compra === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_internacional_compra when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_internacional_parcelado' is set
-        if ($limite_internacional_parcelado === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_internacional_parcelado when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_internacional_parcelas' is set
-        if ($limite_internacional_parcelas === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_internacional_parcelas when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_internacional_saque_global' is set
-        if ($limite_internacional_saque_global === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_internacional_saque_global when calling alterarLimiteUsingPUT');
-        }
-        // verify the required parameter 'limite_internacional_saque_periodo' is set
-        if ($limite_internacional_saque_periodo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $limite_internacional_saque_periodo when calling alterarLimiteUsingPUT');
+        // verify the required parameter 'request' is set
+        if ($request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $request when calling alterarProdutoUsingPOST');
         }
   
         // parse inputs
-        $resourcePath = "/api/contas/{id}/alterar-limites";
+        $resourcePath = "/api/contas/{id}/alterar-produto";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -333,55 +273,7 @@ class ContaApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($limite_global !== null) {
-            $queryParams['limiteGlobal'] = $this->apiClient->getSerializer()->toQueryValue($limite_global);
-        }// query params
-        
-        if ($limite_compra !== null) {
-            $queryParams['limiteCompra'] = $this->apiClient->getSerializer()->toQueryValue($limite_compra);
-        }// query params
-        
-        if ($limite_parcelado !== null) {
-            $queryParams['limiteParcelado'] = $this->apiClient->getSerializer()->toQueryValue($limite_parcelado);
-        }// query params
-        
-        if ($limite_parcelas !== null) {
-            $queryParams['limiteParcelas'] = $this->apiClient->getSerializer()->toQueryValue($limite_parcelas);
-        }// query params
-        
-        if ($limite_saque_global !== null) {
-            $queryParams['limiteSaqueGlobal'] = $this->apiClient->getSerializer()->toQueryValue($limite_saque_global);
-        }// query params
-        
-        if ($limite_saque_periodo !== null) {
-            $queryParams['limiteSaquePeriodo'] = $this->apiClient->getSerializer()->toQueryValue($limite_saque_periodo);
-        }// query params
-        
-        if ($limite_consignado !== null) {
-            $queryParams['limiteConsignado'] = $this->apiClient->getSerializer()->toQueryValue($limite_consignado);
-        }// query params
-        
-        if ($limite_internacional_compra !== null) {
-            $queryParams['limiteInternacionalCompra'] = $this->apiClient->getSerializer()->toQueryValue($limite_internacional_compra);
-        }// query params
-        
-        if ($limite_internacional_parcelado !== null) {
-            $queryParams['limiteInternacionalParcelado'] = $this->apiClient->getSerializer()->toQueryValue($limite_internacional_parcelado);
-        }// query params
-        
-        if ($limite_internacional_parcelas !== null) {
-            $queryParams['limiteInternacionalParcelas'] = $this->apiClient->getSerializer()->toQueryValue($limite_internacional_parcelas);
-        }// query params
-        
-        if ($limite_internacional_saque_global !== null) {
-            $queryParams['limiteInternacionalSaqueGlobal'] = $this->apiClient->getSerializer()->toQueryValue($limite_internacional_saque_global);
-        }// query params
-        
-        if ($limite_internacional_saque_periodo !== null) {
-            $queryParams['limiteInternacionalSaquePeriodo'] = $this->apiClient->getSerializer()->toQueryValue($limite_internacional_saque_periodo);
-        }
         
         // path params
         
@@ -396,7 +288,11 @@ class ContaApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -408,21 +304,21 @@ class ContaApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'PUT',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade'
+                $headerParams, 'string'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -642,6 +538,157 @@ class ContaApi
     }
     
     /**
+     * ativarAnuidadeUsingPOST
+     *
+     * Atribuir Anuidade
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_anuidade Identificador da anuidade (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $ddd DDD do celular (optional)
+     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param int $id_operadora Identificador da operadora do celular (optional)
+     * @param int $id_origem_comercial Identificador da origem comercial (optional)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function ativarAnuidadeUsingPOST($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->ativarAnuidadeUsingPOSTWithHttpInfo ($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
+        return $response; 
+    }
+
+
+    /**
+     * ativarAnuidadeUsingPOSTWithHttpInfo
+     *
+     * Atribuir Anuidade
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_anuidade Identificador da anuidade (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $ddd DDD do celular (optional)
+     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param int $id_operadora Identificador da operadora do celular (optional)
+     * @param int $id_origem_comercial Identificador da origem comercial (optional)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function ativarAnuidadeUsingPOSTWithHttpInfo($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling ativarAnuidadeUsingPOST');
+        }
+        // verify the required parameter 'id_anuidade' is set
+        if ($id_anuidade === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_anuidade when calling ativarAnuidadeUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/atribuir-anuidade";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id_anuidade !== null) {
+            $queryParams['idAnuidade'] = $this->apiClient->getSerializer()->toQueryValue($id_anuidade);
+        }// query params
+        
+        if ($ddd !== null) {
+            $queryParams['DDD'] = $this->apiClient->getSerializer()->toQueryValue($ddd);
+        }// query params
+        
+        if ($celular !== null) {
+            $queryParams['celular'] = $this->apiClient->getSerializer()->toQueryValue($celular);
+        }// query params
+        
+        if ($id_operadora !== null) {
+            $queryParams['idOperadora'] = $this->apiClient->getSerializer()->toQueryValue($id_operadora);
+        }// query params
+        
+        if ($id_origem_comercial !== null) {
+            $queryParams['idOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * ativarEnvioFaturaEmailUsingPOST
      *
      *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -737,12 +784,317 @@ class ContaApi
     }
     
     /**
+     * bloquearUsingPOST1
+     *
+     * Realiza o bloqueio de uma determinada Conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @return \br.com.conductor.pier.api.v2.model\ContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function bloquearUsingPOST1($id, $id_status)
+    {
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOST1WithHttpInfo ($id, $id_status);
+        return $response; 
+    }
+
+
+    /**
+     * bloquearUsingPOST1WithHttpInfo
+     *
+     * Realiza o bloqueio de uma determinada Conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function bloquearUsingPOST1WithHttpInfo($id, $id_status)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling bloquearUsingPOST1');
+        }
+        // verify the required parameter 'id_status' is set
+        if ($id_status === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling bloquearUsingPOST1');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/bloquear";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_status !== null) {
+            $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * cancelarUsingPOST1
+     *
+     * Realiza o cancelamento de uma determinada Conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @return \br.com.conductor.pier.api.v2.model\ContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOST1($id, $id_status)
+    {
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOST1WithHttpInfo ($id, $id_status);
+        return $response; 
+    }
+
+
+    /**
+     * cancelarUsingPOST1WithHttpInfo
+     *
+     * Realiza o cancelamento de uma determinada Conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarUsingPOST1WithHttpInfo($id, $id_status)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cancelarUsingPOST1');
+        }
+        // verify the required parameter 'id_status' is set
+        if ($id_status === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_status when calling cancelarUsingPOST1');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/cancelar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id_status !== null) {
+            $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarBeneficioPagamentoAtrasoUsingGET
+     *
+     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarBeneficioPagamentoAtrasoUsingGET($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo
+     *
+     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarBeneficioPagamentoAtrasoUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/consultar-beneficio-pagamento-atraso";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarBoletoEmitidoUsingGET
      *
      * Consulta os dados de um determinado boleto da fatura
      *
      * @param int $id Id Conta (required)
-     * @return \br.com.conductor.pier.api.v2.model\BoletoDeFatura
+     * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarBoletoEmitidoUsingGET($id)
@@ -758,7 +1110,7 @@ class ContaApi
      * Consulta os dados de um determinado boleto da fatura
      *
      * @param int $id Id Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\BoletoDeFatura, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarBoletoEmitidoUsingGETWithHttpInfo($id)
@@ -810,19 +1162,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\BoletoDeFatura'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\BoletoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\BoletoDeFatura', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\BoletoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\BoletoDeFatura', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\BoletoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -837,16 +1189,17 @@ class ContaApi
      * Consulta a d\u00C3\u00ADvida atualizada do cliente
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data do vencimento (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_vencimento Data do vencimento (optional)
      * @param int $id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)
      * @return \br.com.conductor.pier.api.v2.model\DividaClienteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDividaAtualizadaClienteUsingGET($id, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
+    public function consultarDividaAtualizadaClienteUsingGET($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarDividaAtualizadaClienteUsingGETWithHttpInfo ($id, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
+        list($response, $statusCode, $httpHeader) = $this->consultarDividaAtualizadaClienteUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
         return $response; 
     }
 
@@ -857,14 +1210,15 @@ class ContaApi
      * Consulta a d\u00C3\u00ADvida atualizada do cliente
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data do vencimento (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_vencimento Data do vencimento (optional)
      * @param int $id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DividaClienteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDividaAtualizadaClienteUsingGETWithHttpInfo($id, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
+    public function consultarDividaAtualizadaClienteUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
     {
         
         // verify the required parameter 'id' is set
@@ -885,6 +1239,14 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -951,42 +1313,46 @@ class ContaApi
     }
     
     /**
-     * consultarFaturaConsignadaAbertaUsingGET
+     * consultarTaxasTarifasUsingGET
      *
-     * Consultar a fatura consignadas abertas da conta
+     * Permite consultar a partir do ID da conta as taxas e tarifas
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento (optional)
-     * @return \br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse
+     * @param int $id ID da conta a ser consultada. (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarFaturaConsignadaAbertaUsingGET($id, $data_vencimento = null)
+    public function consultarTaxasTarifasUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarFaturaConsignadaAbertaUsingGETWithHttpInfo ($id, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->consultarTaxasTarifasUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * consultarFaturaConsignadaAbertaUsingGETWithHttpInfo
+     * consultarTaxasTarifasUsingGETWithHttpInfo
      *
-     * Consultar a fatura consignadas abertas da conta
+     * Permite consultar a partir do ID da conta as taxas e tarifas
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id ID da conta a ser consultada. (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarFaturaConsignadaAbertaUsingGETWithHttpInfo($id, $data_vencimento = null)
+    public function consultarTaxasTarifasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarFaturaConsignadaAbertaUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarTaxasTarifasUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas-consignadas/consultar-aberta";
+        $resourcePath = "/api/contas/{id}/consultar-taxas-tarifas";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -999,8 +1365,20 @@ class ContaApi
   
         // query params
         
-        if ($data_vencimento !== null) {
-            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         
         // path params
@@ -1030,19 +1408,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DetalhesFaturaConsignadaResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1052,641 +1430,7 @@ class ContaApi
     }
     
     /**
-     * consultarFaturaConsignadaUsingGET
-     *
-     * Apresenta dados de uma determinada fatura consignada
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura). (required)
-     * @return \br.com.conductor.pier.api.v2.model\FaturaConsignadaDetalheResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarFaturaConsignadaUsingGET($id, $id_fatura)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarFaturaConsignadaUsingGETWithHttpInfo ($id, $id_fatura);
-        return $response; 
-    }
-
-
-    /**
-     * consultarFaturaConsignadaUsingGETWithHttpInfo
-     *
-     * Apresenta dados de uma determinada fatura consignada
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_fatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\FaturaConsignadaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarFaturaConsignadaUsingGETWithHttpInfo($id, $id_fatura)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarFaturaConsignadaUsingGET');
-        }
-        // verify the required parameter 'id_fatura' is set
-        if ($id_fatura === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_fatura when calling consultarFaturaConsignadaUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas-consignadas/{id_fatura}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }// path params
-        
-        if ($id_fatura !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_fatura" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_fatura),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\FaturaConsignadaDetalheResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\FaturaConsignadaDetalheResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\FaturaConsignadaDetalheResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarFaturaUsingGET
-     *
-     * Consultar Fatura da Conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
-     * @return \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarFaturaUsingGET($id, $data_vencimento)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarFaturaUsingGETWithHttpInfo ($id, $data_vencimento);
-        return $response; 
-    }
-
-
-    /**
-     * consultarFaturaUsingGETWithHttpInfo
-     *
-     * Consultar Fatura da Conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento. (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarFaturaUsingGETWithHttpInfo($id, $data_vencimento)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarFaturaUsingGET');
-        }
-        // verify the required parameter 'data_vencimento' is set
-        if ($data_vencimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling consultarFaturaUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas/consultar-fechada";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($data_vencimento !== null) {
-            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarLancamentosFuturosFaturaUsingGET
-     *
-     * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento (optional)
-     * @return \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarLancamentosFuturosFaturaUsingGET($id, $data_vencimento = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarLancamentosFuturosFaturaUsingGETWithHttpInfo ($id, $data_vencimento);
-        return $response; 
-    }
-
-
-    /**
-     * consultarLancamentosFuturosFaturaUsingGETWithHttpInfo
-     *
-     * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \DateTime $data_vencimento Data Vencimento (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarLancamentosFuturosFaturaUsingGETWithHttpInfo($id, $data_vencimento = null)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarLancamentosFuturosFaturaUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas/consultar-aberta";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($data_vencimento !== null) {
-            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\DetalhesFaturaResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarLimiteDisponibilidadeUsingGET1
-     *
-     * Apresenta os limites da conta
-     *
-     * @param int $id Id Conta (required)
-     * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarLimiteDisponibilidadeUsingGET1($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGET1WithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * consultarLimiteDisponibilidadeUsingGET1WithHttpInfo
-     *
-     * Apresenta os limites da conta
-     *
-     * @param int $id Id Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidade, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarLimiteDisponibilidadeUsingGET1WithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarLimiteDisponibilidadeUsingGET1');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/limites-disponibilidades";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidade', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET20
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     * @param int $id Id Conta (required)
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET20($id, $id_transferencia, $id_conta_bancaria_destino = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET20WithHttpInfo
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     * @param int $id Id Conta (required)
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET20WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
-        }
-        // verify the required parameter 'id_transferencia' is set
-        if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET20');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($id_conta_bancaria_destino !== null) {
-            $queryParams['id_conta_bancaria_destino'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_bancaria_destino);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }// path params
-        
-        if ($id_transferencia !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_transferencia" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_transferencia),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET21
-     *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
-     * @return \br.com.conductor.pier.api.v2.model\PageTransferencias
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET21($id, $id_transferencia)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id, $id_transferencia);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET21WithHttpInfo
-     *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferencias, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET21WithHttpInfo($id, $id_transferencia)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
-        }
-        // verify the required parameter 'id_transferencia' is set
-        if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET21');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }// path params
-        
-        if ($id_transferencia !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_transferencia" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_transferencia),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransferencias'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransferencias', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransferencias', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET3
+     * consultarUsingGET11
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1694,15 +1438,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3($id)
+    public function consultarUsingGET11($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET3WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET3WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1710,12 +1454,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET3WithHttpInfo($id)
+    public function consultarUsingGET11WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -1772,6 +1516,115 @@ class ContaApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaDetalheResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET39
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
+     * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET39($id, $id_transferencia)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id, $id_transferencia);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET39WithHttpInfo
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET39WithHttpInfo($id, $id_transferencia)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
+        }
+        // verify the required parameter 'id_transferencia' is set
+        if ($id_transferencia === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET39');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }// path params
+        
+        if ($id_transferencia !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_transferencia" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_transferencia),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -1881,16 +1734,14 @@ class ContaApi
      * Gera um boleto de recarga
      *
      * @param int $id Id Conta (required)
-     * @param Number $valor  (required)
-     * @param \DateTime $data_vencimento  (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\BoletoDeFatura
+     * @param Number $valor Atributo que representa o valor do Boleto Emitido (required)
+     * @param string $data_vencimento Atributo que representa a data de vencimento do boleto (required)
+     * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento, $page = null, $limit = null)
+    public function gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarBoletoRecargaUsingPOSTWithHttpInfo ($id, $valor, $data_vencimento, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->gerarBoletoRecargaUsingPOSTWithHttpInfo ($id, $valor, $data_vencimento);
         return $response; 
     }
 
@@ -1901,14 +1752,12 @@ class ContaApi
      * Gera um boleto de recarga
      *
      * @param int $id Id Conta (required)
-     * @param Number $valor  (required)
-     * @param \DateTime $data_vencimento  (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\BoletoDeFatura, HTTP status code, HTTP response headers (array of strings)
+     * @param Number $valor Atributo que representa o valor do Boleto Emitido (required)
+     * @param string $data_vencimento Atributo que representa a data de vencimento do boleto (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarBoletoRecargaUsingPOSTWithHttpInfo($id, $valor, $data_vencimento, $page = null, $limit = null)
+    public function gerarBoletoRecargaUsingPOSTWithHttpInfo($id, $valor, $data_vencimento)
     {
         
         // verify the required parameter 'id' is set
@@ -1937,14 +1786,6 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
         
         if ($valor !== null) {
             $queryParams['valor'] = $this->apiClient->getSerializer()->toQueryValue($valor);
@@ -1981,19 +1822,219 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\BoletoDeFatura'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\BoletoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\BoletoDeFatura', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\BoletoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\BoletoDeFatura', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\BoletoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * gerarCartaoEmbossingUsingPOST
+     *
+     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoEmbossingUsingPOSTWithHttpInfo ($id, $cartao_embossing_request);
+        return $response; 
+    }
+
+
+    /**
+     * gerarCartaoEmbossingUsingPOSTWithHttpInfo
+     *
+     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoEmbossingUsingPOSTWithHttpInfo($id, $cartao_embossing_request)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling gerarCartaoEmbossingUsingPOST');
+        }
+        // verify the required parameter 'cartao_embossing_request' is set
+        if ($cartao_embossing_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cartao_embossing_request when calling gerarCartaoEmbossingUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/gerar-cartao-grafica";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($cartao_embossing_request)) {
+            $_tempBody = $cartao_embossing_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * gerarCartaoProvisorioUsingPOST
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoProvisorioUsingPOST($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoProvisorioUsingPOSTWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * gerarCartaoProvisorioUsingPOSTWithHttpInfo
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function gerarCartaoProvisorioUsingPOSTWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling gerarCartaoProvisorioUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/gerar-cartao-provisorio";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2010,7 +2051,7 @@ class ContaApi
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
      * @param int $id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)
-     * @return \br.com.conductor.pier.api.v2.model\CartaoImpressao
+     * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico = null)
@@ -2028,7 +2069,7 @@ class ContaApi
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
      * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
      * @param int $id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressao, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function gerarCartaoUsingPOSTWithHttpInfo($id, $id_pessoa, $id_tipo_plastico = null)
@@ -2096,19 +2137,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoImpressao'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoImpressao', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoImpressao', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2118,46 +2159,46 @@ class ContaApi
     }
     
     /**
-     * listarFaturasConsignadasUsingGET
+     * gerarCartaoVirtualUsingPOST
      *
-     * Lista as faturas consignadas da conta
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Apresenta a data de vencimento da fatura. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageFaturasConsignadas
+     * @param string $data_validade Data de Validade (required)
+     * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarFaturasConsignadasUsingGET($id, $page = null, $limit = null, $data_vencimento = null)
+    public function gerarCartaoVirtualUsingPOST($id, $data_validade)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarFaturasConsignadasUsingGETWithHttpInfo ($id, $page, $limit, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoVirtualUsingPOSTWithHttpInfo ($id, $data_validade);
         return $response; 
     }
 
 
     /**
-     * listarFaturasConsignadasUsingGETWithHttpInfo
+     * gerarCartaoVirtualUsingPOSTWithHttpInfo
      *
-     * Lista as faturas consignadas da conta
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Apresenta a data de vencimento da fatura. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageFaturasConsignadas, HTTP status code, HTTP response headers (array of strings)
+     * @param string $data_validade Data de Validade (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarFaturasConsignadasUsingGETWithHttpInfo($id, $page = null, $limit = null, $data_vencimento = null)
+    public function gerarCartaoVirtualUsingPOSTWithHttpInfo($id, $data_validade)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarFaturasConsignadasUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling gerarCartaoVirtualUsingPOST');
+        }
+        // verify the required parameter 'data_validade' is set
+        if ($data_validade === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_validade when calling gerarCartaoVirtualUsingPOST');
         }
   
         // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas-consignadas";
+        $resourcePath = "/api/contas/{id}/gerar-cartao-virtual";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -2170,16 +2211,8 @@ class ContaApi
   
         // query params
         
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($data_vencimento !== null) {
-            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
+        if ($data_validade !== null) {
+            $queryParams['dataValidade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
         }
         
         // path params
@@ -2207,134 +2240,21 @@ class ContaApi
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageFaturasConsignadas'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageFaturasConsignadas', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageFaturasConsignadas', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarFaturasUsingGET
-     *
-     * Lista as faturas da conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data de Vencimento da Fatura. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageFaturas
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarFaturasUsingGET($id, $page = null, $limit = null, $data_vencimento = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarFaturasUsingGETWithHttpInfo ($id, $page, $limit, $data_vencimento);
-        return $response; 
-    }
-
-
-    /**
-     * listarFaturasUsingGETWithHttpInfo
-     *
-     * Lista as faturas da conta
-     *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data de Vencimento da Fatura. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageFaturas, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarFaturasUsingGETWithHttpInfo($id, $page = null, $limit = null, $data_vencimento = null)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarFaturasUsingGET');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/faturas";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($data_vencimento !== null) {
-            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageFaturas'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageFaturas', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageFaturas', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2349,14 +2269,15 @@ class ContaApi
      * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventos
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGET($id, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2367,12 +2288,13 @@ class ContaApi
      * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventos, HTTP status code, HTTP response headers (array of strings)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2394,6 +2316,14 @@ class ContaApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
@@ -2429,19 +2359,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageHistoricoEventos'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageHistoricoEventos', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageHistoricoEventos', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2456,14 +2386,15 @@ class ContaApi
      * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\LinkPageHistoricoAssessoriaResponse_
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAssessoriaUsingGET($id, $page = null, $limit = null)
+    public function listarHistoricoAssessoriaUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAssessoriaUsingGETWithHttpInfo ($id, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAssessoriaUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2474,12 +2405,13 @@ class ContaApi
      * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LinkPageHistoricoAssessoriaResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAssessoriaUsingGETWithHttpInfo($id, $page = null, $limit = null)
+    public function listarHistoricoAssessoriaUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2501,6 +2433,14 @@ class ContaApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
@@ -2536,19 +2476,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LinkPageHistoricoAssessoriaResponse_'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LinkPageHistoricoAssessoriaResponse_', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LinkPageHistoricoAssessoriaResponse_', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2563,12 +2503,15 @@ class ContaApi
      * Lista o historico de atrasos das faturas
      *
      * @param int $id Id Conta (required)
-     * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAtraso
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAtrasosFaturasUsingGET($id)
+    public function listarHistoricoAtrasosFaturasUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAtrasosFaturasUsingGETWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAtrasosFaturasUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2579,10 +2522,13 @@ class ContaApi
      * Lista o historico de atrasos das faturas
      *
      * @param int $id Id Conta (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAtraso, HTTP status code, HTTP response headers (array of strings)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAtrasosFaturasUsingGETWithHttpInfo($id)
+    public function listarHistoricoAtrasosFaturasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2602,7 +2548,23 @@ class ContaApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
+        // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
         
         // path params
         
@@ -2631,19 +2593,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageHistoricoAtraso'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageHistoricoAtraso', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageHistoricoAtraso', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2658,14 +2620,17 @@ class ContaApi
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarNaoProcessadasUsingGET($id, $page = null, $limit = null)
+    public function listarNaoProcessadasUsingGET($id, $sort = null, $page = null, $limit = null, $data_inicio = null, $data_fim = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarNaoProcessadasUsingGETWithHttpInfo ($id, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarNaoProcessadasUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_inicio, $data_fim);
         return $response; 
     }
 
@@ -2676,12 +2641,15 @@ class ContaApi
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes, HTTP status code, HTTP response headers (array of strings)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarNaoProcessadasUsingGETWithHttpInfo($id, $page = null, $limit = null)
+    public function listarNaoProcessadasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_inicio = null, $data_fim = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2703,12 +2671,28 @@ class ContaApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($data_inicio !== null) {
+            $queryParams['dataInicio'] = $this->apiClient->getSerializer()->toQueryValue($data_inicio);
+        }// query params
+        
+        if ($data_fim !== null) {
+            $queryParams['dataFim'] = $this->apiClient->getSerializer()->toQueryValue($data_fim);
         }
         
         // path params
@@ -2738,19 +2722,172 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarPagamentosUsingGET
+     *
+     * Lista hist\u00C3\u00B3rico de pagamentos da conta
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento (optional)
+     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento (optional)
+     * @param int $id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento (optional)
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (optional)
+     * @param string $data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero (optional)
+     * @param int $status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageContaHistoricoPagamentoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPagamentosUsingGET($id, $sort = null, $page = null, $limit = null, $id_pagamento = null, $id_estabelecimento = null, $id_banco = null, $id_cartao = null, $data_hora_pagamento = null, $status = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarPagamentosUsingGETWithHttpInfo ($id, $sort, $page, $limit, $id_pagamento, $id_estabelecimento, $id_banco, $id_cartao, $data_hora_pagamento, $status);
+        return $response; 
+    }
+
+
+    /**
+     * listarPagamentosUsingGETWithHttpInfo
+     *
+     * Lista hist\u00C3\u00B3rico de pagamentos da conta
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento (optional)
+     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento (optional)
+     * @param int $id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento (optional)
+     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (optional)
+     * @param string $data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero (optional)
+     * @param int $status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageContaHistoricoPagamentoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPagamentosUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_pagamento = null, $id_estabelecimento = null, $id_banco = null, $id_cartao = null, $data_hora_pagamento = null, $status = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarPagamentosUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/pagamentos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id_pagamento !== null) {
+            $queryParams['idPagamento'] = $this->apiClient->getSerializer()->toQueryValue($id_pagamento);
+        }// query params
+        
+        if ($id_estabelecimento !== null) {
+            $queryParams['idEstabelecimento'] = $this->apiClient->getSerializer()->toQueryValue($id_estabelecimento);
+        }// query params
+        
+        if ($id_banco !== null) {
+            $queryParams['idBanco'] = $this->apiClient->getSerializer()->toQueryValue($id_banco);
+        }// query params
+        
+        if ($id_cartao !== null) {
+            $queryParams['idCartao'] = $this->apiClient->getSerializer()->toQueryValue($id_cartao);
+        }// query params
+        
+        if ($data_hora_pagamento !== null) {
+            $queryParams['dataHoraPagamento'] = $this->apiClient->getSerializer()->toQueryValue($data_hora_pagamento);
+        }// query params
+        
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageContaHistoricoPagamentoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageContaHistoricoPagamentoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageContaHistoricoPagamentoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2765,15 +2902,18 @@ class ContaApi
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
+     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarProcessadasUsingGET($id, $page = null, $limit = null, $data_vencimento = null)
+    public function listarProcessadasUsingGET($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarProcessadasUsingGETWithHttpInfo ($id, $page, $limit, $data_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarProcessadasUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim);
         return $response; 
     }
 
@@ -2784,13 +2924,16 @@ class ContaApi
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param \DateTime $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes, HTTP status code, HTTP response headers (array of strings)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
+     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarProcessadasUsingGETWithHttpInfo($id, $page = null, $limit = null, $data_vencimento = null)
+    public function listarProcessadasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2812,6 +2955,14 @@ class ContaApi
   
         // query params
         
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
         }// query params
@@ -2822,6 +2973,14 @@ class ContaApi
         
         if ($data_vencimento !== null) {
             $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
+        }// query params
+        
+        if ($data_inicio !== null) {
+            $queryParams['dataInicio'] = $this->apiClient->getSerializer()->toQueryValue($data_inicio);
+        }// query params
+        
+        if ($data_fim !== null) {
+            $queryParams['dataFim'] = $this->apiClient->getSerializer()->toQueryValue($data_fim);
         }
         
         // path params
@@ -2851,19 +3010,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentes', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -2873,301 +3032,53 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET22
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     * @param int $id Id Conta (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return \br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET22($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($id, $id_conta_bancaria_destino, $page, $limit);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET22WithHttpInfo
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     * @param int $id Id Conta (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET22WithHttpInfo($id, $id_conta_bancaria_destino = null, $page = null, $limit = null)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET22');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($id_conta_bancaria_destino !== null) {
-            $queryParams['id_conta_bancaria_destino'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_bancaria_destino);
-        }// query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LinkPageTransferenciaBancariaResponse_', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET23
-     *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
-     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
-     * @param \DateTime $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageTransferencias
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET23($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
-    {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($id, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
-        return $response; 
-    }
-
-
-    /**
-     * listarUsingGET23WithHttpInfo
-     *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
-     *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
-     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
-     * @param \DateTime $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferencias, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function listarUsingGET23WithHttpInfo($id, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET23');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/transferencias-creditos-cartoes";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        // query params
-        
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
-        
-        if ($limit !== null) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
-        }// query params
-        
-        if ($id_transferencia !== null) {
-            $queryParams['idTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($id_transferencia);
-        }// query params
-        
-        if ($id_conta_origem !== null) {
-            $queryParams['idContaOrigem'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_origem);
-        }// query params
-        
-        if ($id_conta_destino !== null) {
-            $queryParams['idContaDestino'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_destino);
-        }// query params
-        
-        if ($valor_transferencia !== null) {
-            $queryParams['valorTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($valor_transferencia);
-        }// query params
-        
-        if ($data_transferencia !== null) {
-            $queryParams['dataTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($data_transferencia);
-        }
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransferencias'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransferencias', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransferencias', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * listarUsingGET4
+     * listarUsingGET13
      *
      * Lista contas existentes na base de dados do Emissor
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
      * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
+     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)
      * @param int $dia_vencimento Apresenta o dia de vencimento. (optional)
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
-     * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
-     * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageContas
+     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
+     * @param string $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET13($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET4WithHttpInfo
+     * listarUsingGET13WithHttpInfo
      *
      * Lista contas existentes na base de dados do Emissor
      *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
      * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)
      * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)
+     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)
      * @param int $dia_vencimento Apresenta o dia de vencimento. (optional)
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
-     * @param \DateTime $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
-     * @param \DateTime $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param \DateTime $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageContas, HTTP status code, HTTP response headers (array of strings)
+     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
+     * @param string $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
+     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET4WithHttpInfo($page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET13WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3184,6 +3095,14 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -3248,19 +3167,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageContas'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageContaResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageContas', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageContaResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageContas', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -3270,36 +3189,183 @@ class ContaApi
     }
     
     /**
-     * reativarUsingPOST
+     * listarUsingGET43
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
-     * @param int $id Id Conta (required)
-     * @return object
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
+     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOST($id)
+    public function listarUsingGET43($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOSTWithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET43WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * reativarUsingPOSTWithHttpInfo
+     * listarUsingGET43WithHttpInfo
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
+     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET43WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET43');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/transferencias-creditos-cartoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id_transferencia !== null) {
+            $queryParams['idTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($id_transferencia);
+        }// query params
+        
+        if ($id_conta_origem !== null) {
+            $queryParams['idContaOrigem'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_origem);
+        }// query params
+        
+        if ($id_conta_destino !== null) {
+            $queryParams['idContaDestino'] = $this->apiClient->getSerializer()->toQueryValue($id_conta_destino);
+        }// query params
+        
+        if ($valor_transferencia !== null) {
+            $queryParams['valorTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($valor_transferencia);
+        }// query params
+        
+        if ($data_transferencia !== null) {
+            $queryParams['dataTransferencia'] = $this->apiClient->getSerializer()->toQueryValue($data_transferencia);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransferenciaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransferenciaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransferenciaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * reativarUsingPOST1
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+     *
+     * @param int $id Id Conta (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function reativarUsingPOST1($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOST1WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * reativarUsingPOST1WithHttpInfo
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
      *
      * @param int $id Id Conta (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOSTWithHttpInfo($id)
+    public function reativarUsingPOST1WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling reativarUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling reativarUsingPOST1');
         }
   
         // parse inputs
@@ -3365,19 +3431,125 @@ class ContaApi
     }
     
     /**
+     * simularEmprestimoFinanciamentoUsingPOST
+     *
+     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest $request request (required)
+     * @return \br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function simularEmprestimoFinanciamentoUsingPOST($id, $request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->simularEmprestimoFinanciamentoUsingPOSTWithHttpInfo ($id, $request);
+        return $response; 
+    }
+
+
+    /**
+     * simularEmprestimoFinanciamentoUsingPOSTWithHttpInfo
+     *
+     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest $request request (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function simularEmprestimoFinanciamentoUsingPOSTWithHttpInfo($id, $request)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling simularEmprestimoFinanciamentoUsingPOST');
+        }
+        // verify the required parameter 'request' is set
+        if ($request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $request when calling simularEmprestimoFinanciamentoUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/simular-emprestimos-financiamentos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * transacoesUsingGET
      *
      * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGET($id, $page = null, $limit = null)
+    public function transacoesUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($id, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -3388,12 +3560,13 @@ class ContaApi
      * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $id Id Conta (required)
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
      * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGETWithHttpInfo($id, $page = null, $limit = null)
+    public function transacoesUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -3414,6 +3587,14 @@ class ContaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
         
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
@@ -3472,111 +3653,6 @@ class ContaApi
     }
     
     /**
-     * transferirUsingPOST
-     *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-     *
-     * @param int $id Id Conta (required)
-     * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)
-     * @return \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function transferirUsingPOST($id, $transferencia_bancaria_persist)
-    {
-        list($response, $statusCode, $httpHeader) = $this->transferirUsingPOSTWithHttpInfo ($id, $transferencia_bancaria_persist);
-        return $response; 
-    }
-
-
-    /**
-     * transferirUsingPOSTWithHttpInfo
-     *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-     *
-     * @param int $id Id Conta (required)
-     * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function transferirUsingPOSTWithHttpInfo($id, $transferencia_bancaria_persist)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling transferirUsingPOST');
-        }
-        // verify the required parameter 'transferencia_bancaria_persist' is set
-        if ($transferencia_bancaria_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $transferencia_bancaria_persist when calling transferirUsingPOST');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($transferencia_bancaria_persist)) {
-            $_tempBody = $transferencia_bancaria_persist;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LinkTransferenciaBancariaResponse_', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
      * transferirUsingPOST1
      *
      * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -3584,7 +3660,7 @@ class ContaApi
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
      * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
      * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
-     * @return \br.com.conductor.pier.api.v2.model\PageTransferencias
+     * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function transferirUsingPOST1($id, $id_conta_destino, $valor_transferencia)
@@ -3602,7 +3678,7 @@ class ContaApi
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
      * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
      * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferencias, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function transferirUsingPOST1WithHttpInfo($id, $id_conta_destino, $valor_transferencia)
@@ -3670,19 +3746,19 @@ class ContaApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTransferencias'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTransferencias', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransferencias', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
