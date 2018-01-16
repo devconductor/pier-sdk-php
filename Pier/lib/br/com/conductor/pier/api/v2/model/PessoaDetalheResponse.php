@@ -57,6 +57,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_profissao' => 'string',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
+        'numero_banco' => 'int',
         'numero_agencia' => 'int',
         'numero_conta_corrente' => 'string',
         'email' => 'string',
@@ -78,6 +79,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_profissao' => 'idProfissao',
         'id_natureza_ocupacao' => 'idNaturezaOcupacao',
         'id_nacionalidade' => 'idNacionalidade',
+        'numero_banco' => 'numeroBanco',
         'numero_agencia' => 'numeroAgencia',
         'numero_conta_corrente' => 'numeroContaCorrente',
         'email' => 'email',
@@ -99,6 +101,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_profissao' => 'setIdProfissao',
         'id_natureza_ocupacao' => 'setIdNaturezaOcupacao',
         'id_nacionalidade' => 'setIdNacionalidade',
+        'numero_banco' => 'setNumeroBanco',
         'numero_agencia' => 'setNumeroAgencia',
         'numero_conta_corrente' => 'setNumeroContaCorrente',
         'email' => 'setEmail',
@@ -120,6 +123,7 @@ class PessoaDetalheResponse implements ArrayAccess
         'id_profissao' => 'getIdProfissao',
         'id_natureza_ocupacao' => 'getIdNaturezaOcupacao',
         'id_nacionalidade' => 'getIdNacionalidade',
+        'numero_banco' => 'getNumeroBanco',
         'numero_agencia' => 'getNumeroAgencia',
         'numero_conta_corrente' => 'getNumeroContaCorrente',
         'email' => 'getEmail',
@@ -168,6 +172,12 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $id_nacionalidade;
     
     /**
+      * $numero_banco N\u00C3\u00BAmero do banco.
+      * @var int
+      */
+    protected $numero_banco;
+    
+    /**
       * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
       * @var int
       */
@@ -206,6 +216,7 @@ class PessoaDetalheResponse implements ArrayAccess
             $this->id_profissao = $data["id_profissao"];
             $this->id_natureza_ocupacao = $data["id_natureza_ocupacao"];
             $this->id_nacionalidade = $data["id_nacionalidade"];
+            $this->numero_banco = $data["numero_banco"];
             $this->numero_agencia = $data["numero_agencia"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
             $this->email = $data["email"];
@@ -336,6 +347,27 @@ class PessoaDetalheResponse implements ArrayAccess
     {
         
         $this->id_nacionalidade = $id_nacionalidade;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_banco
+     * @return int
+     */
+    public function getNumeroBanco()
+    {
+        return $this->numero_banco;
+    }
+  
+    /**
+     * Sets numero_banco
+     * @param int $numero_banco N\u00C3\u00BAmero do banco.
+     * @return $this
+     */
+    public function setNumeroBanco($numero_banco)
+    {
+        
+        $this->numero_banco = $numero_banco;
         return $this;
     }
     

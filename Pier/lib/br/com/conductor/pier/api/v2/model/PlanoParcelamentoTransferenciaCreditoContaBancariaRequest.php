@@ -51,13 +51,9 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
       * @var string[]
       */
     static $swaggerTypes = array(
-        'nsu_origem' => 'string',
-        'valor_transacao' => 'Number',
         'id_cartao' => 'int',
-        'numero_meses_carencia' => 'int',
-        'numero_estabelecimento' => 'int',
-        'data_hora_terminal' => 'string',
-        'terminal_requisitante' => 'string'
+        'valor_transacao' => 'Number',
+        'numero_meses_carencia' => 'int'
     );
   
     static function swaggerTypes() {
@@ -69,13 +65,9 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
       * @var string[] 
       */
     static $attributeMap = array(
-        'nsu_origem' => 'nsuOrigem',
-        'valor_transacao' => 'valorTransacao',
         'id_cartao' => 'idCartao',
-        'numero_meses_carencia' => 'numeroMesesCarencia',
-        'numero_estabelecimento' => 'numeroEstabelecimento',
-        'data_hora_terminal' => 'dataHoraTerminal',
-        'terminal_requisitante' => 'terminalRequisitante'
+        'valor_transacao' => 'valorTransacao',
+        'numero_meses_carencia' => 'numeroMesesCarencia'
     );
   
     static function attributeMap() {
@@ -87,13 +79,9 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
       * @var string[]
       */
     static $setters = array(
-        'nsu_origem' => 'setNsuOrigem',
-        'valor_transacao' => 'setValorTransacao',
         'id_cartao' => 'setIdCartao',
-        'numero_meses_carencia' => 'setNumeroMesesCarencia',
-        'numero_estabelecimento' => 'setNumeroEstabelecimento',
-        'data_hora_terminal' => 'setDataHoraTerminal',
-        'terminal_requisitante' => 'setTerminalRequisitante'
+        'valor_transacao' => 'setValorTransacao',
+        'numero_meses_carencia' => 'setNumeroMesesCarencia'
     );
   
     static function setters() {
@@ -105,13 +93,9 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
       * @var string[]
       */
     static $getters = array(
-        'nsu_origem' => 'getNsuOrigem',
-        'valor_transacao' => 'getValorTransacao',
         'id_cartao' => 'getIdCartao',
-        'numero_meses_carencia' => 'getNumeroMesesCarencia',
-        'numero_estabelecimento' => 'getNumeroEstabelecimento',
-        'data_hora_terminal' => 'getDataHoraTerminal',
-        'terminal_requisitante' => 'getTerminalRequisitante'
+        'valor_transacao' => 'getValorTransacao',
+        'numero_meses_carencia' => 'getNumeroMesesCarencia'
     );
   
     static function getters() {
@@ -120,10 +104,10 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
 
     
     /**
-      * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-      * @var string
+      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+      * @var int
       */
-    protected $nsu_origem;
+    protected $id_cartao;
     
     /**
       * $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -132,34 +116,10 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     protected $valor_transacao;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
-      * @var int
-      */
-    protected $id_cartao;
-    
-    /**
       * $numero_meses_carencia Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
       * @var int
       */
     protected $numero_meses_carencia;
-    
-    /**
-      * $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
-      * @var int
-      */
-    protected $numero_estabelecimento;
-    
-    /**
-      * $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-      * @var string
-      */
-    protected $data_hora_terminal;
-    
-    /**
-      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
-      * @var string
-      */
-    protected $terminal_requisitante;
     
 
     /**
@@ -170,34 +130,30 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     {
         
         if ($data != null) {
-            $this->nsu_origem = $data["nsu_origem"];
-            $this->valor_transacao = $data["valor_transacao"];
             $this->id_cartao = $data["id_cartao"];
+            $this->valor_transacao = $data["valor_transacao"];
             $this->numero_meses_carencia = $data["numero_meses_carencia"];
-            $this->numero_estabelecimento = $data["numero_estabelecimento"];
-            $this->data_hora_terminal = $data["data_hora_terminal"];
-            $this->terminal_requisitante = $data["terminal_requisitante"];
         }
     }
     
     /**
-     * Gets nsu_origem
-     * @return string
+     * Gets id_cartao
+     * @return int
      */
-    public function getNsuOrigem()
+    public function getIdCartao()
     {
-        return $this->nsu_origem;
+        return $this->id_cartao;
     }
   
     /**
-     * Sets nsu_origem
-     * @param string $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+     * Sets id_cartao
+     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
      * @return $this
      */
-    public function setNsuOrigem($nsu_origem)
+    public function setIdCartao($id_cartao)
     {
         
-        $this->nsu_origem = $nsu_origem;
+        $this->id_cartao = $id_cartao;
         return $this;
     }
     
@@ -223,27 +179,6 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     }
     
     /**
-     * Gets id_cartao
-     * @return int
-     */
-    public function getIdCartao()
-    {
-        return $this->id_cartao;
-    }
-  
-    /**
-     * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
-     * @return $this
-     */
-    public function setIdCartao($id_cartao)
-    {
-        
-        $this->id_cartao = $id_cartao;
-        return $this;
-    }
-    
-    /**
      * Gets numero_meses_carencia
      * @return int
      */
@@ -261,69 +196,6 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
     {
         
         $this->numero_meses_carencia = $numero_meses_carencia;
-        return $this;
-    }
-    
-    /**
-     * Gets numero_estabelecimento
-     * @return int
-     */
-    public function getNumeroEstabelecimento()
-    {
-        return $this->numero_estabelecimento;
-    }
-  
-    /**
-     * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
-     * @return $this
-     */
-    public function setNumeroEstabelecimento($numero_estabelecimento)
-    {
-        
-        $this->numero_estabelecimento = $numero_estabelecimento;
-        return $this;
-    }
-    
-    /**
-     * Gets data_hora_terminal
-     * @return string
-     */
-    public function getDataHoraTerminal()
-    {
-        return $this->data_hora_terminal;
-    }
-  
-    /**
-     * Sets data_hora_terminal
-     * @param string $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-     * @return $this
-     */
-    public function setDataHoraTerminal($data_hora_terminal)
-    {
-        
-        $this->data_hora_terminal = $data_hora_terminal;
-        return $this;
-    }
-    
-    /**
-     * Gets terminal_requisitante
-     * @return string
-     */
-    public function getTerminalRequisitante()
-    {
-        return $this->terminal_requisitante;
-    }
-  
-    /**
-     * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
-     * @return $this
-     */
-    public function setTerminalRequisitante($terminal_requisitante)
-    {
-        
-        $this->terminal_requisitante = $terminal_requisitante;
         return $this;
     }
     

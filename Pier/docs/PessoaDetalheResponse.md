@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id_profissao** | **string** | Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_natureza_ocupacao** | **int** | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
 **id_nacionalidade** | **int** | Id Nacionalidade da pessoa fisica | [optional] 
+**numero_banco** | **int** | N\u00C3\u00BAmero do banco. | [optional] 
 **numero_agencia** | **int** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
 **numero_conta_corrente** | **string** | N\u00C3\u00BAmero da conta corrente. | [optional] 
 **email** | **string** | Email da pessoa fisica | [optional] 

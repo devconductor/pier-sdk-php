@@ -51,10 +51,11 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       * @var string[]
       */
     static $swaggerTypes = array(
-        'nsu_origem' => 'string',
         'numero_mascarado_cartao' => 'string',
-        'terminal_requisitante' => 'string',
-        'plano_parcelamentos' => '\br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]'
+        'vencimento_primeira_parcela' => 'string',
+        'valor_transacao' => 'Number',
+        'numero_meses_carencia' => 'int',
+        'parcelas' => '\br.com.conductor.pier.api.v2.model\ParcelamentoTransferenciaResponse[]'
     );
   
     static function swaggerTypes() {
@@ -66,10 +67,11 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       * @var string[] 
       */
     static $attributeMap = array(
-        'nsu_origem' => 'nsuOrigem',
         'numero_mascarado_cartao' => 'numeroMascaradoCartao',
-        'terminal_requisitante' => 'terminalRequisitante',
-        'plano_parcelamentos' => 'planoParcelamentos'
+        'vencimento_primeira_parcela' => 'vencimentoPrimeiraParcela',
+        'valor_transacao' => 'valorTransacao',
+        'numero_meses_carencia' => 'numeroMesesCarencia',
+        'parcelas' => 'parcelas'
     );
   
     static function attributeMap() {
@@ -81,10 +83,11 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       * @var string[]
       */
     static $setters = array(
-        'nsu_origem' => 'setNsuOrigem',
         'numero_mascarado_cartao' => 'setNumeroMascaradoCartao',
-        'terminal_requisitante' => 'setTerminalRequisitante',
-        'plano_parcelamentos' => 'setPlanoParcelamentos'
+        'vencimento_primeira_parcela' => 'setVencimentoPrimeiraParcela',
+        'valor_transacao' => 'setValorTransacao',
+        'numero_meses_carencia' => 'setNumeroMesesCarencia',
+        'parcelas' => 'setParcelas'
     );
   
     static function setters() {
@@ -96,10 +99,11 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
       * @var string[]
       */
     static $getters = array(
-        'nsu_origem' => 'getNsuOrigem',
         'numero_mascarado_cartao' => 'getNumeroMascaradoCartao',
-        'terminal_requisitante' => 'getTerminalRequisitante',
-        'plano_parcelamentos' => 'getPlanoParcelamentos'
+        'vencimento_primeira_parcela' => 'getVencimentoPrimeiraParcela',
+        'valor_transacao' => 'getValorTransacao',
+        'numero_meses_carencia' => 'getNumeroMesesCarencia',
+        'parcelas' => 'getParcelas'
     );
   
     static function getters() {
@@ -108,28 +112,34 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
 
     
     /**
-      * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-      * @var string
-      */
-    protected $nsu_origem;
-    
-    /**
       * $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
       * @var string
       */
     protected $numero_mascarado_cartao;
     
     /**
-      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+      * $vencimento_primeira_parcela Data de vencimento da primeira parcela.
       * @var string
       */
-    protected $terminal_requisitante;
+    protected $vencimento_primeira_parcela;
     
     /**
-      * $plano_parcelamentos Lista os planos de parcelamentos
-      * @var \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]
+      * $valor_transacao Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+      * @var Number
       */
-    protected $plano_parcelamentos;
+    protected $valor_transacao;
+    
+    /**
+      * $numero_meses_carencia N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+      * @var int
+      */
+    protected $numero_meses_carencia;
+    
+    /**
+      * $parcelas Lista com os planos de parcelamento.
+      * @var \br.com.conductor.pier.api.v2.model\ParcelamentoTransferenciaResponse[]
+      */
+    protected $parcelas;
     
 
     /**
@@ -140,32 +150,12 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     {
         
         if ($data != null) {
-            $this->nsu_origem = $data["nsu_origem"];
             $this->numero_mascarado_cartao = $data["numero_mascarado_cartao"];
-            $this->terminal_requisitante = $data["terminal_requisitante"];
-            $this->plano_parcelamentos = $data["plano_parcelamentos"];
+            $this->vencimento_primeira_parcela = $data["vencimento_primeira_parcela"];
+            $this->valor_transacao = $data["valor_transacao"];
+            $this->numero_meses_carencia = $data["numero_meses_carencia"];
+            $this->parcelas = $data["parcelas"];
         }
-    }
-    
-    /**
-     * Gets nsu_origem
-     * @return string
-     */
-    public function getNsuOrigem()
-    {
-        return $this->nsu_origem;
-    }
-  
-    /**
-     * Sets nsu_origem
-     * @param string $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-     * @return $this
-     */
-    public function setNsuOrigem($nsu_origem)
-    {
-        
-        $this->nsu_origem = $nsu_origem;
-        return $this;
     }
     
     /**
@@ -190,44 +180,86 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     }
     
     /**
-     * Gets terminal_requisitante
+     * Gets vencimento_primeira_parcela
      * @return string
      */
-    public function getTerminalRequisitante()
+    public function getVencimentoPrimeiraParcela()
     {
-        return $this->terminal_requisitante;
+        return $this->vencimento_primeira_parcela;
     }
   
     /**
-     * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+     * Sets vencimento_primeira_parcela
+     * @param string $vencimento_primeira_parcela Data de vencimento da primeira parcela.
      * @return $this
      */
-    public function setTerminalRequisitante($terminal_requisitante)
+    public function setVencimentoPrimeiraParcela($vencimento_primeira_parcela)
     {
         
-        $this->terminal_requisitante = $terminal_requisitante;
+        $this->vencimento_primeira_parcela = $vencimento_primeira_parcela;
         return $this;
     }
     
     /**
-     * Gets plano_parcelamentos
-     * @return \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[]
+     * Gets valor_transacao
+     * @return Number
      */
-    public function getPlanoParcelamentos()
+    public function getValorTransacao()
     {
-        return $this->plano_parcelamentos;
+        return $this->valor_transacao;
     }
   
     /**
-     * Sets plano_parcelamentos
-     * @param \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaResponse[] $plano_parcelamentos Lista os planos de parcelamentos
+     * Sets valor_transacao
+     * @param Number $valor_transacao Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
      * @return $this
      */
-    public function setPlanoParcelamentos($plano_parcelamentos)
+    public function setValorTransacao($valor_transacao)
     {
         
-        $this->plano_parcelamentos = $plano_parcelamentos;
+        $this->valor_transacao = $valor_transacao;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_meses_carencia
+     * @return int
+     */
+    public function getNumeroMesesCarencia()
+    {
+        return $this->numero_meses_carencia;
+    }
+  
+    /**
+     * Sets numero_meses_carencia
+     * @param int $numero_meses_carencia N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+     * @return $this
+     */
+    public function setNumeroMesesCarencia($numero_meses_carencia)
+    {
+        
+        $this->numero_meses_carencia = $numero_meses_carencia;
+        return $this;
+    }
+    
+    /**
+     * Gets parcelas
+     * @return \br.com.conductor.pier.api.v2.model\ParcelamentoTransferenciaResponse[]
+     */
+    public function getParcelas()
+    {
+        return $this->parcelas;
+    }
+  
+    /**
+     * Sets parcelas
+     * @param \br.com.conductor.pier.api.v2.model\ParcelamentoTransferenciaResponse[] $parcelas Lista com os planos de parcelamento.
+     * @return $this
+     */
+    public function setParcelas($parcelas)
+    {
+        
+        $this->parcelas = $parcelas;
         return $this;
     }
     

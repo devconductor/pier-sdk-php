@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numero_parcela** | **string** | N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis. | [optional] 
-**valor_primeira_parcela** | [**Number**](Number.md) | Valor da primeira parcela. | [optional] 
-**valor_demais_parcelas** | [**Number**](Number.md) | Valor das demais parcelas. | [optional] 
+**numero_parcela** | **int** | N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis. | [optional] 
+**valor_parcelas** | [**Number**](Number.md) | Valor das demais parcelas. | [optional] 
 **valor_total** | [**Number**](Number.md) | Valor total do financiamento. | [optional] 
 **valor_tac** | [**Number**](Number.md) | Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 **valor_iof** | [**Number**](Number.md) | IOF | [optional] 

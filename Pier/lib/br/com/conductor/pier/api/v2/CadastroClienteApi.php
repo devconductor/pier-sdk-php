@@ -221,6 +221,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -228,9 +229,9 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT10($id, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function alterarUsingPUT10($id, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT10WithHttpInfo ($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT10WithHttpInfo ($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
         return $response; 
     }
 
@@ -246,6 +247,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -253,7 +255,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT10WithHttpInfo($id, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function alterarUsingPUT10WithHttpInfo($id, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
         
         // verify the required parameter 'id' is set
@@ -293,6 +295,10 @@ class CadastroClienteApi
         
         if ($id_nacionalidade !== null) {
             $queryParams['idNacionalidade'] = $this->apiClient->getSerializer()->toQueryValue($id_nacionalidade);
+        }// query params
+        
+        if ($numero_banco !== null) {
+            $queryParams['numeroBanco'] = $this->apiClient->getSerializer()->toQueryValue($numero_banco);
         }// query params
         
         if ($numero_agencia !== null) {
@@ -2150,6 +2156,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do Banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -2157,9 +2164,9 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
         return $response; 
     }
 
@@ -2178,6 +2185,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do Banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -2185,7 +2193,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
         
   
@@ -2241,6 +2249,10 @@ class CadastroClienteApi
         
         if ($id_nacionalidade !== null) {
             $queryParams['idNacionalidade'] = $this->apiClient->getSerializer()->toQueryValue($id_nacionalidade);
+        }// query params
+        
+        if ($numero_banco !== null) {
+            $queryParams['numeroBanco'] = $this->apiClient->getSerializer()->toQueryValue($numero_banco);
         }// query params
         
         if ($numero_agencia !== null) {
@@ -3058,6 +3070,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -3065,9 +3078,9 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST16($id_pessoa, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function salvarUsingPOST16($id_pessoa, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST16WithHttpInfo ($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST16WithHttpInfo ($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
         return $response; 
     }
 
@@ -3083,6 +3096,7 @@ class CadastroClienteApi
      * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
+     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
      * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
      * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
@@ -3090,7 +3104,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST16WithHttpInfo($id_pessoa, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function salvarUsingPOST16WithHttpInfo($id_pessoa, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
         
         // verify the required parameter 'id_pessoa' is set
@@ -3134,6 +3148,10 @@ class CadastroClienteApi
         
         if ($id_nacionalidade !== null) {
             $queryParams['idNacionalidade'] = $this->apiClient->getSerializer()->toQueryValue($id_nacionalidade);
+        }// query params
+        
+        if ($numero_banco !== null) {
+            $queryParams['numeroBanco'] = $this->apiClient->getSerializer()->toQueryValue($numero_banco);
         }// query params
         
         if ($numero_agencia !== null) {

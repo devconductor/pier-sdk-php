@@ -51,9 +51,8 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'numero_parcela' => 'string',
-        'valor_primeira_parcela' => 'Number',
-        'valor_demais_parcelas' => 'Number',
+        'numero_parcela' => 'int',
+        'valor_parcelas' => 'Number',
         'valor_total' => 'Number',
         'valor_tac' => 'Number',
         'valor_iof' => 'Number',
@@ -71,8 +70,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'numero_parcela' => 'numeroParcela',
-        'valor_primeira_parcela' => 'valorPrimeiraParcela',
-        'valor_demais_parcelas' => 'valorDemaisParcelas',
+        'valor_parcelas' => 'valorParcelas',
         'valor_total' => 'valorTotal',
         'valor_tac' => 'valorTAC',
         'valor_iof' => 'valorIOF',
@@ -90,8 +88,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
       */
     static $setters = array(
         'numero_parcela' => 'setNumeroParcela',
-        'valor_primeira_parcela' => 'setValorPrimeiraParcela',
-        'valor_demais_parcelas' => 'setValorDemaisParcelas',
+        'valor_parcelas' => 'setValorParcelas',
         'valor_total' => 'setValorTotal',
         'valor_tac' => 'setValorTac',
         'valor_iof' => 'setValorIof',
@@ -109,8 +106,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
       */
     static $getters = array(
         'numero_parcela' => 'getNumeroParcela',
-        'valor_primeira_parcela' => 'getValorPrimeiraParcela',
-        'valor_demais_parcelas' => 'getValorDemaisParcelas',
+        'valor_parcelas' => 'getValorParcelas',
         'valor_total' => 'getValorTotal',
         'valor_tac' => 'getValorTac',
         'valor_iof' => 'getValorIof',
@@ -125,21 +121,15 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     
     /**
       * $numero_parcela N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
-      * @var string
+      * @var int
       */
     protected $numero_parcela;
     
     /**
-      * $valor_primeira_parcela Valor da primeira parcela.
+      * $valor_parcelas Valor das demais parcelas.
       * @var Number
       */
-    protected $valor_primeira_parcela;
-    
-    /**
-      * $valor_demais_parcelas Valor das demais parcelas.
-      * @var Number
-      */
-    protected $valor_demais_parcelas;
+    protected $valor_parcelas;
     
     /**
       * $valor_total Valor total do financiamento.
@@ -181,8 +171,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
         
         if ($data != null) {
             $this->numero_parcela = $data["numero_parcela"];
-            $this->valor_primeira_parcela = $data["valor_primeira_parcela"];
-            $this->valor_demais_parcelas = $data["valor_demais_parcelas"];
+            $this->valor_parcelas = $data["valor_parcelas"];
             $this->valor_total = $data["valor_total"];
             $this->valor_tac = $data["valor_tac"];
             $this->valor_iof = $data["valor_iof"];
@@ -193,7 +182,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     
     /**
      * Gets numero_parcela
-     * @return string
+     * @return int
      */
     public function getNumeroParcela()
     {
@@ -202,7 +191,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param string $numero_parcela N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+     * @param int $numero_parcela N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -213,44 +202,23 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     }
     
     /**
-     * Gets valor_primeira_parcela
+     * Gets valor_parcelas
      * @return Number
      */
-    public function getValorPrimeiraParcela()
+    public function getValorParcelas()
     {
-        return $this->valor_primeira_parcela;
+        return $this->valor_parcelas;
     }
   
     /**
-     * Sets valor_primeira_parcela
-     * @param Number $valor_primeira_parcela Valor da primeira parcela.
+     * Sets valor_parcelas
+     * @param Number $valor_parcelas Valor das demais parcelas.
      * @return $this
      */
-    public function setValorPrimeiraParcela($valor_primeira_parcela)
+    public function setValorParcelas($valor_parcelas)
     {
         
-        $this->valor_primeira_parcela = $valor_primeira_parcela;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_demais_parcelas
-     * @return Number
-     */
-    public function getValorDemaisParcelas()
-    {
-        return $this->valor_demais_parcelas;
-    }
-  
-    /**
-     * Sets valor_demais_parcelas
-     * @param Number $valor_demais_parcelas Valor das demais parcelas.
-     * @return $this
-     */
-    public function setValorDemaisParcelas($valor_demais_parcelas)
-    {
-        
-        $this->valor_demais_parcelas = $valor_demais_parcelas;
+        $this->valor_parcelas = $valor_parcelas;
         return $this;
     }
     

@@ -53,7 +53,8 @@ class PlanoCampanhaResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'parcelas' => 'int',
-        'taxa' => 'Number'
+        'taxa' => 'Number',
+        'usuario' => 'string'
     );
   
     static function swaggerTypes() {
@@ -67,7 +68,8 @@ class PlanoCampanhaResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'parcelas' => 'parcelas',
-        'taxa' => 'taxa'
+        'taxa' => 'taxa',
+        'usuario' => 'usuario'
     );
   
     static function attributeMap() {
@@ -81,7 +83,8 @@ class PlanoCampanhaResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'parcelas' => 'setParcelas',
-        'taxa' => 'setTaxa'
+        'taxa' => 'setTaxa',
+        'usuario' => 'setUsuario'
     );
   
     static function setters() {
@@ -95,7 +98,8 @@ class PlanoCampanhaResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'parcelas' => 'getParcelas',
-        'taxa' => 'getTaxa'
+        'taxa' => 'getTaxa',
+        'usuario' => 'getUsuario'
     );
   
     static function getters() {
@@ -121,6 +125,12 @@ class PlanoCampanhaResponse implements ArrayAccess
       */
     protected $taxa;
     
+    /**
+      * $usuario Nome do usu\u00C3\u00A1rio
+      * @var string
+      */
+    protected $usuario;
+    
 
     /**
      * Constructor
@@ -133,6 +143,7 @@ class PlanoCampanhaResponse implements ArrayAccess
             $this->id = $data["id"];
             $this->parcelas = $data["parcelas"];
             $this->taxa = $data["taxa"];
+            $this->usuario = $data["usuario"];
         }
     }
     
@@ -196,6 +207,27 @@ class PlanoCampanhaResponse implements ArrayAccess
     {
         
         $this->taxa = $taxa;
+        return $this;
+    }
+    
+    /**
+     * Gets usuario
+     * @return string
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+  
+    /**
+     * Sets usuario
+     * @param string $usuario Nome do usu\u00C3\u00A1rio
+     * @return $this
+     */
+    public function setUsuario($usuario)
+    {
+        
+        $this->usuario = $usuario;
         return $this;
     }
     

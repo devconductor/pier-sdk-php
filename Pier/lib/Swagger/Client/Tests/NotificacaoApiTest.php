@@ -236,6 +236,16 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for reenviarTokenSMSUsingPOST
+     *
+     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     *
+     */
+    public function test_reenviarTokenSMSUsingPOST() {
+
+    }
+    
+    /**
      * Test case for responderSMSGetUsingGET
      *
      * Responder SMS

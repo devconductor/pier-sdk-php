@@ -83,7 +83,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarUsingPUT10**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse alterarUsingPUT10($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse alterarUsingPUT10($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Atualiza os detalhes de uma determinada Pessoa
 
@@ -101,13 +101,14 @@ $id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
 $id_profissao = "id_profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
 $id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
 $id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
+$numero_banco = 56; // int | N\u00C3\u00BAmero do banco.
 $numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
 $numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
 $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->alterarUsingPUT10($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->alterarUsingPUT10($id, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CadastroClienteApi->alterarUsingPUT10: ', $e->getMessage(), "\n";
@@ -125,6 +126,7 @@ Name | Type | Description  | Notes
  **id_profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **int**| N\u00C3\u00BAmero do banco. | [optional] 
  **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **string**| Email da pessoa fisica | [optional] 
@@ -925,7 +927,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse listarUsingGET23($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+> \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse listarUsingGET23($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -946,13 +948,14 @@ $id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
 $id_profissao = "id_profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
 $id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
 $id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
+$numero_banco = 56; // int | N\u00C3\u00BAmero do Banco.
 $numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
 $numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
 $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CadastroClienteApi->listarUsingGET23: ', $e->getMessage(), "\n";
@@ -973,6 +976,7 @@ Name | Type | Description  | Notes
  **id_profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **int**| N\u00C3\u00BAmero do Banco. | [optional] 
  **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **string**| Email da pessoa fisica | [optional] 
@@ -1330,7 +1334,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST16**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST16($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST16($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1348,13 +1352,14 @@ $id_estado_civil = 789; // int | Id Estado civil da pessoa fisica
 $id_profissao = "id_profissao_example"; // string | Profiss\u00C3\u00A3o da pessoa fisica
 $id_natureza_ocupacao = 789; // int | Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
 $id_nacionalidade = 789; // int | Id Nacionalidade da pessoa fisica
+$numero_banco = 56; // int | N\u00C3\u00BAmero do banco.
 $numero_agencia = 56; // int | N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
 $numero_conta_corrente = "numero_conta_corrente_example"; // string | N\u00C3\u00BAmero da conta corrente.
 $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->salvarUsingPOST16($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->salvarUsingPOST16($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CadastroClienteApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
@@ -1372,6 +1377,7 @@ Name | Type | Description  | Notes
  **id_profissao** | **string**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_natureza_ocupacao** | **int**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **id_nacionalidade** | **int**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numero_banco** | **int**| N\u00C3\u00BAmero do banco. | [optional] 
  **numero_agencia** | **int**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numero_conta_corrente** | **string**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **string**| Email da pessoa fisica | [optional] 

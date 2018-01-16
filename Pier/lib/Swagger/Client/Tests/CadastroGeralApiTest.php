@@ -96,16 +96,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for ativarUsoExteriorUsingPOST
-     *
-     * Ativa o par\u00C3\u00A2metro uso exterior para o produto
-     *
-     */
-    public function test_ativarUsoExteriorUsingPOST() {
-
-    }
-    
-    /**
      * Test case for cadastrarUsingPOST1
      *
      * Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
@@ -252,16 +242,6 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_consultarUsingGET9() {
-
-    }
-    
-    /**
-     * Test case for desativarUsoExteriorUsingPOST
-     *
-     * Desativa o par\u00C3\u00A2metro uso exterior para o produto
-     *
-     */
-    public function test_desativarUsoExteriorUsingPOST() {
 
     }
     
