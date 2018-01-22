@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Fatura
+ * @description Fatura futura
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,34 +51,15 @@ class FaturaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id' => 'int',
         'id_conta' => 'int',
-        'flag_emite_fatura' => 'int',
+        'situacao_processamento' => 'string',
+        'pagamento_efetuado' => 'bool',
         'data_vencimento_fatura' => 'string',
-        'valor_total_fatura' => 'Number',
-        'valor_fatura_anterior' => 'Number',
+        'data_vencimento_real' => 'string',
+        'data_fechamento' => 'string',
+        'valor_total' => 'Number',
         'valor_pagamento_minimo' => 'Number',
-        'total_compras_nacionais' => 'Number',
-        'total_compras_internacionas' => 'Number',
-        'total_saques_nacionais' => 'Number',
-        'total_saques_internacionais' => 'Number',
-        'total_debitos_nacionais' => 'Number',
-        'total_debitos_recorrentes' => 'Number',
-        'total_debitos_internacionais' => 'Number',
-        'total_debitos_diversos_nacionais' => 'Number',
-        'total_debitos_opcionais' => 'Number',
-        'total_pagamentos' => 'Number',
-        'total_creditos_nacionais' => 'Number',
-        'total_ajustes' => 'Number',
-        'total_tarifas' => 'Number',
-        'total_multa' => 'Number',
-        'total_juros' => 'Number',
-        'taxa_rotativo' => 'Number',
-        'taxa_saque' => 'Number',
-        'taxa_maxima_proximo_periodo' => 'Number',
-        'total_servicos' => 'Number',
-        'total_parcelado_nacionais' => 'Number',
-        'total_parcelado_internacionais' => 'Number'
+        'saldo_anterior' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -90,34 +71,15 @@ class FaturaResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id' => 'id',
         'id_conta' => 'idConta',
-        'flag_emite_fatura' => 'flagEmiteFatura',
+        'situacao_processamento' => 'situacaoProcessamento',
+        'pagamento_efetuado' => 'pagamentoEfetuado',
         'data_vencimento_fatura' => 'dataVencimentoFatura',
-        'valor_total_fatura' => 'valorTotalFatura',
-        'valor_fatura_anterior' => 'valorFaturaAnterior',
+        'data_vencimento_real' => 'dataVencimentoReal',
+        'data_fechamento' => 'dataFechamento',
+        'valor_total' => 'valorTotal',
         'valor_pagamento_minimo' => 'valorPagamentoMinimo',
-        'total_compras_nacionais' => 'totalComprasNacionais',
-        'total_compras_internacionas' => 'totalComprasInternacionas',
-        'total_saques_nacionais' => 'totalSaquesNacionais',
-        'total_saques_internacionais' => 'totalSaquesInternacionais',
-        'total_debitos_nacionais' => 'totalDebitosNacionais',
-        'total_debitos_recorrentes' => 'totalDebitosRecorrentes',
-        'total_debitos_internacionais' => 'totalDebitosInternacionais',
-        'total_debitos_diversos_nacionais' => 'totalDebitosDiversosNacionais',
-        'total_debitos_opcionais' => 'totalDebitosOpcionais',
-        'total_pagamentos' => 'totalPagamentos',
-        'total_creditos_nacionais' => 'totalCreditosNacionais',
-        'total_ajustes' => 'totalAjustes',
-        'total_tarifas' => 'totalTarifas',
-        'total_multa' => 'totalMulta',
-        'total_juros' => 'totalJuros',
-        'taxa_rotativo' => 'taxaRotativo',
-        'taxa_saque' => 'taxaSaque',
-        'taxa_maxima_proximo_periodo' => 'taxaMaximaProximoPeriodo',
-        'total_servicos' => 'totalServicos',
-        'total_parcelado_nacionais' => 'totalParceladoNacionais',
-        'total_parcelado_internacionais' => 'totalParceladoInternacionais'
+        'saldo_anterior' => 'saldoAnterior'
     );
   
     static function attributeMap() {
@@ -129,34 +91,15 @@ class FaturaResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id' => 'setId',
         'id_conta' => 'setIdConta',
-        'flag_emite_fatura' => 'setFlagEmiteFatura',
+        'situacao_processamento' => 'setSituacaoProcessamento',
+        'pagamento_efetuado' => 'setPagamentoEfetuado',
         'data_vencimento_fatura' => 'setDataVencimentoFatura',
-        'valor_total_fatura' => 'setValorTotalFatura',
-        'valor_fatura_anterior' => 'setValorFaturaAnterior',
+        'data_vencimento_real' => 'setDataVencimentoReal',
+        'data_fechamento' => 'setDataFechamento',
+        'valor_total' => 'setValorTotal',
         'valor_pagamento_minimo' => 'setValorPagamentoMinimo',
-        'total_compras_nacionais' => 'setTotalComprasNacionais',
-        'total_compras_internacionas' => 'setTotalComprasInternacionas',
-        'total_saques_nacionais' => 'setTotalSaquesNacionais',
-        'total_saques_internacionais' => 'setTotalSaquesInternacionais',
-        'total_debitos_nacionais' => 'setTotalDebitosNacionais',
-        'total_debitos_recorrentes' => 'setTotalDebitosRecorrentes',
-        'total_debitos_internacionais' => 'setTotalDebitosInternacionais',
-        'total_debitos_diversos_nacionais' => 'setTotalDebitosDiversosNacionais',
-        'total_debitos_opcionais' => 'setTotalDebitosOpcionais',
-        'total_pagamentos' => 'setTotalPagamentos',
-        'total_creditos_nacionais' => 'setTotalCreditosNacionais',
-        'total_ajustes' => 'setTotalAjustes',
-        'total_tarifas' => 'setTotalTarifas',
-        'total_multa' => 'setTotalMulta',
-        'total_juros' => 'setTotalJuros',
-        'taxa_rotativo' => 'setTaxaRotativo',
-        'taxa_saque' => 'setTaxaSaque',
-        'taxa_maxima_proximo_periodo' => 'setTaxaMaximaProximoPeriodo',
-        'total_servicos' => 'setTotalServicos',
-        'total_parcelado_nacionais' => 'setTotalParceladoNacionais',
-        'total_parcelado_internacionais' => 'setTotalParceladoInternacionais'
+        'saldo_anterior' => 'setSaldoAnterior'
     );
   
     static function setters() {
@@ -168,34 +111,15 @@ class FaturaResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id' => 'getId',
         'id_conta' => 'getIdConta',
-        'flag_emite_fatura' => 'getFlagEmiteFatura',
+        'situacao_processamento' => 'getSituacaoProcessamento',
+        'pagamento_efetuado' => 'getPagamentoEfetuado',
         'data_vencimento_fatura' => 'getDataVencimentoFatura',
-        'valor_total_fatura' => 'getValorTotalFatura',
-        'valor_fatura_anterior' => 'getValorFaturaAnterior',
+        'data_vencimento_real' => 'getDataVencimentoReal',
+        'data_fechamento' => 'getDataFechamento',
+        'valor_total' => 'getValorTotal',
         'valor_pagamento_minimo' => 'getValorPagamentoMinimo',
-        'total_compras_nacionais' => 'getTotalComprasNacionais',
-        'total_compras_internacionas' => 'getTotalComprasInternacionas',
-        'total_saques_nacionais' => 'getTotalSaquesNacionais',
-        'total_saques_internacionais' => 'getTotalSaquesInternacionais',
-        'total_debitos_nacionais' => 'getTotalDebitosNacionais',
-        'total_debitos_recorrentes' => 'getTotalDebitosRecorrentes',
-        'total_debitos_internacionais' => 'getTotalDebitosInternacionais',
-        'total_debitos_diversos_nacionais' => 'getTotalDebitosDiversosNacionais',
-        'total_debitos_opcionais' => 'getTotalDebitosOpcionais',
-        'total_pagamentos' => 'getTotalPagamentos',
-        'total_creditos_nacionais' => 'getTotalCreditosNacionais',
-        'total_ajustes' => 'getTotalAjustes',
-        'total_tarifas' => 'getTotalTarifas',
-        'total_multa' => 'getTotalMulta',
-        'total_juros' => 'getTotalJuros',
-        'taxa_rotativo' => 'getTaxaRotativo',
-        'taxa_saque' => 'getTaxaSaque',
-        'taxa_maxima_proximo_periodo' => 'getTaxaMaximaProximoPeriodo',
-        'total_servicos' => 'getTotalServicos',
-        'total_parcelado_nacionais' => 'getTotalParceladoNacionais',
-        'total_parcelado_internacionais' => 'getTotalParceladoInternacionais'
+        'saldo_anterior' => 'getSaldoAnterior'
     );
   
     static function getters() {
@@ -204,22 +128,22 @@ class FaturaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador da fatura.
-      * @var int
-      */
-    protected $id;
-    
-    /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $flag_emite_fatura C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
-      * @var int
+      * $situacao_processamento Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+      * @var string
       */
-    protected $flag_emite_fatura;
+    protected $situacao_processamento;
+    
+    /**
+      * $pagamento_efetuado Status de pagamento efetuado.
+      * @var bool
+      */
+    protected $pagamento_efetuado;
     
     /**
       * $data_vencimento_fatura Data de vencimento da fatura.
@@ -228,148 +152,34 @@ class FaturaResponse implements ArrayAccess
     protected $data_vencimento_fatura;
     
     /**
-      * $valor_total_fatura Valor para pagamento total da fatura.
-      * @var Number
+      * $data_vencimento_real Data de vencimento real da fatura.
+      * @var string
       */
-    protected $valor_total_fatura;
+    protected $data_vencimento_real;
     
     /**
-      * $valor_fatura_anterior Valor total da fatura anterior.
-      * @var Number
+      * $data_fechamento Data de fechamento da fatura.
+      * @var string
       */
-    protected $valor_fatura_anterior;
+    protected $data_fechamento;
     
     /**
-      * $valor_pagamento_minimo Valor m\u00C3\u00ADnimo para pagamento da fatura.
+      * $valor_total Valor total da fatura.
+      * @var Number
+      */
+    protected $valor_total;
+    
+    /**
+      * $valor_pagamento_minimo Valor do pagamento m\u00C3\u00ADnimo.
       * @var Number
       */
     protected $valor_pagamento_minimo;
     
     /**
-      * $total_compras_nacionais Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+      * $saldo_anterior Valor do saldo anterior.
       * @var Number
       */
-    protected $total_compras_nacionais;
-    
-    /**
-      * $total_compras_internacionas Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
-      * @var Number
-      */
-    protected $total_compras_internacionas;
-    
-    /**
-      * $total_saques_nacionais Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_saques_nacionais;
-    
-    /**
-      * $total_saques_internacionais Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_saques_internacionais;
-    
-    /**
-      * $total_debitos_nacionais Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_debitos_nacionais;
-    
-    /**
-      * $total_debitos_recorrentes Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_debitos_recorrentes;
-    
-    /**
-      * $total_debitos_internacionais Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_debitos_internacionais;
-    
-    /**
-      * $total_debitos_diversos_nacionais Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_debitos_diversos_nacionais;
-    
-    /**
-      * $total_debitos_opcionais Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_debitos_opcionais;
-    
-    /**
-      * $total_pagamentos Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_pagamentos;
-    
-    /**
-      * $total_creditos_nacionais Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_creditos_nacionais;
-    
-    /**
-      * $total_ajustes Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_ajustes;
-    
-    /**
-      * $total_tarifas Valor total das tarifas lan\u00C3\u00A7adas na fatura.
-      * @var Number
-      */
-    protected $total_tarifas;
-    
-    /**
-      * $total_multa Valor total da multa lan\u00C3\u00A7ada na fatura.
-      * @var Number
-      */
-    protected $total_multa;
-    
-    /**
-      * $total_juros Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
-      * @var Number
-      */
-    protected $total_juros;
-    
-    /**
-      * $taxa_rotativo Valor percentual da taxa de juros rotativos.
-      * @var Number
-      */
-    protected $taxa_rotativo;
-    
-    /**
-      * $taxa_saque Valor percentual da taxa de saque.
-      * @var Number
-      */
-    protected $taxa_saque;
-    
-    /**
-      * $taxa_maxima_proximo_periodo Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
-      * @var Number
-      */
-    protected $taxa_maxima_proximo_periodo;
-    
-    /**
-      * $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
-      * @var Number
-      */
-    protected $total_servicos;
-    
-    /**
-      * $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
-      * @var Number
-      */
-    protected $total_parcelado_nacionais;
-    
-    /**
-      * $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
-      * @var Number
-      */
-    protected $total_parcelado_internacionais;
+    protected $saldo_anterior;
     
 
     /**
@@ -380,56 +190,16 @@ class FaturaResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id = $data["id"];
             $this->id_conta = $data["id_conta"];
-            $this->flag_emite_fatura = $data["flag_emite_fatura"];
+            $this->situacao_processamento = $data["situacao_processamento"];
+            $this->pagamento_efetuado = $data["pagamento_efetuado"];
             $this->data_vencimento_fatura = $data["data_vencimento_fatura"];
-            $this->valor_total_fatura = $data["valor_total_fatura"];
-            $this->valor_fatura_anterior = $data["valor_fatura_anterior"];
+            $this->data_vencimento_real = $data["data_vencimento_real"];
+            $this->data_fechamento = $data["data_fechamento"];
+            $this->valor_total = $data["valor_total"];
             $this->valor_pagamento_minimo = $data["valor_pagamento_minimo"];
-            $this->total_compras_nacionais = $data["total_compras_nacionais"];
-            $this->total_compras_internacionas = $data["total_compras_internacionas"];
-            $this->total_saques_nacionais = $data["total_saques_nacionais"];
-            $this->total_saques_internacionais = $data["total_saques_internacionais"];
-            $this->total_debitos_nacionais = $data["total_debitos_nacionais"];
-            $this->total_debitos_recorrentes = $data["total_debitos_recorrentes"];
-            $this->total_debitos_internacionais = $data["total_debitos_internacionais"];
-            $this->total_debitos_diversos_nacionais = $data["total_debitos_diversos_nacionais"];
-            $this->total_debitos_opcionais = $data["total_debitos_opcionais"];
-            $this->total_pagamentos = $data["total_pagamentos"];
-            $this->total_creditos_nacionais = $data["total_creditos_nacionais"];
-            $this->total_ajustes = $data["total_ajustes"];
-            $this->total_tarifas = $data["total_tarifas"];
-            $this->total_multa = $data["total_multa"];
-            $this->total_juros = $data["total_juros"];
-            $this->taxa_rotativo = $data["taxa_rotativo"];
-            $this->taxa_saque = $data["taxa_saque"];
-            $this->taxa_maxima_proximo_periodo = $data["taxa_maxima_proximo_periodo"];
-            $this->total_servicos = $data["total_servicos"];
-            $this->total_parcelado_nacionais = $data["total_parcelado_nacionais"];
-            $this->total_parcelado_internacionais = $data["total_parcelado_internacionais"];
+            $this->saldo_anterior = $data["saldo_anterior"];
         }
-    }
-    
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-  
-    /**
-     * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador da fatura.
-     * @return $this
-     */
-    public function setId($id)
-    {
-        
-        $this->id = $id;
-        return $this;
     }
     
     /**
@@ -443,7 +213,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -454,23 +224,47 @@ class FaturaResponse implements ArrayAccess
     }
     
     /**
-     * Gets flag_emite_fatura
-     * @return int
+     * Gets situacao_processamento
+     * @return string
      */
-    public function getFlagEmiteFatura()
+    public function getSituacaoProcessamento()
     {
-        return $this->flag_emite_fatura;
+        return $this->situacao_processamento;
     }
   
     /**
-     * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+     * Sets situacao_processamento
+     * @param string $situacao_processamento Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
      * @return $this
      */
-    public function setFlagEmiteFatura($flag_emite_fatura)
+    public function setSituacaoProcessamento($situacao_processamento)
+    {
+        $allowed_values = array("ABERTA", "FECHADA", "TODAS");
+        if (!in_array($situacao_processamento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'situacao_processamento', must be one of 'ABERTA', 'FECHADA', 'TODAS'");
+        }
+        $this->situacao_processamento = $situacao_processamento;
+        return $this;
+    }
+    
+    /**
+     * Gets pagamento_efetuado
+     * @return bool
+     */
+    public function getPagamentoEfetuado()
+    {
+        return $this->pagamento_efetuado;
+    }
+  
+    /**
+     * Sets pagamento_efetuado
+     * @param bool $pagamento_efetuado Status de pagamento efetuado.
+     * @return $this
+     */
+    public function setPagamentoEfetuado($pagamento_efetuado)
     {
         
-        $this->flag_emite_fatura = $flag_emite_fatura;
+        $this->pagamento_efetuado = $pagamento_efetuado;
         return $this;
     }
     
@@ -496,44 +290,65 @@ class FaturaResponse implements ArrayAccess
     }
     
     /**
-     * Gets valor_total_fatura
-     * @return Number
+     * Gets data_vencimento_real
+     * @return string
      */
-    public function getValorTotalFatura()
+    public function getDataVencimentoReal()
     {
-        return $this->valor_total_fatura;
+        return $this->data_vencimento_real;
     }
   
     /**
-     * Sets valor_total_fatura
-     * @param Number $valor_total_fatura Valor para pagamento total da fatura.
+     * Sets data_vencimento_real
+     * @param string $data_vencimento_real Data de vencimento real da fatura.
      * @return $this
      */
-    public function setValorTotalFatura($valor_total_fatura)
+    public function setDataVencimentoReal($data_vencimento_real)
     {
         
-        $this->valor_total_fatura = $valor_total_fatura;
+        $this->data_vencimento_real = $data_vencimento_real;
         return $this;
     }
     
     /**
-     * Gets valor_fatura_anterior
-     * @return Number
+     * Gets data_fechamento
+     * @return string
      */
-    public function getValorFaturaAnterior()
+    public function getDataFechamento()
     {
-        return $this->valor_fatura_anterior;
+        return $this->data_fechamento;
     }
   
     /**
-     * Sets valor_fatura_anterior
-     * @param Number $valor_fatura_anterior Valor total da fatura anterior.
+     * Sets data_fechamento
+     * @param string $data_fechamento Data de fechamento da fatura.
      * @return $this
      */
-    public function setValorFaturaAnterior($valor_fatura_anterior)
+    public function setDataFechamento($data_fechamento)
     {
         
-        $this->valor_fatura_anterior = $valor_fatura_anterior;
+        $this->data_fechamento = $data_fechamento;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_total
+     * @return Number
+     */
+    public function getValorTotal()
+    {
+        return $this->valor_total;
+    }
+  
+    /**
+     * Sets valor_total
+     * @param Number $valor_total Valor total da fatura.
+     * @return $this
+     */
+    public function setValorTotal($valor_total)
+    {
+        
+        $this->valor_total = $valor_total;
         return $this;
     }
     
@@ -548,7 +363,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor m\u00C3\u00ADnimo para pagamento da fatura.
+     * @param Number $valor_pagamento_minimo Valor do pagamento m\u00C3\u00ADnimo.
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)
@@ -559,443 +374,23 @@ class FaturaResponse implements ArrayAccess
     }
     
     /**
-     * Gets total_compras_nacionais
+     * Gets saldo_anterior
      * @return Number
      */
-    public function getTotalComprasNacionais()
+    public function getSaldoAnterior()
     {
-        return $this->total_compras_nacionais;
+        return $this->saldo_anterior;
     }
   
     /**
-     * Sets total_compras_nacionais
-     * @param Number $total_compras_nacionais Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+     * Sets saldo_anterior
+     * @param Number $saldo_anterior Valor do saldo anterior.
      * @return $this
      */
-    public function setTotalComprasNacionais($total_compras_nacionais)
+    public function setSaldoAnterior($saldo_anterior)
     {
         
-        $this->total_compras_nacionais = $total_compras_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_compras_internacionas
-     * @return Number
-     */
-    public function getTotalComprasInternacionas()
-    {
-        return $this->total_compras_internacionas;
-    }
-  
-    /**
-     * Sets total_compras_internacionas
-     * @param Number $total_compras_internacionas Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
-     * @return $this
-     */
-    public function setTotalComprasInternacionas($total_compras_internacionas)
-    {
-        
-        $this->total_compras_internacionas = $total_compras_internacionas;
-        return $this;
-    }
-    
-    /**
-     * Gets total_saques_nacionais
-     * @return Number
-     */
-    public function getTotalSaquesNacionais()
-    {
-        return $this->total_saques_nacionais;
-    }
-  
-    /**
-     * Sets total_saques_nacionais
-     * @param Number $total_saques_nacionais Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalSaquesNacionais($total_saques_nacionais)
-    {
-        
-        $this->total_saques_nacionais = $total_saques_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_saques_internacionais
-     * @return Number
-     */
-    public function getTotalSaquesInternacionais()
-    {
-        return $this->total_saques_internacionais;
-    }
-  
-    /**
-     * Sets total_saques_internacionais
-     * @param Number $total_saques_internacionais Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalSaquesInternacionais($total_saques_internacionais)
-    {
-        
-        $this->total_saques_internacionais = $total_saques_internacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_debitos_nacionais
-     * @return Number
-     */
-    public function getTotalDebitosNacionais()
-    {
-        return $this->total_debitos_nacionais;
-    }
-  
-    /**
-     * Sets total_debitos_nacionais
-     * @param Number $total_debitos_nacionais Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalDebitosNacionais($total_debitos_nacionais)
-    {
-        
-        $this->total_debitos_nacionais = $total_debitos_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_debitos_recorrentes
-     * @return Number
-     */
-    public function getTotalDebitosRecorrentes()
-    {
-        return $this->total_debitos_recorrentes;
-    }
-  
-    /**
-     * Sets total_debitos_recorrentes
-     * @param Number $total_debitos_recorrentes Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalDebitosRecorrentes($total_debitos_recorrentes)
-    {
-        
-        $this->total_debitos_recorrentes = $total_debitos_recorrentes;
-        return $this;
-    }
-    
-    /**
-     * Gets total_debitos_internacionais
-     * @return Number
-     */
-    public function getTotalDebitosInternacionais()
-    {
-        return $this->total_debitos_internacionais;
-    }
-  
-    /**
-     * Sets total_debitos_internacionais
-     * @param Number $total_debitos_internacionais Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalDebitosInternacionais($total_debitos_internacionais)
-    {
-        
-        $this->total_debitos_internacionais = $total_debitos_internacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_debitos_diversos_nacionais
-     * @return Number
-     */
-    public function getTotalDebitosDiversosNacionais()
-    {
-        return $this->total_debitos_diversos_nacionais;
-    }
-  
-    /**
-     * Sets total_debitos_diversos_nacionais
-     * @param Number $total_debitos_diversos_nacionais Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalDebitosDiversosNacionais($total_debitos_diversos_nacionais)
-    {
-        
-        $this->total_debitos_diversos_nacionais = $total_debitos_diversos_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_debitos_opcionais
-     * @return Number
-     */
-    public function getTotalDebitosOpcionais()
-    {
-        return $this->total_debitos_opcionais;
-    }
-  
-    /**
-     * Sets total_debitos_opcionais
-     * @param Number $total_debitos_opcionais Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalDebitosOpcionais($total_debitos_opcionais)
-    {
-        
-        $this->total_debitos_opcionais = $total_debitos_opcionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_pagamentos
-     * @return Number
-     */
-    public function getTotalPagamentos()
-    {
-        return $this->total_pagamentos;
-    }
-  
-    /**
-     * Sets total_pagamentos
-     * @param Number $total_pagamentos Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalPagamentos($total_pagamentos)
-    {
-        
-        $this->total_pagamentos = $total_pagamentos;
-        return $this;
-    }
-    
-    /**
-     * Gets total_creditos_nacionais
-     * @return Number
-     */
-    public function getTotalCreditosNacionais()
-    {
-        return $this->total_creditos_nacionais;
-    }
-  
-    /**
-     * Sets total_creditos_nacionais
-     * @param Number $total_creditos_nacionais Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalCreditosNacionais($total_creditos_nacionais)
-    {
-        
-        $this->total_creditos_nacionais = $total_creditos_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_ajustes
-     * @return Number
-     */
-    public function getTotalAjustes()
-    {
-        return $this->total_ajustes;
-    }
-  
-    /**
-     * Sets total_ajustes
-     * @param Number $total_ajustes Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalAjustes($total_ajustes)
-    {
-        
-        $this->total_ajustes = $total_ajustes;
-        return $this;
-    }
-    
-    /**
-     * Gets total_tarifas
-     * @return Number
-     */
-    public function getTotalTarifas()
-    {
-        return $this->total_tarifas;
-    }
-  
-    /**
-     * Sets total_tarifas
-     * @param Number $total_tarifas Valor total das tarifas lan\u00C3\u00A7adas na fatura.
-     * @return $this
-     */
-    public function setTotalTarifas($total_tarifas)
-    {
-        
-        $this->total_tarifas = $total_tarifas;
-        return $this;
-    }
-    
-    /**
-     * Gets total_multa
-     * @return Number
-     */
-    public function getTotalMulta()
-    {
-        return $this->total_multa;
-    }
-  
-    /**
-     * Sets total_multa
-     * @param Number $total_multa Valor total da multa lan\u00C3\u00A7ada na fatura.
-     * @return $this
-     */
-    public function setTotalMulta($total_multa)
-    {
-        
-        $this->total_multa = $total_multa;
-        return $this;
-    }
-    
-    /**
-     * Gets total_juros
-     * @return Number
-     */
-    public function getTotalJuros()
-    {
-        return $this->total_juros;
-    }
-  
-    /**
-     * Sets total_juros
-     * @param Number $total_juros Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
-     * @return $this
-     */
-    public function setTotalJuros($total_juros)
-    {
-        
-        $this->total_juros = $total_juros;
-        return $this;
-    }
-    
-    /**
-     * Gets taxa_rotativo
-     * @return Number
-     */
-    public function getTaxaRotativo()
-    {
-        return $this->taxa_rotativo;
-    }
-  
-    /**
-     * Sets taxa_rotativo
-     * @param Number $taxa_rotativo Valor percentual da taxa de juros rotativos.
-     * @return $this
-     */
-    public function setTaxaRotativo($taxa_rotativo)
-    {
-        
-        $this->taxa_rotativo = $taxa_rotativo;
-        return $this;
-    }
-    
-    /**
-     * Gets taxa_saque
-     * @return Number
-     */
-    public function getTaxaSaque()
-    {
-        return $this->taxa_saque;
-    }
-  
-    /**
-     * Sets taxa_saque
-     * @param Number $taxa_saque Valor percentual da taxa de saque.
-     * @return $this
-     */
-    public function setTaxaSaque($taxa_saque)
-    {
-        
-        $this->taxa_saque = $taxa_saque;
-        return $this;
-    }
-    
-    /**
-     * Gets taxa_maxima_proximo_periodo
-     * @return Number
-     */
-    public function getTaxaMaximaProximoPeriodo()
-    {
-        return $this->taxa_maxima_proximo_periodo;
-    }
-  
-    /**
-     * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
-     * @return $this
-     */
-    public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)
-    {
-        
-        $this->taxa_maxima_proximo_periodo = $taxa_maxima_proximo_periodo;
-        return $this;
-    }
-    
-    /**
-     * Gets total_servicos
-     * @return Number
-     */
-    public function getTotalServicos()
-    {
-        return $this->total_servicos;
-    }
-  
-    /**
-     * Sets total_servicos
-     * @param Number $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
-     * @return $this
-     */
-    public function setTotalServicos($total_servicos)
-    {
-        
-        $this->total_servicos = $total_servicos;
-        return $this;
-    }
-    
-    /**
-     * Gets total_parcelado_nacionais
-     * @return Number
-     */
-    public function getTotalParceladoNacionais()
-    {
-        return $this->total_parcelado_nacionais;
-    }
-  
-    /**
-     * Sets total_parcelado_nacionais
-     * @param Number $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
-     * @return $this
-     */
-    public function setTotalParceladoNacionais($total_parcelado_nacionais)
-    {
-        
-        $this->total_parcelado_nacionais = $total_parcelado_nacionais;
-        return $this;
-    }
-    
-    /**
-     * Gets total_parcelado_internacionais
-     * @return Number
-     */
-    public function getTotalParceladoInternacionais()
-    {
-        return $this->total_parcelado_internacionais;
-    }
-  
-    /**
-     * Sets total_parcelado_internacionais
-     * @param Number $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
-     * @return $this
-     */
-    public function setTotalParceladoInternacionais($total_parcelado_internacionais)
-    {
-        
-        $this->total_parcelado_internacionais = $total_parcelado_internacionais;
+        $this->saldo_anterior = $saldo_anterior;
         return $this;
     }
     

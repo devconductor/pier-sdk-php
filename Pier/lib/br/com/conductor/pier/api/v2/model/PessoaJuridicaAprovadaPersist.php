@@ -55,7 +55,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'nome_fantasia' => 'string',
         'cnpj' => 'string',
         'inscricao_estadual' => 'string',
-        'data_abertura_empresa' => '\DateTime',
+        'data_abertura_empresa' => 'string',
         'id_origem_comercial' => 'int',
         'id_produto' => 'int',
         'numero_agencia' => 'int',
@@ -63,9 +63,16 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'string',
         'dia_vencimento' => 'int',
         'nome_impresso' => 'string',
+        'valor_renda' => 'Number',
+        'canal_entrada' => 'string',
+        'valor_pontuacao' => 'int',
         'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
         'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
-        'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]'
+        'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]',
+        'referencias_comerciais' => '\br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]',
+        'limite_global' => 'Number',
+        'limite_maximo' => 'Number',
+        'limite_parcelas' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -89,9 +96,16 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'email',
         'dia_vencimento' => 'diaVencimento',
         'nome_impresso' => 'nomeImpresso',
+        'valor_renda' => 'valorRenda',
+        'canal_entrada' => 'canalEntrada',
+        'valor_pontuacao' => 'valorPontuacao',
         'telefones' => 'telefones',
         'enderecos' => 'enderecos',
-        'socios' => 'socios'
+        'socios' => 'socios',
+        'referencias_comerciais' => 'referenciasComerciais',
+        'limite_global' => 'limiteGlobal',
+        'limite_maximo' => 'limiteMaximo',
+        'limite_parcelas' => 'limiteParcelas'
     );
   
     static function attributeMap() {
@@ -115,9 +129,16 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'setEmail',
         'dia_vencimento' => 'setDiaVencimento',
         'nome_impresso' => 'setNomeImpresso',
+        'valor_renda' => 'setValorRenda',
+        'canal_entrada' => 'setCanalEntrada',
+        'valor_pontuacao' => 'setValorPontuacao',
         'telefones' => 'setTelefones',
         'enderecos' => 'setEnderecos',
-        'socios' => 'setSocios'
+        'socios' => 'setSocios',
+        'referencias_comerciais' => 'setReferenciasComerciais',
+        'limite_global' => 'setLimiteGlobal',
+        'limite_maximo' => 'setLimiteMaximo',
+        'limite_parcelas' => 'setLimiteParcelas'
     );
   
     static function setters() {
@@ -141,9 +162,16 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'email' => 'getEmail',
         'dia_vencimento' => 'getDiaVencimento',
         'nome_impresso' => 'getNomeImpresso',
+        'valor_renda' => 'getValorRenda',
+        'canal_entrada' => 'getCanalEntrada',
+        'valor_pontuacao' => 'getValorPontuacao',
         'telefones' => 'getTelefones',
         'enderecos' => 'getEnderecos',
-        'socios' => 'getSocios'
+        'socios' => 'getSocios',
+        'referencias_comerciais' => 'getReferenciasComerciais',
+        'limite_global' => 'getLimiteGlobal',
+        'limite_maximo' => 'getLimiteMaximo',
+        'limite_parcelas' => 'getLimiteParcelas'
     );
   
     static function getters() {
@@ -177,7 +205,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
       * $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
-      * @var \DateTime
+      * @var string
       */
     protected $data_abertura_empresa;
     
@@ -224,6 +252,24 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $nome_impresso;
     
     /**
+      * $valor_renda Apresenta o valor da renda compravada
+      * @var Number
+      */
+    protected $valor_renda;
+    
+    /**
+      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * @var string
+      */
+    protected $canal_entrada;
+    
+    /**
+      * $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+      * @var int
+      */
+    protected $valor_pontuacao;
+    
+    /**
       * $telefones Apresenta os telefones da empresa
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
@@ -240,6 +286,30 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
       * @var \br.com.conductor.pier.api.v2.model\PessoaPersist[]
       */
     protected $socios;
+    
+    /**
+      * $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+      * @var \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+      */
+    protected $referencias_comerciais;
+    
+    /**
+      * $limite_global Valor do Limite Global
+      * @var Number
+      */
+    protected $limite_global;
+    
+    /**
+      * $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+      * @var Number
+      */
+    protected $limite_maximo;
+    
+    /**
+      * $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+      * @var Number
+      */
+    protected $limite_parcelas;
     
 
     /**
@@ -262,9 +332,16 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
             $this->email = $data["email"];
             $this->dia_vencimento = $data["dia_vencimento"];
             $this->nome_impresso = $data["nome_impresso"];
+            $this->valor_renda = $data["valor_renda"];
+            $this->canal_entrada = $data["canal_entrada"];
+            $this->valor_pontuacao = $data["valor_pontuacao"];
             $this->telefones = $data["telefones"];
             $this->enderecos = $data["enderecos"];
             $this->socios = $data["socios"];
+            $this->referencias_comerciais = $data["referencias_comerciais"];
+            $this->limite_global = $data["limite_global"];
+            $this->limite_maximo = $data["limite_maximo"];
+            $this->limite_parcelas = $data["limite_parcelas"];
         }
     }
     
@@ -354,7 +431,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets data_abertura_empresa
-     * @return \DateTime
+     * @return string
      */
     public function getDataAberturaEmpresa()
     {
@@ -363,7 +440,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets data_abertura_empresa
-     * @param \DateTime $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+     * @param string $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
      * @return $this
      */
     public function setDataAberturaEmpresa($data_abertura_empresa)
@@ -521,6 +598,69 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     }
     
     /**
+     * Gets valor_renda
+     * @return Number
+     */
+    public function getValorRenda()
+    {
+        return $this->valor_renda;
+    }
+  
+    /**
+     * Sets valor_renda
+     * @param Number $valor_renda Apresenta o valor da renda compravada
+     * @return $this
+     */
+    public function setValorRenda($valor_renda)
+    {
+        
+        $this->valor_renda = $valor_renda;
+        return $this;
+    }
+    
+    /**
+     * Gets canal_entrada
+     * @return string
+     */
+    public function getCanalEntrada()
+    {
+        return $this->canal_entrada;
+    }
+  
+    /**
+     * Sets canal_entrada
+     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @return $this
+     */
+    public function setCanalEntrada($canal_entrada)
+    {
+        
+        $this->canal_entrada = $canal_entrada;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_pontuacao
+     * @return int
+     */
+    public function getValorPontuacao()
+    {
+        return $this->valor_pontuacao;
+    }
+  
+    /**
+     * Sets valor_pontuacao
+     * @param int $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+     * @return $this
+     */
+    public function setValorPontuacao($valor_pontuacao)
+    {
+        
+        $this->valor_pontuacao = $valor_pontuacao;
+        return $this;
+    }
+    
+    /**
      * Gets telefones
      * @return \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
      */
@@ -580,6 +720,90 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     {
         
         $this->socios = $socios;
+        return $this;
+    }
+    
+    /**
+     * Gets referencias_comerciais
+     * @return \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+     */
+    public function getReferenciasComerciais()
+    {
+        return $this->referencias_comerciais;
+    }
+  
+    /**
+     * Sets referencias_comerciais
+     * @param \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[] $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+     * @return $this
+     */
+    public function setReferenciasComerciais($referencias_comerciais)
+    {
+        
+        $this->referencias_comerciais = $referencias_comerciais;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_global
+     * @return Number
+     */
+    public function getLimiteGlobal()
+    {
+        return $this->limite_global;
+    }
+  
+    /**
+     * Sets limite_global
+     * @param Number $limite_global Valor do Limite Global
+     * @return $this
+     */
+    public function setLimiteGlobal($limite_global)
+    {
+        
+        $this->limite_global = $limite_global;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_maximo
+     * @return Number
+     */
+    public function getLimiteMaximo()
+    {
+        return $this->limite_maximo;
+    }
+  
+    /**
+     * Sets limite_maximo
+     * @param Number $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+     * @return $this
+     */
+    public function setLimiteMaximo($limite_maximo)
+    {
+        
+        $this->limite_maximo = $limite_maximo;
+        return $this;
+    }
+    
+    /**
+     * Gets limite_parcelas
+     * @return Number
+     */
+    public function getLimiteParcelas()
+    {
+        return $this->limite_parcelas;
+    }
+  
+    /**
+     * Sets limite_parcelas
+     * @param Number $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+     * @return $this
+     */
+    public function setLimiteParcelas($limite_parcelas)
+    {
+        
+        $this->limite_parcelas = $limite_parcelas;
         return $this;
     }
     

@@ -51,26 +51,13 @@ class PessoaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse[]',
-        'first' => 'bool',
-        'first_page' => 'bool',
-        'has_content' => 'bool',
-        'has_next_page' => 'bool',
-        'has_previous_page' => 'bool',
         'id_pessoa' => 'int',
-        'last' => 'bool',
-        'next_page' => 'int',
-        'number' => 'int',
-        'number_of_elements' => 'int',
-        'previous_page' => 'int',
-        'size' => 'int',
-        'total_elements' => 'int',
-        'total_pages' => 'int',
         'nome_mae' => 'string',
         'id_estado_civil' => 'int',
-        'profissao' => 'string',
+        'id_profissao' => 'string',
         'id_natureza_ocupacao' => 'int',
         'id_nacionalidade' => 'int',
+        'numero_banco' => 'int',
         'numero_agencia' => 'int',
         'numero_conta_corrente' => 'string',
         'email' => 'string',
@@ -86,26 +73,13 @@ class PessoaDetalheResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'content' => 'content',
-        'first' => 'first',
-        'first_page' => 'firstPage',
-        'has_content' => 'hasContent',
-        'has_next_page' => 'hasNextPage',
-        'has_previous_page' => 'hasPreviousPage',
         'id_pessoa' => 'idPessoa',
-        'last' => 'last',
-        'next_page' => 'nextPage',
-        'number' => 'number',
-        'number_of_elements' => 'numberOfElements',
-        'previous_page' => 'previousPage',
-        'size' => 'size',
-        'total_elements' => 'totalElements',
-        'total_pages' => 'totalPages',
         'nome_mae' => 'nomeMae',
         'id_estado_civil' => 'idEstadoCivil',
-        'profissao' => 'profissao',
+        'id_profissao' => 'idProfissao',
         'id_natureza_ocupacao' => 'idNaturezaOcupacao',
         'id_nacionalidade' => 'idNacionalidade',
+        'numero_banco' => 'numeroBanco',
         'numero_agencia' => 'numeroAgencia',
         'numero_conta_corrente' => 'numeroContaCorrente',
         'email' => 'email',
@@ -121,26 +95,13 @@ class PessoaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'content' => 'setContent',
-        'first' => 'setFirst',
-        'first_page' => 'setFirstPage',
-        'has_content' => 'setHasContent',
-        'has_next_page' => 'setHasNextPage',
-        'has_previous_page' => 'setHasPreviousPage',
         'id_pessoa' => 'setIdPessoa',
-        'last' => 'setLast',
-        'next_page' => 'setNextPage',
-        'number' => 'setNumber',
-        'number_of_elements' => 'setNumberOfElements',
-        'previous_page' => 'setPreviousPage',
-        'size' => 'setSize',
-        'total_elements' => 'setTotalElements',
-        'total_pages' => 'setTotalPages',
         'nome_mae' => 'setNomeMae',
         'id_estado_civil' => 'setIdEstadoCivil',
-        'profissao' => 'setProfissao',
+        'id_profissao' => 'setIdProfissao',
         'id_natureza_ocupacao' => 'setIdNaturezaOcupacao',
         'id_nacionalidade' => 'setIdNacionalidade',
+        'numero_banco' => 'setNumeroBanco',
         'numero_agencia' => 'setNumeroAgencia',
         'numero_conta_corrente' => 'setNumeroContaCorrente',
         'email' => 'setEmail',
@@ -156,26 +117,13 @@ class PessoaDetalheResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'content' => 'getContent',
-        'first' => 'getFirst',
-        'first_page' => 'getFirstPage',
-        'has_content' => 'getHasContent',
-        'has_next_page' => 'getHasNextPage',
-        'has_previous_page' => 'getHasPreviousPage',
         'id_pessoa' => 'getIdPessoa',
-        'last' => 'getLast',
-        'next_page' => 'getNextPage',
-        'number' => 'getNumber',
-        'number_of_elements' => 'getNumberOfElements',
-        'previous_page' => 'getPreviousPage',
-        'size' => 'getSize',
-        'total_elements' => 'getTotalElements',
-        'total_pages' => 'getTotalPages',
         'nome_mae' => 'getNomeMae',
         'id_estado_civil' => 'getIdEstadoCivil',
-        'profissao' => 'getProfissao',
+        'id_profissao' => 'getIdProfissao',
         'id_natureza_ocupacao' => 'getIdNaturezaOcupacao',
         'id_nacionalidade' => 'getIdNacionalidade',
+        'numero_banco' => 'getNumeroBanco',
         'numero_agencia' => 'getNumeroAgencia',
         'numero_conta_corrente' => 'getNumeroContaCorrente',
         'email' => 'getEmail',
@@ -188,94 +136,10 @@ class PessoaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $content 
-      * @var \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse[]
-      */
-    protected $content;
-    
-    /**
-      * $first 
-      * @var bool
-      */
-    protected $first;
-    
-    /**
-      * $first_page 
-      * @var bool
-      */
-    protected $first_page;
-    
-    /**
-      * $has_content 
-      * @var bool
-      */
-    protected $has_content;
-    
-    /**
-      * $has_next_page 
-      * @var bool
-      */
-    protected $has_next_page;
-    
-    /**
-      * $has_previous_page 
-      * @var bool
-      */
-    protected $has_previous_page;
-    
-    /**
       * $id_pessoa C\u00C3\u00B3digo identificador da pessoa
       * @var int
       */
     protected $id_pessoa;
-    
-    /**
-      * $last 
-      * @var bool
-      */
-    protected $last;
-    
-    /**
-      * $next_page 
-      * @var int
-      */
-    protected $next_page;
-    
-    /**
-      * $number 
-      * @var int
-      */
-    protected $number;
-    
-    /**
-      * $number_of_elements 
-      * @var int
-      */
-    protected $number_of_elements;
-    
-    /**
-      * $previous_page 
-      * @var int
-      */
-    protected $previous_page;
-    
-    /**
-      * $size 
-      * @var int
-      */
-    protected $size;
-    
-    /**
-      * $total_elements 
-      * @var int
-      */
-    protected $total_elements;
-    
-    /**
-      * $total_pages 
-      * @var int
-      */
-    protected $total_pages;
     
     /**
       * $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
@@ -290,10 +154,10 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
       * @var string
       */
-    protected $profissao;
+    protected $id_profissao;
     
     /**
       * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -306,6 +170,12 @@ class PessoaDetalheResponse implements ArrayAccess
       * @var int
       */
     protected $id_nacionalidade;
+    
+    /**
+      * $numero_banco N\u00C3\u00BAmero do banco.
+      * @var int
+      */
+    protected $numero_banco;
     
     /**
       * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
@@ -340,157 +210,18 @@ class PessoaDetalheResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->content = $data["content"];
-            $this->first = $data["first"];
-            $this->first_page = $data["first_page"];
-            $this->has_content = $data["has_content"];
-            $this->has_next_page = $data["has_next_page"];
-            $this->has_previous_page = $data["has_previous_page"];
             $this->id_pessoa = $data["id_pessoa"];
-            $this->last = $data["last"];
-            $this->next_page = $data["next_page"];
-            $this->number = $data["number"];
-            $this->number_of_elements = $data["number_of_elements"];
-            $this->previous_page = $data["previous_page"];
-            $this->size = $data["size"];
-            $this->total_elements = $data["total_elements"];
-            $this->total_pages = $data["total_pages"];
             $this->nome_mae = $data["nome_mae"];
             $this->id_estado_civil = $data["id_estado_civil"];
-            $this->profissao = $data["profissao"];
+            $this->id_profissao = $data["id_profissao"];
             $this->id_natureza_ocupacao = $data["id_natureza_ocupacao"];
             $this->id_nacionalidade = $data["id_nacionalidade"];
+            $this->numero_banco = $data["numero_banco"];
             $this->numero_agencia = $data["numero_agencia"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
             $this->email = $data["email"];
             $this->nome_empresa = $data["nome_empresa"];
         }
-    }
-    
-    /**
-     * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse[]
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-  
-    /**
-     * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse[] $content 
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        
-        $this->content = $content;
-        return $this;
-    }
-    
-    /**
-     * Gets first
-     * @return bool
-     */
-    public function getFirst()
-    {
-        return $this->first;
-    }
-  
-    /**
-     * Sets first
-     * @param bool $first 
-     * @return $this
-     */
-    public function setFirst($first)
-    {
-        
-        $this->first = $first;
-        return $this;
-    }
-    
-    /**
-     * Gets first_page
-     * @return bool
-     */
-    public function getFirstPage()
-    {
-        return $this->first_page;
-    }
-  
-    /**
-     * Sets first_page
-     * @param bool $first_page 
-     * @return $this
-     */
-    public function setFirstPage($first_page)
-    {
-        
-        $this->first_page = $first_page;
-        return $this;
-    }
-    
-    /**
-     * Gets has_content
-     * @return bool
-     */
-    public function getHasContent()
-    {
-        return $this->has_content;
-    }
-  
-    /**
-     * Sets has_content
-     * @param bool $has_content 
-     * @return $this
-     */
-    public function setHasContent($has_content)
-    {
-        
-        $this->has_content = $has_content;
-        return $this;
-    }
-    
-    /**
-     * Gets has_next_page
-     * @return bool
-     */
-    public function getHasNextPage()
-    {
-        return $this->has_next_page;
-    }
-  
-    /**
-     * Sets has_next_page
-     * @param bool $has_next_page 
-     * @return $this
-     */
-    public function setHasNextPage($has_next_page)
-    {
-        
-        $this->has_next_page = $has_next_page;
-        return $this;
-    }
-    
-    /**
-     * Gets has_previous_page
-     * @return bool
-     */
-    public function getHasPreviousPage()
-    {
-        return $this->has_previous_page;
-    }
-  
-    /**
-     * Sets has_previous_page
-     * @param bool $has_previous_page 
-     * @return $this
-     */
-    public function setHasPreviousPage($has_previous_page)
-    {
-        
-        $this->has_previous_page = $has_previous_page;
-        return $this;
     }
     
     /**
@@ -511,174 +242,6 @@ class PessoaDetalheResponse implements ArrayAccess
     {
         
         $this->id_pessoa = $id_pessoa;
-        return $this;
-    }
-    
-    /**
-     * Gets last
-     * @return bool
-     */
-    public function getLast()
-    {
-        return $this->last;
-    }
-  
-    /**
-     * Sets last
-     * @param bool $last 
-     * @return $this
-     */
-    public function setLast($last)
-    {
-        
-        $this->last = $last;
-        return $this;
-    }
-    
-    /**
-     * Gets next_page
-     * @return int
-     */
-    public function getNextPage()
-    {
-        return $this->next_page;
-    }
-  
-    /**
-     * Sets next_page
-     * @param int $next_page 
-     * @return $this
-     */
-    public function setNextPage($next_page)
-    {
-        
-        $this->next_page = $next_page;
-        return $this;
-    }
-    
-    /**
-     * Gets number
-     * @return int
-     */
-    public function getNumber()
-    {
-        return $this->number;
-    }
-  
-    /**
-     * Sets number
-     * @param int $number 
-     * @return $this
-     */
-    public function setNumber($number)
-    {
-        
-        $this->number = $number;
-        return $this;
-    }
-    
-    /**
-     * Gets number_of_elements
-     * @return int
-     */
-    public function getNumberOfElements()
-    {
-        return $this->number_of_elements;
-    }
-  
-    /**
-     * Sets number_of_elements
-     * @param int $number_of_elements 
-     * @return $this
-     */
-    public function setNumberOfElements($number_of_elements)
-    {
-        
-        $this->number_of_elements = $number_of_elements;
-        return $this;
-    }
-    
-    /**
-     * Gets previous_page
-     * @return int
-     */
-    public function getPreviousPage()
-    {
-        return $this->previous_page;
-    }
-  
-    /**
-     * Sets previous_page
-     * @param int $previous_page 
-     * @return $this
-     */
-    public function setPreviousPage($previous_page)
-    {
-        
-        $this->previous_page = $previous_page;
-        return $this;
-    }
-    
-    /**
-     * Gets size
-     * @return int
-     */
-    public function getSize()
-    {
-        return $this->size;
-    }
-  
-    /**
-     * Sets size
-     * @param int $size 
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        
-        $this->size = $size;
-        return $this;
-    }
-    
-    /**
-     * Gets total_elements
-     * @return int
-     */
-    public function getTotalElements()
-    {
-        return $this->total_elements;
-    }
-  
-    /**
-     * Sets total_elements
-     * @param int $total_elements 
-     * @return $this
-     */
-    public function setTotalElements($total_elements)
-    {
-        
-        $this->total_elements = $total_elements;
-        return $this;
-    }
-    
-    /**
-     * Gets total_pages
-     * @return int
-     */
-    public function getTotalPages()
-    {
-        return $this->total_pages;
-    }
-  
-    /**
-     * Sets total_pages
-     * @param int $total_pages 
-     * @return $this
-     */
-    public function setTotalPages($total_pages)
-    {
-        
-        $this->total_pages = $total_pages;
         return $this;
     }
     
@@ -725,23 +288,23 @@ class PessoaDetalheResponse implements ArrayAccess
     }
     
     /**
-     * Gets profissao
+     * Gets id_profissao
      * @return string
      */
-    public function getProfissao()
+    public function getIdProfissao()
     {
-        return $this->profissao;
+        return $this->id_profissao;
     }
   
     /**
-     * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * Sets id_profissao
+     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
      * @return $this
      */
-    public function setProfissao($profissao)
+    public function setIdProfissao($id_profissao)
     {
         
-        $this->profissao = $profissao;
+        $this->id_profissao = $id_profissao;
         return $this;
     }
     
@@ -784,6 +347,27 @@ class PessoaDetalheResponse implements ArrayAccess
     {
         
         $this->id_nacionalidade = $id_nacionalidade;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_banco
+     * @return int
+     */
+    public function getNumeroBanco()
+    {
+        return $this->numero_banco;
+    }
+  
+    /**
+     * Sets numero_banco
+     * @param int $numero_banco N\u00C3\u00BAmero do banco.
+     * @return $this
+     */
+    public function setNumeroBanco($numero_banco)
+    {
+        
+        $this->numero_banco = $numero_banco;
         return $this;
     }
     

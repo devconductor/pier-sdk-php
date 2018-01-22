@@ -96,12 +96,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for bloquearUsingPUT
+     * Test case for bloquearUsingPOST
      *
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_bloquearUsingPUT() {
+    public function test_bloquearUsingPOST() {
 
     }
     
@@ -116,12 +116,32 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarDadosCartaoUsingGET
+     * Test case for cancelarUsingPOST
+     *
+     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_cancelarUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for consultarCartaoImpressaoUsingGET
+     *
+     * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+     *
+     */
+    public function test_consultarCartaoImpressaoUsingGET() {
+
+    }
+    
+    /**
+     * Test case for consultarDadosReaisCartaoUsingGET
      *
      * Consultar Detalhes do Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarDadosCartaoUsingGET() {
+    public function test_consultarDadosReaisCartaoUsingGET() {
 
     }
     
@@ -156,12 +176,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET2
+     * Test case for consultarUsingGET7
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET2() {
+    public function test_consultarUsingGET7() {
 
     }
     
@@ -176,12 +196,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for desbloquearUsingPUT
+     * Test case for desbloquearUsingPOST
      *
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_desbloquearUsingPUT() {
+    public function test_desbloquearUsingPOST() {
 
     }
     
@@ -206,6 +226,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for lancarTarifaSegundaViaUsingPOST
+     *
+     * Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+     *
+     */
+    public function test_lancarTarifaSegundaViaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for listarLotesCartoesPrePagosUsingGET
      *
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -216,12 +246,22 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET3
+     * Test case for listarUsingGET7
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET3() {
+    public function test_listarUsingGET7() {
+
+    }
+    
+    /**
+     * Test case for reativarUsingPOST
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     *
+     */
+    public function test_reativarUsingPOST() {
 
     }
     

@@ -54,15 +54,16 @@ class OportunidadeAUDResponse implements ArrayAccess
         'id' => 'int',
         'id_tipo_oportunidade' => 'int',
         'id_status_oportunidade' => 'int',
-        'data_cadastro' => '\DateTime',
-        'data_atualizacao' => '\DateTime',
+        'data_cadastro' => 'string',
+        'data_atualizacao' => 'string',
         'numero_receita_federal' => 'string',
-        'data_inicio_vigencia' => '\DateTime',
-        'data_fim_vigencia' => '\DateTime',
+        'data_inicio_vigencia' => 'string',
+        'data_fim_vigencia' => 'string',
         'flag_ativo' => 'bool',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\CdtDetalheOportunidadeAUD[]',
-        'rev_date' => '\DateTime',
-        'rev_type' => 'int'
+        'rev_date' => 'string',
+        'rev_type' => 'int',
+        'rev' => 'int'
     );
   
     static function swaggerTypes() {
@@ -85,7 +86,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'flagAtivo',
         'detalhes' => 'detalhes',
         'rev_date' => 'revDate',
-        'rev_type' => 'revType'
+        'rev_type' => 'revType',
+        'rev' => 'rev'
     );
   
     static function attributeMap() {
@@ -108,7 +110,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'setFlagAtivo',
         'detalhes' => 'setDetalhes',
         'rev_date' => 'setRevDate',
-        'rev_type' => 'setRevType'
+        'rev_type' => 'setRevType',
+        'rev' => 'setRev'
     );
   
     static function setters() {
@@ -131,7 +134,8 @@ class OportunidadeAUDResponse implements ArrayAccess
         'flag_ativo' => 'getFlagAtivo',
         'detalhes' => 'getDetalhes',
         'rev_date' => 'getRevDate',
-        'rev_type' => 'getRevType'
+        'rev_type' => 'getRevType',
+        'rev' => 'getRev'
     );
   
     static function getters() {
@@ -159,13 +163,13 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
       * $data_cadastro Data cadastro da oportunidade.
-      * @var \DateTime
+      * @var string
       */
     protected $data_cadastro;
     
     /**
       * $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
-      * @var \DateTime
+      * @var string
       */
     protected $data_atualizacao;
     
@@ -177,13 +181,13 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
       * $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-      * @var \DateTime
+      * @var string
       */
     protected $data_inicio_vigencia;
     
     /**
       * $data_fim_vigencia fim da vig\u00C3\u00AAncia da oportunidade
-      * @var \DateTime
+      * @var string
       */
     protected $data_fim_vigencia;
     
@@ -201,7 +205,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
       * $rev_date Data da auditoria
-      * @var \DateTime
+      * @var string
       */
     protected $rev_date;
     
@@ -210,6 +214,12 @@ class OportunidadeAUDResponse implements ArrayAccess
       * @var int
       */
     protected $rev_type;
+    
+    /**
+      * $rev Identificador da auditoria
+      * @var int
+      */
+    protected $rev;
     
 
     /**
@@ -232,6 +242,7 @@ class OportunidadeAUDResponse implements ArrayAccess
             $this->detalhes = $data["detalhes"];
             $this->rev_date = $data["rev_date"];
             $this->rev_type = $data["rev_type"];
+            $this->rev = $data["rev"];
         }
     }
     
@@ -300,7 +311,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets data_cadastro
-     * @return \DateTime
+     * @return string
      */
     public function getDataCadastro()
     {
@@ -309,7 +320,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param \DateTime $data_cadastro Data cadastro da oportunidade.
+     * @param string $data_cadastro Data cadastro da oportunidade.
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -321,7 +332,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets data_atualizacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataAtualizacao()
     {
@@ -330,7 +341,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_atualizacao
-     * @param \DateTime $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+     * @param string $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
      * @return $this
      */
     public function setDataAtualizacao($data_atualizacao)
@@ -363,7 +374,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets data_inicio_vigencia
-     * @return \DateTime
+     * @return string
      */
     public function getDataInicioVigencia()
     {
@@ -372,7 +383,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_inicio_vigencia
-     * @param \DateTime $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @return $this
      */
     public function setDataInicioVigencia($data_inicio_vigencia)
@@ -384,7 +395,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets data_fim_vigencia
-     * @return \DateTime
+     * @return string
      */
     public function getDataFimVigencia()
     {
@@ -393,7 +404,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_fim_vigencia
-     * @param \DateTime $data_fim_vigencia fim da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_fim_vigencia fim da vig\u00C3\u00AAncia da oportunidade
      * @return $this
      */
     public function setDataFimVigencia($data_fim_vigencia)
@@ -447,7 +458,7 @@ class OportunidadeAUDResponse implements ArrayAccess
     
     /**
      * Gets rev_date
-     * @return \DateTime
+     * @return string
      */
     public function getRevDate()
     {
@@ -456,7 +467,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_date
-     * @param \DateTime $rev_date Data da auditoria
+     * @param string $rev_date Data da auditoria
      * @return $this
      */
     public function setRevDate($rev_date)
@@ -484,6 +495,27 @@ class OportunidadeAUDResponse implements ArrayAccess
     {
         
         $this->rev_type = $rev_type;
+        return $this;
+    }
+    
+    /**
+     * Gets rev
+     * @return int
+     */
+    public function getRev()
+    {
+        return $this->rev;
+    }
+  
+    /**
+     * Sets rev
+     * @param int $rev Identificador da auditoria
+     * @return $this
+     */
+    public function setRev($rev)
+    {
+        
+        $this->rev = $rev;
         return $this;
     }
     

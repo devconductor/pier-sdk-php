@@ -66,59 +66,29 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     */
-    public function test_consultarUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET10
+     * Test case for consultarUsingGET24
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
      */
-    public function test_consultarUsingGET10() {
+    public function test_consultarUsingGET24() {
 
     }
     
     /**
-     * Test case for informarRiscoFraudeUsingPOST
+     * Test case for listarTiposResolucaoUsingGET
      *
-     * Receber Risco Fraude
-     *
-     */
-    public function test_informarRiscoFraudeUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET1
-     *
-     * Lista todos os atendimentos
+     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
      *
      */
-    public function test_listarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET14
-     *
-     * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-     *
-     */
-    public function test_listarUsingGET14() {
+    public function test_listarTiposResolucaoUsingGET() {
 
     }
     
     /**
      * Test case for negarUsingPOST
      *
-     * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      */
     public function test_negarUsingPOST() {
@@ -128,20 +98,10 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for reconhecerUsingPOST
      *
-     * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
      *
      */
     public function test_reconhecerUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST1
-     *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
-     *
-     */
-    public function test_salvarUsingPOST1() {
 
     }
     

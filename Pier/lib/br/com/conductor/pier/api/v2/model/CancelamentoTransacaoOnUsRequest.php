@@ -51,18 +51,17 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'nsu_autorizacao_transacao_cancelada' => 'string',
         'nsu_origem' => 'string',
+        'nsu_origem_transacao_cancelada' => 'string',
         'codigo_processamento' => 'string',
+        'data_hora_transacao_cancelada' => 'string',
         'valor_transacao' => 'Number',
         'numero_real_cartao' => 'string',
         'data_validade_cartao' => 'string',
         'numero_estabelecimento' => 'int',
-        'data_hora_terminal' => '\DateTime',
-        'terminal_requisitante' => 'string',
-        'nsu_origem_transacao_cancelada' => 'string',
-        'data_hora_transacao_cancelada' => '\DateTime',
-        'codigo_transacao_cancelada' => 'string',
-        'nsu_autorizacao_transacao_cancelada' => 'string'
+        'data_hora_terminal' => 'string',
+        'terminal_requisitante' => 'string'
     );
   
     static function swaggerTypes() {
@@ -74,18 +73,17 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'nsu_autorizacao_transacao_cancelada' => 'nsuAutorizacaoTransacaoCancelada',
         'nsu_origem' => 'nsuOrigem',
+        'nsu_origem_transacao_cancelada' => 'nsuOrigemTransacaoCancelada',
         'codigo_processamento' => 'codigoProcessamento',
+        'data_hora_transacao_cancelada' => 'dataHoraTransacaoCancelada',
         'valor_transacao' => 'valorTransacao',
         'numero_real_cartao' => 'numeroRealCartao',
         'data_validade_cartao' => 'dataValidadeCartao',
         'numero_estabelecimento' => 'numeroEstabelecimento',
         'data_hora_terminal' => 'dataHoraTerminal',
-        'terminal_requisitante' => 'terminalRequisitante',
-        'nsu_origem_transacao_cancelada' => 'nsuOrigemTransacaoCancelada',
-        'data_hora_transacao_cancelada' => 'dataHoraTransacaoCancelada',
-        'codigo_transacao_cancelada' => 'codigoTransacaoCancelada',
-        'nsu_autorizacao_transacao_cancelada' => 'nsuAutorizacaoTransacaoCancelada'
+        'terminal_requisitante' => 'terminalRequisitante'
     );
   
     static function attributeMap() {
@@ -97,18 +95,17 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'nsu_autorizacao_transacao_cancelada' => 'setNsuAutorizacaoTransacaoCancelada',
         'nsu_origem' => 'setNsuOrigem',
+        'nsu_origem_transacao_cancelada' => 'setNsuOrigemTransacaoCancelada',
         'codigo_processamento' => 'setCodigoProcessamento',
+        'data_hora_transacao_cancelada' => 'setDataHoraTransacaoCancelada',
         'valor_transacao' => 'setValorTransacao',
         'numero_real_cartao' => 'setNumeroRealCartao',
         'data_validade_cartao' => 'setDataValidadeCartao',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
         'data_hora_terminal' => 'setDataHoraTerminal',
-        'terminal_requisitante' => 'setTerminalRequisitante',
-        'nsu_origem_transacao_cancelada' => 'setNsuOrigemTransacaoCancelada',
-        'data_hora_transacao_cancelada' => 'setDataHoraTransacaoCancelada',
-        'codigo_transacao_cancelada' => 'setCodigoTransacaoCancelada',
-        'nsu_autorizacao_transacao_cancelada' => 'setNsuAutorizacaoTransacaoCancelada'
+        'terminal_requisitante' => 'setTerminalRequisitante'
     );
   
     static function setters() {
@@ -120,18 +117,17 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'nsu_autorizacao_transacao_cancelada' => 'getNsuAutorizacaoTransacaoCancelada',
         'nsu_origem' => 'getNsuOrigem',
+        'nsu_origem_transacao_cancelada' => 'getNsuOrigemTransacaoCancelada',
         'codigo_processamento' => 'getCodigoProcessamento',
+        'data_hora_transacao_cancelada' => 'getDataHoraTransacaoCancelada',
         'valor_transacao' => 'getValorTransacao',
         'numero_real_cartao' => 'getNumeroRealCartao',
         'data_validade_cartao' => 'getDataValidadeCartao',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
         'data_hora_terminal' => 'getDataHoraTerminal',
-        'terminal_requisitante' => 'getTerminalRequisitante',
-        'nsu_origem_transacao_cancelada' => 'getNsuOrigemTransacaoCancelada',
-        'data_hora_transacao_cancelada' => 'getDataHoraTransacaoCancelada',
-        'codigo_transacao_cancelada' => 'getCodigoTransacaoCancelada',
-        'nsu_autorizacao_transacao_cancelada' => 'getNsuAutorizacaoTransacaoCancelada'
+        'terminal_requisitante' => 'getTerminalRequisitante'
     );
   
     static function getters() {
@@ -140,16 +136,34 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
 
     
     /**
+      * $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+      * @var string
+      */
+    protected $nsu_autorizacao_transacao_cancelada;
+    
+    /**
       * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
       * @var string
       */
     protected $nsu_origem;
     
     /**
+      * $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+      * @var string
+      */
+    protected $nsu_origem_transacao_cancelada;
+    
+    /**
       * $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
       * @var string
       */
     protected $codigo_processamento;
+    
+    /**
+      * $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+      * @var string
+      */
+    protected $data_hora_transacao_cancelada;
     
     /**
       * $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -177,7 +191,7 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     
     /**
       * $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_terminal;
     
@@ -186,30 +200,6 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
       * @var string
       */
     protected $terminal_requisitante;
-    
-    /**
-      * $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
-      * @var string
-      */
-    protected $nsu_origem_transacao_cancelada;
-    
-    /**
-      * $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-      * @var \DateTime
-      */
-    protected $data_hora_transacao_cancelada;
-    
-    /**
-      * $codigo_transacao_cancelada C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
-      * @var string
-      */
-    protected $codigo_transacao_cancelada;
-    
-    /**
-      * $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
-      * @var string
-      */
-    protected $nsu_autorizacao_transacao_cancelada;
     
 
     /**
@@ -220,19 +210,39 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->nsu_autorizacao_transacao_cancelada = $data["nsu_autorizacao_transacao_cancelada"];
             $this->nsu_origem = $data["nsu_origem"];
+            $this->nsu_origem_transacao_cancelada = $data["nsu_origem_transacao_cancelada"];
             $this->codigo_processamento = $data["codigo_processamento"];
+            $this->data_hora_transacao_cancelada = $data["data_hora_transacao_cancelada"];
             $this->valor_transacao = $data["valor_transacao"];
             $this->numero_real_cartao = $data["numero_real_cartao"];
             $this->data_validade_cartao = $data["data_validade_cartao"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
             $this->data_hora_terminal = $data["data_hora_terminal"];
             $this->terminal_requisitante = $data["terminal_requisitante"];
-            $this->nsu_origem_transacao_cancelada = $data["nsu_origem_transacao_cancelada"];
-            $this->data_hora_transacao_cancelada = $data["data_hora_transacao_cancelada"];
-            $this->codigo_transacao_cancelada = $data["codigo_transacao_cancelada"];
-            $this->nsu_autorizacao_transacao_cancelada = $data["nsu_autorizacao_transacao_cancelada"];
         }
+    }
+    
+    /**
+     * Gets nsu_autorizacao_transacao_cancelada
+     * @return string
+     */
+    public function getNsuAutorizacaoTransacaoCancelada()
+    {
+        return $this->nsu_autorizacao_transacao_cancelada;
+    }
+  
+    /**
+     * Sets nsu_autorizacao_transacao_cancelada
+     * @param string $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+     * @return $this
+     */
+    public function setNsuAutorizacaoTransacaoCancelada($nsu_autorizacao_transacao_cancelada)
+    {
+        
+        $this->nsu_autorizacao_transacao_cancelada = $nsu_autorizacao_transacao_cancelada;
+        return $this;
     }
     
     /**
@@ -257,6 +267,27 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     }
     
     /**
+     * Gets nsu_origem_transacao_cancelada
+     * @return string
+     */
+    public function getNsuOrigemTransacaoCancelada()
+    {
+        return $this->nsu_origem_transacao_cancelada;
+    }
+  
+    /**
+     * Sets nsu_origem_transacao_cancelada
+     * @param string $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+     * @return $this
+     */
+    public function setNsuOrigemTransacaoCancelada($nsu_origem_transacao_cancelada)
+    {
+        
+        $this->nsu_origem_transacao_cancelada = $nsu_origem_transacao_cancelada;
+        return $this;
+    }
+    
+    /**
      * Gets codigo_processamento
      * @return string
      */
@@ -274,6 +305,27 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     {
         
         $this->codigo_processamento = $codigo_processamento;
+        return $this;
+    }
+    
+    /**
+     * Gets data_hora_transacao_cancelada
+     * @return string
+     */
+    public function getDataHoraTransacaoCancelada()
+    {
+        return $this->data_hora_transacao_cancelada;
+    }
+  
+    /**
+     * Sets data_hora_transacao_cancelada
+     * @param string $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+     * @return $this
+     */
+    public function setDataHoraTransacaoCancelada($data_hora_transacao_cancelada)
+    {
+        
+        $this->data_hora_transacao_cancelada = $data_hora_transacao_cancelada;
         return $this;
     }
     
@@ -363,7 +415,7 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     
     /**
      * Gets data_hora_terminal
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraTerminal()
     {
@@ -372,7 +424,7 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets data_hora_terminal
-     * @param \DateTime $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+     * @param string $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
      * @return $this
      */
     public function setDataHoraTerminal($data_hora_terminal)
@@ -400,90 +452,6 @@ class CancelamentoTransacaoOnUsRequest implements ArrayAccess
     {
         
         $this->terminal_requisitante = $terminal_requisitante;
-        return $this;
-    }
-    
-    /**
-     * Gets nsu_origem_transacao_cancelada
-     * @return string
-     */
-    public function getNsuOrigemTransacaoCancelada()
-    {
-        return $this->nsu_origem_transacao_cancelada;
-    }
-  
-    /**
-     * Sets nsu_origem_transacao_cancelada
-     * @param string $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
-     * @return $this
-     */
-    public function setNsuOrigemTransacaoCancelada($nsu_origem_transacao_cancelada)
-    {
-        
-        $this->nsu_origem_transacao_cancelada = $nsu_origem_transacao_cancelada;
-        return $this;
-    }
-    
-    /**
-     * Gets data_hora_transacao_cancelada
-     * @return \DateTime
-     */
-    public function getDataHoraTransacaoCancelada()
-    {
-        return $this->data_hora_transacao_cancelada;
-    }
-  
-    /**
-     * Sets data_hora_transacao_cancelada
-     * @param \DateTime $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-     * @return $this
-     */
-    public function setDataHoraTransacaoCancelada($data_hora_transacao_cancelada)
-    {
-        
-        $this->data_hora_transacao_cancelada = $data_hora_transacao_cancelada;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_transacao_cancelada
-     * @return string
-     */
-    public function getCodigoTransacaoCancelada()
-    {
-        return $this->codigo_transacao_cancelada;
-    }
-  
-    /**
-     * Sets codigo_transacao_cancelada
-     * @param string $codigo_transacao_cancelada C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
-     * @return $this
-     */
-    public function setCodigoTransacaoCancelada($codigo_transacao_cancelada)
-    {
-        
-        $this->codigo_transacao_cancelada = $codigo_transacao_cancelada;
-        return $this;
-    }
-    
-    /**
-     * Gets nsu_autorizacao_transacao_cancelada
-     * @return string
-     */
-    public function getNsuAutorizacaoTransacaoCancelada()
-    {
-        return $this->nsu_autorizacao_transacao_cancelada;
-    }
-  
-    /**
-     * Sets nsu_autorizacao_transacao_cancelada
-     * @param string $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
-     * @return $this
-     */
-    public function setNsuAutorizacaoTransacaoCancelada($nsu_autorizacao_transacao_cancelada)
-    {
-        
-        $this->nsu_autorizacao_transacao_cancelada = $nsu_autorizacao_transacao_cancelada;
         return $this;
     }
     

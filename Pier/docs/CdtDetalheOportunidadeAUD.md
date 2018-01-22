@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **id_oportunidade** | **int** |  | [optional] 
 **nome_campo** | **string** |  | [optional] 
 **rev** | **int** |  | [optional] 
-**rev_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**rev_date** | **string** |  | [optional] 
 **rev_oportunidade** | **int** |  | [optional] 
 **rev_type** | **int** |  | [optional] 
 **rev_user** | **string** |  | [optional] 

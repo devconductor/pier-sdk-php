@@ -57,7 +57,7 @@ class TransacaoOnUsRequest implements ArrayAccess
         'numero_real_cartao' => 'string',
         'data_validade_cartao' => 'string',
         'numero_estabelecimento' => 'int',
-        'data_hora_terminal' => '\DateTime',
+        'data_hora_terminal' => 'string',
         'terminal_requisitante' => 'string'
     );
   
@@ -161,7 +161,7 @@ class TransacaoOnUsRequest implements ArrayAccess
     
     /**
       * $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-      * @var \DateTime
+      * @var string
       */
     protected $data_hora_terminal;
     
@@ -319,7 +319,7 @@ class TransacaoOnUsRequest implements ArrayAccess
     
     /**
      * Gets data_hora_terminal
-     * @return \DateTime
+     * @return string
      */
     public function getDataHoraTerminal()
     {
@@ -328,7 +328,7 @@ class TransacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets data_hora_terminal
-     * @param \DateTime $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+     * @param string $data_hora_terminal Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
      * @return $this
      */
     public function setDataHoraTerminal($data_hora_terminal)

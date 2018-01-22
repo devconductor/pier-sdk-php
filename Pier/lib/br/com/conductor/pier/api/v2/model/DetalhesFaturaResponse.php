@@ -51,8 +51,8 @@ class DetalhesFaturaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'fatura' => '\br.com.conductor.pier.api.v2.model\FaturaResponse',
-        'transacoes' => '\br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]'
+        'fatura' => '\br.com.conductor.pier.api.v2.model\FaturaFechadaResponse',
+        'transacoes' => '\br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]'
     );
   
     static function swaggerTypes() {
@@ -101,13 +101,13 @@ class DetalhesFaturaResponse implements ArrayAccess
     
     /**
       * $fatura Apresenta os detalhes da fatura
-      * @var \br.com.conductor.pier.api.v2.model\FaturaResponse
+      * @var \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse
       */
     protected $fatura;
     
     /**
       * $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
-      * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]
+      * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]
       */
     protected $transacoes;
     
@@ -127,7 +127,7 @@ class DetalhesFaturaResponse implements ArrayAccess
     
     /**
      * Gets fatura
-     * @return \br.com.conductor.pier.api.v2.model\FaturaResponse
+     * @return \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse
      */
     public function getFatura()
     {
@@ -136,7 +136,7 @@ class DetalhesFaturaResponse implements ArrayAccess
   
     /**
      * Sets fatura
-     * @param \br.com.conductor.pier.api.v2.model\FaturaResponse $fatura Apresenta os detalhes da fatura
+     * @param \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse $fatura Apresenta os detalhes da fatura
      * @return $this
      */
     public function setFatura($fatura)
@@ -148,7 +148,7 @@ class DetalhesFaturaResponse implements ArrayAccess
     
     /**
      * Gets transacoes
-     * @return \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[]
+     * @return \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]
      */
     public function getTransacoes()
     {
@@ -157,7 +157,7 @@ class DetalhesFaturaResponse implements ArrayAccess
   
     /**
      * Sets transacoes
-     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentes[] $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
      * @return $this
      */
     public function setTransacoes($transacoes)

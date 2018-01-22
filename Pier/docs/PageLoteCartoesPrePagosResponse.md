@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagos[]**](LoteCartoesPrePagos.md) |  | [optional] 
+**content** | [**\br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse[]**](LoteCartoesPrePagosResponse.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **first_page** | **bool** |  | [optional] 
 **has_content** | **bool** |  | [optional] 

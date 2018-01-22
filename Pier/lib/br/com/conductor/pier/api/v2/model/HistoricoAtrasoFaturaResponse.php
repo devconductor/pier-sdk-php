@@ -51,7 +51,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'data_vencimento' => '\DateTime',
+        'data_vencimento' => 'string',
         'dias_pagamento_apos_vencimento' => 'int'
     );
   
@@ -101,7 +101,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
     
     /**
       * $data_vencimento Data vencimento fatura.
-      * @var \DateTime
+      * @var string
       */
     protected $data_vencimento;
     
@@ -127,7 +127,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
     
     /**
      * Gets data_vencimento
-     * @return \DateTime
+     * @return string
      */
     public function getDataVencimento()
     {
@@ -136,7 +136,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param \DateTime $data_vencimento Data vencimento fatura.
+     * @param string $data_vencimento Data vencimento fatura.
      * @return $this
      */
     public function setDataVencimento($data_vencimento)

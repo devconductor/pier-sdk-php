@@ -66,22 +66,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for ajustarContaUsingPOST
+     * Test case for ajustarContaUsingPOST1
      *
      * Lan\u00C3\u00A7a um ajuste para a conta do id informado
      *
      */
-    public function test_ajustarContaUsingPOST() {
+    public function test_ajustarContaUsingPOST1() {
 
     }
     
     /**
-     * Test case for alterarLimiteUsingPUT
+     * Test case for alterarProdutoUsingPOST
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+     * Altera o produto associado \u00C3\u00A0 conta.
      *
      */
-    public function test_alterarLimiteUsingPUT() {
+    public function test_alterarProdutoUsingPOST() {
 
     }
     
@@ -106,12 +106,52 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for ativarAnuidadeUsingPOST
+     *
+     * Atribuir Anuidade
+     *
+     */
+    public function test_ativarAnuidadeUsingPOST() {
+
+    }
+    
+    /**
      * Test case for ativarEnvioFaturaEmailUsingPOST
      *
      *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
      *
      */
     public function test_ativarEnvioFaturaEmailUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for bloquearUsingPOST1
+     *
+     * Realiza o bloqueio de uma determinada Conta
+     *
+     */
+    public function test_bloquearUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for cancelarUsingPOST1
+     *
+     * Realiza o cancelamento de uma determinada Conta
+     *
+     */
+    public function test_cancelarUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for consultarBeneficioPagamentoAtrasoUsingGET
+     *
+     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     *
+     */
+    public function test_consultarBeneficioPagamentoAtrasoUsingGET() {
 
     }
     
@@ -136,82 +176,32 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarFaturaConsignadaAbertaUsingGET
+     * Test case for consultarTaxasTarifasUsingGET
      *
-     * Consultar a fatura consignadas abertas da conta
+     * Permite consultar a partir do ID da conta as taxas e tarifas
      *
      */
-    public function test_consultarFaturaConsignadaAbertaUsingGET() {
+    public function test_consultarTaxasTarifasUsingGET() {
 
     }
     
     /**
-     * Test case for consultarFaturaConsignadaUsingGET
-     *
-     * Apresenta dados de uma determinada fatura consignada
-     *
-     */
-    public function test_consultarFaturaConsignadaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarFaturaUsingGET
-     *
-     * Consultar Fatura da Conta
-     *
-     */
-    public function test_consultarFaturaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarLancamentosFuturosFaturaUsingGET
-     *
-     * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-     *
-     */
-    public function test_consultarLancamentosFuturosFaturaUsingGET() {
-
-    }
-    
-    /**
-     * Test case for consultarLimiteDisponibilidadeUsingGET1
-     *
-     * Apresenta os limites da conta
-     *
-     */
-    public function test_consultarLimiteDisponibilidadeUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET20
-     *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     *
-     */
-    public function test_consultarUsingGET20() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET21
-     *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-     *
-     */
-    public function test_consultarUsingGET21() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET3
+     * Test case for consultarUsingGET11
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET3() {
+    public function test_consultarUsingGET11() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET39
+     *
+     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     *
+     */
+    public function test_consultarUsingGET39() {
 
     }
     
@@ -236,6 +226,26 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for gerarCartaoEmbossingUsingPOST
+     *
+     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     *
+     */
+    public function test_gerarCartaoEmbossingUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for gerarCartaoProvisorioUsingPOST
+     *
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     *
+     */
+    public function test_gerarCartaoProvisorioUsingPOST() {
+
+    }
+    
+    /**
      * Test case for gerarCartaoUsingPOST
      *
      * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
@@ -246,22 +256,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarFaturasConsignadasUsingGET
+     * Test case for gerarCartaoVirtualUsingPOST
      *
-     * Lista as faturas consignadas da conta
-     *
-     */
-    public function test_listarFaturasConsignadasUsingGET() {
-
-    }
-    
-    /**
-     * Test case for listarFaturasUsingGET
-     *
-     * Lista as faturas da conta
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
      *
      */
-    public function test_listarFaturasUsingGET() {
+    public function test_gerarCartaoVirtualUsingPOST() {
 
     }
     
@@ -306,6 +306,16 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarPagamentosUsingGET
+     *
+     * Lista hist\u00C3\u00B3rico de pagamentos da conta
+     *
+     */
+    public function test_listarPagamentosUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarProcessadasUsingGET
      *
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
@@ -316,42 +326,42 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET22
-     *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     *
-     */
-    public function test_listarUsingGET22() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET23
-     *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
-     *
-     */
-    public function test_listarUsingGET23() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET4
+     * Test case for listarUsingGET13
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET4() {
+    public function test_listarUsingGET13() {
 
     }
     
     /**
-     * Test case for reativarUsingPOST
+     * Test case for listarUsingGET43
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_reativarUsingPOST() {
+    public function test_listarUsingGET43() {
+
+    }
+    
+    /**
+     * Test case for reativarUsingPOST1
+     *
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+     *
+     */
+    public function test_reativarUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for simularEmprestimoFinanciamentoUsingPOST
+     *
+     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     *
+     */
+    public function test_simularEmprestimoFinanciamentoUsingPOST() {
 
     }
     
@@ -362,16 +372,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_transacoesUsingGET() {
-
-    }
-    
-    /**
-     * Test case for transferirUsingPOST
-     *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-     *
-     */
-    public function test_transferirUsingPOST() {
 
     }
     
