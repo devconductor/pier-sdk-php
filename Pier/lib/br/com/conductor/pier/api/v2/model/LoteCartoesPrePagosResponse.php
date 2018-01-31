@@ -60,7 +60,8 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
         'quantidade' => 'int',
         'data_cadastro' => 'string',
         'usuario_cadastro' => 'string',
-        'status_processamento' => 'int'
+        'status_processamento' => 'int',
+        'identificador_externo' => 'string'
     );
   
     static function swaggerTypes() {
@@ -81,7 +82,8 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
         'quantidade' => 'quantidade',
         'data_cadastro' => 'dataCadastro',
         'usuario_cadastro' => 'usuarioCadastro',
-        'status_processamento' => 'statusProcessamento'
+        'status_processamento' => 'statusProcessamento',
+        'identificador_externo' => 'identificadorExterno'
     );
   
     static function attributeMap() {
@@ -102,7 +104,8 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
         'quantidade' => 'setQuantidade',
         'data_cadastro' => 'setDataCadastro',
         'usuario_cadastro' => 'setUsuarioCadastro',
-        'status_processamento' => 'setStatusProcessamento'
+        'status_processamento' => 'setStatusProcessamento',
+        'identificador_externo' => 'setIdentificadorExterno'
     );
   
     static function setters() {
@@ -123,7 +126,8 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
         'quantidade' => 'getQuantidade',
         'data_cadastro' => 'getDataCadastro',
         'usuario_cadastro' => 'getUsuarioCadastro',
-        'status_processamento' => 'getStatusProcessamento'
+        'status_processamento' => 'getStatusProcessamento',
+        'identificador_externo' => 'getIdentificadorExterno'
     );
   
     static function getters() {
@@ -191,6 +195,12 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
       */
     protected $status_processamento;
     
+    /**
+      * $identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+      * @var string
+      */
+    protected $identificador_externo;
+    
 
     /**
      * Constructor
@@ -210,6 +220,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
             $this->data_cadastro = $data["data_cadastro"];
             $this->usuario_cadastro = $data["usuario_cadastro"];
             $this->status_processamento = $data["status_processamento"];
+            $this->identificador_externo = $data["identificador_externo"];
         }
     }
     
@@ -420,6 +431,27 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
     {
         
         $this->status_processamento = $status_processamento;
+        return $this;
+    }
+    
+    /**
+     * Gets identificador_externo
+     * @return string
+     */
+    public function getIdentificadorExterno()
+    {
+        return $this->identificador_externo;
+    }
+  
+    /**
+     * Sets identificador_externo
+     * @param string $identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+     * @return $this
+     */
+    public function setIdentificadorExterno($identificador_externo)
+    {
+        
+        $this->identificador_externo = $identificador_externo;
         return $this;
     }
     

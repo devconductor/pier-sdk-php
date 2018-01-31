@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **data_cadastro** | **string** | Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. | 
 **usuario_cadastro** | **string** | Nome do usu\u00C3\u00A1rio que criou o lote. | 
 **status_processamento** | **int** | Indica o status de processamento do lote. | 
+**identificador_externo** | **string** | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

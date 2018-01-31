@@ -678,7 +678,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarLotesCartoesPrePagosUsingPOST**
-> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes)
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo)
 
 Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -696,9 +696,10 @@ $id_tipo_cartao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C
 $id_imagem = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
 $id_endereco = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 $quantidade_cartoes = 56; // int | N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+$identificador_externo = "identificador_externo_example"; // string | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
 
 try { 
-    $result = $api_instance->gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes);
+    $result = $api_instance->gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartaoApi->gerarLotesCartoesPrePagosUsingPOST: ', $e->getMessage(), "\n";
@@ -716,6 +717,7 @@ Name | Type | Description  | Notes
  **id_imagem** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). | [optional] 
  **id_endereco** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **quantidade_cartoes** | **int**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
+ **identificador_externo** | **string**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | [optional] 
 
 ### Return type
 
@@ -823,7 +825,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarLotesCartoesPrePagosUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento)
+> \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo)
 
 Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -847,9 +849,10 @@ $quantidade_cartoes = 56; // int | N\u00C3\u00BAmero de cart\u00C3\u00B5es exist
 $data_cadastro = "data_cadastro_example"; // string | Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
 $usuario_cadastro = "usuario_cadastro_example"; // string | Nome do Usu\u00C3\u00A1rio que criou o Lote.
 $status_processamento = 56; // int | Indica o Status de Processamento do Lote.
+$identificador_externo = "identificador_externo_example"; // string | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
 
 try { 
-    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento);
+    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartaoApi->listarLotesCartoesPrePagosUsingGET: ', $e->getMessage(), "\n";
@@ -873,6 +876,7 @@ Name | Type | Description  | Notes
  **data_cadastro** | **string**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
  **usuario_cadastro** | **string**| Nome do Usu\u00C3\u00A1rio que criou o Lote. | [optional] 
  **status_processamento** | **int**| Indica o Status de Processamento do Lote. | [optional] 
+ **identificador_externo** | **string**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | [optional] 
 
 ### Return type
 
