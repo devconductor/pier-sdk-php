@@ -100,13 +100,13 @@ class TerminalUpdate implements ArrayAccess
 
     
     /**
-      * $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
       * @var bool
       */
     protected $flag_consulta_extrato;
     
     /**
-      * $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_terminal_virtual Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
       * @var bool
       */
     protected $flag_terminal_virtual;
@@ -136,7 +136,7 @@ class TerminalUpdate implements ArrayAccess
   
     /**
      * Sets flag_consulta_extrato
-     * @param bool $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
      * @return $this
      */
     public function setFlagConsultaExtrato($flag_consulta_extrato)
@@ -157,7 +157,7 @@ class TerminalUpdate implements ArrayAccess
   
     /**
      * Sets flag_terminal_virtual
-     * @param bool $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_terminal_virtual Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
      * @return $this
      */
     public function setFlagTerminalVirtual($flag_terminal_virtual)

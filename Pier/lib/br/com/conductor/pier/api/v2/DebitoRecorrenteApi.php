@@ -235,7 +235,7 @@ class DebitoRecorrenteApi
     }
     
     /**
-     * listarUsingGET36
+     * listarUsingGET38
      *
      * Listar Tipos Debitos Recorrentes
      *
@@ -249,15 +249,15 @@ class DebitoRecorrenteApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET38($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET36WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET38WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET36WithHttpInfo
+     * listarUsingGET38WithHttpInfo
      *
      * Listar Tipos Debitos Recorrentes
      *
@@ -271,7 +271,7 @@ class DebitoRecorrenteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET38WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
         
   

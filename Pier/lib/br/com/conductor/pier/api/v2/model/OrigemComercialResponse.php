@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OrigemComercialResponse Class Doc Comment
  *
  * @category    Class
- * @description Origem Comercial
+ * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -60,7 +60,23 @@ class OrigemComercialResponse implements ArrayAccess
         'nome_tipo_origem_comercial' => 'string',
         'id_grupo_origem_comercial' => 'int',
         'nome_grupo_origem_comercial' => 'string',
-        'status' => 'bool'
+        'status' => 'int',
+        'flag_pre_aprovado' => 'bool',
+        'flag_aprovacao_imediata' => 'bool',
+        'nome_fantasia_plastico' => 'string',
+        'flag_cartao_provisorio' => 'bool',
+        'flag_cartao_definitivo' => 'bool',
+        'usuario' => 'string',
+        'senha' => 'string',
+        'flag_origem_externa' => 'bool',
+        'flag_modificado' => 'bool',
+        'flag_envia_fatura_usuario' => 'bool',
+        'flag_credito_faturamento' => 'bool',
+        'flag_concede_limite_provisorio' => 'bool',
+        'flag_digitalizar_doc' => 'bool',
+        'flag_embossing_loja' => 'bool',
+        'flag_consulta_previa' => 'bool',
+        'tipo_pessoa' => 'string'
     );
   
     static function swaggerTypes() {
@@ -81,7 +97,23 @@ class OrigemComercialResponse implements ArrayAccess
         'nome_tipo_origem_comercial' => 'nomeTipoOrigemComercial',
         'id_grupo_origem_comercial' => 'idGrupoOrigemComercial',
         'nome_grupo_origem_comercial' => 'nomeGrupoOrigemComercial',
-        'status' => 'status'
+        'status' => 'status',
+        'flag_pre_aprovado' => 'flagPreAprovado',
+        'flag_aprovacao_imediata' => 'flagAprovacaoImediata',
+        'nome_fantasia_plastico' => 'nomeFantasiaPlastico',
+        'flag_cartao_provisorio' => 'flagCartaoProvisorio',
+        'flag_cartao_definitivo' => 'flagCartaoDefinitivo',
+        'usuario' => 'usuario',
+        'senha' => 'senha',
+        'flag_origem_externa' => 'flagOrigemExterna',
+        'flag_modificado' => 'flagModificado',
+        'flag_envia_fatura_usuario' => 'flagEnviaFaturaUsuario',
+        'flag_credito_faturamento' => 'flagCreditoFaturamento',
+        'flag_concede_limite_provisorio' => 'flagConcedeLimiteProvisorio',
+        'flag_digitalizar_doc' => 'flagDigitalizarDoc',
+        'flag_embossing_loja' => 'flagEmbossingLoja',
+        'flag_consulta_previa' => 'flagConsultaPrevia',
+        'tipo_pessoa' => 'tipoPessoa'
     );
   
     static function attributeMap() {
@@ -102,7 +134,23 @@ class OrigemComercialResponse implements ArrayAccess
         'nome_tipo_origem_comercial' => 'setNomeTipoOrigemComercial',
         'id_grupo_origem_comercial' => 'setIdGrupoOrigemComercial',
         'nome_grupo_origem_comercial' => 'setNomeGrupoOrigemComercial',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'flag_pre_aprovado' => 'setFlagPreAprovado',
+        'flag_aprovacao_imediata' => 'setFlagAprovacaoImediata',
+        'nome_fantasia_plastico' => 'setNomeFantasiaPlastico',
+        'flag_cartao_provisorio' => 'setFlagCartaoProvisorio',
+        'flag_cartao_definitivo' => 'setFlagCartaoDefinitivo',
+        'usuario' => 'setUsuario',
+        'senha' => 'setSenha',
+        'flag_origem_externa' => 'setFlagOrigemExterna',
+        'flag_modificado' => 'setFlagModificado',
+        'flag_envia_fatura_usuario' => 'setFlagEnviaFaturaUsuario',
+        'flag_credito_faturamento' => 'setFlagCreditoFaturamento',
+        'flag_concede_limite_provisorio' => 'setFlagConcedeLimiteProvisorio',
+        'flag_digitalizar_doc' => 'setFlagDigitalizarDoc',
+        'flag_embossing_loja' => 'setFlagEmbossingLoja',
+        'flag_consulta_previa' => 'setFlagConsultaPrevia',
+        'tipo_pessoa' => 'setTipoPessoa'
     );
   
     static function setters() {
@@ -123,7 +171,23 @@ class OrigemComercialResponse implements ArrayAccess
         'nome_tipo_origem_comercial' => 'getNomeTipoOrigemComercial',
         'id_grupo_origem_comercial' => 'getIdGrupoOrigemComercial',
         'nome_grupo_origem_comercial' => 'getNomeGrupoOrigemComercial',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'flag_pre_aprovado' => 'getFlagPreAprovado',
+        'flag_aprovacao_imediata' => 'getFlagAprovacaoImediata',
+        'nome_fantasia_plastico' => 'getNomeFantasiaPlastico',
+        'flag_cartao_provisorio' => 'getFlagCartaoProvisorio',
+        'flag_cartao_definitivo' => 'getFlagCartaoDefinitivo',
+        'usuario' => 'getUsuario',
+        'senha' => 'getSenha',
+        'flag_origem_externa' => 'getFlagOrigemExterna',
+        'flag_modificado' => 'getFlagModificado',
+        'flag_envia_fatura_usuario' => 'getFlagEnviaFaturaUsuario',
+        'flag_credito_faturamento' => 'getFlagCreditoFaturamento',
+        'flag_concede_limite_provisorio' => 'getFlagConcedeLimiteProvisorio',
+        'flag_digitalizar_doc' => 'getFlagDigitalizarDoc',
+        'flag_embossing_loja' => 'getFlagEmbossingLoja',
+        'flag_consulta_previa' => 'getFlagConsultaPrevia',
+        'tipo_pessoa' => 'getTipoPessoa'
     );
   
     static function getters() {
@@ -132,7 +196,7 @@ class OrigemComercialResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
+      * $id C\u00C3\u00B3digo identificador do OrigemComercial
       * @var int
       */
     protected $id;
@@ -150,7 +214,7 @@ class OrigemComercialResponse implements ArrayAccess
     protected $descricao;
     
     /**
-      * $produtos_origem Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+      * $produtos_origem Produtos da origem comercial
       * @var \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[]
       */
     protected $produtos_origem;
@@ -174,22 +238,118 @@ class OrigemComercialResponse implements ArrayAccess
     protected $nome_tipo_origem_comercial;
     
     /**
-      * $id_grupo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+      * $id_grupo_origem_comercial Identificador do grupo da origem comercial
       * @var int
       */
     protected $id_grupo_origem_comercial;
     
     /**
-      * $nome_grupo_origem_comercial Nome do Grupo a qual a Origem Comercial pertence
+      * $nome_grupo_origem_comercial Nome do grupo da origem comercial
       * @var string
       */
     protected $nome_grupo_origem_comercial;
     
     /**
-      * $status Status da origem comercial
-      * @var bool
+      * $status Indica o status da origem comercial
+      * @var int
       */
     protected $status;
+    
+    /**
+      * $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+      * @var bool
+      */
+    protected $flag_pre_aprovado;
+    
+    /**
+      * $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+      * @var bool
+      */
+    protected $flag_aprovacao_imediata;
+    
+    /**
+      * $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
+      * @var string
+      */
+    protected $nome_fantasia_plastico;
+    
+    /**
+      * $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+      * @var bool
+      */
+    protected $flag_cartao_provisorio;
+    
+    /**
+      * $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
+      * @var bool
+      */
+    protected $flag_cartao_definitivo;
+    
+    /**
+      * $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $usuario;
+    
+    /**
+      * $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+      * @var string
+      */
+    protected $senha;
+    
+    /**
+      * $flag_origem_externa Indica se \u00C3\u00A9 origem externa
+      * @var bool
+      */
+    protected $flag_origem_externa;
+    
+    /**
+      * $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+      * @var bool
+      */
+    protected $flag_modificado;
+    
+    /**
+      * $flag_envia_fatura_usuario Indica se envia fatura
+      * @var bool
+      */
+    protected $flag_envia_fatura_usuario;
+    
+    /**
+      * $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
+      * @var bool
+      */
+    protected $flag_credito_faturamento;
+    
+    /**
+      * $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+      * @var bool
+      */
+    protected $flag_concede_limite_provisorio;
+    
+    /**
+      * $flag_digitalizar_doc Indica se digitaliza documento
+      * @var bool
+      */
+    protected $flag_digitalizar_doc;
+    
+    /**
+      * $flag_embossing_loja Indica se realiza embossing em loja
+      * @var bool
+      */
+    protected $flag_embossing_loja;
+    
+    /**
+      * $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+      * @var bool
+      */
+    protected $flag_consulta_previa;
+    
+    /**
+      * $tipo_pessoa Tipo de pessoa
+      * @var string
+      */
+    protected $tipo_pessoa;
     
 
     /**
@@ -210,6 +370,22 @@ class OrigemComercialResponse implements ArrayAccess
             $this->id_grupo_origem_comercial = $data["id_grupo_origem_comercial"];
             $this->nome_grupo_origem_comercial = $data["nome_grupo_origem_comercial"];
             $this->status = $data["status"];
+            $this->flag_pre_aprovado = $data["flag_pre_aprovado"];
+            $this->flag_aprovacao_imediata = $data["flag_aprovacao_imediata"];
+            $this->nome_fantasia_plastico = $data["nome_fantasia_plastico"];
+            $this->flag_cartao_provisorio = $data["flag_cartao_provisorio"];
+            $this->flag_cartao_definitivo = $data["flag_cartao_definitivo"];
+            $this->usuario = $data["usuario"];
+            $this->senha = $data["senha"];
+            $this->flag_origem_externa = $data["flag_origem_externa"];
+            $this->flag_modificado = $data["flag_modificado"];
+            $this->flag_envia_fatura_usuario = $data["flag_envia_fatura_usuario"];
+            $this->flag_credito_faturamento = $data["flag_credito_faturamento"];
+            $this->flag_concede_limite_provisorio = $data["flag_concede_limite_provisorio"];
+            $this->flag_digitalizar_doc = $data["flag_digitalizar_doc"];
+            $this->flag_embossing_loja = $data["flag_embossing_loja"];
+            $this->flag_consulta_previa = $data["flag_consulta_previa"];
+            $this->tipo_pessoa = $data["tipo_pessoa"];
         }
     }
     
@@ -224,7 +400,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
+     * @param int $id C\u00C3\u00B3digo identificador do OrigemComercial
      * @return $this
      */
     public function setId($id)
@@ -287,7 +463,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets produtos_origem
-     * @param \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[] $produtos_origem Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+     * @param \br.com.conductor.pier.api.v2.model\ProdutoOrigemResponse[] $produtos_origem Produtos da origem comercial
      * @return $this
      */
     public function setProdutosOrigem($produtos_origem)
@@ -371,7 +547,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_origem_comercial
-     * @param int $id_grupo_origem_comercial C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+     * @param int $id_grupo_origem_comercial Identificador do grupo da origem comercial
      * @return $this
      */
     public function setIdGrupoOrigemComercial($id_grupo_origem_comercial)
@@ -392,7 +568,7 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets nome_grupo_origem_comercial
-     * @param string $nome_grupo_origem_comercial Nome do Grupo a qual a Origem Comercial pertence
+     * @param string $nome_grupo_origem_comercial Nome do grupo da origem comercial
      * @return $this
      */
     public function setNomeGrupoOrigemComercial($nome_grupo_origem_comercial)
@@ -404,7 +580,7 @@ class OrigemComercialResponse implements ArrayAccess
     
     /**
      * Gets status
-     * @return bool
+     * @return int
      */
     public function getStatus()
     {
@@ -413,13 +589,352 @@ class OrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param bool $status Status da origem comercial
+     * @param int $status Indica o status da origem comercial
      * @return $this
      */
     public function setStatus($status)
     {
         
         $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_pre_aprovado
+     * @return bool
+     */
+    public function getFlagPreAprovado()
+    {
+        return $this->flag_pre_aprovado;
+    }
+  
+    /**
+     * Sets flag_pre_aprovado
+     * @param bool $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setFlagPreAprovado($flag_pre_aprovado)
+    {
+        
+        $this->flag_pre_aprovado = $flag_pre_aprovado;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_aprovacao_imediata
+     * @return bool
+     */
+    public function getFlagAprovacaoImediata()
+    {
+        return $this->flag_aprovacao_imediata;
+    }
+  
+    /**
+     * Sets flag_aprovacao_imediata
+     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+     * @return $this
+     */
+    public function setFlagAprovacaoImediata($flag_aprovacao_imediata)
+    {
+        
+        $this->flag_aprovacao_imediata = $flag_aprovacao_imediata;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_fantasia_plastico
+     * @return string
+     */
+    public function getNomeFantasiaPlastico()
+    {
+        return $this->nome_fantasia_plastico;
+    }
+  
+    /**
+     * Sets nome_fantasia_plastico
+     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
+     * @return $this
+     */
+    public function setNomeFantasiaPlastico($nome_fantasia_plastico)
+    {
+        
+        $this->nome_fantasia_plastico = $nome_fantasia_plastico;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_cartao_provisorio
+     * @return bool
+     */
+    public function getFlagCartaoProvisorio()
+    {
+        return $this->flag_cartao_provisorio;
+    }
+  
+    /**
+     * Sets flag_cartao_provisorio
+     * @param bool $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+     * @return $this
+     */
+    public function setFlagCartaoProvisorio($flag_cartao_provisorio)
+    {
+        
+        $this->flag_cartao_provisorio = $flag_cartao_provisorio;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_cartao_definitivo
+     * @return bool
+     */
+    public function getFlagCartaoDefinitivo()
+    {
+        return $this->flag_cartao_definitivo;
+    }
+  
+    /**
+     * Sets flag_cartao_definitivo
+     * @param bool $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
+     * @return $this
+     */
+    public function setFlagCartaoDefinitivo($flag_cartao_definitivo)
+    {
+        
+        $this->flag_cartao_definitivo = $flag_cartao_definitivo;
+        return $this;
+    }
+    
+    /**
+     * Gets usuario
+     * @return string
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+  
+    /**
+     * Sets usuario
+     * @param string $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setUsuario($usuario)
+    {
+        
+        $this->usuario = $usuario;
+        return $this;
+    }
+    
+    /**
+     * Gets senha
+     * @return string
+     */
+    public function getSenha()
+    {
+        return $this->senha;
+    }
+  
+    /**
+     * Sets senha
+     * @param string $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setSenha($senha)
+    {
+        
+        $this->senha = $senha;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_origem_externa
+     * @return bool
+     */
+    public function getFlagOrigemExterna()
+    {
+        return $this->flag_origem_externa;
+    }
+  
+    /**
+     * Sets flag_origem_externa
+     * @param bool $flag_origem_externa Indica se \u00C3\u00A9 origem externa
+     * @return $this
+     */
+    public function setFlagOrigemExterna($flag_origem_externa)
+    {
+        
+        $this->flag_origem_externa = $flag_origem_externa;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_modificado
+     * @return bool
+     */
+    public function getFlagModificado()
+    {
+        return $this->flag_modificado;
+    }
+  
+    /**
+     * Sets flag_modificado
+     * @param bool $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+     * @return $this
+     */
+    public function setFlagModificado($flag_modificado)
+    {
+        
+        $this->flag_modificado = $flag_modificado;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_envia_fatura_usuario
+     * @return bool
+     */
+    public function getFlagEnviaFaturaUsuario()
+    {
+        return $this->flag_envia_fatura_usuario;
+    }
+  
+    /**
+     * Sets flag_envia_fatura_usuario
+     * @param bool $flag_envia_fatura_usuario Indica se envia fatura
+     * @return $this
+     */
+    public function setFlagEnviaFaturaUsuario($flag_envia_fatura_usuario)
+    {
+        
+        $this->flag_envia_fatura_usuario = $flag_envia_fatura_usuario;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_credito_faturamento
+     * @return bool
+     */
+    public function getFlagCreditoFaturamento()
+    {
+        return $this->flag_credito_faturamento;
+    }
+  
+    /**
+     * Sets flag_credito_faturamento
+     * @param bool $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
+     * @return $this
+     */
+    public function setFlagCreditoFaturamento($flag_credito_faturamento)
+    {
+        
+        $this->flag_credito_faturamento = $flag_credito_faturamento;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_concede_limite_provisorio
+     * @return bool
+     */
+    public function getFlagConcedeLimiteProvisorio()
+    {
+        return $this->flag_concede_limite_provisorio;
+    }
+  
+    /**
+     * Sets flag_concede_limite_provisorio
+     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+     * @return $this
+     */
+    public function setFlagConcedeLimiteProvisorio($flag_concede_limite_provisorio)
+    {
+        
+        $this->flag_concede_limite_provisorio = $flag_concede_limite_provisorio;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_digitalizar_doc
+     * @return bool
+     */
+    public function getFlagDigitalizarDoc()
+    {
+        return $this->flag_digitalizar_doc;
+    }
+  
+    /**
+     * Sets flag_digitalizar_doc
+     * @param bool $flag_digitalizar_doc Indica se digitaliza documento
+     * @return $this
+     */
+    public function setFlagDigitalizarDoc($flag_digitalizar_doc)
+    {
+        
+        $this->flag_digitalizar_doc = $flag_digitalizar_doc;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_embossing_loja
+     * @return bool
+     */
+    public function getFlagEmbossingLoja()
+    {
+        return $this->flag_embossing_loja;
+    }
+  
+    /**
+     * Sets flag_embossing_loja
+     * @param bool $flag_embossing_loja Indica se realiza embossing em loja
+     * @return $this
+     */
+    public function setFlagEmbossingLoja($flag_embossing_loja)
+    {
+        
+        $this->flag_embossing_loja = $flag_embossing_loja;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_consulta_previa
+     * @return bool
+     */
+    public function getFlagConsultaPrevia()
+    {
+        return $this->flag_consulta_previa;
+    }
+  
+    /**
+     * Sets flag_consulta_previa
+     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+     * @return $this
+     */
+    public function setFlagConsultaPrevia($flag_consulta_previa)
+    {
+        
+        $this->flag_consulta_previa = $flag_consulta_previa;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_pessoa
+     * @return string
+     */
+    public function getTipoPessoa()
+    {
+        return $this->tipo_pessoa;
+    }
+  
+    /**
+     * Sets tipo_pessoa
+     * @param string $tipo_pessoa Tipo de pessoa
+     * @return $this
+     */
+    public function setTipoPessoa($tipo_pessoa)
+    {
+        $allowed_values = array("PESSOA_FISICA", "PESSOA_JURIDICA");
+        if (!in_array($tipo_pessoa, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_pessoa', must be one of 'PESSOA_FISICA', 'PESSOA_JURIDICA'");
+        }
+        $this->tipo_pessoa = $tipo_pessoa;
         return $this;
     }
     

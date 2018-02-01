@@ -196,12 +196,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET39
+     * Test case for consultarUsingGET40
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET39() {
+    public function test_consultarUsingGET40() {
 
     }
     
@@ -306,16 +306,6 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarPagamentosUsingGET
-     *
-     * Lista hist\u00C3\u00B3rico de pagamentos da conta
-     *
-     */
-    public function test_listarPagamentosUsingGET() {
-
-    }
-    
-    /**
      * Test case for listarProcessadasUsingGET
      *
      * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
@@ -336,12 +326,12 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET43
+     * Test case for listarUsingGET45
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET43() {
+    public function test_listarUsingGET45() {
 
     }
     

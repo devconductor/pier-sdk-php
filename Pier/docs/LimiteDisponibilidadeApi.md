@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT8**](LimiteDisponibilidadeApi.md#alterarUsingPUT8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**alterarUsingPUT9**](LimiteDisponibilidadeApi.md#alterarUsingPUT9) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 [**consultarUsingGET18**](LimiteDisponibilidadeApi.md#consultarUsingGET18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
-# **alterarUsingPUT8**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse alterarUsingPUT8($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo)
+# **alterarUsingPUT9**
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse alterarUsingPUT9($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -37,10 +37,10 @@ $limite_internacional_saque_periodo = new Number(); // Number | Quando utilizado
 $limite_maximo = new Number(); // Number | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
 
 try { 
-    $result = $api_instance->alterarUsingPUT8($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
+    $result = $api_instance->alterarUsingPUT9($id_conta, $limite_global, $limite_compra, $limite_parcelado, $limite_parcelas, $limite_saque_global, $limite_saque_periodo, $limite_consignado, $limite_internacional_compra, $limite_internacional_parcelado, $limite_internacional_parcelas, $limite_internacional_saque_global, $limite_internacional_saque_periodo, $limite_maximo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LimiteDisponibilidadeApi->alterarUsingPUT8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling LimiteDisponibilidadeApi->alterarUsingPUT9: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -66,12 +66,12 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for alterarUsingPUT17
+     * Test case for alterarUsingPUT19
      *
      * Altera o tipo de template
      *
      */
-    public function test_alterarUsingPUT17() {
+    public function test_alterarUsingPUT19() {
 
     }
     
@@ -86,9 +86,19 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET12
      *
      * Consulta documentos
+     *
+     */
+    public function test_consultarUsingGET12() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET13
+     *
+     * Consultar templates dos documentos
      *
      */
     public function test_consultarUsingGET13() {
@@ -96,22 +106,12 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
-     *
-     * Consultar templates dos documentos
-     *
-     */
-    public function test_consultarUsingGET14() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET36
+     * Test case for consultarUsingGET37
      *
      * Consultar tipo de template
      *
      */
-    public function test_consultarUsingGET36() {
+    public function test_consultarUsingGET37() {
 
     }
     
@@ -126,9 +126,19 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET16
+     * Test case for listarUsingGET15
      *
      * Lista documentos
+     *
+     */
+    public function test_listarUsingGET15() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET16
+     *
+     * Lista os templates dos documentos
      *
      */
     public function test_listarUsingGET16() {
@@ -136,22 +146,12 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
-     *
-     * Lista os templates dos documentos
-     *
-     */
-    public function test_listarUsingGET17() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET40
+     * Test case for listarUsingGET42
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET40() {
+    public function test_listarUsingGET42() {
 
     }
     
@@ -166,12 +166,12 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST23
+     * Test case for salvarUsingPOST25
      *
      * Cadastra os tipos de templates
      *
      */
-    public function test_salvarUsingPOST23() {
+    public function test_salvarUsingPOST25() {
 
     }
     

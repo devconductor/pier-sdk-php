@@ -96,12 +96,12 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET38
+     * Test case for consultarUsingGET39
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET38() {
+    public function test_consultarUsingGET39() {
 
     }
     
@@ -126,12 +126,12 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET42
+     * Test case for listarUsingGET44
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET42() {
+    public function test_listarUsingGET44() {
 
     }
     

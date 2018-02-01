@@ -53,6 +53,8 @@ class EstabelecimentoResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'numero_estabelecimento' => 'string',
+        'flag_matriz' => 'int',
+        'id_credor' => 'int',
         'numero_receita_federal' => 'int',
         'nome' => 'string',
         'descricao' => 'string',
@@ -60,18 +62,37 @@ class EstabelecimentoResponse implements ArrayAccess
         'cep' => 'string',
         'nome_logradouro' => 'string',
         'numero_endereco' => 'string',
-        'complemento' => 'string',
         'bairro' => 'string',
         'cidade' => 'string',
+        'complemento' => 'string',
         'uf' => 'string',
-        'pais' => 'string',
-        'data_cadastramento' => 'string',
+        'cep2' => 'string',
+        'nome_logradouro2' => 'string',
+        'numero_endereco2' => 'string',
+        'bairro2' => 'string',
+        'cidade2' => 'string',
+        'complemento2' => 'string',
+        'uf2' => 'string',
         'obs' => 'string',
         'contato' => 'string',
         'email' => 'string',
         'flag_arquivo_secr_fazenda' => 'int',
         'flag_cartao_digitado' => 'int',
-        'inativo' => 'int'
+        'inativo' => 'int',
+        'id_moeda' => 'int',
+        'id_pais' => 'int',
+        'associado_spc_brasil' => 'int',
+        'mcc' => 'int',
+        'id_tipo_estabelecimento' => 'int',
+        'tipo_correspondencia' => 'string',
+        'cargo_contato' => 'string',
+        'tipo_pagamento' => 'string',
+        'consulta' => '\br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO',
+        'consulta2' => '\br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO',
+        'consulta3' => '\br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO',
+        'terminal' => 'string',
+        'data_cadastramento' => 'string',
+        'usuario' => 'string'
     );
   
     static function swaggerTypes() {
@@ -85,6 +106,8 @@ class EstabelecimentoResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'numero_estabelecimento' => 'numeroEstabelecimento',
+        'flag_matriz' => 'flagMatriz',
+        'id_credor' => 'idCredor',
         'numero_receita_federal' => 'numeroReceitaFederal',
         'nome' => 'nome',
         'descricao' => 'descricao',
@@ -92,18 +115,37 @@ class EstabelecimentoResponse implements ArrayAccess
         'cep' => 'cep',
         'nome_logradouro' => 'nomeLogradouro',
         'numero_endereco' => 'numeroEndereco',
-        'complemento' => 'complemento',
         'bairro' => 'bairro',
         'cidade' => 'cidade',
+        'complemento' => 'complemento',
         'uf' => 'uf',
-        'pais' => 'pais',
-        'data_cadastramento' => 'dataCadastramento',
+        'cep2' => 'cep2',
+        'nome_logradouro2' => 'nomeLogradouro2',
+        'numero_endereco2' => 'numeroEndereco2',
+        'bairro2' => 'bairro2',
+        'cidade2' => 'cidade2',
+        'complemento2' => 'complemento2',
+        'uf2' => 'uf2',
         'obs' => 'obs',
         'contato' => 'contato',
         'email' => 'email',
         'flag_arquivo_secr_fazenda' => 'flagArquivoSecrFazenda',
         'flag_cartao_digitado' => 'flagCartaoDigitado',
-        'inativo' => 'inativo'
+        'inativo' => 'inativo',
+        'id_moeda' => 'idMoeda',
+        'id_pais' => 'idPais',
+        'associado_spc_brasil' => 'associadoSPCBrasil',
+        'mcc' => 'mcc',
+        'id_tipo_estabelecimento' => 'idTipoEstabelecimento',
+        'tipo_correspondencia' => 'tipoCorrespondencia',
+        'cargo_contato' => 'cargoContato',
+        'tipo_pagamento' => 'tipoPagamento',
+        'consulta' => 'consulta',
+        'consulta2' => 'consulta2',
+        'consulta3' => 'consulta3',
+        'terminal' => 'terminal',
+        'data_cadastramento' => 'dataCadastramento',
+        'usuario' => 'usuario'
     );
   
     static function attributeMap() {
@@ -117,6 +159,8 @@ class EstabelecimentoResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'numero_estabelecimento' => 'setNumeroEstabelecimento',
+        'flag_matriz' => 'setFlagMatriz',
+        'id_credor' => 'setIdCredor',
         'numero_receita_federal' => 'setNumeroReceitaFederal',
         'nome' => 'setNome',
         'descricao' => 'setDescricao',
@@ -124,18 +168,37 @@ class EstabelecimentoResponse implements ArrayAccess
         'cep' => 'setCep',
         'nome_logradouro' => 'setNomeLogradouro',
         'numero_endereco' => 'setNumeroEndereco',
-        'complemento' => 'setComplemento',
         'bairro' => 'setBairro',
         'cidade' => 'setCidade',
+        'complemento' => 'setComplemento',
         'uf' => 'setUf',
-        'pais' => 'setPais',
-        'data_cadastramento' => 'setDataCadastramento',
+        'cep2' => 'setCep2',
+        'nome_logradouro2' => 'setNomeLogradouro2',
+        'numero_endereco2' => 'setNumeroEndereco2',
+        'bairro2' => 'setBairro2',
+        'cidade2' => 'setCidade2',
+        'complemento2' => 'setComplemento2',
+        'uf2' => 'setUf2',
         'obs' => 'setObs',
         'contato' => 'setContato',
         'email' => 'setEmail',
         'flag_arquivo_secr_fazenda' => 'setFlagArquivoSecrFazenda',
         'flag_cartao_digitado' => 'setFlagCartaoDigitado',
-        'inativo' => 'setInativo'
+        'inativo' => 'setInativo',
+        'id_moeda' => 'setIdMoeda',
+        'id_pais' => 'setIdPais',
+        'associado_spc_brasil' => 'setAssociadoSpcBrasil',
+        'mcc' => 'setMcc',
+        'id_tipo_estabelecimento' => 'setIdTipoEstabelecimento',
+        'tipo_correspondencia' => 'setTipoCorrespondencia',
+        'cargo_contato' => 'setCargoContato',
+        'tipo_pagamento' => 'setTipoPagamento',
+        'consulta' => 'setConsulta',
+        'consulta2' => 'setConsulta2',
+        'consulta3' => 'setConsulta3',
+        'terminal' => 'setTerminal',
+        'data_cadastramento' => 'setDataCadastramento',
+        'usuario' => 'setUsuario'
     );
   
     static function setters() {
@@ -149,6 +212,8 @@ class EstabelecimentoResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'numero_estabelecimento' => 'getNumeroEstabelecimento',
+        'flag_matriz' => 'getFlagMatriz',
+        'id_credor' => 'getIdCredor',
         'numero_receita_federal' => 'getNumeroReceitaFederal',
         'nome' => 'getNome',
         'descricao' => 'getDescricao',
@@ -156,18 +221,37 @@ class EstabelecimentoResponse implements ArrayAccess
         'cep' => 'getCep',
         'nome_logradouro' => 'getNomeLogradouro',
         'numero_endereco' => 'getNumeroEndereco',
-        'complemento' => 'getComplemento',
         'bairro' => 'getBairro',
         'cidade' => 'getCidade',
+        'complemento' => 'getComplemento',
         'uf' => 'getUf',
-        'pais' => 'getPais',
-        'data_cadastramento' => 'getDataCadastramento',
+        'cep2' => 'getCep2',
+        'nome_logradouro2' => 'getNomeLogradouro2',
+        'numero_endereco2' => 'getNumeroEndereco2',
+        'bairro2' => 'getBairro2',
+        'cidade2' => 'getCidade2',
+        'complemento2' => 'getComplemento2',
+        'uf2' => 'getUf2',
         'obs' => 'getObs',
         'contato' => 'getContato',
         'email' => 'getEmail',
         'flag_arquivo_secr_fazenda' => 'getFlagArquivoSecrFazenda',
         'flag_cartao_digitado' => 'getFlagCartaoDigitado',
-        'inativo' => 'getInativo'
+        'inativo' => 'getInativo',
+        'id_moeda' => 'getIdMoeda',
+        'id_pais' => 'getIdPais',
+        'associado_spc_brasil' => 'getAssociadoSpcBrasil',
+        'mcc' => 'getMcc',
+        'id_tipo_estabelecimento' => 'getIdTipoEstabelecimento',
+        'tipo_correspondencia' => 'getTipoCorrespondencia',
+        'cargo_contato' => 'getCargoContato',
+        'tipo_pagamento' => 'getTipoPagamento',
+        'consulta' => 'getConsulta',
+        'consulta2' => 'getConsulta2',
+        'consulta3' => 'getConsulta3',
+        'terminal' => 'getTerminal',
+        'data_cadastramento' => 'getDataCadastramento',
+        'usuario' => 'getUsuario'
     );
   
     static function getters() {
@@ -186,6 +270,18 @@ class EstabelecimentoResponse implements ArrayAccess
       * @var string
       */
     protected $numero_estabelecimento;
+    
+    /**
+      * $flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+      * @var int
+      */
+    protected $flag_matriz;
+    
+    /**
+      * $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+      * @var int
+      */
+    protected $id_credor;
     
     /**
       * $numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
@@ -230,12 +326,6 @@ class EstabelecimentoResponse implements ArrayAccess
     protected $numero_endereco;
     
     /**
-      * $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-      * @var string
-      */
-    protected $complemento;
-    
-    /**
       * $bairro Nome do bairro do endere\u00C3\u00A7o.
       * @var string
       */
@@ -248,22 +338,58 @@ class EstabelecimentoResponse implements ArrayAccess
     protected $cidade;
     
     /**
+      * $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $complemento;
+    
+    /**
       * $uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
       * @var string
       */
     protected $uf;
     
     /**
-      * $pais Nome do pa\u00C3\u00ADs.
+      * $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
       * @var string
       */
-    protected $pais;
+    protected $cep2;
     
     /**
-      * $data_cadastramento Data de Cadastro do Estabelecimento.
+      * $nome_logradouro2 Nome do Logradouro .
       * @var string
       */
-    protected $data_cadastramento;
+    protected $nome_logradouro2;
+    
+    /**
+      * $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $numero_endereco2;
+    
+    /**
+      * $bairro2 Nome do bairro do endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $bairro2;
+    
+    /**
+      * $cidade2 Nome da cidade do endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $cidade2;
+    
+    /**
+      * $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $complemento2;
+    
+    /**
+      * $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+      * @var string
+      */
+    protected $uf2;
     
     /**
       * $obs Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
@@ -301,6 +427,90 @@ class EstabelecimentoResponse implements ArrayAccess
       */
     protected $inativo;
     
+    /**
+      * $id_moeda C\u00C3\u00B3digo identificador da moeda.
+      * @var int
+      */
+    protected $id_moeda;
+    
+    /**
+      * $id_pais Identificador de Pa\u00C3\u00ADs.
+      * @var int
+      */
+    protected $id_pais;
+    
+    /**
+      * $associado_spc_brasil N\u00C3\u00BAmero do associado ao SPCBrasil.
+      * @var int
+      */
+    protected $associado_spc_brasil;
+    
+    /**
+      * $mcc C\u00C3\u00B3digo de Categoria de Mercado.
+      * @var int
+      */
+    protected $mcc;
+    
+    /**
+      * $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+      * @var int
+      */
+    protected $id_tipo_estabelecimento;
+    
+    /**
+      * $tipo_correspondencia Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+      * @var string
+      */
+    protected $tipo_correspondencia;
+    
+    /**
+      * $cargo_contato Cargo do contato do estabelecimento.
+      * @var string
+      */
+    protected $cargo_contato;
+    
+    /**
+      * $tipo_pagamento Tipo do regime de pagamento do estabelecimento.
+      * @var string
+      */
+    protected $tipo_pagamento;
+    
+    /**
+      * $consulta Consulta de cadastro n\u00C3\u00BAmero um.
+      * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+      */
+    protected $consulta;
+    
+    /**
+      * $consulta2 Consulta de cadastro n\u00C3\u00BAmero um.
+      * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+      */
+    protected $consulta2;
+    
+    /**
+      * $consulta3 Consulta de cadastro n\u00C3\u00BAmero um.
+      * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+      */
+    protected $consulta3;
+    
+    /**
+      * $terminal Terminal do estabelecimento.
+      * @var string
+      */
+    protected $terminal;
+    
+    /**
+      * $data_cadastramento Data de Cadastro do Estabelecimento.
+      * @var string
+      */
+    protected $data_cadastramento;
+    
+    /**
+      * $usuario Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * @var string
+      */
+    protected $usuario;
+    
 
     /**
      * Constructor
@@ -312,6 +522,8 @@ class EstabelecimentoResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->numero_estabelecimento = $data["numero_estabelecimento"];
+            $this->flag_matriz = $data["flag_matriz"];
+            $this->id_credor = $data["id_credor"];
             $this->numero_receita_federal = $data["numero_receita_federal"];
             $this->nome = $data["nome"];
             $this->descricao = $data["descricao"];
@@ -319,18 +531,37 @@ class EstabelecimentoResponse implements ArrayAccess
             $this->cep = $data["cep"];
             $this->nome_logradouro = $data["nome_logradouro"];
             $this->numero_endereco = $data["numero_endereco"];
-            $this->complemento = $data["complemento"];
             $this->bairro = $data["bairro"];
             $this->cidade = $data["cidade"];
+            $this->complemento = $data["complemento"];
             $this->uf = $data["uf"];
-            $this->pais = $data["pais"];
-            $this->data_cadastramento = $data["data_cadastramento"];
+            $this->cep2 = $data["cep2"];
+            $this->nome_logradouro2 = $data["nome_logradouro2"];
+            $this->numero_endereco2 = $data["numero_endereco2"];
+            $this->bairro2 = $data["bairro2"];
+            $this->cidade2 = $data["cidade2"];
+            $this->complemento2 = $data["complemento2"];
+            $this->uf2 = $data["uf2"];
             $this->obs = $data["obs"];
             $this->contato = $data["contato"];
             $this->email = $data["email"];
             $this->flag_arquivo_secr_fazenda = $data["flag_arquivo_secr_fazenda"];
             $this->flag_cartao_digitado = $data["flag_cartao_digitado"];
             $this->inativo = $data["inativo"];
+            $this->id_moeda = $data["id_moeda"];
+            $this->id_pais = $data["id_pais"];
+            $this->associado_spc_brasil = $data["associado_spc_brasil"];
+            $this->mcc = $data["mcc"];
+            $this->id_tipo_estabelecimento = $data["id_tipo_estabelecimento"];
+            $this->tipo_correspondencia = $data["tipo_correspondencia"];
+            $this->cargo_contato = $data["cargo_contato"];
+            $this->tipo_pagamento = $data["tipo_pagamento"];
+            $this->consulta = $data["consulta"];
+            $this->consulta2 = $data["consulta2"];
+            $this->consulta3 = $data["consulta3"];
+            $this->terminal = $data["terminal"];
+            $this->data_cadastramento = $data["data_cadastramento"];
+            $this->usuario = $data["usuario"];
         }
     }
     
@@ -373,6 +604,48 @@ class EstabelecimentoResponse implements ArrayAccess
     {
         
         $this->numero_estabelecimento = $numero_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_matriz
+     * @return int
+     */
+    public function getFlagMatriz()
+    {
+        return $this->flag_matriz;
+    }
+  
+    /**
+     * Sets flag_matriz
+     * @param int $flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+     * @return $this
+     */
+    public function setFlagMatriz($flag_matriz)
+    {
+        
+        $this->flag_matriz = $flag_matriz;
+        return $this;
+    }
+    
+    /**
+     * Gets id_credor
+     * @return int
+     */
+    public function getIdCredor()
+    {
+        return $this->id_credor;
+    }
+  
+    /**
+     * Sets id_credor
+     * @param int $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+     * @return $this
+     */
+    public function setIdCredor($id_credor)
+    {
+        
+        $this->id_credor = $id_credor;
         return $this;
     }
     
@@ -524,27 +797,6 @@ class EstabelecimentoResponse implements ArrayAccess
     }
     
     /**
-     * Gets complemento
-     * @return string
-     */
-    public function getComplemento()
-    {
-        return $this->complemento;
-    }
-  
-    /**
-     * Sets complemento
-     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-     * @return $this
-     */
-    public function setComplemento($complemento)
-    {
-        
-        $this->complemento = $complemento;
-        return $this;
-    }
-    
-    /**
      * Gets bairro
      * @return string
      */
@@ -587,6 +839,27 @@ class EstabelecimentoResponse implements ArrayAccess
     }
     
     /**
+     * Gets complemento
+     * @return string
+     */
+    public function getComplemento()
+    {
+        return $this->complemento;
+    }
+  
+    /**
+     * Sets complemento
+     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setComplemento($complemento)
+    {
+        
+        $this->complemento = $complemento;
+        return $this;
+    }
+    
+    /**
      * Gets uf
      * @return string
      */
@@ -608,44 +881,149 @@ class EstabelecimentoResponse implements ArrayAccess
     }
     
     /**
-     * Gets pais
+     * Gets cep2
      * @return string
      */
-    public function getPais()
+    public function getCep2()
     {
-        return $this->pais;
+        return $this->cep2;
     }
   
     /**
-     * Sets pais
-     * @param string $pais Nome do pa\u00C3\u00ADs.
+     * Sets cep2
+     * @param string $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
      * @return $this
      */
-    public function setPais($pais)
+    public function setCep2($cep2)
     {
         
-        $this->pais = $pais;
+        $this->cep2 = $cep2;
         return $this;
     }
     
     /**
-     * Gets data_cadastramento
+     * Gets nome_logradouro2
      * @return string
      */
-    public function getDataCadastramento()
+    public function getNomeLogradouro2()
     {
-        return $this->data_cadastramento;
+        return $this->nome_logradouro2;
     }
   
     /**
-     * Sets data_cadastramento
-     * @param string $data_cadastramento Data de Cadastro do Estabelecimento.
+     * Sets nome_logradouro2
+     * @param string $nome_logradouro2 Nome do Logradouro .
      * @return $this
      */
-    public function setDataCadastramento($data_cadastramento)
+    public function setNomeLogradouro2($nome_logradouro2)
     {
         
-        $this->data_cadastramento = $data_cadastramento;
+        $this->nome_logradouro2 = $nome_logradouro2;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_endereco2
+     * @return string
+     */
+    public function getNumeroEndereco2()
+    {
+        return $this->numero_endereco2;
+    }
+  
+    /**
+     * Sets numero_endereco2
+     * @param string $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setNumeroEndereco2($numero_endereco2)
+    {
+        
+        $this->numero_endereco2 = $numero_endereco2;
+        return $this;
+    }
+    
+    /**
+     * Gets bairro2
+     * @return string
+     */
+    public function getBairro2()
+    {
+        return $this->bairro2;
+    }
+  
+    /**
+     * Sets bairro2
+     * @param string $bairro2 Nome do bairro do endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setBairro2($bairro2)
+    {
+        
+        $this->bairro2 = $bairro2;
+        return $this;
+    }
+    
+    /**
+     * Gets cidade2
+     * @return string
+     */
+    public function getCidade2()
+    {
+        return $this->cidade2;
+    }
+  
+    /**
+     * Sets cidade2
+     * @param string $cidade2 Nome da cidade do endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setCidade2($cidade2)
+    {
+        
+        $this->cidade2 = $cidade2;
+        return $this;
+    }
+    
+    /**
+     * Gets complemento2
+     * @return string
+     */
+    public function getComplemento2()
+    {
+        return $this->complemento2;
+    }
+  
+    /**
+     * Sets complemento2
+     * @param string $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setComplemento2($complemento2)
+    {
+        
+        $this->complemento2 = $complemento2;
+        return $this;
+    }
+    
+    /**
+     * Gets uf2
+     * @return string
+     */
+    public function getUf2()
+    {
+        return $this->uf2;
+    }
+  
+    /**
+     * Sets uf2
+     * @param string $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+     * @return $this
+     */
+    public function setUf2($uf2)
+    {
+        
+        $this->uf2 = $uf2;
         return $this;
     }
     
@@ -772,6 +1150,306 @@ class EstabelecimentoResponse implements ArrayAccess
     {
         
         $this->inativo = $inativo;
+        return $this;
+    }
+    
+    /**
+     * Gets id_moeda
+     * @return int
+     */
+    public function getIdMoeda()
+    {
+        return $this->id_moeda;
+    }
+  
+    /**
+     * Sets id_moeda
+     * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda.
+     * @return $this
+     */
+    public function setIdMoeda($id_moeda)
+    {
+        
+        $this->id_moeda = $id_moeda;
+        return $this;
+    }
+    
+    /**
+     * Gets id_pais
+     * @return int
+     */
+    public function getIdPais()
+    {
+        return $this->id_pais;
+    }
+  
+    /**
+     * Sets id_pais
+     * @param int $id_pais Identificador de Pa\u00C3\u00ADs.
+     * @return $this
+     */
+    public function setIdPais($id_pais)
+    {
+        
+        $this->id_pais = $id_pais;
+        return $this;
+    }
+    
+    /**
+     * Gets associado_spc_brasil
+     * @return int
+     */
+    public function getAssociadoSpcBrasil()
+    {
+        return $this->associado_spc_brasil;
+    }
+  
+    /**
+     * Sets associado_spc_brasil
+     * @param int $associado_spc_brasil N\u00C3\u00BAmero do associado ao SPCBrasil.
+     * @return $this
+     */
+    public function setAssociadoSpcBrasil($associado_spc_brasil)
+    {
+        
+        $this->associado_spc_brasil = $associado_spc_brasil;
+        return $this;
+    }
+    
+    /**
+     * Gets mcc
+     * @return int
+     */
+    public function getMcc()
+    {
+        return $this->mcc;
+    }
+  
+    /**
+     * Sets mcc
+     * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado.
+     * @return $this
+     */
+    public function setMcc($mcc)
+    {
+        
+        $this->mcc = $mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_estabelecimento
+     * @return int
+     */
+    public function getIdTipoEstabelecimento()
+    {
+        return $this->id_tipo_estabelecimento;
+    }
+  
+    /**
+     * Sets id_tipo_estabelecimento
+     * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+     * @return $this
+     */
+    public function setIdTipoEstabelecimento($id_tipo_estabelecimento)
+    {
+        
+        $this->id_tipo_estabelecimento = $id_tipo_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_correspondencia
+     * @return string
+     */
+    public function getTipoCorrespondencia()
+    {
+        return $this->tipo_correspondencia;
+    }
+  
+    /**
+     * Sets tipo_correspondencia
+     * @param string $tipo_correspondencia Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+     * @return $this
+     */
+    public function setTipoCorrespondencia($tipo_correspondencia)
+    {
+        $allowed_values = array("ORIGEM", "CORRESPONDENCIA");
+        if (!in_array($tipo_correspondencia, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_correspondencia', must be one of 'ORIGEM', 'CORRESPONDENCIA'");
+        }
+        $this->tipo_correspondencia = $tipo_correspondencia;
+        return $this;
+    }
+    
+    /**
+     * Gets cargo_contato
+     * @return string
+     */
+    public function getCargoContato()
+    {
+        return $this->cargo_contato;
+    }
+  
+    /**
+     * Sets cargo_contato
+     * @param string $cargo_contato Cargo do contato do estabelecimento.
+     * @return $this
+     */
+    public function setCargoContato($cargo_contato)
+    {
+        
+        $this->cargo_contato = $cargo_contato;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_pagamento
+     * @return string
+     */
+    public function getTipoPagamento()
+    {
+        return $this->tipo_pagamento;
+    }
+  
+    /**
+     * Sets tipo_pagamento
+     * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento.
+     * @return $this
+     */
+    public function setTipoPagamento($tipo_pagamento)
+    {
+        $allowed_values = array("CENTRALIZADO", "PV");
+        if (!in_array($tipo_pagamento, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_pagamento', must be one of 'CENTRALIZADO', 'PV'");
+        }
+        $this->tipo_pagamento = $tipo_pagamento;
+        return $this;
+    }
+    
+    /**
+     * Gets consulta
+     * @return \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+     */
+    public function getConsulta()
+    {
+        return $this->consulta;
+    }
+  
+    /**
+     * Sets consulta
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta Consulta de cadastro n\u00C3\u00BAmero um.
+     * @return $this
+     */
+    public function setConsulta($consulta)
+    {
+        
+        $this->consulta = $consulta;
+        return $this;
+    }
+    
+    /**
+     * Gets consulta2
+     * @return \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+     */
+    public function getConsulta2()
+    {
+        return $this->consulta2;
+    }
+  
+    /**
+     * Sets consulta2
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta2 Consulta de cadastro n\u00C3\u00BAmero um.
+     * @return $this
+     */
+    public function setConsulta2($consulta2)
+    {
+        
+        $this->consulta2 = $consulta2;
+        return $this;
+    }
+    
+    /**
+     * Gets consulta3
+     * @return \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
+     */
+    public function getConsulta3()
+    {
+        return $this->consulta3;
+    }
+  
+    /**
+     * Sets consulta3
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta3 Consulta de cadastro n\u00C3\u00BAmero um.
+     * @return $this
+     */
+    public function setConsulta3($consulta3)
+    {
+        
+        $this->consulta3 = $consulta3;
+        return $this;
+    }
+    
+    /**
+     * Gets terminal
+     * @return string
+     */
+    public function getTerminal()
+    {
+        return $this->terminal;
+    }
+  
+    /**
+     * Sets terminal
+     * @param string $terminal Terminal do estabelecimento.
+     * @return $this
+     */
+    public function setTerminal($terminal)
+    {
+        
+        $this->terminal = $terminal;
+        return $this;
+    }
+    
+    /**
+     * Gets data_cadastramento
+     * @return string
+     */
+    public function getDataCadastramento()
+    {
+        return $this->data_cadastramento;
+    }
+  
+    /**
+     * Sets data_cadastramento
+     * @param string $data_cadastramento Data de Cadastro do Estabelecimento.
+     * @return $this
+     */
+    public function setDataCadastramento($data_cadastramento)
+    {
+        
+        $this->data_cadastramento = $data_cadastramento;
+        return $this;
+    }
+    
+    /**
+     * Gets usuario
+     * @return string
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+  
+    /**
+     * Sets usuario
+     * @param string $usuario Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setUsuario($usuario)
+    {
+        
+        $this->usuario = $usuario;
         return $this;
     }
     

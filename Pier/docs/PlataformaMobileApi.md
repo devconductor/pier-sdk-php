@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformaMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET26**](PlataformaMobileApi.md#listarUsingGET26) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvarUsingPOST18**](PlataformaMobileApi.md#salvarUsingPOST18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listarUsingGET28**](PlataformaMobileApi.md#listarUsingGET28) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvarUsingPOST20**](PlataformaMobileApi.md#salvarUsingPOST20) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 # **atualizarUsingPUT1**
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET26($sort, $page, $limit, $nome)
+# **listarUsingGET28**
+> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET28($sort, $page, $limit, $nome)
 
 Lista as plataformas mobile cadastradas
 
@@ -75,10 +75,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $nome = "nome_example"; // string | Nome da Plataforma Mobile
 
 try { 
-    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $nome);
+    $result = $api_instance->listarUsingGET28($sort, $page, $limit, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlataformaMobileApi->listarUsingGET26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PlataformaMobileApi->listarUsingGET28: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -107,8 +107,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST18**
-> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST18($persist)
+# **salvarUsingPOST20**
+> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST20($persist)
 
 Cadastra Plataforma Mobile
 
@@ -123,10 +123,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\PlataformaMobileApi
 $persist = new \br.com.conductor.pier.api.v2.model\PlataformaMobilePersist(); // \br.com.conductor.pier.api.v2.model\PlataformaMobilePersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST18($persist);
+    $result = $api_instance->salvarUsingPOST20($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlataformaMobileApi->salvarUsingPOST18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling PlataformaMobileApi->salvarUsingPOST20: ', $e->getMessage(), "\n";
 }
 ?>
 ```

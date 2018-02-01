@@ -66,6 +66,16 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for autorizarPorContaUsingPOST
+     *
+     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     *
+     */
+    public function test_autorizarPorContaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for autorizarUsingPOST
      *
      * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
@@ -82,6 +92,16 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_autorizarUsingPOST1() {
+
+    }
+    
+    /**
+     * Test case for cancelarPorIdContaUsingPOST
+     *
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     *
+     */
+    public function test_cancelarPorIdContaUsingPOST() {
 
     }
     
