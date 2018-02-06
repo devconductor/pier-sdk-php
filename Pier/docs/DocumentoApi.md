@@ -9,10 +9,10 @@ Method | HTTP request | Description
 [**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/documentos/{id} | Consulta documentos
 [**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
 [**consultarUsingGET37**](DocumentoApi.md#consultarUsingGET37) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listarUsingGET15**](DocumentoApi.md#listarUsingGET15) | **GET** /api/documentos | Lista documentos
-[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listarUsingGET42**](DocumentoApi.md#listarUsingGET42) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**integrarUsingPOST1**](DocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/documentos | Lista documentos
+[**listarUsingGET17**](DocumentoApi.md#listarUsingGET17) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listarUsingGET43**](DocumentoApi.md#listarUsingGET43) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvarUsingPOST10**](DocumentoApi.md#salvarUsingPOST10) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 [**salvarUsingPOST25**](DocumentoApi.md#salvarUsingPOST25) | **POST** /api/tipos-templates | Cadastra os tipos de templates
 [**salvarUsingPOST9**](DocumentoApi.md#salvarUsingPOST9) | **POST** /api/documentos | Cadastra documentos
@@ -247,8 +247,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **integrarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse integrarUsingPOST($integrar_documento_request)
+# **integrarUsingPOST1**
+> \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse integrarUsingPOST1($integrar_documento_request)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -263,10 +263,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\DocumentoApi();
 $integrar_documento_request = new \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest(); // \br.com.conductor.pier.api.v2.model\IntegrarDocumentoRequest | integrarDocumentoRequest
 
 try { 
-    $result = $api_instance->integrarUsingPOST($integrar_documento_request);
+    $result = $api_instance->integrarUsingPOST1($integrar_documento_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->integrarUsingPOST: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->integrarUsingPOST1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -292,8 +292,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageDocumentoResponse listarUsingGET15($sort, $page, $limit, $id_template_documento, $nome, $extensao)
+# **listarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\PageDocumentoResponse listarUsingGET16($sort, $page, $limit, $id_template_documento, $nome, $extensao)
 
 Lista documentos
 
@@ -313,10 +313,10 @@ $nome = "nome_example"; // string | Nome do documento.
 $extensao = "extensao_example"; // string | Extensao do documento.
 
 try { 
-    $result = $api_instance->listarUsingGET15($sort, $page, $limit, $id_template_documento, $nome, $extensao);
+    $result = $api_instance->listarUsingGET16($sort, $page, $limit, $id_template_documento, $nome, $extensao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->listarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -347,8 +347,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse listarUsingGET16($sort, $page, $limit, $id_tipo_template)
+# **listarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse listarUsingGET17($sort, $page, $limit, $id_tipo_template)
 
 Lista os templates dos documentos
 
@@ -366,10 +366,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $id_tipo_template = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
 
 try { 
-    $result = $api_instance->listarUsingGET16($sort, $page, $limit, $id_tipo_template);
+    $result = $api_instance->listarUsingGET17($sort, $page, $limit, $id_tipo_template);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->listarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -398,8 +398,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET42**
-> \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse listarUsingGET42($sort, $page, $limit)
+# **listarUsingGET43**
+> \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse listarUsingGET43($sort, $page, $limit)
 
 Lista os tipos de templates
 
@@ -416,10 +416,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET42($sort, $page, $limit);
+    $result = $api_instance->listarUsingGET43($sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DocumentoApi->listarUsingGET42: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DocumentoApi->listarUsingGET43: ', $e->getMessage(), "\n";
 }
 ?>
 ```

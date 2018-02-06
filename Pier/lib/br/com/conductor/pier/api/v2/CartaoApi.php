@@ -1978,7 +1978,7 @@ class CartaoApi
     }
     
     /**
-     * listarUsingGET7
+     * listarUsingGET8
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -2006,15 +2006,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET8($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET7WithHttpInfo
+     * listarUsingGET8WithHttpInfo
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -2042,7 +2042,7 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET8WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
         
   

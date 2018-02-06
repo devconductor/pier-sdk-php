@@ -338,7 +338,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET10
      *
-     * Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+     * Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
      *
      */
     public function test_listarUsingGET10() {
@@ -346,29 +346,19 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET29
+     * Test case for listarUsingGET11
      *
-     * Lista os Portadores existentes
-     *
-     */
-    public function test_listarUsingGET29() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET3
-     *
-     * Lista todos os atendimentos
+     * Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
      *
      */
-    public function test_listarUsingGET3() {
+    public function test_listarUsingGET11() {
 
     }
     
     /**
      * Test case for listarUsingGET30
      *
-     * Lista os Produtos do Emissor
+     * Lista os Portadores existentes
      *
      */
     public function test_listarUsingGET30() {
@@ -378,7 +368,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET31
      *
-     * Lista promotores cadastrados na base do emissor
+     * Lista os Produtos do Emissor
      *
      */
     public function test_listarUsingGET31() {
@@ -386,19 +376,19 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET39
+     * Test case for listarUsingGET32
      *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Lista promotores cadastrados na base do emissor
      *
      */
-    public function test_listarUsingGET39() {
+    public function test_listarUsingGET32() {
 
     }
     
     /**
      * Test case for listarUsingGET4
      *
-     * Lista os Bancos cadastrados para o Emissor
+     * Lista todos os atendimentos
      *
      */
     public function test_listarUsingGET4() {
@@ -406,32 +396,42 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET41
+     * Test case for listarUsingGET40
+     *
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     *
+     */
+    public function test_listarUsingGET40() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET42
      *
      * Lista os Tipos de Telefones
      *
      */
-    public function test_listarUsingGET41() {
+    public function test_listarUsingGET42() {
 
     }
     
     /**
-     * Test case for listarUsingGET47
+     * Test case for listarUsingGET48
      *
      * Listar Vencimentos
      *
      */
-    public function test_listarUsingGET47() {
+    public function test_listarUsingGET48() {
 
     }
     
     /**
-     * Test case for listarUsingGET9
+     * Test case for listarUsingGET5
      *
-     * Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+     * Lista os Bancos cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET9() {
+    public function test_listarUsingGET5() {
 
     }
     

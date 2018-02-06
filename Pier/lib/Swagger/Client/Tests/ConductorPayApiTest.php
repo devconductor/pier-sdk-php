@@ -156,12 +156,12 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET6
+     * Test case for listarUsingGET7
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
      */
-    public function test_listarUsingGET6() {
+    public function test_listarUsingGET7() {
 
     }
     

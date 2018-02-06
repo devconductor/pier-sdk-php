@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listarTiposEventosTransacoesUsingGET**](StatusParametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET33**](StatusParametroApi.md#listarUsingGET33) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET34**](StatusParametroApi.md#listarUsingGET34) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET34**](StatusParametroApi.md#listarUsingGET34) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET35**](StatusParametroApi.md#listarUsingGET35) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 # **consultarEstagioCartaoUsingGET**
@@ -350,8 +350,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET33**
-> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET33($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
+# **listarUsingGET34**
+> \br.com.conductor.pier.api.v2.model\PageStatusContaResponse listarUsingGET34($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -379,10 +379,10 @@ $permite_desbloquear = 56; // int | Par\u00C3\u00A2metro que define se o Status 
 $permite_atribuir_como_cancelamento = 56; // int | Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET33($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
+    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET33: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET34: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -421,8 +421,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET34**
-> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET34($sort, $page, $limit, $id, $nome)
+# **listarUsingGET35**
+> \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse listarUsingGET35($sort, $page, $limit, $id, $nome)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -441,10 +441,10 @@ $id = 789; // int | Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
 $nome = "nome_example"; // string | Nome do status impress\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET35($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatusParametroApi->listarUsingGET34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling StatusParametroApi->listarUsingGET35: ', $e->getMessage(), "\n";
 }
 ?>
 ```

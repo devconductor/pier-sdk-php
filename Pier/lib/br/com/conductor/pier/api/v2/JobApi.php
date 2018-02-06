@@ -407,7 +407,7 @@ class JobApi
     }
     
     /**
-     * listarUsingGET21
+     * listarUsingGET22
      *
      * Listar Jobs
      *
@@ -420,15 +420,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\PageJobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET22($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET21WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * Listar Jobs
      *
@@ -441,7 +441,7 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageJobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET22WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
         
   

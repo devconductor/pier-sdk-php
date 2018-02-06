@@ -126,12 +126,12 @@ class UsuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET46
+     * Test case for listarUsingGET47
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
      */
-    public function test_listarUsingGET46() {
+    public function test_listarUsingGET47() {
 
     }
     

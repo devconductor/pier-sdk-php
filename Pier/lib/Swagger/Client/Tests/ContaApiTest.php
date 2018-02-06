@@ -316,22 +316,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET13
+     * Test case for listarUsingGET14
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET13() {
+    public function test_listarUsingGET14() {
 
     }
     
     /**
-     * Test case for listarUsingGET45
+     * Test case for listarUsingGET46
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET45() {
+    public function test_listarUsingGET46() {
 
     }
     

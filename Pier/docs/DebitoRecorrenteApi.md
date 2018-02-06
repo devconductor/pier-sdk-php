@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listarUsingGET12**](DebitoRecorrenteApi.md#listarUsingGET12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listarUsingGET38**](DebitoRecorrenteApi.md#listarUsingGET38) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listarUsingGET13**](DebitoRecorrenteApi.md#listarUsingGET13) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
+[**listarUsingGET39**](DebitoRecorrenteApi.md#listarUsingGET39) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
-# **listarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET12($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento)
+# **listarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET13($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento)
 
 Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
 
@@ -32,10 +32,10 @@ $ativo = true; // bool | Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\
 $data_hora_ultimo_pagamento = "data_hora_ultimo_pagamento_example"; // string | Data do \u00C3\u00BAltimo pagamento efetuado.
 
 try { 
-    $result = $api_instance->listarUsingGET12($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
+    $result = $api_instance->listarUsingGET13($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -69,8 +69,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET38**
-> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET38($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
+# **listarUsingGET39**
+> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET39($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
 
 Listar Tipos Debitos Recorrentes
 
@@ -91,10 +91,10 @@ $valor = new Number(); // Number | Valor do tipo de d\u00C3\u00A9bito recorrente
 $flag_ativo = true; // bool | Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
 
 try { 
-    $result = $api_instance->listarUsingGET38($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+    $result = $api_instance->listarUsingGET39($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET38: ', $e->getMessage(), "\n";
+    echo 'Exception when calling DebitoRecorrenteApi->listarUsingGET39: ', $e->getMessage(), "\n";
 }
 ?>
 ```

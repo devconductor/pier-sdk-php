@@ -116,29 +116,19 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for integrarUsingPOST
+     * Test case for integrarUsingPOST1
      *
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      *
      */
-    public function test_integrarUsingPOST() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET15
-     *
-     * Lista documentos
-     *
-     */
-    public function test_listarUsingGET15() {
+    public function test_integrarUsingPOST1() {
 
     }
     
     /**
      * Test case for listarUsingGET16
      *
-     * Lista os templates dos documentos
+     * Lista documentos
      *
      */
     public function test_listarUsingGET16() {
@@ -146,12 +136,22 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET42
+     * Test case for listarUsingGET17
+     *
+     * Lista os templates dos documentos
+     *
+     */
+    public function test_listarUsingGET17() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET43
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET42() {
+    public function test_listarUsingGET43() {
 
     }
     

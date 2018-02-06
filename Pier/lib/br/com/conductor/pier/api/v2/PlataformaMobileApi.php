@@ -197,7 +197,7 @@ class PlataformaMobileApi
     }
     
     /**
-     * listarUsingGET28
+     * listarUsingGET29
      *
      * Lista as plataformas mobile cadastradas
      *
@@ -208,15 +208,15 @@ class PlataformaMobileApi
      * @return \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET29($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET28WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
      * Lista as plataformas mobile cadastradas
      *
@@ -227,7 +227,7 @@ class PlataformaMobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
     {
         
   

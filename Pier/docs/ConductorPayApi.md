@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET6**](ConductorPayApi.md#listarUsingGET6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**listarUsingGET7**](ConductorPayApi.md#listarUsingGET7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
 [**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
@@ -414,8 +414,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET6($device_id, $sort, $page, $limit, $status, $numero_cartao)
+# **listarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET7($device_id, $sort, $page, $limit, $status, $numero_cartao)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -435,10 +435,10 @@ $status = "status_example"; // string | Status do cart\u00C3\u00A3o tokenizado
 $numero_cartao = "numero_cartao_example"; // string | Numero do cart\u00C3\u00A3o tokenizado
 
 try { 
-    $result = $api_instance->listarUsingGET6($device_id, $sort, $page, $limit, $status, $numero_cartao);
+    $result = $api_instance->listarUsingGET7($device_id, $sort, $page, $limit, $status, $numero_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->listarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->listarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -76,6 +76,26 @@ class ArquivoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for integrarUsingPOST
+     *
+     * Integrar Arquivos
+     *
+     */
+    public function test_integrarUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET3
+     *
+     * Listar arquivos do Pier Cloud
+     *
+     */
+    public function test_listarUsingGET3() {
+
+    }
+    
+    /**
      * Test case for salvarUsingPOST1
      *
      * Permite armazenar arquivos no PIER Cloud

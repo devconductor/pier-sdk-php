@@ -520,7 +520,7 @@ class AntecipacaoApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET9
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
@@ -535,15 +535,15 @@ class AntecipacaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCompraResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET9($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
@@ -558,12 +558,12 @@ class AntecipacaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCompraResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET9WithHttpInfo($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET8');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET9');
         }
   
         // parse inputs

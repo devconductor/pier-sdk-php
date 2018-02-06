@@ -1956,7 +1956,7 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET17
+     * listarUsingGET18
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
@@ -1980,15 +1980,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PageEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
+    public function listarUsingGET18($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET17WithHttpInfo
+     * listarUsingGET18WithHttpInfo
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
@@ -2012,7 +2012,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
+    public function listarUsingGET18WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
     {
         
   
@@ -2143,7 +2143,7 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET26
+     * listarUsingGET27
      *
      * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
@@ -2164,15 +2164,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET26WithHttpInfo
+     * listarUsingGET27WithHttpInfo
      *
      * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
@@ -2193,7 +2193,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
         
   
@@ -2312,7 +2312,7 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET27
+     * listarUsingGET28
      *
      * Lista as Pessoas cadastradas no Emissor
      *
@@ -2333,15 +2333,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
+    public function listarUsingGET28($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET27WithHttpInfo
+     * listarUsingGET28WithHttpInfo
      *
      * Lista as Pessoas cadastradas no Emissor
      *
@@ -2362,7 +2362,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
+    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
     {
         
   
@@ -2481,7 +2481,7 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET36
+     * listarUsingGET37
      *
      * Lista os Telefones cadastrados no Emissor
      *
@@ -2498,15 +2498,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PageTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
+    public function listarUsingGET37($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET36WithHttpInfo ($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET37WithHttpInfo ($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET36WithHttpInfo
+     * listarUsingGET37WithHttpInfo
      *
      * Lista os Telefones cadastrados no Emissor
      *
@@ -2523,7 +2523,7 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET36WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
+    public function listarUsingGET37WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
     {
         
   

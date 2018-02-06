@@ -1,6 +1,6 @@
 <?php
 /**
- * ArquivoResponse
+ * ArquivoDetalheResponse
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * ArquivoResponse Class Doc Comment
+ * ArquivoDetalheResponse Class Doc Comment
  *
  * @category    Class
  * @description Objeto Response do arquivo.
@@ -44,7 +44,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ArquivoResponse implements ArrayAccess
+class ArquivoDetalheResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -54,6 +54,7 @@ class ArquivoResponse implements ArrayAccess
         'id' => 'int',
         'id_tipo_arquivo' => 'int',
         'nome_tipo_arquivo' => 'string',
+        'arquivo' => 'string',
         'id_status_arquivo' => 'int',
         'nome_status_arquivo' => 'string',
         'nome' => 'string',
@@ -75,6 +76,7 @@ class ArquivoResponse implements ArrayAccess
         'id' => 'id',
         'id_tipo_arquivo' => 'idTipoArquivo',
         'nome_tipo_arquivo' => 'nomeTipoArquivo',
+        'arquivo' => 'arquivo',
         'id_status_arquivo' => 'idStatusArquivo',
         'nome_status_arquivo' => 'nomeStatusArquivo',
         'nome' => 'nome',
@@ -96,6 +98,7 @@ class ArquivoResponse implements ArrayAccess
         'id' => 'setId',
         'id_tipo_arquivo' => 'setIdTipoArquivo',
         'nome_tipo_arquivo' => 'setNomeTipoArquivo',
+        'arquivo' => 'setArquivo',
         'id_status_arquivo' => 'setIdStatusArquivo',
         'nome_status_arquivo' => 'setNomeStatusArquivo',
         'nome' => 'setNome',
@@ -117,6 +120,7 @@ class ArquivoResponse implements ArrayAccess
         'id' => 'getId',
         'id_tipo_arquivo' => 'getIdTipoArquivo',
         'nome_tipo_arquivo' => 'getNomeTipoArquivo',
+        'arquivo' => 'getArquivo',
         'id_status_arquivo' => 'getIdStatusArquivo',
         'nome_status_arquivo' => 'getNomeStatusArquivo',
         'nome' => 'getNome',
@@ -148,6 +152,12 @@ class ArquivoResponse implements ArrayAccess
       * @var string
       */
     protected $nome_tipo_arquivo;
+    
+    /**
+      * $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+      * @var string
+      */
+    protected $arquivo;
     
     /**
       * $id_status_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
@@ -203,6 +213,7 @@ class ArquivoResponse implements ArrayAccess
             $this->id = $data["id"];
             $this->id_tipo_arquivo = $data["id_tipo_arquivo"];
             $this->nome_tipo_arquivo = $data["nome_tipo_arquivo"];
+            $this->arquivo = $data["arquivo"];
             $this->id_status_arquivo = $data["id_status_arquivo"];
             $this->nome_status_arquivo = $data["nome_status_arquivo"];
             $this->nome = $data["nome"];
@@ -273,6 +284,27 @@ class ArquivoResponse implements ArrayAccess
     {
         
         $this->nome_tipo_arquivo = $nome_tipo_arquivo;
+        return $this;
+    }
+    
+    /**
+     * Gets arquivo
+     * @return string
+     */
+    public function getArquivo()
+    {
+        return $this->arquivo;
+    }
+  
+    /**
+     * Sets arquivo
+     * @param string $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+     * @return $this
+     */
+    public function setArquivo($arquivo)
+    {
+        
+        $this->arquivo = $arquivo;
         return $this;
     }
     

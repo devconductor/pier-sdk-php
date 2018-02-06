@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listarAuditoriasUsingGET**](OportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadeApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET25**](OportunidadeApi.md#listarUsingGET25) | **GET** /api/oportunidades | Lista as oportunidades
-[**listarUsingGET40**](OportunidadeApi.md#listarUsingGET40) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listarUsingGET26**](OportunidadeApi.md#listarUsingGET26) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET41**](OportunidadeApi.md#listarUsingGET41) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvarUsingPOST17**](OportunidadeApi.md#salvarUsingPOST17) | **POST** /api/oportunidades | Cadastra as oportunidades
 [**salvarUsingPOST24**](OportunidadeApi.md#salvarUsingPOST24) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
@@ -553,8 +553,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse listarUsingGET25($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse listarUsingGET26($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
 
 Lista as oportunidades
 
@@ -578,10 +578,10 @@ $data_fim_vigencia = "data_fim_vigencia_example"; // string | Data do fim da vig
 $flag_ativo = true; // bool | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 
 try { 
-    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OportunidadeApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling OportunidadeApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -616,8 +616,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET40**
-> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse listarUsingGET40($sort, $page, $limit, $descricao, $flag_ativo)
+# **listarUsingGET41**
+> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse listarUsingGET41($sort, $page, $limit, $descricao, $flag_ativo)
 
 Lista os tipos oportunidades
 
@@ -636,10 +636,10 @@ $descricao = "descricao_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do
 $flag_ativo = true; // bool | Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
 
 try { 
-    $result = $api_instance->listarUsingGET40($sort, $page, $limit, $descricao, $flag_ativo);
+    $result = $api_instance->listarUsingGET41($sort, $page, $limit, $descricao, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OportunidadeApi->listarUsingGET40: ', $e->getMessage(), "\n";
+    echo 'Exception when calling OportunidadeApi->listarUsingGET41: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -86,12 +86,12 @@ class WebhookApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET50
+     * Test case for listarUsingGET51
      *
      * Lista os Webhooks
      *
      */
-    public function test_listarUsingGET50() {
+    public function test_listarUsingGET51() {
 
     }
     

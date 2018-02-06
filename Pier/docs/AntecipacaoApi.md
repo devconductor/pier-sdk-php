@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 [**efetivarAntecipacoesUsingPOST**](AntecipacaoApi.md#efetivarAntecipacoesUsingPOST) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET8**](AntecipacaoApi.md#listarUsingGET8) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET9**](AntecipacaoApi.md#listarUsingGET9) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 [**simularAntecipacoesUsingGET**](AntecipacaoApi.md#simularAntecipacoesUsingGET) | **GET** /api/compras-antecipaveis/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
 
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET8($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
+# **listarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET9($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -228,10 +228,10 @@ $juros = true; // bool | Indica se a compra \u00C3\u00A9 com ou sem juros.
 $tipo_origem_transacao = "tipo_origem_transacao_example"; // string | Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 
 try { 
-    $result = $api_instance->listarUsingGET8($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+    $result = $api_instance->listarUsingGET9($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AntecipacaoApi->listarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling AntecipacaoApi->listarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```

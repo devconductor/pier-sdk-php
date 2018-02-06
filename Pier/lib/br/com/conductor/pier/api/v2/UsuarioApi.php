@@ -702,7 +702,7 @@ class UsuarioApi
     }
     
     /**
-     * listarUsingGET46
+     * listarUsingGET47
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
@@ -716,15 +716,15 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET46($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET47($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET46WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET47WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET46WithHttpInfo
+     * listarUsingGET47WithHttpInfo
      *
      * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      *
@@ -738,7 +738,7 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET46WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET47WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   

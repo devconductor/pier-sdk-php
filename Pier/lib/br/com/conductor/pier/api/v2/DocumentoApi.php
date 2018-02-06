@@ -587,7 +587,7 @@ class DocumentoApi
     }
     
     /**
-     * integrarUsingPOST
+     * integrarUsingPOST1
      *
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      *
@@ -595,15 +595,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function integrarUsingPOST($integrar_documento_request)
+    public function integrarUsingPOST1($integrar_documento_request)
     {
-        list($response, $statusCode, $httpHeader) = $this->integrarUsingPOSTWithHttpInfo ($integrar_documento_request);
+        list($response, $statusCode, $httpHeader) = $this->integrarUsingPOST1WithHttpInfo ($integrar_documento_request);
         return $response; 
     }
 
 
     /**
-     * integrarUsingPOSTWithHttpInfo
+     * integrarUsingPOST1WithHttpInfo
      *
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      *
@@ -611,12 +611,12 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoIntegracaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function integrarUsingPOSTWithHttpInfo($integrar_documento_request)
+    public function integrarUsingPOST1WithHttpInfo($integrar_documento_request)
     {
         
         // verify the required parameter 'integrar_documento_request' is set
         if ($integrar_documento_request === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $integrar_documento_request when calling integrarUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $integrar_documento_request when calling integrarUsingPOST1');
         }
   
         // parse inputs
@@ -678,7 +678,7 @@ class DocumentoApi
     }
     
     /**
-     * listarUsingGET15
+     * listarUsingGET16
      *
      * Lista documentos
      *
@@ -691,15 +691,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDocumentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
+    public function listarUsingGET16($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($sort, $page, $limit, $id_template_documento, $nome, $extensao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($sort, $page, $limit, $id_template_documento, $nome, $extensao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET16WithHttpInfo
      *
      * Lista documentos
      *
@@ -712,7 +712,7 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
+    public function listarUsingGET16WithHttpInfo($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
     {
         
   
@@ -799,7 +799,7 @@ class DocumentoApi
     }
     
     /**
-     * listarUsingGET16
+     * listarUsingGET17
      *
      * Lista os templates dos documentos
      *
@@ -810,15 +810,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16($sort = null, $page = null, $limit = null, $id_tipo_template = null)
+    public function listarUsingGET17($sort = null, $page = null, $limit = null, $id_tipo_template = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($sort, $page, $limit, $id_tipo_template);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($sort, $page, $limit, $id_tipo_template);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET16WithHttpInfo
+     * listarUsingGET17WithHttpInfo
      *
      * Lista os templates dos documentos
      *
@@ -829,7 +829,7 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_template = null)
+    public function listarUsingGET17WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_template = null)
     {
         
   
@@ -908,7 +908,7 @@ class DocumentoApi
     }
     
     /**
-     * listarUsingGET42
+     * listarUsingGET43
      *
      * Lista os tipos de templates
      *
@@ -918,15 +918,15 @@ class DocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET42($sort = null, $page = null, $limit = null)
+    public function listarUsingGET43($sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET42WithHttpInfo ($sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET43WithHttpInfo ($sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET42WithHttpInfo
+     * listarUsingGET43WithHttpInfo
      *
      * Lista os tipos de templates
      *
@@ -936,7 +936,7 @@ class DocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET42WithHttpInfo($sort = null, $page = null, $limit = null)
+    public function listarUsingGET43WithHttpInfo($sort = null, $page = null, $limit = null)
     {
         
   

@@ -308,7 +308,7 @@ class WebhookApi
     }
     
     /**
-     * listarUsingGET50
+     * listarUsingGET51
      *
      * Lista os Webhooks
      *
@@ -322,15 +322,15 @@ class WebhookApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET50($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET51($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET50WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET51WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET50WithHttpInfo
+     * listarUsingGET51WithHttpInfo
      *
      * Lista os Webhooks
      *
@@ -344,7 +344,7 @@ class WebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET50WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET51WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   

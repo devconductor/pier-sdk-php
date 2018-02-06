@@ -1308,7 +1308,7 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET25
+     * listarUsingGET26
      *
      * Lista as oportunidades
      *
@@ -1325,15 +1325,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET25WithHttpInfo
+     * listarUsingGET26WithHttpInfo
      *
      * Lista as oportunidades
      *
@@ -1350,7 +1350,7 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
   
@@ -1453,7 +1453,7 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET40
+     * listarUsingGET41
      *
      * Lista os tipos oportunidades
      *
@@ -1465,15 +1465,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET41($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET40WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET41WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET40WithHttpInfo
+     * listarUsingGET41WithHttpInfo
      *
      * Lista os tipos oportunidades
      *
@@ -1485,7 +1485,7 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET41WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   

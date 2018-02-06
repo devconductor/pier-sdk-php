@@ -623,7 +623,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET11
+     * listarUsingGET12
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
@@ -641,15 +641,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET12($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET11WithHttpInfo
+     * listarUsingGET12WithHttpInfo
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
@@ -667,7 +667,7 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET12WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
         
   
@@ -774,7 +774,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET44
+     * listarUsingGET45
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -786,15 +786,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET44($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET45($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET44WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET45WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET44WithHttpInfo
+     * listarUsingGET45WithHttpInfo
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -806,12 +806,12 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET44WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET45WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET44');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET45');
         }
   
         // parse inputs

@@ -356,39 +356,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET18
+     * Test case for listarUsingGET19
      *
      * Lista Estabelecimentos
      *
      */
-    public function test_listarUsingGET18() {
+    public function test_listarUsingGET19() {
 
     }
     
     /**
-     * Test case for listarUsingGET20
+     * Test case for listarUsingGET21
      *
      * Listar grupos econ\u00C3\u00B4micos
      *
      */
-    public function test_listarUsingGET20() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET22
-     *
-     * Lista as Maquinetas
-     *
-     */
-    public function test_listarUsingGET22() {
+    public function test_listarUsingGET21() {
 
     }
     
     /**
      * Test case for listarUsingGET23
      *
-     * Lista os tipos de moedas do emissor 
+     * Lista as Maquinetas
      *
      */
     public function test_listarUsingGET23() {
@@ -398,7 +388,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET24
      *
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista os tipos de moedas do emissor 
      *
      */
     public function test_listarUsingGET24() {
@@ -406,42 +396,52 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET35
+     * Test case for listarUsingGET25
+     *
+     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     *
+     */
+    public function test_listarUsingGET25() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET36
      *
      * Lista os Telefones Estabelecimentos
      *
      */
-    public function test_listarUsingGET35() {
+    public function test_listarUsingGET36() {
 
     }
     
     /**
-     * Test case for listarUsingGET37
+     * Test case for listarUsingGET38
      *
      * Lista os Terminais cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET37() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET48
-     *
-     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-     *
-     */
-    public function test_listarUsingGET48() {
+    public function test_listarUsingGET38() {
 
     }
     
     /**
      * Test case for listarUsingGET49
      *
-     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
      *
      */
     public function test_listarUsingGET49() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET50
+     *
+     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+     *
+     */
+    public function test_listarUsingGET50() {
 
     }
     

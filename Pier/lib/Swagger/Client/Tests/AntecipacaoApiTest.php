@@ -106,12 +106,12 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET8
+     * Test case for listarUsingGET9
      *
      * Listar compras com parcelas antecip\u00C3\u00A1veis
      *
      */
-    public function test_listarUsingGET8() {
+    public function test_listarUsingGET9() {
 
     }
     

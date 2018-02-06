@@ -226,29 +226,19 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET18
      *
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET17() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET26
-     *
-     * Lista os Detalhes das Pessoas cadastradas no Emissor
-     *
-     */
-    public function test_listarUsingGET26() {
+    public function test_listarUsingGET18() {
 
     }
     
     /**
      * Test case for listarUsingGET27
      *
-     * Lista as Pessoas cadastradas no Emissor
+     * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
      */
     public function test_listarUsingGET27() {
@@ -256,12 +246,22 @@ class CadastroClienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET36
+     * Test case for listarUsingGET28
+     *
+     * Lista as Pessoas cadastradas no Emissor
+     *
+     */
+    public function test_listarUsingGET28() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET37
      *
      * Lista os Telefones cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET36() {
+    public function test_listarUsingGET37() {
 
     }
     

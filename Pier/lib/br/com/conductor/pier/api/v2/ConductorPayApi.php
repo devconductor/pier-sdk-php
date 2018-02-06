@@ -937,7 +937,7 @@ class ConductorPayApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET7
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
@@ -950,15 +950,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET7($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
@@ -971,7 +971,7 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET7WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
         
   

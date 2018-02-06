@@ -116,22 +116,22 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET12
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET12() {
 
     }
     
     /**
-     * Test case for listarUsingGET44
+     * Test case for listarUsingGET45
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET44() {
+    public function test_listarUsingGET45() {
 
     }
     

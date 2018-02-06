@@ -55,6 +55,7 @@ class ArquivoPersist implements ArrayAccess
         'arquivo' => 'string',
         'nome' => 'string',
         'extensao' => 'string',
+        'tipo_comunicacao' => 'string',
         'detalhes' => '\br.com.conductor.pier.api.v2.model\ArquivoDetalhesPersist[]'
     );
   
@@ -71,6 +72,7 @@ class ArquivoPersist implements ArrayAccess
         'arquivo' => 'arquivo',
         'nome' => 'nome',
         'extensao' => 'extensao',
+        'tipo_comunicacao' => 'tipoComunicacao',
         'detalhes' => 'detalhes'
     );
   
@@ -87,6 +89,7 @@ class ArquivoPersist implements ArrayAccess
         'arquivo' => 'setArquivo',
         'nome' => 'setNome',
         'extensao' => 'setExtensao',
+        'tipo_comunicacao' => 'setTipoComunicacao',
         'detalhes' => 'setDetalhes'
     );
   
@@ -103,6 +106,7 @@ class ArquivoPersist implements ArrayAccess
         'arquivo' => 'getArquivo',
         'nome' => 'getNome',
         'extensao' => 'getExtensao',
+        'tipo_comunicacao' => 'getTipoComunicacao',
         'detalhes' => 'getDetalhes'
     );
   
@@ -136,6 +140,12 @@ class ArquivoPersist implements ArrayAccess
     protected $extensao;
     
     /**
+      * $tipo_comunicacao Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+      * @var string
+      */
+    protected $tipo_comunicacao;
+    
+    /**
       * $detalhes Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
       * @var \br.com.conductor.pier.api.v2.model\ArquivoDetalhesPersist[]
       */
@@ -154,6 +164,7 @@ class ArquivoPersist implements ArrayAccess
             $this->arquivo = $data["arquivo"];
             $this->nome = $data["nome"];
             $this->extensao = $data["extensao"];
+            $this->tipo_comunicacao = $data["tipo_comunicacao"];
             $this->detalhes = $data["detalhes"];
         }
     }
@@ -239,6 +250,30 @@ class ArquivoPersist implements ArrayAccess
     {
         
         $this->extensao = $extensao;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_comunicacao
+     * @return string
+     */
+    public function getTipoComunicacao()
+    {
+        return $this->tipo_comunicacao;
+    }
+  
+    /**
+     * Sets tipo_comunicacao
+     * @param string $tipo_comunicacao Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+     * @return $this
+     */
+    public function setTipoComunicacao($tipo_comunicacao)
+    {
+        $allowed_values = array("SOAP", "REST");
+        if (!in_array($tipo_comunicacao, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'tipo_comunicacao', must be one of 'SOAP', 'REST'");
+        }
+        $this->tipo_comunicacao = $tipo_comunicacao;
         return $this;
     }
     

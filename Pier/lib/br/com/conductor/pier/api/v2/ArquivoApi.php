@@ -97,7 +97,7 @@ class ArquivoApi
      * Consulta de arquivo no PIER Cloud
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo (required)
-     * @return \br.com.conductor.pier.api.v2.model\ArquivoResponse
+     * @return \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET2($id)
@@ -113,7 +113,7 @@ class ArquivoApi
      * Consulta de arquivo no PIER Cloud
      *
      * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function consultarUsingGET2WithHttpInfo($id)
@@ -165,19 +165,237 @@ class ArquivoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\ArquivoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ArquivoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ArquivoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * integrarUsingPOST
+     *
+     * Integrar Arquivos
+     *
+     * @param \br.com.conductor.pier.api.v2.model\IntegrarArquivoRequest $integrar_arquivo_request integrarArquivoRequest (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function integrarUsingPOST($integrar_arquivo_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->integrarUsingPOSTWithHttpInfo ($integrar_arquivo_request);
+        return $response; 
+    }
+
+
+    /**
+     * integrarUsingPOSTWithHttpInfo
+     *
+     * Integrar Arquivos
+     *
+     * @param \br.com.conductor.pier.api.v2.model\IntegrarArquivoRequest $integrar_arquivo_request integrarArquivoRequest (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function integrarUsingPOSTWithHttpInfo($integrar_arquivo_request)
+    {
+        
+        // verify the required parameter 'integrar_arquivo_request' is set
+        if ($integrar_arquivo_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $integrar_arquivo_request when calling integrarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/arquivos/integrar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($integrar_arquivo_request)) {
+            $_tempBody = $integrar_arquivo_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET3
+     *
+     * Listar arquivos do Pier Cloud
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do arquivo (optional)
+     * @param int $id_tipo_arquivo Tipo do arquivo (optional)
+     * @param int $id_status_arquivo Identificador do status do arquivo (optional)
+     * @param string $extensao Extens\u00C3\u00A3o do arquivo (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageArquivoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET3($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET3WithHttpInfo
+     *
+     * Listar arquivos do Pier Cloud
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do arquivo (optional)
+     * @param int $id_tipo_arquivo Tipo do arquivo (optional)
+     * @param int $id_status_arquivo Identificador do status do arquivo (optional)
+     * @param string $extensao Extens\u00C3\u00A3o do arquivo (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageArquivoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET3WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/arquivos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($id_tipo_arquivo !== null) {
+            $queryParams['idTipoArquivo'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_arquivo);
+        }// query params
+        
+        if ($id_status_arquivo !== null) {
+            $queryParams['idStatusArquivo'] = $this->apiClient->getSerializer()->toQueryValue($id_status_arquivo);
+        }// query params
+        
+        if ($extensao !== null) {
+            $queryParams['extensao'] = $this->apiClient->getSerializer()->toQueryValue($extensao);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageArquivoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageArquivoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageArquivoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
@@ -192,7 +410,7 @@ class ArquivoApi
      * Permite armazenar arquivos no PIER Cloud
      *
      * @param \br.com.conductor.pier.api.v2.model\ArquivoPersist $arquivo_persist arquivoPersist (required)
-     * @return \br.com.conductor.pier.api.v2.model\ArquivoResponse
+     * @return \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST1($arquivo_persist)
@@ -208,7 +426,7 @@ class ArquivoApi
      * Permite armazenar arquivos no PIER Cloud
      *
      * @param \br.com.conductor.pier.api.v2.model\ArquivoPersist $arquivo_persist arquivoPersist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function salvarUsingPOST1WithHttpInfo($arquivo_persist)
@@ -256,19 +474,19 @@ class ArquivoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\ArquivoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ArquivoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ArquivoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

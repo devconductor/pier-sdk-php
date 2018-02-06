@@ -2879,7 +2879,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET13
+     * listarUsingGET14
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -2898,15 +2898,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET14($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET13WithHttpInfo
+     * listarUsingGET14WithHttpInfo
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -2925,7 +2925,7 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET13WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET14WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3036,7 +3036,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET45
+     * listarUsingGET46
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3052,15 +3052,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET46($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET45WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET46WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET45WithHttpInfo
+     * listarUsingGET46WithHttpInfo
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3076,12 +3076,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET46WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET45');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET46');
         }
   
         // parse inputs
