@@ -13,24 +13,24 @@ Method | HTTP request | Description
 [**atualizarUsingPOST**](CadastroClienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET22**](CadastroClienteApi.md#consultarUsingGET22) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET23**](CadastroClienteApi.md#consultarUsingGET23) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET29**](CadastroClienteApi.md#consultarUsingGET29) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET23**](CadastroClienteApi.md#consultarUsingGET23) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET24**](CadastroClienteApi.md#consultarUsingGET24) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET30**](CadastroClienteApi.md#consultarUsingGET30) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET28**](CadastroClienteApi.md#listarUsingGET28) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET37**](CadastroClienteApi.md#listarUsingGET37) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET20**](CadastroClienteApi.md#listarUsingGET20) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET29**](CadastroClienteApi.md#listarUsingGET29) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET30**](CadastroClienteApi.md#listarUsingGET30) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET39**](CadastroClienteApi.md#listarUsingGET39) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-[**salvarUsingPOST18**](CadastroClienteApi.md#salvarUsingPOST18) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST19**](CadastroClienteApi.md#salvarUsingPOST19) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST22**](CadastroClienteApi.md#salvarUsingPOST22) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST12**](CadastroClienteApi.md#salvarUsingPOST12) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST14**](CadastroClienteApi.md#salvarUsingPOST14) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST19**](CadastroClienteApi.md#salvarUsingPOST19) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST20**](CadastroClienteApi.md#salvarUsingPOST20) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST23**](CadastroClienteApi.md#salvarUsingPOST23) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 # **alterarUsingPUT**
@@ -520,8 +520,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\EnderecoResponse consultarUsingGET14($id)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse consultarUsingGET15($id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -536,10 +536,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET14($id);
+    $result = $api_instance->consultarUsingGET15($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->consultarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -565,57 +565,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse consultarUsingGET22($id)
+# **consultarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse consultarUsingGET23($id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
 Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi();
-$id = 789; // int | ID da Pessoa
-
-try { 
-    $result = $api_instance->consultarUsingGET22($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->consultarUsingGET22: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| ID da Pessoa | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **consultarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PessoaResponse consultarUsingGET23($id)
-
-Apresenta os dados de uma determinada Pessoa
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
 ### Example 
 ```php
@@ -642,6 +597,51 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+[**\br.com.conductor.pier.api.v2.model\PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **consultarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\PessoaResponse consultarUsingGET24($id)
+
+Apresenta os dados de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi();
+$id = 789; // int | ID da Pessoa
+
+try { 
+    $result = $api_instance->consultarUsingGET24($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CadastroClienteApi->consultarUsingGET24: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID da Pessoa | 
+
+### Return type
+
 [**\br.com.conductor.pier.api.v2.model\PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
@@ -655,8 +655,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET29**
-> \br.com.conductor.pier.api.v2.model\TelefoneResponse consultarUsingGET29($id)
+# **consultarUsingGET30**
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse consultarUsingGET30($id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -671,10 +671,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\CadastroClienteApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET29($id);
+    $result = $api_instance->consultarUsingGET30($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->consultarUsingGET29: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->consultarUsingGET30: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -849,8 +849,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\PageEnderecoResponse listarUsingGET18($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
+# **listarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\PageEnderecoResponse listarUsingGET20($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -881,10 +881,10 @@ $data_inclusao = "data_inclusao_example"; // string | Apresenta a data em que fo
 $data_ultima_atualizacao = "data_ultima_atualizacao_example"; // string | Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
 
 try { 
-    $result = $api_instance->listarUsingGET18($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+    $result = $api_instance->listarUsingGET20($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->listarUsingGET18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->listarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -926,8 +926,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET27**
-> \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse listarUsingGET27($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+# **listarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse listarUsingGET29($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -955,10 +955,10 @@ $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->listarUsingGET27($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->listarUsingGET29($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->listarUsingGET27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->listarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -997,8 +997,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET28**
-> \br.com.conductor.pier.api.v2.model\PagePessoaResponse listarUsingGET28($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+# **listarUsingGET30**
+> \br.com.conductor.pier.api.v2.model\PagePessoaResponse listarUsingGET30($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1026,10 +1026,10 @@ $unidade_federativa_identidade = "unidade_federativa_identidade_example"; // str
 $data_emissao_identidade = "data_emissao_identidade_example"; // string | Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
 
 try { 
-    $result = $api_instance->listarUsingGET28($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    $result = $api_instance->listarUsingGET30($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->listarUsingGET28: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->listarUsingGET30: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1068,8 +1068,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET37**
-> \br.com.conductor.pier.api.v2.model\PageTelefoneResponse listarUsingGET37($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
+# **listarUsingGET39**
+> \br.com.conductor.pier.api.v2.model\PageTelefoneResponse listarUsingGET39($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1093,10 +1093,10 @@ $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 $status = 56; // int | Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
 
 try { 
-    $result = $api_instance->listarUsingGET37($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+    $result = $api_instance->listarUsingGET39($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->listarUsingGET37: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->listarUsingGET39: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1221,8 +1221,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST11**
-> \br.com.conductor.pier.api.v2.model\EnderecoResponse salvarUsingPOST11($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
+# **salvarUsingPOST12**
+> \br.com.conductor.pier.api.v2.model\EnderecoResponse salvarUsingPOST12($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1247,10 +1247,10 @@ $uf = "uf_example"; // string | Apresenta sigla da Unidade Federativa
 $pais = "pais_example"; // string | Apresenta nome do Pais
 
 try { 
-    $result = $api_instance->salvarUsingPOST11($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
+    $result = $api_instance->salvarUsingPOST12($id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1286,8 +1286,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST13**
-> \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse salvarUsingPOST13($id, $body)
+# **salvarUsingPOST14**
+> \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse salvarUsingPOST14($id, $body)
 
 Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
 
@@ -1303,10 +1303,10 @@ $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da 
 $body = new \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist(); // \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist | Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
 
 try { 
-    $result = $api_instance->salvarUsingPOST13($id, $body);
+    $result = $api_instance->salvarUsingPOST14($id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1333,8 +1333,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST18**
-> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST18($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
+# **salvarUsingPOST19**
+> \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse salvarUsingPOST19($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1359,10 +1359,10 @@ $email = "email_example"; // string | Email da pessoa fisica
 $nome_empresa = "nome_empresa_example"; // string | Nome que deve ser impresso no cart\u00C3\u00A3o
 
 try { 
-    $result = $api_instance->salvarUsingPOST18($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+    $result = $api_instance->salvarUsingPOST19($id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1398,8 +1398,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST19**
-> \br.com.conductor.pier.api.v2.model\PessoaResponse salvarUsingPOST19($nome, $tipo, $data_nascimento, $cpf, $cnpj, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
+# **salvarUsingPOST20**
+> \br.com.conductor.pier.api.v2.model\PessoaResponse salvarUsingPOST20($nome, $tipo, $data_nascimento, $cpf, $cnpj, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1423,10 +1423,10 @@ $unidade_federativa_identidade = "unidade_federativa_identidade_example"; // str
 $data_emissao_identidade = "data_emissao_identidade_example"; // string | Data emiss\u00C3\u00A3o da Identidade.
 
 try { 
-    $result = $api_instance->salvarUsingPOST19($nome, $tipo, $data_nascimento, $cpf, $cnpj, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+    $result = $api_instance->salvarUsingPOST20($nome, $tipo, $data_nascimento, $cpf, $cnpj, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST19: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1461,8 +1461,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST22**
-> \br.com.conductor.pier.api.v2.model\TelefoneResponse salvarUsingPOST22($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
+# **salvarUsingPOST23**
+> \br.com.conductor.pier.api.v2.model\TelefoneResponse salvarUsingPOST23($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1481,10 +1481,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST22($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST23($id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling CadastroClienteApi->salvarUsingPOST23: ', $e->getMessage(), "\n";
 }
 ?>
 ```

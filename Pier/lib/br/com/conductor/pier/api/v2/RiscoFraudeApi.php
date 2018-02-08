@@ -92,7 +92,7 @@ class RiscoFraudeApi
   
     
     /**
-     * consultarUsingGET25
+     * consultarUsingGET26
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -100,15 +100,15 @@ class RiscoFraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET25WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
@@ -116,12 +116,12 @@ class RiscoFraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs

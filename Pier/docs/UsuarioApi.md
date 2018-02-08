@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterarUsingPUT21**](UsuarioApi.md#alterarUsingPUT21) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET41**](UsuarioApi.md#consultarUsingGET41) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET42**](UsuarioApi.md#consultarUsingGET42) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET47**](UsuarioApi.md#listarUsingGET47) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET49**](UsuarioApi.md#listarUsingGET49) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST27**](UsuarioApi.md#salvarUsingPOST27) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**salvarUsingPOST28**](UsuarioApi.md#salvarUsingPOST28) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET41**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET41($id)
+# **consultarUsingGET42**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET42($id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -221,10 +221,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET41($id);
+    $result = $api_instance->consultarUsingGET42($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->consultarUsingGET41: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->consultarUsingGET42: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -295,8 +295,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET47**
-> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET47($sort, $page, $limit, $nome, $cpf, $email, $status)
+# **listarUsingGET49**
+> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET49($sort, $page, $limit, $nome, $cpf, $email, $status)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -317,10 +317,10 @@ $email = "email_example"; // string | Email do Usuario
 $status = "status_example"; // string | Status do Usuario
 
 try { 
-    $result = $api_instance->listarUsingGET47($sort, $page, $limit, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET49($sort, $page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->listarUsingGET47: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->listarUsingGET49: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -397,8 +397,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST27**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST27($persist)
+# **salvarUsingPOST28**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST28($persist)
 
 Cadastra Usu\u00C3\u00A1rio na base.
 
@@ -413,10 +413,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\UsuarioApi();
 $persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersist(); // \br.com.conductor.pier.api.v2.model\UsuarioPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST27($persist);
+    $result = $api_instance->salvarUsingPOST28($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsuarioApi->salvarUsingPOST27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling UsuarioApi->salvarUsingPOST28: ', $e->getMessage(), "\n";
 }
 ?>
 ```

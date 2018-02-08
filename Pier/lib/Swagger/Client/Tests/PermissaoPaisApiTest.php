@@ -66,12 +66,32 @@ class PermissaoPaisApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for consultarPaisUsingGET
+     *
+     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     *
+     */
+    public function test_consultarPaisUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarContinentesUsingGET
      *
      * Lista os continentes
      *
      */
     public function test_listarContinentesUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarPaisesUsingGET
+     *
+     * Lista os pa\u00C3\u00ADses
+     *
+     */
+    public function test_listarPaisesUsingGET() {
 
     }
     

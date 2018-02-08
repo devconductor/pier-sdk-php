@@ -280,6 +280,113 @@ class ArquivoApi
     /**
      * listarUsingGET3
      *
+     * Lista as auditorias do arquivo
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo (required)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET3($id, $page = null, $limit = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($id, $page, $limit);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET3WithHttpInfo
+     *
+     * Lista as auditorias do arquivo
+     *
+     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo (required)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET3WithHttpInfo($id, $page = null, $limit = null)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET3');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/arquivos/{id}/auditorias";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET4
+     *
      * Listar arquivos do Pier Cloud
      *
      * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
@@ -292,15 +399,15 @@ class ArquivoApi
      * @return \br.com.conductor.pier.api.v2.model\PageArquivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    public function listarUsingGET4($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET4WithHttpInfo ($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET3WithHttpInfo
+     * listarUsingGET4WithHttpInfo
      *
      * Listar arquivos do Pier Cloud
      *
@@ -314,7 +421,7 @@ class ArquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageArquivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET3WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    public function listarUsingGET4WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
     {
         
   

@@ -96,12 +96,12 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET6
+     * Test case for consultarUsingGET7
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET6() {
+    public function test_consultarUsingGET7() {
 
     }
     
@@ -156,22 +156,22 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET7
+     * Test case for listarUsingGET9
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
      */
-    public function test_listarUsingGET7() {
+    public function test_listarUsingGET9() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST5
+     * Test case for salvarUsingPOST6
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
      */
-    public function test_salvarUsingPOST5() {
+    public function test_salvarUsingPOST6() {
 
     }
     

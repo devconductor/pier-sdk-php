@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT22**](WebhookApi.md#alterarUsingPUT22) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET43**](WebhookApi.md#consultarUsingGET43) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET51**](WebhookApi.md#listarUsingGET51) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST29**](WebhookApi.md#salvarUsingPOST29) | **POST** /api/webhooks | Salvar Webhook
+[**consultarUsingGET44**](WebhookApi.md#consultarUsingGET44) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET53**](WebhookApi.md#listarUsingGET53) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST30**](WebhookApi.md#salvarUsingPOST30) | **POST** /api/webhooks | Salvar Webhook
 
 
 # **alterarUsingPUT22**
@@ -61,8 +61,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET43**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET43($id)
+# **consultarUsingGET44**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET44($id)
 
 Consultar Webhook
 
@@ -77,10 +77,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhookApi();
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET43($id);
+    $result = $api_instance->consultarUsingGET44($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->consultarUsingGET43: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->consultarUsingGET44: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -106,8 +106,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET51**
-> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET51($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET53**
+> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET53($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
 
 Lista os Webhooks
 
@@ -128,10 +128,10 @@ $metodo = "metodo_example"; // string | M\u00C3\u00A9todo que a ser chamado pelo
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->listarUsingGET51($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET53($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->listarUsingGET51: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->listarUsingGET53: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -163,8 +163,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST29**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST29($tipo_evento, $url)
+# **salvarUsingPOST30**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST30($tipo_evento, $url)
 
 Salvar Webhook
 
@@ -180,10 +180,10 @@ $tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo 
 $url = "url_example"; // string | URL que a ser consumida pelo WebHook
 
 try { 
-    $result = $api_instance->salvarUsingPOST29($tipo_evento, $url);
+    $result = $api_instance->salvarUsingPOST30($tipo_evento, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhookApi->salvarUsingPOST29: ', $e->getMessage(), "\n";
+    echo 'Exception when calling WebhookApi->salvarUsingPOST30: ', $e->getMessage(), "\n";
 }
 ?>
 ```

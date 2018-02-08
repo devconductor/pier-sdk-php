@@ -1430,7 +1430,7 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET11
+     * consultarUsingGET12
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1438,15 +1438,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11($id)
+    public function consultarUsingGET12($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET11WithHttpInfo
+     * consultarUsingGET12WithHttpInfo
      *
      * Apresenta dados de uma determinada conta
      *
@@ -1454,12 +1454,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11WithHttpInfo($id)
+    public function consultarUsingGET12WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
         }
   
         // parse inputs
@@ -1525,7 +1525,7 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET40
+     * consultarUsingGET41
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
@@ -1534,15 +1534,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40($id, $id_transferencia)
+    public function consultarUsingGET41($id, $id_transferencia)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id, $id_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET41WithHttpInfo ($id, $id_transferencia);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET40WithHttpInfo
+     * consultarUsingGET41WithHttpInfo
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
@@ -1551,16 +1551,16 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40WithHttpInfo($id, $id_transferencia)
+    public function consultarUsingGET41WithHttpInfo($id, $id_transferencia)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET41');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET41');
         }
   
         // parse inputs
@@ -2879,7 +2879,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET14
+     * listarUsingGET16
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -2898,15 +2898,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET16($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET14WithHttpInfo
+     * listarUsingGET16WithHttpInfo
      *
      * Lista contas existentes na base de dados do Emissor
      *
@@ -2925,7 +2925,7 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET16WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3036,7 +3036,7 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET46
+     * listarUsingGET48
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3052,15 +3052,15 @@ class ContaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET46($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET48($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET46WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET48WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET46WithHttpInfo
+     * listarUsingGET48WithHttpInfo
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
@@ -3076,12 +3076,12 @@ class ContaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET46WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET48WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET46');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET48');
         }
   
         // parse inputs

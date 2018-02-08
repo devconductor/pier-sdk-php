@@ -86,22 +86,22 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET10
+     * Test case for consultarUsingGET11
      *
      * Consulta conta banc\u00C3\u00A1ria portador
      *
      */
-    public function test_consultarUsingGET10() {
+    public function test_consultarUsingGET11() {
 
     }
     
     /**
-     * Test case for consultarUsingGET39
+     * Test case for consultarUsingGET40
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
      */
-    public function test_consultarUsingGET39() {
+    public function test_consultarUsingGET40() {
 
     }
     
@@ -116,32 +116,32 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET12
+     * Test case for listarUsingGET14
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
      */
-    public function test_listarUsingGET12() {
+    public function test_listarUsingGET14() {
 
     }
     
     /**
-     * Test case for listarUsingGET45
+     * Test case for listarUsingGET47
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
      */
-    public function test_listarUsingGET45() {
+    public function test_listarUsingGET47() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST8
      *
      * Cadastra uma conta banc\u00C3\u00A1ria do portador
      *
      */
-    public function test_salvarUsingPOST7() {
+    public function test_salvarUsingPOST8() {
 
     }
     

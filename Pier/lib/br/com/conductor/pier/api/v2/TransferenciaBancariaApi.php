@@ -292,7 +292,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET11
      *
      * Consulta conta banc\u00C3\u00A1ria portador
      *
@@ -300,15 +300,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id)
+    public function consultarUsingGET11($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * Consulta conta banc\u00C3\u00A1ria portador
      *
@@ -316,12 +316,12 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id)
+    public function consultarUsingGET11WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -387,7 +387,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * consultarUsingGET39
+     * consultarUsingGET40
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
@@ -397,15 +397,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET39($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET40($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET39WithHttpInfo
+     * consultarUsingGET40WithHttpInfo
      *
      * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
      *
@@ -415,16 +415,16 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET39WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET40WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET39');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET40');
         }
   
         // parse inputs
@@ -623,7 +623,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET12
+     * listarUsingGET14
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
@@ -641,15 +641,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET14($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET14WithHttpInfo
      *
      * Lista contas banc\u00C3\u00A1rias portador
      *
@@ -667,7 +667,7 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET14WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
         
   
@@ -774,7 +774,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET45
+     * listarUsingGET47
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -786,15 +786,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET47($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET45WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET47WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET45WithHttpInfo
+     * listarUsingGET47WithHttpInfo
      *
      * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
      *
@@ -806,12 +806,12 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET47WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET45');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET47');
         }
   
         // parse inputs
@@ -897,7 +897,7 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * salvarUsingPOST7
+     * salvarUsingPOST8
      *
      * Cadastra uma conta banc\u00C3\u00A1ria do portador
      *
@@ -905,15 +905,15 @@ class TransferenciaBancariaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST7($persist)
+    public function salvarUsingPOST8($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST7WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST7WithHttpInfo
+     * salvarUsingPOST8WithHttpInfo
      *
      * Cadastra uma conta banc\u00C3\u00A1ria do portador
      *
@@ -921,12 +921,12 @@ class TransferenciaBancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST7WithHttpInfo($persist)
+    public function salvarUsingPOST8WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST7');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST8');
         }
   
         // parse inputs

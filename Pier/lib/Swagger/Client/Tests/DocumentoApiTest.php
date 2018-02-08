@@ -86,19 +86,9 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET12
-     *
-     * Consulta documentos
-     *
-     */
-    public function test_consultarUsingGET12() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET13
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
      */
     public function test_consultarUsingGET13() {
@@ -106,12 +96,22 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET37
+     * Test case for consultarUsingGET14
+     *
+     * Consultar templates dos documentos
+     *
+     */
+    public function test_consultarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET38
      *
      * Consultar tipo de template
      *
      */
-    public function test_consultarUsingGET37() {
+    public function test_consultarUsingGET38() {
 
     }
     
@@ -126,39 +126,39 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET16
+     * Test case for listarUsingGET18
      *
      * Lista documentos
      *
      */
-    public function test_listarUsingGET16() {
+    public function test_listarUsingGET18() {
 
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET19
      *
      * Lista os templates dos documentos
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET19() {
 
     }
     
     /**
-     * Test case for listarUsingGET43
+     * Test case for listarUsingGET45
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET43() {
+    public function test_listarUsingGET45() {
 
     }
     
     /**
      * Test case for salvarUsingPOST10
      *
-     * Cadastra os templates dos documentos
+     * Cadastra documentos
      *
      */
     public function test_salvarUsingPOST10() {
@@ -166,22 +166,22 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST25
+     * Test case for salvarUsingPOST11
      *
-     * Cadastra os tipos de templates
+     * Cadastra os templates dos documentos
      *
      */
-    public function test_salvarUsingPOST25() {
+    public function test_salvarUsingPOST11() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST9
+     * Test case for salvarUsingPOST26
      *
-     * Cadastra documentos
+     * Cadastra os tipos de templates
      *
      */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST26() {
 
     }
     

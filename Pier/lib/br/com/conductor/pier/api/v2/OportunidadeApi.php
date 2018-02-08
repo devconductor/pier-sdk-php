@@ -530,7 +530,7 @@ class OportunidadeApi
     }
     
     /**
-     * consultarUsingGET21
+     * consultarUsingGET22
      *
      * Apresenta dados de uma determinada oportunidade
      *
@@ -538,15 +538,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21($id)
+    public function consultarUsingGET22($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET21WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
      * Apresenta dados de uma determinada oportunidade
      *
@@ -554,12 +554,12 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21WithHttpInfo($id)
+    public function consultarUsingGET22WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
         }
   
         // parse inputs
@@ -625,7 +625,7 @@ class OportunidadeApi
     }
     
     /**
-     * consultarUsingGET35
+     * consultarUsingGET36
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
@@ -633,15 +633,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35($id)
+    public function consultarUsingGET36($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET35WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET36WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET35WithHttpInfo
+     * consultarUsingGET36WithHttpInfo
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
@@ -649,12 +649,12 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35WithHttpInfo($id)
+    public function consultarUsingGET36WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET35');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET36');
         }
   
         // parse inputs
@@ -1308,7 +1308,7 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET26
+     * listarUsingGET28
      *
      * Lista as oportunidades
      *
@@ -1325,15 +1325,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET28($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET26WithHttpInfo
+     * listarUsingGET28WithHttpInfo
      *
      * Lista as oportunidades
      *
@@ -1350,7 +1350,7 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
   
@@ -1453,7 +1453,7 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET41
+     * listarUsingGET43
      *
      * Lista os tipos oportunidades
      *
@@ -1465,15 +1465,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET41($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET43($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET41WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET43WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET41WithHttpInfo
+     * listarUsingGET43WithHttpInfo
      *
      * Lista os tipos oportunidades
      *
@@ -1485,7 +1485,7 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET41WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET43WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   
@@ -1673,7 +1673,7 @@ class OportunidadeApi
     }
     
     /**
-     * salvarUsingPOST17
+     * salvarUsingPOST18
      *
      * Cadastra as oportunidades
      *
@@ -1681,15 +1681,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST17($persist)
+    public function salvarUsingPOST18($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST17WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST18WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST17WithHttpInfo
+     * salvarUsingPOST18WithHttpInfo
      *
      * Cadastra as oportunidades
      *
@@ -1697,12 +1697,12 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST17WithHttpInfo($persist)
+    public function salvarUsingPOST18WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST17');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST18');
         }
   
         // parse inputs
@@ -1764,7 +1764,7 @@ class OportunidadeApi
     }
     
     /**
-     * salvarUsingPOST24
+     * salvarUsingPOST25
      *
      * Cadastra tipos oportunidades
      *
@@ -1772,15 +1772,15 @@ class OportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST24($persist)
+    public function salvarUsingPOST25($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST24WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST25WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST24WithHttpInfo
+     * salvarUsingPOST25WithHttpInfo
      *
      * Cadastra tipos oportunidades
      *
@@ -1788,12 +1788,12 @@ class OportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST24WithHttpInfo($persist)
+    public function salvarUsingPOST25WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST24');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST25');
         }
   
         // parse inputs

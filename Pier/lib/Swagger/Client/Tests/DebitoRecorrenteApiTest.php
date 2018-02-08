@@ -66,22 +66,22 @@ class DebitoRecorrenteApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for listarUsingGET13
+     * Test case for listarUsingGET15
      *
      * Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
      *
      */
-    public function test_listarUsingGET13() {
+    public function test_listarUsingGET15() {
 
     }
     
     /**
-     * Test case for listarUsingGET39
+     * Test case for listarUsingGET41
      *
      * Listar Tipos Debitos Recorrentes
      *
      */
-    public function test_listarUsingGET39() {
+    public function test_listarUsingGET41() {
 
     }
     

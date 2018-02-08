@@ -77,7 +77,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'string',
         'cnpj' => 'string',
         'email' => 'string',
-        'tefefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
+        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefoneResponse[]'
     );
   
     static function swaggerTypes() {
@@ -115,7 +115,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'cpf',
         'cnpj' => 'cnpj',
         'email' => 'email',
-        'tefefones' => 'tefefones'
+        'telefones' => 'telefones'
     );
   
     static function attributeMap() {
@@ -153,7 +153,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'setCpf',
         'cnpj' => 'setCnpj',
         'email' => 'setEmail',
-        'tefefones' => 'setTefefones'
+        'telefones' => 'setTelefones'
     );
   
     static function setters() {
@@ -191,7 +191,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
         'cpf' => 'getCpf',
         'cnpj' => 'getCnpj',
         'email' => 'getEmail',
-        'tefefones' => 'getTefefones'
+        'telefones' => 'getTelefones'
     );
   
     static function getters() {
@@ -356,10 +356,10 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     protected $email;
     
     /**
-      * $tefefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+      * $telefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
       * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
       */
-    protected $tefefones;
+    protected $telefones;
     
 
     /**
@@ -396,7 +396,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
             $this->cpf = $data["cpf"];
             $this->cnpj = $data["cnpj"];
             $this->email = $data["email"];
-            $this->tefefones = $data["tefefones"];
+            $this->telefones = $data["telefones"];
         }
     }
     
@@ -947,23 +947,23 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
     }
     
     /**
-     * Gets tefefones
+     * Gets telefones
      * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
      */
-    public function getTefefones()
+    public function getTelefones()
     {
-        return $this->tefefones;
+        return $this->telefones;
     }
   
     /**
-     * Sets tefefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $tefefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+     * Sets telefones
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $telefones Lista de telefones associados ao portador do Cart\u00C3\u00A3o
      * @return $this
      */
-    public function setTefefones($tefefones)
+    public function setTelefones($telefones)
     {
         
-        $this->tefefones = $tefefones;
+        $this->telefones = $telefones;
         return $this;
     }
     

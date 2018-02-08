@@ -1217,7 +1217,7 @@ class CartaoApi
     }
     
     /**
-     * consultarUsingGET7
+     * consultarUsingGET8
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1225,15 +1225,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7($id)
+    public function consultarUsingGET8($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET7WithHttpInfo
+     * consultarUsingGET8WithHttpInfo
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
@@ -1241,12 +1241,12 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7WithHttpInfo($id)
+    public function consultarUsingGET8WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
         }
   
         // parse inputs
@@ -1978,7 +1978,7 @@ class CartaoApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET10
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -2006,15 +2006,15 @@ class CartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET10($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET10WithHttpInfo
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
@@ -2042,7 +2042,7 @@ class CartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET10WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
     {
         
   
@@ -2275,6 +2275,111 @@ class CartaoApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\CartaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarCVVUsingPOST
+     *
+     * Validar CVV do cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarCVVUsingPOST($id, $valida_cvv)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarCVVUsingPOSTWithHttpInfo ($id, $valida_cvv);
+        return $response; 
+    }
+
+
+    /**
+     * validarCVVUsingPOSTWithHttpInfo
+     *
+     * Validar CVV do cart\u00C3\u00A3o
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarCVVUsingPOSTWithHttpInfo($id, $valida_cvv)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling validarCVVUsingPOST');
+        }
+        // verify the required parameter 'valida_cvv' is set
+        if ($valida_cvv === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $valida_cvv when calling validarCVVUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/{id}/validar-cvv";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($valida_cvv)) {
+            $_tempBody = $valida_cvv;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

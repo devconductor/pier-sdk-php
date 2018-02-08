@@ -186,22 +186,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for consultarUsingGET12
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET12() {
 
     }
     
     /**
-     * Test case for consultarUsingGET40
+     * Test case for consultarUsingGET41
      *
      * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
      *
      */
-    public function test_consultarUsingGET40() {
+    public function test_consultarUsingGET41() {
 
     }
     
@@ -316,22 +316,22 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET14
+     * Test case for listarUsingGET16
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET14() {
+    public function test_listarUsingGET16() {
 
     }
     
     /**
-     * Test case for listarUsingGET46
+     * Test case for listarUsingGET48
      *
      * Lista as transfer\u00C3\u00AAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET46() {
+    public function test_listarUsingGET48() {
 
     }
     

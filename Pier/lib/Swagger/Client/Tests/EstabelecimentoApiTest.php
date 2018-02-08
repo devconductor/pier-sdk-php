@@ -186,39 +186,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET15
+     * Test case for consultarUsingGET16
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET15() {
+    public function test_consultarUsingGET16() {
 
     }
     
     /**
-     * Test case for consultarUsingGET17
+     * Test case for consultarUsingGET18
      *
      * Consultar grupo econ\u00C3\u00B4mico
      *
      */
-    public function test_consultarUsingGET17() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET19
-     *
-     * Apresenta os dados de uma determinada maquineta
-     *
-     */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET18() {
 
     }
     
     /**
      * Test case for consultarUsingGET20
      *
-     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de uma determinada maquineta
      *
      */
     public function test_consultarUsingGET20() {
@@ -226,32 +216,42 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET28
+     * Test case for consultarUsingGET21
+     *
+     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_consultarUsingGET21() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET29
      *
      * Apresenta os dados de um determinado telefone de um estabelecimento
      *
      */
-    public function test_consultarUsingGET28() {
+    public function test_consultarUsingGET29() {
 
     }
     
     /**
-     * Test case for consultarUsingGET30
+     * Test case for consultarUsingGET31
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET30() {
+    public function test_consultarUsingGET31() {
 
     }
     
     /**
-     * Test case for consultarUsingGET42
+     * Test case for consultarUsingGET43
      *
      * Apresenta os dados de um determinado V\u00C3\u00ADnculo
      *
      */
-    public function test_consultarUsingGET42() {
+    public function test_consultarUsingGET43() {
 
     }
     
@@ -356,19 +356,9 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET19
-     *
-     * Lista Estabelecimentos
-     *
-     */
-    public function test_listarUsingGET19() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET21
      *
-     * Listar grupos econ\u00C3\u00B4micos
+     * Lista Estabelecimentos
      *
      */
     public function test_listarUsingGET21() {
@@ -378,7 +368,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET23
      *
-     * Lista as Maquinetas
+     * Listar grupos econ\u00C3\u00B4micos
      *
      */
     public function test_listarUsingGET23() {
@@ -386,19 +376,9 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET24
-     *
-     * Lista os tipos de moedas do emissor 
-     *
-     */
-    public function test_listarUsingGET24() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET25
      *
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as Maquinetas
      *
      */
     public function test_listarUsingGET25() {
@@ -406,19 +386,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET36
+     * Test case for listarUsingGET26
      *
-     * Lista os Telefones Estabelecimentos
+     * Lista os tipos de moedas do emissor 
      *
      */
-    public function test_listarUsingGET36() {
+    public function test_listarUsingGET26() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET27
+     *
+     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     *
+     */
+    public function test_listarUsingGET27() {
 
     }
     
     /**
      * Test case for listarUsingGET38
      *
-     * Lista os Terminais cadastrados no Emissor
+     * Lista os Telefones Estabelecimentos
      *
      */
     public function test_listarUsingGET38() {
@@ -426,39 +416,39 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET49
+     * Test case for listarUsingGET40
+     *
+     * Lista os Terminais cadastrados no Emissor
+     *
+     */
+    public function test_listarUsingGET40() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET51
      *
      * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
      *
      */
-    public function test_listarUsingGET49() {
+    public function test_listarUsingGET51() {
 
     }
     
     /**
-     * Test case for listarUsingGET50
+     * Test case for listarUsingGET52
      *
      * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET50() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST15
-     *
-     * Realiza o cadastro de uma nova maquineta para um estabelecimento 
-     *
-     */
-    public function test_salvarUsingPOST15() {
+    public function test_listarUsingGET52() {
 
     }
     
     /**
      * Test case for salvarUsingPOST16
      *
-     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Realiza o cadastro de uma nova maquineta para um estabelecimento 
      *
      */
     public function test_salvarUsingPOST16() {
@@ -466,32 +456,42 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST21
+     * Test case for salvarUsingPOST17
+     *
+     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     *
+     */
+    public function test_salvarUsingPOST17() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST22
      *
      * Realiza o cadastro de um novo telefone para um estabelecimento 
      *
      */
-    public function test_salvarUsingPOST21() {
+    public function test_salvarUsingPOST22() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST23
+     * Test case for salvarUsingPOST24
      *
      * Realiza o cadastro de um novo Terminal
      *
      */
-    public function test_salvarUsingPOST23() {
+    public function test_salvarUsingPOST24() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST28
+     * Test case for salvarUsingPOST29
      *
      * Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
      *
      */
-    public function test_salvarUsingPOST28() {
+    public function test_salvarUsingPOST29() {
 
     }
     

@@ -407,7 +407,7 @@ class JobApi
     }
     
     /**
-     * listarUsingGET22
+     * listarUsingGET24
      *
      * Listar Jobs
      *
@@ -420,15 +420,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\PageJobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET24($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET24WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET22WithHttpInfo
+     * listarUsingGET24WithHttpInfo
      *
      * Listar Jobs
      *
@@ -441,7 +441,7 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageJobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET24WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
         
   
@@ -524,7 +524,7 @@ class JobApi
     }
     
     /**
-     * salvarUsingPOST14
+     * salvarUsingPOST15
      *
      * Cadastrar Job
      *
@@ -534,15 +534,15 @@ class JobApi
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14($descricao, $cron, $groovy)
+    public function salvarUsingPOST15($descricao, $cron, $groovy)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($descricao, $cron, $groovy);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST15WithHttpInfo ($descricao, $cron, $groovy);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST14WithHttpInfo
+     * salvarUsingPOST15WithHttpInfo
      *
      * Cadastrar Job
      *
@@ -552,20 +552,20 @@ class JobApi
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14WithHttpInfo($descricao, $cron, $groovy)
+    public function salvarUsingPOST15WithHttpInfo($descricao, $cron, $groovy)
     {
         
         // verify the required parameter 'descricao' is set
         if ($descricao === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $descricao when calling salvarUsingPOST15');
         }
         // verify the required parameter 'cron' is set
         if ($cron === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $cron when calling salvarUsingPOST15');
         }
         // verify the required parameter 'groovy' is set
         if ($groovy === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $groovy when calling salvarUsingPOST15');
         }
   
         // parse inputs

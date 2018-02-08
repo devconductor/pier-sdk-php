@@ -76,12 +76,12 @@ class LimiteDisponibilidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
      * Apresenta os limites da conta
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET19() {
 
     }
     

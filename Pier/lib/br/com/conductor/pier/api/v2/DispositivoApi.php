@@ -282,7 +282,7 @@ class DispositivoApi
     }
     
     /**
-     * listarUsingGET15
+     * listarUsingGET17
      *
      * Lista os dispositivos cadastrados
      *
@@ -297,15 +297,15 @@ class DispositivoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET17($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET17WithHttpInfo
      *
      * Lista os dispositivos cadastrados
      *
@@ -320,7 +320,7 @@ class DispositivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET17WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
         
   
@@ -415,7 +415,7 @@ class DispositivoApi
     }
     
     /**
-     * salvarUsingPOST8
+     * salvarUsingPOST9
      *
      * Cadastra Dispositivo
      *
@@ -423,15 +423,15 @@ class DispositivoApi
      * @return \br.com.conductor.pier.api.v2.model\DispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8($persist)
+    public function salvarUsingPOST9($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST8WithHttpInfo
+     * salvarUsingPOST9WithHttpInfo
      *
      * Cadastra Dispositivo
      *
@@ -439,12 +439,12 @@ class DispositivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8WithHttpInfo($persist)
+    public function salvarUsingPOST9WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
         }
   
         // parse inputs

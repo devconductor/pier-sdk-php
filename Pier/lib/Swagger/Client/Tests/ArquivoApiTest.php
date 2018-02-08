@@ -88,10 +88,20 @@ class ArquivoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET3
      *
-     * Listar arquivos do Pier Cloud
+     * Lista as auditorias do arquivo
      *
      */
     public function test_listarUsingGET3() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET4
+     *
+     * Listar arquivos do Pier Cloud
+     *
+     */
+    public function test_listarUsingGET4() {
 
     }
     

@@ -66,12 +66,12 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET26
      *
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET26() {
 
     }
     

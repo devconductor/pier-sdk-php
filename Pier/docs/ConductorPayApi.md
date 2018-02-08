@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**atualizarChaveUsingPOST**](ConductorPayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
 [**atualizarUsingPUT**](ConductorPayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
 [**confirmaAtualizacaoChaveUsingPOST**](ConductorPayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET6**](ConductorPayApi.md#consultarUsingGET6) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
+[**consultarUsingGET7**](ConductorPayApi.md#consultarUsingGET7) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
 [**listarCodigosRespostaUsingGET**](ConductorPayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
 [**listarModosEntradaUsingGET**](ConductorPayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | Lista os modos entradas
 [**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET7**](ConductorPayApi.md#listarUsingGET7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**listarUsingGET9**](ConductorPayApi.md#listarUsingGET9) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**salvarUsingPOST6**](ConductorPayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 # **atualizarChaveUsingPOST**
@@ -162,8 +162,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET6($device_id, $id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET7($device_id, $id)
 
 Apresenta os dados de um determinado cart\u00C3\u00A3o
 
@@ -179,10 +179,10 @@ $device_id = "device_id_example"; // string | Device id criptografado
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET6($device_id, $id);
+    $result = $api_instance->consultarUsingGET7($device_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -414,8 +414,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET7($device_id, $sort, $page, $limit, $status, $numero_cartao)
+# **listarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET9($device_id, $sort, $page, $limit, $status, $numero_cartao)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -435,10 +435,10 @@ $status = "status_example"; // string | Status do cart\u00C3\u00A3o tokenizado
 $numero_cartao = "numero_cartao_example"; // string | Numero do cart\u00C3\u00A3o tokenizado
 
 try { 
-    $result = $api_instance->listarUsingGET7($device_id, $sort, $page, $limit, $status, $numero_cartao);
+    $result = $api_instance->listarUsingGET9($device_id, $sort, $page, $limit, $status, $numero_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->listarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->listarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -469,8 +469,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST5($device_id, $persist)
+# **salvarUsingPOST6**
+> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST6($device_id, $persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -486,10 +486,10 @@ $device_id = "device_id_example"; // string | Device id criptografado
 $persist = new \br.com.conductor.pier.api.v2.model\CartaoPayPersist(); // \br.com.conductor.pier.api.v2.model\CartaoPayPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST5($device_id, $persist);
+    $result = $api_instance->salvarUsingPOST6($device_id, $persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->salvarUsingPOST6: ', $e->getMessage(), "\n";
 }
 ?>
 ```

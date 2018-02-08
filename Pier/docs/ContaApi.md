@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET11**](ContaApi.md#consultarUsingGET11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET40**](ContaApi.md#consultarUsingGET40) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET12**](ContaApi.md#consultarUsingGET12) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET41**](ContaApi.md#consultarUsingGET41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET14**](ContaApi.md#listarUsingGET14) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listarUsingGET46**](ContaApi.md#listarUsingGET46) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listarUsingGET16**](ContaApi.md#listarUsingGET16) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET48**](ContaApi.md#listarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
@@ -189,7 +189,7 @@ No authorization required
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 
-Esse recurso permite alterar o vencimento de uma conta especifica.
+Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
 
 ### Example 
 ```php
@@ -627,8 +627,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET11($id)
+# **consultarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET12($id)
 
 Apresenta dados de uma determinada conta
 
@@ -643,10 +643,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET11($id);
+    $result = $api_instance->consultarUsingGET12($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -672,8 +672,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET40**
-> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET40($id, $id_transferencia)
+# **consultarUsingGET41**
+> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET41($id, $id_transferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -689,10 +689,10 @@ $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da 
 $id_transferencia = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
 
 try { 
-    $result = $api_instance->consultarUsingGET40($id, $id_transferencia);
+    $result = $api_instance->consultarUsingGET41($id, $id_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET40: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET41: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1266,8 +1266,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET14($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
+# **listarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET16($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1293,10 +1293,10 @@ $data_cadastro = "data_cadastro_example"; // string | Apresenta a data em que o 
 $data_ultima_alteracao_vencimento = "data_ultima_alteracao_vencimento_example"; // string | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
 
 try { 
-    $result = $api_instance->listarUsingGET14($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+    $result = $api_instance->listarUsingGET16($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->listarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1333,8 +1333,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET46**
-> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET46($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
+# **listarUsingGET48**
+> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET48($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1357,10 +1357,10 @@ $valor_transferencia = new Number(); // Number | Valor estabelecido para ser tra
 $data_transferencia = "data_transferencia_example"; // string | Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
 
 try { 
-    $result = $api_instance->listarUsingGET46($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+    $result = $api_instance->listarUsingGET48($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->listarUsingGET46: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->listarUsingGET48: ', $e->getMessage(), "\n";
 }
 ?>
 ```

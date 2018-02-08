@@ -92,6 +92,101 @@ class PermissaoPaisApi
   
     
     /**
+     * consultarPaisUsingGET
+     *
+     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id). (required)
+     * @return \br.com.conductor.pier.api.v2.model\PaisResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarPaisUsingGET($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarPaisUsingGETWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarPaisUsingGETWithHttpInfo
+     *
+     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     *
+     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id). (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PaisResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarPaisUsingGETWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarPaisUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/paises/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PaisResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PaisResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PaisResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarContinentesUsingGET
      *
      * Lista os continentes
@@ -164,6 +259,139 @@ class PermissaoPaisApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object[]', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarPaisesUsingGET
+     *
+     * Lista os pa\u00C3\u00ADses
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
+     * @param string $sigla Sigla do pa\u00C3\u00ADs (optional)
+     * @param string $descricao Nome do pa\u00C3\u00ADs (optional)
+     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte (optional)
+     * @param bool $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PagePaisResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPaisesUsingGET($sort = null, $page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarPaisesUsingGETWithHttpInfo ($sort, $page, $limit, $codigo, $sigla, $descricao, $continente, $flag_ativo);
+        return $response; 
+    }
+
+
+    /**
+     * listarPaisesUsingGETWithHttpInfo
+     *
+     * Lista os pa\u00C3\u00ADses
+     *
+     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
+     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
+     * @param string $sigla Sigla do pa\u00C3\u00ADs (optional)
+     * @param string $descricao Nome do pa\u00C3\u00ADs (optional)
+     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte (optional)
+     * @param bool $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PagePaisResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarPaisesUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $codigo = null, $sigla = null, $descricao = null, $continente = null, $flag_ativo = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/paises";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($codigo !== null) {
+            $queryParams['codigo'] = $this->apiClient->getSerializer()->toQueryValue($codigo);
+        }// query params
+        
+        if ($sigla !== null) {
+            $queryParams['sigla'] = $this->apiClient->getSerializer()->toQueryValue($sigla);
+        }// query params
+        
+        if ($descricao !== null) {
+            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        }// query params
+        
+        if ($continente !== null) {
+            $queryParams['continente'] = $this->apiClient->getSerializer()->toQueryValue($continente);
+        }// query params
+        
+        if ($flag_ativo !== null) {
+            $queryParams['flagAtivo'] = $this->apiClient->getSerializer()->toQueryValue($flag_ativo);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PagePaisResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PagePaisResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PagePaisResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

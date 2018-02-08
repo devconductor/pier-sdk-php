@@ -176,12 +176,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET8
      *
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET8() {
 
     }
     
@@ -246,12 +246,12 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET8
+     * Test case for listarUsingGET10
      *
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET8() {
+    public function test_listarUsingGET10() {
 
     }
     
@@ -262,6 +262,16 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_reativarUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for validarCVVUsingPOST
+     *
+     * Validar CVV do cart\u00C3\u00A3o
+     *
+     */
+    public function test_validarCVVUsingPOST() {
 
     }
     

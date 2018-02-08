@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT9**](LimiteDisponibilidadeApi.md#alterarUsingPUT9) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultarUsingGET18**](LimiteDisponibilidadeApi.md#consultarUsingGET18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
+[**consultarUsingGET19**](LimiteDisponibilidadeApi.md#consultarUsingGET19) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
 # **alterarUsingPUT9**
@@ -79,8 +79,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET18($id_conta)
+# **consultarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET19($id_conta)
 
 Apresenta os limites da conta
 
@@ -95,10 +95,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\LimiteDisponibilida
 $id_conta = 789; // int | Id Conta
 
 try { 
-    $result = $api_instance->consultarUsingGET18($id_conta);
+    $result = $api_instance->consultarUsingGET19($id_conta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LimiteDisponibilidadeApi->consultarUsingGET18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling LimiteDisponibilidadeApi->consultarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```

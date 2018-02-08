@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrarUsingPOST3**](EstabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/grupos-economicos | Cadastrar Grupo Econ\u00C3\u00B4mico
 [**consultaOperacaoUsingGET**](EstabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 [**consultarOrigemComercialUsingGET**](EstabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Consultar Origem Comercial
-[**consultarUsingGET15**](EstabelecimentoApi.md#consultarUsingGET15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultarUsingGET17**](EstabelecimentoApi.md#consultarUsingGET17) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
-[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
-[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET28**](EstabelecimentoApi.md#consultarUsingGET28) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultarUsingGET30**](EstabelecimentoApi.md#consultarUsingGET30) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET42**](EstabelecimentoApi.md#consultarUsingGET42) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
+[**consultarUsingGET16**](EstabelecimentoApi.md#consultarUsingGET16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET18**](EstabelecimentoApi.md#consultarUsingGET18) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
+[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
+[**consultarUsingGET21**](EstabelecimentoApi.md#consultarUsingGET21) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET29**](EstabelecimentoApi.md#consultarUsingGET29) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultarUsingGET31**](EstabelecimentoApi.md#consultarUsingGET31) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET43**](EstabelecimentoApi.md#consultarUsingGET43) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
 [**desabilitarVinculoUsingPOST**](EstabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | Desabilitar um V\u00C3\u00ADnculo
 [**desabilitarVinculoUsingPOST1**](EstabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
 [**habilitarVinculoUsingPOST**](EstabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | Habilitar um V\u00C3\u00ADnculo
@@ -33,20 +33,20 @@ Method | HTTP request | Description
 [**listarTiposAdquirentesUsingGET**](EstabelecimentoApi.md#listarTiposAdquirentesUsingGET) | **GET** /api/tipos-adquirentes | Lista os Tipos de adquirentes
 [**listarTiposMaquinetasUsingGET**](EstabelecimentoApi.md#listarTiposMaquinetasUsingGET) | **GET** /api/tipos-maquinetas | Lista os Tipos de  Maquinetas
 [**listarTiposTerminaisUsingGET1**](EstabelecimentoApi.md#listarTiposTerminaisUsingGET1) | **GET** /api/tipos-terminais-estabelecimento | Lista os Tipos Terminais
-[**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET21**](EstabelecimentoApi.md#listarUsingGET21) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
-[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/maquinetas | Lista as Maquinetas
-[**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
-[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET36**](EstabelecimentoApi.md#listarUsingGET36) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
-[**listarUsingGET38**](EstabelecimentoApi.md#listarUsingGET38) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listarUsingGET49**](EstabelecimentoApi.md#listarUsingGET49) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-[**listarUsingGET50**](EstabelecimentoApi.md#listarUsingGET50) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-[**salvarUsingPOST15**](EstabelecimentoApi.md#salvarUsingPOST15) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
-[**salvarUsingPOST16**](EstabelecimentoApi.md#salvarUsingPOST16) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**salvarUsingPOST21**](EstabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
-[**salvarUsingPOST23**](EstabelecimentoApi.md#salvarUsingPOST23) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
-[**salvarUsingPOST28**](EstabelecimentoApi.md#salvarUsingPOST28) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
+[**listarUsingGET21**](EstabelecimentoApi.md#listarUsingGET21) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
+[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/maquinetas | Lista as Maquinetas
+[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
+[**listarUsingGET27**](EstabelecimentoApi.md#listarUsingGET27) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+[**listarUsingGET38**](EstabelecimentoApi.md#listarUsingGET38) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listarUsingGET40**](EstabelecimentoApi.md#listarUsingGET40) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listarUsingGET51**](EstabelecimentoApi.md#listarUsingGET51) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+[**listarUsingGET52**](EstabelecimentoApi.md#listarUsingGET52) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+[**salvarUsingPOST16**](EstabelecimentoApi.md#salvarUsingPOST16) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
+[**salvarUsingPOST17**](EstabelecimentoApi.md#salvarUsingPOST17) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST22**](EstabelecimentoApi.md#salvarUsingPOST22) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
+[**salvarUsingPOST24**](EstabelecimentoApi.md#salvarUsingPOST24) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
+[**salvarUsingPOST29**](EstabelecimentoApi.md#salvarUsingPOST29) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
 
 # **alterarOrigemComercialUsingPUT**
@@ -607,8 +607,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET15($id)
+# **consultarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET16($id)
 
 Consultar estabelecimento por id
 
@@ -623,10 +623,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | Id
 
 try { 
-    $result = $api_instance->consultarUsingGET15($id);
+    $result = $api_instance->consultarUsingGET16($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -652,8 +652,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET17($id)
+# **consultarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET18($id)
 
 Consultar grupo econ\u00C3\u00B4mico
 
@@ -668,10 +668,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
 
 try { 
-    $result = $api_instance->consultarUsingGET17($id);
+    $result = $api_instance->consultarUsingGET18($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -697,8 +697,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET19($id)
+# **consultarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET20($id)
 
 Apresenta os dados de uma determinada maquineta
 
@@ -713,10 +713,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET19($id);
+    $result = $api_instance->consultarUsingGET20($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET19: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -742,8 +742,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET20($id)
+# **consultarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET21($id)
 
 Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -758,10 +758,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET20($id);
+    $result = $api_instance->consultarUsingGET21($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -787,8 +787,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET28**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET28($id)
+# **consultarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET29($id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
@@ -803,10 +803,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET28($id);
+    $result = $api_instance->consultarUsingGET29($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET28: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -832,8 +832,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET30($id)
+# **consultarUsingGET31**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET31($id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -848,10 +848,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET30($id);
+    $result = $api_instance->consultarUsingGET31($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET31: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -877,8 +877,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET42**
-> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET42($id)
+# **consultarUsingGET43**
+> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET43($id)
 
 Apresenta os dados de um determinado V\u00C3\u00ADnculo
 
@@ -893,10 +893,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET42($id);
+    $result = $api_instance->consultarUsingGET43($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET42: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->consultarUsingGET43: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1452,8 +1452,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET19($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
+# **listarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
 
 Lista Estabelecimentos
 
@@ -1504,10 +1504,10 @@ $uf2 = "uf2_example"; // string | Sigla de identifica\u00C3\u00A7\u00C3\u00A3o d
 $flag_matriz = 56; // int | Indica se \u00C3\u00A9 matriz ou filial.
 
 try { 
-    $result = $api_instance->listarUsingGET19($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET19: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1569,8 +1569,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse listarUsingGET21($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav)
+# **listarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse listarUsingGET23($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav)
 
 Listar grupos econ\u00C3\u00B4micos
 
@@ -1612,10 +1612,10 @@ $limite_rav = new Number(); // Number | Valor limite do RAV
 $id_credor_rav = 789; // int | C\u00C3\u00B3digo identificador do credor RAV
 
 try { 
-    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
+    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET23: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1668,8 +1668,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse listarUsingGET23($sort, $page, $limit, $id_estabelecimento)
+# **listarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse listarUsingGET25($sort, $page, $limit, $id_estabelecimento)
 
 Lista as Maquinetas
 
@@ -1687,10 +1687,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $id_estabelecimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
 
 try { 
-    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1719,8 +1719,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\PageMoedaResponse listarUsingGET24($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PageMoedaResponse listarUsingGET26($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao)
 
 Lista os tipos de moedas do emissor 
 
@@ -1740,10 +1740,10 @@ $simbolo = "simbolo_example"; // string | S\u00C3\u00ADmbolo da Moeda.
 $descricao = "descricao_example"; // string | Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
 
 try { 
-    $result = $api_instance->listarUsingGET24($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
+    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1774,8 +1774,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse listarUsingGET25($sort, $page, $limit, $id_operacao, $id_credor, $id_produto)
+# **listarUsingGET27**
+> \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse listarUsingGET27($sort, $page, $limit, $id_operacao, $id_credor, $id_produto)
 
 Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
 
@@ -1795,10 +1795,10 @@ $id_credor = 789; // int | Apresenta o id do Credor.
 $id_produto = 789; // int | Apresenta o id do produto que vai ser alterado.
 
 try { 
-    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
+    $result = $api_instance->listarUsingGET27($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET27: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1829,8 +1829,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET36**
-> \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse listarUsingGET36($sort, $page, $limit, $id_estabelecimento)
+# **listarUsingGET38**
+> \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse listarUsingGET38($sort, $page, $limit, $id_estabelecimento)
 
 Lista os Telefones Estabelecimentos
 
@@ -1848,10 +1848,10 @@ $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o 
 $id_estabelecimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
 
 try { 
-    $result = $api_instance->listarUsingGET36($sort, $page, $limit, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET38($sort, $page, $limit, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET36: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET38: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1880,8 +1880,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET38**
-> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET38($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+# **listarUsingGET40**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET40($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -1902,10 +1902,10 @@ $numero_estabelecimento = 789; // int | N\u00C3\u00BAmero do estabelecimento a q
 $id_estabelecimento = 789; // int | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
 
 try { 
-    $result = $api_instance->listarUsingGET38($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET40($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET38: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET40: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1937,8 +1937,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET49**
-> \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET49($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente)
+# **listarUsingGET51**
+> \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET51($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente)
 
 Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
 
@@ -1958,10 +1958,10 @@ $id_estabelecimento = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\
 $codigo_estabelecimento_adquirente = "codigo_estabelecimento_adquirente_example"; // string | C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
 
 try { 
-    $result = $api_instance->listarUsingGET49($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
+    $result = $api_instance->listarUsingGET51($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET49: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET51: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1992,8 +1992,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET50**
-> \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse listarUsingGET50($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc)
+# **listarUsingGET52**
+> \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse listarUsingGET52($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc)
 
 Lista os v\u00C3\u00ADnculos cadastrados no Emissor
 
@@ -2014,10 +2014,10 @@ $id_operacao = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u
 $codigo_mcc = 56; // int | C\u00C3\u00B3digo MCC.
 
 try { 
-    $result = $api_instance->listarUsingGET50($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
+    $result = $api_instance->listarUsingGET52($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->listarUsingGET50: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->listarUsingGET52: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2049,8 +2049,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST15**
-> \br.com.conductor.pier.api.v2.model\MaquinetaResponse salvarUsingPOST15($maquineta_persist)
+# **salvarUsingPOST16**
+> \br.com.conductor.pier.api.v2.model\MaquinetaResponse salvarUsingPOST16($maquineta_persist)
 
 Realiza o cadastro de uma nova maquineta para um estabelecimento 
 
@@ -2065,10 +2065,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $maquineta_persist = new \br.com.conductor.pier.api.v2.model\MaquinetaPersist(); // \br.com.conductor.pier.api.v2.model\MaquinetaPersist | maquinetaPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST15($maquineta_persist);
+    $result = $api_instance->salvarUsingPOST16($maquineta_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2094,8 +2094,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST16**
-> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse salvarUsingPOST16($oprecao_credor_persist)
+# **salvarUsingPOST17**
+> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse salvarUsingPOST17($oprecao_credor_persist)
 
 Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -2110,10 +2110,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $oprecao_credor_persist = new \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist(); // \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist | oprecaoCredorPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST16($oprecao_credor_persist);
+    $result = $api_instance->salvarUsingPOST17($oprecao_credor_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2139,8 +2139,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST21**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse salvarUsingPOST21($id_estabelecimento, $ddd, $telefone, $ramal)
+# **salvarUsingPOST22**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse salvarUsingPOST22($id_estabelecimento, $ddd, $telefone, $ramal)
 
 Realiza o cadastro de um novo telefone para um estabelecimento 
 
@@ -2158,10 +2158,10 @@ $telefone = "telefone_example"; // string | N\u00C3\u00BAmero do telefone.
 $ramal = "ramal_example"; // string | N\u00C3\u00BAmero do ramal.
 
 try { 
-    $result = $api_instance->salvarUsingPOST21($id_estabelecimento, $ddd, $telefone, $ramal);
+    $result = $api_instance->salvarUsingPOST22($id_estabelecimento, $ddd, $telefone, $ramal);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2190,8 +2190,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST23**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse salvarUsingPOST23($terminal_persist)
+# **salvarUsingPOST24**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse salvarUsingPOST24($terminal_persist)
 
 Realiza o cadastro de um novo Terminal
 
@@ -2206,10 +2206,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $terminal_persist = new \br.com.conductor.pier.api.v2.model\TerminalPersist(); // \br.com.conductor.pier.api.v2.model\TerminalPersist | terminalPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST23($terminal_persist);
+    $result = $api_instance->salvarUsingPOST24($terminal_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2235,8 +2235,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST28**
-> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST28($vinculo_estabelecimento_adquirente_persist)
+# **salvarUsingPOST29**
+> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST29($vinculo_estabelecimento_adquirente_persist)
 
 Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
@@ -2251,10 +2251,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\EstabelecimentoApi(
 $vinculo_estabelecimento_adquirente_persist = new \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirentePersist(); // \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirentePersist | vinculoEstabelecimentoAdquirentePersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST28($vinculo_estabelecimento_adquirente_persist);
+    $result = $api_instance->salvarUsingPOST29($vinculo_estabelecimento_adquirente_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST28: ', $e->getMessage(), "\n";
+    echo 'Exception when calling EstabelecimentoApi->salvarUsingPOST29: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](TransferenciaBancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | Atualiza conta banc\u00C3\u00A1ria portador
 [**consultarTransferenciaBancariaUsingGET**](TransferenciaBancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-[**consultarUsingGET10**](TransferenciaBancariaApi.md#consultarUsingGET10) | **GET** /api/contas-bancarias-portador/{id} | Consulta conta banc\u00C3\u00A1ria portador
-[**consultarUsingGET39**](TransferenciaBancariaApi.md#consultarUsingGET39) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultarUsingGET11**](TransferenciaBancariaApi.md#consultarUsingGET11) | **GET** /api/contas-bancarias-portador/{id} | Consulta conta banc\u00C3\u00A1ria portador
+[**consultarUsingGET40**](TransferenciaBancariaApi.md#consultarUsingGET40) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 [**listarTransferenciaBancariaUsingGET**](TransferenciaBancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-[**listarUsingGET12**](TransferenciaBancariaApi.md#listarUsingGET12) | **GET** /api/contas-bancarias-portador | Lista contas banc\u00C3\u00A1rias portador
-[**listarUsingGET45**](TransferenciaBancariaApi.md#listarUsingGET45) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**salvarUsingPOST7**](TransferenciaBancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | Cadastra uma conta banc\u00C3\u00A1ria do portador
+[**listarUsingGET14**](TransferenciaBancariaApi.md#listarUsingGET14) | **GET** /api/contas-bancarias-portador | Lista contas banc\u00C3\u00A1rias portador
+[**listarUsingGET47**](TransferenciaBancariaApi.md#listarUsingGET47) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**salvarUsingPOST8**](TransferenciaBancariaApi.md#salvarUsingPOST8) | **POST** /api/contas-bancarias-portador | Cadastra uma conta banc\u00C3\u00A1ria do portador
 [**simularTransferenciaBancariaUsingPOST**](TransferenciaBancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
 [**transferenciaCreditoContaBancariaUsingPOST**](TransferenciaBancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferirUsingPOST**](TransferenciaBancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
@@ -109,8 +109,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET10($id)
+# **consultarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET11($id)
 
 Consulta conta banc\u00C3\u00A1ria portador
 
@@ -125,10 +125,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TransferenciaBancar
 $id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET10($id);
+    $result = $api_instance->consultarUsingGET11($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -154,8 +154,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET39**
-> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET39($id, $id_transferencia, $id_conta_bancaria_destino)
+# **consultarUsingGET40**
+> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET40($id, $id_transferencia, $id_conta_bancaria_destino)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -172,10 +172,10 @@ $id_transferencia = 789; // int | Id Transfer\u00C3\u00AAncia
 $id_conta_bancaria_destino = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
 
 try { 
-    $result = $api_instance->consultarUsingGET39($id, $id_transferencia, $id_conta_bancaria_destino);
+    $result = $api_instance->consultarUsingGET40($id, $id_transferencia, $id_conta_bancaria_destino);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET39: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->consultarUsingGET40: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -258,8 +258,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse listarUsingGET12($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit)
+# **listarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse listarUsingGET14($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit)
 
 Lista contas banc\u00C3\u00A1rias portador
 
@@ -284,10 +284,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET12($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
+    $result = $api_instance->listarUsingGET14($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->listarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->listarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -323,8 +323,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET45**
-> \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse listarUsingGET45($id, $id_conta_bancaria_destino, $sort, $page, $limit)
+# **listarUsingGET47**
+> \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse listarUsingGET47($id, $id_conta_bancaria_destino, $sort, $page, $limit)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -343,10 +343,10 @@ $page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET45($id, $id_conta_bancaria_destino, $sort, $page, $limit);
+    $result = $api_instance->listarUsingGET47($id, $id_conta_bancaria_destino, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->listarUsingGET45: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->listarUsingGET47: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -376,8 +376,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST7**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse salvarUsingPOST7($persist)
+# **salvarUsingPOST8**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse salvarUsingPOST8($persist)
 
 Cadastra uma conta banc\u00C3\u00A1ria do portador
 
@@ -392,10 +392,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\TransferenciaBancar
 $persist = new \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersist(); // \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST7($persist);
+    $result = $api_instance->salvarUsingPOST8($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransferenciaBancariaApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling TransferenciaBancariaApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -427,7 +427,7 @@ class ConductorPayApi
     }
     
     /**
-     * consultarUsingGET6
+     * consultarUsingGET7
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
@@ -436,15 +436,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6($device_id, $id)
+    public function consultarUsingGET7($device_id, $id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($device_id, $id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($device_id, $id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET6WithHttpInfo
+     * consultarUsingGET7WithHttpInfo
      *
      * Apresenta os dados de um determinado cart\u00C3\u00A3o
      *
@@ -453,16 +453,16 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET6WithHttpInfo($device_id, $id)
+    public function consultarUsingGET7WithHttpInfo($device_id, $id)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET7');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
         }
   
         // parse inputs
@@ -937,7 +937,7 @@ class ConductorPayApi
     }
     
     /**
-     * listarUsingGET7
+     * listarUsingGET9
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
@@ -950,15 +950,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET9($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET7WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
      * Lista os cart\u00C3\u00B5es cadastrados
      *
@@ -971,7 +971,7 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET7WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET9WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
         
   
@@ -1058,7 +1058,7 @@ class ConductorPayApi
     }
     
     /**
-     * salvarUsingPOST5
+     * salvarUsingPOST6
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
@@ -1067,15 +1067,15 @@ class ConductorPayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST5($device_id, $persist)
+    public function salvarUsingPOST6($device_id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST5WithHttpInfo ($device_id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST6WithHttpInfo ($device_id, $persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST5WithHttpInfo
+     * salvarUsingPOST6WithHttpInfo
      *
      * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
      *
@@ -1084,16 +1084,16 @@ class ConductorPayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST5WithHttpInfo($device_id, $persist)
+    public function salvarUsingPOST6WithHttpInfo($device_id, $persist)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST5');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST6');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST5');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST6');
         }
   
         // parse inputs
