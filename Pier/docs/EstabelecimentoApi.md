@@ -1453,7 +1453,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
 
 Lista Estabelecimentos
 
@@ -1491,6 +1491,7 @@ $inativo = 56; // int | Indica se o estabelecimento est\u00C3\u00A1 inativo.
 $id_pais = 789; // int | Identificador de Pa\u00C3\u00ADs.
 $mcc = 789; // int | C\u00C3\u00B3digo de Categoria de Mercado
 $id_tipo_estabelecimento = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+$correspondencia = 56; // int | Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
 $id_moeda = 789; // int | C\u00C3\u00B3digo identificador da moeda.
 $tipo_pagamento = "tipo_pagamento_example"; // string | Tipo do regime de pagamento do estabelecimento.
 $numero_estabelecimento = "numero_estabelecimento_example"; // string | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
@@ -1504,7 +1505,7 @@ $uf2 = "uf2_example"; // string | Sigla de identifica\u00C3\u00A7\u00C3\u00A3o d
 $flag_matriz = 56; // int | Indica se \u00C3\u00A9 matriz ou filial.
 
 try { 
-    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EstabelecimentoApi->listarUsingGET21: ', $e->getMessage(), "\n";
@@ -1542,6 +1543,7 @@ Name | Type | Description  | Notes
  **id_pais** | **int**| Identificador de Pa\u00C3\u00ADs. | [optional] 
  **mcc** | **int**| C\u00C3\u00B3digo de Categoria de Mercado | [optional] 
  **id_tipo_estabelecimento** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. | [optional] 
+ **correspondencia** | **int**| Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. | [optional] 
  **id_moeda** | **int**| C\u00C3\u00B3digo identificador da moeda. | [optional] 
  **tipo_pagamento** | **string**| Tipo do regime de pagamento do estabelecimento. | [optional] 
  **numero_estabelecimento** | **string**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. | [optional] 

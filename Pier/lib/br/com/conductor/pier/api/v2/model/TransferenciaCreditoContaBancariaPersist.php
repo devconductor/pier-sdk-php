@@ -59,7 +59,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
         'numero_meses_carencia' => 'int',
         'data_hora_terminal' => 'string',
         'terminal_requisitante' => 'string',
-        'numero_estabelecimento' => 'int'
+        'numero_estabelecimento' => 'string'
     );
   
     static function swaggerTypes() {
@@ -177,7 +177,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
     
     /**
       * $numero_estabelecimento Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
-      * @var int
+      * @var string
       */
     protected $numero_estabelecimento;
     
@@ -372,7 +372,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
     
     /**
      * Gets numero_estabelecimento
-     * @return int
+     * @return string
      */
     public function getNumeroEstabelecimento()
     {
@@ -381,7 +381,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+     * @param string $numero_estabelecimento Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)

@@ -82,7 +82,7 @@ class EstabelecimentoPersist implements ArrayAccess
         'associado_spc_brasil' => 'int',
         'mcc' => 'int',
         'id_tipo_estabelecimento' => 'int',
-        'tipo_correspondencia' => 'string',
+        'correspondencia' => 'int',
         'cargo_contato' => 'string',
         'tipo_pagamento' => 'string',
         'consulta' => '\br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO',
@@ -132,7 +132,7 @@ class EstabelecimentoPersist implements ArrayAccess
         'associado_spc_brasil' => 'associadoSPCBrasil',
         'mcc' => 'mcc',
         'id_tipo_estabelecimento' => 'idTipoEstabelecimento',
-        'tipo_correspondencia' => 'tipoCorrespondencia',
+        'correspondencia' => 'correspondencia',
         'cargo_contato' => 'cargoContato',
         'tipo_pagamento' => 'tipoPagamento',
         'consulta' => 'consulta',
@@ -182,7 +182,7 @@ class EstabelecimentoPersist implements ArrayAccess
         'associado_spc_brasil' => 'setAssociadoSpcBrasil',
         'mcc' => 'setMcc',
         'id_tipo_estabelecimento' => 'setIdTipoEstabelecimento',
-        'tipo_correspondencia' => 'setTipoCorrespondencia',
+        'correspondencia' => 'setCorrespondencia',
         'cargo_contato' => 'setCargoContato',
         'tipo_pagamento' => 'setTipoPagamento',
         'consulta' => 'setConsulta',
@@ -232,7 +232,7 @@ class EstabelecimentoPersist implements ArrayAccess
         'associado_spc_brasil' => 'getAssociadoSpcBrasil',
         'mcc' => 'getMcc',
         'id_tipo_estabelecimento' => 'getIdTipoEstabelecimento',
-        'tipo_correspondencia' => 'getTipoCorrespondencia',
+        'correspondencia' => 'getCorrespondencia',
         'cargo_contato' => 'getCargoContato',
         'tipo_pagamento' => 'getTipoPagamento',
         'consulta' => 'getConsulta',
@@ -434,10 +434,10 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $id_tipo_estabelecimento;
     
     /**
-      * $tipo_correspondencia Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-      * @var string
+      * $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+      * @var int
       */
-    protected $tipo_correspondencia;
+    protected $correspondencia;
     
     /**
       * $cargo_contato Cargo do contato do estabelecimento.
@@ -521,7 +521,7 @@ class EstabelecimentoPersist implements ArrayAccess
             $this->associado_spc_brasil = $data["associado_spc_brasil"];
             $this->mcc = $data["mcc"];
             $this->id_tipo_estabelecimento = $data["id_tipo_estabelecimento"];
-            $this->tipo_correspondencia = $data["tipo_correspondencia"];
+            $this->correspondencia = $data["correspondencia"];
             $this->cargo_contato = $data["cargo_contato"];
             $this->tipo_pagamento = $data["tipo_pagamento"];
             $this->consulta = $data["consulta"];
@@ -1184,26 +1184,23 @@ class EstabelecimentoPersist implements ArrayAccess
     }
     
     /**
-     * Gets tipo_correspondencia
-     * @return string
+     * Gets correspondencia
+     * @return int
      */
-    public function getTipoCorrespondencia()
+    public function getCorrespondencia()
     {
-        return $this->tipo_correspondencia;
+        return $this->correspondencia;
     }
   
     /**
-     * Sets tipo_correspondencia
-     * @param string $tipo_correspondencia Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+     * Sets correspondencia
+     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
      * @return $this
      */
-    public function setTipoCorrespondencia($tipo_correspondencia)
+    public function setCorrespondencia($correspondencia)
     {
-        $allowed_values = array("ORIGEM", "CORRESPONDENCIA");
-        if (!in_array($tipo_correspondencia, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_correspondencia', must be one of 'ORIGEM', 'CORRESPONDENCIA'");
-        }
-        $this->tipo_correspondencia = $tipo_correspondencia;
+        
+        $this->correspondencia = $correspondencia;
         return $this;
     }
     

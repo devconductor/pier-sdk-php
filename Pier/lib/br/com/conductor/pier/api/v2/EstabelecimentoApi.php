@@ -3175,6 +3175,7 @@ class EstabelecimentoApi
      * @param int $id_pais Identificador de Pa\u00C3\u00ADs. (optional)
      * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado (optional)
      * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)
+     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)
      * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda. (optional)
      * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento. (optional)
      * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)
@@ -3189,9 +3190,9 @@ class EstabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
         return $response; 
     }
 
@@ -3227,6 +3228,7 @@ class EstabelecimentoApi
      * @param int $id_pais Identificador de Pa\u00C3\u00ADs. (optional)
      * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado (optional)
      * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)
+     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)
      * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda. (optional)
      * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento. (optional)
      * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)
@@ -3241,7 +3243,7 @@ class EstabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
         
   
@@ -3365,6 +3367,10 @@ class EstabelecimentoApi
         
         if ($id_tipo_estabelecimento !== null) {
             $queryParams['idTipoEstabelecimento'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_estabelecimento);
+        }// query params
+        
+        if ($correspondencia !== null) {
+            $queryParams['correspondencia'] = $this->apiClient->getSerializer()->toQueryValue($correspondencia);
         }// query params
         
         if ($id_moeda !== null) {

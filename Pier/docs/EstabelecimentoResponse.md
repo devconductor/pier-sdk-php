@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 **associado_spc_brasil** | **int** | N\u00C3\u00BAmero do associado ao SPCBrasil. | [optional] 
 **mcc** | **int** | C\u00C3\u00B3digo de Categoria de Mercado. | [optional] 
 **id_tipo_estabelecimento** | **int** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. | [optional] 
-**tipo_correspondencia** | **string** | Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA). | [optional] 
+**correspondencia** | **int** | Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA). | [optional] 
 **cargo_contato** | **string** | Cargo do contato do estabelecimento. | [optional] 
 **tipo_pagamento** | **string** | Tipo do regime de pagamento do estabelecimento. | [optional] 
 **consulta** | [**\br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO**](ConsultaCadastroEstabelecimentoDTO.md) | Consulta de cadastro n\u00C3\u00BAmero um. | [optional] 
