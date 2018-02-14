@@ -1025,7 +1025,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarCVVUsingPOST**
-> object validarCVVUsingPOST($id, $valida_cvv)
+> string validarCVVUsingPOST($id, $valida_cvv)
 
 Validar CVV do cart\u00C3\u00A3o
 
@@ -1058,7 +1058,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+**string**
 
 ### Authorization
 

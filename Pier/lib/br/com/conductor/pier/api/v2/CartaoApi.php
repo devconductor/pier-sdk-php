@@ -2290,7 +2290,7 @@ class CartaoApi
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
-     * @return object
+     * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function validarCVVUsingPOST($id, $valida_cvv)
@@ -2307,7 +2307,7 @@ class CartaoApi
      *
      * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
-     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
     public function validarCVVUsingPOSTWithHttpInfo($id, $valida_cvv)
@@ -2367,19 +2367,19 @@ class CartaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'POST',
                 $queryParams, $httpBody,
-                $headerParams, 'object'
+                $headerParams, 'string'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }
