@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **alterarUsingPUT22**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse alterarUsingPUT22($id, $tipo_evento, $url, $status)
+> \br.com.conductor.pier.api.v2.model\WebHookResponse alterarUsingPUT22($id, $webhook, $status)
 
 Alterar Webhook
 
@@ -24,12 +24,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhookApi();
 $id = 789; // int | C\u00C3\u00B3digo identificador do Webhook
-$tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo WebHook
-$url = "url_example"; // string | URL que a ser consumida pelo WebHook
+$webhook = new \br.com.conductor.pier.api.v2.model\WebHook(); // \br.com.conductor.pier.api.v2.model\WebHook | webhook
 $status = "status_example"; // string | Status
 
 try { 
-    $result = $api_instance->alterarUsingPUT22($id, $tipo_evento, $url, $status);
+    $result = $api_instance->alterarUsingPUT22($id, $webhook, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->alterarUsingPUT22: ', $e->getMessage(), "\n";
@@ -42,8 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| C\u00C3\u00B3digo identificador do Webhook | 
- **tipo_evento** | **string**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **string**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**\br.com.conductor.pier.api.v2.model\WebHook**](\br.com.conductor.pier.api.v2.model\WebHook.md)| webhook | 
  **status** | **string**| Status | [optional] 
 
 ### Return type
@@ -164,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **salvarUsingPOST30**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST30($tipo_evento, $url)
+> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST30($webhook)
 
 Salvar Webhook
 
@@ -176,11 +174,10 @@ Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\WebhookApi();
-$tipo_evento = "tipo_evento_example"; // string | TipoEvento a ser chamado pelo WebHook
-$url = "url_example"; // string | URL que a ser consumida pelo WebHook
+$webhook = new \br.com.conductor.pier.api.v2.model\WebHook(); // \br.com.conductor.pier.api.v2.model\WebHook | webhook
 
 try { 
-    $result = $api_instance->salvarUsingPOST30($tipo_evento, $url);
+    $result = $api_instance->salvarUsingPOST30($webhook);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->salvarUsingPOST30: ', $e->getMessage(), "\n";
@@ -192,8 +189,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tipo_evento** | **string**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **string**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**\br.com.conductor.pier.api.v2.model\WebHook**](\br.com.conductor.pier.api.v2.model\WebHook.md)| webhook | 
 
 ### Return type
 
