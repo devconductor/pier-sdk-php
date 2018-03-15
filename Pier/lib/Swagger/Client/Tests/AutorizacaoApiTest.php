@@ -68,7 +68,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for autorizarPorContaUsingPOST
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Autoriza transa\u00E7\u00E3o financeira por idConta
      *
      */
     public function test_autorizarPorContaUsingPOST() {
@@ -78,7 +78,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for autorizarUsingPOST
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Autoriza transa\u00E7\u00E3o financeira
      *
      */
     public function test_autorizarUsingPOST() {
@@ -88,7 +88,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for autorizarUsingPOST1
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Autoriza transa\u00E7\u00E3o financeira por idCartao
      *
      */
     public function test_autorizarUsingPOST1() {
@@ -98,7 +98,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelarPorIdContaUsingPOST
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Cancela transa\u00E7\u00E3o financeira por idConta
      *
      */
     public function test_cancelarPorIdContaUsingPOST() {
@@ -108,7 +108,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelarUsingPOST2
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00E7\u00E3o financeira
      *
      */
     public function test_cancelarUsingPOST2() {
@@ -118,7 +118,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelarUsingPOST3
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Cancela transa\u00E7\u00E3o financeira por idCartao
      *
      */
     public function test_cancelarUsingPOST3() {
@@ -128,7 +128,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarCodigosProcessamentoAutorizacaoUsingGET
      *
-     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+     * Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
      *
      */
     public function test_listarCodigosProcessamentoAutorizacaoUsingGET() {
@@ -138,7 +138,7 @@ class AutorizacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for simularUsingPOST
      *
-     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Simula planos de transa\u00E7\u00F5es
      *
      */
     public function test_simularUsingPOST() {

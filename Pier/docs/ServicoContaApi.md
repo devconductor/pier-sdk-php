@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarAnuidadeUsingPOST**](ServicoContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
-[**ativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-[**desativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
+[**ativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00E7o de envio de fatura por email
+[**desativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00E7o de envio de fatura por email
 [**listarAnuidadesUsingGET**](ServicoContaApi.md#listarAnuidadesUsingGET) | **GET** /api/anuidades | Listar Anuidades
 [**listarOperadorasTelefonicasUsingGET**](ServicoContaApi.md#listarOperadorasTelefonicasUsingGET) | **GET** /api/operadoras-telefonicas | Listar Operadoras
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Atribuir Anuidade
 
-Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
 
 ### Example 
 ```php
@@ -24,13 +24,13 @@ Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ServicoContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $id_anuidade = 789; // int | Identificador da anuidade
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 $ddd = "ddd_example"; // string | DDD do celular
-$celular = "celular_example"; // string | N\u00C3\u00BAmero do celular
+$celular = "celular_example"; // string | N\u00FAmero do celular
 $id_operadora = 789; // int | Identificador da operadora do celular
 $id_origem_comercial = 789; // int | Identificador da origem comercial
 
@@ -47,13 +47,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **id_anuidade** | **int**| Identificador da anuidade | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **ddd** | **string**| DDD do celular | [optional] 
- **celular** | **string**| N\u00C3\u00BAmero do celular | [optional] 
+ **celular** | **string**| N\u00FAmero do celular | [optional] 
  **id_operadora** | **int**| Identificador da operadora do celular | [optional] 
  **id_origem_comercial** | **int**| Identificador da origem comercial | [optional] 
 
@@ -75,9 +75,9 @@ No authorization required
 # **ativarEnvioFaturaEmailUsingPOST**
 > object ativarEnvioFaturaEmailUsingPOST($id)
 
- Ativa o servi\u00C3\u00A7o de envio de fatura por email
+ Ativa o servi\u00E7o de envio de fatura por email
 
-Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso ativa o servi\u00E7o de envio de fatura por email
 
 ### Example 
 ```php
@@ -85,7 +85,7 @@ Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ServicoContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id);
@@ -100,7 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -120,9 +120,9 @@ No authorization required
 # **desativarEnvioFaturaEmailUsingPOST**
 > object desativarEnvioFaturaEmailUsingPOST($id)
 
-Desativa o servi\u00C3\u00A7o de envio de fatura por email
+Desativa o servi\u00E7o de envio de fatura por email
 
-Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso desativa o servi\u00E7o de envio de fatura por email
 
 ### Example 
 ```php
@@ -130,7 +130,7 @@ Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ServicoContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id);
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -175,9 +175,9 @@ Lista as anuidades
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ServicoContaApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarAnuidadesUsingGET($sort, $page, $limit);
@@ -192,9 +192,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -224,9 +224,9 @@ Lista as operadoras.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ServicoContaApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarOperadorasTelefonicasUsingGET($sort, $page, $limit);
@@ -241,9 +241,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

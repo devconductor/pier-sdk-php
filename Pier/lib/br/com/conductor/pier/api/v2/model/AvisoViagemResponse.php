@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AvisoViagemResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso aviso viagens
+ * @description Representa\u00E7\u00E3o da resposta do recurso aviso viagens
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,19 +116,19 @@ class AvisoViagemResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)
+      * $id C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
       * @var int
       */
     protected $id;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)
+      * $id_cartao C\u00F3digo identificador do cart\u00E3o na base (id)
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+      * $codigo_pais Codigo identificador do pa\u00EDs na base (id)
       * @var string
       */
     protected $codigo_pais;
@@ -146,7 +146,7 @@ class AvisoViagemResponse implements ArrayAccess
     protected $data_fim;
     
     /**
-      * $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+      * $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o
       * @var int
       */
     protected $flag_ativo;
@@ -180,7 +180,7 @@ class AvisoViagemResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)
+     * @param int $id C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class AvisoViagemResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)
+     * @param int $id_cartao C\u00F3digo identificador do cart\u00E3o na base (id)
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -222,7 +222,7 @@ class AvisoViagemResponse implements ArrayAccess
   
     /**
      * Sets codigo_pais
-     * @param string $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id)
+     * @param string $codigo_pais Codigo identificador do pa\u00EDs na base (id)
      * @return $this
      */
     public function setCodigoPais($codigo_pais)
@@ -285,7 +285,7 @@ class AvisoViagemResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

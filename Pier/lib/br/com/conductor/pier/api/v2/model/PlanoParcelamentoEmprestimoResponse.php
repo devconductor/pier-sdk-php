@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoParcelamentoEmprestimoResponse Class Doc Comment
  *
  * @category    Class
- * @description Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+ * @description Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,7 +112,7 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
 
     
     /**
-      * $numero_parcelas N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento
+      * $numero_parcelas N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
       * @var int
       */
     protected $numero_parcelas;
@@ -124,19 +124,19 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
     protected $valor_parcelas;
     
     /**
-      * $taxa_juros Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
+      * $taxa_juros Taxa de juros aplicado no empr\u00E9stimo/financiamento
       * @var Number
       */
     protected $taxa_juros;
     
     /**
-      * $valor_tributos_iof valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
+      * $valor_tributos_iof valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
       * @var Number
       */
     protected $valor_tributos_iof;
     
     /**
-      * $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+      * $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
       * @var Number
       */
     protected $valor_percentual_cet;
@@ -169,7 +169,7 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento
+     * @param int $numero_parcelas N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -211,7 +211,7 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
   
     /**
      * Sets taxa_juros
-     * @param Number $taxa_juros Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
+     * @param Number $taxa_juros Taxa de juros aplicado no empr\u00E9stimo/financiamento
      * @return $this
      */
     public function setTaxaJuros($taxa_juros)
@@ -232,7 +232,7 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
   
     /**
      * Sets valor_tributos_iof
-     * @param Number $valor_tributos_iof valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
+     * @param Number $valor_tributos_iof valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
      * @return $this
      */
     public function setValorTributosIof($valor_tributos_iof)
@@ -253,7 +253,7 @@ class PlanoParcelamentoEmprestimoResponse implements ArrayAccess
   
     /**
      * Sets valor_percentual_cet
-     * @param Number $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+     * @param Number $valor_percentual_cet valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
      * @return $this
      */
     public function setValorPercentualCet($valor_percentual_cet)

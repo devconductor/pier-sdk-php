@@ -106,22 +106,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET22
+     * Test case for consultarUsingGET23
      *
      * Apresenta dados de uma determinada oportunidade
      *
      */
-    public function test_consultarUsingGET22() {
+    public function test_consultarUsingGET23() {
 
     }
     
     /**
-     * Test case for consultarUsingGET36
+     * Test case for consultarUsingGET37
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
      */
-    public function test_consultarUsingGET36() {
+    public function test_consultarUsingGET37() {
 
     }
     
@@ -166,22 +166,22 @@ class OportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET28
+     * Test case for listarUsingGET30
      *
      * Lista as oportunidades
      *
      */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET30() {
 
     }
     
     /**
-     * Test case for listarUsingGET43
+     * Test case for listarUsingGET45
      *
      * Lista os tipos oportunidades
      *
      */
-    public function test_listarUsingGET43() {
+    public function test_listarUsingGET45() {
 
     }
     

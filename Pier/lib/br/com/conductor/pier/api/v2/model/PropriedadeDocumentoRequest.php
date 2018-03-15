@@ -126,7 +126,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
     protected $detalhes_tipo;
     
     /**
-      * $flag_indice Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+      * $flag_indice Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
       * @var bool
       */
     protected $flag_indice;
@@ -224,7 +224,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
   
     /**
      * Sets flag_indice
-     * @param bool $flag_indice Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+     * @param bool $flag_indice Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
      * @return $this
      */
     public function setFlagIndice($flag_indice)

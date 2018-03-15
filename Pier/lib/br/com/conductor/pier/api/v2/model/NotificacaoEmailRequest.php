@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoEmailRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
+ * @description Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,13 +108,13 @@ class NotificacaoEmailRequest implements ArrayAccess
 
     
     /**
-      * $id_template_notificacao ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $id_template_notificacao ID para o template da notifica\u00E7\u00E3o.
       * @var int
       */
     protected $id_template_notificacao;
     
     /**
-      * $destinatarios Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+      * $destinatarios Lista de email(s) do(s) destinat\u00E1rio(s).
       * @var string[]
       */
     protected $destinatarios;
@@ -126,7 +126,7 @@ class NotificacaoEmailRequest implements ArrayAccess
     protected $anexos;
     
     /**
-      * $parametros_conteudo Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $parametros_conteudo Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
       * @var map[string,object]
       */
     protected $parametros_conteudo;
@@ -158,7 +158,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets id_template_notificacao
-     * @param int $id_template_notificacao ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param int $id_template_notificacao ID para o template da notifica\u00E7\u00E3o.
      * @return $this
      */
     public function setIdTemplateNotificacao($id_template_notificacao)
@@ -179,7 +179,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets destinatarios
-     * @param string[] $destinatarios Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+     * @param string[] $destinatarios Lista de email(s) do(s) destinat\u00E1rio(s).
      * @return $this
      */
     public function setDestinatarios($destinatarios)
@@ -221,7 +221,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets parametros_conteudo
-     * @param map[string,object] $parametros_conteudo Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param map[string,object] $parametros_conteudo Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
      * @return $this
      */
     public function setParametrosConteudo($parametros_conteudo)

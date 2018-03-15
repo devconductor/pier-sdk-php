@@ -4,25 +4,25 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**atualizarChaveUsingPOST**](ConductorPayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
-[**atualizarUsingPUT**](ConductorPayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
-[**confirmaAtualizacaoChaveUsingPOST**](ConductorPayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET7**](ConductorPayApi.md#consultarUsingGET7) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
-[**listarCodigosRespostaUsingGET**](ConductorPayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+[**atualizarChaveUsingPOST**](ConductorPayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
+[**atualizarUsingPUT**](ConductorPayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00E3o
+[**confirmaAtualizacaoChaveUsingPOST**](ConductorPayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
+[**consultarUsingGET8**](ConductorPayApi.md#consultarUsingGET8) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00E3o
+[**listarCodigosRespostaUsingGET**](ConductorPayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
 [**listarModosEntradaUsingGET**](ConductorPayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | Lista os modos entradas
-[**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
+[**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00E7\u00F5es
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
-[**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET9**](ConductorPayApi.md#listarUsingGET9) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvarUsingPOST6**](ConductorPayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00E7\u00F5es
+[**listarUsingGET10**](ConductorPayApi.md#listarUsingGET10) | **GET** /api/cartoes-tokenizados | Lista os cart\u00F5es cadastrados
+[**salvarUsingPOST6**](ConductorPayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | Cria\u00E7\u00E3o de cart\u00E3o
 
 
 # **atualizarChaveUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoPayAtualizarChaveResponse atualizarChaveUsingPOST($device_id, $id)
 
-Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
 
 ### Example 
 ```php
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ConductorPayApi();
 $device_id = "device_id_example"; // string | Device id criptografado
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
 
 try { 
     $result = $api_instance->atualizarChaveUsingPOST($device_id, $id);
@@ -47,7 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Device id criptografado | 
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). | 
 
 ### Return type
 
@@ -67,9 +67,9 @@ No authorization required
 # **atualizarUsingPUT**
 > \br.com.conductor.pier.api.v2.model\CartaoPayResponse atualizarUsingPUT($device_id, $id, $update)
 
-Atualiza os dados do cart\u00C3\u00A3o
+Atualiza os dados do cart\u00E3o
 
-Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
 
 ### Example 
 ```php
@@ -78,7 +78,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ConductorPayApi();
 $device_id = "device_id_example"; // string | Device id criptografado
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
 $update = new \br.com.conductor.pier.api.v2.model\CartaoPayUpdate(); // \br.com.conductor.pier.api.v2.model\CartaoPayUpdate | update
 
 try { 
@@ -95,7 +95,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Device id criptografado | 
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). | 
  **update** | [**\br.com.conductor.pier.api.v2.model\CartaoPayUpdate**](\br.com.conductor.pier.api.v2.model\CartaoPayUpdate.md)| update | 
 
 ### Return type
@@ -116,9 +116,9 @@ No authorization required
 # **confirmaAtualizacaoChaveUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoPayConfirmarChaveResponse confirmaAtualizacaoChaveUsingPOST($device_id, $id, $update)
 
-Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
 
-Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
 
 ### Example 
 ```php
@@ -127,7 +127,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ConductorPayApi();
 $device_id = "device_id_example"; // string | Device id criptografado
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
 $update = new \br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate(); // \br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate | update
 
 try { 
@@ -144,7 +144,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Device id criptografado | 
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). | 
  **update** | [**\br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate**](\br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate.md)| update | 
 
 ### Return type
@@ -162,12 +162,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET7($device_id, $id)
+# **consultarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET8($device_id, $id)
 
-Apresenta os dados de um determinado cart\u00C3\u00A3o
+Apresenta os dados de um determinado cart\u00E3o
 
-Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example 
 ```php
@@ -176,13 +176,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ConductorPayApi();
 $device_id = "device_id_example"; // string | Device id criptografado
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET7($device_id, $id);
+    $result = $api_instance->consultarUsingGET8($device_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->consultarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->consultarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -192,7 +192,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Device id criptografado | 
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). | 
 
 ### Return type
 
@@ -212,9 +212,9 @@ No authorization required
 # **listarCodigosRespostaUsingGET**
 > object[] listarCodigosRespostaUsingGET()
 
-Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
 
-Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
 
 ### Example 
 ```php
@@ -255,7 +255,7 @@ No authorization required
 
 Lista os modos entradas
 
-Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
 
 ### Example 
 ```php
@@ -294,9 +294,9 @@ No authorization required
 # **listarOperacoesUsingGET**
 > object[] listarOperacoesUsingGET()
 
-Lista as opera\u00C3\u00A7\u00C3\u00B5es
+Lista as opera\u00E7\u00F5es
 
-Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
 
 ### Example 
 ```php
@@ -337,7 +337,7 @@ No authorization required
 
 Lista os tipos de terminais
 
-Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+Este m\u00E9todo retorna a lista dos tipos de terminais.
 
 ### Example 
 ```php
@@ -376,9 +376,9 @@ No authorization required
 # **listarTiposTransacoesUsingGET**
 > object[] listarTiposTransacoesUsingGET()
 
-Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+Lista os tipos de transa\u00E7\u00F5es
 
-Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
 
 ### Example 
 ```php
@@ -414,12 +414,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET9($device_id, $sort, $page, $limit, $status, $numero_cartao)
+# **listarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET10($device_id, $sort, $page, $limit, $status, $numero_cartao)
 
-Lista os cart\u00C3\u00B5es cadastrados
+Lista os cart\u00F5es cadastrados
 
-Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
 
 ### Example 
 ```php
@@ -428,17 +428,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ConductorPayApi();
 $device_id = "device_id_example"; // string | Device id criptografado
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$status = "status_example"; // string | Status do cart\u00C3\u00A3o tokenizado
-$numero_cartao = "numero_cartao_example"; // string | Numero do cart\u00C3\u00A3o tokenizado
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+$status = "status_example"; // string | Status do cart\u00E3o tokenizado
+$numero_cartao = "numero_cartao_example"; // string | Numero do cart\u00E3o tokenizado
 
 try { 
-    $result = $api_instance->listarUsingGET9($device_id, $sort, $page, $limit, $status, $numero_cartao);
+    $result = $api_instance->listarUsingGET10($device_id, $sort, $page, $limit, $status, $numero_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConductorPayApi->listarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ConductorPayApi->listarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -448,11 +448,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Device id criptografado | [optional] 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **status** | **string**| Status do cart\u00C3\u00A3o tokenizado | [optional] 
- **numero_cartao** | **string**| Numero do cart\u00C3\u00A3o tokenizado | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **status** | **string**| Status do cart\u00E3o tokenizado | [optional] 
+ **numero_cartao** | **string**| Numero do cart\u00E3o tokenizado | [optional] 
 
 ### Return type
 
@@ -472,9 +472,9 @@ No authorization required
 # **salvarUsingPOST6**
 > \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST6($device_id, $persist)
 
-Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+Cria\u00E7\u00E3o de cart\u00E3o
 
-Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
 
 ### Example 
 ```php

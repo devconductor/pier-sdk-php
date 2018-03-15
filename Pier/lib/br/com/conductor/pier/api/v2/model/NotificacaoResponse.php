@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Notifica\u00C3\u00A7\u00C3\u00A3o SMS
+ * @description Objeto Notifica\u00E7\u00E3o SMS
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class NotificacaoResponse implements ArrayAccess
 
     
     /**
-      * $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+      * $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
       * @var string
       */
     protected $protocolo;
     
     /**
-      * $mensagem Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
+      * $mensagem Mensagem de resposta da solicita\u00E7\u00F5es de envio
       * @var string
       */
     protected $mensagem;
@@ -136,7 +136,7 @@ class NotificacaoResponse implements ArrayAccess
   
     /**
      * Sets protocolo
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
      * @return $this
      */
     public function setProtocolo($protocolo)
@@ -157,7 +157,7 @@ class NotificacaoResponse implements ArrayAccess
   
     /**
      * Sets mensagem
-     * @param string $mensagem Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
+     * @param string $mensagem Mensagem de resposta da solicita\u00E7\u00F5es de envio
      * @return $this
      */
     public function setMensagem($mensagem)

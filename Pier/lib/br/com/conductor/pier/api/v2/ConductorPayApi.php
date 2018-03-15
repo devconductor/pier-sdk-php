@@ -94,10 +94,10 @@ class ConductorPayApi
     /**
      * atualizarChaveUsingPOST
      *
-     * Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+     * Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayAtualizarChaveResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -111,10 +111,10 @@ class ConductorPayApi
     /**
      * atualizarChaveUsingPOSTWithHttpInfo
      *
-     * Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+     * Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayAtualizarChaveResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -199,10 +199,10 @@ class ConductorPayApi
     /**
      * atualizarUsingPUT
      *
-     * Atualiza os dados do cart\u00C3\u00A3o
+     * Atualiza os dados do cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -217,10 +217,10 @@ class ConductorPayApi
     /**
      * atualizarUsingPUTWithHttpInfo
      *
-     * Atualiza os dados do cart\u00C3\u00A3o
+     * Atualiza os dados do cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -314,10 +314,10 @@ class ConductorPayApi
     /**
      * confirmaAtualizacaoChaveUsingPOST
      *
-     * Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+     * Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayConfirmarChaveResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -332,10 +332,10 @@ class ConductorPayApi
     /**
      * confirmaAtualizacaoChaveUsingPOSTWithHttpInfo
      *
-     * Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+     * Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayKeyUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayConfirmarChaveResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -427,42 +427,42 @@ class ConductorPayApi
     }
     
     /**
-     * consultarUsingGET7
+     * consultarUsingGET8
      *
-     * Apresenta os dados de um determinado cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7($device_id, $id)
+    public function consultarUsingGET8($device_id, $id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($device_id, $id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($device_id, $id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET7WithHttpInfo
+     * consultarUsingGET8WithHttpInfo
      *
-     * Apresenta os dados de um determinado cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7WithHttpInfo($device_id, $id)
+    public function consultarUsingGET8WithHttpInfo($device_id, $id)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET7');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET8');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
         }
   
         // parse inputs
@@ -534,7 +534,7 @@ class ConductorPayApi
     /**
      * listarCodigosRespostaUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+     * Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
      *
      * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -549,7 +549,7 @@ class ConductorPayApi
     /**
      * listarCodigosRespostaUsingGETWithHttpInfo
      *
-     * Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+     * Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
      *
      * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -696,7 +696,7 @@ class ConductorPayApi
     /**
      * listarOperacoesUsingGET
      *
-     * Lista as opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as opera\u00E7\u00F5es
      *
      * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -711,7 +711,7 @@ class ConductorPayApi
     /**
      * listarOperacoesUsingGETWithHttpInfo
      *
-     * Lista as opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as opera\u00E7\u00F5es
      *
      * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -858,7 +858,7 @@ class ConductorPayApi
     /**
      * listarTiposTransacoesUsingGET
      *
-     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Lista os tipos de transa\u00E7\u00F5es
      *
      * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -873,7 +873,7 @@ class ConductorPayApi
     /**
      * listarTiposTransacoesUsingGETWithHttpInfo
      *
-     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Lista os tipos de transa\u00E7\u00F5es
      *
      * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -937,41 +937,41 @@ class ConductorPayApi
     }
     
     /**
-     * listarUsingGET9
+     * listarUsingGET10
      *
-     * Lista os cart\u00C3\u00B5es cadastrados
+     * Lista os cart\u00F5es cadastrados
      *
      * @param string $device_id Device id criptografado (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $status Status do cart\u00C3\u00A3o tokenizado (optional)
-     * @param string $numero_cartao Numero do cart\u00C3\u00A3o tokenizado (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $status Status do cart\u00E3o tokenizado (optional)
+     * @param string $numero_cartao Numero do cart\u00E3o tokenizado (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET9($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET10($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET9WithHttpInfo
+     * listarUsingGET10WithHttpInfo
      *
-     * Lista os cart\u00C3\u00B5es cadastrados
+     * Lista os cart\u00F5es cadastrados
      *
      * @param string $device_id Device id criptografado (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $status Status do cart\u00C3\u00A3o tokenizado (optional)
-     * @param string $numero_cartao Numero do cart\u00C3\u00A3o tokenizado (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $status Status do cart\u00E3o tokenizado (optional)
+     * @param string $numero_cartao Numero do cart\u00E3o tokenizado (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET9WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET10WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
         
   
@@ -1060,7 +1060,7 @@ class ConductorPayApi
     /**
      * salvarUsingPOST6
      *
-     * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+     * Cria\u00E7\u00E3o de cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayPersist $persist persist (required)
@@ -1077,7 +1077,7 @@ class ConductorPayApi
     /**
      * salvarUsingPOST6WithHttpInfo
      *
-     * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+     * Cria\u00E7\u00E3o de cart\u00E3o
      *
      * @param string $device_id Device id criptografado (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoPayPersist $persist persist (required)

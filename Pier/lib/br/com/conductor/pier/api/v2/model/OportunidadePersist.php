@@ -120,37 +120,37 @@ class OportunidadePersist implements ArrayAccess
 
     
     /**
-      * $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+      * $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
       * @var int
       */
     protected $id_tipo_oportunidade;
     
     /**
-      * $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+      * $id_status_oportunidade C\u00F3digo identificador do status oportunidade
       * @var int
       */
     protected $id_status_oportunidade;
     
     /**
-      * $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente
+      * $numero_receita_federal N\u00FAmero receita federal do cliente
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $data_inicio_vigencia Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+      * $data_inicio_vigencia Date de in\u00EDcio da vig\u00EAncia da oportunidade
       * @var string
       */
     protected $data_inicio_vigencia;
     
     /**
-      * $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
+      * $data_fim_vigencia Data do fim da vig\u00EAncia da oportunidade
       * @var string
       */
     protected $data_fim_vigencia;
     
     /**
-      * $flag_ativo Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+      * $flag_ativo Atributo que indica se a oportunidade est\u00E1 ativa
       * @var bool
       */
     protected $flag_ativo;
@@ -191,7 +191,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets id_tipo_oportunidade
-     * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+     * @param int $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
      * @return $this
      */
     public function setIdTipoOportunidade($id_tipo_oportunidade)
@@ -212,7 +212,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets id_status_oportunidade
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade
      * @return $this
      */
     public function setIdStatusOportunidade($id_status_oportunidade)
@@ -233,7 +233,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -254,7 +254,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets data_inicio_vigencia
-     * @param string $data_inicio_vigencia Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_inicio_vigencia Date de in\u00EDcio da vig\u00EAncia da oportunidade
      * @return $this
      */
     public function setDataInicioVigencia($data_inicio_vigencia)
@@ -275,7 +275,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets data_fim_vigencia
-     * @param string $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_fim_vigencia Data do fim da vig\u00EAncia da oportunidade
      * @return $this
      */
     public function setDataFimVigencia($data_fim_vigencia)
@@ -296,7 +296,7 @@ class OportunidadePersist implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+     * @param bool $flag_ativo Atributo que indica se a oportunidade est\u00E1 ativa
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

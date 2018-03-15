@@ -94,9 +94,9 @@ class UsuarioApi
     /**
      * alterarSenhaLoginUsingPOST
      *
-     * Alterar senha do usu\u00C3\u00A1rio.
+     * Alterar senha do usu\u00E1rio.
      *
-     * @param string $login Login do usu\u00C3\u00A1rio. (required)
+     * @param string $login Login do usu\u00E1rio. (required)
      * @param string $senha_nova Senha Nova (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -111,9 +111,9 @@ class UsuarioApi
     /**
      * alterarSenhaLoginUsingPOSTWithHttpInfo
      *
-     * Alterar senha do usu\u00C3\u00A1rio.
+     * Alterar senha do usu\u00E1rio.
      *
-     * @param string $login Login do usu\u00C3\u00A1rio. (required)
+     * @param string $login Login do usu\u00E1rio. (required)
      * @param string $senha_nova Senha Nova (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -199,9 +199,9 @@ class UsuarioApi
     /**
      * alterarSenhaUsingPUT
      *
-     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Alterar senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @param string $senha_atual Senha Atual (required)
      * @param string $senha_nova Senha Nova (required)
      * @return string
@@ -217,9 +217,9 @@ class UsuarioApi
     /**
      * alterarSenhaUsingPUTWithHttpInfo
      *
-     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Alterar senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @param string $senha_atual Senha Atual (required)
      * @param string $senha_nova Senha Nova (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -314,9 +314,9 @@ class UsuarioApi
     /**
      * alterarUsingPUT21
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados na base.
+     * Altera os usu\u00E1rios cadastrados na base.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -331,9 +331,9 @@ class UsuarioApi
     /**
      * alterarUsingPUT21WithHttpInfo
      *
-     * Altera os usu\u00C3\u00A1rios cadastrados na base.
+     * Altera os usu\u00E1rios cadastrados na base.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\UsuarioUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -419,9 +419,9 @@ class UsuarioApi
     /**
      * ativarUsuarioUsingPOST
      *
-     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -435,9 +435,9 @@ class UsuarioApi
     /**
      * ativarUsuarioUsingPOSTWithHttpInfo
      *
-     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -512,36 +512,36 @@ class UsuarioApi
     }
     
     /**
-     * consultarUsingGET42
+     * consultarUsingGET43
      *
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET42($id)
+    public function consultarUsingGET43($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET42WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET43WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET42WithHttpInfo
+     * consultarUsingGET43WithHttpInfo
      *
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET42WithHttpInfo($id)
+    public function consultarUsingGET43WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET42');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET43');
         }
   
         // parse inputs
@@ -609,9 +609,9 @@ class UsuarioApi
     /**
      * desativarUsuarioUsingPOST
      *
-     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -625,9 +625,9 @@ class UsuarioApi
     /**
      * desativarUsuarioUsingPOSTWithHttpInfo
      *
-     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -702,13 +702,13 @@ class UsuarioApi
     }
     
     /**
-     * listarUsingGET49
+     * listarUsingGET51
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -716,21 +716,21 @@ class UsuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET49($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET51($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET49WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET51WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET49WithHttpInfo
+     * listarUsingGET51WithHttpInfo
      *
-     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do Usuario (optional)
      * @param string $cpf CPF do Usuario (optional)
      * @param string $email Email do Usuario (optional)
@@ -738,7 +738,7 @@ class UsuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET49WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET51WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   
@@ -831,9 +831,9 @@ class UsuarioApi
     /**
      * recuperarSenhaUsingPOST
      *
-     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Recuperar senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -847,9 +847,9 @@ class UsuarioApi
     /**
      * recuperarSenhaUsingPOSTWithHttpInfo
      *
-     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Recuperar senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -926,7 +926,7 @@ class UsuarioApi
     /**
      * salvarUsingPOST28
      *
-     * Cadastra Usu\u00C3\u00A1rio na base.
+     * Cadastra Usu\u00E1rio na base.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
@@ -942,7 +942,7 @@ class UsuarioApi
     /**
      * salvarUsingPOST28WithHttpInfo
      *
-     * Cadastra Usu\u00C3\u00A1rio na base.
+     * Cadastra Usu\u00E1rio na base.
      *
      * @param \br.com.conductor.pier.api.v2.model\UsuarioPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1017,10 +1017,10 @@ class UsuarioApi
     /**
      * validarSenhaLoginUsingPOST
      *
-     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param string $login Login identificador do usu\u00C3\u00A1rio (login). (required)
-     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
+     * @param string $login Login identificador do usu\u00E1rio (login). (required)
+     * @param string $senha Senha do usu\u00E1rio (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1034,10 +1034,10 @@ class UsuarioApi
     /**
      * validarSenhaLoginUsingPOSTWithHttpInfo
      *
-     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
      *
-     * @param string $login Login identificador do usu\u00C3\u00A1rio (login). (required)
-     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
+     * @param string $login Login identificador do usu\u00E1rio (login). (required)
+     * @param string $senha Senha do usu\u00E1rio (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1122,10 +1122,10 @@ class UsuarioApi
     /**
      * validarSenhaUsingGET1
      *
-     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Validar a senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param string $senha Senha do usu\u00E1rio (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1139,10 +1139,10 @@ class UsuarioApi
     /**
      * validarSenhaUsingGET1WithHttpInfo
      *
-     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Validar a senha do usu\u00E1rio na base do PIER ou WS.
      *
-     * @param string $senha Senha do usu\u00C3\u00A1rio (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). (required)
+     * @param string $senha Senha do usu\u00E1rio (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

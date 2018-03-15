@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoSMSBody Class Doc Comment
  *
  * @category    Class
- * @description Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+ * @description Objeto Notifica\u00E7\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,19 +120,19 @@ class NotificacaoSMSBody implements ArrayAccess
 
     
     /**
-      * $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+      * $nsu N\u00FAmero sequencial \u00FAnico
       * @var int
       */
     protected $nsu;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+      * $id_pessoa C\u00F3digo identificado da pessoa
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta
+      * $id_conta C\u00F3digo identificador da conta
       * @var int
       */
     protected $id_conta;
@@ -150,13 +150,13 @@ class NotificacaoSMSBody implements ArrayAccess
     protected $conteudo;
     
     /**
-      * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
       * @var string
       */
     protected $data_agendamento;
     
     /**
-      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
       * @var string
       */
     protected $tipo_evento;
@@ -191,7 +191,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets nsu
-     * @param int $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+     * @param int $nsu N\u00FAmero sequencial \u00FAnico
      * @return $this
      */
     public function setNsu($nsu)
@@ -212,7 +212,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+     * @param int $id_pessoa C\u00F3digo identificado da pessoa
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -233,7 +233,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta
+     * @param int $id_conta C\u00F3digo identificador da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -296,7 +296,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param string $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -317,7 +317,7 @@ class NotificacaoSMSBody implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
      * @return $this
      */
     public function setTipoEvento($tipo_evento)

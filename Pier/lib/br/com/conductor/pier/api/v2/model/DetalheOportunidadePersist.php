@@ -100,13 +100,13 @@ class DetalheOportunidadePersist implements ArrayAccess
 
     
     /**
-      * $nome_campo Nome do conte\u00C3\u00BAdo
+      * $nome_campo Nome do conte\u00FAdo
       * @var string
       */
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do detalhe
+      * $conteudo Conte\u00FAdo do detalhe
       * @var string
       */
     protected $conteudo;
@@ -136,7 +136,7 @@ class DetalheOportunidadePersist implements ArrayAccess
   
     /**
      * Sets nome_campo
-     * @param string $nome_campo Nome do conte\u00C3\u00BAdo
+     * @param string $nome_campo Nome do conte\u00FAdo
      * @return $this
      */
     public function setNomeCampo($nome_campo)
@@ -157,7 +157,7 @@ class DetalheOportunidadePersist implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do detalhe
+     * @param string $conteudo Conte\u00FAdo do detalhe
      * @return $this
      */
     public function setConteudo($conteudo)

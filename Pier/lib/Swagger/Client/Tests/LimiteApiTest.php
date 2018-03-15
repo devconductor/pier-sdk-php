@@ -68,7 +68,7 @@ class LimiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarHistoricoAlteracoesLimitesUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
      */
     public function test_listarHistoricoAlteracoesLimitesUsingGET() {

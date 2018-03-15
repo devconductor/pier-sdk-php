@@ -204,19 +204,19 @@ class FaturaFechadaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador da fatura.
+      * $id C\u00F3digo identificador da fatura.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * $id_conta C\u00F3digo identificador da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $flag_emite_fatura C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+      * $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
       * @var int
       */
     protected $flag_emite_fatura;
@@ -240,97 +240,97 @@ class FaturaFechadaResponse implements ArrayAccess
     protected $valor_fatura_anterior;
     
     /**
-      * $valor_pagamento_minimo Valor m\u00C3\u00ADnimo para pagamento da fatura.
+      * $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
       * @var Number
       */
     protected $valor_pagamento_minimo;
     
     /**
-      * $total_compras_nacionais Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+      * $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
       * @var Number
       */
     protected $total_compras_nacionais;
     
     /**
-      * $total_compras_internacionas Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+      * $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
       * @var Number
       */
     protected $total_compras_internacionas;
     
     /**
-      * $total_saques_nacionais Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+      * $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_saques_nacionais;
     
     /**
-      * $total_saques_internacionais Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+      * $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_saques_internacionais;
     
     /**
-      * $total_debitos_nacionais Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+      * $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_debitos_nacionais;
     
     /**
-      * $total_debitos_recorrentes Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+      * $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_debitos_recorrentes;
     
     /**
-      * $total_debitos_internacionais Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+      * $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_debitos_internacionais;
     
     /**
-      * $total_debitos_diversos_nacionais Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+      * $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_debitos_diversos_nacionais;
     
     /**
-      * $total_debitos_opcionais Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+      * $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_debitos_opcionais;
     
     /**
-      * $total_pagamentos Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+      * $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_pagamentos;
     
     /**
-      * $total_creditos_nacionais Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+      * $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_creditos_nacionais;
     
     /**
-      * $total_ajustes Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+      * $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_ajustes;
     
     /**
-      * $total_tarifas Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+      * $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
       * @var Number
       */
     protected $total_tarifas;
     
     /**
-      * $total_multa Valor total da multa lan\u00C3\u00A7ada na fatura.
+      * $total_multa Valor total da multa lan\u00E7ada na fatura.
       * @var Number
       */
     protected $total_multa;
     
     /**
-      * $total_juros Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+      * $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
       * @var Number
       */
     protected $total_juros;
@@ -348,7 +348,7 @@ class FaturaFechadaResponse implements ArrayAccess
     protected $taxa_saque;
     
     /**
-      * $taxa_maxima_proximo_periodo Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+      * $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
       * @var Number
       */
     protected $taxa_maxima_proximo_periodo;
@@ -422,7 +422,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador da fatura.
+     * @param int $id C\u00F3digo identificador da fatura.
      * @return $this
      */
     public function setId($id)
@@ -443,7 +443,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @param int $id_conta C\u00F3digo identificador da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -464,7 +464,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+     * @param int $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
      * @return $this
      */
     public function setFlagEmiteFatura($flag_emite_fatura)
@@ -548,7 +548,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor m\u00C3\u00ADnimo para pagamento da fatura.
+     * @param Number $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)
@@ -569,7 +569,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_compras_nacionais
-     * @param Number $total_compras_nacionais Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+     * @param Number $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
      * @return $this
      */
     public function setTotalComprasNacionais($total_compras_nacionais)
@@ -590,7 +590,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_compras_internacionas
-     * @param Number $total_compras_internacionas Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+     * @param Number $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
      * @return $this
      */
     public function setTotalComprasInternacionas($total_compras_internacionas)
@@ -611,7 +611,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_saques_nacionais
-     * @param Number $total_saques_nacionais Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalSaquesNacionais($total_saques_nacionais)
@@ -632,7 +632,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_saques_internacionais
-     * @param Number $total_saques_internacionais Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalSaquesInternacionais($total_saques_internacionais)
@@ -653,7 +653,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_nacionais
-     * @param Number $total_debitos_nacionais Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalDebitosNacionais($total_debitos_nacionais)
@@ -674,7 +674,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_recorrentes
-     * @param Number $total_debitos_recorrentes Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalDebitosRecorrentes($total_debitos_recorrentes)
@@ -695,7 +695,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_internacionais
-     * @param Number $total_debitos_internacionais Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalDebitosInternacionais($total_debitos_internacionais)
@@ -716,7 +716,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_diversos_nacionais
-     * @param Number $total_debitos_diversos_nacionais Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalDebitosDiversosNacionais($total_debitos_diversos_nacionais)
@@ -737,7 +737,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_opcionais
-     * @param Number $total_debitos_opcionais Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalDebitosOpcionais($total_debitos_opcionais)
@@ -758,7 +758,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_pagamentos
-     * @param Number $total_pagamentos Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalPagamentos($total_pagamentos)
@@ -779,7 +779,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_creditos_nacionais
-     * @param Number $total_creditos_nacionais Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalCreditosNacionais($total_creditos_nacionais)
@@ -800,7 +800,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_ajustes
-     * @param Number $total_ajustes Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalAjustes($total_ajustes)
@@ -821,7 +821,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_tarifas
-     * @param Number $total_tarifas Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+     * @param Number $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
      * @return $this
      */
     public function setTotalTarifas($total_tarifas)
@@ -842,7 +842,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_multa
-     * @param Number $total_multa Valor total da multa lan\u00C3\u00A7ada na fatura.
+     * @param Number $total_multa Valor total da multa lan\u00E7ada na fatura.
      * @return $this
      */
     public function setTotalMulta($total_multa)
@@ -863,7 +863,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_juros
-     * @param Number $total_juros Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+     * @param Number $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
      * @return $this
      */
     public function setTotalJuros($total_juros)
@@ -926,7 +926,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+     * @param Number $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
      * @return $this
      */
     public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)

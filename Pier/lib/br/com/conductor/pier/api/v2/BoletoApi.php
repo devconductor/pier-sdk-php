@@ -96,7 +96,7 @@ class BoletoApi
      *
      * Registra uma cobranca na entidade banco relacionada a cobranca informado.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id) (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id) (required)
      * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -112,7 +112,7 @@ class BoletoApi
      *
      * Registra uma cobranca na entidade banco relacionada a cobranca informado.
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id) (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id) (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

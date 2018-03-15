@@ -68,7 +68,7 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for configurarTaxaAntecipacaoUsingPOST
      *
-     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      */
     public function test_configurarTaxaAntecipacaoUsingPOST() {
@@ -78,7 +78,7 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarTaxaAntecipacaoUsingGET
      *
-     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      */
     public function test_consultarTaxaAntecipacaoUsingGET() {
@@ -88,7 +88,7 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for efetivarAntecipacaoUsingPOST
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
      */
     public function test_efetivarAntecipacaoUsingPOST() {
@@ -98,7 +98,7 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for efetivarAntecipacoesUsingPOST
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
      */
     public function test_efetivarAntecipacoesUsingPOST() {
@@ -106,19 +106,19 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET12
      *
-     * Listar compras com parcelas antecip\u00C3\u00A1veis
+     * Listar compras com parcelas antecip\u00E1veis
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET12() {
 
     }
     
     /**
      * Test case for simularAntecipacaoUsingGET
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+     * Simular antecipa\u00E7\u00E3o de parcelas
      *
      */
     public function test_simularAntecipacaoUsingGET() {
@@ -128,7 +128,7 @@ class AntecipacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for simularAntecipacoesUsingGET
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     * Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
      *
      */
     public function test_simularAntecipacoesUsingGET() {

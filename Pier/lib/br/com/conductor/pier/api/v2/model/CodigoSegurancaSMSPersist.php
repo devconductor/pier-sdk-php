@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CodigoSegurancaSMSPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+ * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class CodigoSegurancaSMSPersist implements ArrayAccess
 
     
     /**
-      * $ddd DDD do n\u00C3\u00BAmero de telefone para envio do sms.
+      * $ddd DDD do n\u00FAmero de telefone para envio do sms.
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00C3\u00BAmero do telefone para envio do sms.
+      * $telefone N\u00FAmero do telefone para envio do sms.
       * @var string
       */
     protected $telefone;
@@ -136,7 +136,7 @@ class CodigoSegurancaSMSPersist implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd DDD do n\u00C3\u00BAmero de telefone para envio do sms.
+     * @param string $ddd DDD do n\u00FAmero de telefone para envio do sms.
      * @return $this
      */
     public function setDdd($ddd)
@@ -157,7 +157,7 @@ class CodigoSegurancaSMSPersist implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00C3\u00BAmero do telefone para envio do sms.
+     * @param string $telefone N\u00FAmero do telefone para envio do sms.
      * @return $this
      */
     public function setTelefone($telefone)

@@ -122,19 +122,19 @@ class ControleVencimentoResponse implements ArrayAccess
     protected $data_vencimento;
     
     /**
-      * $data_prevista_corte  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+      * $data_prevista_corte  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
       * @var string
       */
     protected $data_prevista_corte;
     
     /**
-      * $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+      * $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
       * @var string
       */
     protected $data_hora_realizacao_corte;
     
     /**
-      * $data_prevista_faturamento Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+      * $data_prevista_faturamento Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
       * @var string
       */
     protected $data_prevista_faturamento;
@@ -146,7 +146,7 @@ class ControleVencimentoResponse implements ArrayAccess
     protected $data_hora_realizacao_faturamento;
     
     /**
-      * $data_real_vencimento Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+      * $data_real_vencimento Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
       * @var string
       */
     protected $data_real_vencimento;
@@ -201,7 +201,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_prevista_corte
-     * @param string $data_prevista_corte  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+     * @param string $data_prevista_corte  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
      * @return $this
      */
     public function setDataPrevistaCorte($data_prevista_corte)
@@ -222,7 +222,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_realizacao_corte
-     * @param string $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+     * @param string $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
      * @return $this
      */
     public function setDataHoraRealizacaoCorte($data_hora_realizacao_corte)
@@ -243,7 +243,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_prevista_faturamento
-     * @param string $data_prevista_faturamento Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+     * @param string $data_prevista_faturamento Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
      * @return $this
      */
     public function setDataPrevistaFaturamento($data_prevista_faturamento)
@@ -285,7 +285,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_real_vencimento
-     * @param string $data_real_vencimento Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+     * @param string $data_real_vencimento Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
      * @return $this
      */
     public function setDataRealVencimento($data_real_vencimento)

@@ -100,7 +100,7 @@ class GradePendenteRequest implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * $id_conta C\u00F3digo identificador da conta.
       * @var int
       */
     protected $id_conta;
@@ -136,7 +136,7 @@ class GradePendenteRequest implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @param int $id_conta C\u00F3digo identificador da conta.
      * @return $this
      */
     public function setIdConta($id_conta)

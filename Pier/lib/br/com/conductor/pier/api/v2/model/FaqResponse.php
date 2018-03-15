@@ -120,25 +120,25 @@ class FaqResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $pergunta Conte\u00C3\u00BAdo da pergunta.
+      * $pergunta Conte\u00FAdo da pergunta.
       * @var string
       */
     protected $pergunta;
     
     /**
-      * $resposta Conte\u00C3\u00BAdo da resposta.
+      * $resposta Conte\u00FAdo da resposta.
       * @var string
       */
     protected $resposta;
     
     /**
-      * $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+      * $relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
       * @var int
       */
     protected $relevancia;
@@ -156,7 +156,7 @@ class FaqResponse implements ArrayAccess
     protected $categoria;
     
     /**
-      * $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+      * $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
       * @var string
       */
     protected $status;
@@ -191,7 +191,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets pergunta
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta.
+     * @param string $pergunta Conte\u00FAdo da pergunta.
      * @return $this
      */
     public function setPergunta($pergunta)
@@ -233,7 +233,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets resposta
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta.
+     * @param string $resposta Conte\u00FAdo da resposta.
      * @return $this
      */
     public function setResposta($resposta)
@@ -254,7 +254,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets relevancia
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
      * @return $this
      */
     public function setRelevancia($relevancia)
@@ -317,7 +317,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
      * @return $this
      */
     public function setStatus($status)

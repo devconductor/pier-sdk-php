@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaDetalhesResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
+ * @description Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -126,7 +126,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
     protected $valor_desconto;
     
     /**
-      * $valor_parcelas_desconto Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.
+      * $valor_parcelas_desconto Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
       * @var Number
       */
     protected $valor_parcelas_desconto;
@@ -221,7 +221,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
   
     /**
      * Sets valor_parcelas_desconto
-     * @param Number $valor_parcelas_desconto Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.
+     * @param Number $valor_parcelas_desconto Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
      * @return $this
      */
     public function setValorParcelasDesconto($valor_parcelas_desconto)

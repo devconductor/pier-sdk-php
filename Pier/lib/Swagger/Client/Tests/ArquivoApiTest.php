@@ -66,12 +66,12 @@ class ArquivoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET2
+     * Test case for consultarUsingGET3
      *
      * Consulta de arquivo no PIER Cloud
      *
      */
-    public function test_consultarUsingGET2() {
+    public function test_consultarUsingGET3() {
 
     }
     
@@ -86,22 +86,52 @@ class ArquivoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET3
+     * Test case for listarPorNumeroReceitaFederalUsingGET
      *
-     * Lista as auditorias do arquivo
+     * Lista as auditorias de arquivos vinculadas a um N\u00FAmero da Receita Federal
      *
      */
-    public function test_listarUsingGET3() {
+    public function test_listarPorNumeroReceitaFederalUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarStatusArquivosUsingGET
+     *
+     * Listar Status de Arquivo
+     *
+     */
+    public function test_listarStatusArquivosUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarTiposArquivosUsingGET
+     *
+     * Listar Tipos de Arquivo
+     *
+     */
+    public function test_listarTiposArquivosUsingGET() {
 
     }
     
     /**
      * Test case for listarUsingGET4
      *
-     * Listar arquivos do Pier Cloud
+     * Lista as auditorias do arquivo
      *
      */
     public function test_listarUsingGET4() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET5
+     *
+     * Listar arquivos do Pier Cloud
+     *
+     */
+    public function test_listarUsingGET5() {
 
     }
     

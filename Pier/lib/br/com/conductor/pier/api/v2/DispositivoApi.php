@@ -96,7 +96,7 @@ class DispositivoApi
      *
      * Ativa Dispositivo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\DispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -112,7 +112,7 @@ class DispositivoApi
      *
      * Ativa Dispositivo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\DispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -191,7 +191,7 @@ class DispositivoApi
      *
      * Desativa Dispositivo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\DispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -207,7 +207,7 @@ class DispositivoApi
      *
      * Desativa Dispositivo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\DispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -282,45 +282,45 @@ class DispositivoApi
     }
     
     /**
-     * listarUsingGET17
+     * listarUsingGET18
      *
      * Lista os dispositivos cadastrados
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $token Token do Dispositivo (optional)
-     * @param int $id_usuario Identificador do Usu\u00C3\u00A1rio (optional)
-     * @param int $id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param int $id_usuario Identificador do Usu\u00E1rio (optional)
+     * @param int $id_aplicacao_mobile Identificador da aplica\u00E7\u00E3o (optional)
      * @param string $data_criacao Apresenta a data e em que o registro foi criado. (optional)
      * @param string $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET18($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET17WithHttpInfo
+     * listarUsingGET18WithHttpInfo
      *
      * Lista os dispositivos cadastrados
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $token Token do Dispositivo (optional)
-     * @param int $id_usuario Identificador do Usu\u00C3\u00A1rio (optional)
-     * @param int $id_aplicacao_mobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param int $id_usuario Identificador do Usu\u00E1rio (optional)
+     * @param int $id_aplicacao_mobile Identificador da aplica\u00E7\u00E3o (optional)
      * @param string $data_criacao Apresenta a data e em que o registro foi criado. (optional)
      * @param string $data_desativacao Apresenta a data e em que o registro foi desativado. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
+    public function listarUsingGET18WithHttpInfo($sort = null, $page = null, $limit = null, $token = null, $id_usuario = null, $id_aplicacao_mobile = null, $data_criacao = null, $data_desativacao = null)
     {
         
   

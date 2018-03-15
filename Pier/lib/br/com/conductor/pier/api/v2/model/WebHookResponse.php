@@ -38,7 +38,7 @@ use \ArrayAccess;
  * WebHookResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+ * @description Representa\u00E7\u00E3o do recurso WebHook
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,7 +124,7 @@ class WebHookResponse implements ArrayAccess
     protected $tipo_evento;
     
     /**
-      * $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+      * $metodo M\u00E9todo que a ser chamado pelo WebHook
       * @var string
       */
     protected $metodo;
@@ -214,7 +214,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets metodo
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+     * @param string $metodo M\u00E9todo que a ser chamado pelo WebHook
      * @return $this
      */
     public function setMetodo($metodo)

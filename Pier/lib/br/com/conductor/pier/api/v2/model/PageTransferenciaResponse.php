@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageTransferenciaResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Transfer\u00C3\u00AAncias
+ * @description Lista de Transfer\u00EAncias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

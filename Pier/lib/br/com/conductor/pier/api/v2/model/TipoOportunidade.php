@@ -100,13 +100,13 @@ class TipoOportunidade implements ArrayAccess
 
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+      * $descricao Descri\u00E7\u00E3o do tipo oportunidade
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+      * $flag_ativo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
       * @var bool
       */
     protected $flag_ativo;
@@ -136,7 +136,7 @@ class TipoOportunidade implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade
      * @return $this
      */
     public function setDescricao($descricao)
@@ -157,7 +157,7 @@ class TipoOportunidade implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

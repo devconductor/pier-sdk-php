@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoDebitoRecorrenteResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+ * @description Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class TipoDebitoRecorrenteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+      * $descricao Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
       * @var string
       */
     protected $descricao;
     
     /**
-      * $valor Valor do tipo de d\u00C3\u00A9bito recorrente.
+      * $valor Valor do tipo de d\u00E9bito recorrente.
       * @var Number
       */
     protected $valor;
     
     /**
-      * $flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+      * $flag_ativo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
       * @var bool
       */
     protected $flag_ativo;
@@ -158,7 +158,7 @@ class TipoDebitoRecorrenteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class TipoDebitoRecorrenteResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
      * @return $this
      */
     public function setDescricao($descricao)
@@ -200,7 +200,7 @@ class TipoDebitoRecorrenteResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor do tipo de d\u00C3\u00A9bito recorrente.
+     * @param Number $valor Valor do tipo de d\u00E9bito recorrente.
      * @return $this
      */
     public function setValor($valor)
@@ -221,7 +221,7 @@ class TipoDebitoRecorrenteResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+     * @param bool $flag_ativo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

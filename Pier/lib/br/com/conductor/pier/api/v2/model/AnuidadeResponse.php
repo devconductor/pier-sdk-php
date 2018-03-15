@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AnuidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de anuidade
+ * @description Representa\u00E7\u00E3o da resposta do recurso de anuidade
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class AnuidadeResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular
+      * $id Identificador do Tipo de anuidade de b\u00F4nus de celular
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular
+      * $descricao Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
       * @var string
       */
     protected $descricao;
     
     /**
-      * $valor Valor do tipo de anuidade de b\u00C3\u00B4nus de celular
+      * $valor Valor do tipo de anuidade de b\u00F4nus de celular
       * @var Number
       */
     protected $valor;
     
     /**
-      * $flag_anuidade_bonificada Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada
+      * $flag_anuidade_bonificada Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
       * @var bool
       */
     protected $flag_anuidade_bonificada;
@@ -158,7 +158,7 @@ class AnuidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular
+     * @param int $id Identificador do Tipo de anuidade de b\u00F4nus de celular
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class AnuidadeResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
      * @return $this
      */
     public function setDescricao($descricao)
@@ -200,7 +200,7 @@ class AnuidadeResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor do tipo de anuidade de b\u00C3\u00B4nus de celular
+     * @param Number $valor Valor do tipo de anuidade de b\u00F4nus de celular
      * @return $this
      */
     public function setValor($valor)
@@ -221,7 +221,7 @@ class AnuidadeResponse implements ArrayAccess
   
     /**
      * Sets flag_anuidade_bonificada
-     * @param bool $flag_anuidade_bonificada Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada
+     * @param bool $flag_anuidade_bonificada Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
      * @return $this
      */
     public function setFlagAnuidadeBonificada($flag_anuidade_bonificada)

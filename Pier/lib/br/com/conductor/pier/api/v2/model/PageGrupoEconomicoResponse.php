@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageGrupoEconomicoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupos encon\u00C3\u00B4micos
+ * @description Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

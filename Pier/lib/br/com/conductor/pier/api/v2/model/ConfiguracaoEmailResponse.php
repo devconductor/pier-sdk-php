@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConfiguracaoEmailResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * @description Objeto Configura\u00E7\u00E3o EMAIL
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -144,7 +144,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
 
     
     /**
-      * $id Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.
+      * $id Id da Configura\u00E7\u00E3o EMAIL.
       * @var int
       */
     protected $id;
@@ -162,61 +162,61 @@ class ConfiguracaoEmailResponse implements ArrayAccess
     protected $port;
     
     /**
-      * $port_tlsstarttls Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+      * $port_tlsstarttls Porta usada pelo servi\u00E7o TLS/STARTTLS.
       * @var string
       */
     protected $port_tlsstarttls;
     
     /**
-      * $port_ssl Porta usada pelo servi\u00C3\u00A7o SSL.
+      * $port_ssl Porta usada pelo servi\u00E7o SSL.
       * @var string
       */
     protected $port_ssl;
     
     /**
-      * $protocolo Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).
+      * $protocolo Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).
       * @var string
       */
     protected $protocolo;
     
     /**
-      * $requer_autenticacao O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+      * $requer_autenticacao O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
       * @var bool
       */
     protected $requer_autenticacao;
     
     /**
-      * $requer_ssl O servi\u00C3\u00A7o de e-mail requer SSL.
+      * $requer_ssl O servi\u00E7o de e-mail requer SSL.
       * @var bool
       */
     protected $requer_ssl;
     
     /**
-      * $requer_tls O servi\u00C3\u00A7o de e-mail requer TLS.
+      * $requer_tls O servi\u00E7o de e-mail requer TLS.
       * @var bool
       */
     protected $requer_tls;
     
     /**
-      * $usuario Usuario do servi\u00C3\u00A7o de e-mail.
+      * $usuario Usuario do servi\u00E7o de e-mail.
       * @var string
       */
     protected $usuario;
     
     /**
-      * $senha Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+      * $senha Senha de usu\u00E1rio do servi\u00E7o de e-mail.
       * @var string
       */
     protected $senha;
     
     /**
-      * $data_inclusao Data de inclus\u00C3\u00A3o.
+      * $data_inclusao Data de inclus\u00E3o.
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o.
+      * $data_alteracao Data de altera\u00E7\u00E3o.
       * @var string
       */
     protected $data_alteracao;
@@ -257,7 +257,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.
+     * @param int $id Id da Configura\u00E7\u00E3o EMAIL.
      * @return $this
      */
     public function setId($id)
@@ -320,7 +320,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets port_tlsstarttls
-     * @param string $port_tlsstarttls Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+     * @param string $port_tlsstarttls Porta usada pelo servi\u00E7o TLS/STARTTLS.
      * @return $this
      */
     public function setPortTlsstarttls($port_tlsstarttls)
@@ -341,7 +341,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets port_ssl
-     * @param string $port_ssl Porta usada pelo servi\u00C3\u00A7o SSL.
+     * @param string $port_ssl Porta usada pelo servi\u00E7o SSL.
      * @return $this
      */
     public function setPortSsl($port_ssl)
@@ -362,7 +362,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets protocolo
-     * @param string $protocolo Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).
+     * @param string $protocolo Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).
      * @return $this
      */
     public function setProtocolo($protocolo)
@@ -383,7 +383,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets requer_autenticacao
-     * @param bool $requer_autenticacao O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+     * @param bool $requer_autenticacao O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
      * @return $this
      */
     public function setRequerAutenticacao($requer_autenticacao)
@@ -404,7 +404,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets requer_ssl
-     * @param bool $requer_ssl O servi\u00C3\u00A7o de e-mail requer SSL.
+     * @param bool $requer_ssl O servi\u00E7o de e-mail requer SSL.
      * @return $this
      */
     public function setRequerSsl($requer_ssl)
@@ -425,7 +425,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets requer_tls
-     * @param bool $requer_tls O servi\u00C3\u00A7o de e-mail requer TLS.
+     * @param bool $requer_tls O servi\u00E7o de e-mail requer TLS.
      * @return $this
      */
     public function setRequerTls($requer_tls)
@@ -446,7 +446,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Usuario do servi\u00C3\u00A7o de e-mail.
+     * @param string $usuario Usuario do servi\u00E7o de e-mail.
      * @return $this
      */
     public function setUsuario($usuario)
@@ -467,7 +467,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+     * @param string $senha Senha de usu\u00E1rio do servi\u00E7o de e-mail.
      * @return $this
      */
     public function setSenha($senha)
@@ -488,7 +488,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00C3\u00A3o.
+     * @param string $data_inclusao Data de inclus\u00E3o.
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -509,7 +509,7 @@ class ConfiguracaoEmailResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $data_alteracao Data de altera\u00E7\u00E3o.
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)

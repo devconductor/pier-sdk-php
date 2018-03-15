@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TemplateNotificacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * @description Objeto de Notifica\u00E7\u00E3o EMAIL
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -128,13 +128,13 @@ class TemplateNotificacaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo Identificador.
+      * $id C\u00F3digo Identificador.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+      * $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
       * @var int
       */
     protected $id_configuracao_email;
@@ -146,13 +146,13 @@ class TemplateNotificacaoResponse implements ArrayAccess
     protected $tipo_layout;
     
     /**
-      * $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $tipo_notificacao Tipo da notifica\u00E7\u00E3o.
       * @var string
       */
     protected $tipo_notificacao;
     
     /**
-      * $template_padrao Template padr\u00C3\u00A3o.
+      * $template_padrao Template padr\u00E3o.
       * @var string
       */
     protected $template_padrao;
@@ -170,13 +170,13 @@ class TemplateNotificacaoResponse implements ArrayAccess
     protected $assunto;
     
     /**
-      * $data_inclusao Data da inclus\u00C3\u00A3o.
+      * $data_inclusao Data da inclus\u00E3o.
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data altera\u00C3\u00A7\u00C3\u00A3o.
+      * $data_alteracao Data altera\u00E7\u00E3o.
       * @var string
       */
     protected $data_alteracao;
@@ -213,7 +213,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo Identificador.
+     * @param int $id C\u00F3digo Identificador.
      * @return $this
      */
     public function setId($id)
@@ -234,7 +234,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets id_configuracao_email
-     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
      * @return $this
      */
     public function setIdConfiguracaoEmail($id_configuracao_email)
@@ -279,7 +279,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_notificacao
-     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o.
      * @return $this
      */
     public function setTipoNotificacao($tipo_notificacao)
@@ -303,7 +303,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets template_padrao
-     * @param string $template_padrao Template padr\u00C3\u00A3o.
+     * @param string $template_padrao Template padr\u00E3o.
      * @return $this
      */
     public function setTemplatePadrao($template_padrao)
@@ -366,7 +366,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data da inclus\u00C3\u00A3o.
+     * @param string $data_inclusao Data da inclus\u00E3o.
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -387,7 +387,7 @@ class TemplateNotificacaoResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data altera\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $data_alteracao Data altera\u00E7\u00E3o.
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)

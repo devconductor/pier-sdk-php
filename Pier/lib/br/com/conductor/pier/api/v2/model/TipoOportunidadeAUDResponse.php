@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoOportunidadeAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidadeAUD
+ * @description Representa\u00E7\u00E3o da resposta do recurso TipoOportunidadeAUD
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
 
     
     /**
-      * $rev C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades
+      * $rev C\u00F3digo identificador da auditoria dos tipos oportunidades
       * @var int
       */
     protected $rev;
     
     /**
-      * $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+      * $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
       * @var int
       */
     protected $rev_type;
     
     /**
-      * $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+      * $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
       * @var string
       */
     protected $rev_date;
     
     /**
-      * $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+      * $id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+      * $descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+      * $flag_ativo Atributo que representa se o tipo oportunidade est\u00E1 ativo
       * @var bool
       */
     protected $flag_ativo;
@@ -180,7 +180,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev
-     * @param int $rev C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades
+     * @param int $rev C\u00F3digo identificador da auditoria dos tipos oportunidades
      * @return $this
      */
     public function setRev($rev)
@@ -201,7 +201,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
      * @return $this
      */
     public function setRevType($rev_type)
@@ -222,7 +222,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_date
-     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
      * @return $this
      */
     public function setRevDate($rev_date)
@@ -243,7 +243,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+     * @param int $id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
      * @return $this
      */
     public function setId($id)
@@ -264,7 +264,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
      * @return $this
      */
     public function setDescricao($descricao)
@@ -285,7 +285,7 @@ class TipoOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00E1 ativo
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

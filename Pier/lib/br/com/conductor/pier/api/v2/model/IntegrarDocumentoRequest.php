@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegrarDocumentoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.
+ * @description Objeto de requisi\u00E7\u00E3o.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -114,7 +114,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
     protected $id_template;
     
     /**
-      * $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+      * $arquivo Conte\u00FAdo do arquivo convertido em Base 64
       * @var string
       */
     protected $arquivo;
@@ -126,7 +126,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
     protected $nome;
     
     /**
-      * $propriedades Lista de par\u00C3\u00A2metros para montagem do documento.
+      * $propriedades Lista de par\u00E2metros para montagem do documento.
       * @var \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
       */
     protected $propriedades;
@@ -179,7 +179,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets arquivo
-     * @param string $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+     * @param string $arquivo Conte\u00FAdo do arquivo convertido em Base 64
      * @return $this
      */
     public function setArquivo($arquivo)
@@ -221,7 +221,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets propriedades
-     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $propriedades Lista de par\u00C3\u00A2metros para montagem do documento.
+     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $propriedades Lista de par\u00E2metros para montagem do documento.
      * @return $this
      */
     public function setPropriedades($propriedades)

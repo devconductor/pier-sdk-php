@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PlanoParcelamentoEmprestimoResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+ * @description Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

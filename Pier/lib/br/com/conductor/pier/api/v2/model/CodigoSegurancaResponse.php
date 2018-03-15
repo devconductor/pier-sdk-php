@@ -116,37 +116,37 @@ class CodigoSegurancaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+      * $id_emissor C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $modo_envio Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+      * $modo_envio Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
       * @var string
       */
     protected $modo_envio;
     
     /**
-      * $contato Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+      * $contato Apresenta o contato do c\u00F3digo de seguran\u00E7a.
       * @var string
       */
     protected $contato;
     
     /**
-      * $ativo Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+      * $ativo Apresenta o status do c\u00F3digo de seguran\u00E7a.
       * @var bool
       */
     protected $ativo;
     
     /**
-      * $data_validade Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+      * $data_validade Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
       * @var string
       */
     protected $data_validade;
@@ -180,7 +180,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+     * @param int $id_emissor C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -222,7 +222,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets modo_envio
-     * @param string $modo_envio Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+     * @param string $modo_envio Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
      * @return $this
      */
     public function setModoEnvio($modo_envio)
@@ -243,7 +243,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets contato
-     * @param string $contato Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+     * @param string $contato Apresenta o contato do c\u00F3digo de seguran\u00E7a.
      * @return $this
      */
     public function setContato($contato)
@@ -264,7 +264,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets ativo
-     * @param bool $ativo Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+     * @param bool $ativo Apresenta o status do c\u00F3digo de seguran\u00E7a.
      * @return $this
      */
     public function setAtivo($ativo)
@@ -285,7 +285,7 @@ class CodigoSegurancaResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+     * @param string $data_validade Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
      * @return $this
      */
     public function setDataValidade($data_validade)

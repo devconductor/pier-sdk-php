@@ -20,7 +20,7 @@ Este recurso registra uma cobranca emitido.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\BoletoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)
 
 try { 
     $result = $api_instance->registrarBoletoUsingPOST($id);
@@ -35,7 +35,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id) | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id) | 
 
 ### Return type
 

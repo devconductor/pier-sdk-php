@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * @description Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -204,31 +204,31 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $id_antecipacao_simulada C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
+      * $id_antecipacao_simulada C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
       * @var int
       */
     protected $id_antecipacao_simulada;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta.
+      * $id_conta C\u00F3digo identificador da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_compra C\u00C3\u00B3digo identificador do evento compra.
+      * $id_compra C\u00F3digo identificador do evento compra.
       * @var int
       */
     protected $id_compra;
     
     /**
-      * $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento compra.
+      * $id_tipo_transacao C\u00F3digo identificador do tipo do evento compra.
       * @var int
       */
     protected $id_tipo_transacao;
     
     /**
-      * $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+      * $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00E1veis.
       * @var int
       */
     protected $quantidade_parcelas_antecipaveis;
@@ -240,25 +240,25 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $valor_parcela;
     
     /**
-      * $data_hora_simulacao Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
+      * $data_hora_simulacao Data e hora em que a simula\u00E7\u00E3o foi feita.
       * @var string
       */
     protected $data_hora_simulacao;
     
     /**
-      * $taxa_antecipacao_ano Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+      * $taxa_antecipacao_ano Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
       * @var Number
       */
     protected $taxa_antecipacao_ano;
     
     /**
-      * $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+      * $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00E7\u00E3o
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $status;
@@ -270,7 +270,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $data_compra;
     
     /**
-      * $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
       * @var string
       */
     protected $tipo_origem_transacao;
@@ -282,49 +282,49 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $cidade;
     
     /**
-      * $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+      * $pais Pa\u00EDs onde a compra foi realizada.
       * @var string
       */
     protected $pais;
     
     /**
-      * $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $latitude;
     
     /**
-      * $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $longitude;
     
     /**
-      * $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * $descricao_produto Descri\u00E7\u00E3o do produto da compra.
       * @var string
       */
     protected $descricao_produto;
     
     /**
-      * $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
       * @var string
       */
     protected $descricao_estabelecimento;
@@ -336,7 +336,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $nome_fantasia_estabelecimento;
     
     /**
-      * $detalhes Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
+      * $detalhes Detalhes da simula\u00E7\u00E3o.
       * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[]
       */
     protected $detalhes;
@@ -431,7 +431,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_antecipacao_simulada
-     * @param int $id_antecipacao_simulada C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
+     * @param int $id_antecipacao_simulada C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
      * @return $this
      */
     public function setIdAntecipacaoSimulada($id_antecipacao_simulada)
@@ -452,7 +452,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta.
+     * @param int $id_conta C\u00F3digo identificador da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -473,7 +473,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_compra
-     * @param int $id_compra C\u00C3\u00B3digo identificador do evento compra.
+     * @param int $id_compra C\u00F3digo identificador do evento compra.
      * @return $this
      */
     public function setIdCompra($id_compra)
@@ -494,7 +494,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_transacao
-     * @param int $id_tipo_transacao C\u00C3\u00B3digo identificador do tipo do evento compra.
+     * @param int $id_tipo_transacao C\u00F3digo identificador do tipo do evento compra.
      * @return $this
      */
     public function setIdTipoTransacao($id_tipo_transacao)
@@ -515,7 +515,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas_antecipaveis
-     * @param int $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00C3\u00A1veis.
+     * @param int $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00E1veis.
      * @return $this
      */
     public function setQuantidadeParcelasAntecipaveis($quantidade_parcelas_antecipaveis)
@@ -557,7 +557,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_simulacao
-     * @param string $data_hora_simulacao Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
+     * @param string $data_hora_simulacao Data e hora em que a simula\u00E7\u00E3o foi feita.
      * @return $this
      */
     public function setDataHoraSimulacao($data_hora_simulacao)
@@ -578,7 +578,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets taxa_antecipacao_ano
-     * @param Number $taxa_antecipacao_ano Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+     * @param Number $taxa_antecipacao_ano Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
      * @return $this
      */
     public function setTaxaAntecipacaoAno($taxa_antecipacao_ano)
@@ -599,7 +599,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+     * @param string $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00E7\u00E3o
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -620,7 +620,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setStatus($status)
@@ -662,7 +662,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -704,7 +704,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+     * @param string $pais Pa\u00EDs onde a compra foi realizada.
      * @return $this
      */
     public function setPais($pais)
@@ -725,7 +725,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets latitude
-     * @param string $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setLatitude($latitude)
@@ -746,7 +746,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets longitude
-     * @param string $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setLongitude($longitude)
@@ -767,7 +767,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @param int $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -788,7 +788,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -809,7 +809,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -830,7 +830,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @param string $descricao_produto Descri\u00E7\u00E3o do produto da compra.
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -851,7 +851,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)
@@ -893,7 +893,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[] $detalhes Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
+     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[] $detalhes Detalhes da simula\u00E7\u00E3o.
      * @return $this
      */
     public function setDetalhes($detalhes)

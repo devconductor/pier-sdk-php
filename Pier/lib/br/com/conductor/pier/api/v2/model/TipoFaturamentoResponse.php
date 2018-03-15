@@ -108,25 +108,25 @@ class TipoFaturamentoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+      * $descricao Desci\u00E7\u00E3o do tipo de faturamento.
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+      * $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
       * @var bool
       */
     protected $flag_apenas_demonstrativo;
     
     /**
-      * $id_convenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+      * $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
       * @var int
       */
     protected $id_convenio;
@@ -158,7 +158,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+     * @param string $descricao Desci\u00E7\u00E3o do tipo de faturamento.
      * @return $this
      */
     public function setDescricao($descricao)
@@ -200,7 +200,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets flag_apenas_demonstrativo
-     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
      * @return $this
      */
     public function setFlagApenasDemonstrativo($flag_apenas_demonstrativo)
@@ -221,7 +221,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets id_convenio
-     * @param int $id_convenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+     * @param int $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
      * @return $this
      */
     public function setIdConvenio($id_convenio)

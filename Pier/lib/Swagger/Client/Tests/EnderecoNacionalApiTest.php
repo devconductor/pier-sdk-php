@@ -68,7 +68,7 @@ class EnderecoNacionalApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarEnderecoUsingGET
      *
-     * Consultar Endere\u00C3\u00A7o
+     * Consultar Endere\u00E7o
      *
      */
     public function test_consultarEnderecoUsingGET() {

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoDetalhadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+ * @description Representa\u00E7\u00E3o da resposta para o recurso de Documento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -134,13 +134,13 @@ class DocumentoDetalhadoResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $documento Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+      * $documento Representa\u00E7\u00E3o do documento em Base64.
       * @var string
       */
     protected $documento;
     
     /**
-      * $extensao Extens\u00C3\u00A3o do Documento.
+      * $extensao Extens\u00E3o do Documento.
       * @var string
       */
     protected $extensao;
@@ -243,7 +243,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets documento
-     * @param string $documento Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+     * @param string $documento Representa\u00E7\u00E3o do documento em Base64.
      * @return $this
      */
     public function setDocumento($documento)
@@ -264,7 +264,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Extens\u00C3\u00A3o do Documento.
+     * @param string $extensao Extens\u00E3o do Documento.
      * @return $this
      */
     public function setExtensao($extensao)

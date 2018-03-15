@@ -108,7 +108,7 @@ class PlanoCampanhaUpdate implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do plano campanha
+      * $id C\u00F3digo identificador do plano campanha
       * @var int
       */
     protected $id;
@@ -126,7 +126,7 @@ class PlanoCampanhaUpdate implements ArrayAccess
     protected $taxa;
     
     /**
-      * $usuario Nome do usu\u00C3\u00A1rio
+      * $usuario Nome do usu\u00E1rio
       * @var string
       */
     protected $usuario;
@@ -158,7 +158,7 @@ class PlanoCampanhaUpdate implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do plano campanha
+     * @param int $id C\u00F3digo identificador do plano campanha
      * @return $this
      */
     public function setId($id)
@@ -221,7 +221,7 @@ class PlanoCampanhaUpdate implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Nome do usu\u00C3\u00A1rio
+     * @param string $usuario Nome do usu\u00E1rio
      * @return $this
      */
     public function setUsuario($usuario)

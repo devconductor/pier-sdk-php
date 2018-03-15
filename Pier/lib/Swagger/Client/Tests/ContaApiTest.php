@@ -68,7 +68,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ajustarContaUsingPOST1
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta do id informado
+     * Lan\u00E7a um ajuste para a conta do id informado
      *
      */
     public function test_ajustarContaUsingPOST1() {
@@ -78,7 +78,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarProdutoUsingPOST
      *
-     * Altera o produto associado \u00C3\u00A0 conta.
+     * Altera o produto associado \u00E0 conta.
      *
      */
     public function test_alterarProdutoUsingPOST() {
@@ -88,7 +88,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarTitularUsingPOST
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     * Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
      *
      */
     public function test_alterarTitularUsingPOST() {
@@ -98,7 +98,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarVencimentoUsingPUT
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+     * Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
      *
      */
     public function test_alterarVencimentoUsingPUT() {
@@ -118,7 +118,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ativarEnvioFaturaEmailUsingPOST
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
      */
     public function test_ativarEnvioFaturaEmailUsingPOST() {
@@ -148,7 +148,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarBeneficioPagamentoAtrasoUsingGET
      *
-     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     * Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
      *
      */
     public function test_consultarBeneficioPagamentoAtrasoUsingGET() {
@@ -168,7 +168,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarDividaAtualizadaClienteUsingGET
      *
-     * Consulta a d\u00C3\u00ADvida atualizada do cliente
+     * Consulta a d\u00EDvida atualizada do cliente
      *
      */
     public function test_consultarDividaAtualizadaClienteUsingGET() {
@@ -186,29 +186,29 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET12
+     * Test case for consultarUsingGET13
      *
      * Apresenta dados de uma determinada conta
      *
      */
-    public function test_consultarUsingGET12() {
+    public function test_consultarUsingGET13() {
 
     }
     
     /**
-     * Test case for consultarUsingGET41
+     * Test case for consultarUsingGET42
      *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     * Consulta os detalhes de uma determinada transfer\u00EAncia
      *
      */
-    public function test_consultarUsingGET41() {
+    public function test_consultarUsingGET42() {
 
     }
     
     /**
      * Test case for desativarEnvioFaturaEmailUsingPOST
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
      */
     public function test_desativarEnvioFaturaEmailUsingPOST() {
@@ -228,7 +228,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarCartaoEmbossingUsingPOST
      *
-     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     * Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
      *
      */
     public function test_gerarCartaoEmbossingUsingPOST() {
@@ -238,7 +238,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarCartaoProvisorioUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
      *
      */
     public function test_gerarCartaoProvisorioUsingPOST() {
@@ -248,7 +248,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarCartaoUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     * Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
      *
      */
     public function test_gerarCartaoUsingPOST() {
@@ -258,7 +258,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarCartaoVirtualUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
      *
      */
     public function test_gerarCartaoVirtualUsingPOST() {
@@ -268,7 +268,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarHistoricoAlteracoesLimitesUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
      */
     public function test_listarHistoricoAlteracoesLimitesUsingGET() {
@@ -278,7 +278,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarHistoricoAssessoriaUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+     * Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
      *
      */
     public function test_listarHistoricoAssessoriaUsingGET() {
@@ -298,7 +298,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarNaoProcessadasUsingGET
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+     * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
      *
      */
     public function test_listarNaoProcessadasUsingGET() {
@@ -308,7 +308,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarProcessadasUsingGET
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+     * Lista as transa\u00E7\u00F5es processadas da conta
      *
      */
     public function test_listarProcessadasUsingGET() {
@@ -316,29 +316,29 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET16
+     * Test case for listarUsingGET17
      *
      * Lista contas existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET16() {
+    public function test_listarUsingGET17() {
 
     }
     
     /**
-     * Test case for listarUsingGET48
+     * Test case for listarUsingGET50
      *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     * Lista as transfer\u00EAncias realizadas pela conta
      *
      */
-    public function test_listarUsingGET48() {
+    public function test_listarUsingGET50() {
 
     }
     
     /**
      * Test case for reativarUsingPOST1
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+     * Realiza a reativa\u00E7\u00E3o de contas.
      *
      */
     public function test_reativarUsingPOST1() {
@@ -348,7 +348,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for simularEmprestimoFinanciamentoUsingPOST
      *
-     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     * Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
      *
      */
     public function test_simularEmprestimoFinanciamentoUsingPOST() {
@@ -368,7 +368,7 @@ class ContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transferirUsingPOST1
      *
-     * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+     * Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
      *
      */
     public function test_transferirUsingPOST1() {

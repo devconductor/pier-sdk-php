@@ -78,7 +78,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT3
      *
-     * Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
      *
      */
     public function test_alterarUsingPUT3() {
@@ -88,7 +88,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT4
      *
-     * Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     * Alterar os dados de configura\u00E7\u00E3o do rotativo de um produto
      *
      */
     public function test_alterarUsingPUT4() {
@@ -98,7 +98,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cadastrarUsingPOST1
      *
-     * Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
      *
      */
     public function test_cadastrarUsingPOST1() {
@@ -108,7 +108,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for configurarTaxaAntecipacaoUsingPOST
      *
-     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      */
     public function test_configurarTaxaAntecipacaoUsingPOST() {
@@ -128,7 +128,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarTaxaAntecipacaoUsingGET
      *
-     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      */
     public function test_consultarTaxaAntecipacaoUsingGET() {
@@ -138,7 +138,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET10
      *
-     * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+     * Consultar configura\u00E7\u00E3o para registro de cobran\u00E7a
      *
      */
     public function test_consultarUsingGET10() {
@@ -146,39 +146,29 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET11
+     *
+     * Apresenta dados de configura\u00E7\u00E3o do rotativo espec\u00EDfico.
+     *
+     */
+    public function test_consultarUsingGET11() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET26
      *
      * Apresenta os dados de um determinado Produto
      *
      */
-    public function test_consultarUsingGET25() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET3
-     *
-     * Apresenta os dados de um determinado Atendimento
-     *
-     */
-    public function test_consultarUsingGET3() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET32
-     *
-     * Lista os tipos de ajustes do emissor 
-     *
-     */
-    public function test_consultarUsingGET32() {
+    public function test_consultarUsingGET26() {
 
     }
     
     /**
      * Test case for consultarUsingGET33
      *
-     * Lista os tipos de boletos do emissor 
+     * Lista os tipos de ajustes do emissor 
      *
      */
     public function test_consultarUsingGET33() {
@@ -188,7 +178,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET34
      *
-     * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+     * Lista os tipos de boletos do emissor 
      *
      */
     public function test_consultarUsingGET34() {
@@ -198,7 +188,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET35
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de um determinado Tipo de Endere\u00E7o
      *
      */
     public function test_consultarUsingGET35() {
@@ -206,32 +196,42 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET37
+     * Test case for consultarUsingGET36
+     *
+     * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+     *
+     */
+    public function test_consultarUsingGET36() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET38
      *
      * Apresenta os dados de um determinado Tipo de Telefone
      *
      */
-    public function test_consultarUsingGET37() {
+    public function test_consultarUsingGET38() {
 
     }
     
     /**
-     * Test case for consultarUsingGET5
+     * Test case for consultarUsingGET4
+     *
+     * Apresenta os dados de um determinado Atendimento
+     *
+     */
+    public function test_consultarUsingGET4() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET6
      *
      * Apresenta os dados de um determinado Banco
      *
      */
-    public function test_consultarUsingGET5() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET9
-     *
-     * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
-     *
-     */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET6() {
 
     }
     
@@ -258,7 +258,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarEstadosCivisUsingGET
      *
-     * Lista os Estados C\u00C3\u00ADvis
+     * Lista os Estados C\u00EDvis
      *
      */
     public function test_listarEstadosCivisUsingGET() {
@@ -268,7 +268,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarFantasiasBasicasUsingGET
      *
-     * Listar Fantasias B\u00C3\u00A1sicas
+     * Listar Fantasias B\u00E1sicas
      *
      */
     public function test_listarFantasiasBasicasUsingGET() {
@@ -278,7 +278,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarHistoricoTelefonesUsingGET
      *
-     * Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+     * Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
      *
      */
     public function test_listarHistoricoTelefonesUsingGET() {
@@ -298,7 +298,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarNaturezasOcupacoesUsingGET
      *
-     * Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
+     * Lista as Ocupa\u00E7\u00F5es
      *
      */
     public function test_listarNaturezasOcupacoesUsingGET() {
@@ -318,7 +318,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarProfissoesUsingGET
      *
-     * Lista profiss\u00C3\u00B5es
+     * Lista profiss\u00F5es
      *
      */
     public function test_listarProfissoesUsingGET() {
@@ -336,19 +336,9 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET12
-     *
-     * Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
-     *
-     */
-    public function test_listarUsingGET12() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET13
      *
-     * Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+     * Listar configura\u00E7\u00F5es para registro de cobran\u00E7a
      *
      */
     public function test_listarUsingGET13() {
@@ -356,29 +346,19 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET32
+     * Test case for listarUsingGET14
      *
-     * Lista os Portadores existentes
-     *
-     */
-    public function test_listarUsingGET32() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET33
-     *
-     * Lista os Produtos do Emissor
+     * Listar as configura\u00E7\u00F5es rotativo.
      *
      */
-    public function test_listarUsingGET33() {
+    public function test_listarUsingGET14() {
 
     }
     
     /**
      * Test case for listarUsingGET34
      *
-     * Lista promotores cadastrados na base do emissor
+     * Lista os Portadores existentes
      *
      */
     public function test_listarUsingGET34() {
@@ -386,19 +366,29 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET42
+     * Test case for listarUsingGET35
      *
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Lista os Produtos do Emissor
      *
      */
-    public function test_listarUsingGET42() {
+    public function test_listarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET36
+     *
+     * Lista promotores cadastrados na base do emissor
+     *
+     */
+    public function test_listarUsingGET36() {
 
     }
     
     /**
      * Test case for listarUsingGET44
      *
-     * Lista os Tipos de Telefones
+     * Lista as op\u00F5es de Tipos de Endere\u00E7os do Emissor 
      *
      */
     public function test_listarUsingGET44() {
@@ -406,39 +396,49 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET5
+     * Test case for listarUsingGET46
      *
-     * Lista todos os atendimentos
+     * Lista os Tipos de Telefones
      *
      */
-    public function test_listarUsingGET5() {
+    public function test_listarUsingGET46() {
 
     }
     
     /**
-     * Test case for listarUsingGET50
+     * Test case for listarUsingGET52
      *
      * Listar Vencimentos
      *
      */
-    public function test_listarUsingGET50() {
+    public function test_listarUsingGET52() {
 
     }
     
     /**
-     * Test case for listarUsingGET7
+     * Test case for listarUsingGET6
+     *
+     * Lista todos os atendimentos
+     *
+     */
+    public function test_listarUsingGET6() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET8
      *
      * Lista os Bancos cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET7() {
+    public function test_listarUsingGET8() {
 
     }
     
     /**
      * Test case for salvarUsingPOST2
      *
-     * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+     * Cadastro um novo Atendimento do tipo Gen\u00E9rico para uma Conta
      *
      */
     public function test_salvarUsingPOST2() {
@@ -458,7 +458,7 @@ class CadastroGeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for salvarUsingPOST7
      *
-     * Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     * Inserir os dados de configura\u00E7\u00E3o do rotativo de um produto
      *
      */
     public function test_salvarUsingPOST7() {

@@ -94,12 +94,12 @@ class LimiteApi
     /**
      * listarHistoricoAlteracoesLimitesUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -113,12 +113,12 @@ class LimiteApi
     /**
      * listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

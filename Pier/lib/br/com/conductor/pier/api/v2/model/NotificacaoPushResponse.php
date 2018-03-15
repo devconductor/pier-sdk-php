@@ -142,49 +142,49 @@ class NotificacaoPushResponse implements ArrayAccess
     protected $data_envio;
     
     /**
-      * $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+      * $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $status Status de envio da notifica\u00E7\u00E3o
       * @var string
       */
     protected $status;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+      * $id_pessoa C\u00F3digo identificado da pessoa
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta
+      * $id_conta C\u00F3digo identificador da conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $token_dispositivo Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+      * $token_dispositivo Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
       * @var string
       */
     protected $token_dispositivo;
     
     /**
-      * $titulo T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+      * $titulo T\u00EDtulo da notifica\u00E7\u00E3o enviada.
       * @var string
       */
     protected $titulo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+      * $conteudo Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
       * @var string
       */
     protected $conteudo;
@@ -196,7 +196,7 @@ class NotificacaoPushResponse implements ArrayAccess
     protected $plataforma;
     
     /**
-      * $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+      * $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
       * @var string
       */
     protected $protocolo;
@@ -256,7 +256,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+     * @param int $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -277,7 +277,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
@@ -301,7 +301,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $status Status de envio da notifica\u00E7\u00E3o
      * @return $this
      */
     public function setStatus($status)
@@ -325,7 +325,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+     * @param int $id_pessoa C\u00F3digo identificado da pessoa
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -346,7 +346,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta
+     * @param int $id_conta C\u00F3digo identificador da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -367,7 +367,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets token_dispositivo
-     * @param string $token_dispositivo Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+     * @param string $token_dispositivo Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
      * @return $this
      */
     public function setTokenDispositivo($token_dispositivo)
@@ -388,7 +388,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets titulo
-     * @param string $titulo T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+     * @param string $titulo T\u00EDtulo da notifica\u00E7\u00E3o enviada.
      * @return $this
      */
     public function setTitulo($titulo)
@@ -409,7 +409,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+     * @param string $conteudo Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -454,7 +454,7 @@ class NotificacaoPushResponse implements ArrayAccess
   
     /**
      * Sets protocolo
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
      * @return $this
      */
     public function setProtocolo($protocolo)

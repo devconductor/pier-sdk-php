@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FantasiaBasicaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de operadora telef\u00C3\u00B4nica
+ * @description Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class FantasiaBasicaResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador da fantasia b\u00C3\u00A1sica
+      * $id Identificador da fantasia b\u00E1sica
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome da fantasia b\u00C3\u00A1sica
+      * $nome Nome da fantasia b\u00E1sica
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica
+      * $descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
       * @var string
       */
     protected $descricao;
@@ -147,7 +147,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador da fantasia b\u00C3\u00A1sica
+     * @param int $id Identificador da fantasia b\u00E1sica
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da fantasia b\u00C3\u00A1sica
+     * @param string $nome Nome da fantasia b\u00E1sica
      * @return $this
      */
     public function setNome($nome)
@@ -189,7 +189,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica
+     * @param string $descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
      * @return $this
      */
     public function setDescricao($descricao)

@@ -96,8 +96,8 @@ class OportunidadeApi
      *
      * Altera o status do tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param int $id_status C\u00F3digo de identifica\u00E7\u00E3o do status do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\StatusOportunidade $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -114,8 +114,8 @@ class OportunidadeApi
      *
      * Altera o status do tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param int $id_status C\u00F3digo de identifica\u00E7\u00E3o do status do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\StatusOportunidade $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -215,7 +215,7 @@ class OportunidadeApi
      *
      * Altera as oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\OportunidadeUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -232,7 +232,7 @@ class OportunidadeApi
      *
      * Altera as oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\OportunidadeUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -320,7 +320,7 @@ class OportunidadeApi
      *
      * Altera os tipos oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -337,7 +337,7 @@ class OportunidadeApi
      *
      * Altera os tipos oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\TipoOportunidade $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -425,8 +425,8 @@ class OportunidadeApi
      *
      * Apresenta dados de um determinado status do tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param int $id_status C\u00F3digo de identifica\u00E7\u00E3o do status (idStatus). (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -442,8 +442,8 @@ class OportunidadeApi
      *
      * Apresenta dados de um determinado status do tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param int $id_status C\u00F3digo de identifica\u00E7\u00E3o do status (idStatus). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -530,36 +530,36 @@ class OportunidadeApi
     }
     
     /**
-     * consultarUsingGET22
+     * consultarUsingGET23
      *
      * Apresenta dados de uma determinada oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da oportunidade (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22($id)
+    public function consultarUsingGET23($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET22WithHttpInfo
+     * consultarUsingGET23WithHttpInfo
      *
      * Apresenta dados de uma determinada oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da oportunidade (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22WithHttpInfo($id)
+    public function consultarUsingGET23WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
         }
   
         // parse inputs
@@ -625,36 +625,36 @@ class OportunidadeApi
     }
     
     /**
-     * consultarUsingGET36
+     * consultarUsingGET37
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET36($id)
+    public function consultarUsingGET37($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET36WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET37WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET36WithHttpInfo
+     * consultarUsingGET37WithHttpInfo
      *
      * Apresenta dados de um determinado tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET36WithHttpInfo($id)
+    public function consultarUsingGET37WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET36');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET37');
         }
   
         // parse inputs
@@ -724,17 +724,17 @@ class OportunidadeApi
      *
      * Lista as auditorias dos status oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do status oportunidade (optional)
-     * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param int $id C\u00F3digo identificador do status oportunidade (optional)
+     * @param int $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade (optional)
      * @param string $nome Nome do status oportunidade (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do status oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -750,17 +750,17 @@ class OportunidadeApi
      *
      * Lista as auditorias dos status oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do status oportunidade (optional)
-     * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param int $id C\u00F3digo identificador do status oportunidade (optional)
+     * @param int $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade (optional)
      * @param string $nome Nome do status oportunidade (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do status oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -875,19 +875,19 @@ class OportunidadeApi
      *
      * Lista as auditorias das oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
-     * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
-     * @param string $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param string $datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
+     * @param string $data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade (optional)
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade (optional)
+     * @param string $datat_fim_vigencia Fim da vig\u00EAncia da oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa (optional)
      * @param string $rev_date Data da auditoria (optional)
      * @param string $rev_type Tipo da auditoria (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -903,19 +903,19 @@ class OportunidadeApi
      *
      * Lista as auditorias das oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
-     * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
-     * @param string $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param string $datat_fim_vigencia Fim da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
+     * @param string $data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade (optional)
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade (optional)
+     * @param string $datat_fim_vigencia Fim da vig\u00EAncia da oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa (optional)
      * @param string $rev_date Data da auditoria (optional)
      * @param string $rev_type Tipo da auditoria (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1038,15 +1038,15 @@ class OportunidadeApi
      *
      * Lista as auditorias dos tipos oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param int $id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o (optional)
+     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00E1 ativo (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1062,15 +1062,15 @@ class OportunidadeApi
      *
      * Lista as auditorias dos tipos oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $rev_type C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param string $rev_date Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades (optional)
-     * @param int $id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
-     * @param string $rev_user Usu\u00C3\u00A1rio da auditoria (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades (optional)
+     * @param int $id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o (optional)
+     * @param bool $flag_ativo Atributo que representa se o tipo oportunidade est\u00E1 ativo (optional)
+     * @param string $rev_user Usu\u00E1rio da auditoria (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1177,13 +1177,13 @@ class OportunidadeApi
      *
      * Lista os status do tipo oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do status oportunidade (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do status oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1199,13 +1199,13 @@ class OportunidadeApi
      *
      * Lista os status do tipo oportunidades
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome do status oportunidade (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do status oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1308,49 +1308,49 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET28
+     * listarUsingGET30
      *
      * Lista as oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
-     * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
-     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param string $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
+     * @param string $data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade (optional)
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia Data de in\u00EDcio da vig\u00EAncia da oportunidade (optional)
+     * @param string $data_fim_vigencia Data do fim da vig\u00EAncia da oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET30($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET28WithHttpInfo
+     * listarUsingGET30WithHttpInfo
      *
      * Lista as oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade (optional)
      * @param string $data_cadastro Data do cadastro da oportunidade (optional)
-     * @param string $data_atualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade (optional)
-     * @param string $data_inicio_vigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param string $data_fim_vigencia Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)
+     * @param string $data_atualizacao Data da atualiza\u00E7\u00E3o da oportunidade (optional)
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade (optional)
+     * @param string $data_inicio_vigencia Data de in\u00EDcio da vig\u00EAncia da oportunidade (optional)
+     * @param string $data_fim_vigencia Data do fim da vig\u00EAncia da oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET30WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
   
@@ -1453,39 +1453,39 @@ class OportunidadeApi
     }
     
     /**
-     * listarUsingGET43
+     * listarUsingGET45
      *
      * Lista os tipos oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET43($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET45($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET43WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET45WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET43WithHttpInfo
+     * listarUsingGET45WithHttpInfo
      *
      * Lista os tipos oportunidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo oportunidade (optional)
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET43WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET45WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   
@@ -1572,7 +1572,7 @@ class OportunidadeApi
      *
      * Cadastra status para o tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\StatusOportunidade $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1589,7 +1589,7 @@ class OportunidadeApi
      *
      * Cadastra status para o tipo oportunidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\StatusOportunidade $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response

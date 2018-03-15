@@ -94,9 +94,9 @@ class PermissaoPaisApi
     /**
      * consultarPaisUsingGET
      *
-     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     * Apresenta dados de um determinado pa\u00EDs
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\PaisResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -110,9 +110,9 @@ class PermissaoPaisApi
     /**
      * consultarPaisUsingGETWithHttpInfo
      *
-     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     * Apresenta dados de um determinado pa\u00EDs
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\PaisResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -270,16 +270,16 @@ class PermissaoPaisApi
     /**
      * listarPaisesUsingGET
      *
-     * Lista os pa\u00C3\u00ADses
+     * Lista os pa\u00EDses
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
-     * @param string $sigla Sigla do pa\u00C3\u00ADs (optional)
-     * @param string $descricao Nome do pa\u00C3\u00ADs (optional)
-     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte (optional)
-     * @param bool $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo C\u00F3digo do pa\u00EDs (optional)
+     * @param string $sigla Sigla do pa\u00EDs (optional)
+     * @param string $descricao Nome do pa\u00EDs (optional)
+     * @param string $continente Continente no qual o pa\u00EDs faz parte (optional)
+     * @param bool $flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePaisResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -293,16 +293,16 @@ class PermissaoPaisApi
     /**
      * listarPaisesUsingGETWithHttpInfo
      *
-     * Lista os pa\u00C3\u00ADses
+     * Lista os pa\u00EDses
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)
-     * @param string $sigla Sigla do pa\u00C3\u00ADs (optional)
-     * @param string $descricao Nome do pa\u00C3\u00ADs (optional)
-     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte (optional)
-     * @param bool $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo C\u00F3digo do pa\u00EDs (optional)
+     * @param string $sigla Sigla do pa\u00EDs (optional)
+     * @param string $descricao Nome do pa\u00EDs (optional)
+     * @param string $continente Continente no qual o pa\u00EDs faz parte (optional)
+     * @param bool $flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePaisResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EmprestimoPessoalResponse Class Doc Comment
  *
  * @category    Class
- * @description Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+ * @description Resposta do recurso de simular empr\u00E9stimos/financiamentos
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -134,25 +134,25 @@ class EmprestimoPessoalResponse implements ArrayAccess
     protected $planos_parcelamentos;
     
     /**
-      * $valor_solicitado Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+      * $valor_solicitado Valor solicitado do empr\u00E9stimo/financiamento
       * @var Number
       */
     protected $valor_solicitado;
     
     /**
-      * $valor_maximo_solicitacao Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+      * $valor_maximo_solicitacao Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
       * @var Number
       */
     protected $valor_maximo_solicitacao;
     
     /**
-      * $numero_parcelas N\u00C3\u00BAmero de parcelas solicitado
+      * $numero_parcelas N\u00FAmero de parcelas solicitado
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $valor_maximo_parcela Limite m\u00C3\u00A1ximo de parcela permitido
+      * $valor_maximo_parcela Limite m\u00E1ximo de parcela permitido
       * @var Number
       */
     protected $valor_maximo_parcela;
@@ -164,13 +164,13 @@ class EmprestimoPessoalResponse implements ArrayAccess
     protected $data_primeira_parcela;
     
     /**
-      * $periodo_taxa Per\u00C3\u00ADodo de aplica da taxa de juros
+      * $periodo_taxa Per\u00EDodo de aplica da taxa de juros
       * @var string
       */
     protected $periodo_taxa;
     
     /**
-      * $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+      * $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
       * @var string
       */
     protected $sistema_amortizacao;
@@ -234,7 +234,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_solicitado
-     * @param Number $valor_solicitado Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+     * @param Number $valor_solicitado Valor solicitado do empr\u00E9stimo/financiamento
      * @return $this
      */
     public function setValorSolicitado($valor_solicitado)
@@ -255,7 +255,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo_solicitacao
-     * @param Number $valor_maximo_solicitacao Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+     * @param Number $valor_maximo_solicitacao Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
      * @return $this
      */
     public function setValorMaximoSolicitacao($valor_maximo_solicitacao)
@@ -276,7 +276,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmero de parcelas solicitado
+     * @param int $numero_parcelas N\u00FAmero de parcelas solicitado
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -297,7 +297,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo_parcela
-     * @param Number $valor_maximo_parcela Limite m\u00C3\u00A1ximo de parcela permitido
+     * @param Number $valor_maximo_parcela Limite m\u00E1ximo de parcela permitido
      * @return $this
      */
     public function setValorMaximoParcela($valor_maximo_parcela)
@@ -339,7 +339,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets periodo_taxa
-     * @param string $periodo_taxa Per\u00C3\u00ADodo de aplica da taxa de juros
+     * @param string $periodo_taxa Per\u00EDodo de aplica da taxa de juros
      * @return $this
      */
     public function setPeriodoTaxa($periodo_taxa)
@@ -360,7 +360,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets sistema_amortizacao
-     * @param string $sistema_amortizacao Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+     * @param string $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
      * @return $this
      */
     public function setSistemaAmortizacao($sistema_amortizacao)

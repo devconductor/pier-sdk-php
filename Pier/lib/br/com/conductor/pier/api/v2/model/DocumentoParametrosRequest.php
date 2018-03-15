@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoParametrosRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+ * @description Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,7 +116,7 @@ class DocumentoParametrosRequest implements ArrayAccess
     protected $nome;
     
     /**
-      * $parametros_conteudo Lista de par\u00C3\u00A2metros para montagem do documento.
+      * $parametros_conteudo Lista de par\u00E2metros para montagem do documento.
       * @var \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
       */
     protected $parametros_conteudo;
@@ -189,7 +189,7 @@ class DocumentoParametrosRequest implements ArrayAccess
   
     /**
      * Sets parametros_conteudo
-     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $parametros_conteudo Lista de par\u00C3\u00A2metros para montagem do documento.
+     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $parametros_conteudo Lista de par\u00E2metros para montagem do documento.
      * @return $this
      */
     public function setParametrosConteudo($parametros_conteudo)

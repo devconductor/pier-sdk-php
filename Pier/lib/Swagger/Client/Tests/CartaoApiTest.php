@@ -68,7 +68,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarAlterarSenhaUsingPUT
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     * Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
      *
      */
     public function test_alterarAlterarSenhaUsingPUT() {
@@ -78,7 +78,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarStatusImpressaoUsingPUT
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+     * Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
      *
      */
     public function test_alterarStatusImpressaoUsingPUT() {
@@ -88,7 +88,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for atribuirPessoaUsingPUT
      *
-     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+     * Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
      *
      */
     public function test_atribuirPessoaUsingPUT() {
@@ -98,7 +98,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for bloquearUsingPOST
      *
-     * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+     * Realiza o bloqueio de um determinado Cart\u00E3o
      *
      */
     public function test_bloquearUsingPOST() {
@@ -108,7 +108,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cadastrarAlterarSenhaUsingPOST
      *
-     * Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+     * Realiza o cadastro da senha de um Cart\u00E3o
      *
      */
     public function test_cadastrarAlterarSenhaUsingPOST() {
@@ -118,7 +118,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelarUsingPOST
      *
-     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     * Realiza o cancelamento de um determinado Cart\u00E3o
      *
      */
     public function test_cancelarUsingPOST() {
@@ -128,7 +128,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarCartaoImpressaoUsingGET
      *
-     * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+     * Consultar os dados de impress\u00E3o de um Cart\u00E3o
      *
      */
     public function test_consultarCartaoImpressaoUsingGET() {
@@ -138,7 +138,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarDadosReaisCartaoUsingGET
      *
-     * Consultar Detalhes do Cart\u00C3\u00A3o
+     * Consultar Detalhes do Cart\u00E3o
      *
      */
     public function test_consultarDadosReaisCartaoUsingGET() {
@@ -148,7 +148,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarLimiteDisponibilidadeUsingGET
      *
-     * Apresenta os limites do Portador do Cart\u00C3\u00A3o
+     * Apresenta os limites do Portador do Cart\u00E3o
      *
      */
     public function test_consultarLimiteDisponibilidadeUsingGET() {
@@ -158,7 +158,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarLotesCartoesPrePagosUsingGET
      *
-     * Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     * Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
      *
      */
     public function test_consultarLotesCartoesPrePagosUsingGET() {
@@ -168,7 +168,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarPortadorUsingGET
      *
-     * Apresenta os dados do Portador do Cart\u00C3\u00A3o
+     * Apresenta os dados do Portador do Cart\u00E3o
      *
      */
     public function test_consultarPortadorUsingGET() {
@@ -176,19 +176,19 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarUsingGET9
      *
-     * Apresenta os dados de um determinado Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Cart\u00E3o
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarUsingGET9() {
 
     }
     
     /**
      * Test case for desbloquearSenhaIncorretaUsingPOST
      *
-     * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+     * Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
      *
      */
     public function test_desbloquearSenhaIncorretaUsingPOST() {
@@ -198,7 +198,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desbloquearUsingPOST
      *
-     * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+     * Realiza o desbloqueio de um determinado Cart\u00E3o
      *
      */
     public function test_desbloquearUsingPOST() {
@@ -208,7 +208,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarLotesCartoesPrePagosUsingPOST
      *
-     * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     * Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
      *
      */
     public function test_gerarLotesCartoesPrePagosUsingPOST() {
@@ -218,7 +218,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarNovaViaUsingPOST
      *
-     * Gerar uma nova via de Cart\u00C3\u00A3o
+     * Gerar uma nova via de Cart\u00E3o
      *
      */
     public function test_gerarNovaViaUsingPOST() {
@@ -228,7 +228,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for lancarTarifaSegundaViaUsingPOST
      *
-     * Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+     * Adiciona tarifa de ajuste da segunda via do cart\u00E3o
      *
      */
     public function test_lancarTarifaSegundaViaUsingPOST() {
@@ -238,7 +238,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarLotesCartoesPrePagosUsingGET
      *
-     * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     * Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
      *
      */
     public function test_listarLotesCartoesPrePagosUsingGET() {
@@ -246,19 +246,19 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET10
+     * Test case for listarUsingGET11
      *
-     * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+     * Lista os Cart\u00F5es gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET10() {
+    public function test_listarUsingGET11() {
 
     }
     
     /**
      * Test case for reativarUsingPOST
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     * Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
      *
      */
     public function test_reativarUsingPOST() {
@@ -268,7 +268,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarCVVUsingPOST
      *
-     * Validar CVV do cart\u00C3\u00A3o
+     * Validar CVV do cart\u00E3o
      *
      */
     public function test_validarCVVUsingPOST() {
@@ -278,7 +278,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarDadosImpressosBandeiradoUsingGET
      *
-     * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+     * Permite validar os dados impressos em um cart\u00E3o bandeirado
      *
      */
     public function test_validarDadosImpressosBandeiradoUsingGET() {
@@ -288,7 +288,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarDadosImpressosNaoBandeiradoUsingGET
      *
-     * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+     * Permite validar os dados impressos de um cartao n\u00E3o bandeirado
      *
      */
     public function test_validarDadosImpressosNaoBandeiradoUsingGET() {
@@ -298,7 +298,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarDe55CartaoMastercardUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+     * Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
      *
      */
     public function test_validarDe55CartaoMastercardUsingGET() {
@@ -308,7 +308,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarSenhaUsingGET
      *
-     * Permite validar a senha de um Cart\u00C3\u00A3o
+     * Permite validar a senha de um Cart\u00E3o
      *
      */
     public function test_validarSenhaUsingGET() {
@@ -318,7 +318,7 @@ class CartaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarTarjaUsingGET
      *
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     * Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
      *
      */
     public function test_validarTarjaUsingGET() {

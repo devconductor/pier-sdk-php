@@ -96,7 +96,7 @@ class JobApi
      *
      * Ativar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -112,7 +112,7 @@ class JobApi
      *
      * Ativar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -191,7 +191,7 @@ class JobApi
      *
      * Atualizar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @param string $descricao descricao. (required)
      * @param string $cron Cron do Job. (required)
      * @param string $groovy groovy (required)
@@ -210,7 +210,7 @@ class JobApi
      *
      * Atualizar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @param string $descricao descricao. (required)
      * @param string $cron Cron do Job. (required)
      * @param string $groovy groovy (required)
@@ -316,7 +316,7 @@ class JobApi
      *
      * Desativar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\JobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -332,7 +332,7 @@ class JobApi
      *
      * Desativar Job
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\JobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -407,41 +407,41 @@ class JobApi
     }
     
     /**
-     * listarUsingGET24
+     * listarUsingGET26
      *
      * Listar Jobs
      *
      * @param string $groovy Script Groovy do Job (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do Job (optional)
      * @param string $cron Cron do Job (optional)
      * @param string $status Status do Job (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageJobResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET24($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET26($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET24WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($groovy, $descricao, $cron, $status, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET24WithHttpInfo
+     * listarUsingGET26WithHttpInfo
      *
      * Listar Jobs
      *
      * @param string $groovy Script Groovy do Job (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do Job (optional)
      * @param string $cron Cron do Job (optional)
      * @param string $status Status do Job (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageJobResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET24WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
+    public function listarUsingGET26WithHttpInfo($groovy = null, $descricao = null, $cron = null, $status = null, $page = null, $limit = null)
     {
         
   

@@ -4,43 +4,43 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
-[**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
-[**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
-[**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00E7a um ajuste para a conta do id informado
+[**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00E0 conta.
+[**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
+[**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
 [**ativarAnuidadeUsingPOST**](ContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
-[**ativarEnvioFaturaEmailUsingPOST**](ContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+[**ativarEnvioFaturaEmailUsingPOST**](ContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00E7o de envio de fatura por email
 [**bloquearUsingPOST1**](ContaApi.md#bloquearUsingPOST1) | **POST** /api/contas/{id}/bloquear | Realiza o bloqueio de uma determinada Conta
 [**cancelarUsingPOST1**](ContaApi.md#cancelarUsingPOST1) | **POST** /api/contas/{id}/cancelar | Realiza o cancelamento de uma determinada Conta
-[**consultarBeneficioPagamentoAtrasoUsingGET**](ContaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+[**consultarBeneficioPagamentoAtrasoUsingGET**](ContaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
-[**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
+[**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00EDvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET12**](ContaApi.md#consultarUsingGET12) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET41**](ContaApi.md#consultarUsingGET41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
+[**consultarUsingGET13**](ContaApi.md#consultarUsingGET13) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET42**](ContaApi.md#consultarUsingGET42) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00EAncia
+[**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00E7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
-[**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-[**gerarCartaoProvisorioUsingPOST**](ContaApi.md#gerarCartaoProvisorioUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
-[**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-[**listarHistoricoAlteracoesLimitesUsingGET**](ContaApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-[**listarHistoricoAssessoriaUsingGET**](ContaApi.md#listarHistoricoAssessoriaUsingGET) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+[**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
+[**gerarCartaoProvisorioUsingPOST**](ContaApi.md#gerarCartaoProvisorioUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
+[**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
+[**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
+[**listarHistoricoAlteracoesLimitesUsingGET**](ContaApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
+[**listarHistoricoAssessoriaUsingGET**](ContaApi.md#listarHistoricoAssessoriaUsingGET) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
-[**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
-[**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET16**](ContaApi.md#listarUsingGET16) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listarUsingGET48**](ContaApi.md#listarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-[**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+[**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+[**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00E7\u00F5es processadas da conta
+[**listarUsingGET17**](ContaApi.md#listarUsingGET17) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET50**](ContaApi.md#listarUsingGET50) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00EAncias realizadas pela conta
+[**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00E7\u00E3o de contas.
+[**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
-[**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+[**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
 
 
 # **ajustarContaUsingPOST1**
 > \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo)
 
-Lan\u00C3\u00A7a um ajuste para a conta do id informado
+Lan\u00E7a um ajuste para a conta do id informado
 
 Este recurso insere um ajuste para a conta do id informado
 
@@ -51,7 +51,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | Id Conta
-$id_tipo_ajuste = 789; // int | C\u00C3\u00B3digo identificador do tipo de ajuste.
+$id_tipo_ajuste = 789; // int | C\u00F3digo identificador do tipo de ajuste.
 $data_ajuste = "data_ajuste_example"; // string | Data do ajuste no formato yyyy-MM-dd'T'HH:mm:ss.SSSZ.
 $valor_ajuste = new Number(); // Number | Valor do ajuste
 $identificador_externo = "identificador_externo_example"; // string | Identificador Externo
@@ -70,7 +70,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id Conta | 
- **id_tipo_ajuste** | **int**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
+ **id_tipo_ajuste** | **int**| C\u00F3digo identificador do tipo de ajuste. | 
  **data_ajuste** | **string**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valor_ajuste** | [**Number**](.md)| Valor do ajuste | 
  **identificador_externo** | **string**| Identificador Externo | [optional] 
@@ -93,9 +93,9 @@ No authorization required
 # **alterarProdutoUsingPOST**
 > string alterarProdutoUsingPOST($id, $request)
 
-Altera o produto associado \u00C3\u00A0 conta.
+Altera o produto associado \u00E0 conta.
 
-O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
 
 ### Example 
 ```php
@@ -103,7 +103,7 @@ O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $request = new \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest(); // \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest | request
 
 try { 
@@ -119,7 +119,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **request** | [**\br.com.conductor.pier.api.v2.model\AlterarProdutoRequest**](\br.com.conductor.pier.api.v2.model\AlterarProdutoRequest.md)| request | 
 
 ### Return type
@@ -140,9 +140,9 @@ No authorization required
 # **alterarTitularUsingPOST**
 > \br.com.conductor.pier.api.v2.model\ContaResponse alterarTitularUsingPOST($id, $id_pessoa)
 
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
 
-Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+Esta m\u00E9todo permite altera a pessoa de uma conta.
 
 ### Example 
 ```php
@@ -150,8 +150,8 @@ Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
-$id_pessoa = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+$id_pessoa = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
 
 try { 
     $result = $api_instance->alterarTitularUsingPOST($id, $id_pessoa);
@@ -166,8 +166,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) | 
- **id_pessoa** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) | 
+ **id_pessoa** | **int**| C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id). | 
 
 ### Return type
 
@@ -187,9 +187,9 @@ No authorization required
 # **alterarVencimentoUsingPUT**
 > \br.com.conductor.pier.api.v2.model\ContaResponse alterarVencimentoUsingPUT($id, $novo_dia_vencimento)
 
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
 
-Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
 
 ### Example 
 ```php
@@ -197,7 +197,7 @@ Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $novo_dia_vencimento = 56; // int | Novo dia de vencimento.
 
 try { 
@@ -213,7 +213,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **novo_dia_vencimento** | **int**| Novo dia de vencimento. | 
 
 ### Return type
@@ -236,7 +236,7 @@ No authorization required
 
 Atribuir Anuidade
 
-Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
 
 ### Example 
 ```php
@@ -244,13 +244,13 @@ Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $id_anuidade = 789; // int | Identificador da anuidade
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 $ddd = "ddd_example"; // string | DDD do celular
-$celular = "celular_example"; // string | N\u00C3\u00BAmero do celular
+$celular = "celular_example"; // string | N\u00FAmero do celular
 $id_operadora = 789; // int | Identificador da operadora do celular
 $id_origem_comercial = 789; // int | Identificador da origem comercial
 
@@ -267,13 +267,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **id_anuidade** | **int**| Identificador da anuidade | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **ddd** | **string**| DDD do celular | [optional] 
- **celular** | **string**| N\u00C3\u00BAmero do celular | [optional] 
+ **celular** | **string**| N\u00FAmero do celular | [optional] 
  **id_operadora** | **int**| Identificador da operadora do celular | [optional] 
  **id_origem_comercial** | **int**| Identificador da origem comercial | [optional] 
 
@@ -295,9 +295,9 @@ No authorization required
 # **ativarEnvioFaturaEmailUsingPOST**
 > object ativarEnvioFaturaEmailUsingPOST($id)
 
- Ativa o servi\u00C3\u00A7o de envio de fatura por email
+ Ativa o servi\u00E7o de envio de fatura por email
 
-Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso ativa o servi\u00E7o de envio de fatura por email
 
 ### Example 
 ```php
@@ -305,7 +305,7 @@ Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id);
@@ -320,7 +320,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -342,7 +342,7 @@ No authorization required
 
 Realiza o bloqueio de uma determinada Conta
 
-Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example 
 ```php
@@ -350,8 +350,8 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$id_status = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$id_status = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
 
 try { 
     $result = $api_instance->bloquearUsingPOST1($id, $id_status);
@@ -366,8 +366,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_status** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **id_status** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. | 
 
 ### Return type
 
@@ -389,7 +389,7 @@ No authorization required
 
 Realiza o cancelamento de uma determinada Conta
 
-Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example 
 ```php
@@ -397,8 +397,8 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelament
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$id_status = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$id_status = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
 
 try { 
     $result = $api_instance->cancelarUsingPOST1($id, $id_status);
@@ -413,8 +413,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_status** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **id_status** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. | 
 
 ### Return type
 
@@ -434,9 +434,9 @@ No authorization required
 # **consultarBeneficioPagamentoAtrasoUsingGET**
 > \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET($id)
 
-Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
 
-Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
 
 ### Example 
 ```php
@@ -444,7 +444,7 @@ Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->consultarBeneficioPagamentoAtrasoUsingGET($id);
@@ -459,7 +459,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -524,9 +524,9 @@ No authorization required
 # **consultarDividaAtualizadaClienteUsingGET**
 > \br.com.conductor.pier.api.v2.model\DividaClienteResponse consultarDividaAtualizadaClienteUsingGET($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca)
 
-Consulta a d\u00C3\u00ADvida atualizada do cliente
+Consulta a d\u00EDvida atualizada do cliente
 
-Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+Este recurso consulta a d\u00EDvida atualizada do cliente
 
 ### Example 
 ```php
@@ -535,11 +535,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | Id Conta
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 $data_vencimento = "data_vencimento_example"; // string | Data do vencimento
-$id_escritorio_cobranca = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+$id_escritorio_cobranca = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
 
 try { 
     $result = $api_instance->consultarDividaAtualizadaClienteUsingGET($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
@@ -555,11 +555,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id Conta | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **data_vencimento** | **string**| Data do vencimento | [optional] 
- **id_escritorio_cobranca** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a | [optional] 
+ **id_escritorio_cobranca** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a | [optional] 
 
 ### Return type
 
@@ -581,7 +581,7 @@ No authorization required
 
 Permite consultar a partir do ID da conta as taxas e tarifas
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
 
 ### Example 
 ```php
@@ -590,9 +590,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | ID da conta a ser consultada.
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->consultarTaxasTarifasUsingGET($id, $sort, $page, $limit);
@@ -608,9 +608,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID da conta a ser consultada. | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -627,12 +627,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET12($id)
+# **consultarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET13($id)
 
 Apresenta dados de uma determinada conta
 
-Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
 
 ### Example 
 ```php
@@ -640,13 +640,13 @@ Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET13($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -655,7 +655,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -672,12 +672,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET41**
-> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET41($id, $id_transferencia)
+# **consultarUsingGET42**
+> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET42($id, $id_transferencia)
 
-Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+Consulta os detalhes de uma determinada transfer\u00EAncia
 
-Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
 
 ### Example 
 ```php
@@ -685,14 +685,14 @@ Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$id_transferencia = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$id_transferencia = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).
 
 try { 
-    $result = $api_instance->consultarUsingGET41($id, $id_transferencia);
+    $result = $api_instance->consultarUsingGET42($id, $id_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->consultarUsingGET41: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->consultarUsingGET42: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -701,8 +701,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_transferencia** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **id_transferencia** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia). | 
 
 ### Return type
 
@@ -722,9 +722,9 @@ No authorization required
 # **desativarEnvioFaturaEmailUsingPOST**
 > object desativarEnvioFaturaEmailUsingPOST($id)
 
-Desativa o servi\u00C3\u00A7o de envio de fatura por email
+Desativa o servi\u00E7o de envio de fatura por email
 
-Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso desativa o servi\u00E7o de envio de fatura por email
 
 ### Example 
 ```php
@@ -732,7 +732,7 @@ Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id);
@@ -747,7 +747,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -816,9 +816,9 @@ No authorization required
 # **gerarCartaoEmbossingUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request)
 
-Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
 
-Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
 
 ### Example 
 ```php
@@ -826,7 +826,7 @@ Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determina
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $cartao_embossing_request = new \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest(); // \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest | cartaoEmbossingRequest
 
 try { 
@@ -842,7 +842,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **cartao_embossing_request** | [**\br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest**](\br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
 
 ### Return type
@@ -863,9 +863,9 @@ No authorization required
 # **gerarCartaoProvisorioUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST($id)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
 
-Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
 
 ### Example 
 ```php
@@ -873,7 +873,7 @@ Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->gerarCartaoProvisorioUsingPOST($id);
@@ -888,7 +888,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -908,9 +908,9 @@ No authorization required
 # **gerarCartaoUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
 
-Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
 
 ### Example 
 ```php
@@ -918,9 +918,9 @@ Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determina
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$id_pessoa = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
-$id_tipo_plastico = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+$id_pessoa = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).
+$id_tipo_plastico = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
 
 try { 
     $result = $api_instance->gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico);
@@ -935,9 +935,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id_pessoa** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
- **id_tipo_plastico** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **id_pessoa** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id). | 
+ **id_tipo_plastico** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). | [optional] 
 
 ### Return type
 
@@ -957,9 +957,9 @@ No authorization required
 # **gerarCartaoVirtualUsingPOST**
 > \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoVirtualUsingPOST($id, $data_validade)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
 
-Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
 
 ### Example 
 ```php
@@ -967,7 +967,7 @@ Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $data_validade = "data_validade_example"; // string | Data de Validade
 
 try { 
@@ -983,7 +983,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **data_validade** | **string**| Data de Validade | 
 
 ### Return type
@@ -1004,9 +1004,9 @@ No authorization required
 # **listarHistoricoAlteracoesLimitesUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit)
 
-Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
 
-Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
 
 ### Example 
 ```php
@@ -1014,10 +1014,10 @@ Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit);
@@ -1032,10 +1032,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1055,9 +1055,9 @@ No authorization required
 # **listarHistoricoAssessoriaUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET($id, $sort, $page, $limit)
 
-Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
 
-Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
 
 ### Example 
 ```php
@@ -1066,9 +1066,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | Id Conta
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarHistoricoAssessoriaUsingGET($id, $sort, $page, $limit);
@@ -1084,9 +1084,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id Conta | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1108,7 +1108,7 @@ No authorization required
 
 Lista o historico de atrasos das faturas
 
-Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
 
 ### Example 
 ```php
@@ -1117,9 +1117,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | Id Conta
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarHistoricoAtrasosFaturasUsingGET($id, $sort, $page, $limit);
@@ -1135,9 +1135,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id Conta | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1157,9 +1157,9 @@ No authorization required
 # **listarNaoProcessadasUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse listarNaoProcessadasUsingGET($id, $sort, $page, $limit, $data_inicio, $data_fim)
 
-Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
 
 ### Example 
 ```php
@@ -1167,12 +1167,12 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$data_inicio = "data_inicio_example"; // string | Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
-$data_fim = "data_fim_example"; // string | Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+$data_inicio = "data_inicio_example"; // string | Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida).
+$data_fim = "data_fim_example"; // string | Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida).
 
 try { 
     $result = $api_instance->listarNaoProcessadasUsingGET($id, $sort, $page, $limit, $data_inicio, $data_fim);
@@ -1187,12 +1187,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **data_inicio** | **string**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). | [optional] 
- **data_fim** | **string**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). | [optional] 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **data_inicio** | **string**| Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). | [optional] 
+ **data_fim** | **string**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). | [optional] 
 
 ### Return type
 
@@ -1212,9 +1212,9 @@ No authorization required
 # **listarProcessadasUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim)
 
-Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+Lista as transa\u00E7\u00F5es processadas da conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
 
 ### Example 
 ```php
@@ -1222,13 +1222,13 @@ Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u0
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 $data_vencimento = "data_vencimento_example"; // string | Data de vencimento do extrato no formato yyyy-MM-dd.
-$data_inicio = "data_inicio_example"; // string | Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-$data_fim = "data_fim_example"; // string | Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+$data_inicio = "data_inicio_example"; // string | Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
+$data_fim = "data_fim_example"; // string | Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
 
 try { 
     $result = $api_instance->listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim);
@@ -1243,13 +1243,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **data_vencimento** | **string**| Data de vencimento do extrato no formato yyyy-MM-dd. | [optional] 
- **data_inicio** | **string**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
- **data_fim** | **string**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
+ **data_inicio** | **string**| Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). | [optional] 
+ **data_fim** | **string**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). | [optional] 
 
 ### Return type
 
@@ -1266,8 +1266,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET16($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
+# **listarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET17($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1279,24 +1279,24 @@ Este recurso permite listar contas existentes na base de dados do Emissor.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$id_produto = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-$id_origem_comercial = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-$id_pessoa = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-$id_status_conta = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+$id_produto = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+$id_origem_comercial = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+$id_pessoa = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+$id_status_conta = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do status da conta.
 $dia_vencimento = 56; // int | Apresenta o dia de vencimento.
 $melhor_dia_compra = 56; // int | Apresenta o melhor dia de compra.
-$data_status_conta = "data_status_conta_example"; // string | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-$data_cadastro = "data_cadastro_example"; // string | Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-$data_ultima_alteracao_vencimento = "data_ultima_alteracao_vencimento_example"; // string | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+$data_status_conta = "data_status_conta_example"; // string | Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+$data_cadastro = "data_cadastro_example"; // string | Apresenta a data em que o cart\u00E3o foi gerado.
+$data_ultima_alteracao_vencimento = "data_ultima_alteracao_vencimento_example"; // string | Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
 
 try { 
-    $result = $api_instance->listarUsingGET16($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+    $result = $api_instance->listarUsingGET17($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->listarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1305,18 +1305,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_produto** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). | [optional] 
- **id_origem_comercial** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
- **id_pessoa** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). | [optional] 
- **id_status_conta** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_produto** | **int**| C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). | [optional] 
+ **id_origem_comercial** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
+ **id_pessoa** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). | [optional] 
+ **id_status_conta** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. | [optional] 
  **dia_vencimento** | **int**| Apresenta o dia de vencimento. | [optional] 
  **melhor_dia_compra** | **int**| Apresenta o melhor dia de compra. | [optional] 
- **data_status_conta** | **string**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
- **data_cadastro** | **string**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
- **data_ultima_alteracao_vencimento** | **string**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+ **data_status_conta** | **string**| Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. | [optional] 
+ **data_cadastro** | **string**| Apresenta a data em que o cart\u00E3o foi gerado. | [optional] 
+ **data_ultima_alteracao_vencimento** | **string**| Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. | [optional] 
 
 ### Return type
 
@@ -1333,12 +1333,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET48**
-> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET48($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
+# **listarUsingGET50**
+> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET50($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
 
-Lista as transfer\u00C3\u00AAncias realizadas pela conta
+Lista as transfer\u00EAncias realizadas pela conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
 
 ### Example 
 ```php
@@ -1346,21 +1346,21 @@ Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$id_transferencia = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-$id_conta_origem = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-$id_conta_destino = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+$id_transferencia = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+$id_conta_origem = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+$id_conta_destino = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
 $valor_transferencia = new Number(); // Number | Valor estabelecido para ser transferido.
-$data_transferencia = "data_transferencia_example"; // string | Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+$data_transferencia = "data_transferencia_example"; // string | Data estabelecida para ocorrer a transfer\u00EAncia.
 
 try { 
-    $result = $api_instance->listarUsingGET48($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+    $result = $api_instance->listarUsingGET50($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContaApi->listarUsingGET48: ', $e->getMessage(), "\n";
+    echo 'Exception when calling ContaApi->listarUsingGET50: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1369,15 +1369,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id_transferencia** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
- **id_conta_origem** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
- **id_conta_destino** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **id_transferencia** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). | [optional] 
+ **id_conta_origem** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). | [optional] 
+ **id_conta_destino** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). | [optional] 
  **valor_transferencia** | [**Number**](.md)| Valor estabelecido para ser transferido. | [optional] 
- **data_transferencia** | **string**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
+ **data_transferencia** | **string**| Data estabelecida para ocorrer a transfer\u00EAncia. | [optional] 
 
 ### Return type
 
@@ -1397,9 +1397,9 @@ No authorization required
 # **reativarUsingPOST1**
 > object reativarUsingPOST1($id)
 
-Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+Realiza a reativa\u00E7\u00E3o de contas.
 
-Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
 
 ### Example 
 ```php
@@ -1442,9 +1442,9 @@ No authorization required
 # **simularEmprestimoFinanciamentoUsingPOST**
 > \br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse simularEmprestimoFinanciamentoUsingPOST($id, $request)
 
-Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
 
 ### Example 
 ```php
@@ -1452,7 +1452,7 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $request = new \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest(); // \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest | request
 
 try { 
@@ -1468,7 +1468,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **request** | [**\br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest**](\br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest.md)| request | 
 
 ### Return type
@@ -1491,7 +1491,7 @@ No authorization required
 
 Permite listar uma linha do tempo com os eventos da conta
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
 
 ### Example 
 ```php
@@ -1500,9 +1500,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
 $id = 789; // int | Id Conta
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->transacoesUsingGET($id, $sort, $page, $limit);
@@ -1518,9 +1518,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Id Conta | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1540,9 +1540,9 @@ No authorization required
 # **transferirUsingPOST1**
 > \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse transferirUsingPOST1($id, $id_conta_destino, $valor_transferencia)
 
-Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
 
-Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
 
 ### Example 
 ```php
@@ -1550,9 +1550,9 @@ Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa rea
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\ContaApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
-$id_conta_destino = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-$valor_transferencia = new Number(); // Number | Valor da Transfer\u00C3\u00AAncia.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).
+$id_conta_destino = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).
+$valor_transferencia = new Number(); // Number | Valor da Transfer\u00EAncia.
 
 try { 
     $result = $api_instance->transferirUsingPOST1($id, $id_conta_destino, $valor_transferencia);
@@ -1567,9 +1567,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). | 
- **id_conta_destino** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). | 
- **valor_transferencia** | [**Number**](.md)| Valor da Transfer\u00C3\u00AAncia. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id). | 
+ **id_conta_destino** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id). | 
+ **valor_transferencia** | [**Number**](.md)| Valor da Transfer\u00EAncia. | 
 
 ### Return type
 

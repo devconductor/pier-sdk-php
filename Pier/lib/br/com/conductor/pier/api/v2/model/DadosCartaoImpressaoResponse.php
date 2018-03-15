@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DadosCartaoImpressaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Cart\u00C3\u00A3o para Impresso
+ * @description Objeto Cart\u00E3o para Impresso
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -97,7 +97,8 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
         'bairro' => 'string',
         'cidade' => 'string',
         'uf' => 'string',
-        'pais' => 'string'
+        'pais' => 'string',
+        'senha_criptografada' => 'string'
     );
   
     static function swaggerTypes() {
@@ -155,7 +156,8 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
         'bairro' => 'bairro',
         'cidade' => 'cidade',
         'uf' => 'uf',
-        'pais' => 'pais'
+        'pais' => 'pais',
+        'senha_criptografada' => 'senhaCriptografada'
     );
   
     static function attributeMap() {
@@ -213,7 +215,8 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
         'bairro' => 'setBairro',
         'cidade' => 'setCidade',
         'uf' => 'setUf',
-        'pais' => 'setPais'
+        'pais' => 'setPais',
+        'senha_criptografada' => 'setSenhaCriptografada'
     );
   
     static function setters() {
@@ -271,7 +274,8 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
         'bairro' => 'getBairro',
         'cidade' => 'getCidade',
         'uf' => 'getUf',
-        'pais' => 'getPais'
+        'pais' => 'getPais',
+        'senha_criptografada' => 'getSenhaCriptografada'
     );
   
     static function getters() {
@@ -280,73 +284,73 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
 
     
     /**
-      * $id_conta O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+      * $id_conta O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+      * $id_pessoa O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_cartao O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+      * $id_cartao O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_bandeira O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+      * $id_bandeira O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
       * @var int
       */
     protected $id_bandeira;
     
     /**
-      * $id_tipo_cartao O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+      * $id_tipo_cartao O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
       * @var int
       */
     protected $id_tipo_cartao;
     
     /**
-      * $numero_cartao O n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+      * $numero_cartao O n\u00FAmero do cart\u00E3o.
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $nome_plastico O nome do Portador do Cart\u00C3\u00A3o.
+      * $nome_plastico O nome do Portador do Cart\u00E3o.
       * @var string
       */
     protected $nome_plastico;
     
     /**
-      * $cvv2 O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+      * $cvv2 O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
       * @var string
       */
     protected $cvv2;
     
     /**
-      * $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+      * $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
       * @var string
       */
     protected $data_geracao;
     
     /**
-      * $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
+      * $data_validade Apresenta a data de Validade do Cart\u00E3o.
       * @var string
       */
     protected $data_validade;
     
     /**
-      * $cpf O CPF do Portador do Cart\u00C3\u00A3o.
+      * $cpf O CPF do Portador do Cart\u00E3o.
       * @var string
       */
     protected $cpf;
     
     /**
-      * $tipo_portador O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+      * $tipo_portador O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
       * @var string
       */
     protected $tipo_portador;
@@ -376,7 +380,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $trilha_cvv2;
     
     /**
-      * $flag_virtual O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+      * $flag_virtual O status que informa se o cart\u00E3o \u00E9 virtual 
       * @var int
       */
     protected $flag_virtual;
@@ -394,49 +398,49 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $flag_titular;
     
     /**
-      * $sequencial_cartao C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o
+      * $sequencial_cartao C\u00F3digo Sequencial do Cart\u00E3o
       * @var int
       */
     protected $sequencial_cartao;
     
     /**
-      * $id_status Identificador do Status do Cart\u00C3\u00A3o
+      * $id_status Identificador do Status do Cart\u00E3o
       * @var int
       */
     protected $id_status;
     
     /**
-      * $descricao_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o
+      * $descricao_status_cartao Descri\u00E7\u00E3o do Status do Cart\u00E3o
       * @var string
       */
     protected $descricao_status_cartao;
     
     /**
-      * $data_status Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * $data_status Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
       * @var string
       */
     protected $data_status;
     
     /**
-      * $id_estagio Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.
+      * $id_estagio Identificador do Est\u00E1gio do Cart\u00E3o.
       * @var int
       */
     protected $id_estagio;
     
     /**
-      * $descricao_estagio Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.
+      * $descricao_estagio Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
       * @var string
       */
     protected $descricao_estagio;
     
     /**
-      * $data_estagio Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * $data_estagio Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
       * @var string
       */
     protected $data_estagio;
     
     /**
-      * $numero_bin N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o
+      * $numero_bin N\u00FAmero do Bin do Cart\u00E3o
       * @var string
       */
     protected $numero_bin;
@@ -448,7 +452,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto
+      * $descricao_produto Descri\u00E7\u00E3o do produto
       * @var string
       */
     protected $descricao_produto;
@@ -460,31 +464,31 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $id_status_conta;
     
     /**
-      * $descricao_status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+      * $descricao_status_conta Descri\u00E7\u00E3o do status da conta
       * @var int
       */
     protected $descricao_status_conta;
     
     /**
-      * $data_embossing Data que o cart\u00C3\u00A3o foi embossado
+      * $data_embossing Data que o cart\u00E3o foi embossado
       * @var string
       */
     protected $data_embossing;
     
     /**
-      * $codigo_desbloqueio C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o
+      * $codigo_desbloqueio C\u00F3digo de desbloqueio do cart\u00E3o
       * @var string
       */
     protected $codigo_desbloqueio;
     
     /**
-      * $nome_pessoa O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+      * $nome_pessoa O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
       * @var string
       */
     protected $nome_pessoa;
     
     /**
-      * $tipo_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+      * $tipo_pessoa C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
       * @var string
       */
     protected $tipo_pessoa;
@@ -496,25 +500,25 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $id_endereco Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o
+      * $id_endereco Identificador do Endere\u00E7o do titular do cart\u00E3o
       * @var int
       */
     protected $id_endereco;
     
     /**
-      * $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+      * $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
       * @var int
       */
     protected $id_tipo_endereco;
     
     /**
-      * $descricao_tipo_endereco Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o
+      * $descricao_tipo_endereco Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
       * @var string
       */
     protected $descricao_tipo_endereco;
     
     /**
-      * $cep O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+      * $cep O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
       * @var string
       */
     protected $cep;
@@ -526,13 +530,13 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $logradouro;
     
     /**
-      * $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o
+      * $numero_endereco N\u00FAmero do endere\u00E7o
       * @var string
       */
     protected $numero_endereco;
     
     /**
-      * $complemento_endereco Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+      * $complemento_endereco Descri\u00E7oes complementares referente ao endere\u00E7o
       * @var string
       */
     protected $complemento_endereco;
@@ -556,10 +560,16 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $pais Nome do pa\u00C3\u00ADs
+      * $pais Nome do pa\u00EDs
       * @var string
       */
     protected $pais;
+    
+    /**
+      * $senha_criptografada Senha Criptografada
+      * @var string
+      */
+    protected $senha_criptografada;
     
 
     /**
@@ -617,6 +627,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
             $this->cidade = $data["cidade"];
             $this->uf = $data["uf"];
             $this->pais = $data["pais"];
+            $this->senha_criptografada = $data["senha_criptografada"];
         }
     }
     
@@ -631,7 +642,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+     * @param int $id_conta O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -652,7 +663,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+     * @param int $id_pessoa O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -673,7 +684,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+     * @param int $id_cartao O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -694,7 +705,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_bandeira
-     * @param int $id_bandeira O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+     * @param int $id_bandeira O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
      * @return $this
      */
     public function setIdBandeira($id_bandeira)
@@ -715,7 +726,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+     * @param int $id_tipo_cartao O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
      * @return $this
      */
     public function setIdTipoCartao($id_tipo_cartao)
@@ -736,7 +747,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao O n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+     * @param string $numero_cartao O n\u00FAmero do cart\u00E3o.
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -757,7 +768,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_plastico
-     * @param string $nome_plastico O nome do Portador do Cart\u00C3\u00A3o.
+     * @param string $nome_plastico O nome do Portador do Cart\u00E3o.
      * @return $this
      */
     public function setNomePlastico($nome_plastico)
@@ -778,7 +789,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets cvv2
-     * @param string $cvv2 O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+     * @param string $cvv2 O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
      * @return $this
      */
     public function setCvv2($cvv2)
@@ -799,7 +810,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param string $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param string $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -820,7 +831,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
+     * @param string $data_validade Apresenta a data de Validade do Cart\u00E3o.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -841,7 +852,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf O CPF do Portador do Cart\u00C3\u00A3o.
+     * @param string $cpf O CPF do Portador do Cart\u00E3o.
      * @return $this
      */
     public function setCpf($cpf)
@@ -862,7 +873,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_portador
-     * @param string $tipo_portador O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+     * @param string $tipo_portador O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
      * @return $this
      */
     public function setTipoPortador($tipo_portador)
@@ -967,7 +978,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets flag_virtual
-     * @param int $flag_virtual O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+     * @param int $flag_virtual O status que informa se o cart\u00E3o \u00E9 virtual 
      * @return $this
      */
     public function setFlagVirtual($flag_virtual)
@@ -1030,7 +1041,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets sequencial_cartao
-     * @param int $sequencial_cartao C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o
+     * @param int $sequencial_cartao C\u00F3digo Sequencial do Cart\u00E3o
      * @return $this
      */
     public function setSequencialCartao($sequencial_cartao)
@@ -1051,7 +1062,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_status
-     * @param int $id_status Identificador do Status do Cart\u00C3\u00A3o
+     * @param int $id_status Identificador do Status do Cart\u00E3o
      * @return $this
      */
     public function setIdStatus($id_status)
@@ -1072,7 +1083,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_status_cartao
-     * @param string $descricao_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o
+     * @param string $descricao_status_cartao Descri\u00E7\u00E3o do Status do Cart\u00E3o
      * @return $this
      */
     public function setDescricaoStatusCartao($descricao_status_cartao)
@@ -1093,7 +1104,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_status
-     * @param string $data_status Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_status Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataStatus($data_status)
@@ -1114,7 +1125,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_estagio
-     * @param int $id_estagio Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.
+     * @param int $id_estagio Identificador do Est\u00E1gio do Cart\u00E3o.
      * @return $this
      */
     public function setIdEstagio($id_estagio)
@@ -1135,7 +1146,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_estagio
-     * @param string $descricao_estagio Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.
+     * @param string $descricao_estagio Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
      * @return $this
      */
     public function setDescricaoEstagio($descricao_estagio)
@@ -1156,7 +1167,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_estagio
-     * @param string $data_estagio Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_estagio Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataEstagio($data_estagio)
@@ -1177,7 +1188,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_bin
-     * @param string $numero_bin N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o
+     * @param string $numero_bin N\u00FAmero do Bin do Cart\u00E3o
      * @return $this
      */
     public function setNumeroBin($numero_bin)
@@ -1219,7 +1230,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto
+     * @param string $descricao_produto Descri\u00E7\u00E3o do produto
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -1261,7 +1272,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_status_conta
-     * @param int $descricao_status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+     * @param int $descricao_status_conta Descri\u00E7\u00E3o do status da conta
      * @return $this
      */
     public function setDescricaoStatusConta($descricao_status_conta)
@@ -1282,7 +1293,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_embossing
-     * @param string $data_embossing Data que o cart\u00C3\u00A3o foi embossado
+     * @param string $data_embossing Data que o cart\u00E3o foi embossado
      * @return $this
      */
     public function setDataEmbossing($data_embossing)
@@ -1303,7 +1314,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_desbloqueio
-     * @param string $codigo_desbloqueio C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o
+     * @param string $codigo_desbloqueio C\u00F3digo de desbloqueio do cart\u00E3o
      * @return $this
      */
     public function setCodigoDesbloqueio($codigo_desbloqueio)
@@ -1324,7 +1335,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_pessoa
-     * @param string $nome_pessoa O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * @param string $nome_pessoa O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
      * @return $this
      */
     public function setNomePessoa($nome_pessoa)
@@ -1345,7 +1356,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_pessoa
-     * @param string $tipo_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+     * @param string $tipo_pessoa C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
      * @return $this
      */
     public function setTipoPessoa($tipo_pessoa)
@@ -1387,7 +1398,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_endereco
-     * @param int $id_endereco Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o
+     * @param int $id_endereco Identificador do Endere\u00E7o do titular do cart\u00E3o
      * @return $this
      */
     public function setIdEndereco($id_endereco)
@@ -1408,7 +1419,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_endereco
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
      * @return $this
      */
     public function setIdTipoEndereco($id_tipo_endereco)
@@ -1429,7 +1440,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_endereco
-     * @param string $descricao_tipo_endereco Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o
+     * @param string $descricao_tipo_endereco Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
      * @return $this
      */
     public function setDescricaoTipoEndereco($descricao_tipo_endereco)
@@ -1450,7 +1461,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+     * @param string $cep O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
      * @return $this
      */
     public function setCep($cep)
@@ -1492,7 +1503,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_endereco
-     * @param string $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param string $numero_endereco N\u00FAmero do endere\u00E7o
      * @return $this
      */
     public function setNumeroEndereco($numero_endereco)
@@ -1513,7 +1524,7 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets complemento_endereco
-     * @param string $complemento_endereco Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+     * @param string $complemento_endereco Descri\u00E7oes complementares referente ao endere\u00E7o
      * @return $this
      */
     public function setComplementoEndereco($complemento_endereco)
@@ -1597,13 +1608,34 @@ class DadosCartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Nome do pa\u00C3\u00ADs
+     * @param string $pais Nome do pa\u00EDs
      * @return $this
      */
     public function setPais($pais)
     {
         
         $this->pais = $pais;
+        return $this;
+    }
+    
+    /**
+     * Gets senha_criptografada
+     * @return string
+     */
+    public function getSenhaCriptografada()
+    {
+        return $this->senha_criptografada;
+    }
+  
+    /**
+     * Sets senha_criptografada
+     * @param string $senha_criptografada Senha Criptografada
+     * @return $this
+     */
+    public function setSenhaCriptografada($senha_criptografada)
+    {
+        
+        $this->senha_criptografada = $senha_criptografada;
         return $this;
     }
     

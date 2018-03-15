@@ -104,19 +104,19 @@ class DetalheOportunidadeUpdate implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do detalhe
+      * $id C\u00F3digo identificador do detalhe
       * @var int
       */
     protected $id;
     
     /**
-      * $nome_campo Nome do conte\u00C3\u00BAdo
+      * $nome_campo Nome do conte\u00FAdo
       * @var string
       */
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do detalhe
+      * $conteudo Conte\u00FAdo do detalhe
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class DetalheOportunidadeUpdate implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do detalhe
+     * @param int $id C\u00F3digo identificador do detalhe
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class DetalheOportunidadeUpdate implements ArrayAccess
   
     /**
      * Sets nome_campo
-     * @param string $nome_campo Nome do conte\u00C3\u00BAdo
+     * @param string $nome_campo Nome do conte\u00FAdo
      * @return $this
      */
     public function setNomeCampo($nome_campo)
@@ -189,7 +189,7 @@ class DetalheOportunidadeUpdate implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do detalhe
+     * @param string $conteudo Conte\u00FAdo do detalhe
      * @return $this
      */
     public function setConteudo($conteudo)

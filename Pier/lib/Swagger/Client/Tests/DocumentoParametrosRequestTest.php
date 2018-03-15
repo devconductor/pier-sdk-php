@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * DocumentoParametrosRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+ * @description Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

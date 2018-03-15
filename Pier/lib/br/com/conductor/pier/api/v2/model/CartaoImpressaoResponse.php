@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoImpressaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Cart\u00C3\u00A3o para Impresso
+ * @description Objeto Cart\u00E3o para Impresso
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -188,109 +188,109 @@ class CartaoImpressaoResponse implements ArrayAccess
 
     
     /**
-      * $id_conta Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+      * $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+      * $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_cartao Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+      * $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_bandeira Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+      * $id_bandeira Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
       * @var int
       */
     protected $id_bandeira;
     
     /**
-      * $id_tipo_cartao Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+      * $id_tipo_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
       * @var int
       */
     protected $id_tipo_cartao;
     
     /**
-      * $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+      * $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $nome_plastico Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+      * $nome_plastico Apresenta o nome do Portador do Cart\u00E3o.
       * @var string
       */
     protected $nome_plastico;
     
     /**
-      * $cvv2 Apresenta o n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+      * $cvv2 Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
       * @var string
       */
     protected $cvv2;
     
     /**
-      * $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+      * $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
       * @var string
       */
     protected $data_geracao;
     
     /**
-      * $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
+      * $data_validade Apresenta a data de Validade do Cart\u00E3o.
       * @var string
       */
     protected $data_validade;
     
     /**
-      * $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+      * $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
       * @var string
       */
     protected $nome_origem_comercial;
     
     /**
-      * $nome_empresa Apresenta o nome da Empresa (Pessoa Jur\u00C3\u00ADdica) titular do Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $nome_empresa Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.
       * @var string
       */
     protected $nome_empresa;
     
     /**
-      * $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $numero_agencia Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $numero_conta_corente Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
       * @var string
       */
     protected $numero_conta_corente;
     
     /**
-      * $nome_empresa_beneficio Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica que contratou servi\u00C3\u00A7os de benef\u00C3\u00ADcio para o portador do cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $nome_empresa_beneficio Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.
       * @var string
       */
     protected $nome_empresa_beneficio;
     
     /**
-      * $cpf Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+      * $cpf Apresenta o CPF do Portador do Cart\u00E3o.
       * @var string
       */
     protected $cpf;
     
     /**
-      * $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+      * $tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
       * @var string
       */
     protected $tipo_portador;
     
     /**
-      * $nome_empregador Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica a ser impresso no cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $nome_empregador Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.
       * @var string
       */
     protected $nome_empregador;
@@ -320,13 +320,13 @@ class CartaoImpressaoResponse implements ArrayAccess
     protected $trilha_cvv2;
     
     /**
-      * $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+      * $flag_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
       * @var int
       */
     protected $flag_virtual;
     
     /**
-      * $numero_cartao_hash Apresenta o numero da hash do cart\u00C3\u00A3o 
+      * $numero_cartao_hash Apresenta o numero da hash do cart\u00E3o 
       * @var int
       */
     protected $numero_cartao_hash;
@@ -378,7 +378,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+     * @param int $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -399,7 +399,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+     * @param int $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -420,7 +420,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+     * @param int $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -441,7 +441,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_bandeira
-     * @param int $id_bandeira Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+     * @param int $id_bandeira Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
      * @return $this
      */
     public function setIdBandeira($id_bandeira)
@@ -462,7 +462,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+     * @param int $id_tipo_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
      * @return $this
      */
     public function setIdTipoCartao($id_tipo_cartao)
@@ -483,7 +483,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+     * @param string $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -504,7 +504,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_plastico
-     * @param string $nome_plastico Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+     * @param string $nome_plastico Apresenta o nome do Portador do Cart\u00E3o.
      * @return $this
      */
     public function setNomePlastico($nome_plastico)
@@ -525,7 +525,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets cvv2
-     * @param string $cvv2 Apresenta o n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+     * @param string $cvv2 Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
      * @return $this
      */
     public function setCvv2($cvv2)
@@ -546,7 +546,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param string $data_geracao Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param string $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -567,7 +567,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de Validade do Cart\u00C3\u00A3o.
+     * @param string $data_validade Apresenta a data de Validade do Cart\u00E3o.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -588,7 +588,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_origem_comercial
-     * @param string $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+     * @param string $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
      * @return $this
      */
     public function setNomeOrigemComercial($nome_origem_comercial)
@@ -609,7 +609,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Apresenta o nome da Empresa (Pessoa Jur\u00C3\u00ADdica) titular do Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param string $nome_empresa Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)
@@ -630,7 +630,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param int $numero_agencia Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -651,7 +651,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corente
-     * @param string $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param string $numero_conta_corente Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNumeroContaCorente($numero_conta_corente)
@@ -672,7 +672,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa_beneficio
-     * @param string $nome_empresa_beneficio Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica que contratou servi\u00C3\u00A7os de benef\u00C3\u00ADcio para o portador do cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param string $nome_empresa_beneficio Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNomeEmpresaBeneficio($nome_empresa_beneficio)
@@ -693,7 +693,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+     * @param string $cpf Apresenta o CPF do Portador do Cart\u00E3o.
      * @return $this
      */
     public function setCpf($cpf)
@@ -714,7 +714,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_portador
-     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
      * @return $this
      */
     public function setTipoPortador($tipo_portador)
@@ -735,7 +735,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets nome_empregador
-     * @param string $nome_empregador Apresenta o nome da Pessoa F\u00C3\u00ADsica ou Jur\u00C3\u00ADdica a ser impresso no cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param string $nome_empregador Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNomeEmpregador($nome_empregador)
@@ -840,7 +840,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets flag_virtual
-     * @param int $flag_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+     * @param int $flag_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
      * @return $this
      */
     public function setFlagVirtual($flag_virtual)
@@ -861,7 +861,7 @@ class CartaoImpressaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao_hash
-     * @param int $numero_cartao_hash Apresenta o numero da hash do cart\u00C3\u00A3o 
+     * @param int $numero_cartao_hash Apresenta o numero da hash do cart\u00E3o 
      * @return $this
      */
     public function setNumeroCartaoHash($numero_cartao_hash)

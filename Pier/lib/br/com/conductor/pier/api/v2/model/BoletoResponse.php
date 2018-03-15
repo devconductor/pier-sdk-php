@@ -38,7 +38,7 @@ use \ArrayAccess;
  * BoletoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
+ * @description Representa\u00E7\u00E3o da resposta do boleto de fatura
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -212,19 +212,19 @@ class BoletoResponse implements ArrayAccess
 
     
     /**
-      * $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+      * $numero_do_documento N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
       * @var string
       */
     protected $numero_do_documento;
     
     /**
-      * $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+      * $data_processamento Data do processamento (emiss\u00E3o ou faturamento) do boleto
       * @var string
       */
     protected $data_processamento;
     
     /**
-      * $data_documento Data do documento (impress\u00C3\u00A3o)
+      * $data_documento Data do documento (impress\u00E3o)
       * @var string
       */
     protected $data_documento;
@@ -248,7 +248,7 @@ class BoletoResponse implements ArrayAccess
     protected $valor_boleto;
     
     /**
-      * $nome_beneficiario Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
+      * $nome_beneficiario Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
       * @var string
       */
     protected $nome_beneficiario;
@@ -260,43 +260,43 @@ class BoletoResponse implements ArrayAccess
     protected $documento_beneficiario;
     
     /**
-      * $agencia Ag\u00C3\u00AAncia.
+      * $agencia Ag\u00EAncia.
       * @var string
       */
     protected $agencia;
     
     /**
-      * $codigo_beneficiario C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+      * $codigo_beneficiario C\u00F3digo do benefici\u00E1rio
       * @var string
       */
     protected $codigo_beneficiario;
     
     /**
-      * $numero_convenio N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+      * $numero_convenio N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
       * @var string
       */
     protected $numero_convenio;
     
     /**
-      * $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+      * $digito_codigo_beneficiario D\u00EDgito do c\u00F3digo do benefici\u00E1rio
       * @var string
       */
     protected $digito_codigo_beneficiario;
     
     /**
-      * $carteira Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
+      * $carteira Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
       * @var string
       */
     protected $carteira;
     
     /**
-      * $nosso_numero Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
+      * $nosso_numero Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
       * @var string
       */
     protected $nosso_numero;
     
     /**
-      * $digito_nosso_numero D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
+      * $digito_nosso_numero D\u00EDgito do nosso n\u00FAmero
       * @var string
       */
     protected $digito_nosso_numero;
@@ -308,25 +308,25 @@ class BoletoResponse implements ArrayAccess
     protected $banco;
     
     /**
-      * $aceite Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
+      * $aceite Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")
       * @var bool
       */
     protected $aceite;
     
     /**
-      * $especie_do_documento Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")
+      * $especie_do_documento Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")
       * @var string
       */
     protected $especie_do_documento;
     
     /**
-      * $especie Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")
+      * $especie Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")
       * @var string
       */
     protected $especie;
     
     /**
-      * $instrucoes Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio
+      * $instrucoes Instru\u00E7\u00F5es para o benefici\u00E1rio
       * @var string[]
       */
     protected $instrucoes;
@@ -338,7 +338,7 @@ class BoletoResponse implements ArrayAccess
     protected $locais_de_pagamento;
     
     /**
-      * $nome_pagador Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
+      * $nome_pagador Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
       * @var string
       */
     protected $nome_pagador;
@@ -380,13 +380,13 @@ class BoletoResponse implements ArrayAccess
     protected $uf_pagador;
     
     /**
-      * $codigo_de_barras Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras
+      * $codigo_de_barras Valor num\u00E9rico do c\u00F3digo de barras
       * @var string
       */
     protected $codigo_de_barras;
     
     /**
-      * $linha_digitavel Linha digit\u00C3\u00A1vel formatada
+      * $linha_digitavel Linha digit\u00E1vel formatada
       * @var string
       */
     protected $linha_digitavel;
@@ -444,7 +444,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets numero_do_documento
-     * @param string $numero_do_documento N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+     * @param string $numero_do_documento N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
      * @return $this
      */
     public function setNumeroDoDocumento($numero_do_documento)
@@ -465,7 +465,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets data_processamento
-     * @param string $data_processamento Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+     * @param string $data_processamento Data do processamento (emiss\u00E3o ou faturamento) do boleto
      * @return $this
      */
     public function setDataProcessamento($data_processamento)
@@ -486,7 +486,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets data_documento
-     * @param string $data_documento Data do documento (impress\u00C3\u00A3o)
+     * @param string $data_documento Data do documento (impress\u00E3o)
      * @return $this
      */
     public function setDataDocumento($data_documento)
@@ -570,7 +570,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets nome_beneficiario
-     * @param string $nome_beneficiario Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
+     * @param string $nome_beneficiario Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
      * @return $this
      */
     public function setNomeBeneficiario($nome_beneficiario)
@@ -612,7 +612,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets agencia
-     * @param string $agencia Ag\u00C3\u00AAncia.
+     * @param string $agencia Ag\u00EAncia.
      * @return $this
      */
     public function setAgencia($agencia)
@@ -633,7 +633,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets codigo_beneficiario
-     * @param string $codigo_beneficiario C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+     * @param string $codigo_beneficiario C\u00F3digo do benefici\u00E1rio
      * @return $this
      */
     public function setCodigoBeneficiario($codigo_beneficiario)
@@ -654,7 +654,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets numero_convenio
-     * @param string $numero_convenio N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+     * @param string $numero_convenio N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
      * @return $this
      */
     public function setNumeroConvenio($numero_convenio)
@@ -675,7 +675,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets digito_codigo_beneficiario
-     * @param string $digito_codigo_beneficiario D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+     * @param string $digito_codigo_beneficiario D\u00EDgito do c\u00F3digo do benefici\u00E1rio
      * @return $this
      */
     public function setDigitoCodigoBeneficiario($digito_codigo_beneficiario)
@@ -696,7 +696,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets carteira
-     * @param string $carteira Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
+     * @param string $carteira Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
      * @return $this
      */
     public function setCarteira($carteira)
@@ -717,7 +717,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets nosso_numero
-     * @param string $nosso_numero Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
+     * @param string $nosso_numero Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
      * @return $this
      */
     public function setNossoNumero($nosso_numero)
@@ -738,7 +738,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets digito_nosso_numero
-     * @param string $digito_nosso_numero D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
+     * @param string $digito_nosso_numero D\u00EDgito do nosso n\u00FAmero
      * @return $this
      */
     public function setDigitoNossoNumero($digito_nosso_numero)
@@ -780,7 +780,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets aceite
-     * @param bool $aceite Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
+     * @param bool $aceite Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")
      * @return $this
      */
     public function setAceite($aceite)
@@ -801,7 +801,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets especie_do_documento
-     * @param string $especie_do_documento Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")
+     * @param string $especie_do_documento Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")
      * @return $this
      */
     public function setEspecieDoDocumento($especie_do_documento)
@@ -822,7 +822,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets especie
-     * @param string $especie Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")
+     * @param string $especie Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")
      * @return $this
      */
     public function setEspecie($especie)
@@ -843,7 +843,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets instrucoes
-     * @param string[] $instrucoes Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio
+     * @param string[] $instrucoes Instru\u00E7\u00F5es para o benefici\u00E1rio
      * @return $this
      */
     public function setInstrucoes($instrucoes)
@@ -885,7 +885,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets nome_pagador
-     * @param string $nome_pagador Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
+     * @param string $nome_pagador Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
      * @return $this
      */
     public function setNomePagador($nome_pagador)
@@ -1032,7 +1032,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets codigo_de_barras
-     * @param string $codigo_de_barras Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras
+     * @param string $codigo_de_barras Valor num\u00E9rico do c\u00F3digo de barras
      * @return $this
      */
     public function setCodigoDeBarras($codigo_de_barras)
@@ -1053,7 +1053,7 @@ class BoletoResponse implements ArrayAccess
   
     /**
      * Sets linha_digitavel
-     * @param string $linha_digitavel Linha digit\u00C3\u00A1vel formatada
+     * @param string $linha_digitavel Linha digit\u00E1vel formatada
      * @return $this
      */
     public function setLinhaDigitavel($linha_digitavel)

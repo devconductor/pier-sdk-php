@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CancelamentoTransacaoPorIdCartaoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o por idCartao
+ * @description Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o por idCartao
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,43 +132,43 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
 
     
     /**
-      * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+      * $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
       * @var string
       */
     protected $nsu_origem;
     
     /**
-      * $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+      * $nsu_origem_transacao_cancelada N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
       * @var string
       */
     protected $nsu_origem_transacao_cancelada;
     
     /**
-      * $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+      * $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+      * $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
       * @var string
       */
     protected $data_hora_transacao_cancelada;
     
     /**
-      * $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+      * $nsu_autorizacao_transacao_cancelada N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
       * @var string
       */
     protected $nsu_autorizacao_transacao_cancelada;
     
     /**
-      * $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+      * $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
       * @var Number
       */
     protected $valor_transacao;
     
     /**
-      * $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+      * $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
       * @var int
       */
     protected $numero_estabelecimento;
@@ -180,13 +180,13 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
     protected $data_hora_terminal;
     
     /**
-      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+      * $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
       * @var string
       */
     protected $terminal_requisitante;
     
     /**
-      * $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+      * $numero_parcelas N\u00FAmero de Parcelas.
       * @var int
       */
     protected $numero_parcelas;
@@ -224,7 +224,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets nsu_origem
-     * @param string $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+     * @param string $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
      * @return $this
      */
     public function setNsuOrigem($nsu_origem)
@@ -245,7 +245,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets nsu_origem_transacao_cancelada
-     * @param string $nsu_origem_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+     * @param string $nsu_origem_transacao_cancelada N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
      * @return $this
      */
     public function setNsuOrigemTransacaoCancelada($nsu_origem_transacao_cancelada)
@@ -266,7 +266,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -287,7 +287,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets data_hora_transacao_cancelada
-     * @param string $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+     * @param string $data_hora_transacao_cancelada Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
      * @return $this
      */
     public function setDataHoraTransacaoCancelada($data_hora_transacao_cancelada)
@@ -308,7 +308,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets nsu_autorizacao_transacao_cancelada
-     * @param string $nsu_autorizacao_transacao_cancelada N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+     * @param string $nsu_autorizacao_transacao_cancelada N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
      * @return $this
      */
     public function setNsuAutorizacaoTransacaoCancelada($nsu_autorizacao_transacao_cancelada)
@@ -329,7 +329,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets valor_transacao
-     * @param Number $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+     * @param Number $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
      * @return $this
      */
     public function setValorTransacao($valor_transacao)
@@ -350,7 +350,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+     * @param int $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -392,7 +392,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+     * @param string $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
      * @return $this
      */
     public function setTerminalRequisitante($terminal_requisitante)
@@ -413,7 +413,7 @@ class CancelamentoTransacaoPorIdCartaoRequest implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+     * @param int $numero_parcelas N\u00FAmero de Parcelas.
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)

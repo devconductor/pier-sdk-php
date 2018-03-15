@@ -92,36 +92,36 @@ class AvisoViagemApi
   
     
     /**
-     * consultarUsingGET4
+     * consultarUsingGET5
      *
      * Consultar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\AvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4($id)
+    public function consultarUsingGET5($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET4WithHttpInfo
+     * consultarUsingGET5WithHttpInfo
      *
      * Consultar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4WithHttpInfo($id)
+    public function consultarUsingGET5WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET4');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
         }
   
         // parse inputs
@@ -191,7 +191,7 @@ class AvisoViagemApi
      *
      * Desabilitar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\AvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -207,7 +207,7 @@ class AvisoViagemApi
      *
      * Desabilitar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -286,7 +286,7 @@ class AvisoViagemApi
      *
      * Habilitar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\AvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -302,7 +302,7 @@ class AvisoViagemApi
      *
      * Habilitar um aviso viagem de acordo com o id passado
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -377,45 +377,45 @@ class AvisoViagemApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET7
      *
      * Lista os avisos viagens gerados pelo Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)
-     * @param string $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)
+     * @param string $codigo_pais Codigo identificador do pa\u00EDs na base (id) (optional)
      * @param string $data_inicio Data inicio do aviso viagem (optional)
      * @param string $data_fim Data fim do aviso viagem (optional)
-     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)
+     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
+    public function listarUsingGET7($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * Lista os avisos viagens gerados pelo Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)
-     * @param string $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)
+     * @param string $codigo_pais Codigo identificador do pa\u00EDs na base (id) (optional)
      * @param string $data_inicio Data inicio do aviso viagem (optional)
      * @param string $data_fim Data fim do aviso viagem (optional)
-     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)
+     * @param int $flag_ativo Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
+    public function listarUsingGET7WithHttpInfo($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
     {
         
   
@@ -514,8 +514,8 @@ class AvisoViagemApi
      *
      * Realiza o cadastro de um novo Aviso Viagem
      *
-     * @param int $id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (required)
-     * @param string $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id) (required)
+     * @param int $id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id) (required)
+     * @param string $codigo_pais Codigo identificador do pa\u00EDs na base (id) (required)
      * @param string $data_inicio Data inicio do aviso viagem (required)
      * @param string $data_fim Data fim do aviso viagem (required)
      * @return \br.com.conductor.pier.api.v2.model\AvisoViagemResponse
@@ -533,8 +533,8 @@ class AvisoViagemApi
      *
      * Realiza o cadastro de um novo Aviso Viagem
      *
-     * @param int $id_cartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (required)
-     * @param string $codigo_pais Codigo identificador do pa\u00C3\u00ADs na base (id) (required)
+     * @param int $id_cartao C\u00F3digo Identificador do cart\u00E3o na base (id) (required)
+     * @param string $codigo_pais Codigo identificador do pa\u00EDs na base (id) (required)
      * @param string $data_inicio Data inicio do aviso viagem (required)
      * @param string $data_fim Data fim do aviso viagem (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)

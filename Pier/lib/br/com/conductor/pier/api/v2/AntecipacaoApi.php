@@ -94,7 +94,7 @@ class AntecipacaoApi
     /**
      * configurarTaxaAntecipacaoUsingPOST
      *
-     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      * @param int $id Id Produto (required)
      * @param \br.com.conductor.pier.api.v2.model\TaxaAntecipacaoRequest $taxa_antecipacao_request taxaAntecipacaoRequest (required)
@@ -111,7 +111,7 @@ class AntecipacaoApi
     /**
      * configurarTaxaAntecipacaoUsingPOSTWithHttpInfo
      *
-     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      * @param int $id Id Produto (required)
      * @param \br.com.conductor.pier.api.v2.model\TaxaAntecipacaoRequest $taxa_antecipacao_request taxaAntecipacaoRequest (required)
@@ -199,10 +199,10 @@ class AntecipacaoApi
     /**
      * consultarTaxaAntecipacaoUsingGET
      *
-     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      * @param int $id Id Produto (required)
-     * @param string $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) (required)
+     * @param string $tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US) (required)
      * @return \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -216,10 +216,10 @@ class AntecipacaoApi
     /**
      * consultarTaxaAntecipacaoUsingGETWithHttpInfo
      *
-     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+     * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
      *
      * @param int $id Id Produto (required)
-     * @param string $tipo_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) (required)
+     * @param string $tipo_transacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US) (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -304,12 +304,12 @@ class AntecipacaoApi
     /**
      * efetivarAntecipacaoUsingPOST
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do evento. (required)
      * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -323,12 +323,12 @@ class AntecipacaoApi
     /**
      * efetivarAntecipacaoUsingPOSTWithHttpInfo
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do evento. (required)
      * @param int $quantidade_parcelas Quantidade de parcelas para serem antecipadas. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -425,10 +425,10 @@ class AntecipacaoApi
     /**
      * efetivarAntecipacoesUsingPOST
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -442,10 +442,10 @@ class AntecipacaoApi
     /**
      * efetivarAntecipacoesUsingPOSTWithHttpInfo
      *
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
      *
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -520,50 +520,50 @@ class AntecipacaoApi
     }
     
     /**
-     * listarUsingGET11
+     * listarUsingGET12
      *
-     * Listar compras com parcelas antecip\u00C3\u00A1veis
+     * Listar compras com parcelas antecip\u00E1veis
      *
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
-     * @param bool $parcelada Indica se a compra \u00C3\u00A9 parcelada. (optional)
-     * @param bool $juros Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)
-     * @param string $tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta da Compra. (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_compra C\u00F3digo identificador da Compra. (optional)
+     * @param bool $parcelada Indica se a compra \u00E9 parcelada. (optional)
+     * @param bool $juros Indica se a compra \u00E9 com ou sem juros. (optional)
+     * @param string $tipo_origem_transacao Indica se a compra \u00E9 ON-US ou OFF-US (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCompraResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET12($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET11WithHttpInfo
+     * listarUsingGET12WithHttpInfo
      *
-     * Listar compras com parcelas antecip\u00C3\u00A1veis
+     * Listar compras com parcelas antecip\u00E1veis
      *
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta da Compra. (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_compra C\u00C3\u00B3digo identificador da Compra. (optional)
-     * @param bool $parcelada Indica se a compra \u00C3\u00A9 parcelada. (optional)
-     * @param bool $juros Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)
-     * @param string $tipo_origem_transacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta da Compra. (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_compra C\u00F3digo identificador da Compra. (optional)
+     * @param bool $parcelada Indica se a compra \u00E9 parcelada. (optional)
+     * @param bool $juros Indica se a compra \u00E9 com ou sem juros. (optional)
+     * @param string $tipo_origem_transacao Indica se a compra \u00E9 ON-US ou OFF-US (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCompraResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11WithHttpInfo($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
+    public function listarUsingGET12WithHttpInfo($id_conta, $sort = null, $page = null, $limit = null, $id_compra = null, $parcelada = null, $juros = null, $tipo_origem_transacao = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET12');
         }
   
         // parse inputs
@@ -659,11 +659,11 @@ class AntecipacaoApi
     /**
      * simularAntecipacaoUsingGET
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+     * Simular antecipa\u00E7\u00E3o de parcelas
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do evento. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -677,11 +677,11 @@ class AntecipacaoApi
     /**
      * simularAntecipacaoUsingGETWithHttpInfo
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+     * Simular antecipa\u00E7\u00E3o de parcelas
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do evento. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -770,10 +770,10 @@ class AntecipacaoApi
     /**
      * simularAntecipacoesUsingGET
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     * Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -787,10 +787,10 @@ class AntecipacaoApi
     /**
      * simularAntecipacoesUsingGETWithHttpInfo
      *
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     * Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. (required)
-     * @param string $complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta. (required)
+     * @param string $complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaLoteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

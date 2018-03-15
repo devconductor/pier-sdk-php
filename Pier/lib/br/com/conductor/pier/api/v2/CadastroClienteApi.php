@@ -96,8 +96,8 @@ class CadastroClienteApi
      *
      * Altera Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AdicionalUpdate $adicional_update adicionalUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -114,8 +114,8 @@ class CadastroClienteApi
      *
      * Altera Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AdicionalUpdate $adicional_update adicionalUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -216,16 +216,16 @@ class CadastroClienteApi
      * Atualiza os detalhes de uma determinada Pessoa
      *
      * @param int $id ID da Pessoa (required)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -242,16 +242,16 @@ class CadastroClienteApi
      * Atualiza os detalhes de uma determinada Pessoa
      *
      * @param int $id ID da Pessoa (required)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -371,16 +371,16 @@ class CadastroClienteApi
      * Atualiza os dados de uma determinada Pessoa
      *
      * @param int $id ID da Pessoa (required)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (required)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. (required)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade. (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade. (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade. (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do Identidade. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade. (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -397,16 +397,16 @@ class CadastroClienteApi
      * Atualiza os dados de uma determinada Pessoa
      *
      * @param int $id ID da Pessoa (required)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (required)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. (required)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade. (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade. (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade. (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do Identidade. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade. (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -535,13 +535,13 @@ class CadastroClienteApi
     /**
      * alterarUsingPUT16
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+     * Realiza a altera\u00E7\u00E3o de um determinado Telefone
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (required)
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (required)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -555,13 +555,13 @@ class CadastroClienteApi
     /**
      * alterarUsingPUT16WithHttpInfo
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+     * Realiza a altera\u00E7\u00E3o de um determinado Telefone
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (required)
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (required)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -650,16 +650,16 @@ class CadastroClienteApi
     /**
      * alterarUsingPUT5
      *
-     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
+     * Atualiza os dados de um determinado Endere\u00E7o
      *
      * @param int $id id (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
@@ -677,16 +677,16 @@ class CadastroClienteApi
     /**
      * alterarUsingPUT5WithHttpInfo
      *
-     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
+     * Atualiza os dados de um determinado Endere\u00E7o
      *
      * @param int $id id (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
@@ -809,8 +809,8 @@ class CadastroClienteApi
      *
      * Permite atribuir um documento para uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (required)
-     * @param \br.com.conductor.pier.api.v2.model\AtribuirAssinaturaClientePersist $body C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (required)
+     * @param \br.com.conductor.pier.api.v2.model\AtribuirAssinaturaClientePersist $body C\u00F3digo de Identifica\u00E7\u00E3o do Arquivo (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -826,8 +826,8 @@ class CadastroClienteApi
      *
      * Permite atribuir um documento para uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (required)
-     * @param \br.com.conductor.pier.api.v2.model\AtribuirAssinaturaClientePersist $body C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (required)
+     * @param \br.com.conductor.pier.api.v2.model\AtribuirAssinaturaClientePersist $body C\u00F3digo de Identifica\u00E7\u00E3o do Arquivo (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -918,8 +918,8 @@ class CadastroClienteApi
      *
      * Atualiza conta integrada com o emissor
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00E7\u00E3o do canal de entrada (optional)
      * @return \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -935,8 +935,8 @@ class CadastroClienteApi
      *
      * Atualiza conta integrada com o emissor
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00E7\u00E3o do canal de entrada (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1023,7 +1023,7 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de Adicionais para uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AdicionalPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1040,7 +1040,7 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de Adicionais para uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AdicionalPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1124,42 +1124,42 @@ class CadastroClienteApi
     }
     
     /**
-     * consultarUsingGET
+     * consultarUsingGET1
      *
      * Consulta Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET($id, $id_pessoa)
+    public function consultarUsingGET1($id, $id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGETWithHttpInfo ($id, $id_pessoa);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id, $id_pessoa);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGETWithHttpInfo
+     * consultarUsingGET1WithHttpInfo
      *
      * Consulta Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGETWithHttpInfo($id, $id_pessoa)
+    public function consultarUsingGET1WithHttpInfo($id, $id_pessoa)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
         }
         // verify the required parameter 'id_pessoa' is set
         if ($id_pessoa === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling consultarUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling consultarUsingGET1');
         }
   
         // parse inputs
@@ -1233,36 +1233,36 @@ class CadastroClienteApi
     }
     
     /**
-     * consultarUsingGET15
+     * consultarUsingGET16
      *
-     * Apresenta os dados de um determinado Endere\u00C3\u00A7o
+     * Apresenta os dados de um determinado Endere\u00E7o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\EnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15($id)
+    public function consultarUsingGET16($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET15WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET15WithHttpInfo
+     * consultarUsingGET16WithHttpInfo
      *
-     * Apresenta os dados de um determinado Endere\u00C3\u00A7o
+     * Apresenta os dados de um determinado Endere\u00E7o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\EnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15WithHttpInfo($id)
+    public function consultarUsingGET16WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET15');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
         }
   
         // parse inputs
@@ -1328,7 +1328,7 @@ class CadastroClienteApi
     }
     
     /**
-     * consultarUsingGET23
+     * consultarUsingGET24
      *
      * Apresenta os detalhes de uma determinada Pessoa
      *
@@ -1336,15 +1336,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id)
+    public function consultarUsingGET24($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET23WithHttpInfo
+     * consultarUsingGET24WithHttpInfo
      *
      * Apresenta os detalhes de uma determinada Pessoa
      *
@@ -1352,12 +1352,12 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id)
+    public function consultarUsingGET24WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
         }
   
         // parse inputs
@@ -1423,7 +1423,7 @@ class CadastroClienteApi
     }
     
     /**
-     * consultarUsingGET24
+     * consultarUsingGET25
      *
      * Apresenta os dados de uma determinada Pessoa
      *
@@ -1431,15 +1431,15 @@ class CadastroClienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id)
+    public function consultarUsingGET25($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * Apresenta os dados de uma determinada Pessoa
      *
@@ -1447,12 +1447,12 @@ class CadastroClienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id)
+    public function consultarUsingGET25WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -1518,36 +1518,36 @@ class CadastroClienteApi
     }
     
     /**
-     * consultarUsingGET30
+     * consultarUsingGET31
      *
      * Apresenta os dados de um determinado Telefone
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET30($id)
+    public function consultarUsingGET31($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET30WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET31WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET30WithHttpInfo
+     * consultarUsingGET31WithHttpInfo
      *
      * Apresenta os dados de um determinado Telefone
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET30WithHttpInfo($id)
+    public function consultarUsingGET31WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET30');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET31');
         }
   
         // parse inputs
@@ -1617,8 +1617,8 @@ class CadastroClienteApi
      *
      * Inativa Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1634,8 +1634,8 @@ class CadastroClienteApi
      *
      * Inativa Adicional de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id). (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1724,12 +1724,12 @@ class CadastroClienteApi
     /**
      * listarSociosUsingGET
      *
-     * Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
+     * Listar s\u00F3cios de uma pessoa jur\u00EDdica
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Jur\u00C3\u00ADdica (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Jur\u00EDdica (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1743,12 +1743,12 @@ class CadastroClienteApi
     /**
      * listarSociosUsingGETWithHttpInfo
      *
-     * Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
+     * Listar s\u00F3cios de uma pessoa jur\u00EDdica
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Jur\u00C3\u00ADdica (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Jur\u00EDdica (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1839,42 +1839,42 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET
+     * listarUsingGET1
      *
      * Lista os Adicionais de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\AdicionalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET($id, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET1($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGETWithHttpInfo ($id, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGETWithHttpInfo
+     * listarUsingGET1WithHttpInfo
      *
      * Lista os Adicionais de uma Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET1WithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET1');
         }
   
         // parse inputs
@@ -1956,63 +1956,63 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET20
+     * listarUsingGET21
      *
-     * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+     * Lista os Endere\u00E7os cadastrados para o Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
      * @param string $pais Apresenta nome do Pais (optional)
-     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o (optional)
-     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao (optional)
+     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)
+     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageEnderecoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
+    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET20WithHttpInfo ($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $id_pessoa, $id_tipo_endereco, $cep, $logradouro, $numero, $complemento, $ponto_referencia, $bairro, $cidade, $uf, $pais, $data_inclusao, $data_ultima_atualizacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET20WithHttpInfo
+     * listarUsingGET21WithHttpInfo
      *
-     * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+     * Lista os Endere\u00E7os cadastrados para o Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
      * @param string $pais Apresenta nome do Pais (optional)
-     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o (optional)
-     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao (optional)
+     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)
+     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEnderecoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET20WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
+    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_pessoa = null, $id_tipo_endereco = null, $cep = null, $logradouro = null, $numero = null, $complemento = null, $ponto_referencia = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_inclusao = null, $data_ultima_atualizacao = null)
     {
         
   
@@ -2143,57 +2143,57 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET29
+     * listarUsingGET31
      *
      * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo identificador da pessoa (optional)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_pessoa C\u00F3digo identificador da pessoa (optional)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do Banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do Banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET31($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit, $id_pessoa, $nome_mae, $id_estado_civil, $id_profissao, $id_natureza_ocupacao, $id_nacionalidade, $numero_banco, $numero_agencia, $numero_conta_corrente, $email, $nome_empresa);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET29WithHttpInfo
+     * listarUsingGET31WithHttpInfo
      *
      * Lista os Detalhes das Pessoas cadastradas no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo identificador da pessoa (optional)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_pessoa C\u00F3digo identificador da pessoa (optional)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do Banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do Banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
+    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null, $id_pessoa = null, $nome_mae = null, $id_estado_civil = null, $id_profissao = null, $id_natureza_ocupacao = null, $id_nacionalidade = null, $numero_banco = null, $numero_agencia = null, $numero_conta_corrente = null, $email = null, $nome_empresa = null)
     {
         
   
@@ -2312,57 +2312,57 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET30
+     * listarUsingGET32
      *
      * Lista as Pessoas cadastradas no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id). (optional)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (optional)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
+    public function listarUsingGET32($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET32WithHttpInfo ($sort, $page, $limit, $id, $nome, $tipo, $cpf, $cnpj, $data_nascimento, $sexo, $numero_identidade, $orgao_expedidor_identidade, $unidade_federativa_identidade, $data_emissao_identidade);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET30WithHttpInfo
+     * listarUsingGET32WithHttpInfo
      *
      * Lista as Pessoas cadastradas no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). (optional)
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (optional)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (optional)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id). (optional)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (optional)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
+    public function listarUsingGET32WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $tipo = null, $cpf = null, $cnpj = null, $data_nascimento = null, $sexo = null, $numero_identidade = null, $orgao_expedidor_identidade = null, $unidade_federativa_identidade = null, $data_emissao_identidade = null)
     {
         
   
@@ -2481,49 +2481,49 @@ class CadastroClienteApi
     }
     
     /**
-     * listarUsingGET39
+     * listarUsingGET41
      *
      * Lista os Telefones cadastrados no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (optional)
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (optional)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence. (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @param int $status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET39($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
+    public function listarUsingGET41($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET39WithHttpInfo ($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET41WithHttpInfo ($sort, $page, $limit, $id, $id_tipo_telefone, $id_pessoa, $ddd, $telefone, $ramal, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET39WithHttpInfo
+     * listarUsingGET41WithHttpInfo
      *
      * Lista os Telefones cadastrados no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). (optional)
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id). (optional)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence. (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @param int $status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET39WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
+    public function listarUsingGET41WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_tipo_telefone = null, $id_pessoa = null, $ddd = null, $telefone = null, $ramal = null, $status = null)
     {
         
   
@@ -2719,7 +2719,7 @@ class CadastroClienteApi
     /**
      * salvarPessoaJuridicaAprovadaUsingPOST
      *
-     * Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+     * Cadastro de Conta e Pessoa Jur\u00EDdica
      *
      * @param \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaPersist $pessoa_persist pessoaPersist (required)
      * @return \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaResponse
@@ -2735,7 +2735,7 @@ class CadastroClienteApi
     /**
      * salvarPessoaJuridicaAprovadaUsingPOSTWithHttpInfo
      *
-     * Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+     * Cadastro de Conta e Pessoa Jur\u00EDdica
      *
      * @param \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaPersist $pessoa_persist pessoaPersist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaJuridicaAprovadaResponse, HTTP status code, HTTP response headers (array of strings)
@@ -2810,15 +2810,15 @@ class CadastroClienteApi
     /**
      * salvarUsingPOST12
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Realiza o cadastro de um novo Endere\u00E7o
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
@@ -2836,15 +2836,15 @@ class CadastroClienteApi
     /**
      * salvarUsingPOST12WithHttpInfo
      *
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Realiza o cadastro de um novo Endere\u00E7o
      *
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) (optional)
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (optional)
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39; (optional)
      * @param string $logradouro Apresenta o nome do Logradouro (optional)
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o (optional)
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o (optional)
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o (optional)
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o (optional)
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)
      * @param string $bairro Apresenta nome do bairro (optional)
      * @param string $cidade Apresenta nome da cidade (optional)
      * @param string $uf Apresenta sigla da Unidade Federativa (optional)
@@ -2957,10 +2957,10 @@ class CadastroClienteApi
     /**
      * salvarUsingPOST14
      *
-     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+     * Inclui a conta como registro para integra\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00E7\u00E3o do canal de entrada (optional)
      * @return \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2974,10 +2974,10 @@ class CadastroClienteApi
     /**
      * salvarUsingPOST14WithHttpInfo
      *
-     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+     * Inclui a conta como registro para integra\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\IntegracaoEmissorPersist $body Descri\u00E7\u00E3o do canal de entrada (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\IntegracaoEmissorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3064,17 +3064,17 @@ class CadastroClienteApi
      *
      * Salvar os detalhes de uma determinada Pessoa
      *
-     * @param int $id_pessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa (required)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param int $id_pessoa Apresenta o c\u00F3digo identificador da pessoa (required)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3090,17 +3090,17 @@ class CadastroClienteApi
      *
      * Salvar os detalhes de uma determinada Pessoa
      *
-     * @param int $id_pessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa (required)
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica (optional)
+     * @param int $id_pessoa Apresenta o c\u00F3digo identificador da pessoa (required)
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica (optional)
      * @param int $id_estado_civil Id Estado civil da pessoa fisica (optional)
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica (optional)
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica (optional)
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)
      * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica (optional)
-     * @param int $numero_banco N\u00C3\u00BAmero do banco. (optional)
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente. (optional)
+     * @param int $numero_banco N\u00FAmero do banco. (optional)
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia. (optional)
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente. (optional)
      * @param string $email Email da pessoa fisica (optional)
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o (optional)
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3215,16 +3215,16 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de um nova Pessoa
      *
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (required)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. (required)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade. (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade. (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade. (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do Identidade. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade. (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3240,16 +3240,16 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de um nova Pessoa
      *
-     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required)
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). (required)
+     * @param string $nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (required)
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica). (required)
      * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. (required)
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF. (optional)
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). (optional)
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade. (optional)
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do Identidade. (optional)
+     * @param string $cpf N\u00FAmero do CPF, quando PF. (optional)
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ. (optional)
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). (optional)
+     * @param string $numero_identidade N\u00FAmero da Identidade. (optional)
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do Identidade. (optional)
      * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade. (optional)
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3368,11 +3368,11 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de um novo Telefone
      *
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence. (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3388,11 +3388,11 @@ class CadastroClienteApi
      *
      * Realiza o cadastro de um novo Telefone
      *
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. (optional)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (optional)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (optional)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence. (optional)
+     * @param string $ddd C\u00F3digo DDD do telefone (id). (optional)
+     * @param string $telefone N\u00FAmero do telefone. (optional)
+     * @param string $ramal N\u00FAmero do ramal. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

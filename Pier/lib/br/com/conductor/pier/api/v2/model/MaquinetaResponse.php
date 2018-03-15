@@ -124,31 +124,31 @@ class MaquinetaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_tipo_maquineta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+      * $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
       * @var int
       */
     protected $id_tipo_maquineta;
     
     /**
-      * $valor Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+      * $valor Valor de manuten\u00E7\u00E3o da Maquineta.
       * @var Number
       */
     protected $valor;
     
     /**
-      * $data_hora_implantacao Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+      * $data_hora_implantacao Data de implanta\u00E7\u00E3o da Maquineta.
       * @var string
       */
     protected $data_hora_implantacao;
@@ -160,13 +160,13 @@ class MaquinetaResponse implements ArrayAccess
     protected $data_hora_cadastramento;
     
     /**
-      * $terminal N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+      * $terminal N\u00FAmero do terminal vinculado a Maquineta.
       * @var string
       */
     protected $terminal;
     
     /**
-      * $usuario_apl Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * $usuario_apl Usu\u00E1rio da aplica\u00E7\u00E3o.
       * @var string
       */
     protected $usuario_apl;
@@ -202,7 +202,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -244,7 +244,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_maquineta
-     * @param int $id_tipo_maquineta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+     * @param int $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
      * @return $this
      */
     public function setIdTipoMaquineta($id_tipo_maquineta)
@@ -265,7 +265,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+     * @param Number $valor Valor de manuten\u00E7\u00E3o da Maquineta.
      * @return $this
      */
     public function setValor($valor)
@@ -286,7 +286,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_implantacao
-     * @param string $data_hora_implantacao Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+     * @param string $data_hora_implantacao Data de implanta\u00E7\u00E3o da Maquineta.
      * @return $this
      */
     public function setDataHoraImplantacao($data_hora_implantacao)
@@ -328,7 +328,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets terminal
-     * @param string $terminal N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+     * @param string $terminal N\u00FAmero do terminal vinculado a Maquineta.
      * @return $this
      */
     public function setTerminal($terminal)
@@ -349,7 +349,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets usuario_apl
-     * @param string $usuario_apl Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $usuario_apl Usu\u00E1rio da aplica\u00E7\u00E3o.
      * @return $this
      */
     public function setUsuarioApl($usuario_apl)

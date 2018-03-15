@@ -68,7 +68,7 @@ class LimiteDisponibilidadeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT9
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+     * Realiza a altera\u00E7\u00E3o dos limites da conta
      *
      */
     public function test_alterarUsingPUT9() {
@@ -76,12 +76,12 @@ class LimiteDisponibilidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET19
+     * Test case for consultarUsingGET20
      *
      * Apresenta os limites da conta
      *
      */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET20() {
 
     }
     

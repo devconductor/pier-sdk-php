@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * EstabelecimentoUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+ * @description Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

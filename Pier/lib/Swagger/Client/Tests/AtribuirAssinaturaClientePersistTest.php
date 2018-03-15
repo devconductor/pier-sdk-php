@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * AtribuirAssinaturaClientePersistTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
+ * @description Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

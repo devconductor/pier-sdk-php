@@ -68,7 +68,7 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for atualizarChaveUsingPOST
      *
-     * Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+     * Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
      *
      */
     public function test_atualizarChaveUsingPOST() {
@@ -78,7 +78,7 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for atualizarUsingPUT
      *
-     * Atualiza os dados do cart\u00C3\u00A3o
+     * Atualiza os dados do cart\u00E3o
      *
      */
     public function test_atualizarUsingPUT() {
@@ -88,7 +88,7 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for confirmaAtualizacaoChaveUsingPOST
      *
-     * Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+     * Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
      *
      */
     public function test_confirmaAtualizacaoChaveUsingPOST() {
@@ -96,19 +96,19 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET8
      *
-     * Apresenta os dados de um determinado cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado cart\u00E3o
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET8() {
 
     }
     
     /**
      * Test case for listarCodigosRespostaUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+     * Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
      *
      */
     public function test_listarCodigosRespostaUsingGET() {
@@ -128,7 +128,7 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarOperacoesUsingGET
      *
-     * Lista as opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as opera\u00E7\u00F5es
      *
      */
     public function test_listarOperacoesUsingGET() {
@@ -148,7 +148,7 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarTiposTransacoesUsingGET
      *
-     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Lista os tipos de transa\u00E7\u00F5es
      *
      */
     public function test_listarTiposTransacoesUsingGET() {
@@ -156,19 +156,19 @@ class ConductorPayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET9
+     * Test case for listarUsingGET10
      *
-     * Lista os cart\u00C3\u00B5es cadastrados
+     * Lista os cart\u00F5es cadastrados
      *
      */
-    public function test_listarUsingGET9() {
+    public function test_listarUsingGET10() {
 
     }
     
     /**
      * Test case for salvarUsingPOST6
      *
-     * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+     * Cria\u00E7\u00E3o de cart\u00E3o
      *
      */
     public function test_salvarUsingPOST6() {

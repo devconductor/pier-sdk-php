@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o detalhamento do documento
+ * @description Representa\u00E7\u00E3o da resposta para o detalhamento do documento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,7 +104,7 @@ class DocumentoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.
+      * $id ID de identifica\u00E7\u00E3o do detalhamento do documento.
       * @var int
       */
     protected $id;
@@ -116,7 +116,7 @@ class DocumentoDetalheResponse implements ArrayAccess
     protected $propriedade;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do detalhamento do documento.
+      * $conteudo Conte\u00FAdo do detalhamento do documento.
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class DocumentoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.
+     * @param int $id ID de identifica\u00E7\u00E3o do detalhamento do documento.
      * @return $this
      */
     public function setId($id)
@@ -189,7 +189,7 @@ class DocumentoDetalheResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do detalhamento do documento.
+     * @param string $conteudo Conte\u00FAdo do detalhamento do documento.
      * @return $this
      */
     public function setConteudo($conteudo)

@@ -104,19 +104,19 @@ class EntidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+      * $descricao Descri\u00E7\u00E3o da entidade.
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_ativo Flag que indica se a entidade est\u00C3\u00A1 ativa.
+      * $flag_ativo Flag que indica se a entidade est\u00E1 ativa.
       * @var bool
       */
     protected $flag_ativo;
@@ -147,7 +147,7 @@ class EntidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class EntidadeResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+     * @param string $descricao Descri\u00E7\u00E3o da entidade.
      * @return $this
      */
     public function setDescricao($descricao)
@@ -189,7 +189,7 @@ class EntidadeResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag que indica se a entidade est\u00C3\u00A1 ativa.
+     * @param bool $flag_ativo Flag que indica se a entidade est\u00E1 ativa.
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

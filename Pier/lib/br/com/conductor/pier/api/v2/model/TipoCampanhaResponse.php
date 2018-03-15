@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoCampanhaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha
+ * @description Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -106,7 +106,7 @@ class TipoCampanhaResponse implements ArrayAccess
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha
+      * $descricao Descri\u00E7\u00E3o do tipo de campanha
       * @var string
       */
     protected $descricao;
@@ -157,7 +157,7 @@ class TipoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de campanha
      * @return $this
      */
     public function setDescricao($descricao)

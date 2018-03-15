@@ -116,37 +116,37 @@ class TerminalResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $terminal N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.
+      * $terminal N\u00FAmero \u00FAnico do terminal.
       * @var string
       */
     protected $terminal;
     
     /**
-      * $numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+      * $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
       * @var int
       */
     protected $numero_estabelecimento;
     
     /**
-      * $id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+      * $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_consulta_extrato Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
       * @var bool
       */
     protected $flag_consulta_extrato;
     
     /**
-      * $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
       * @var bool
       */
     protected $flag_terminal_virtual;
@@ -180,7 +180,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets terminal
-     * @param string $terminal N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.
+     * @param string $terminal N\u00FAmero \u00FAnico do terminal.
      * @return $this
      */
     public function setTerminal($terminal)
@@ -222,7 +222,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+     * @param int $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -243,7 +243,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+     * @param int $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -264,7 +264,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets flag_consulta_extrato
-     * @param bool $flag_consulta_extrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_consulta_extrato Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
      * @return $this
      */
     public function setFlagConsultaExtrato($flag_consulta_extrato)
@@ -285,7 +285,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets flag_terminal_virtual
-     * @param bool $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
      * @return $this
      */
     public function setFlagTerminalVirtual($flag_terminal_virtual)

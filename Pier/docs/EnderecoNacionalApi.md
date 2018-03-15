@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarEnderecoUsingGET**](EnderecoNacionalApi.md#consultarEnderecoUsingGET) | **GET** /api/ceps | Consultar Endere\u00C3\u00A7o
+[**consultarEnderecoUsingGET**](EnderecoNacionalApi.md#consultarEnderecoUsingGET) | **GET** /api/ceps | Consultar Endere\u00E7o
 
 
 # **consultarEnderecoUsingGET**
 > \br.com.conductor.pier.api.v2.model\EnderecoResponse consultarEnderecoUsingGET($cep)
 
-Consultar Endere\u00C3\u00A7o
+Consultar Endere\u00E7o
 
-Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
+Este recurso permite consultar endere\u00E7os atrav\u00E9s do CEP.
 
 ### Example 
 ```php

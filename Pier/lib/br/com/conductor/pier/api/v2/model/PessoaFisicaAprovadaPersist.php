@@ -218,7 +218,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $nome;
     
     /**
-      * $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+      * $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
       * @var string
       */
     protected $nome_mae;
@@ -230,25 +230,25 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
       * @var string
       */
     protected $sexo;
     
     /**
-      * $cpf N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF)
+      * $cpf N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
       * @var string
       */
     protected $cpf;
     
     /**
-      * $numero_identidade N\u00C3\u00BAmero da Identidade
+      * $numero_identidade N\u00FAmero da Identidade
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+      * $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
       * @var string
       */
     protected $orgao_expedidor_identidade;
@@ -260,7 +260,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+      * $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
       * @var string
       */
     protected $data_emissao_identidade;
@@ -272,13 +272,13 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * $id_profissao Profiss\u00E3o da pessoa fisica
       * @var string
       */
     protected $id_profissao;
     
     /**
-      * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+      * $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
       * @var int
       */
     protected $id_natureza_ocupacao;
@@ -302,13 +302,13 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $id_produto;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+      * $numero_agencia N\u00FAmero da ag\u00EAncia.
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+      * $numero_conta_corrente N\u00FAmero da conta corrente.
       * @var string
       */
     protected $numero_conta_corrente;
@@ -326,13 +326,13 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $dia_vencimento;
     
     /**
-      * $nome_impresso Nome que deve ser impresso no cart\u00C3\u00A3o
+      * $nome_impresso Nome que deve ser impresso no cart\u00E3o
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+      * $nome_empresa Nome que deve ser impresso no cart\u00E3o
       * @var string
       */
     protected $nome_empresa;
@@ -350,7 +350,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $canal_entrada;
     
     /**
-      * $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+      * $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
       * @var int
       */
     protected $valor_pontuacao;
@@ -362,7 +362,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $telefones;
     
     /**
-      * $enderecos Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+      * $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
       * @var \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]
       */
     protected $enderecos;
@@ -374,13 +374,13 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
     protected $limite_global;
     
     /**
-      * $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+      * $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
       * @var Number
       */
     protected $limite_maximo;
     
     /**
-      * $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+      * $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
       * @var Number
       */
     protected $limite_parcelas;
@@ -465,7 +465,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_mae
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
      * @return $this
      */
     public function setNomeMae($nome_mae)
@@ -507,7 +507,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
      * @return $this
      */
     public function setSexo($sexo)
@@ -528,7 +528,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF)
+     * @param string $cpf N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
      * @return $this
      */
     public function setCpf($cpf)
@@ -549,7 +549,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade
+     * @param string $numero_identidade N\u00FAmero da Identidade
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -570,7 +570,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -612,7 +612,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+     * @param string $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -654,7 +654,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -675,7 +675,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets id_natureza_ocupacao
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
      * @return $this
      */
     public function setIdNaturezaOcupacao($id_natureza_ocupacao)
@@ -759,7 +759,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -780,7 +780,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -843,7 +843,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param string $nome_impresso Nome que deve ser impresso no cart\u00E3o
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -864,7 +864,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)
@@ -927,7 +927,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets valor_pontuacao
-     * @param int $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+     * @param int $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
      * @return $this
      */
     public function setValorPontuacao($valor_pontuacao)
@@ -969,7 +969,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets enderecos
-     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[] $enderecos Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[] $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
      * @return $this
      */
     public function setEnderecos($enderecos)
@@ -1011,7 +1011,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_maximo
-     * @param Number $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+     * @param Number $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
      * @return $this
      */
     public function setLimiteMaximo($limite_maximo)
@@ -1032,7 +1032,7 @@ class PessoaFisicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+     * @param Number $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)

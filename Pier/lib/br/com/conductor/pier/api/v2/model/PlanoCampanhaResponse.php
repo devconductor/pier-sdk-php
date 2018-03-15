@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoCampanhaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+ * @description Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -126,7 +126,7 @@ class PlanoCampanhaResponse implements ArrayAccess
     protected $taxa;
     
     /**
-      * $usuario Nome do usu\u00C3\u00A1rio
+      * $usuario Nome do usu\u00E1rio
       * @var string
       */
     protected $usuario;
@@ -221,7 +221,7 @@ class PlanoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Nome do usu\u00C3\u00A1rio
+     * @param string $usuario Nome do usu\u00E1rio
      * @return $this
      */
     public function setUsuario($usuario)

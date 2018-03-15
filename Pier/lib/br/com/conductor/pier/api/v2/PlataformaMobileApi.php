@@ -96,7 +96,7 @@ class PlataformaMobileApi
      *
      * Atualiza Plataforma Mobile
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\PlataformaMobileUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -113,7 +113,7 @@ class PlataformaMobileApi
      *
      * Atualiza Plataforma Mobile
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\PlataformaMobileUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -197,37 +197,37 @@ class PlataformaMobileApi
     }
     
     /**
-     * listarUsingGET31
+     * listarUsingGET33
      *
      * Lista as plataformas mobile cadastradas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome da Plataforma Mobile (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET31($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET33($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET33WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET31WithHttpInfo
+     * listarUsingGET33WithHttpInfo
      *
      * Lista as plataformas mobile cadastradas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $nome Nome da Plataforma Mobile (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET31WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET33WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
     {
         
   

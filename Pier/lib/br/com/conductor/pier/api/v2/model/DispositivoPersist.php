@@ -110,13 +110,13 @@ class DispositivoPersist implements ArrayAccess
     protected $token;
     
     /**
-      * $id_aplicacao_mobile Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * $id_aplicacao_mobile Apresenta o identificador da aplica\u00E7\u00E3o.
       * @var int
       */
     protected $id_aplicacao_mobile;
     
     /**
-      * $id_usuario Apresenta o identificador do usu\u00C3\u00A1rio.
+      * $id_usuario Apresenta o identificador do usu\u00E1rio.
       * @var int
       */
     protected $id_usuario;
@@ -168,7 +168,7 @@ class DispositivoPersist implements ArrayAccess
   
     /**
      * Sets id_aplicacao_mobile
-     * @param int $id_aplicacao_mobile Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @param int $id_aplicacao_mobile Apresenta o identificador da aplica\u00E7\u00E3o.
      * @return $this
      */
     public function setIdAplicacaoMobile($id_aplicacao_mobile)
@@ -189,7 +189,7 @@ class DispositivoPersist implements ArrayAccess
   
     /**
      * Sets id_usuario
-     * @param int $id_usuario Apresenta o identificador do usu\u00C3\u00A1rio.
+     * @param int $id_usuario Apresenta o identificador do usu\u00E1rio.
      * @return $this
      */
     public function setIdUsuario($id_usuario)

@@ -94,9 +94,9 @@ class NotificacaoApi
     /**
      * alterarConfiguracaoUsingPUT
      *
-     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Altera configura\u00E7\u00F5es de E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -111,9 +111,9 @@ class NotificacaoApi
     /**
      * alterarConfiguracaoUsingPUTWithHttpInfo
      *
-     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Altera configura\u00E7\u00F5es de E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -199,16 +199,16 @@ class NotificacaoApi
     /**
      * alterarTemplateNotificacaoUsingPUT
      *
-     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Alterar template de notifica\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. (required)
      * @param string $conteudo Template HTML (required)
-     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)
      * @param string $tipo_layout Tipo do layout. (optional)
-     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o. (optional)
      * @param string $remetente Remetente (optional)
-     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
-     * @param bool $template_padrao Template Padr\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00E7\u00E3o. (optional)
+     * @param bool $template_padrao Template Padr\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -222,16 +222,16 @@ class NotificacaoApi
     /**
      * alterarTemplateNotificacaoUsingPUTWithHttpInfo
      *
-     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Alterar template de notifica\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. (required)
      * @param string $conteudo Template HTML (required)
-     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)
      * @param string $tipo_layout Tipo do layout. (optional)
-     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o. (optional)
      * @param string $remetente Remetente (optional)
-     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
-     * @param bool $template_padrao Template Padr\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00E7\u00E3o. (optional)
+     * @param bool $template_padrao Template Padr\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -342,7 +342,7 @@ class NotificacaoApi
      *
      * Atualizar SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $nsu Seu n\u00FAmero (optional)
      * @param string $status Status (optional)
      * @param string $data Data (optional)
      * @param string $texto_status TextoStatus (optional)
@@ -362,7 +362,7 @@ class NotificacaoApi
      *
      * Atualizar SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $nsu Seu n\u00FAmero (optional)
      * @param string $status Status (optional)
      * @param string $data Data (optional)
      * @param string $texto_status TextoStatus (optional)
@@ -451,9 +451,9 @@ class NotificacaoApi
     /**
      * consultarConfiguracaoUsingGET
      *
-     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     * Consulta configura\u00E7\u00E3o de E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -467,9 +467,9 @@ class NotificacaoApi
     /**
      * consultarConfiguracaoUsingGETWithHttpInfo
      *
-     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     * Consulta configura\u00E7\u00E3o de E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -546,9 +546,9 @@ class NotificacaoApi
     /**
      * consultarPorEmailUsingGET
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+     * Consulta c\u00F3digo de seguran\u00E7a E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -562,9 +562,9 @@ class NotificacaoApi
     /**
      * consultarPorEmailUsingGETWithHttpInfo
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+     * Consulta c\u00F3digo de seguran\u00E7a E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -641,9 +641,9 @@ class NotificacaoApi
     /**
      * consultarPorSMSUsingGET
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+     * Consulta c\u00F3digo de seguran\u00E7a SMS
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -657,9 +657,9 @@ class NotificacaoApi
     /**
      * consultarPorSMSUsingGETWithHttpInfo
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+     * Consulta c\u00F3digo de seguran\u00E7a SMS
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -736,9 +736,9 @@ class NotificacaoApi
     /**
      * consultarTemplateNotificacaoUsingGET
      *
-     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Consulta template de notifica\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. (required)
      * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -752,9 +752,9 @@ class NotificacaoApi
     /**
      * consultarTemplateNotificacaoUsingGETWithHttpInfo
      *
-     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Consulta template de notifica\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -831,7 +831,7 @@ class NotificacaoApi
     /**
      * gerarTokenEMAILUsingPOST
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
      *
      * @param string $email email (required)
      * @return string
@@ -847,7 +847,7 @@ class NotificacaoApi
     /**
      * gerarTokenEMAILUsingPOSTWithHttpInfo
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
      *
      * @param string $email email (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -922,7 +922,7 @@ class NotificacaoApi
     /**
      * gerarTokenSMSUsingPOST
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
      * @return string
@@ -938,7 +938,7 @@ class NotificacaoApi
     /**
      * gerarTokenSMSUsingPOSTWithHttpInfo
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -1013,11 +1013,11 @@ class NotificacaoApi
     /**
      * listarConfiguracaoUsingGET
      *
-     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     * Lista configura\u00E7\u00F5es de E-mails
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1031,11 +1031,11 @@ class NotificacaoApi
     /**
      * listarConfiguracaoUsingGETWithHttpInfo
      *
-     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     * Lista configura\u00E7\u00F5es de E-mails
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1116,11 +1116,11 @@ class NotificacaoApi
     /**
      * listarPorEmailUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+     * Lista os c\u00F3digos de seguran\u00E7a E-Mail
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1134,11 +1134,11 @@ class NotificacaoApi
     /**
      * listarPorEmailUsingGETWithHttpInfo
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+     * Lista os c\u00F3digos de seguran\u00E7a E-Mail
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1219,11 +1219,11 @@ class NotificacaoApi
     /**
      * listarPorSMSUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+     * Lista os c\u00F3digos de seguran\u00E7a SMS
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1237,11 +1237,11 @@ class NotificacaoApi
     /**
      * listarPorSMSUsingGETWithHttpInfo
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+     * Lista os c\u00F3digos de seguran\u00E7a SMS
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1324,14 +1324,14 @@ class NotificacaoApi
      *
      * Listar Push
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
-     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o (optional)
+     * @param string $status Status de envio da notifica\u00E7\u00E3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePushResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1347,14 +1347,14 @@ class NotificacaoApi
      *
      * Listar Push
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_envio Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)
-     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o (optional)
+     * @param string $status Status de envio da notifica\u00E7\u00E3o (optional)
      * @param string $plataforma Plataforma de Push notifications. (optional)
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePushResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1457,15 +1457,15 @@ class NotificacaoApi
      *
      * Listar SMS
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
-     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
-     * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o (optional)
+     * @param string $status Status de envio da notifica\u00E7\u00E3o (optional)
+     * @param string $operadora Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)
+     * @param int $nsu Apresenta o nsu da notifica\u00E7\u00E3o (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageSMSResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1481,15 +1481,15 @@ class NotificacaoApi
      *
      * Listar SMS
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)
-     * @param string $tipo_evento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)
-     * @param int $nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)
+     * @param string $tipo_evento Nome do tipoEvento da notifica\u00E7\u00E3o (optional)
+     * @param string $status Status de envio da notifica\u00E7\u00E3o (optional)
+     * @param string $operadora Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)
+     * @param int $nsu Apresenta o nsu da notifica\u00E7\u00E3o (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageSMSResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1594,11 +1594,11 @@ class NotificacaoApi
     /**
      * listarTemplateNotificacaoUsingGET
      *
-     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     * Lista templates de notifica\u00E7\u00F5es
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1612,11 +1612,11 @@ class NotificacaoApi
     /**
      * listarTemplateNotificacaoUsingGETWithHttpInfo
      *
-     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     * Lista templates de notifica\u00E7\u00F5es
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1697,7 +1697,7 @@ class NotificacaoApi
     /**
      * listarTiposLayoutsUsingGET
      *
-     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Lista os tipos templates de notifica\u00E7\u00E3o
      *
      * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1712,7 +1712,7 @@ class NotificacaoApi
     /**
      * listarTiposLayoutsUsingGETWithHttpInfo
      *
-     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Lista os tipos templates de notifica\u00E7\u00E3o
      *
      * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1778,7 +1778,7 @@ class NotificacaoApi
     /**
      * notificacaoEmailUsingPOST
      *
-     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * Enviar notifica\u00E7\u00E3o por email
      *
      * @param \br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest $request request (required)
      * @return object
@@ -1794,7 +1794,7 @@ class NotificacaoApi
     /**
      * notificacaoEmailUsingPOSTWithHttpInfo
      *
-     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * Enviar notifica\u00E7\u00E3o por email
      *
      * @param \br.com.conductor.pier.api.v2.model\NotificacaoEmailRequest $request request (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
@@ -1869,7 +1869,7 @@ class NotificacaoApi
     /**
      * reenviarTokenSMSUsingPOST
      *
-     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     * Reenviar c\u00F3digo de seguran\u00E7a por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
      * @return string
@@ -1885,7 +1885,7 @@ class NotificacaoApi
     /**
      * reenviarTokenSMSUsingPOSTWithHttpInfo
      *
-     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     * Reenviar c\u00F3digo de seguran\u00E7a por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSPersist $persist persist (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -1962,7 +1962,7 @@ class NotificacaoApi
      *
      * Responder SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $nsu Seu n\u00FAmero (optional)
      * @param string $data Data (optional)
      * @param string $resposta TextoStatus (optional)
      * @return \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse
@@ -1980,7 +1980,7 @@ class NotificacaoApi
      *
      * Responder SMS
      *
-     * @param string $nsu Seu n\u00C3\u00BAmero (optional)
+     * @param string $nsu Seu n\u00FAmero (optional)
      * @param string $data Data (optional)
      * @param string $resposta TextoStatus (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\NotificacaoSMSResponse, HTTP status code, HTTP response headers (array of strings)
@@ -2059,7 +2059,7 @@ class NotificacaoApi
     /**
      * salvarConfiguracaoUsingPOST
      *
-     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Salva configura\u00E7\u00F5es de E-mail
      *
      * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse
@@ -2075,7 +2075,7 @@ class NotificacaoApi
     /**
      * salvarConfiguracaoUsingPOSTWithHttpInfo
      *
-     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Salva configura\u00E7\u00F5es de E-mail
      *
      * @param \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse, HTTP status code, HTTP response headers (array of strings)
@@ -2514,15 +2514,15 @@ class NotificacaoApi
     /**
      * salvarTemplateNotificacaoUsingPOST
      *
-     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Salva template de notifica\u00E7\u00E3o
      *
      * @param string $conteudo Template HTML (required)
-     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)
      * @param string $tipo_layout Tipo do layout. (optional)
-     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o. (optional)
      * @param string $remetente Remetente (optional)
-     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
-     * @param bool $template_padrao Template Padr\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00E7\u00E3o. (optional)
+     * @param bool $template_padrao Template Padr\u00E3o. (optional)
      * @return \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2536,15 +2536,15 @@ class NotificacaoApi
     /**
      * salvarTemplateNotificacaoUsingPOSTWithHttpInfo
      *
-     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Salva template de notifica\u00E7\u00E3o
      *
      * @param string $conteudo Template HTML (required)
-     * @param int $id_configuracao_email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)
+     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)
      * @param string $tipo_layout Tipo do layout. (optional)
-     * @param string $tipo_notificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o. (optional)
      * @param string $remetente Remetente (optional)
-     * @param string $assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)
-     * @param bool $template_padrao Template Padr\u00C3\u00A3o. (optional)
+     * @param string $assunto Assunto da Notificaca\u00E7\u00E3o. (optional)
+     * @param bool $template_padrao Template Padr\u00E3o. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2641,7 +2641,7 @@ class NotificacaoApi
     /**
      * validarTokenEMAILUsingPOST
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+     * Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist $request request (required)
      * @return string
@@ -2657,7 +2657,7 @@ class NotificacaoApi
     /**
      * validarTokenEMAILUsingPOSTWithHttpInfo
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+     * Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaEMAILPersist $request request (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
@@ -2732,7 +2732,7 @@ class NotificacaoApi
     /**
      * validarTokenSMSUsingPOST
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     * Validar c\u00F3digo de seguran\u00E7a enviado por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest $request request (required)
      * @return string
@@ -2748,7 +2748,7 @@ class NotificacaoApi
     /**
      * validarTokenSMSUsingPOSTWithHttpInfo
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     * Validar c\u00F3digo de seguran\u00E7a enviado por sms
      *
      * @param \br.com.conductor.pier.api.v2.model\CodigoSegurancaSMSRequest $request request (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)

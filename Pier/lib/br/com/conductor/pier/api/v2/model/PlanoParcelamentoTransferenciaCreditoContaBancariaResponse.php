@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoParcelamentoTransferenciaCreditoContaBancariaResponse Class Doc Comment
  *
  * @category    Class
- * @description Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * @description Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,7 +112,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
 
     
     /**
-      * $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+      * $numero_mascarado_cartao N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
       * @var string
       */
     protected $numero_mascarado_cartao;
@@ -124,13 +124,13 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
     protected $vencimento_primeira_parcela;
     
     /**
-      * $valor_transacao Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+      * $valor_transacao Valor da solicita\u00E7\u00E3o de saque.
       * @var Number
       */
     protected $valor_transacao;
     
     /**
-      * $numero_meses_carencia N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+      * $numero_meses_carencia N\u00FAmero de meses para car\u00EAncia.
       * @var int
       */
     protected $numero_meses_carencia;
@@ -169,7 +169,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
   
     /**
      * Sets numero_mascarado_cartao
-     * @param string $numero_mascarado_cartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+     * @param string $numero_mascarado_cartao N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
      * @return $this
      */
     public function setNumeroMascaradoCartao($numero_mascarado_cartao)
@@ -211,7 +211,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
   
     /**
      * Sets valor_transacao
-     * @param Number $valor_transacao Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+     * @param Number $valor_transacao Valor da solicita\u00E7\u00E3o de saque.
      * @return $this
      */
     public function setValorTransacao($valor_transacao)
@@ -232,7 +232,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse implements Arra
   
     /**
      * Sets numero_meses_carencia
-     * @param int $numero_meses_carencia N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+     * @param int $numero_meses_carencia N\u00FAmero de meses para car\u00EAncia.
      * @return $this
      */
     public function setNumeroMesesCarencia($numero_meses_carencia)

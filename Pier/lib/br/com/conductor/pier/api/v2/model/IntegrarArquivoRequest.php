@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegrarArquivoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+ * @description Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,7 +51,7 @@ class IntegrarArquivoRequest implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'cpf' => 'string'
+        'numero_receita_federal' => 'string'
     );
   
     static function swaggerTypes() {
@@ -63,7 +63,7 @@ class IntegrarArquivoRequest implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'cpf' => 'cpf'
+        'numero_receita_federal' => 'numeroReceitaFederal'
     );
   
     static function attributeMap() {
@@ -75,7 +75,7 @@ class IntegrarArquivoRequest implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'cpf' => 'setCpf'
+        'numero_receita_federal' => 'setNumeroReceitaFederal'
     );
   
     static function setters() {
@@ -87,7 +87,7 @@ class IntegrarArquivoRequest implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'cpf' => 'getCpf'
+        'numero_receita_federal' => 'getNumeroReceitaFederal'
     );
   
     static function getters() {
@@ -96,10 +96,10 @@ class IntegrarArquivoRequest implements ArrayAccess
 
     
     /**
-      * $cpf CPF do cliente de Arquivos a serem integrados
+      * $numero_receita_federal N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
       * @var string
       */
-    protected $cpf;
+    protected $numero_receita_federal;
     
 
     /**
@@ -110,28 +110,28 @@ class IntegrarArquivoRequest implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->cpf = $data["cpf"];
+            $this->numero_receita_federal = $data["numero_receita_federal"];
         }
     }
     
     /**
-     * Gets cpf
+     * Gets numero_receita_federal
      * @return string
      */
-    public function getCpf()
+    public function getNumeroReceitaFederal()
     {
-        return $this->cpf;
+        return $this->numero_receita_federal;
     }
   
     /**
-     * Sets cpf
-     * @param string $cpf CPF do cliente de Arquivos a serem integrados
+     * Sets numero_receita_federal
+     * @param string $numero_receita_federal N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
      * @return $this
      */
-    public function setCpf($cpf)
+    public function setNumeroReceitaFederal($numero_receita_federal)
     {
         
-        $this->cpf = $cpf;
+        $this->numero_receita_federal = $numero_receita_federal;
         return $this;
     }
     

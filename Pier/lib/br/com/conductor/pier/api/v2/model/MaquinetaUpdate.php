@@ -38,7 +38,7 @@ use \ArrayAccess;
  * MaquinetaUpdate Class Doc Comment
  *
  * @category    Class
- * @description Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar Maquineta
+ * @description Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class MaquinetaUpdate implements ArrayAccess
 
     
     /**
-      * $id_terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+      * $id_terminal C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
       * @var int
       */
     protected $id_terminal;
     
     /**
-      * $id_tipo_maquineta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta (id).
+      * $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
       * @var int
       */
     protected $id_tipo_maquineta;
     
     /**
-      * $valor Valor de Manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+      * $valor Valor de Manuten\u00E7\u00E3o da Maquineta.
       * @var Number
       */
     protected $valor;
     
     /**
-      * $data_hora_implantacao Data da implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+      * $data_hora_implantacao Data da implanta\u00E7\u00E3o da Maquineta.
       * @var string
       */
     protected $data_hora_implantacao;
@@ -158,7 +158,7 @@ class MaquinetaUpdate implements ArrayAccess
   
     /**
      * Sets id_terminal
-     * @param int $id_terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+     * @param int $id_terminal C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
      * @return $this
      */
     public function setIdTerminal($id_terminal)
@@ -179,7 +179,7 @@ class MaquinetaUpdate implements ArrayAccess
   
     /**
      * Sets id_tipo_maquineta
-     * @param int $id_tipo_maquineta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta (id).
+     * @param int $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
      * @return $this
      */
     public function setIdTipoMaquineta($id_tipo_maquineta)
@@ -200,7 +200,7 @@ class MaquinetaUpdate implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor de Manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+     * @param Number $valor Valor de Manuten\u00E7\u00E3o da Maquineta.
      * @return $this
      */
     public function setValor($valor)
@@ -221,7 +221,7 @@ class MaquinetaUpdate implements ArrayAccess
   
     /**
      * Sets data_hora_implantacao
-     * @param string $data_hora_implantacao Data da implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+     * @param string $data_hora_implantacao Data da implanta\u00E7\u00E3o da Maquineta.
      * @return $this
      */
     public function setDataHoraImplantacao($data_hora_implantacao)

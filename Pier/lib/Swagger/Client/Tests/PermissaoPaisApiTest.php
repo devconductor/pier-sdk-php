@@ -68,7 +68,7 @@ class PermissaoPaisApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarPaisUsingGET
      *
-     * Apresenta dados de um determinado pa\u00C3\u00ADs
+     * Apresenta dados de um determinado pa\u00EDs
      *
      */
     public function test_consultarPaisUsingGET() {
@@ -88,7 +88,7 @@ class PermissaoPaisApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarPaisesUsingGET
      *
-     * Lista os pa\u00C3\u00ADses
+     * Lista os pa\u00EDses
      *
      */
     public function test_listarPaisesUsingGET() {

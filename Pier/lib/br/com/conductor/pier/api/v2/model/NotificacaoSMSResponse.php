@@ -160,49 +160,49 @@ class NotificacaoSMSResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo Identificador.
+      * $id C\u00F3digo Identificador.
       * @var int
       */
     protected $id;
     
     /**
-      * $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+      * $nsu N\u00FAmero sequencial \u00FAnico.
       * @var int
       */
     protected $nsu;
     
     /**
-      * $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+      * $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento TipoEvento de notifica\u00E7\u00E3o
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $status Status de envio da notifica\u00E7\u00E3o
       * @var string
       */
     protected $status;
     
     /**
-      * $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $descricao_status Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
       * @var string
       */
     protected $descricao_status;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+      * $id_pessoa C\u00F3digo identificado da pessoa
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta
+      * $id_conta C\u00F3digo identificador da conta
       * @var int
       */
     protected $id_conta;
@@ -220,31 +220,31 @@ class NotificacaoSMSResponse implements ArrayAccess
     protected $operadora;
     
     /**
-      * $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+      * $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
       * @var string
       */
     protected $conteudo;
     
     /**
-      * $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+      * $resposta Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
       * @var string
       */
     protected $resposta;
     
     /**
-      * $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
       * @var string
       */
     protected $data_agendamento;
     
     /**
-      * $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+      * $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00E7\u00E3o
       * @var int
       */
     protected $quantidade_tentativas_envio;
     
     /**
-      * $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+      * $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
       * @var string
       */
     protected $data_inclusao;
@@ -256,7 +256,7 @@ class NotificacaoSMSResponse implements ArrayAccess
     protected $data_alteracao_status;
     
     /**
-      * $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+      * $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
       * @var string
       */
     protected $protocolo;
@@ -301,7 +301,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo Identificador.
+     * @param int $id C\u00F3digo Identificador.
      * @return $this
      */
     public function setId($id)
@@ -322,7 +322,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets nsu
-     * @param int $nsu N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+     * @param int $nsu N\u00FAmero sequencial \u00FAnico.
      * @return $this
      */
     public function setNsu($nsu)
@@ -343,7 +343,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+     * @param int $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -364,7 +364,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $tipo_evento TipoEvento de notifica\u00E7\u00E3o
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
@@ -388,7 +388,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $status Status de envio da notifica\u00E7\u00E3o
      * @return $this
      */
     public function setStatus($status)
@@ -412,7 +412,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets descricao_status
-     * @param string $descricao_status Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $descricao_status Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
      * @return $this
      */
     public function setDescricaoStatus($descricao_status)
@@ -433,7 +433,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+     * @param int $id_pessoa C\u00F3digo identificado da pessoa
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -454,7 +454,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta
+     * @param int $id_conta C\u00F3digo identificador da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -517,7 +517,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+     * @param string $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -538,7 +538,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets resposta
-     * @param string $resposta Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+     * @param string $resposta Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
      * @return $this
      */
     public function setResposta($resposta)
@@ -559,7 +559,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param string $data_agendamento Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -580,7 +580,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets quantidade_tentativas_envio
-     * @param int $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param int $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00E7\u00E3o
      * @return $this
      */
     public function setQuantidadeTentativasEnvio($quantidade_tentativas_envio)
@@ -601,7 +601,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -643,7 +643,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets protocolo
-     * @param string $protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
      * @return $this
      */
     public function setProtocolo($protocolo)

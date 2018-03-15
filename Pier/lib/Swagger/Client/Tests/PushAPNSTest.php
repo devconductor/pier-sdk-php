@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PushAPNSTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+ * @description Objeto Push Notifica\u00E7\u00E3o APNS
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

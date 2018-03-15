@@ -136,67 +136,67 @@ class StatusContaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
+      * $nome Nome atribu\u00EDdo ao Status da Conta.
       * @var string
       */
     protected $nome;
     
     /**
-      * $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
+      * $permite_alterar_vencimento Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_alterar_vencimento;
     
     /**
-      * $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
+      * $permite_alterar_limite Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_alterar_limite;
     
     /**
-      * $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $permite_emitir_nova_via_cartao Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_emitir_nova_via_cartao;
     
     /**
-      * $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
+      * $permite_fazer_transferencia Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_fazer_transferencia;
     
     /**
-      * $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+      * $permite_receber_transferencia Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_receber_transferencia;
     
     /**
-      * $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+      * $permite_criar_acordo_cobranca Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_criar_acordo_cobranca;
     
     /**
-      * $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+      * $permite_atribuir_como_bloqueio Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_atribuir_como_bloqueio;
     
     /**
-      * $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+      * $permite_desbloquear Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_desbloquear;
     
     /**
-      * $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+      * $permite_atribuir_como_cancelamento Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_atribuir_como_cancelamento;
@@ -235,7 +235,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id).
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
+     * @param string $nome Nome atribu\u00EDdo ao Status da Conta.
      * @return $this
      */
     public function setNome($nome)
@@ -277,7 +277,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_alterar_vencimento
-     * @param int $permite_alterar_vencimento Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_alterar_vencimento Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAlterarVencimento($permite_alterar_vencimento)
@@ -298,7 +298,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_alterar_limite
-     * @param int $permite_alterar_limite Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_alterar_limite Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAlterarLimite($permite_alterar_limite)
@@ -319,7 +319,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_emitir_nova_via_cartao
-     * @param int $permite_emitir_nova_via_cartao Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_emitir_nova_via_cartao Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteEmitirNovaViaCartao($permite_emitir_nova_via_cartao)
@@ -340,7 +340,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_fazer_transferencia
-     * @param int $permite_fazer_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_fazer_transferencia Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteFazerTransferencia($permite_fazer_transferencia)
@@ -361,7 +361,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_receber_transferencia
-     * @param int $permite_receber_transferencia Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_receber_transferencia Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteReceberTransferencia($permite_receber_transferencia)
@@ -382,7 +382,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_criar_acordo_cobranca
-     * @param int $permite_criar_acordo_cobranca Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_criar_acordo_cobranca Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteCriarAcordoCobranca($permite_criar_acordo_cobranca)
@@ -403,7 +403,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_atribuir_como_bloqueio
-     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_atribuir_como_bloqueio Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAtribuirComoBloqueio($permite_atribuir_como_bloqueio)
@@ -424,7 +424,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_desbloquear
-     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_desbloquear Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteDesbloquear($permite_desbloquear)
@@ -445,7 +445,7 @@ class StatusContaResponse implements ArrayAccess
   
     /**
      * Sets permite_atribuir_como_cancelamento
-     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_atribuir_como_cancelamento Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAtribuirComoCancelamento($permite_atribuir_como_cancelamento)

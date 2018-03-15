@@ -108,7 +108,7 @@ class BancoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
       * @var int
       */
     protected $id;
@@ -120,7 +120,7 @@ class BancoResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do banco
+      * $descricao Descri\u00E7\u00E3o do banco
       * @var string
       */
     protected $descricao;
@@ -158,7 +158,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
      * @return $this
      */
     public function setId($id)
@@ -200,7 +200,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do banco
+     * @param string $descricao Descri\u00E7\u00E3o do banco
      * @return $this
      */
     public function setDescricao($descricao)

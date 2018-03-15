@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CodigoSegurancaSMSRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+ * @description Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class CodigoSegurancaSMSRequest implements ArrayAccess
 
     
     /**
-      * $ddd C\u00C3\u00B3digo DDD do telefone (id).
+      * $ddd C\u00F3digo DDD do telefone (id).
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00C3\u00BAmero do telefone.
+      * $telefone N\u00FAmero do telefone.
       * @var string
       */
     protected $telefone;
     
     /**
-      * $codigo_seguranca Token para valida\u00C3\u00A7\u00C3\u00A3o.
+      * $codigo_seguranca Token para valida\u00E7\u00E3o.
       * @var string
       */
     protected $codigo_seguranca;
@@ -147,7 +147,7 @@ class CodigoSegurancaSMSRequest implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id).
+     * @param string $ddd C\u00F3digo DDD do telefone (id).
      * @return $this
      */
     public function setDdd($ddd)
@@ -168,7 +168,7 @@ class CodigoSegurancaSMSRequest implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00C3\u00BAmero do telefone.
+     * @param string $telefone N\u00FAmero do telefone.
      * @return $this
      */
     public function setTelefone($telefone)
@@ -189,7 +189,7 @@ class CodigoSegurancaSMSRequest implements ArrayAccess
   
     /**
      * Sets codigo_seguranca
-     * @param string $codigo_seguranca Token para valida\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $codigo_seguranca Token para valida\u00E7\u00E3o.
      * @return $this
      */
     public function setCodigoSeguranca($codigo_seguranca)

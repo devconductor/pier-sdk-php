@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoImpressaoCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o
+ * @description Hist\u00F3rico Impress\u00E3o Cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+      * $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_status_impressao_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+      * $id_status_impressao_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).
       * @var int
       */
     protected $id_status_impressao_cartao;
     
     /**
-      * $mensagem_historico Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.
+      * $mensagem_historico Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.
       * @var string
       */
     protected $mensagem_historico;
     
     /**
-      * $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+      * $data_historico Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.
       * @var string
       */
     protected $data_historico;
@@ -169,7 +169,7 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param int $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -211,7 +211,7 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status_impressao_cartao
-     * @param int $id_status_impressao_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param int $id_status_impressao_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).
      * @return $this
      */
     public function setIdStatusImpressaoCartao($id_status_impressao_cartao)
@@ -232,7 +232,7 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
   
     /**
      * Sets mensagem_historico
-     * @param string $mensagem_historico Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.
+     * @param string $mensagem_historico Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.
      * @return $this
      */
     public function setMensagemHistorico($mensagem_historico)
@@ -253,7 +253,7 @@ class HistoricoImpressaoCartaoResponse implements ArrayAccess
   
     /**
      * Sets data_historico
-     * @param string $data_historico Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+     * @param string $data_historico Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.
      * @return $this
      */
     public function setDataHistorico($data_historico)

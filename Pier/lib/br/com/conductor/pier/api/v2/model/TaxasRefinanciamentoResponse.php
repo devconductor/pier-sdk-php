@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TaxasRefinanciamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento
+ * @description Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -228,25 +228,25 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
     protected $vencimento;
     
     /**
-      * $recuperacao_encargos_financeiros Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+      * $recuperacao_encargos_financeiros Recupera\u00E7\u00E3o de encargos financeiro
       * @var Number
       */
     protected $recuperacao_encargos_financeiros;
     
     /**
-      * $comissao_garantia Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+      * $comissao_garantia Descri\u00E7\u00E3o da comiss\u00E3o de garantia
       * @var Number
       */
     protected $comissao_garantia;
     
     /**
-      * $agenciamento Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+      * $agenciamento Descri\u00E7\u00E3o do agenciamento
       * @var Number
       */
     protected $agenciamento;
     
     /**
-      * $taxa_maxima_proximo_periodo Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+      * $taxa_maxima_proximo_periodo Taxa m\u00E1xima do proximo per\u00EDodo
       * @var Number
       */
     protected $taxa_maxima_proximo_periodo;
@@ -258,7 +258,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
     protected $taxa_encargos_financiamento;
     
     /**
-      * $taxa_maxima_saque Taxa m\u00C3\u00A1xima de saque
+      * $taxa_maxima_saque Taxa m\u00E1xima de saque
       * @var Number
       */
     protected $taxa_maxima_saque;
@@ -270,7 +270,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
     protected $taxa_saque;
     
     /**
-      * $taxa_maxima_compra_juros Taxa m\u00C3\u00A1xima de compras juros
+      * $taxa_maxima_compra_juros Taxa m\u00E1xima de compras juros
       * @var Number
       */
     protected $taxa_maxima_compra_juros;
@@ -306,7 +306,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
     protected $taxa_perc_calc_pagamento_minimo;
     
     /**
-      * $plano_taxa_default Plano de taxa padr\u00C3\u00A3o
+      * $plano_taxa_default Plano de taxa padr\u00E3o
       * @var int
       */
     protected $plano_taxa_default;
@@ -524,7 +524,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets recuperacao_encargos_financeiros
-     * @param Number $recuperacao_encargos_financeiros Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+     * @param Number $recuperacao_encargos_financeiros Recupera\u00E7\u00E3o de encargos financeiro
      * @return $this
      */
     public function setRecuperacaoEncargosFinanceiros($recuperacao_encargos_financeiros)
@@ -545,7 +545,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets comissao_garantia
-     * @param Number $comissao_garantia Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+     * @param Number $comissao_garantia Descri\u00E7\u00E3o da comiss\u00E3o de garantia
      * @return $this
      */
     public function setComissaoGarantia($comissao_garantia)
@@ -566,7 +566,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets agenciamento
-     * @param Number $agenciamento Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+     * @param Number $agenciamento Descri\u00E7\u00E3o do agenciamento
      * @return $this
      */
     public function setAgenciamento($agenciamento)
@@ -587,7 +587,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+     * @param Number $taxa_maxima_proximo_periodo Taxa m\u00E1xima do proximo per\u00EDodo
      * @return $this
      */
     public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)
@@ -629,7 +629,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_saque
-     * @param Number $taxa_maxima_saque Taxa m\u00C3\u00A1xima de saque
+     * @param Number $taxa_maxima_saque Taxa m\u00E1xima de saque
      * @return $this
      */
     public function setTaxaMaximaSaque($taxa_maxima_saque)
@@ -671,7 +671,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_compra_juros
-     * @param Number $taxa_maxima_compra_juros Taxa m\u00C3\u00A1xima de compras juros
+     * @param Number $taxa_maxima_compra_juros Taxa m\u00E1xima de compras juros
      * @return $this
      */
     public function setTaxaMaximaCompraJuros($taxa_maxima_compra_juros)
@@ -797,7 +797,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets plano_taxa_default
-     * @param int $plano_taxa_default Plano de taxa padr\u00C3\u00A3o
+     * @param int $plano_taxa_default Plano de taxa padr\u00E3o
      * @return $this
      */
     public function setPlanoTaxaDefault($plano_taxa_default)

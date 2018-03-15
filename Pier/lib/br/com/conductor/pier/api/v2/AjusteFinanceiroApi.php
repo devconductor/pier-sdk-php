@@ -94,12 +94,12 @@ class AjusteFinanceiroApi
     /**
      * ajustarContaUsingPOST
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta informada
+     * Lan\u00E7a um ajuste para a conta informada
      *
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta. (required)
+     * @param int $id_conta C\u00F3digo identificador da conta. (required)
      * @param string $identificador_externo Codigo Hexadecimal (optional)
      * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -114,12 +114,12 @@ class AjusteFinanceiroApi
     /**
      * ajustarContaUsingPOSTWithHttpInfo
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta informada
+     * Lan\u00E7a um ajuste para a conta informada
      *
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta. (required)
+     * @param int $id_conta C\u00F3digo identificador da conta. (required)
      * @param string $identificador_externo Codigo Hexadecimal (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -219,36 +219,36 @@ class AjusteFinanceiroApi
     }
     
     /**
-     * consultarUsingGET1
+     * consultarUsingGET2
      *
      * Apresenta dados de um determinado ajuste financeiro
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id)
+    public function consultarUsingGET2($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET1WithHttpInfo
+     * consultarUsingGET2WithHttpInfo
      *
      * Apresenta dados de um determinado ajuste financeiro
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id)
+    public function consultarUsingGET2WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
         }
   
         // parse inputs
@@ -314,45 +314,45 @@ class AjusteFinanceiroApi
     }
     
     /**
-     * listarUsingGET1
+     * listarUsingGET2
      *
      * Lista ajustes existentes na base de dados do Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (optional)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)
      * @param Number $valor_ajuste Valor do ajuste (optional)
      * @param string $identificador_externo Codigo Hexadecimal (optional)
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta. (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageAjusteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1($sort = null, $page = null, $limit = null, $id_tipo_ajuste = null, $data_ajuste = null, $valor_ajuste = null, $identificador_externo = null, $id_conta = null)
+    public function listarUsingGET2($sort = null, $page = null, $limit = null, $id_tipo_ajuste = null, $data_ajuste = null, $valor_ajuste = null, $identificador_externo = null, $id_conta = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET1WithHttpInfo ($sort, $page, $limit, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo, $id_conta);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($sort, $page, $limit, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo, $id_conta);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET1WithHttpInfo
+     * listarUsingGET2WithHttpInfo
      *
      * Lista ajustes existentes na base de dados do Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (optional)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)
      * @param Number $valor_ajuste Valor do ajuste (optional)
      * @param string $identificador_externo Codigo Hexadecimal (optional)
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta. (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAjusteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET1WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_ajuste = null, $data_ajuste = null, $valor_ajuste = null, $identificador_externo = null, $id_conta = null)
+    public function listarUsingGET2WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_ajuste = null, $data_ajuste = null, $valor_ajuste = null, $identificador_externo = null, $id_conta = null)
     {
         
   

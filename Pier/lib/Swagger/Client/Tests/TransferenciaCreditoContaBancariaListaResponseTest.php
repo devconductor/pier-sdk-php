@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * TransferenciaCreditoContaBancariaListaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Listagem de Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * @description Listagem de Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

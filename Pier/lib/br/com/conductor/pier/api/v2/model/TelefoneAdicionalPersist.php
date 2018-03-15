@@ -108,25 +108,25 @@ class TelefoneAdicionalPersist implements ArrayAccess
 
     
     /**
-      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+      * $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $ddd C\u00C3\u00B3digo DDD do telefone (id).
+      * $ddd C\u00F3digo DDD do telefone (id).
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00C3\u00BAmero do telefone.
+      * $telefone N\u00FAmero do telefone.
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00C3\u00BAmero do ramal.
+      * $ramal N\u00FAmero do ramal.
       * @var string
       */
     protected $ramal;
@@ -158,7 +158,7 @@ class TelefoneAdicionalPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -179,7 +179,7 @@ class TelefoneAdicionalPersist implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id).
+     * @param string $ddd C\u00F3digo DDD do telefone (id).
      * @return $this
      */
     public function setDdd($ddd)
@@ -200,7 +200,7 @@ class TelefoneAdicionalPersist implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00C3\u00BAmero do telefone.
+     * @param string $telefone N\u00FAmero do telefone.
      * @return $this
      */
     public function setTelefone($telefone)
@@ -221,7 +221,7 @@ class TelefoneAdicionalPersist implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00C3\u00BAmero do ramal.
+     * @param string $ramal N\u00FAmero do ramal.
      * @return $this
      */
     public function setRamal($ramal)

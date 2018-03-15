@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransferenciaBancariaPersist Class Doc Comment
  *
  * @category    Class
- * @description Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+ * @description Transfer\u00EAncia banc\u00E1ria
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class TransferenciaBancariaPersist implements ArrayAccess
 
     
     /**
-      * $valor_compra Valor da transfer\u00C3\u00AAncia
+      * $valor_compra Valor da transfer\u00EAncia
       * @var Number
       */
     protected $valor_compra;
     
     /**
-      * $valor Valor da transfer\u00C3\u00AAncia
+      * $valor Valor da transfer\u00EAncia
       * @var Number
       */
     protected $valor;
     
     /**
-      * $documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+      * $documento_favorecido N\u00FAmero do CPF ou CNPJ.
       * @var string
       */
     protected $documento_favorecido;
     
     /**
-      * $banco C\u00C3\u00B3digo do banco
+      * $banco C\u00F3digo do banco
       * @var int
       */
     protected $banco;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+      * $numero_agencia N\u00FAmero da ag\u00EAncia
       * @var string
       */
     protected $numero_agencia;
     
     /**
-      * $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+      * $digito_agencia D\u00EDgito da ag\u00EAncia
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $numero_conta N\u00C3\u00BAmero da conta
+      * $numero_conta N\u00FAmero da conta
       * @var string
       */
     protected $numero_conta;
     
     /**
-      * $digito_conta D\u00C3\u00ADgito da conta
+      * $digito_conta D\u00EDgito da conta
       * @var string
       */
     protected $digito_conta;
     
     /**
-      * $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+      * $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
       * @var int
       */
     protected $flag_conta_poupanca;
     
     /**
-      * $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+      * $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
       * @var string
       */
     protected $nome_favorecido;
@@ -224,7 +224,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets valor_compra
-     * @param Number $valor_compra Valor da transfer\u00C3\u00AAncia
+     * @param Number $valor_compra Valor da transfer\u00EAncia
      * @return $this
      */
     public function setValorCompra($valor_compra)
@@ -245,7 +245,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor da transfer\u00C3\u00AAncia
+     * @param Number $valor Valor da transfer\u00EAncia
      * @return $this
      */
     public function setValor($valor)
@@ -266,7 +266,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets documento_favorecido
-     * @param string $documento_favorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+     * @param string $documento_favorecido N\u00FAmero do CPF ou CNPJ.
      * @return $this
      */
     public function setDocumentoFavorecido($documento_favorecido)
@@ -287,7 +287,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00C3\u00B3digo do banco
+     * @param int $banco C\u00F3digo do banco
      * @return $this
      */
     public function setBanco($banco)
@@ -308,7 +308,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+     * @param string $numero_agencia N\u00FAmero da ag\u00EAncia
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -329,7 +329,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+     * @param string $digito_agencia D\u00EDgito da ag\u00EAncia
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -350,7 +350,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_conta
-     * @param string $numero_conta N\u00C3\u00BAmero da conta
+     * @param string $numero_conta N\u00FAmero da conta
      * @return $this
      */
     public function setNumeroConta($numero_conta)
@@ -371,7 +371,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets digito_conta
-     * @param string $digito_conta D\u00C3\u00ADgito da conta
+     * @param string $digito_conta D\u00EDgito da conta
      * @return $this
      */
     public function setDigitoConta($digito_conta)
@@ -392,7 +392,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets flag_conta_poupanca
-     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
      * @return $this
      */
     public function setFlagContaPoupanca($flag_conta_poupanca)
@@ -413,7 +413,7 @@ class TransferenciaBancariaPersist implements ArrayAccess
   
     /**
      * Sets nome_favorecido
-     * @param string $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * @param string $nome_favorecido Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
      * @return $this
      */
     public function setNomeFavorecido($nome_favorecido)

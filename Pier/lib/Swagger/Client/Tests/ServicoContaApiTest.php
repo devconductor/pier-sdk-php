@@ -78,7 +78,7 @@ class ServicoContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ativarEnvioFaturaEmailUsingPOST
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
      */
     public function test_ativarEnvioFaturaEmailUsingPOST() {
@@ -88,7 +88,7 @@ class ServicoContaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desativarEnvioFaturaEmailUsingPOST
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
      */
     public function test_desativarEnvioFaturaEmailUsingPOST() {

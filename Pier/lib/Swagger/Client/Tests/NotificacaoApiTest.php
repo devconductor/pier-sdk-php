@@ -68,7 +68,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarConfiguracaoUsingPUT
      *
-     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Altera configura\u00E7\u00F5es de E-mail
      *
      */
     public function test_alterarConfiguracaoUsingPUT() {
@@ -78,7 +78,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarTemplateNotificacaoUsingPUT
      *
-     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Alterar template de notifica\u00E7\u00E3o
      *
      */
     public function test_alterarTemplateNotificacaoUsingPUT() {
@@ -98,7 +98,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarConfiguracaoUsingGET
      *
-     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+     * Consulta configura\u00E7\u00E3o de E-mail
      *
      */
     public function test_consultarConfiguracaoUsingGET() {
@@ -108,7 +108,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarPorEmailUsingGET
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+     * Consulta c\u00F3digo de seguran\u00E7a E-mail
      *
      */
     public function test_consultarPorEmailUsingGET() {
@@ -118,7 +118,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarPorSMSUsingGET
      *
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+     * Consulta c\u00F3digo de seguran\u00E7a SMS
      *
      */
     public function test_consultarPorSMSUsingGET() {
@@ -128,7 +128,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarTemplateNotificacaoUsingGET
      *
-     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Consulta template de notifica\u00E7\u00E3o
      *
      */
     public function test_consultarTemplateNotificacaoUsingGET() {
@@ -138,7 +138,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarTokenEMAILUsingPOST
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
      *
      */
     public function test_gerarTokenEMAILUsingPOST() {
@@ -148,7 +148,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for gerarTokenSMSUsingPOST
      *
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
      *
      */
     public function test_gerarTokenSMSUsingPOST() {
@@ -158,7 +158,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarConfiguracaoUsingGET
      *
-     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+     * Lista configura\u00E7\u00F5es de E-mails
      *
      */
     public function test_listarConfiguracaoUsingGET() {
@@ -168,7 +168,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarPorEmailUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+     * Lista os c\u00F3digos de seguran\u00E7a E-Mail
      *
      */
     public function test_listarPorEmailUsingGET() {
@@ -178,7 +178,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarPorSMSUsingGET
      *
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+     * Lista os c\u00F3digos de seguran\u00E7a SMS
      *
      */
     public function test_listarPorSMSUsingGET() {
@@ -208,7 +208,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarTemplateNotificacaoUsingGET
      *
-     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+     * Lista templates de notifica\u00E7\u00F5es
      *
      */
     public function test_listarTemplateNotificacaoUsingGET() {
@@ -218,7 +218,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarTiposLayoutsUsingGET
      *
-     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Lista os tipos templates de notifica\u00E7\u00E3o
      *
      */
     public function test_listarTiposLayoutsUsingGET() {
@@ -228,7 +228,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for notificacaoEmailUsingPOST
      *
-     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * Enviar notifica\u00E7\u00E3o por email
      *
      */
     public function test_notificacaoEmailUsingPOST() {
@@ -238,7 +238,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for reenviarTokenSMSUsingPOST
      *
-     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     * Reenviar c\u00F3digo de seguran\u00E7a por sms
      *
      */
     public function test_reenviarTokenSMSUsingPOST() {
@@ -258,7 +258,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for salvarConfiguracaoUsingPOST
      *
-     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+     * Salva configura\u00E7\u00F5es de E-mail
      *
      */
     public function test_salvarConfiguracaoUsingPOST() {
@@ -308,7 +308,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for salvarTemplateNotificacaoUsingPOST
      *
-     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+     * Salva template de notifica\u00E7\u00E3o
      *
      */
     public function test_salvarTemplateNotificacaoUsingPOST() {
@@ -318,7 +318,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarTokenEMAILUsingPOST
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+     * Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
      *
      */
     public function test_validarTokenEMAILUsingPOST() {
@@ -328,7 +328,7 @@ class NotificacaoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for validarTokenSMSUsingPOST
      *
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+     * Validar c\u00F3digo de seguran\u00E7a enviado por sms
      *
      */
     public function test_validarTokenSMSUsingPOST() {

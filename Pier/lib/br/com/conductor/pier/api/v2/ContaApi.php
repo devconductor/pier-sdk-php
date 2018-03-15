@@ -94,10 +94,10 @@ class ContaApi
     /**
      * ajustarContaUsingPOST1
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta do id informado
+     * Lan\u00E7a um ajuste para a conta do id informado
      *
      * @param int $id Id Conta (required)
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
      * @param string $identificador_externo Identificador Externo (optional)
@@ -114,10 +114,10 @@ class ContaApi
     /**
      * ajustarContaUsingPOST1WithHttpInfo
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta do id informado
+     * Lan\u00E7a um ajuste para a conta do id informado
      *
      * @param int $id Id Conta (required)
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo identificador do tipo de ajuste. (required)
+     * @param int $id_tipo_ajuste C\u00F3digo identificador do tipo de ajuste. (required)
      * @param string $data_ajuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (required)
      * @param Number $valor_ajuste Valor do ajuste (required)
      * @param string $identificador_externo Identificador Externo (optional)
@@ -225,9 +225,9 @@ class ContaApi
     /**
      * alterarProdutoUsingPOST
      *
-     * Altera o produto associado \u00C3\u00A0 conta.
+     * Altera o produto associado \u00E0 conta.
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -242,9 +242,9 @@ class ContaApi
     /**
      * alterarProdutoUsingPOSTWithHttpInfo
      *
-     * Altera o produto associado \u00C3\u00A0 conta.
+     * Altera o produto associado \u00E0 conta.
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -330,10 +330,10 @@ class ContaApi
     /**
      * alterarTitularUsingPOST
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     * Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) (required)
+     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -347,10 +347,10 @@ class ContaApi
     /**
      * alterarTitularUsingPOSTWithHttpInfo
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+     * Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) (required)
+     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -435,9 +435,9 @@ class ContaApi
     /**
      * alterarVencimentoUsingPUT
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+     * Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -452,9 +452,9 @@ class ContaApi
     /**
      * alterarVencimentoUsingPUTWithHttpInfo
      *
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+     * Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $novo_dia_vencimento Novo dia de vencimento. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -542,13 +542,13 @@ class ContaApi
      *
      * Atribuir Anuidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $id_anuidade Identificador da anuidade (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $ddd DDD do celular (optional)
-     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param string $celular N\u00FAmero do celular (optional)
      * @param int $id_operadora Identificador da operadora do celular (optional)
      * @param int $id_origem_comercial Identificador da origem comercial (optional)
      * @return object
@@ -566,13 +566,13 @@ class ContaApi
      *
      * Atribuir Anuidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $id_anuidade Identificador da anuidade (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $ddd DDD do celular (optional)
-     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param string $celular N\u00FAmero do celular (optional)
      * @param int $id_operadora Identificador da operadora do celular (optional)
      * @param int $id_origem_comercial Identificador da origem comercial (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
@@ -691,9 +691,9 @@ class ContaApi
     /**
      * ativarEnvioFaturaEmailUsingPOST
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -707,9 +707,9 @@ class ContaApi
     /**
      * ativarEnvioFaturaEmailUsingPOSTWithHttpInfo
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -788,8 +788,8 @@ class ContaApi
      *
      * Realiza o bloqueio de uma determinada Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -805,8 +805,8 @@ class ContaApi
      *
      * Realiza o bloqueio de uma determinada Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -893,8 +893,8 @@ class ContaApi
      *
      * Realiza o cancelamento de uma determinada Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -910,8 +910,8 @@ class ContaApi
      *
      * Realiza o cancelamento de uma determinada Conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -996,9 +996,9 @@ class ContaApi
     /**
      * consultarBeneficioPagamentoAtrasoUsingGET
      *
-     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     * Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1012,9 +1012,9 @@ class ContaApi
     /**
      * consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo
      *
-     * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+     * Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1186,14 +1186,14 @@ class ContaApi
     /**
      * consultarDividaAtualizadaClienteUsingGET
      *
-     * Consulta a d\u00C3\u00ADvida atualizada do cliente
+     * Consulta a d\u00EDvida atualizada do cliente
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_vencimento Data do vencimento (optional)
-     * @param int $id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)
+     * @param int $id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)
      * @return \br.com.conductor.pier.api.v2.model\DividaClienteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1207,14 +1207,14 @@ class ContaApi
     /**
      * consultarDividaAtualizadaClienteUsingGETWithHttpInfo
      *
-     * Consulta a d\u00C3\u00ADvida atualizada do cliente
+     * Consulta a d\u00EDvida atualizada do cliente
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_vencimento Data do vencimento (optional)
-     * @param int $id_escritorio_cobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)
+     * @param int $id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DividaClienteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1318,9 +1318,9 @@ class ContaApi
      * Permite consultar a partir do ID da conta as taxas e tarifas
      *
      * @param int $id ID da conta a ser consultada. (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1337,9 +1337,9 @@ class ContaApi
      * Permite consultar a partir do ID da conta as taxas e tarifas
      *
      * @param int $id ID da conta a ser consultada. (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1430,36 +1430,36 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET13
      *
      * Apresenta dados de uma determinada conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET13($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET13WithHttpInfo
      *
      * Apresenta dados de uma determinada conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET13WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
         }
   
         // parse inputs
@@ -1525,42 +1525,42 @@ class ContaApi
     }
     
     /**
-     * consultarUsingGET41
+     * consultarUsingGET42
      *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     * Consulta os detalhes de uma determinada transfer\u00EAncia
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_transferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia). (required)
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET41($id, $id_transferencia)
+    public function consultarUsingGET42($id, $id_transferencia)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET41WithHttpInfo ($id, $id_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET42WithHttpInfo ($id, $id_transferencia);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET41WithHttpInfo
+     * consultarUsingGET42WithHttpInfo
      *
-     * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+     * Consulta os detalhes de uma determinada transfer\u00EAncia
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_transferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_transferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET41WithHttpInfo($id, $id_transferencia)
+    public function consultarUsingGET42WithHttpInfo($id, $id_transferencia)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET41');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET42');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET41');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET42');
         }
   
         // parse inputs
@@ -1636,9 +1636,9 @@ class ContaApi
     /**
      * desativarEnvioFaturaEmailUsingPOST
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1652,9 +1652,9 @@ class ContaApi
     /**
      * desativarEnvioFaturaEmailUsingPOSTWithHttpInfo
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1846,9 +1846,9 @@ class ContaApi
     /**
      * gerarCartaoEmbossingUsingPOST
      *
-     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     * Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1863,9 +1863,9 @@ class ContaApi
     /**
      * gerarCartaoEmbossingUsingPOSTWithHttpInfo
      *
-     * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+     * Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1951,9 +1951,9 @@ class ContaApi
     /**
      * gerarCartaoProvisorioUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1967,9 +1967,9 @@ class ContaApi
     /**
      * gerarCartaoProvisorioUsingPOSTWithHttpInfo
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2046,11 +2046,11 @@ class ContaApi
     /**
      * gerarCartaoUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     * Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
-     * @param int $id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id). (required)
+     * @param int $id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2064,11 +2064,11 @@ class ContaApi
     /**
      * gerarCartaoUsingPOSTWithHttpInfo
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     * Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). (required)
-     * @param int $id_tipo_plastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id). (required)
+     * @param int $id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2161,9 +2161,9 @@ class ContaApi
     /**
      * gerarCartaoVirtualUsingPOST
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_validade Data de Validade (required)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2178,9 +2178,9 @@ class ContaApi
     /**
      * gerarCartaoVirtualUsingPOSTWithHttpInfo
      *
-     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+     * Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_validade Data de Validade (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2266,12 +2266,12 @@ class ContaApi
     /**
      * listarHistoricoAlteracoesLimitesUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2285,12 +2285,12 @@ class ContaApi
     /**
      * listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo
      *
-     * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+     * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2383,12 +2383,12 @@ class ContaApi
     /**
      * listarHistoricoAssessoriaUsingGET
      *
-     * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+     * Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2402,12 +2402,12 @@ class ContaApi
     /**
      * listarHistoricoAssessoriaUsingGETWithHttpInfo
      *
-     * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+     * Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2503,9 +2503,9 @@ class ContaApi
      * Lista o historico de atrasos das faturas
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2522,9 +2522,9 @@ class ContaApi
      * Lista o historico de atrasos das faturas
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2617,14 +2617,14 @@ class ContaApi
     /**
      * listarNaoProcessadasUsingGET
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+     * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)
-     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2638,14 +2638,14 @@ class ContaApi
     /**
      * listarNaoProcessadasUsingGETWithHttpInfo
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+     * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)
-     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoNaoProcessadaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2746,15 +2746,15 @@ class ContaApi
     /**
      * listarProcessadasUsingGET
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+     * Lista as transa\u00E7\u00F5es processadas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
-     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
-     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @param string $data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2768,15 +2768,15 @@ class ContaApi
     /**
      * listarProcessadasUsingGETWithHttpInfo
      *
-     * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+     * Lista as transa\u00E7\u00F5es processadas da conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $data_vencimento Data de vencimento do extrato no formato yyyy-MM-dd. (optional)
-     * @param string $data_inicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
-     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)
+     * @param string $data_inicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)
+     * @param string $data_fim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2879,53 +2879,53 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET16
+     * listarUsingGET17
      *
      * Lista contas existentes na base de dados do Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
-     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)
+     * @param int $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)
+     * @param int $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)
      * @param int $dia_vencimento Apresenta o dia de vencimento. (optional)
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
-     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
-     * @param string $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
+     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)
+     * @param string $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado. (optional)
+     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET17($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET16WithHttpInfo
+     * listarUsingGET17WithHttpInfo
      *
      * Lista contas existentes na base de dados do Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_produto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)
-     * @param int $id_origem_comercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)
-     * @param int $id_status_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)
+     * @param int $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)
+     * @param int $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)
      * @param int $dia_vencimento Apresenta o dia de vencimento. (optional)
      * @param int $melhor_dia_compra Apresenta o melhor dia de compra. (optional)
-     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)
-     * @param string $data_cadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)
-     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)
+     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)
+     * @param string $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado. (optional)
+     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET16WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET17WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3036,52 +3036,52 @@ class ContaApi
     }
     
     /**
-     * listarUsingGET48
+     * listarUsingGET50
      *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     * Lista as transfer\u00EAncias realizadas pela conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
-     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)
+     * @param int $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)
+     * @param int $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)
      * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
-     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET48($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET50($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET48WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET50WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET48WithHttpInfo
+     * listarUsingGET50WithHttpInfo
      *
-     * Lista as transfer\u00C3\u00AAncias realizadas pela conta
+     * Lista as transfer\u00EAncias realizadas pela conta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)
-     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)
+     * @param int $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)
+     * @param int $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)
      * @param Number $valor_transferencia Valor estabelecido para ser transferido. (optional)
-     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET48WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET50WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET48');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET50');
         }
   
         // parse inputs
@@ -3185,7 +3185,7 @@ class ContaApi
     /**
      * reativarUsingPOST1
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+     * Realiza a reativa\u00E7\u00E3o de contas.
      *
      * @param int $id Id Conta (required)
      * @return object
@@ -3201,7 +3201,7 @@ class ContaApi
     /**
      * reativarUsingPOST1WithHttpInfo
      *
-     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+     * Realiza a reativa\u00E7\u00E3o de contas.
      *
      * @param int $id Id Conta (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
@@ -3280,9 +3280,9 @@ class ContaApi
     /**
      * simularEmprestimoFinanciamentoUsingPOST
      *
-     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     * Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest $request request (required)
      * @return \br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -3297,9 +3297,9 @@ class ContaApi
     /**
      * simularEmprestimoFinanciamentoUsingPOSTWithHttpInfo
      *
-     * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+     * Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\EmprestimoPessoalRequest $request request (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\EmprestimoPessoalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -3388,9 +3388,9 @@ class ContaApi
      * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3407,9 +3407,9 @@ class ContaApi
      * Permite listar uma linha do tempo com os eventos da conta
      *
      * @param int $id Id Conta (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3502,11 +3502,11 @@ class ContaApi
     /**
      * transferirUsingPOST1
      *
-     * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+     * Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
-     * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id). (required)
+     * @param int $id_conta_destino C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id). (required)
+     * @param Number $valor_transferencia Valor da Transfer\u00EAncia. (required)
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3520,11 +3520,11 @@ class ContaApi
     /**
      * transferirUsingPOST1WithHttpInfo
      *
-     * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+     * Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). (required)
-     * @param int $id_conta_destino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). (required)
-     * @param Number $valor_transferencia Valor da Transfer\u00C3\u00AAncia. (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id). (required)
+     * @param int $id_conta_destino C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id). (required)
+     * @param Number $valor_transferencia Valor da Transfer\u00EAncia. (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

@@ -106,7 +106,7 @@ class DetalhesFaturaConsignadaResponse implements ArrayAccess
     protected $fatura_consignada_response;
     
     /**
-      * $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+      * $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
       * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]
       */
     protected $transacoes;
@@ -157,7 +157,7 @@ class DetalhesFaturaConsignadaResponse implements ArrayAccess
   
     /**
      * Sets transacoes
-     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
      * @return $this
      */
     public function setTransacoes($transacoes)

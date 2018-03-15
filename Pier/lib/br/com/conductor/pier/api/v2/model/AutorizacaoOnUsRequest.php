@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AutorizacaoOnUsRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o
+ * @description Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,49 +132,49 @@ class AutorizacaoOnUsRequest implements ArrayAccess
 
     
     /**
-      * $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+      * $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
       * @var string
       */
     protected $nsu_origem;
     
     /**
-      * $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+      * $numero_parcelas N\u00FAmero de Parcelas.
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+      * $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+      * $codigo_seguranca_cartao C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
       * @var string
       */
     protected $codigo_seguranca_cartao;
     
     /**
-      * $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+      * $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
       * @var Number
       */
     protected $valor_transacao;
     
     /**
-      * $numero_real_cartao N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+      * $numero_real_cartao N\u00FAmero Real do Cart\u00E3o.
       * @var string
       */
     protected $numero_real_cartao;
     
     /**
-      * $data_validade_cartao Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+      * $data_validade_cartao Data de Validade do Cart\u00E3o. Ex: AAMM
       * @var string
       */
     protected $data_validade_cartao;
     
     /**
-      * $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+      * $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
       * @var int
       */
     protected $numero_estabelecimento;
@@ -186,7 +186,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
     protected $data_hora_terminal;
     
     /**
-      * $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+      * $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
       * @var string
       */
     protected $terminal_requisitante;
@@ -224,7 +224,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets nsu_origem
-     * @param string $nsu_origem N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+     * @param string $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
      * @return $this
      */
     public function setNsuOrigem($nsu_origem)
@@ -245,7 +245,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmero de Parcelas.
+     * @param int $numero_parcelas N\u00FAmero de Parcelas.
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -266,7 +266,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -287,7 +287,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets codigo_seguranca_cartao
-     * @param string $codigo_seguranca_cartao C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+     * @param string $codigo_seguranca_cartao C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
      * @return $this
      */
     public function setCodigoSegurancaCartao($codigo_seguranca_cartao)
@@ -308,7 +308,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets valor_transacao
-     * @param Number $valor_transacao Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+     * @param Number $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
      * @return $this
      */
     public function setValorTransacao($valor_transacao)
@@ -329,7 +329,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets numero_real_cartao
-     * @param string $numero_real_cartao N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+     * @param string $numero_real_cartao N\u00FAmero Real do Cart\u00E3o.
      * @return $this
      */
     public function setNumeroRealCartao($numero_real_cartao)
@@ -350,7 +350,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets data_validade_cartao
-     * @param string $data_validade_cartao Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+     * @param string $data_validade_cartao Data de Validade do Cart\u00E3o. Ex: AAMM
      * @return $this
      */
     public function setDataValidadeCartao($data_validade_cartao)
@@ -371,7 +371,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+     * @param int $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -413,7 +413,7 @@ class AutorizacaoOnUsRequest implements ArrayAccess
   
     /**
      * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+     * @param string $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
      * @return $this
      */
     public function setTerminalRequisitante($terminal_requisitante)

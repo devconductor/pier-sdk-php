@@ -108,25 +108,25 @@ class VinculoOperacaoResponse implements ArrayAccess
 
     
     /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
+      * $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
       * @var int
       */
     protected $id_operacao;
     
     /**
-      * $codigo_processamento C\u00C3\u00B3digo de processamento.
+      * $codigo_processamento C\u00F3digo de processamento.
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $codigo_mcc C\u00C3\u00B3digo MCC.
+      * $codigo_mcc C\u00F3digo MCC.
       * @var int
       */
     protected $codigo_mcc;
@@ -158,7 +158,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -179,7 +179,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param int $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -200,7 +200,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento.
+     * @param string $codigo_processamento C\u00F3digo de processamento.
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -221,7 +221,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_mcc
-     * @param int $codigo_mcc C\u00C3\u00B3digo MCC.
+     * @param int $codigo_mcc C\u00F3digo MCC.
      * @return $this
      */
     public function setCodigoMcc($codigo_mcc)

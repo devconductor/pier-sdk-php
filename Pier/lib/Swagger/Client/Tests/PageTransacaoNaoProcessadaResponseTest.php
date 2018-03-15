@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PageTransacaoNaoProcessadaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de Transa\u00C3\u00A7\u00C3\u00B5es nao Processadas
+ * @description Lista de Transa\u00E7\u00F5es nao Processadas
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

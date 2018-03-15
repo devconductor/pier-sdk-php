@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoParametroAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response da auditoria dos par\u00C3\u00A2metros do arquivo.
+ * @description Objeto Response da auditoria dos par\u00E2metros do arquivo.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -126,37 +126,37 @@ class ArquivoParametroAUDResponse implements ArrayAccess
     protected $rev;
     
     /**
-      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
       * @var int
       */
     protected $rev_type;
     
     /**
-      * $id Identificador do par\u00C3\u00A2metro
+      * $id Identificador do par\u00E2metro
       * @var string
       */
     protected $id;
     
     /**
-      * $parametro Nome do par\u00C3\u00A2metro
+      * $parametro Nome do par\u00E2metro
       * @var string
       */
     protected $parametro;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do par\u00C3\u00A2metro
+      * $conteudo Conte\u00FAdo do par\u00E2metro
       * @var string
       */
     protected $conteudo;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro
+      * $data_hora_inclusao Data de inclus\u00E3o do par\u00E2metro
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro
+      * $data_hora_alteracao Data de altera\u00E7\u00E3o do par\u00E2metro
       * @var string
       */
     protected $data_hora_alteracao;
@@ -212,7 +212,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
      * @return $this
      */
     public function setRevType($rev_type)
@@ -233,7 +233,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param string $id Identificador do par\u00C3\u00A2metro
+     * @param string $id Identificador do par\u00E2metro
      * @return $this
      */
     public function setId($id)
@@ -254,7 +254,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets parametro
-     * @param string $parametro Nome do par\u00C3\u00A2metro
+     * @param string $parametro Nome do par\u00E2metro
      * @return $this
      */
     public function setParametro($parametro)
@@ -275,7 +275,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do par\u00C3\u00A2metro
+     * @param string $conteudo Conte\u00FAdo do par\u00E2metro
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -296,7 +296,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro
+     * @param string $data_hora_inclusao Data de inclus\u00E3o do par\u00E2metro
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -317,7 +317,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_alteracao
-     * @param string $data_hora_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro
+     * @param string $data_hora_alteracao Data de altera\u00E7\u00E3o do par\u00E2metro
      * @return $this
      */
     public function setDataHoraAlteracao($data_hora_alteracao)

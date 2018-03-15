@@ -68,7 +68,7 @@ class AjusteFinanceiroApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ajustarContaUsingPOST
      *
-     * Lan\u00C3\u00A7a um ajuste para a conta informada
+     * Lan\u00E7a um ajuste para a conta informada
      *
      */
     public function test_ajustarContaUsingPOST() {
@@ -76,22 +76,22 @@ class AjusteFinanceiroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET1
+     * Test case for consultarUsingGET2
      *
      * Apresenta dados de um determinado ajuste financeiro
      *
      */
-    public function test_consultarUsingGET1() {
+    public function test_consultarUsingGET2() {
 
     }
     
     /**
-     * Test case for listarUsingGET1
+     * Test case for listarUsingGET2
      *
      * Lista ajustes existentes na base de dados do Emissor
      *
      */
-    public function test_listarUsingGET1() {
+    public function test_listarUsingGET2() {
 
     }
     

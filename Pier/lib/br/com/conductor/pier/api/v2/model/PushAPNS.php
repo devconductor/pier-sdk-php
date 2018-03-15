@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PushAPNS Class Doc Comment
  *
  * @category    Class
- * @description Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+ * @description Objeto Push Notifica\u00E7\u00E3o APNS
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,49 +132,49 @@ class PushAPNS implements ArrayAccess
 
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+      * $id_pessoa C\u00F3digo identificado da pessoa
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta C\u00C3\u00B3digo identificador da conta
+      * $id_conta C\u00F3digo identificador da conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $token_dispositivo Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+      * $token_dispositivo Apresenta o token do dispositivo que dever\u00E1 receber o push.
       * @var string
       */
     protected $token_dispositivo;
     
     /**
-      * $certificado Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+      * $certificado Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
       * @var string
       */
     protected $certificado;
     
     /**
-      * $senha Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+      * $senha Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
       * @var string
       */
     protected $senha;
     
     /**
-      * $titulo Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+      * $titulo Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
       * @var string
       */
     protected $titulo;
     
     /**
-      * $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+      * $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
       * @var string
       */
     protected $conteudo;
     
     /**
-      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+      * $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
       * @var string
       */
     protected $tipo_evento;
@@ -224,7 +224,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo identificado da pessoa
+     * @param int $id_pessoa C\u00F3digo identificado da pessoa
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -245,7 +245,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta
+     * @param int $id_conta C\u00F3digo identificador da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -266,7 +266,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets token_dispositivo
-     * @param string $token_dispositivo Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+     * @param string $token_dispositivo Apresenta o token do dispositivo que dever\u00E1 receber o push.
      * @return $this
      */
     public function setTokenDispositivo($token_dispositivo)
@@ -287,7 +287,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets certificado
-     * @param string $certificado Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+     * @param string $certificado Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
      * @return $this
      */
     public function setCertificado($certificado)
@@ -308,7 +308,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+     * @param string $senha Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
      * @return $this
      */
     public function setSenha($senha)
@@ -329,7 +329,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets titulo
-     * @param string $titulo Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $titulo Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
      * @return $this
      */
     public function setTitulo($titulo)
@@ -350,7 +350,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+     * @param string $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -371,7 +371,7 @@ class PushAPNS implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $tipo_evento Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
      * @return $this
      */
     public function setTipoEvento($tipo_evento)

@@ -120,19 +120,19 @@ class AjusteFinanceiroResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+      * $id_tipo_ajuste C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
       * @var int
       */
     protected $id_tipo_ajuste;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
       * @var int
       */
     protected $id_conta;
@@ -150,7 +150,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
     protected $valor;
     
     /**
-      * $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $identificador_externo Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $identificador_externo;
@@ -191,7 +191,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_ajuste
-     * @param int $id_tipo_ajuste C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+     * @param int $id_tipo_ajuste C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
      * @return $this
      */
     public function setIdTipoAjuste($id_tipo_ajuste)
@@ -233,7 +233,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -296,7 +296,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets identificador_externo
-     * @param string $identificador_externo Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $identificador_externo Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setIdentificadorExterno($identificador_externo)

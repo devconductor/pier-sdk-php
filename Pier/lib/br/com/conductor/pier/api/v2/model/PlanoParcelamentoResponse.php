@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoParcelamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * @description Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -67,6 +67,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
         'data_inclusao' => 'string',
         'data_processamento_adesao' => 'string',
         'id_conta' => 'int',
+        'id_servico_tipo' => 'int',
         'descricao_servico_tipo' => 'string',
         'com_entrada' => 'bool',
         'nome_campanha' => 'string'
@@ -97,6 +98,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
         'data_inclusao' => 'dataInclusao',
         'data_processamento_adesao' => 'dataProcessamentoAdesao',
         'id_conta' => 'idConta',
+        'id_servico_tipo' => 'idServicoTipo',
         'descricao_servico_tipo' => 'descricaoServicoTipo',
         'com_entrada' => 'comEntrada',
         'nome_campanha' => 'nomeCampanha'
@@ -127,6 +129,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
         'data_inclusao' => 'setDataInclusao',
         'data_processamento_adesao' => 'setDataProcessamentoAdesao',
         'id_conta' => 'setIdConta',
+        'id_servico_tipo' => 'setIdServicoTipo',
         'descricao_servico_tipo' => 'setDescricaoServicoTipo',
         'com_entrada' => 'setComEntrada',
         'nome_campanha' => 'setNomeCampanha'
@@ -157,6 +160,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
         'data_inclusao' => 'getDataInclusao',
         'data_processamento_adesao' => 'getDataProcessamentoAdesao',
         'id_conta' => 'getIdConta',
+        'id_servico_tipo' => 'getIdServicoTipo',
         'descricao_servico_tipo' => 'getDescricaoServicoTipo',
         'com_entrada' => 'getComEntrada',
         'nome_campanha' => 'getNomeCampanha'
@@ -180,7 +184,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
     protected $data_fechamento_fatura;
     
     /**
-      * $data_vencimento_padrao Data de vencimento padr\u00C3\u00A3o
+      * $data_vencimento_padrao Data de vencimento padr\u00E3o
       * @var string
       */
     protected $data_vencimento_padrao;
@@ -240,19 +244,19 @@ class PlanoParcelamentoResponse implements ArrayAccess
     protected $valor_tac;
     
     /**
-      * $status_adesao Status da ades\u00C3\u00A3o
+      * $status_adesao Status da ades\u00E3o
       * @var int
       */
     protected $status_adesao;
     
     /**
-      * $data_inclusao Data de inclus\u00C3\u00A3o
+      * $data_inclusao Data de inclus\u00E3o
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_processamento_adesao Data de processamento da ades\u00C3\u00A3o
+      * $data_processamento_adesao Data de processamento da ades\u00E3o
       * @var string
       */
     protected $data_processamento_adesao;
@@ -264,7 +268,13 @@ class PlanoParcelamentoResponse implements ArrayAccess
     protected $id_conta;
     
     /**
-      * $descricao_servico_tipo Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+      * $id_servico_tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+      * @var int
+      */
+    protected $id_servico_tipo;
+    
+    /**
+      * $descricao_servico_tipo Descri\u00E7\u00E3o do tipo de servi\u00E7o
       * @var string
       */
     protected $descricao_servico_tipo;
@@ -306,6 +316,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
             $this->data_inclusao = $data["data_inclusao"];
             $this->data_processamento_adesao = $data["data_processamento_adesao"];
             $this->id_conta = $data["id_conta"];
+            $this->id_servico_tipo = $data["id_servico_tipo"];
             $this->descricao_servico_tipo = $data["descricao_servico_tipo"];
             $this->com_entrada = $data["com_entrada"];
             $this->nome_campanha = $data["nome_campanha"];
@@ -365,7 +376,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_padrao
-     * @param string $data_vencimento_padrao Data de vencimento padr\u00C3\u00A3o
+     * @param string $data_vencimento_padrao Data de vencimento padr\u00E3o
      * @return $this
      */
     public function setDataVencimentoPadrao($data_vencimento_padrao)
@@ -575,7 +586,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets status_adesao
-     * @param int $status_adesao Status da ades\u00C3\u00A3o
+     * @param int $status_adesao Status da ades\u00E3o
      * @return $this
      */
     public function setStatusAdesao($status_adesao)
@@ -596,7 +607,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00C3\u00A3o
+     * @param string $data_inclusao Data de inclus\u00E3o
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -617,7 +628,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_processamento_adesao
-     * @param string $data_processamento_adesao Data de processamento da ades\u00C3\u00A3o
+     * @param string $data_processamento_adesao Data de processamento da ades\u00E3o
      * @return $this
      */
     public function setDataProcessamentoAdesao($data_processamento_adesao)
@@ -649,6 +660,27 @@ class PlanoParcelamentoResponse implements ArrayAccess
     }
     
     /**
+     * Gets id_servico_tipo
+     * @return int
+     */
+    public function getIdServicoTipo()
+    {
+        return $this->id_servico_tipo;
+    }
+  
+    /**
+     * Sets id_servico_tipo
+     * @param int $id_servico_tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+     * @return $this
+     */
+    public function setIdServicoTipo($id_servico_tipo)
+    {
+        
+        $this->id_servico_tipo = $id_servico_tipo;
+        return $this;
+    }
+    
+    /**
      * Gets descricao_servico_tipo
      * @return string
      */
@@ -659,7 +691,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets descricao_servico_tipo
-     * @param string $descricao_servico_tipo Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+     * @param string $descricao_servico_tipo Descri\u00E7\u00E3o do tipo de servi\u00E7o
      * @return $this
      */
     public function setDescricaoServicoTipo($descricao_servico_tipo)

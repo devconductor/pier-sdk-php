@@ -92,36 +92,36 @@ class RiscoFraudeApi
   
     
     /**
-     * consultarUsingGET26
+     * consultarUsingGET27
      *
-     * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+     * Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26($id)
+    public function consultarUsingGET27($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET26WithHttpInfo
+     * consultarUsingGET27WithHttpInfo
      *
-     * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+     * Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26WithHttpInfo($id)
+    public function consultarUsingGET27WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET27');
         }
   
         // parse inputs
@@ -189,10 +189,10 @@ class RiscoFraudeApi
     /**
      * listarTiposResolucaoUsingGET
      *
-     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+     * Listar os tipos de resolu\u00E7\u00E3o de fraude
      *
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -206,10 +206,10 @@ class RiscoFraudeApi
     /**
      * listarTiposResolucaoUsingGETWithHttpInfo
      *
-     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+     * Listar os tipos de resolu\u00E7\u00E3o de fraude
      *
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoResolucaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -282,9 +282,9 @@ class RiscoFraudeApi
     /**
      * negarUsingPOST
      *
-     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -298,9 +298,9 @@ class RiscoFraudeApi
     /**
      * negarUsingPOSTWithHttpInfo
      *
-     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -377,9 +377,9 @@ class RiscoFraudeApi
     /**
      * reconhecerUsingPOST
      *
-     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -393,9 +393,9 @@ class RiscoFraudeApi
     /**
      * reconhecerUsingPOSTWithHttpInfo
      *
-     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -435,6 +435,97 @@ class RiscoFraudeApi
 
         
         
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * validarDadosPortadorUsingPOST
+     *
+     * Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+     *
+     * @param \br.com.conductor.pier.api.v2.model\DadosPortadorRequest $request request (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosPortadorUsingPOST($request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->validarDadosPortadorUsingPOSTWithHttpInfo ($request);
+        return $response; 
+    }
+
+
+    /**
+     * validarDadosPortadorUsingPOSTWithHttpInfo
+     *
+     * Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+     *
+     * @param \br.com.conductor.pier.api.v2.model\DadosPortadorRequest $request request (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function validarDadosPortadorUsingPOSTWithHttpInfo($request)
+    {
+        
+        // verify the required parameter 'request' is set
+        if ($request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $request when calling validarDadosPortadorUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/riscos-fraudes/validar-dados-portador";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }
   
         // for model (json/xml)
         if (isset($_tempBody)) {

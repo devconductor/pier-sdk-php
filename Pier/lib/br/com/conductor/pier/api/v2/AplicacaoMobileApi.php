@@ -96,7 +96,7 @@ class AplicacaoMobileApi
      *
      * Atualiza Aplicacao Mobile
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobileUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -113,7 +113,7 @@ class AplicacaoMobileApi
      *
      * Atualiza Aplicacao Mobile
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\AplicacaoMobileUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\AplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -197,39 +197,39 @@ class AplicacaoMobileApi
     }
     
     /**
-     * listarUsingGET2
+     * listarUsingGET3
      *
      * Lista os aplicacoes mobile cadastradas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
      * @param int $id_plataforma_mobile Identificador da Plataforma Mobile (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET2($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET3($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET2WithHttpInfo ($sort, $page, $limit, $id, $id_plataforma_mobile);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET3WithHttpInfo ($sort, $page, $limit, $id, $id_plataforma_mobile);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET2WithHttpInfo
+     * listarUsingGET3WithHttpInfo
      *
      * Lista os aplicacoes mobile cadastradas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $id Identificador da Aplicacao Mobile (optional)
      * @param int $id_plataforma_mobile Identificador da Plataforma Mobile (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAplicacaoMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET2WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
+    public function listarUsingGET3WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_plataforma_mobile = null)
     {
         
   

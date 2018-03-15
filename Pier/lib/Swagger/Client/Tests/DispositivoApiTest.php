@@ -86,12 +86,12 @@ class DispositivoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET18
      *
      * Lista os dispositivos cadastrados
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET18() {
 
     }
     

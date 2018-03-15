@@ -38,7 +38,7 @@ use \ArrayAccess;
  * LoteCartoesPrePagosResponse Class Doc Comment
  *
  * @category    Class
- * @description Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
+ * @description Lote Cart\u00F5es Pr\u00E9-Pagos
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -136,55 +136,55 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $id_origem_comercial C\u00C3\u00B3digo identificador da origem comercial.
+      * $id_origem_comercial C\u00F3digo identificador da origem comercial.
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $id_produto C\u00C3\u00B3digo identificador do Produto.
+      * $id_produto C\u00F3digo identificador do Produto.
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_tipo_cartao C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+      * $id_tipo_cartao C\u00F3digo identificador do tipo do cart\u00E3o.
       * @var int
       */
     protected $id_tipo_cartao;
     
     /**
-      * $id_imagem C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+      * $id_imagem C\u00F3digo identificador da Imagem do cart\u00E3o.
       * @var int
       */
     protected $id_imagem;
     
     /**
-      * $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+      * $id_endereco C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
       * @var int
       */
     protected $id_endereco;
     
     /**
-      * $quantidade N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+      * $quantidade N\u00FAmero de cart\u00F5es existentes no Lote.
       * @var int
       */
     protected $quantidade;
     
     /**
-      * $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+      * $data_cadastro Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $usuario_cadastro Nome do usu\u00C3\u00A1rio que criou o lote.
+      * $usuario_cadastro Nome do usu\u00E1rio que criou o lote.
       * @var string
       */
     protected $usuario_cadastro;
@@ -196,7 +196,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
     protected $status_processamento;
     
     /**
-      * $identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+      * $identificador_externo N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
       * @var string
       */
     protected $identificador_externo;
@@ -235,7 +235,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id_origem_comercial
-     * @param int $id_origem_comercial C\u00C3\u00B3digo identificador da origem comercial.
+     * @param int $id_origem_comercial C\u00F3digo identificador da origem comercial.
      * @return $this
      */
     public function setIdOrigemComercial($id_origem_comercial)
@@ -277,7 +277,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo identificador do Produto.
+     * @param int $id_produto C\u00F3digo identificador do Produto.
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -298,7 +298,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+     * @param int $id_tipo_cartao C\u00F3digo identificador do tipo do cart\u00E3o.
      * @return $this
      */
     public function setIdTipoCartao($id_tipo_cartao)
@@ -319,7 +319,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id_imagem
-     * @param int $id_imagem C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+     * @param int $id_imagem C\u00F3digo identificador da Imagem do cart\u00E3o.
      * @return $this
      */
     public function setIdImagem($id_imagem)
@@ -340,7 +340,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets id_endereco
-     * @param int $id_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+     * @param int $id_endereco C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
      * @return $this
      */
     public function setIdEndereco($id_endereco)
@@ -361,7 +361,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets quantidade
-     * @param int $quantidade N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+     * @param int $quantidade N\u00FAmero de cart\u00F5es existentes no Lote.
      * @return $this
      */
     public function setQuantidade($quantidade)
@@ -382,7 +382,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+     * @param string $data_cadastro Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -403,7 +403,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets usuario_cadastro
-     * @param string $usuario_cadastro Nome do usu\u00C3\u00A1rio que criou o lote.
+     * @param string $usuario_cadastro Nome do usu\u00E1rio que criou o lote.
      * @return $this
      */
     public function setUsuarioCadastro($usuario_cadastro)
@@ -445,7 +445,7 @@ class LoteCartoesPrePagosResponse implements ArrayAccess
   
     /**
      * Sets identificador_externo
-     * @param string $identificador_externo N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+     * @param string $identificador_externo N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
      * @return $this
      */
     public function setIdentificadorExterno($identificador_externo)

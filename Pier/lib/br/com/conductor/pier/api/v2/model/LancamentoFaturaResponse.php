@@ -192,43 +192,43 @@ class LancamentoFaturaResponse implements ArrayAccess
 
     
     /**
-      * $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+      * $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
       * @var int
       */
     protected $id_transacao;
     
     /**
-      * $descricao_tipo_transacao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+      * $descricao_tipo_transacao Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
       * @var string
       */
     protected $descricao_tipo_transacao;
     
     /**
-      * $id_tipo_evento C\u00C3\u00B3digo identificador do tipo do evento
+      * $id_tipo_evento C\u00F3digo identificador do tipo do evento
       * @var int
       */
     protected $id_tipo_evento;
     
     /**
-      * $descricao_tipo_evento Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+      * $descricao_tipo_evento Descri\u00E7\u00E3o do tipo do evento
       * @var string
       */
     protected $descricao_tipo_evento;
     
     /**
-      * $id_evento C\u00C3\u00B3digo identificador do evento
+      * $id_evento C\u00F3digo identificador do evento
       * @var int
       */
     protected $id_evento;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $complemento Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+      * $complemento Descri\u00E7\u00E3o complementar do evento
       * @var string
       */
     protected $complemento;
@@ -246,7 +246,7 @@ class LancamentoFaturaResponse implements ArrayAccess
     protected $valor_usd;
     
     /**
-      * $numero_parcela N\u00C3\u00BAmero da parcela
+      * $numero_parcela N\u00FAmero da parcela
       * @var int
       */
     protected $numero_parcela;
@@ -258,7 +258,7 @@ class LancamentoFaturaResponse implements ArrayAccess
     protected $quantidade_parcelas;
     
     /**
-      * $data_hora_transacao Data da transa\u00C3\u00A7\u00C3\u00A3o
+      * $data_hora_transacao Data da transa\u00E7\u00E3o
       * @var string
       */
     protected $data_hora_transacao;
@@ -270,7 +270,7 @@ class LancamentoFaturaResponse implements ArrayAccess
     protected $nome_estabelecimento;
     
     /**
-      * $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento
       * @var string
       */
     protected $descricao_estabelecimento;
@@ -282,49 +282,49 @@ class LancamentoFaturaResponse implements ArrayAccess
     protected $nome_fantasia_estabelecimento;
     
     /**
-      * $flag_credito Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+      * $flag_credito Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
       * @var bool
       */
     protected $flag_credito;
     
     /**
-      * $id_mcc C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+      * $id_mcc C\u00F3digo identificador do MCC (Merchant Category Codes)
       * @var int
       */
     protected $id_mcc;
     
     /**
-      * $id_grupo_mcc C\u00C3\u00B3digo identificador do grupo MCC
+      * $id_grupo_mcc C\u00F3digo identificador do grupo MCC
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+      * $descricao_grupo_mcc Descri\u00E7\u00E3o do grupo MCC
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $titular Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+      * $titular Indica se o portador do cart\u00E3o \u00E9 o titular da conta
       * @var bool
       */
     protected $titular;
     
     /**
-      * $nome_portador Nome impresso no cart\u00C3\u00A3o
+      * $nome_portador Nome impresso no cart\u00E3o
       * @var string
       */
     protected $nome_portador;
     
     /**
-      * $numero_cartao_mascarado N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+      * $numero_cartao_mascarado N\u00FAmero do cart\u00E3o mascarado
       * @var string
       */
     protected $numero_cartao_mascarado;
     
     /**
-      * $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+      * $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
       * @var bool
       */
     protected $flag_solicitou_contestacao;
@@ -336,7 +336,7 @@ class LancamentoFaturaResponse implements ArrayAccess
     protected $valor_taxa_embarque;
     
     /**
-      * $descricao_abreviada Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+      * $descricao_abreviada Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
       * @var string
       */
     protected $descricao_abreviada;
@@ -389,7 +389,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+     * @param int $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -410,7 +410,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_transacao
-     * @param string $descricao_tipo_transacao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+     * @param string $descricao_tipo_transacao Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
      * @return $this
      */
     public function setDescricaoTipoTransacao($descricao_tipo_transacao)
@@ -431,7 +431,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_evento
-     * @param int $id_tipo_evento C\u00C3\u00B3digo identificador do tipo do evento
+     * @param int $id_tipo_evento C\u00F3digo identificador do tipo do evento
      * @return $this
      */
     public function setIdTipoEvento($id_tipo_evento)
@@ -452,7 +452,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_evento
-     * @param string $descricao_tipo_evento Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+     * @param string $descricao_tipo_evento Descri\u00E7\u00E3o do tipo do evento
      * @return $this
      */
     public function setDescricaoTipoEvento($descricao_tipo_evento)
@@ -473,7 +473,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_evento
-     * @param int $id_evento C\u00C3\u00B3digo identificador do evento
+     * @param int $id_evento C\u00F3digo identificador do evento
      * @return $this
      */
     public function setIdEvento($id_evento)
@@ -494,7 +494,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -515,7 +515,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+     * @param string $complemento Descri\u00E7\u00E3o complementar do evento
      * @return $this
      */
     public function setComplemento($complemento)
@@ -578,7 +578,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param int $numero_parcela N\u00C3\u00BAmero da parcela
+     * @param int $numero_parcela N\u00FAmero da parcela
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -620,7 +620,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_transacao
-     * @param string $data_hora_transacao Data da transa\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_hora_transacao Data da transa\u00E7\u00E3o
      * @return $this
      */
     public function setDataHoraTransacao($data_hora_transacao)
@@ -662,7 +662,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)
@@ -704,7 +704,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets flag_credito
-     * @param bool $flag_credito Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+     * @param bool $flag_credito Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
      * @return $this
      */
     public function setFlagCredito($flag_credito)
@@ -725,7 +725,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_mcc
-     * @param int $id_mcc C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+     * @param int $id_mcc C\u00F3digo identificador do MCC (Merchant Category Codes)
      * @return $this
      */
     public function setIdMcc($id_mcc)
@@ -746,7 +746,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00C3\u00B3digo identificador do grupo MCC
+     * @param int $id_grupo_mcc C\u00F3digo identificador do grupo MCC
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -767,7 +767,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do grupo MCC
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -788,7 +788,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets titular
-     * @param bool $titular Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+     * @param bool $titular Indica se o portador do cart\u00E3o \u00E9 o titular da conta
      * @return $this
      */
     public function setTitular($titular)
@@ -809,7 +809,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets nome_portador
-     * @param string $nome_portador Nome impresso no cart\u00C3\u00A3o
+     * @param string $nome_portador Nome impresso no cart\u00E3o
      * @return $this
      */
     public function setNomePortador($nome_portador)
@@ -830,7 +830,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao_mascarado
-     * @param string $numero_cartao_mascarado N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+     * @param string $numero_cartao_mascarado N\u00FAmero do cart\u00E3o mascarado
      * @return $this
      */
     public function setNumeroCartaoMascarado($numero_cartao_mascarado)
@@ -851,7 +851,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets flag_solicitou_contestacao
-     * @param bool $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+     * @param bool $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
      * @return $this
      */
     public function setFlagSolicitouContestacao($flag_solicitou_contestacao)
@@ -893,7 +893,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_abreviada
-     * @param string $descricao_abreviada Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+     * @param string $descricao_abreviada Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
      * @return $this
      */
     public function setDescricaoAbreviada($descricao_abreviada)

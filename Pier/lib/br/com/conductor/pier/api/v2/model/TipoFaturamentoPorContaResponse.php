@@ -120,43 +120,43 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $status Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.
+      * $status Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
       * @var bool
       */
     protected $status;
     
     /**
-      * $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.
+      * $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
       * @var int
       */
     protected $id_tipo_faturamento;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+      * $data_hora_inclusao Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_cancelamento Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+      * $data_hora_cancelamento Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
       * @var string
       */
     protected $data_hora_cancelamento;
     
     /**
-      * $modificado_por Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.
+      * $modificado_por Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
       * @var string
       */
     protected $modificado_por;
@@ -191,7 +191,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -233,7 +233,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param bool $status Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.
+     * @param bool $status Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
      * @return $this
      */
     public function setStatus($status)
@@ -254,7 +254,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_faturamento
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
      * @return $this
      */
     public function setIdTipoFaturamento($id_tipo_faturamento)
@@ -275,7 +275,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+     * @param string $data_hora_inclusao Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -296,7 +296,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_cancelamento
-     * @param string $data_hora_cancelamento Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+     * @param string $data_hora_cancelamento Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
      * @return $this
      */
     public function setDataHoraCancelamento($data_hora_cancelamento)
@@ -317,7 +317,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets modificado_por
-     * @param string $modificado_por Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $modificado_por Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
      * @return $this
      */
     public function setModificadoPor($modificado_por)

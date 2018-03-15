@@ -128,13 +128,13 @@ class FaturaResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $situacao_processamento Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+      * $situacao_processamento Situa\u00E7\u00E3o de Processamento da fatura.
       * @var string
       */
     protected $situacao_processamento;
@@ -170,7 +170,7 @@ class FaturaResponse implements ArrayAccess
     protected $valor_total;
     
     /**
-      * $valor_pagamento_minimo Valor do pagamento m\u00C3\u00ADnimo.
+      * $valor_pagamento_minimo Valor do pagamento m\u00EDnimo.
       * @var Number
       */
     protected $valor_pagamento_minimo;
@@ -213,7 +213,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -234,7 +234,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets situacao_processamento
-     * @param string $situacao_processamento Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+     * @param string $situacao_processamento Situa\u00E7\u00E3o de Processamento da fatura.
      * @return $this
      */
     public function setSituacaoProcessamento($situacao_processamento)
@@ -363,7 +363,7 @@ class FaturaResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor do pagamento m\u00C3\u00ADnimo.
+     * @param Number $valor_pagamento_minimo Valor do pagamento m\u00EDnimo.
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)

@@ -96,7 +96,7 @@ class WebhookApi
      *
      * Alterar Webhook
      *
-     * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
+     * @param int $id C\u00F3digo identificador do Webhook (required)
      * @param \br.com.conductor.pier.api.v2.model\WebHook $webhook webhook (required)
      * @param string $status Status (optional)
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
@@ -114,7 +114,7 @@ class WebhookApi
      *
      * Alterar Webhook
      *
-     * @param int $id C\u00C3\u00B3digo identificador do Webhook (required)
+     * @param int $id C\u00F3digo identificador do Webhook (required)
      * @param \br.com.conductor.pier.api.v2.model\WebHook $webhook webhook (required)
      * @param string $status Status (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
@@ -203,36 +203,36 @@ class WebhookApi
     }
     
     /**
-     * consultarUsingGET44
+     * consultarUsingGET45
      *
      * Consultar Webhook
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET44($id)
+    public function consultarUsingGET45($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET44WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET45WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET44WithHttpInfo
+     * consultarUsingGET45WithHttpInfo
      *
      * Consultar Webhook
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET44WithHttpInfo($id)
+    public function consultarUsingGET45WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET44');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET45');
         }
   
         // parse inputs
@@ -298,43 +298,43 @@ class WebhookApi
     }
     
     /**
-     * listarUsingGET53
+     * listarUsingGET55
      *
      * Lista os Webhooks
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do WebHook (optional)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
+     * @param string $metodo M\u00E9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageWebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET53($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET55($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET53WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET55WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET53WithHttpInfo
+     * listarUsingGET55WithHttpInfo
      *
      * Lista os Webhooks
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param int $id Id do WebHook (optional)
      * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook (optional)
-     * @param string $metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)
+     * @param string $metodo M\u00E9todo que a ser chamado pelo WebHook (optional)
      * @param string $url URL que a ser consumida pelo WebHook (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET53WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET55WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   

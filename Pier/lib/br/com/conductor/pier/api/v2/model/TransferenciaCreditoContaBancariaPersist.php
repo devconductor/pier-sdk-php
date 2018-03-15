@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransferenciaCreditoContaBancariaPersist Class Doc Comment
  *
  * @category    Class
- * @description Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria
+ * @description Transfer\u00EAncia de cr\u00E9dito para conta banc\u00E1ria
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -128,7 +128,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
 
     
     /**
-      * $nsu_origem Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+      * $nsu_origem Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
       * @var int
       */
     protected $nsu_origem;
@@ -140,25 +140,25 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
     protected $id_cartao;
     
     /**
-      * $id_conta_bancaria Representa o Identificador da conta banc\u00C3\u00A1ria.
+      * $id_conta_bancaria Representa o Identificador da conta banc\u00E1ria.
       * @var int
       */
     protected $id_conta_bancaria;
     
     /**
-      * $valor Representa o Valor da transfer\u00C3\u00AAncia.
+      * $valor Representa o Valor da transfer\u00EAncia.
       * @var Number
       */
     protected $valor;
     
     /**
-      * $numero_parcelas Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.
+      * $numero_parcelas Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $numero_meses_carencia Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+      * $numero_meses_carencia Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
       * @var int
       */
     protected $numero_meses_carencia;
@@ -170,13 +170,13 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
     protected $data_hora_terminal;
     
     /**
-      * $terminal_requisitante Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.
+      * $terminal_requisitante Representa a identifica\u00E7\u00E3o do terminal requisitante.
       * @var string
       */
     protected $terminal_requisitante;
     
     /**
-      * $numero_estabelecimento Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+      * $numero_estabelecimento Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.
       * @var string
       */
     protected $numero_estabelecimento;
@@ -213,7 +213,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets nsu_origem
-     * @param int $nsu_origem Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+     * @param int $nsu_origem Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
      * @return $this
      */
     public function setNsuOrigem($nsu_origem)
@@ -255,7 +255,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets id_conta_bancaria
-     * @param int $id_conta_bancaria Representa o Identificador da conta banc\u00C3\u00A1ria.
+     * @param int $id_conta_bancaria Representa o Identificador da conta banc\u00E1ria.
      * @return $this
      */
     public function setIdContaBancaria($id_conta_bancaria)
@@ -276,7 +276,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Representa o Valor da transfer\u00C3\u00AAncia.
+     * @param Number $valor Representa o Valor da transfer\u00EAncia.
      * @return $this
      */
     public function setValor($valor)
@@ -297,7 +297,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.
+     * @param int $numero_parcelas Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -318,7 +318,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_meses_carencia
-     * @param int $numero_meses_carencia Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+     * @param int $numero_meses_carencia Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
      * @return $this
      */
     public function setNumeroMesesCarencia($numero_meses_carencia)
@@ -360,7 +360,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets terminal_requisitante
-     * @param string $terminal_requisitante Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.
+     * @param string $terminal_requisitante Representa a identifica\u00E7\u00E3o do terminal requisitante.
      * @return $this
      */
     public function setTerminalRequisitante($terminal_requisitante)
@@ -381,7 +381,7 @@ class TransferenciaCreditoContaBancariaPersist implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param string $numero_estabelecimento Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+     * @param string $numero_estabelecimento Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)

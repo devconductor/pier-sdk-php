@@ -124,37 +124,37 @@ class TransferenciaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+      * $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+      * $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
       * @var string
       */
     protected $data_transferencia;
     
     /**
-      * $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+      * $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
       * @var int
       */
     protected $id_conta_origem;
     
     /**
-      * $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
+      * $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.
       * @var string
       */
     protected $nome_pessoa_origem;
     
     /**
-      * $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+      * $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
       * @var int
       */
     protected $id_conta_destino;
     
     /**
-      * $nome_pessoa_destino Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia.
+      * $nome_pessoa_destino Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.
       * @var string
       */
     protected $nome_pessoa_destino;
@@ -166,7 +166,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
     protected $valor_transferencia;
     
     /**
-      * $valor_tarifa Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
+      * $valor_tarifa Valor estabelecido da tarifa para a transfer\u00EAncia.
       * @var Number
       */
     protected $valor_tarifa;
@@ -202,7 +202,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_transferencia
-     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
      * @return $this
      */
     public function setDataTransferencia($data_transferencia)
@@ -244,7 +244,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta_origem
-     * @param int $id_conta_origem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+     * @param int $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
      * @return $this
      */
     public function setIdContaOrigem($id_conta_origem)
@@ -265,7 +265,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_pessoa_origem
-     * @param string $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
+     * @param string $nome_pessoa_origem Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.
      * @return $this
      */
     public function setNomePessoaOrigem($nome_pessoa_origem)
@@ -286,7 +286,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta_destino
-     * @param int $id_conta_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+     * @param int $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
      * @return $this
      */
     public function setIdContaDestino($id_conta_destino)
@@ -307,7 +307,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_pessoa_destino
-     * @param string $nome_pessoa_destino Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia.
+     * @param string $nome_pessoa_destino Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.
      * @return $this
      */
     public function setNomePessoaDestino($nome_pessoa_destino)
@@ -349,7 +349,7 @@ class TransferenciaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_tarifa
-     * @param Number $valor_tarifa Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
+     * @param Number $valor_tarifa Valor estabelecido da tarifa para a transfer\u00EAncia.
      * @return $this
      */
     public function setValorTarifa($valor_tarifa)

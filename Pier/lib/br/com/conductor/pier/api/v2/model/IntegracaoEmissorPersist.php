@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegracaoEmissorPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor
+ * @description Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class IntegracaoEmissorPersist implements ArrayAccess
 
     
     /**
-      * $canal_entrada Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.
+      * $canal_entrada Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.
       * @var string
       */
     protected $canal_entrada;
@@ -125,7 +125,7 @@ class IntegracaoEmissorPersist implements ArrayAccess
   
     /**
      * Sets canal_entrada
-     * @param string $canal_entrada Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $canal_entrada Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.
      * @return $this
      */
     public function setCanalEntrada($canal_entrada)

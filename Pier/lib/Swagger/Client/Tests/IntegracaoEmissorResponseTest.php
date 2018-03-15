@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * IntegracaoEmissorResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Resposta do recurso de inclus\u00C3\u00A3o de registro para integra\u00C3\u00A7\u00C3\u00A3o
+ * @description Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

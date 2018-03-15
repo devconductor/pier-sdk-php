@@ -150,7 +150,7 @@ class PessoaPersist implements ArrayAccess
     protected $nome;
     
     /**
-      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
+      * $cpf N\u00FAmero do CPF, quando PF.
       * @var string
       */
     protected $cpf;
@@ -162,19 +162,19 @@ class PessoaPersist implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00C3\u00BAmero da Identidade.
+      * $numero_identidade N\u00FAmero da Identidade.
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor da Identidade.
+      * $orgao_expedidor_identidade Org\u00E3o expedidor da Identidade.
       * @var string
       */
     protected $orgao_expedidor_identidade;
@@ -186,37 +186,37 @@ class PessoaPersist implements ArrayAccess
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+      * $data_emissao_identidade Data emiss\u00E3o da Identidade
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $estado_civil Estado civil do s\u00C3\u00B3cio
+      * $estado_civil Estado civil do s\u00F3cio
       * @var string
       */
     protected $estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+      * $profissao Profiss\u00E3o do s\u00F3cio
       * @var string
       */
     protected $profissao;
     
     /**
-      * $nacionalidade Nacionalidade do s\u00C3\u00B3cio
+      * $nacionalidade Nacionalidade do s\u00F3cio
       * @var string
       */
     protected $nacionalidade;
     
     /**
-      * $email Email do s\u00C3\u00B3cio
+      * $email Email do s\u00F3cio
       * @var string
       */
     protected $email;
     
     /**
-      * $telefones Informa os telefones do s\u00C3\u00B3cio
+      * $telefones Informa os telefones do s\u00F3cio
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
       */
     protected $telefones;
@@ -278,7 +278,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @param string $cpf N\u00FAmero do CPF, quando PF.
      * @return $this
      */
     public function setCpf($cpf)
@@ -320,7 +320,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
      * @return $this
      */
     public function setSexo($sexo)
@@ -341,7 +341,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade.
+     * @param string $numero_identidade N\u00FAmero da Identidade.
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -362,7 +362,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor da Identidade.
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor da Identidade.
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -404,7 +404,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -425,7 +425,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets estado_civil
-     * @param string $estado_civil Estado civil do s\u00C3\u00B3cio
+     * @param string $estado_civil Estado civil do s\u00F3cio
      * @return $this
      */
     public function setEstadoCivil($estado_civil)
@@ -446,7 +446,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+     * @param string $profissao Profiss\u00E3o do s\u00F3cio
      * @return $this
      */
     public function setProfissao($profissao)
@@ -467,7 +467,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets nacionalidade
-     * @param string $nacionalidade Nacionalidade do s\u00C3\u00B3cio
+     * @param string $nacionalidade Nacionalidade do s\u00F3cio
      * @return $this
      */
     public function setNacionalidade($nacionalidade)
@@ -488,7 +488,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email do s\u00C3\u00B3cio
+     * @param string $email Email do s\u00F3cio
      * @return $this
      */
     public function setEmail($email)
@@ -509,7 +509,7 @@ class PessoaPersist implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[] $telefones Informa os telefones do s\u00C3\u00B3cio
+     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[] $telefones Informa os telefones do s\u00F3cio
      * @return $this
      */
     public function setTelefones($telefones)

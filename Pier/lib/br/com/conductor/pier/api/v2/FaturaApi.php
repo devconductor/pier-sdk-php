@@ -97,7 +97,7 @@ class FaturaApi
      * Consulta fatura de um cliente
      *
      * @param string $data_vencimento Data Vencimento (required)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\FaturaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -114,7 +114,7 @@ class FaturaApi
      * Consulta fatura de um cliente
      *
      * @param string $data_vencimento Data Vencimento (required)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\FaturaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -205,11 +205,11 @@ class FaturaApi
      *
      * Listar planos de parcelamento
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string $data_vencimento_padrao Indica a data de vencimento padr\u00C3\u00A3o das faturas (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string $data_vencimento_padrao Indica a data de vencimento padr\u00E3o das faturas (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PagePlanoParcelamentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -225,11 +225,11 @@ class FaturaApi
      *
      * Listar planos de parcelamento
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
-     * @param string $data_vencimento_padrao Indica a data de vencimento padr\u00C3\u00A3o das faturas (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
+     * @param string $data_vencimento_padrao Indica a data de vencimento padr\u00E3o das faturas (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlanoParcelamentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -330,11 +330,11 @@ class FaturaApi
     /**
      * enviarFaturaEmailUsingPOST
      *
-     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     * Envia 2\u00AA via de fatura por E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura (yyyy-MM-dd). (required)
-     * @param string $email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)
+     * @param string $email E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -348,11 +348,11 @@ class FaturaApi
     /**
      * enviarFaturaEmailUsingPOSTWithHttpInfo
      *
-     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     * Envia 2\u00AA via de fatura por E-mail
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura (yyyy-MM-dd). (required)
-     * @param string $email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)
+     * @param string $email E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -451,11 +451,11 @@ class FaturaApi
      *
      * Listar faturas de um cliente.
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageFaturaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -471,11 +471,11 @@ class FaturaApi
      *
      * Listar faturas de um cliente.
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $situacao_processamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaturaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -574,7 +574,7 @@ class FaturaApi
      *
      * Permite visualizar o extrato da fatura em formato PDF
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura. (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -591,7 +591,7 @@ class FaturaApi
      *
      * Permite visualizar o extrato da fatura em formato PDF
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param string $data_vencimento Data de Vencimento da fatura. (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response

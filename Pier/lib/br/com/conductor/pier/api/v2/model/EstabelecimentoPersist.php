@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EstabelecimentoPersist Class Doc Comment
  *
  * @category    Class
- * @description Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+ * @description Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -52,7 +52,7 @@ class EstabelecimentoPersist implements ArrayAccess
       */
     static $swaggerTypes = array(
         'flag_matriz' => 'int',
-        'id_credor' => 'int',
+        'id_grupo_economico' => 'int',
         'numero_receita_federal' => 'string',
         'nome' => 'string',
         'descricao' => 'string',
@@ -102,7 +102,7 @@ class EstabelecimentoPersist implements ArrayAccess
       */
     static $attributeMap = array(
         'flag_matriz' => 'flagMatriz',
-        'id_credor' => 'idCredor',
+        'id_grupo_economico' => 'idGrupoEconomico',
         'numero_receita_federal' => 'numeroReceitaFederal',
         'nome' => 'nome',
         'descricao' => 'descricao',
@@ -152,7 +152,7 @@ class EstabelecimentoPersist implements ArrayAccess
       */
     static $setters = array(
         'flag_matriz' => 'setFlagMatriz',
-        'id_credor' => 'setIdCredor',
+        'id_grupo_economico' => 'setIdGrupoEconomico',
         'numero_receita_federal' => 'setNumeroReceitaFederal',
         'nome' => 'setNome',
         'descricao' => 'setDescricao',
@@ -202,7 +202,7 @@ class EstabelecimentoPersist implements ArrayAccess
       */
     static $getters = array(
         'flag_matriz' => 'getFlagMatriz',
-        'id_credor' => 'getIdCredor',
+        'id_grupo_economico' => 'getIdGrupoEconomico',
         'numero_receita_federal' => 'getNumeroReceitaFederal',
         'nome' => 'getNome',
         'descricao' => 'getDescricao',
@@ -248,19 +248,19 @@ class EstabelecimentoPersist implements ArrayAccess
 
     
     /**
-      * $flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+      * $flag_matriz Indica se \u00E9 matriz ou filial.
       * @var int
       */
     protected $flag_matriz;
     
     /**
-      * $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+      * $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
       * @var int
       */
-    protected $id_credor;
+    protected $id_grupo_economico;
     
     /**
-      * $numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+      * $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
       * @var string
       */
     protected $numero_receita_federal;
@@ -272,19 +272,19 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $nome;
     
     /**
-      * $descricao Raz\u00C3\u00A3o Social do Estabelecimento.
+      * $descricao Raz\u00E3o Social do Estabelecimento.
       * @var string
       */
     protected $descricao;
     
     /**
-      * $nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
+      * $nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
       * @var string
       */
     protected $nome_fantasia;
     
     /**
-      * $cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+      * $cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
       * @var string
       */
     protected $cep;
@@ -296,37 +296,37 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $nome_logradouro;
     
     /**
-      * $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+      * $numero_endereco N\u00FAmero do endere\u00E7o.
       * @var int
       */
     protected $numero_endereco;
     
     /**
-      * $bairro Nome do bairro do endere\u00C3\u00A7o.
+      * $bairro Nome do bairro do endere\u00E7o.
       * @var string
       */
     protected $bairro;
     
     /**
-      * $cidade Nome da cidade do endere\u00C3\u00A7o.
+      * $cidade Nome da cidade do endere\u00E7o.
       * @var string
       */
     protected $cidade;
     
     /**
-      * $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+      * $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
       * @var string
       */
     protected $complemento;
     
     /**
-      * $uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+      * $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
       * @var string
       */
     protected $uf;
     
     /**
-      * $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+      * $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
       * @var string
       */
     protected $cep2;
@@ -338,37 +338,37 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $nome_logradouro2;
     
     /**
-      * $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+      * $numero_endereco2 N\u00FAmero do endere\u00E7o.
       * @var int
       */
     protected $numero_endereco2;
     
     /**
-      * $bairro2 Nome do bairro do endere\u00C3\u00A7o.
+      * $bairro2 Nome do bairro do endere\u00E7o.
       * @var string
       */
     protected $bairro2;
     
     /**
-      * $cidade2 Nome da cidade do endere\u00C3\u00A7o.
+      * $cidade2 Nome da cidade do endere\u00E7o.
       * @var string
       */
     protected $cidade2;
     
     /**
-      * $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+      * $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
       * @var string
       */
     protected $complemento2;
     
     /**
-      * $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+      * $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
       * @var string
       */
     protected $uf2;
     
     /**
-      * $obs Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+      * $obs Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
       * @var string
       */
     protected $obs;
@@ -386,55 +386,55 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $email;
     
     /**
-      * $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+      * $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
       * @var int
       */
     protected $flag_arquivo_secr_fazenda;
     
     /**
-      * $flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+      * $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
       * @var int
       */
     protected $flag_cartao_digitado;
     
     /**
-      * $inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
+      * $inativo Indica se o estabelecimento est\u00E1 inativo.
       * @var int
       */
     protected $inativo;
     
     /**
-      * $id_moeda C\u00C3\u00B3digo identificador da moeda.
+      * $id_moeda C\u00F3digo identificador da moeda.
       * @var int
       */
     protected $id_moeda;
     
     /**
-      * $id_pais Identificador de Pa\u00C3\u00ADs.
+      * $id_pais Identificador de Pa\u00EDs.
       * @var int
       */
     protected $id_pais;
     
     /**
-      * $associado_spc_brasil N\u00C3\u00BAmero do associado ao SPCBrasil.
+      * $associado_spc_brasil N\u00FAmero do associado ao SPCBrasil.
       * @var int
       */
     protected $associado_spc_brasil;
     
     /**
-      * $mcc C\u00C3\u00B3digo de Categoria de Mercado.
+      * $mcc C\u00F3digo de Categoria de Mercado.
       * @var int
       */
     protected $mcc;
     
     /**
-      * $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+      * $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
       * @var int
       */
     protected $id_tipo_estabelecimento;
     
     /**
-      * $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+      * $correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
       * @var int
       */
     protected $correspondencia;
@@ -452,31 +452,31 @@ class EstabelecimentoPersist implements ArrayAccess
     protected $tipo_pagamento;
     
     /**
-      * $consulta Consulta de cadastro n\u00C3\u00BAmero um.
+      * $consulta Consulta de cadastro n\u00FAmero um.
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta;
     
     /**
-      * $consulta2 Consulta de cadastro n\u00C3\u00BAmero um.
+      * $consulta2 Consulta de cadastro n\u00FAmero dois.
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta2;
     
     /**
-      * $consulta3 Consulta de cadastro n\u00C3\u00BAmero um.
+      * $consulta3 Consulta de cadastro n\u00FAmero tr\u00EAs.
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta3;
     
     /**
-      * $flag_terminal_virtual Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_terminal_virtual Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
       * @var bool
       */
     protected $flag_terminal_virtual;
     
     /**
-      * $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+      * $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
       * @var bool
       */
     protected $flag_consulta_extrato;
@@ -491,7 +491,7 @@ class EstabelecimentoPersist implements ArrayAccess
         
         if ($data != null) {
             $this->flag_matriz = $data["flag_matriz"];
-            $this->id_credor = $data["id_credor"];
+            $this->id_grupo_economico = $data["id_grupo_economico"];
             $this->numero_receita_federal = $data["numero_receita_federal"];
             $this->nome = $data["nome"];
             $this->descricao = $data["descricao"];
@@ -543,7 +543,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets flag_matriz
-     * @param int $flag_matriz Indica se \u00C3\u00A9 matriz ou filial.
+     * @param int $flag_matriz Indica se \u00E9 matriz ou filial.
      * @return $this
      */
     public function setFlagMatriz($flag_matriz)
@@ -554,23 +554,23 @@ class EstabelecimentoPersist implements ArrayAccess
     }
     
     /**
-     * Gets id_credor
+     * Gets id_grupo_economico
      * @return int
      */
-    public function getIdCredor()
+    public function getIdGrupoEconomico()
     {
-        return $this->id_credor;
+        return $this->id_grupo_economico;
     }
   
     /**
-     * Sets id_credor
-     * @param int $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+     * Sets id_grupo_economico
+     * @param int $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
      * @return $this
      */
-    public function setIdCredor($id_credor)
+    public function setIdGrupoEconomico($id_grupo_economico)
     {
         
-        $this->id_credor = $id_credor;
+        $this->id_grupo_economico = $id_grupo_economico;
         return $this;
     }
     
@@ -585,7 +585,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+     * @param string $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -627,7 +627,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Raz\u00C3\u00A3o Social do Estabelecimento.
+     * @param string $descricao Raz\u00E3o Social do Estabelecimento.
      * @return $this
      */
     public function setDescricao($descricao)
@@ -648,7 +648,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets nome_fantasia
-     * @param string $nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
+     * @param string $nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
      * @return $this
      */
     public function setNomeFantasia($nome_fantasia)
@@ -669,7 +669,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+     * @param string $cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
      * @return $this
      */
     public function setCep($cep)
@@ -711,7 +711,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets numero_endereco
-     * @param int $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+     * @param int $numero_endereco N\u00FAmero do endere\u00E7o.
      * @return $this
      */
     public function setNumeroEndereco($numero_endereco)
@@ -732,7 +732,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets bairro
-     * @param string $bairro Nome do bairro do endere\u00C3\u00A7o.
+     * @param string $bairro Nome do bairro do endere\u00E7o.
      * @return $this
      */
     public function setBairro($bairro)
@@ -753,7 +753,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Nome da cidade do endere\u00C3\u00A7o.
+     * @param string $cidade Nome da cidade do endere\u00E7o.
      * @return $this
      */
     public function setCidade($cidade)
@@ -774,7 +774,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+     * @param string $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
      * @return $this
      */
     public function setComplemento($complemento)
@@ -795,7 +795,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets uf
-     * @param string $uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+     * @param string $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
      * @return $this
      */
     public function setUf($uf)
@@ -816,7 +816,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets cep2
-     * @param string $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+     * @param string $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
      * @return $this
      */
     public function setCep2($cep2)
@@ -858,7 +858,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets numero_endereco2
-     * @param int $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+     * @param int $numero_endereco2 N\u00FAmero do endere\u00E7o.
      * @return $this
      */
     public function setNumeroEndereco2($numero_endereco2)
@@ -879,7 +879,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets bairro2
-     * @param string $bairro2 Nome do bairro do endere\u00C3\u00A7o.
+     * @param string $bairro2 Nome do bairro do endere\u00E7o.
      * @return $this
      */
     public function setBairro2($bairro2)
@@ -900,7 +900,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets cidade2
-     * @param string $cidade2 Nome da cidade do endere\u00C3\u00A7o.
+     * @param string $cidade2 Nome da cidade do endere\u00E7o.
      * @return $this
      */
     public function setCidade2($cidade2)
@@ -921,7 +921,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets complemento2
-     * @param string $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+     * @param string $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
      * @return $this
      */
     public function setComplemento2($complemento2)
@@ -942,7 +942,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets uf2
-     * @param string $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+     * @param string $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
      * @return $this
      */
     public function setUf2($uf2)
@@ -963,7 +963,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets obs
-     * @param string $obs Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+     * @param string $obs Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
      * @return $this
      */
     public function setObs($obs)
@@ -1026,7 +1026,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets flag_arquivo_secr_fazenda
-     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
      * @return $this
      */
     public function setFlagArquivoSecrFazenda($flag_arquivo_secr_fazenda)
@@ -1047,7 +1047,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets flag_cartao_digitado
-     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
      * @return $this
      */
     public function setFlagCartaoDigitado($flag_cartao_digitado)
@@ -1068,7 +1068,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets inativo
-     * @param int $inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
+     * @param int $inativo Indica se o estabelecimento est\u00E1 inativo.
      * @return $this
      */
     public function setInativo($inativo)
@@ -1089,7 +1089,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets id_moeda
-     * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda.
+     * @param int $id_moeda C\u00F3digo identificador da moeda.
      * @return $this
      */
     public function setIdMoeda($id_moeda)
@@ -1110,7 +1110,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets id_pais
-     * @param int $id_pais Identificador de Pa\u00C3\u00ADs.
+     * @param int $id_pais Identificador de Pa\u00EDs.
      * @return $this
      */
     public function setIdPais($id_pais)
@@ -1131,7 +1131,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets associado_spc_brasil
-     * @param int $associado_spc_brasil N\u00C3\u00BAmero do associado ao SPCBrasil.
+     * @param int $associado_spc_brasil N\u00FAmero do associado ao SPCBrasil.
      * @return $this
      */
     public function setAssociadoSpcBrasil($associado_spc_brasil)
@@ -1152,7 +1152,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets mcc
-     * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado.
+     * @param int $mcc C\u00F3digo de Categoria de Mercado.
      * @return $this
      */
     public function setMcc($mcc)
@@ -1173,7 +1173,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_estabelecimento
-     * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+     * @param int $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
      * @return $this
      */
     public function setIdTipoEstabelecimento($id_tipo_estabelecimento)
@@ -1194,7 +1194,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets correspondencia
-     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+     * @param int $correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
      * @return $this
      */
     public function setCorrespondencia($correspondencia)
@@ -1260,7 +1260,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets consulta
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta Consulta de cadastro n\u00C3\u00BAmero um.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta Consulta de cadastro n\u00FAmero um.
      * @return $this
      */
     public function setConsulta($consulta)
@@ -1281,7 +1281,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets consulta2
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta2 Consulta de cadastro n\u00C3\u00BAmero um.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta2 Consulta de cadastro n\u00FAmero dois.
      * @return $this
      */
     public function setConsulta2($consulta2)
@@ -1302,7 +1302,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets consulta3
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta3 Consulta de cadastro n\u00C3\u00BAmero um.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta3 Consulta de cadastro n\u00FAmero tr\u00EAs.
      * @return $this
      */
     public function setConsulta3($consulta3)
@@ -1323,7 +1323,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets flag_terminal_virtual
-     * @param bool $flag_terminal_virtual Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_terminal_virtual Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
      * @return $this
      */
     public function setFlagTerminalVirtual($flag_terminal_virtual)
@@ -1344,7 +1344,7 @@ class EstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets flag_consulta_extrato
-     * @param bool $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+     * @param bool $flag_consulta_extrato Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
      * @return $this
      */
     public function setFlagConsultaExtrato($flag_consulta_extrato)

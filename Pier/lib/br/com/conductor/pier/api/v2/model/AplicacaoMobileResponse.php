@@ -154,19 +154,19 @@ class AplicacaoMobileResponse implements ArrayAccess
     protected $som;
     
     /**
-      * $icone Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * $icone Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
       * @var string
       */
     protected $icone;
     
     /**
-      * $certificado_base64 Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * $certificado_base64 Apresenta o certificado da aplica\u00E7\u00E3o.
       * @var string
       */
     protected $certificado_base64;
     
     /**
-      * $senha Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+      * $senha Apresenta a senha da aplica\u00E7\u00E3o.
       * @var string
       */
     protected $senha;
@@ -307,7 +307,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets icone
-     * @param string $icone Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $icone Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
      * @return $this
      */
     public function setIcone($icone)
@@ -328,7 +328,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets certificado_base64
-     * @param string $certificado_base64 Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $certificado_base64 Apresenta o certificado da aplica\u00E7\u00E3o.
      * @return $this
      */
     public function setCertificadoBase64($certificado_base64)
@@ -349,7 +349,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $senha Apresenta a senha da aplica\u00E7\u00E3o.
      * @return $this
      */
     public function setSenha($senha)

@@ -150,7 +150,7 @@ class OperacaoCredorResponse implements ArrayAccess
     protected $id;
     
     /**
-      * $id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+      * $id_operacao Apresenta o id da Opera\u00E7\u00E3o.
       * @var int
       */
     protected $id_operacao;
@@ -168,13 +168,13 @@ class OperacaoCredorResponse implements ArrayAccess
     protected $id_produto;
     
     /**
-      * $remuneracao_percentual Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+      * $remuneracao_percentual Remunera\u00E7\u00E3o Percentual.
       * @var Number
       */
     protected $remuneracao_percentual;
     
     /**
-      * $remuneracao_fixa Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+      * $remuneracao_fixa Remunera\u00E7\u00E3o Fixa.
       * @var Number
       */
     protected $remuneracao_fixa;
@@ -210,13 +210,13 @@ class OperacaoCredorResponse implements ArrayAccess
     protected $flag_taxa_fixada;
     
     /**
-      * $plano_minimo Plano m\u00C3\u00ADnimo da regra.
+      * $plano_minimo Plano m\u00EDnimo da regra.
       * @var int
       */
     protected $plano_minimo;
     
     /**
-      * $plano_maximo Plano m\u00C3\u00A1ximo da regra.
+      * $plano_maximo Plano m\u00E1ximo da regra.
       * @var int
       */
     protected $plano_maximo;
@@ -278,7 +278,7 @@ class OperacaoCredorResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+     * @param int $id_operacao Apresenta o id da Opera\u00E7\u00E3o.
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -341,7 +341,7 @@ class OperacaoCredorResponse implements ArrayAccess
   
     /**
      * Sets remuneracao_percentual
-     * @param Number $remuneracao_percentual Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+     * @param Number $remuneracao_percentual Remunera\u00E7\u00E3o Percentual.
      * @return $this
      */
     public function setRemuneracaoPercentual($remuneracao_percentual)
@@ -362,7 +362,7 @@ class OperacaoCredorResponse implements ArrayAccess
   
     /**
      * Sets remuneracao_fixa
-     * @param Number $remuneracao_fixa Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+     * @param Number $remuneracao_fixa Remunera\u00E7\u00E3o Fixa.
      * @return $this
      */
     public function setRemuneracaoFixa($remuneracao_fixa)
@@ -494,7 +494,7 @@ class OperacaoCredorResponse implements ArrayAccess
   
     /**
      * Sets plano_minimo
-     * @param int $plano_minimo Plano m\u00C3\u00ADnimo da regra.
+     * @param int $plano_minimo Plano m\u00EDnimo da regra.
      * @return $this
      */
     public function setPlanoMinimo($plano_minimo)
@@ -515,7 +515,7 @@ class OperacaoCredorResponse implements ArrayAccess
   
     /**
      * Sets plano_maximo
-     * @param int $plano_maximo Plano m\u00C3\u00A1ximo da regra.
+     * @param int $plano_maximo Plano m\u00E1ximo da regra.
      * @return $this
      */
     public function setPlanoMaximo($plano_maximo)

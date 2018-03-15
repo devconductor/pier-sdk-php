@@ -114,19 +114,19 @@ class MoedaResponse implements ArrayAccess
     protected $id;
     
     /**
-      * $codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda.
+      * $codigo_moeda C\u00F3digo identificador do tipo de moeda.
       * @var string
       */
     protected $codigo_moeda;
     
     /**
-      * $simbolo S\u00C3\u00ADmbolo da Moeda.
+      * $simbolo S\u00EDmbolo da Moeda.
       * @var string
       */
     protected $simbolo;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+      * $descricao Descri\u00E7\u00E3o do tipo da moeda.
       * @var string
       */
     protected $descricao;
@@ -179,7 +179,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda
-     * @param string $codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda.
+     * @param string $codigo_moeda C\u00F3digo identificador do tipo de moeda.
      * @return $this
      */
     public function setCodigoMoeda($codigo_moeda)
@@ -200,7 +200,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets simbolo
-     * @param string $simbolo S\u00C3\u00ADmbolo da Moeda.
+     * @param string $simbolo S\u00EDmbolo da Moeda.
      * @return $this
      */
     public function setSimbolo($simbolo)
@@ -221,7 +221,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+     * @param string $descricao Descri\u00E7\u00E3o do tipo da moeda.
      * @return $this
      */
     public function setDescricao($descricao)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OportunidadeAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades
+ * @description Representa\u00E7\u00E3o da resposta do recurso Oportunidades
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -144,19 +144,19 @@ class OportunidadeAUDResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador da oportunidade
+      * $id C\u00F3digo identificador da oportunidade
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+      * $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
       * @var int
       */
     protected $id_tipo_oportunidade;
     
     /**
-      * $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+      * $id_status_oportunidade C\u00F3digo identificador do status oportunidade
       * @var int
       */
     protected $id_status_oportunidade;
@@ -168,31 +168,31 @@ class OportunidadeAUDResponse implements ArrayAccess
     protected $data_cadastro;
     
     /**
-      * $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+      * $data_atualizacao Data atualiza\u00E7\u00E3o da oportunidade.
       * @var string
       */
     protected $data_atualizacao;
     
     /**
-      * $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+      * $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+      * $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade
       * @var string
       */
     protected $data_inicio_vigencia;
     
     /**
-      * $data_fim_vigencia fim da vig\u00C3\u00AAncia da oportunidade
+      * $data_fim_vigencia fim da vig\u00EAncia da oportunidade
       * @var string
       */
     protected $data_fim_vigencia;
     
     /**
-      * $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+      * $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
       * @var bool
       */
     protected $flag_ativo;
@@ -257,7 +257,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador da oportunidade
+     * @param int $id C\u00F3digo identificador da oportunidade
      * @return $this
      */
     public function setId($id)
@@ -278,7 +278,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_oportunidade
-     * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+     * @param int $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
      * @return $this
      */
     public function setIdTipoOportunidade($id_tipo_oportunidade)
@@ -299,7 +299,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id_status_oportunidade
-     * @param int $id_status_oportunidade C\u00C3\u00B3digo identificador do status oportunidade
+     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade
      * @return $this
      */
     public function setIdStatusOportunidade($id_status_oportunidade)
@@ -341,7 +341,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_atualizacao
-     * @param string $data_atualizacao Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+     * @param string $data_atualizacao Data atualiza\u00E7\u00E3o da oportunidade.
      * @return $this
      */
     public function setDataAtualizacao($data_atualizacao)
@@ -362,7 +362,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -383,7 +383,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_inicio_vigencia
-     * @param string $data_inicio_vigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade
      * @return $this
      */
     public function setDataInicioVigencia($data_inicio_vigencia)
@@ -404,7 +404,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets data_fim_vigencia
-     * @param string $data_fim_vigencia fim da vig\u00C3\u00AAncia da oportunidade
+     * @param string $data_fim_vigencia fim da vig\u00EAncia da oportunidade
      * @return $this
      */
     public function setDataFimVigencia($data_fim_vigencia)
@@ -425,7 +425,7 @@ class OportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

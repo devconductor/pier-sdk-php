@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoTemplatePersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+ * @description Representa\u00E7\u00E3o do template do documento.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -110,13 +110,13 @@ class DocumentoTemplatePersist implements ArrayAccess
     protected $id_tipo_template;
     
     /**
-      * $template Template para o conte\u00C3\u00BAdo do documento.
+      * $template Template para o conte\u00FAdo do documento.
       * @var string
       */
     protected $template;
     
     /**
-      * $integracoes Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+      * $integracoes Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
       * @var \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
       */
     protected $integracoes;
@@ -168,7 +168,7 @@ class DocumentoTemplatePersist implements ArrayAccess
   
     /**
      * Sets template
-     * @param string $template Template para o conte\u00C3\u00BAdo do documento.
+     * @param string $template Template para o conte\u00FAdo do documento.
      * @return $this
      */
     public function setTemplate($template)
@@ -189,7 +189,7 @@ class DocumentoTemplatePersist implements ArrayAccess
   
     /**
      * Sets integracoes
-     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $integracoes Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $integracoes Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
      * @return $this
      */
     public function setIntegracoes($integracoes)

@@ -112,7 +112,7 @@ class PromotorResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
       * @var int
       */
     protected $id;
@@ -124,19 +124,19 @@ class PromotorResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $data_cadastro Data da Inclus\u00C3\u00A3o
+      * $data_cadastro Data da Inclus\u00E3o
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+      * $id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
       * @var int
       */
     protected $id_usuario;
@@ -169,7 +169,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
      * @return $this
      */
     public function setId($id)
@@ -211,7 +211,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Data da Inclus\u00C3\u00A3o
+     * @param string $data_cadastro Data da Inclus\u00E3o
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -232,7 +232,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -253,7 +253,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id_usuario
-     * @param int $id_usuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+     * @param int $id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
      * @return $this
      */
     public function setIdUsuario($id_usuario)

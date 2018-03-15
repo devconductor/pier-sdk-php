@@ -148,7 +148,7 @@ class SocioAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
       * @var int
       */
     protected $id;
@@ -160,7 +160,7 @@ class SocioAprovadoResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
+      * $cpf N\u00FAmero do CPF, quando PF.
       * @var string
       */
     protected $cpf;
@@ -172,19 +172,19 @@ class SocioAprovadoResponse implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00C3\u00BAmero da Identidade.
+      * $numero_identidade N\u00FAmero da Identidade.
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+      * $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
       * @var string
       */
     protected $orgao_expedidor_identidade;
@@ -196,37 +196,37 @@ class SocioAprovadoResponse implements ArrayAccess
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+      * $data_emissao_identidade Data emiss\u00E3o da Identidade
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $estado_civil Estado civil do s\u00C3\u00B3cio
+      * $estado_civil Estado civil do s\u00F3cio
       * @var string
       */
     protected $estado_civil;
     
     /**
-      * $profissao Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+      * $profissao Profiss\u00E3o do s\u00F3cio
       * @var string
       */
     protected $profissao;
     
     /**
-      * $nacionalidade Nacionalidade do s\u00C3\u00B3cio
+      * $nacionalidade Nacionalidade do s\u00F3cio
       * @var string
       */
     protected $nacionalidade;
     
     /**
-      * $email Email do s\u00C3\u00B3cio
+      * $email Email do s\u00F3cio
       * @var string
       */
     protected $email;
     
     /**
-      * $telefones Informa os telefones do s\u00C3\u00B3cio
+      * $telefones Informa os telefones do s\u00F3cio
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]
       */
     protected $telefones;
@@ -268,7 +268,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
      * @return $this
      */
     public function setId($id)
@@ -310,7 +310,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @param string $cpf N\u00FAmero do CPF, quando PF.
      * @return $this
      */
     public function setCpf($cpf)
@@ -352,7 +352,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
      * @return $this
      */
     public function setSexo($sexo)
@@ -373,7 +373,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade.
+     * @param string $numero_identidade N\u00FAmero da Identidade.
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -394,7 +394,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -436,7 +436,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da Identidade
+     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -457,7 +457,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets estado_civil
-     * @param string $estado_civil Estado civil do s\u00C3\u00B3cio
+     * @param string $estado_civil Estado civil do s\u00F3cio
      * @return $this
      */
     public function setEstadoCivil($estado_civil)
@@ -478,7 +478,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets profissao
-     * @param string $profissao Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+     * @param string $profissao Profiss\u00E3o do s\u00F3cio
      * @return $this
      */
     public function setProfissao($profissao)
@@ -499,7 +499,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets nacionalidade
-     * @param string $nacionalidade Nacionalidade do s\u00C3\u00B3cio
+     * @param string $nacionalidade Nacionalidade do s\u00F3cio
      * @return $this
      */
     public function setNacionalidade($nacionalidade)
@@ -520,7 +520,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email do s\u00C3\u00B3cio
+     * @param string $email Email do s\u00F3cio
      * @return $this
      */
     public function setEmail($email)
@@ -541,7 +541,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones Informa os telefones do s\u00C3\u00B3cio
+     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones Informa os telefones do s\u00F3cio
      * @return $this
      */
     public function setTelefones($telefones)

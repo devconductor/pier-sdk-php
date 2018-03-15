@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoPayCadastroResponse Class Doc Comment
  *
  * @category    Class
- * @description Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para cadastro de cart\u00C3\u00A3o
+ * @description Resposta da requisi\u00E7\u00E3o para cadastro de cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,43 +132,43 @@ class CartaoPayCadastroResponse implements ArrayAccess
 
     
     /**
-      * $id Id do cart\u00C3\u00A3o
+      * $id Id do cart\u00E3o
       * @var int
       */
     protected $id;
     
     /**
-      * $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+      * $numero_cartao N\u00FAmero do cart\u00E3o real criptografado
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $data_validade_cartao Data de validade do cart\u00C3\u00A3o
+      * $data_validade_cartao Data de validade do cart\u00E3o
       * @var string
       */
     protected $data_validade_cartao;
     
     /**
-      * $nome_impresso Nome impresso no cart\u00C3\u00A3o criptografado
+      * $nome_impresso Nome impresso no cart\u00E3o criptografado
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $id_entidade Identificador do emissor do cart\u00C3\u00A3o
+      * $id_entidade Identificador do emissor do cart\u00E3o
       * @var int
       */
     protected $id_entidade;
     
     /**
-      * $nome_entidade Nome do emissor do cart\u00C3\u00A3o
+      * $nome_entidade Nome do emissor do cart\u00E3o
       * @var string
       */
     protected $nome_entidade;
     
     /**
-      * $status Status do cart\u00C3\u00A3o
+      * $status Status do cart\u00E3o
       * @var string
       */
     protected $status;
@@ -180,13 +180,13 @@ class CartaoPayCadastroResponse implements ArrayAccess
     protected $data_validade_chave_criptograma;
     
     /**
-      * $cvv CVV do cart\u00C3\u00A3o criptografado
+      * $cvv CVV do cart\u00E3o criptografado
       * @var string
       */
     protected $cvv;
     
     /**
-      * $chave_criptograma Chave de gera\u00C3\u00A7\u00C3\u00A3o de criptograma criptografada
+      * $chave_criptograma Chave de gera\u00E7\u00E3o de criptograma criptografada
       * @var string
       */
     protected $chave_criptograma;
@@ -224,7 +224,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do cart\u00C3\u00A3o
+     * @param int $id Id do cart\u00E3o
      * @return $this
      */
     public function setId($id)
@@ -245,7 +245,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+     * @param string $numero_cartao N\u00FAmero do cart\u00E3o real criptografado
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -266,7 +266,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets data_validade_cartao
-     * @param string $data_validade_cartao Data de validade do cart\u00C3\u00A3o
+     * @param string $data_validade_cartao Data de validade do cart\u00E3o
      * @return $this
      */
     public function setDataValidadeCartao($data_validade_cartao)
@@ -287,7 +287,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome impresso no cart\u00C3\u00A3o criptografado
+     * @param string $nome_impresso Nome impresso no cart\u00E3o criptografado
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -308,7 +308,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets id_entidade
-     * @param int $id_entidade Identificador do emissor do cart\u00C3\u00A3o
+     * @param int $id_entidade Identificador do emissor do cart\u00E3o
      * @return $this
      */
     public function setIdEntidade($id_entidade)
@@ -329,7 +329,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets nome_entidade
-     * @param string $nome_entidade Nome do emissor do cart\u00C3\u00A3o
+     * @param string $nome_entidade Nome do emissor do cart\u00E3o
      * @return $this
      */
     public function setNomeEntidade($nome_entidade)
@@ -350,7 +350,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do cart\u00C3\u00A3o
+     * @param string $status Status do cart\u00E3o
      * @return $this
      */
     public function setStatus($status)
@@ -395,7 +395,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets cvv
-     * @param string $cvv CVV do cart\u00C3\u00A3o criptografado
+     * @param string $cvv CVV do cart\u00E3o criptografado
      * @return $this
      */
     public function setCvv($cvv)
@@ -416,7 +416,7 @@ class CartaoPayCadastroResponse implements ArrayAccess
   
     /**
      * Sets chave_criptograma
-     * @param string $chave_criptograma Chave de gera\u00C3\u00A7\u00C3\u00A3o de criptograma criptografada
+     * @param string $chave_criptograma Chave de gera\u00E7\u00E3o de criptograma criptografada
      * @return $this
      */
     public function setChaveCriptograma($chave_criptograma)

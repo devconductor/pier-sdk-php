@@ -68,7 +68,7 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarEstagioCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Estagio Cart\u00E3o
      *
      */
     public function test_consultarEstagioCartaoUsingGET() {
@@ -78,7 +78,7 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarStatusCartaoUsingGET
      *
-     * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
+     * Apresenta os dados de um determinado Status Cart\u00E3o
      *
      */
     public function test_consultarStatusCartaoUsingGET() {
@@ -86,19 +86,9 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET27
-     *
-     * Apresenta os dados de um determinado Status Conta
-     *
-     */
-    public function test_consultarUsingGET27() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET28
      *
-     * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+     * Apresenta os dados de um determinado Status Conta
      *
      */
     public function test_consultarUsingGET28() {
@@ -106,9 +96,19 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarUsingGET29
+     *
+     * Apresenta os dados de um determinado Status Impress\u00E3o
+     *
+     */
+    public function test_consultarUsingGET29() {
+
+    }
+    
+    /**
      * Test case for listarEstagiosCartoesUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
+     * Lista as op\u00E7\u00F5es de Est\u00E1gios do Cart\u00E3o
      *
      */
     public function test_listarEstagiosCartoesUsingGET() {
@@ -118,7 +118,7 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarStatusCartoesUsingGET
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
+     * Lista as op\u00E7\u00F5es de Status do Cart\u00E3o
      *
      */
     public function test_listarStatusCartoesUsingGET() {
@@ -128,7 +128,7 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarTiposEventosTransacoesUsingGET
      *
-     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Lista os tipos de transa\u00E7\u00F5es
      *
      */
     public function test_listarTiposEventosTransacoesUsingGET() {
@@ -136,22 +136,22 @@ class StatusParametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET36
+     * Test case for listarUsingGET38
      *
      * Lista os Status Contas cadastrados para o Emissor
      *
      */
-    public function test_listarUsingGET36() {
+    public function test_listarUsingGET38() {
 
     }
     
     /**
-     * Test case for listarUsingGET37
+     * Test case for listarUsingGET39
      *
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     * Lista as op\u00E7\u00F5es de Status Impress\u00E3o
      *
      */
-    public function test_listarUsingGET37() {
+    public function test_listarUsingGET39() {
 
     }
     

@@ -116,7 +116,7 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
     protected $id_adquirente;
     
     /**
-      * $codigo_estabelecimento_adquirente Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+      * $codigo_estabelecimento_adquirente Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
       * @var string
       */
     protected $codigo_estabelecimento_adquirente;
@@ -189,7 +189,7 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
   
     /**
      * Sets codigo_estabelecimento_adquirente
-     * @param string $codigo_estabelecimento_adquirente Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+     * @param string $codigo_estabelecimento_adquirente Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
      * @return $this
      */
     public function setCodigoEstabelecimentoAdquirente($codigo_estabelecimento_adquirente)

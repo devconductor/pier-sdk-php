@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Cart\u00C3\u00A3o
+ * @description Objeto Cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -180,133 +180,133 @@ class CartaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.
       * @var int
       */
     protected $id;
     
     /**
-      * $flag_titular Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).
+      * $flag_titular Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).
       * @var int
       */
     protected $flag_titular;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence
+      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+      * $sequencial_cartao N\u00FAmero sequencial do cart\u00E3o
       * @var int
       */
     protected $sequencial_cartao;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.
+      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.
+      * $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.
       * @var int
       */
     protected $id_status;
     
     /**
-      * $data_status Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * $data_status Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
       * @var string
       */
     protected $data_status;
     
     /**
-      * $id_estagio C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+      * $id_estagio C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.
       * @var int
       */
     protected $id_estagio;
     
     /**
-      * $data_estagio Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+      * $data_estagio Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.
       * @var string
       */
     protected $data_estagio;
     
     /**
-      * $numero_bin N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.
+      * $numero_bin N\u00FAmero do bin do cart\u00E3o.
       * @var int
       */
     protected $numero_bin;
     
     /**
-      * $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+      * $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $numero_cartao_hash N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.
+      * $numero_cartao_hash N\u00FAmero do cart\u00E3o hash.
       * @var int
       */
     protected $numero_cartao_hash;
     
     /**
-      * $numero_cartao_criptografado N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.
+      * $numero_cartao_criptografado N\u00FAmero do cart\u00E3o criptografado.
       * @var string
       */
     protected $numero_cartao_criptografado;
     
     /**
-      * $data_emissao Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.
+      * $data_emissao Apresenta a data de emiss\u00E3o do cart\u00E3o.
       * @var string
       */
     protected $data_emissao;
     
     /**
-      * $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
+      * $data_validade Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.
       * @var string
       */
     protected $data_validade;
     
     /**
-      * $cartao_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).
+      * $cartao_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).
       * @var int
       */
     protected $cartao_virtual;
     
     /**
-      * $impressao_avulsa Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+      * $impressao_avulsa Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.
       * @var int
       */
     protected $impressao_avulsa;
     
     /**
-      * $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+      * $data_impressao Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.
       * @var string
       */
     protected $data_impressao;
     
     /**
-      * $nome_arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+      * $nome_arquivo_impressao Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.
       * @var string
       */
     protected $nome_arquivo_impressao;
     
     /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.
+      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+      * $nome_impresso Apresenta o nome impresso no cart\u00E3o.
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+      * $codigo_desbloqueio Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.
       * @var string
       */
     protected $codigo_desbloqueio;
@@ -356,7 +356,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.
      * @return $this
      */
     public function setId($id)
@@ -377,7 +377,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets flag_titular
-     * @param int $flag_titular Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).
+     * @param int $flag_titular Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).
      * @return $this
      */
     public function setFlagTitular($flag_titular)
@@ -398,7 +398,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -419,7 +419,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets sequencial_cartao
-     * @param int $sequencial_cartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+     * @param int $sequencial_cartao N\u00FAmero sequencial do cart\u00E3o
      * @return $this
      */
     public function setSequencialCartao($sequencial_cartao)
@@ -440,7 +440,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -461,7 +461,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status
-     * @param int $id_status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.
+     * @param int $id_status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.
      * @return $this
      */
     public function setIdStatus($id_status)
@@ -482,7 +482,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_status
-     * @param string $data_status Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_status Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataStatus($data_status)
@@ -503,7 +503,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_estagio
-     * @param int $id_estagio C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param int $id_estagio C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.
      * @return $this
      */
     public function setIdEstagio($id_estagio)
@@ -524,7 +524,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_estagio
-     * @param string $data_estagio Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param string $data_estagio Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.
      * @return $this
      */
     public function setDataEstagio($data_estagio)
@@ -545,7 +545,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_bin
-     * @param int $numero_bin N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.
+     * @param int $numero_bin N\u00FAmero do bin do cart\u00E3o.
      * @return $this
      */
     public function setNumeroBin($numero_bin)
@@ -566,7 +566,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+     * @param string $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -587,7 +587,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao_hash
-     * @param int $numero_cartao_hash N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.
+     * @param int $numero_cartao_hash N\u00FAmero do cart\u00E3o hash.
      * @return $this
      */
     public function setNumeroCartaoHash($numero_cartao_hash)
@@ -608,7 +608,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao_criptografado
-     * @param string $numero_cartao_criptografado N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.
+     * @param string $numero_cartao_criptografado N\u00FAmero do cart\u00E3o criptografado.
      * @return $this
      */
     public function setNumeroCartaoCriptografado($numero_cartao_criptografado)
@@ -629,7 +629,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_emissao
-     * @param string $data_emissao Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.
+     * @param string $data_emissao Apresenta a data de emiss\u00E3o do cart\u00E3o.
      * @return $this
      */
     public function setDataEmissao($data_emissao)
@@ -650,7 +650,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
+     * @param string $data_validade Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -671,7 +671,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets cartao_virtual
-     * @param int $cartao_virtual Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).
+     * @param int $cartao_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).
      * @return $this
      */
     public function setCartaoVirtual($cartao_virtual)
@@ -692,7 +692,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets impressao_avulsa
-     * @param int $impressao_avulsa Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+     * @param int $impressao_avulsa Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.
      * @return $this
      */
     public function setImpressaoAvulsa($impressao_avulsa)
@@ -713,7 +713,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets data_impressao
-     * @param string $data_impressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param string $data_impressao Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.
      * @return $this
      */
     public function setDataImpressao($data_impressao)
@@ -734,7 +734,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets nome_arquivo_impressao
-     * @param string $nome_arquivo_impressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+     * @param string $nome_arquivo_impressao Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.
      * @return $this
      */
     public function setNomeArquivoImpressao($nome_arquivo_impressao)
@@ -755,7 +755,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -776,7 +776,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+     * @param string $nome_impresso Apresenta o nome impresso no cart\u00E3o.
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -797,7 +797,7 @@ class CartaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_desbloqueio
-     * @param string $codigo_desbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+     * @param string $codigo_desbloqueio Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.
      * @return $this
      */
     public function setCodigoDesbloqueio($codigo_desbloqueio)

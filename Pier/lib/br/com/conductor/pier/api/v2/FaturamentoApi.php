@@ -199,7 +199,7 @@ class FaturamentoApi
     /**
      * cadastrarFaturamentoPorContaUsingPOST
      *
-     * Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+     * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
      *
      * @param \br.com.conductor.pier.api.v2.model\TipoFaturamentoPorContaPersist $tipo_faturamento_por_conta_persist tipoFaturamentoPorContaPersist (required)
      * @return \br.com.conductor.pier.api.v2.model\TipoFaturamentoPorContaResponse
@@ -215,7 +215,7 @@ class FaturamentoApi
     /**
      * cadastrarFaturamentoPorContaUsingPOSTWithHttpInfo
      *
-     * Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+     * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
      *
      * @param \br.com.conductor.pier.api.v2.model\TipoFaturamentoPorContaPersist $tipo_faturamento_por_conta_persist tipoFaturamentoPorContaPersist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoFaturamentoPorContaResponse, HTTP status code, HTTP response headers (array of strings)
@@ -476,7 +476,7 @@ class FaturamentoApi
     /**
      * desativarFaturamentoPorContaUsingPOST
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
      *
      * @param int $id Id (required)
      * @param string $modificado_por modificadoPor (required)
@@ -493,7 +493,7 @@ class FaturamentoApi
     /**
      * desativarFaturamentoPorContaUsingPOSTWithHttpInfo
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
      *
      * @param int $id Id (required)
      * @param string $modificado_por modificadoPor (required)
@@ -581,7 +581,7 @@ class FaturamentoApi
     /**
      * desativarTipoFaturamentoUsingPOST
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
      *
      * @param int $id Id (required)
      * @return \br.com.conductor.pier.api.v2.model\TipoFaturamentoResponse
@@ -597,7 +597,7 @@ class FaturamentoApi
     /**
      * desativarTipoFaturamentoUsingPOSTWithHttpInfo
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
      *
      * @param int $id Id (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoFaturamentoResponse, HTTP status code, HTTP response headers (array of strings)
@@ -676,18 +676,18 @@ class FaturamentoApi
     /**
      * listarFaturamentoPorContaUsingGET
      *
-     * Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+     * Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_faturamento_por_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)
-     * @param bool $status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)
-     * @param string $data_hora_inclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param string $modificado_por Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_faturamento_por_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)
+     * @param bool $status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)
+     * @param string $data_hora_inclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $modificado_por Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoFaturamentoPorContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -701,18 +701,18 @@ class FaturamentoApi
     /**
      * listarFaturamentoPorContaUsingGETWithHttpInfo
      *
-     * Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+     * Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_faturamento_por_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)
-     * @param bool $status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)
-     * @param string $data_hora_inclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
-     * @param string $modificado_por Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_faturamento_por_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)
+     * @param bool $status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)
+     * @param string $data_hora_inclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)
+     * @param string $modificado_por Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoFaturamentoPorContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -823,13 +823,13 @@ class FaturamentoApi
      *
      * Lista Tipos de Faturamento
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)
-     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)
-     * @param int $id_convenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de faturamento. (optional)
+     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)
+     * @param int $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoFaturamentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -845,13 +845,13 @@ class FaturamentoApi
      *
      * Lista Tipos de Faturamento
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)
-     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)
-     * @param int $id_convenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de faturamento. (optional)
+     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)
+     * @param int $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoFaturamentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

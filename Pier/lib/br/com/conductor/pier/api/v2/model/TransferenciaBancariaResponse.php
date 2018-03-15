@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransferenciaBancariaResponse Class Doc Comment
  *
  * @category    Class
- * @description Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+ * @description Transfer\u00EAncia banc\u00E1ria
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -238,25 +238,25 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $nsuorigem;
     
     /**
-      * $id_autorizacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)
+      * $id_autorizacao C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
       * @var int
       */
     protected $id_autorizacao;
     
     /**
-      * $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)
+      * $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
       * @var int
       */
     protected $id_transferencia;
     
     /**
-      * $codigo_autorizacao C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o
+      * $codigo_autorizacao C\u00F3digo da autoriza\u00E7\u00E3o
       * @var string
       */
     protected $codigo_autorizacao;
     
     /**
-      * $data_autorizacao Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+      * $data_autorizacao Data da autoriza\u00E7\u00E3o
       * @var string
       */
     protected $data_autorizacao;
@@ -274,7 +274,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $valor;
     
     /**
-      * $id_operacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)
+      * $id_operacao C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
       * @var int
       */
     protected $id_operacao;
@@ -286,25 +286,25 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $terminal;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+      * $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $data_compra Data da transfer\u00C3\u00AAncia
+      * $data_compra Data da transfer\u00EAncia
       * @var string
       */
     protected $data_compra;
     
     /**
-      * $valor_compra Valor da transfer\u00C3\u00AAncia
+      * $valor_compra Valor da transfer\u00EAncia
       * @var Number
       */
     protected $valor_compra;
     
     /**
-      * $numero_parcelas N\u00C3\u00BAmero de parcelas
+      * $numero_parcelas N\u00FAmero de parcelas
       * @var int
       */
     protected $numero_parcelas;
@@ -316,7 +316,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $valor_parcela;
     
     /**
-      * $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)
+      * $id_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
       * @var int
       */
     protected $id_estabelecimento;
@@ -328,7 +328,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $data_movimento;
     
     /**
-      * $valor_contrato Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+      * $valor_contrato Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
       * @var Number
       */
     protected $valor_contrato;
@@ -352,7 +352,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $valor_tac;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
       * @var int
       */
     protected $id_conta;
@@ -370,13 +370,13 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $data_vencimento_real;
     
     /**
-      * $data_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+      * $data_vencimento_padrao Dia do vencimento padr\u00E3o da fatura
       * @var string
       */
     protected $data_vencimento_padrao;
     
     /**
-      * $id_conta_portador C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+      * $id_conta_portador C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
       * @var int
       */
     protected $id_conta_portador;
@@ -394,31 +394,31 @@ class TransferenciaBancariaResponse implements ArrayAccess
     protected $valor_taxa_saque;
     
     /**
-      * $banco C\u00C3\u00B3digo do Banco
+      * $banco C\u00F3digo do Banco
       * @var int
       */
     protected $banco;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+      * $numero_agencia N\u00FAmero da Ag\u00EAncia
       * @var string
       */
     protected $numero_agencia;
     
     /**
-      * $digito_agencia D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+      * $digito_agencia D\u00EDgito da Ag\u00EAncia
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $numero_conta N\u00C3\u00BAmero da Conta
+      * $numero_conta N\u00FAmero da Conta
       * @var string
       */
     protected $numero_conta;
     
     /**
-      * $digito_conta D\u00C3\u00ADgito da Conta
+      * $digito_conta D\u00EDgito da Conta
       * @var string
       */
     protected $digito_conta;
@@ -520,7 +520,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_autorizacao
-     * @param int $id_autorizacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)
+     * @param int $id_autorizacao C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
      * @return $this
      */
     public function setIdAutorizacao($id_autorizacao)
@@ -541,7 +541,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_transferencia
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)
+     * @param int $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
      * @return $this
      */
     public function setIdTransferencia($id_transferencia)
@@ -562,7 +562,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets codigo_autorizacao
-     * @param string $codigo_autorizacao C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o
+     * @param string $codigo_autorizacao C\u00F3digo da autoriza\u00E7\u00E3o
      * @return $this
      */
     public function setCodigoAutorizacao($codigo_autorizacao)
@@ -583,7 +583,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets data_autorizacao
-     * @param string $data_autorizacao Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+     * @param string $data_autorizacao Data da autoriza\u00E7\u00E3o
      * @return $this
      */
     public function setDataAutorizacao($data_autorizacao)
@@ -646,7 +646,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)
+     * @param int $id_operacao C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -688,7 +688,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+     * @param int $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -709,7 +709,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param string $data_compra Data da transfer\u00C3\u00AAncia
+     * @param string $data_compra Data da transfer\u00EAncia
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -730,7 +730,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets valor_compra
-     * @param Number $valor_compra Valor da transfer\u00C3\u00AAncia
+     * @param Number $valor_compra Valor da transfer\u00EAncia
      * @return $this
      */
     public function setValorCompra($valor_compra)
@@ -751,7 +751,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00C3\u00BAmero de parcelas
+     * @param int $numero_parcelas N\u00FAmero de parcelas
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -793,7 +793,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)
+     * @param int $id_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -835,7 +835,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets valor_contrato
-     * @param Number $valor_contrato Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+     * @param Number $valor_contrato Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
      * @return $this
      */
     public function setValorContrato($valor_contrato)
@@ -919,7 +919,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -982,7 +982,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_padrao
-     * @param string $data_vencimento_padrao Dia do vencimento padr\u00C3\u00A3o da fatura
+     * @param string $data_vencimento_padrao Dia do vencimento padr\u00E3o da fatura
      * @return $this
      */
     public function setDataVencimentoPadrao($data_vencimento_padrao)
@@ -1003,7 +1003,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets id_conta_portador
-     * @param int $id_conta_portador C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+     * @param int $id_conta_portador C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
      * @return $this
      */
     public function setIdContaPortador($id_conta_portador)
@@ -1066,7 +1066,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00C3\u00B3digo do Banco
+     * @param int $banco C\u00F3digo do Banco
      * @return $this
      */
     public function setBanco($banco)
@@ -1087,7 +1087,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param string $numero_agencia N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+     * @param string $numero_agencia N\u00FAmero da Ag\u00EAncia
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -1108,7 +1108,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+     * @param string $digito_agencia D\u00EDgito da Ag\u00EAncia
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -1129,7 +1129,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets numero_conta
-     * @param string $numero_conta N\u00C3\u00BAmero da Conta
+     * @param string $numero_conta N\u00FAmero da Conta
      * @return $this
      */
     public function setNumeroConta($numero_conta)
@@ -1150,7 +1150,7 @@ class TransferenciaBancariaResponse implements ArrayAccess
   
     /**
      * Sets digito_conta
-     * @param string $digito_conta D\u00C3\u00ADgito da Conta
+     * @param string $digito_conta D\u00EDgito da Conta
      * @return $this
      */
     public function setDigitoConta($digito_conta)

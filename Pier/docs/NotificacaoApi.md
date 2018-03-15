@@ -4,41 +4,41 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarConfiguracaoUsingPUT**](NotificacaoApi.md#alterarConfiguracaoUsingPUT) | **PUT** /api/configuracoes-email/{id} | Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-[**alterarTemplateNotificacaoUsingPUT**](NotificacaoApi.md#alterarTemplateNotificacaoUsingPUT) | **PUT** /api/templates-notificacoes/{id} | Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+[**alterarConfiguracaoUsingPUT**](NotificacaoApi.md#alterarConfiguracaoUsingPUT) | **PUT** /api/configuracoes-email/{id} | Altera configura\u00E7\u00F5es de E-mail
+[**alterarTemplateNotificacaoUsingPUT**](NotificacaoApi.md#alterarTemplateNotificacaoUsingPUT) | **PUT** /api/templates-notificacoes/{id} | Alterar template de notifica\u00E7\u00E3o
 [**atualizarSMSUsingPOST**](NotificacaoApi.md#atualizarSMSUsingPOST) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
-[**consultarConfiguracaoUsingGET**](NotificacaoApi.md#consultarConfiguracaoUsingGET) | **GET** /api/configuracoes-email/{id} | Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
-[**consultarPorEmailUsingGET**](NotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
-[**consultarPorSMSUsingGET**](NotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
-[**consultarTemplateNotificacaoUsingGET**](NotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**gerarTokenEMAILUsingPOST**](NotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
-[**gerarTokenSMSUsingPOST**](NotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
-[**listarConfiguracaoUsingGET**](NotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
-[**listarPorEmailUsingGET**](NotificacaoApi.md#listarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
-[**listarPorSMSUsingGET**](NotificacaoApi.md#listarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+[**consultarConfiguracaoUsingGET**](NotificacaoApi.md#consultarConfiguracaoUsingGET) | **GET** /api/configuracoes-email/{id} | Consulta configura\u00E7\u00E3o de E-mail
+[**consultarPorEmailUsingGET**](NotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | Consulta c\u00F3digo de seguran\u00E7a E-mail
+[**consultarPorSMSUsingGET**](NotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | Consulta c\u00F3digo de seguran\u00E7a SMS
+[**consultarTemplateNotificacaoUsingGET**](NotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | Consulta template de notifica\u00E7\u00E3o
+[**gerarTokenEMAILUsingPOST**](NotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
+[**gerarTokenSMSUsingPOST**](NotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
+[**listarConfiguracaoUsingGET**](NotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | Lista configura\u00E7\u00F5es de E-mails
+[**listarPorEmailUsingGET**](NotificacaoApi.md#listarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email | Lista os c\u00F3digos de seguran\u00E7a E-Mail
+[**listarPorSMSUsingGET**](NotificacaoApi.md#listarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms | Lista os c\u00F3digos de seguran\u00E7a SMS
 [**listarPushUsingGET**](NotificacaoApi.md#listarPushUsingGET) | **GET** /api/notificacoes/push | Listar Push
 [**listarSMSUsingGET**](NotificacaoApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
-[**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
-[**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
-[**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-[**reenviarTokenSMSUsingPOST**](NotificacaoApi.md#reenviarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/reenviar-codigo-seguranca | Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+[**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00E7\u00F5es
+[**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00E7\u00E3o
+[**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00E7\u00E3o por email
+[**reenviarTokenSMSUsingPOST**](NotificacaoApi.md#reenviarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/reenviar-codigo-seguranca | Reenviar c\u00F3digo de seguran\u00E7a por sms
 [**responderSMSGetUsingGET**](NotificacaoApi.md#responderSMSGetUsingGET) | **GET** /api/notificacoes/sms/responder | Responder SMS
-[**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+[**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00E7\u00F5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
 [**salvarPushGCMUsingPOST**](NotificacaoApi.md#salvarPushGCMUsingPOST) | **POST** /api/notificacoes/push/gcm | Enviar Push GCM
 [**salvarPushUsingPOST**](NotificacaoApi.md#salvarPushUsingPOST) | **POST** /api/notificacoes/push/apns | Enviar Push APNS
 [**salvarSMSUsingPOST**](NotificacaoApi.md#salvarSMSUsingPOST) | **POST** /api/notificacoes/sms | Enviar SMS
-[**salvarTemplateNotificacaoUsingPOST**](NotificacaoApi.md#salvarTemplateNotificacaoUsingPOST) | **POST** /api/templates-notificacoes | Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**validarTokenEMAILUsingPOST**](NotificacaoApi.md#validarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
-[**validarTokenSMSUsingPOST**](NotificacaoApi.md#validarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+[**salvarTemplateNotificacaoUsingPOST**](NotificacaoApi.md#salvarTemplateNotificacaoUsingPOST) | **POST** /api/templates-notificacoes | Salva template de notifica\u00E7\u00E3o
+[**validarTokenEMAILUsingPOST**](NotificacaoApi.md#validarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/validar-codigo-seguranca | Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
+[**validarTokenSMSUsingPOST**](NotificacaoApi.md#validarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00F3digo de seguran\u00E7a enviado por sms
 
 
 # **alterarConfiguracaoUsingPUT**
 > \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse alterarConfiguracaoUsingPUT($id, $persist)
 
-Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+Altera configura\u00E7\u00F5es de E-mail
 
-Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
 
 ### Example 
 ```php
@@ -46,7 +46,7 @@ Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
 $persist = new \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist(); // \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist | persist
 
 try { 
@@ -62,7 +62,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. | 
  **persist** | [**\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist**](\br.com.conductor.pier.api.v2.model\ConfiguracaoEmailPersist.md)| persist | 
 
 ### Return type
@@ -83,9 +83,9 @@ No authorization required
 # **alterarTemplateNotificacaoUsingPUT**
 > \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao)
 
-Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+Alterar template de notifica\u00E7\u00E3o
 
-Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
 
 ### Example 
 ```php
@@ -93,14 +93,14 @@ Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
 $conteudo = "conteudo_example"; // string | Template HTML
-$id_configuracao_email = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+$id_configuracao_email = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
 $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
-$tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+$tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00E7\u00E3o.
 $remetente = "remetente_example"; // string | Remetente
-$assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-$template_padrao = true; // bool | Template Padr\u00C3\u00A3o.
+$assunto = "assunto_example"; // string | Assunto da Notificaca\u00E7\u00E3o.
+$template_padrao = true; // bool | Template Padr\u00E3o.
 
 try { 
     $result = $api_instance->alterarTemplateNotificacaoUsingPUT($id, $conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao);
@@ -115,14 +115,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. | 
  **conteudo** | **string**| Template HTML | 
- **id_configuracao_email** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
+ **id_configuracao_email** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. | [optional] 
  **tipo_layout** | **string**| Tipo do layout. | [optional] 
- **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **tipo_notificacao** | **string**| Tipo da notifica\u00E7\u00E3o. | [optional] 
  **remetente** | **string**| Remetente | [optional] 
- **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **template_padrao** | **bool**| Template Padr\u00C3\u00A3o. | [optional] 
+ **assunto** | **string**| Assunto da Notificaca\u00E7\u00E3o. | [optional] 
+ **template_padrao** | **bool**| Template Padr\u00E3o. | [optional] 
 
 ### Return type
 
@@ -152,7 +152,7 @@ Esse recurso permite atualizar o status do SMS do emissor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$nsu = "nsu_example"; // string | Seu n\u00C3\u00BAmero
+$nsu = "nsu_example"; // string | Seu n\u00FAmero
 $status = "status_example"; // string | Status
 $data = "data_example"; // string | Data
 $texto_status = "texto_status_example"; // string | TextoStatus
@@ -171,7 +171,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **string**| Seu n\u00C3\u00BAmero | [optional] 
+ **nsu** | **string**| Seu n\u00FAmero | [optional] 
  **status** | **string**| Status | [optional] 
  **data** | **string**| Data | [optional] 
  **texto_status** | **string**| TextoStatus | [optional] 
@@ -195,9 +195,9 @@ No authorization required
 # **consultarConfiguracaoUsingGET**
 > \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse consultarConfiguracaoUsingGET($id)
 
-Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+Consulta configura\u00E7\u00E3o de E-mail
 
-Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
 
 ### Example 
 ```php
@@ -205,7 +205,7 @@ Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
 
 try { 
     $result = $api_instance->consultarConfiguracaoUsingGET($id);
@@ -220,7 +220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. | 
 
 ### Return type
 
@@ -240,9 +240,9 @@ No authorization required
 # **consultarPorEmailUsingGET**
 > \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse consultarPorEmailUsingGET($id)
 
-Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+Consulta c\u00F3digo de seguran\u00E7a E-mail
 
-Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
 
 ### Example 
 ```php
@@ -250,7 +250,7 @@ Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-ma
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
 
 try { 
     $result = $api_instance->consultarPorEmailUsingGET($id);
@@ -265,7 +265,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. | 
 
 ### Return type
 
@@ -285,9 +285,9 @@ No authorization required
 # **consultarPorSMSUsingGET**
 > \br.com.conductor.pier.api.v2.model\CodigoSegurancaResponse consultarPorSMSUsingGET($id)
 
-Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+Consulta c\u00F3digo de seguran\u00E7a SMS
 
-Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
 
 ### Example 
 ```php
@@ -295,7 +295,7 @@ Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
 
 try { 
     $result = $api_instance->consultarPorSMSUsingGET($id);
@@ -310,7 +310,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail. | 
 
 ### Return type
 
@@ -330,9 +330,9 @@ No authorization required
 # **consultarTemplateNotificacaoUsingGET**
 > \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse consultarTemplateNotificacaoUsingGET($id)
 
-Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+Consulta template de notifica\u00E7\u00E3o
 
-Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
 
 ### Example 
 ```php
@@ -340,7 +340,7 @@ Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$id = 789; // int | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+$id = 789; // int | C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
 
 try { 
     $result = $api_instance->consultarTemplateNotificacaoUsingGET($id);
@@ -355,7 +355,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail. | 
+ **id** | **int**| C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail. | 
 
 ### Return type
 
@@ -375,9 +375,9 @@ No authorization required
 # **gerarTokenEMAILUsingPOST**
 > string gerarTokenEMAILUsingPOST($email)
 
-Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
 
-Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
 
 ### Example 
 ```php
@@ -420,9 +420,9 @@ No authorization required
 # **gerarTokenSMSUsingPOST**
 > string gerarTokenSMSUsingPOST($persist)
 
-Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
 
-Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
 
 ### Example 
 ```php
@@ -465,9 +465,9 @@ No authorization required
 # **listarConfiguracaoUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageConfiguracaoEmailResponse listarConfiguracaoUsingGET($sort, $page, $limit)
 
-Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+Lista configura\u00E7\u00F5es de E-mails
 
-Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
 
 ### Example 
 ```php
@@ -475,9 +475,9 @@ Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarConfiguracaoUsingGET($sort, $page, $limit);
@@ -492,9 +492,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -514,9 +514,9 @@ No authorization required
 # **listarPorEmailUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse listarPorEmailUsingGET($sort, $page, $limit)
 
-Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+Lista os c\u00F3digos de seguran\u00E7a E-Mail
 
-Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
 
 ### Example 
 ```php
@@ -524,9 +524,9 @@ Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarPorEmailUsingGET($sort, $page, $limit);
@@ -541,9 +541,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -563,9 +563,9 @@ No authorization required
 # **listarPorSMSUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageCodigoSegurancaResponse listarPorSMSUsingGET($sort, $page, $limit)
 
-Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+Lista os c\u00F3digos de seguran\u00E7a SMS
 
-Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
 
 ### Example 
 ```php
@@ -573,9 +573,9 @@ Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarPorSMSUsingGET($sort, $page, $limit);
@@ -590,9 +590,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -622,14 +622,14 @@ Esse recurso permite listar os Pushes do emissor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 $data_envio = "data_envio_example"; // string | Apresenta a data e em que o registro foi enviado para o dispositivo.
-$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-$status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00E7\u00E3o
+$status = "status_example"; // string | Status de envio da notifica\u00E7\u00E3o
 $plataforma = "plataforma_example"; // string | Plataforma de Push notifications.
-$protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+$protocolo = "protocolo_example"; // string | N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
 
 try { 
     $result = $api_instance->listarPushUsingGET($sort, $page, $limit, $data_envio, $tipo_evento, $status, $plataforma, $protocolo);
@@ -644,14 +644,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **data_envio** | **string**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
- **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00E7\u00E3o | [optional] 
+ **status** | **string**| Status de envio da notifica\u00E7\u00E3o | [optional] 
  **plataforma** | **string**| Plataforma de Push notifications. | [optional] 
- **protocolo** | **string**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
+ **protocolo** | **string**| N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es | [optional] 
 
 ### Return type
 
@@ -681,15 +681,15 @@ Esse recurso permite listar os SMS do emissor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-$data_inclusao = "data_inclusao_example"; // string | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-$status = "status_example"; // string | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
-$operadora = "operadora_example"; // string | Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
-$protocolo = "protocolo_example"; // string | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-$nsu = 789; // int | Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+$data_inclusao = "data_inclusao_example"; // string | Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+$tipo_evento = "tipo_evento_example"; // string | Nome do tipoEvento da notifica\u00E7\u00E3o
+$status = "status_example"; // string | Status de envio da notifica\u00E7\u00E3o
+$operadora = "operadora_example"; // string | Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada.
+$protocolo = "protocolo_example"; // string | N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+$nsu = 789; // int | Apresenta o nsu da notifica\u00E7\u00E3o
 
 try { 
     $result = $api_instance->listarSMSUsingGET($sort, $page, $limit, $data_inclusao, $tipo_evento, $status, $operadora, $protocolo, $nsu);
@@ -704,15 +704,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **data_inclusao** | **string**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
- **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **status** | **string**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **operadora** | **string**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 
- **protocolo** | **string**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
- **nsu** | **int**| Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **data_inclusao** | **string**| Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado | [optional] 
+ **tipo_evento** | **string**| Nome do tipoEvento da notifica\u00E7\u00E3o | [optional] 
+ **status** | **string**| Status de envio da notifica\u00E7\u00E3o | [optional] 
+ **operadora** | **string**| Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. | [optional] 
+ **protocolo** | **string**| N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es | [optional] 
+ **nsu** | **int**| Apresenta o nsu da notifica\u00E7\u00E3o | [optional] 
 
 ### Return type
 
@@ -732,9 +732,9 @@ No authorization required
 # **listarTemplateNotificacaoUsingGET**
 > \br.com.conductor.pier.api.v2.model\PageTemplateNotificacaoResponse listarTemplateNotificacaoUsingGET($sort, $page, $limit)
 
-Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+Lista templates de notifica\u00E7\u00F5es
 
-Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+Esse recurso permite listar templates notifica\u00E7\u00F5es.
 
 ### Example 
 ```php
@@ -742,9 +742,9 @@ Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarTemplateNotificacaoUsingGET($sort, $page, $limit);
@@ -759,9 +759,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -781,9 +781,9 @@ No authorization required
 # **listarTiposLayoutsUsingGET**
 > object[] listarTiposLayoutsUsingGET()
 
-Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+Lista os tipos templates de notifica\u00E7\u00E3o
 
-Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
 
 ### Example 
 ```php
@@ -822,9 +822,9 @@ No authorization required
 # **notificacaoEmailUsingPOST**
 > object notificacaoEmailUsingPOST($request)
 
-Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+Enviar notifica\u00E7\u00E3o por email
 
-Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
 
 ### Example 
 ```php
@@ -867,9 +867,9 @@ No authorization required
 # **reenviarTokenSMSUsingPOST**
 > string reenviarTokenSMSUsingPOST($persist)
 
-Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+Reenviar c\u00F3digo de seguran\u00E7a por sms
 
-Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
 
 ### Example 
 ```php
@@ -914,7 +914,7 @@ No authorization required
 
 Responder SMS
 
-Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
 
 ### Example 
 ```php
@@ -922,7 +922,7 @@ Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
-$nsu = "nsu_example"; // string | Seu n\u00C3\u00BAmero
+$nsu = "nsu_example"; // string | Seu n\u00FAmero
 $data = "data_example"; // string | Data
 $resposta = "resposta_example"; // string | TextoStatus
 
@@ -939,7 +939,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **string**| Seu n\u00C3\u00BAmero | [optional] 
+ **nsu** | **string**| Seu n\u00FAmero | [optional] 
  **data** | **string**| Data | [optional] 
  **resposta** | **string**| TextoStatus | [optional] 
 
@@ -961,9 +961,9 @@ No authorization required
 # **salvarConfiguracaoUsingPOST**
 > \br.com.conductor.pier.api.v2.model\ConfiguracaoEmailResponse salvarConfiguracaoUsingPOST($persist)
 
-Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+Salva configura\u00E7\u00F5es de E-mail
 
-Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+Esse recurso salvar configura\u00E7\u00F5es de E-mail.
 
 ### Example 
 ```php
@@ -1008,7 +1008,7 @@ No authorization required
 
 Enviar Push FCM
 
-Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
 
 ### Example 
 ```php
@@ -1053,7 +1053,7 @@ No authorization required
 
 Enviar Push GCM
 
-Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
 
 ### Example 
 ```php
@@ -1098,7 +1098,7 @@ No authorization required
 
 Enviar Push APNS
 
-Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
 
 ### Example 
 ```php
@@ -1186,9 +1186,9 @@ No authorization required
 # **salvarTemplateNotificacaoUsingPOST**
 > \br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao)
 
-Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+Salva template de notifica\u00E7\u00E3o
 
-Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+Esse recurso salvar template notifica\u00E7\u00F5e.
 
 ### Example 
 ```php
@@ -1197,12 +1197,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\NotificacaoApi();
 $conteudo = "conteudo_example"; // string | Template HTML
-$id_configuracao_email = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+$id_configuracao_email = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
 $tipo_layout = "tipo_layout_example"; // string | Tipo do layout.
-$tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+$tipo_notificacao = "tipo_notificacao_example"; // string | Tipo da notifica\u00E7\u00E3o.
 $remetente = "remetente_example"; // string | Remetente
-$assunto = "assunto_example"; // string | Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-$template_padrao = true; // bool | Template Padr\u00C3\u00A3o.
+$assunto = "assunto_example"; // string | Assunto da Notificaca\u00E7\u00E3o.
+$template_padrao = true; // bool | Template Padr\u00E3o.
 
 try { 
     $result = $api_instance->salvarTemplateNotificacaoUsingPOST($conteudo, $id_configuracao_email, $tipo_layout, $tipo_notificacao, $remetente, $assunto, $template_padrao);
@@ -1218,12 +1218,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conteudo** | **string**| Template HTML | 
- **id_configuracao_email** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
+ **id_configuracao_email** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. | [optional] 
  **tipo_layout** | **string**| Tipo do layout. | [optional] 
- **tipo_notificacao** | **string**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **tipo_notificacao** | **string**| Tipo da notifica\u00E7\u00E3o. | [optional] 
  **remetente** | **string**| Remetente | [optional] 
- **assunto** | **string**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **template_padrao** | **bool**| Template Padr\u00C3\u00A3o. | [optional] 
+ **assunto** | **string**| Assunto da Notificaca\u00E7\u00E3o. | [optional] 
+ **template_padrao** | **bool**| Template Padr\u00E3o. | [optional] 
 
 ### Return type
 
@@ -1243,9 +1243,9 @@ No authorization required
 # **validarTokenEMAILUsingPOST**
 > string validarTokenEMAILUsingPOST($request)
 
-Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
 
-Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
 
 ### Example 
 ```php
@@ -1288,9 +1288,9 @@ No authorization required
 # **validarTokenSMSUsingPOST**
 > string validarTokenSMSUsingPOST($request)
 
-Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+Validar c\u00F3digo de seguran\u00E7a enviado por sms
 
-Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
 
 ### Example 
 ```php

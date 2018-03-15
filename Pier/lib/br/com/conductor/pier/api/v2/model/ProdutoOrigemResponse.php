@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ProdutoOrigemResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos produtosOrigem do recurso de Origem Comercial
+ * @description Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class ProdutoOrigemResponse implements ArrayAccess
 
     
     /**
-      * $id_produto C\u00C3\u00B3digo identificador do produto
+      * $id_produto C\u00F3digo identificador do produto
       * @var int
       */
     protected $id_produto;
@@ -125,7 +125,7 @@ class ProdutoOrigemResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo identificador do produto
+     * @param int $id_produto C\u00F3digo identificador do produto
      * @return $this
      */
     public function setIdProduto($id_produto)

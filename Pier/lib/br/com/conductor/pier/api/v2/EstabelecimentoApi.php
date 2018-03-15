@@ -96,7 +96,7 @@ class EstabelecimentoApi
      *
      * Alterar Origem Comercial
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial (required)
      * @param \br.com.conductor.pier.api.v2.model\OrigemComercialUpdate $origem_comercial_update origemComercialUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\OrigemComercialResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -113,7 +113,7 @@ class EstabelecimentoApi
      *
      * Alterar Origem Comercial
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial (required)
      * @param \br.com.conductor.pier.api.v2.model\OrigemComercialUpdate $origem_comercial_update origemComercialUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -201,7 +201,7 @@ class EstabelecimentoApi
      *
      * Altera uma Maquineta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\MaquinetaUpdate $maquineta_update maquinetaUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\MaquinetaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -218,7 +218,7 @@ class EstabelecimentoApi
      *
      * Altera uma Maquineta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\MaquinetaUpdate $maquineta_update maquinetaUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\MaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -304,9 +304,9 @@ class EstabelecimentoApi
     /**
      * alterarUsingPUT11
      *
-     * Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Altera uma Regra Opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\OperacaoCredorUpdate $operacao_credor_update operacaoCredorUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -321,9 +321,9 @@ class EstabelecimentoApi
     /**
      * alterarUsingPUT11WithHttpInfo
      *
-     * Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Altera uma Regra Opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\OperacaoCredorUpdate $operacao_credor_update operacaoCredorUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -411,16 +411,14 @@ class EstabelecimentoApi
      *
      * Altera um Telefone do estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). (required)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (required)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (required)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoUpdate $telefone_estabelecimento_update telefoneEstabelecimentoUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT15($id, $ddd, $telefone, $ramal = null)
+    public function alterarUsingPUT15($id, $telefone_estabelecimento_update)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT15WithHttpInfo ($id, $ddd, $telefone, $ramal);
+        list($response, $statusCode, $httpHeader) = $this->alterarUsingPUT15WithHttpInfo ($id, $telefone_estabelecimento_update);
         return $response; 
     }
 
@@ -430,27 +428,21 @@ class EstabelecimentoApi
      *
      * Altera um Telefone do estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). (required)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (required)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (required)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). (required)
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoUpdate $telefone_estabelecimento_update telefoneEstabelecimentoUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarUsingPUT15WithHttpInfo($id, $ddd, $telefone, $ramal = null)
+    public function alterarUsingPUT15WithHttpInfo($id, $telefone_estabelecimento_update)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling alterarUsingPUT15');
         }
-        // verify the required parameter 'ddd' is set
-        if ($ddd === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $ddd when calling alterarUsingPUT15');
-        }
-        // verify the required parameter 'telefone' is set
-        if ($telefone === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $telefone when calling alterarUsingPUT15');
+        // verify the required parameter 'telefone_estabelecimento_update' is set
+        if ($telefone_estabelecimento_update === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $telefone_estabelecimento_update when calling alterarUsingPUT15');
         }
   
         // parse inputs
@@ -465,19 +457,7 @@ class EstabelecimentoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($ddd !== null) {
-            $queryParams['ddd'] = $this->apiClient->getSerializer()->toQueryValue($ddd);
-        }// query params
-        
-        if ($telefone !== null) {
-            $queryParams['telefone'] = $this->apiClient->getSerializer()->toQueryValue($telefone);
-        }// query params
-        
-        if ($ramal !== null) {
-            $queryParams['ramal'] = $this->apiClient->getSerializer()->toQueryValue($ramal);
-        }
         
         // path params
         
@@ -492,7 +472,11 @@ class EstabelecimentoApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
+        // body params
+        $_tempBody = null;
+        if (isset($telefone_estabelecimento_update)) {
+            $_tempBody = $telefone_estabelecimento_update;
+        }
   
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -532,7 +516,7 @@ class EstabelecimentoApi
      *
      * Altera um Terminal
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\TerminalUpdate $terminal_update terminalUpdate (required)
      * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -549,7 +533,7 @@ class EstabelecimentoApi
      *
      * Altera um Terminal
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\TerminalUpdate $terminal_update terminalUpdate (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -740,9 +724,9 @@ class EstabelecimentoApi
     /**
      * alterarUsingPUT8
      *
-     * Alterar Grupo Econ\u00C3\u00B4mico
+     * Alterar Grupo Econ\u00F4mico
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico (required)
      * @param \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO $grupo_economico_dto grupoEconomicoDTO (required)
      * @return \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -757,9 +741,9 @@ class EstabelecimentoApi
     /**
      * alterarUsingPUT8WithHttpInfo
      *
-     * Alterar Grupo Econ\u00C3\u00B4mico
+     * Alterar Grupo Econ\u00F4mico
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico (required)
      * @param \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO $grupo_economico_dto grupoEconomicoDTO (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -1027,7 +1011,7 @@ class EstabelecimentoApi
     /**
      * cadastrarUsingPOST3
      *
-     * Cadastrar Grupo Econ\u00C3\u00B4mico
+     * Cadastrar Grupo Econ\u00F4mico
      *
      * @param \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO $grupo_economico_dto GrupoEconomicoDTO (required)
      * @return \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse
@@ -1043,7 +1027,7 @@ class EstabelecimentoApi
     /**
      * cadastrarUsingPOST3WithHttpInfo
      *
-     * Cadastrar Grupo Econ\u00C3\u00B4mico
+     * Cadastrar Grupo Econ\u00F4mico
      *
      * @param \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO $grupo_economico_dto GrupoEconomicoDTO (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1118,9 +1102,9 @@ class EstabelecimentoApi
     /**
      * consultaOperacaoUsingGET
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). (required)
+     * @param int $id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao). (required)
      * @return \br.com.conductor.pier.api.v2.model\DetalheOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1134,9 +1118,9 @@ class EstabelecimentoApi
     /**
      * consultaOperacaoUsingGETWithHttpInfo
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). (required)
+     * @param int $id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\DetalheOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1215,7 +1199,7 @@ class EstabelecimentoApi
      *
      * Consultar Origem Comercial
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial (required)
      * @return \br.com.conductor.pier.api.v2.model\OrigemComercialResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1231,7 +1215,7 @@ class EstabelecimentoApi
      *
      * Consultar Origem Comercial
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1306,7 +1290,7 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET16
+     * consultarUsingGET17
      *
      * Consultar estabelecimento por id
      *
@@ -1314,15 +1298,15 @@ class EstabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16($id)
+    public function consultarUsingGET17($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET16WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * Consultar estabelecimento por id
      *
@@ -1330,12 +1314,12 @@ class EstabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16WithHttpInfo($id)
+    public function consultarUsingGET17WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
         }
   
         // parse inputs
@@ -1401,36 +1385,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET18
+     * consultarUsingGET19
      *
-     * Consultar grupo econ\u00C3\u00B4mico
+     * Consultar grupo econ\u00F4mico
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico (required)
      * @return \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET18($id)
+    public function consultarUsingGET19($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET19WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET18WithHttpInfo
+     * consultarUsingGET19WithHttpInfo
      *
-     * Consultar grupo econ\u00C3\u00B4mico
+     * Consultar grupo econ\u00F4mico
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET18WithHttpInfo($id)
+    public function consultarUsingGET19WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET18');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET19');
         }
   
         // parse inputs
@@ -1496,36 +1480,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET20
+     * consultarUsingGET21
      *
      * Apresenta os dados de uma determinada maquineta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\MaquinetaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20($id)
+    public function consultarUsingGET21($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET20WithHttpInfo
+     * consultarUsingGET21WithHttpInfo
      *
      * Apresenta os dados de uma determinada maquineta
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\MaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20WithHttpInfo($id)
+    public function consultarUsingGET21WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
         }
   
         // parse inputs
@@ -1591,36 +1575,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET21
+     * consultarUsingGET22
      *
-     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21($id)
+    public function consultarUsingGET22($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET21WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
-     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET21WithHttpInfo($id)
+    public function consultarUsingGET22WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
         }
   
         // parse inputs
@@ -1686,36 +1670,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET29
+     * consultarUsingGET30
      *
      * Apresenta os dados de um determinado telefone de um estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29($id)
+    public function consultarUsingGET30($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET29WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET30WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET29WithHttpInfo
+     * consultarUsingGET30WithHttpInfo
      *
      * Apresenta os dados de um determinado telefone de um estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29WithHttpInfo($id)
+    public function consultarUsingGET30WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET29');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET30');
         }
   
         // parse inputs
@@ -1781,36 +1765,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET31
+     * consultarUsingGET32
      *
      * Apresenta os dados de um determinado Terminal
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET31($id)
+    public function consultarUsingGET32($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET31WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET32WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET31WithHttpInfo
+     * consultarUsingGET32WithHttpInfo
      *
      * Apresenta os dados de um determinado Terminal
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET31WithHttpInfo($id)
+    public function consultarUsingGET32WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET31');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET32');
         }
   
         // parse inputs
@@ -1876,36 +1860,36 @@ class EstabelecimentoApi
     }
     
     /**
-     * consultarUsingGET43
+     * consultarUsingGET44
      *
-     * Apresenta os dados de um determinado V\u00C3\u00ADnculo
+     * Apresenta os dados de um determinado V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET43($id)
+    public function consultarUsingGET44($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET43WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET44WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET43WithHttpInfo
+     * consultarUsingGET44WithHttpInfo
      *
-     * Apresenta os dados de um determinado V\u00C3\u00ADnculo
+     * Apresenta os dados de um determinado V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET43WithHttpInfo($id)
+    public function consultarUsingGET44WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET43');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET44');
         }
   
         // parse inputs
@@ -1973,9 +1957,9 @@ class EstabelecimentoApi
     /**
      * desabilitarVinculoUsingPOST
      *
-     * Desabilitar um V\u00C3\u00ADnculo
+     * Desabilitar um V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -1989,9 +1973,9 @@ class EstabelecimentoApi
     /**
      * desabilitarVinculoUsingPOSTWithHttpInfo
      *
-     * Desabilitar um V\u00C3\u00ADnculo
+     * Desabilitar um V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2068,9 +2052,9 @@ class EstabelecimentoApi
     /**
      * desabilitarVinculoUsingPOST1
      *
-     * Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\VinculoOperacaoPersist $vinculo_operacao_persist vinculoOperacaoPersist (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2085,9 +2069,9 @@ class EstabelecimentoApi
     /**
      * desabilitarVinculoUsingPOST1WithHttpInfo
      *
-     * Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\VinculoOperacaoPersist $vinculo_operacao_persist vinculoOperacaoPersist (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2173,9 +2157,9 @@ class EstabelecimentoApi
     /**
      * habilitarVinculoUsingPOST
      *
-     * Habilitar um V\u00C3\u00ADnculo
+     * Habilitar um V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2189,9 +2173,9 @@ class EstabelecimentoApi
     /**
      * habilitarVinculoUsingPOSTWithHttpInfo
      *
-     * Habilitar um V\u00C3\u00ADnculo
+     * Habilitar um V\u00EDnculo
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2268,9 +2252,9 @@ class EstabelecimentoApi
     /**
      * habilitarVinculoUsingPOST1
      *
-     * Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Habilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\VinculoOperacaoPersist $vinculo_operacao_persist vinculoOperacaoPersist (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2285,9 +2269,9 @@ class EstabelecimentoApi
     /**
      * habilitarVinculoUsingPOST1WithHttpInfo
      *
-     * Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Habilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\VinculoOperacaoPersist $vinculo_operacao_persist vinculoOperacaoPersist (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2373,13 +2357,13 @@ class EstabelecimentoApi
     /**
      * listaOperacaoUsingGET
      *
-     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+     * Apresenta dados de opera\u00E7\u00F5es em uma lista
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)
+     * @param string $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2393,13 +2377,13 @@ class EstabelecimentoApi
     /**
      * listaOperacaoUsingGETWithHttpInfo
      *
-     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+     * Apresenta dados de opera\u00E7\u00F5es em uma lista
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_operacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $codigo_processamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)
+     * @param string $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2490,9 +2474,9 @@ class EstabelecimentoApi
      *
      * Lista os MCCs
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageMCCResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2508,9 +2492,9 @@ class EstabelecimentoApi
      *
      * Lista os MCCs
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageMCCResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2593,32 +2577,32 @@ class EstabelecimentoApi
      *
      * Listar Origens Comerciais
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)
      * @param int $status Indica o status da origem comercial (optional)
      * @param int $id_estabelecimento Identificador do estabelecimento (optional)
      * @param int $id_produto Identificador do produto (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)
+     * @param string $descricao Descri\u00E7\u00E3o da origem comercial (optional)
      * @param int $id_tipo_origem_comercial Identificador do tipo de origem comercial (optional)
      * @param int $id_grupo_origem_comercial Identificador do grupo de origem comercial (optional)
-     * @param bool $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)
-     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico (optional)
-     * @param bool $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)
-     * @param bool $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo (optional)
-     * @param string $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_origem_externa Indica se \u00C3\u00A9 origem externa (optional)
-     * @param bool $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param bool $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)
+     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata (optional)
+     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico (optional)
+     * @param bool $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio (optional)
+     * @param bool $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo (optional)
+     * @param string $usuario Usu\u00E1rio para autentica\u00E7\u00E3o (optional)
+     * @param string $senha Senha para autentica\u00E7\u00E3o (optional)
+     * @param bool $flag_origem_externa Indica se \u00E9 origem externa (optional)
+     * @param bool $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o (optional)
      * @param bool $flag_envia_fatura_usuario Indica se envia fatura (optional)
-     * @param bool $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento (optional)
-     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio (optional)
+     * @param bool $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento (optional)
+     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio (optional)
      * @param bool $flag_digitalizar_doc Indica se digitaliza documento (optional)
      * @param bool $flag_embossing_loja Indica se realiza embossing em loja (optional)
-     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via (optional)
+     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00E9via (optional)
      * @param string $tipo_pessoa Tipo de pessoa (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOrigemComercialResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2635,32 +2619,32 @@ class EstabelecimentoApi
      *
      * Listar Origens Comerciais
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param int $id Id da origem comercial (optional)
      * @param string $nome Nome da origem comercial (optional)
      * @param int $status Indica o status da origem comercial (optional)
      * @param int $id_estabelecimento Identificador do estabelecimento (optional)
      * @param int $id_produto Identificador do produto (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)
+     * @param string $descricao Descri\u00E7\u00E3o da origem comercial (optional)
      * @param int $id_tipo_origem_comercial Identificador do tipo de origem comercial (optional)
      * @param int $id_grupo_origem_comercial Identificador do grupo de origem comercial (optional)
-     * @param bool $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)
-     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico (optional)
-     * @param bool $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)
-     * @param bool $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo (optional)
-     * @param string $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param string $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)
-     * @param bool $flag_origem_externa Indica se \u00C3\u00A9 origem externa (optional)
-     * @param bool $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)
+     * @param bool $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)
+     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata (optional)
+     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico (optional)
+     * @param bool $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio (optional)
+     * @param bool $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo (optional)
+     * @param string $usuario Usu\u00E1rio para autentica\u00E7\u00E3o (optional)
+     * @param string $senha Senha para autentica\u00E7\u00E3o (optional)
+     * @param bool $flag_origem_externa Indica se \u00E9 origem externa (optional)
+     * @param bool $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o (optional)
      * @param bool $flag_envia_fatura_usuario Indica se envia fatura (optional)
-     * @param bool $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento (optional)
-     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio (optional)
+     * @param bool $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento (optional)
+     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio (optional)
      * @param bool $flag_digitalizar_doc Indica se digitaliza documento (optional)
      * @param bool $flag_embossing_loja Indica se realiza embossing em loja (optional)
-     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via (optional)
+     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00E9via (optional)
      * @param string $tipo_pessoa Tipo de pessoa (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -2840,9 +2824,9 @@ class EstabelecimentoApi
      *
      * Lista os Tipos de adquirentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageEntidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2858,9 +2842,9 @@ class EstabelecimentoApi
      *
      * Lista os Tipos de adquirentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEntidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2939,13 +2923,122 @@ class EstabelecimentoApi
     }
     
     /**
+     * listarTiposEstabelecimentosUsingGET
+     *
+     * Lista os tipos de estabelecimentos
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTipoEstabelecimentoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposEstabelecimentosUsingGET($sort = null, $page = null, $limit = null, $descricao = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarTiposEstabelecimentosUsingGETWithHttpInfo ($sort, $page, $limit, $descricao);
+        return $response; 
+    }
+
+
+    /**
+     * listarTiposEstabelecimentosUsingGETWithHttpInfo
+     *
+     * Lista os tipos de estabelecimentos
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposEstabelecimentosUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-estabelecimentos";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($descricao !== null) {
+            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoEstabelecimentoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoEstabelecimentoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoEstabelecimentoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarTiposMaquinetasUsingGET
      *
      * Lista os Tipos de  Maquinetas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -2961,9 +3054,9 @@ class EstabelecimentoApi
      *
      * Lista os Tipos de  Maquinetas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCampoCodificadoDescricaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3042,13 +3135,122 @@ class EstabelecimentoApi
     }
     
     /**
+     * listarTiposOrigensComerciaisUsingGET
+     *
+     * Listar tipos de origens comerciais
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do tipo de origem comercial (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageTipoOrigemComercialResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposOrigensComerciaisUsingGET($sort = null, $page = null, $limit = null, $nome = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarTiposOrigensComerciaisUsingGETWithHttpInfo ($sort, $page, $limit, $nome);
+        return $response; 
+    }
+
+
+    /**
+     * listarTiposOrigensComerciaisUsingGETWithHttpInfo
+     *
+     * Listar tipos de origens comerciais
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do tipo de origem comercial (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarTiposOrigensComerciaisUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/tipos-origens-comerciais";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageTipoOrigemComercialResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageTipoOrigemComercialResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTipoOrigemComercialResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarTiposTerminaisUsingGET1
      *
      * Lista os Tipos Terminais
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoTerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3064,9 +3266,9 @@ class EstabelecimentoApi
      *
      * Lista os Tipos Terminais
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -3145,105 +3347,105 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET21
+     * listarUsingGET22
      *
      * Lista Estabelecimentos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)
-     * @param int $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)
-     * @param string $numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)
+     * @param int $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)
+     * @param string $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)
      * @param string $nome Nome do Estabelecimento. (optional)
-     * @param string $descricao Raz\u00C3\u00A3o Social do Estabelecimento. (optional)
-     * @param string $nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)
-     * @param string $cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)
+     * @param string $descricao Raz\u00E3o Social do Estabelecimento. (optional)
+     * @param string $nome_fantasia T\u00EDtulo Comercial do Estabelecimento. (optional)
+     * @param string $cep C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)
      * @param string $nome_logradouro Nome do Logradouro. (optional)
-     * @param int $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)
-     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)
-     * @param string $bairro Nome do bairro do endere\u00C3\u00A7o. (optional)
-     * @param string $cidade Nome da cidade do endere\u00C3\u00A7o. (optional)
-     * @param string $uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)
-     * @param string $pais Nome do pa\u00C3\u00ADs. (optional)
+     * @param int $numero_endereco N\u00FAmero do endere\u00E7o. (optional)
+     * @param string $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)
+     * @param string $bairro Nome do bairro do endere\u00E7o. (optional)
+     * @param string $cidade Nome da cidade do endere\u00E7o. (optional)
+     * @param string $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)
+     * @param string $pais Nome do pa\u00EDs. (optional)
      * @param string $data_cadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)
      * @param string $contato Nome da pessoa para contato com o Estabelecimento. (optional)
      * @param string $email E-mail da pessoa para contato com o Estabelecimento. (optional)
-     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)
-     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)
-     * @param int $inativo Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)
-     * @param int $id_pais Identificador de Pa\u00C3\u00ADs. (optional)
-     * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado (optional)
-     * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)
-     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)
-     * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda. (optional)
+     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)
+     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)
+     * @param int $inativo Indica se o estabelecimento est\u00E1 inativo. (optional)
+     * @param int $id_pais Identificador de Pa\u00EDs. (optional)
+     * @param int $mcc C\u00F3digo de Categoria de Mercado (optional)
+     * @param int $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)
+     * @param int $correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)
+     * @param int $id_moeda C\u00F3digo identificador da moeda. (optional)
      * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento. (optional)
-     * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)
-     * @param string $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)
+     * @param string $numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)
+     * @param string $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)
      * @param string $nome_logradouro2 Nome do Logradouro. (optional)
-     * @param int $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)
-     * @param string $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)
-     * @param string $bairro2 Nome do bairro do endere\u00C3\u00A7o. (optional)
-     * @param string $cidade2 Nome da cidade do endere\u00C3\u00A7o. (optional)
-     * @param string $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)
-     * @param int $flag_matriz Indica se \u00C3\u00A9 matriz ou filial. (optional)
+     * @param int $numero_endereco2 N\u00FAmero do endere\u00E7o. (optional)
+     * @param string $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)
+     * @param string $bairro2 Nome do bairro do endere\u00E7o. (optional)
+     * @param string $cidade2 Nome da cidade do endere\u00E7o. (optional)
+     * @param string $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)
+     * @param int $flag_matriz Indica se \u00E9 matriz ou filial. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id, $id_credor, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET21WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * Lista Estabelecimentos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)
-     * @param int $id_credor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)
-     * @param string $numero_receita_federal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)
+     * @param int $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)
+     * @param string $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)
      * @param string $nome Nome do Estabelecimento. (optional)
-     * @param string $descricao Raz\u00C3\u00A3o Social do Estabelecimento. (optional)
-     * @param string $nome_fantasia T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)
-     * @param string $cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)
+     * @param string $descricao Raz\u00E3o Social do Estabelecimento. (optional)
+     * @param string $nome_fantasia T\u00EDtulo Comercial do Estabelecimento. (optional)
+     * @param string $cep C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)
      * @param string $nome_logradouro Nome do Logradouro. (optional)
-     * @param int $numero_endereco N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)
-     * @param string $complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)
-     * @param string $bairro Nome do bairro do endere\u00C3\u00A7o. (optional)
-     * @param string $cidade Nome da cidade do endere\u00C3\u00A7o. (optional)
-     * @param string $uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)
-     * @param string $pais Nome do pa\u00C3\u00ADs. (optional)
+     * @param int $numero_endereco N\u00FAmero do endere\u00E7o. (optional)
+     * @param string $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)
+     * @param string $bairro Nome do bairro do endere\u00E7o. (optional)
+     * @param string $cidade Nome da cidade do endere\u00E7o. (optional)
+     * @param string $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)
+     * @param string $pais Nome do pa\u00EDs. (optional)
      * @param string $data_cadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)
      * @param string $contato Nome da pessoa para contato com o Estabelecimento. (optional)
      * @param string $email E-mail da pessoa para contato com o Estabelecimento. (optional)
-     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)
-     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)
-     * @param int $inativo Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)
-     * @param int $id_pais Identificador de Pa\u00C3\u00ADs. (optional)
-     * @param int $mcc C\u00C3\u00B3digo de Categoria de Mercado (optional)
-     * @param int $id_tipo_estabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)
-     * @param int $correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)
-     * @param int $id_moeda C\u00C3\u00B3digo identificador da moeda. (optional)
+     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)
+     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)
+     * @param int $inativo Indica se o estabelecimento est\u00E1 inativo. (optional)
+     * @param int $id_pais Identificador de Pa\u00EDs. (optional)
+     * @param int $mcc C\u00F3digo de Categoria de Mercado (optional)
+     * @param int $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)
+     * @param int $correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)
+     * @param int $id_moeda C\u00F3digo identificador da moeda. (optional)
      * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento. (optional)
-     * @param string $numero_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)
-     * @param string $cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)
+     * @param string $numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)
+     * @param string $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)
      * @param string $nome_logradouro2 Nome do Logradouro. (optional)
-     * @param int $numero_endereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)
-     * @param string $complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)
-     * @param string $bairro2 Nome do bairro do endere\u00C3\u00A7o. (optional)
-     * @param string $cidade2 Nome da cidade do endere\u00C3\u00A7o. (optional)
-     * @param string $uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)
-     * @param int $flag_matriz Indica se \u00C3\u00A9 matriz ou filial. (optional)
+     * @param int $numero_endereco2 N\u00FAmero do endere\u00E7o. (optional)
+     * @param string $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)
+     * @param string $bairro2 Nome do bairro do endere\u00E7o. (optional)
+     * @param string $cidade2 Nome da cidade do endere\u00E7o. (optional)
+     * @param string $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)
+     * @param int $flag_matriz Indica se \u00E9 matriz ou filial. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_credor = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
         
   
@@ -3281,8 +3483,8 @@ class EstabelecimentoApi
             $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
-        if ($id_credor !== null) {
-            $queryParams['idCredor'] = $this->apiClient->getSerializer()->toQueryValue($id_credor);
+        if ($id_grupo_economico !== null) {
+            $queryParams['idGrupoEconomico'] = $this->apiClient->getSerializer()->toQueryValue($id_grupo_economico);
         }// query params
         
         if ($numero_receita_federal !== null) {
@@ -3458,23 +3660,23 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET23
+     * listarUsingGET24
      *
-     * Listar grupos econ\u00C3\u00B4micos
+     * Listar grupos econ\u00F4micos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $razao_social Raz\u00E3o social da pessoa jur\u00EDdica (optional)
      * @param string $nome_credor Nome do credor (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero da Receita Federal (optional)
-     * @param string $inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)
+     * @param string $numero_receita_federal N\u00FAmero da Receita Federal (optional)
+     * @param string $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)
      * @param string $contato Nome da pessoa para entrar em contato (optional)
-     * @param int $banco C\u00C3\u00B3digo do banco (optional)
-     * @param int $agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)
-     * @param string $digito_agencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)
-     * @param string $conta_corrente C\u00C3\u00B3digo da Conta Corrente (optional)
-     * @param string $digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente (optional)
+     * @param int $banco C\u00F3digo do banco (optional)
+     * @param int $agencia Raz\u00E3o social da pessoa jur\u00EDdica (optional)
+     * @param string $digito_agencia D\u00EDgito Verificador da ag\u00EAncia (optional)
+     * @param string $conta_corrente C\u00F3digo da Conta Corrente (optional)
+     * @param string $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente (optional)
      * @param string $periodicidade Periodicidade do pagamento (optional)
      * @param string $pagamento_semanal Dia para pagamento semanal (optional)
      * @param int $pagamento_mensal Dia da data para o pagamento mensal (optional)
@@ -3489,35 +3691,35 @@ class EstabelecimentoApi
      * @param Number $taxa_adm Taxa Administrativa (optional)
      * @param Number $taxa_banco Taxa do Banco (optional)
      * @param Number $limite_rav Valor limite do RAV (optional)
-     * @param int $id_credor_rav C\u00C3\u00B3digo identificador do credor RAV (optional)
+     * @param int $id_credor_rav C\u00F3digo identificador do credor RAV (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET23($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
+    public function listarUsingGET24($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET24WithHttpInfo ($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET23WithHttpInfo
+     * listarUsingGET24WithHttpInfo
      *
-     * Listar grupos econ\u00C3\u00B4micos
+     * Listar grupos econ\u00F4micos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $razao_social Raz\u00E3o social da pessoa jur\u00EDdica (optional)
      * @param string $nome_credor Nome do credor (optional)
-     * @param string $numero_receita_federal N\u00C3\u00BAmero da Receita Federal (optional)
-     * @param string $inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)
+     * @param string $numero_receita_federal N\u00FAmero da Receita Federal (optional)
+     * @param string $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)
      * @param string $contato Nome da pessoa para entrar em contato (optional)
-     * @param int $banco C\u00C3\u00B3digo do banco (optional)
-     * @param int $agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)
-     * @param string $digito_agencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)
-     * @param string $conta_corrente C\u00C3\u00B3digo da Conta Corrente (optional)
-     * @param string $digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente (optional)
+     * @param int $banco C\u00F3digo do banco (optional)
+     * @param int $agencia Raz\u00E3o social da pessoa jur\u00EDdica (optional)
+     * @param string $digito_agencia D\u00EDgito Verificador da ag\u00EAncia (optional)
+     * @param string $conta_corrente C\u00F3digo da Conta Corrente (optional)
+     * @param string $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente (optional)
      * @param string $periodicidade Periodicidade do pagamento (optional)
      * @param string $pagamento_semanal Dia para pagamento semanal (optional)
      * @param int $pagamento_mensal Dia da data para o pagamento mensal (optional)
@@ -3532,11 +3734,11 @@ class EstabelecimentoApi
      * @param Number $taxa_adm Taxa Administrativa (optional)
      * @param Number $taxa_banco Taxa do Banco (optional)
      * @param Number $limite_rav Valor limite do RAV (optional)
-     * @param int $id_credor_rav C\u00C3\u00B3digo identificador do credor RAV (optional)
+     * @param int $id_credor_rav C\u00F3digo identificador do credor RAV (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
+    public function listarUsingGET24WithHttpInfo($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
     {
         
   
@@ -3713,18 +3915,18 @@ class EstabelecimentoApi
     /**
      * listarUsingGET25
      *
-     * Lista as Maquinetas
+     * Listar grupos de origens comerciais
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do grupo de origem comercial (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET25($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
@@ -3732,16 +3934,125 @@ class EstabelecimentoApi
     /**
      * listarUsingGET25WithHttpInfo
      *
+     * Listar grupos de origens comerciais
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $nome Nome do grupo de origem comercial (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET25WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/grupos-origens-comerciais";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * listarUsingGET27
+     *
      * Lista as Maquinetas
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
+        return $response; 
+    }
+
+
+    /**
+     * listarUsingGET27WithHttpInfo
+     *
+     * Lista as Maquinetas
+     *
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
         
   
@@ -3820,41 +4131,41 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET26
+     * listarUsingGET28
      *
      * Lista os tipos de moedas do emissor 
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda. (optional)
-     * @param string $simbolo S\u00C3\u00ADmbolo da Moeda. (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo_moeda C\u00F3digo identificador do tipo de moeda. (optional)
+     * @param string $simbolo S\u00EDmbolo da Moeda. (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo da moeda. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageMoedaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
+    public function listarUsingGET28($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET26WithHttpInfo
+     * listarUsingGET28WithHttpInfo
      *
      * Lista os tipos de moedas do emissor 
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $codigo_moeda C\u00C3\u00B3digo identificador do tipo de moeda. (optional)
-     * @param string $simbolo S\u00C3\u00ADmbolo da Moeda. (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $codigo_moeda C\u00F3digo identificador do tipo de moeda. (optional)
+     * @param string $simbolo S\u00EDmbolo da Moeda. (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo da moeda. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageMoedaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
+    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
     {
         
   
@@ -3941,41 +4252,41 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET27
+     * listarUsingGET29
      *
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as Regras Opera\u00E7\u00F5es
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_operacao Apresenta o id da Opera\u00E7\u00E3o. (optional)
      * @param int $id_credor Apresenta o id do Credor. (optional)
      * @param int $id_produto Apresenta o id do produto que vai ser alterado. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
+    public function listarUsingGET29($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET27WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as Regras Opera\u00E7\u00F5es
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_operacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_operacao Apresenta o id da Opera\u00E7\u00E3o. (optional)
      * @param int $id_credor Apresenta o id do Credor. (optional)
      * @param int $id_produto Apresenta o id do produto que vai ser alterado. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
+    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
     {
         
   
@@ -4062,37 +4373,37 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET38
+     * listarUsingGET40
      *
      * Lista os Telefones Estabelecimentos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET38($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET40($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET38WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET40WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET38WithHttpInfo
+     * listarUsingGET40WithHttpInfo
      *
      * Lista os Telefones Estabelecimentos
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET38WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET40WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
         
   
@@ -4171,43 +4482,43 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET40
+     * listarUsingGET42
      *
      * Lista os Terminais cadastrados no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)
-     * @param string $terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)
-     * @param int $id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)
+     * @param string $terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)
+     * @param int $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)
+     * @param int $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET42($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET40WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET42WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET40WithHttpInfo
+     * listarUsingGET42WithHttpInfo
      *
      * Lista os Terminais cadastrados no Emissor
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)
-     * @param string $terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)
-     * @param int $numero_estabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)
-     * @param int $id_estabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)
+     * @param string $terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)
+     * @param int $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)
+     * @param int $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET42WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
         
   
@@ -4298,41 +4609,41 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET51
+     * listarUsingGET53
      *
-     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+     * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)
-     * @param string $codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)
+     * @param string $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET51($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
+    public function listarUsingGET53($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET51WithHttpInfo ($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET53WithHttpInfo ($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET51WithHttpInfo
+     * listarUsingGET53WithHttpInfo
      *
-     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+     * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)
-     * @param string $codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)
+     * @param string $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET51WithHttpInfo($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
+    public function listarUsingGET53WithHttpInfo($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
     {
         
   
@@ -4419,48 +4730,48 @@ class EstabelecimentoApi
     }
     
     /**
-     * listarUsingGET52
+     * listarUsingGET54
      *
-     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+     * Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
-     * @param int $id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)
-     * @param int $codigo_mcc C\u00C3\u00B3digo MCC. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)
+     * @param int $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)
+     * @param int $codigo_mcc C\u00F3digo MCC. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET52($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
+    public function listarUsingGET54($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET52WithHttpInfo ($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET54WithHttpInfo ($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET52WithHttpInfo
+     * listarUsingGET54WithHttpInfo
      *
-     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+     * Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
      *
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)
-     * @param int $id_operacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)
-     * @param int $codigo_mcc C\u00C3\u00B3digo MCC. (optional)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id). (required)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)
+     * @param int $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)
+     * @param int $codigo_mcc C\u00F3digo MCC. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET52WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
+    public function listarUsingGET54WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET52');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET54');
         }
   
         // parse inputs
@@ -4647,7 +4958,7 @@ class EstabelecimentoApi
     /**
      * salvarUsingPOST17
      *
-     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
      *
      * @param \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist $oprecao_credor_persist oprecaoCredorPersist (required)
      * @return \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse
@@ -4663,7 +4974,7 @@ class EstabelecimentoApi
     /**
      * salvarUsingPOST17WithHttpInfo
      *
-     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
      *
      * @param \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist $oprecao_credor_persist oprecaoCredorPersist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
@@ -4740,16 +5051,13 @@ class EstabelecimentoApi
      *
      * Realiza o cadastro de um novo telefone para um estabelecimento 
      *
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). (required)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (required)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (required)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoPersist $telefone_estabelecimento_persist telefoneEstabelecimentoPersist (required)
      * @return \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST22($id_estabelecimento, $ddd, $telefone, $ramal = null)
+    public function salvarUsingPOST22($telefone_estabelecimento_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST22WithHttpInfo ($id_estabelecimento, $ddd, $telefone, $ramal);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST22WithHttpInfo ($telefone_estabelecimento_persist);
         return $response; 
     }
 
@@ -4759,27 +5067,16 @@ class EstabelecimentoApi
      *
      * Realiza o cadastro de um novo telefone para um estabelecimento 
      *
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). (required)
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone (id). (required)
-     * @param string $telefone N\u00C3\u00BAmero do telefone. (required)
-     * @param string $ramal N\u00C3\u00BAmero do ramal. (optional)
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoPersist $telefone_estabelecimento_persist telefoneEstabelecimentoPersist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST22WithHttpInfo($id_estabelecimento, $ddd, $telefone, $ramal = null)
+    public function salvarUsingPOST22WithHttpInfo($telefone_estabelecimento_persist)
     {
         
-        // verify the required parameter 'id_estabelecimento' is set
-        if ($id_estabelecimento === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_estabelecimento when calling salvarUsingPOST22');
-        }
-        // verify the required parameter 'ddd' is set
-        if ($ddd === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $ddd when calling salvarUsingPOST22');
-        }
-        // verify the required parameter 'telefone' is set
-        if ($telefone === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $telefone when calling salvarUsingPOST22');
+        // verify the required parameter 'telefone_estabelecimento_persist' is set
+        if ($telefone_estabelecimento_persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $telefone_estabelecimento_persist when calling salvarUsingPOST22');
         }
   
         // parse inputs
@@ -4794,30 +5091,18 @@ class EstabelecimentoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
-        // query params
         
-        if ($id_estabelecimento !== null) {
-            $queryParams['idEstabelecimento'] = $this->apiClient->getSerializer()->toQueryValue($id_estabelecimento);
-        }// query params
-        
-        if ($ddd !== null) {
-            $queryParams['ddd'] = $this->apiClient->getSerializer()->toQueryValue($ddd);
-        }// query params
-        
-        if ($telefone !== null) {
-            $queryParams['telefone'] = $this->apiClient->getSerializer()->toQueryValue($telefone);
-        }// query params
-        
-        if ($ramal !== null) {
-            $queryParams['ramal'] = $this->apiClient->getSerializer()->toQueryValue($ramal);
-        }
         
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
+        // body params
+        $_tempBody = null;
+        if (isset($telefone_estabelecimento_persist)) {
+            $_tempBody = $telefone_estabelecimento_persist;
+        }
   
         // for model (json/xml)
         if (isset($_tempBody)) {

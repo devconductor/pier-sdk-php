@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DadosCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Dados Cart\u00C3\u00A3o
+ * @description Objeto Dados Cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -150,7 +150,7 @@ class DadosCartaoResponse implements ArrayAccess
     protected $flag_virtual;
     
     /**
-      * $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+      * $numero_cartao N\u00FAmero do cart\u00E3o.
       * @var string
       */
     protected $numero_cartao;
@@ -162,7 +162,7 @@ class DadosCartaoResponse implements ArrayAccess
     protected $data_validade;
     
     /**
-      * $cvv2 CVV2 do cart\u00C3\u00A3o.
+      * $cvv2 CVV2 do cart\u00E3o.
       * @var string
       */
     protected $cvv2;
@@ -180,19 +180,19 @@ class DadosCartaoResponse implements ArrayAccess
     protected $id_conta;
     
     /**
-      * $id_cartao Identificador da cart\u00C3\u00A3o do portador.
+      * $id_cartao Identificador da cart\u00E3o do portador.
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $numero_agencia Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+      * $numero_conta_corente Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
       * @var string
       */
     protected $numero_conta_corente;
@@ -204,19 +204,19 @@ class DadosCartaoResponse implements ArrayAccess
     protected $id_status_conta;
     
     /**
-      * $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+      * $status_conta Descri\u00E7\u00E3o do status da conta do portador.
       * @var string
       */
     protected $status_conta;
     
     /**
-      * $id_status_cartao Status do cart\u00C3\u00A3o.
+      * $id_status_cartao Status do cart\u00E3o.
       * @var int
       */
     protected $id_status_cartao;
     
     /**
-      * $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+      * $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o.
       * @var string
       */
     protected $status_cartao;
@@ -278,7 +278,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+     * @param string $numero_cartao N\u00FAmero do cart\u00E3o.
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -320,7 +320,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets cvv2
-     * @param string $cvv2 CVV2 do cart\u00C3\u00A3o.
+     * @param string $cvv2 CVV2 do cart\u00E3o.
      * @return $this
      */
     public function setCvv2($cvv2)
@@ -383,7 +383,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Identificador da cart\u00C3\u00A3o do portador.
+     * @param int $id_cartao Identificador da cart\u00E3o do portador.
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -404,7 +404,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param int $numero_agencia Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -425,7 +425,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corente
-     * @param string $numero_conta_corente Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+     * @param string $numero_conta_corente Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
      * @return $this
      */
     public function setNumeroContaCorente($numero_conta_corente)
@@ -467,7 +467,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets status_conta
-     * @param string $status_conta Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+     * @param string $status_conta Descri\u00E7\u00E3o do status da conta do portador.
      * @return $this
      */
     public function setStatusConta($status_conta)
@@ -488,7 +488,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status_cartao
-     * @param int $id_status_cartao Status do cart\u00C3\u00A3o.
+     * @param int $id_status_cartao Status do cart\u00E3o.
      * @return $this
      */
     public function setIdStatusCartao($id_status_cartao)
@@ -509,7 +509,7 @@ class DadosCartaoResponse implements ArrayAccess
   
     /**
      * Sets status_cartao
-     * @param string $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+     * @param string $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o.
      * @return $this
      */
     public function setStatusCartao($status_cartao)

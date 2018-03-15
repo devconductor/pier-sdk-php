@@ -136,37 +136,37 @@ class ArquivoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do arquivo
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+      * $id_tipo_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
       * @var int
       */
     protected $id_tipo_arquivo;
     
     /**
-      * $nome_tipo_arquivo Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+      * $nome_tipo_arquivo Descri\u00E7\u00E3o do tipo do arquivo
       * @var string
       */
     protected $nome_tipo_arquivo;
     
     /**
-      * $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+      * $arquivo Conte\u00FAdo do arquivo convertido em Base 64
       * @var string
       */
     protected $arquivo;
     
     /**
-      * $id_status_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+      * $id_status_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
       * @var int
       */
     protected $id_status_arquivo;
     
     /**
-      * $nome_status_arquivo Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+      * $nome_status_arquivo Desci\u00E7\u00E3o do status do arquivo
       * @var string
       */
     protected $nome_status_arquivo;
@@ -178,25 +178,25 @@ class ArquivoDetalheResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $extensao Formato/Extens\u00C3\u00A3o do arquivo
+      * $extensao Formato/Extens\u00E3o do arquivo
       * @var string
       */
     protected $extensao;
     
     /**
-      * $data_inclusao Data de inclus\u00C3\u00A3o do arquivo.
+      * $data_inclusao Data de inclus\u00E3o do arquivo.
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+      * $data_alteracao Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
       * @var string
       */
     protected $data_alteracao;
     
     /**
-      * $detalhes Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+      * $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
       * @var \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[]
       */
     protected $detalhes;
@@ -235,7 +235,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do arquivo
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_arquivo
-     * @param int $id_tipo_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+     * @param int $id_tipo_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
      * @return $this
      */
     public function setIdTipoArquivo($id_tipo_arquivo)
@@ -277,7 +277,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_tipo_arquivo
-     * @param string $nome_tipo_arquivo Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+     * @param string $nome_tipo_arquivo Descri\u00E7\u00E3o do tipo do arquivo
      * @return $this
      */
     public function setNomeTipoArquivo($nome_tipo_arquivo)
@@ -298,7 +298,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets arquivo
-     * @param string $arquivo Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+     * @param string $arquivo Conte\u00FAdo do arquivo convertido em Base 64
      * @return $this
      */
     public function setArquivo($arquivo)
@@ -319,7 +319,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_status_arquivo
-     * @param int $id_status_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+     * @param int $id_status_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
      * @return $this
      */
     public function setIdStatusArquivo($id_status_arquivo)
@@ -340,7 +340,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_status_arquivo
-     * @param string $nome_status_arquivo Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+     * @param string $nome_status_arquivo Desci\u00E7\u00E3o do status do arquivo
      * @return $this
      */
     public function setNomeStatusArquivo($nome_status_arquivo)
@@ -382,7 +382,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Formato/Extens\u00C3\u00A3o do arquivo
+     * @param string $extensao Formato/Extens\u00E3o do arquivo
      * @return $this
      */
     public function setExtensao($extensao)
@@ -403,7 +403,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00C3\u00A3o do arquivo.
+     * @param string $data_inclusao Data de inclus\u00E3o do arquivo.
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -424,7 +424,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+     * @param string $data_alteracao Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)
@@ -445,7 +445,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[] $detalhes Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[] $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
      * @return $this
      */
     public function setDetalhes($detalhes)

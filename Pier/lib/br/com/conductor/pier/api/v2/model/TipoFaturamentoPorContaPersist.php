@@ -116,37 +116,37 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
 
     
     /**
-      * $status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+      * $status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
       * @var bool
       */
     protected $status;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+      * $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
       * @var int
       */
     protected $id_tipo_faturamento;
     
     /**
-      * $data_hora_inclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+      * $data_hora_inclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_cancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+      * $data_hora_cancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
       * @var string
       */
     protected $data_hora_cancelamento;
     
     /**
-      * $modificado_por Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+      * $modificado_por Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
       * @var string
       */
     protected $modificado_por;
@@ -180,7 +180,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets status
-     * @param bool $status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+     * @param bool $status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
      * @return $this
      */
     public function setStatus($status)
@@ -201,7 +201,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -222,7 +222,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_faturamento
-     * @param int $id_tipo_faturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
      * @return $this
      */
     public function setIdTipoFaturamento($id_tipo_faturamento)
@@ -243,7 +243,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+     * @param string $data_hora_inclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -264,7 +264,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets data_hora_cancelamento
-     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+     * @param string $data_hora_cancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
      * @return $this
      */
     public function setDataHoraCancelamento($data_hora_cancelamento)
@@ -285,7 +285,7 @@ class TipoFaturamentoPorContaPersist implements ArrayAccess
   
     /**
      * Sets modificado_por
-     * @param string $modificado_por Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+     * @param string $modificado_por Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
      * @return $this
      */
     public function setModificadoPor($modificado_por)

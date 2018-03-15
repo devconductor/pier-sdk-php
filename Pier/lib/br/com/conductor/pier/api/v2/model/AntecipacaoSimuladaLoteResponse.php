@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaLoteResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * @description Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -126,7 +126,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
     protected $valor_total_com_desconto;
     
     /**
-      * $antecipacoes_simuladas Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+      * $antecipacoes_simuladas Antecipa\u00E7\u00F5es Simuladas.
       * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[]
       */
     protected $antecipacoes_simuladas;
@@ -221,7 +221,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets antecipacoes_simuladas
-     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[] $antecipacoes_simuladas Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[] $antecipacoes_simuladas Antecipa\u00E7\u00F5es Simuladas.
      * @return $this
      */
     public function setAntecipacoesSimuladas($antecipacoes_simuladas)

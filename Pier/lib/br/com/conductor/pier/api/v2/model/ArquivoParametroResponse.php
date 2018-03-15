@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoParametroResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response de par\u00C3\u00A2metros do arquivo.
+ * @description Objeto Response de par\u00E2metros do arquivo.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,7 +104,7 @@ class ArquivoParametroResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
       * @var int
       */
     protected $id;
@@ -116,7 +116,7 @@ class ArquivoParametroResponse implements ArrayAccess
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do nomeCampo
+      * $conteudo Conte\u00FAdo do nomeCampo
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class ArquivoParametroResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
      * @return $this
      */
     public function setId($id)
@@ -189,7 +189,7 @@ class ArquivoParametroResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do nomeCampo
+     * @param string $conteudo Conte\u00FAdo do nomeCampo
      * @return $this
      */
     public function setConteudo($conteudo)

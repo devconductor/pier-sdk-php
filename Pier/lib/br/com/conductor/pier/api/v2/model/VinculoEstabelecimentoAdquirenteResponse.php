@@ -120,43 +120,43 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+      * $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
       * @var int
       */
     protected $id_adquirente;
     
     /**
-      * $codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+      * $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
       * @var string
       */
     protected $codigo_estabelecimento_adquirente;
     
     /**
-      * $data_hora_cadastro Data de cadastro do v\u00C3\u00ADnculo.
+      * $data_hora_cadastro Data de cadastro do v\u00EDnculo.
       * @var string
       */
     protected $data_hora_cadastro;
     
     /**
-      * $mensagem Data de cadastro do v\u00C3\u00ADnculo.
+      * $mensagem Data de cadastro do v\u00EDnculo.
       * @var string
       */
     protected $mensagem;
     
     /**
-      * $status Data de cadastro do v\u00C3\u00ADnculo.
+      * $status Data de cadastro do v\u00EDnculo.
       * @var int
       */
     protected $status;
@@ -191,7 +191,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -233,7 +233,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id_adquirente
-     * @param int $id_adquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+     * @param int $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
      * @return $this
      */
     public function setIdAdquirente($id_adquirente)
@@ -254,7 +254,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets codigo_estabelecimento_adquirente
-     * @param string $codigo_estabelecimento_adquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+     * @param string $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
      * @return $this
      */
     public function setCodigoEstabelecimentoAdquirente($codigo_estabelecimento_adquirente)
@@ -275,7 +275,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets data_hora_cadastro
-     * @param string $data_hora_cadastro Data de cadastro do v\u00C3\u00ADnculo.
+     * @param string $data_hora_cadastro Data de cadastro do v\u00EDnculo.
      * @return $this
      */
     public function setDataHoraCadastro($data_hora_cadastro)
@@ -296,7 +296,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets mensagem
-     * @param string $mensagem Data de cadastro do v\u00C3\u00ADnculo.
+     * @param string $mensagem Data de cadastro do v\u00EDnculo.
      * @return $this
      */
     public function setMensagem($mensagem)
@@ -317,7 +317,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Data de cadastro do v\u00C3\u00ADnculo.
+     * @param int $status Data de cadastro do v\u00EDnculo.
      * @return $this
      */
     public function setStatus($status)

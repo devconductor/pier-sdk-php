@@ -136,31 +136,31 @@ class PessoaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+      * $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
       * @var string
       */
     protected $nome;
     
     /**
-      * $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+      * $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
       * @var string
       */
     protected $tipo;
     
     /**
-      * $cpf N\u00C3\u00BAmero do CPF, quando PF.
+      * $cpf N\u00FAmero do CPF, quando PF.
       * @var string
       */
     protected $cpf;
     
     /**
-      * $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+      * $cnpj N\u00FAmero do CNPJ, quando PJ.
       * @var string
       */
     protected $cnpj;
@@ -172,19 +172,19 @@ class PessoaResponse implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $numero_identidade N\u00C3\u00BAmero da Identidade
+      * $numero_identidade N\u00FAmero da Identidade
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+      * $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
       * @var string
       */
     protected $orgao_expedidor_identidade;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
       * @var string
       */
     protected $sexo;
@@ -196,7 +196,7 @@ class PessoaResponse implements ArrayAccess
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+      * $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
       * @var string
       */
     protected $data_emissao_identidade;
@@ -235,7 +235,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+     * @param string $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
      * @return $this
      */
     public function setNome($nome)
@@ -277,7 +277,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets tipo
-     * @param string $tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+     * @param string $tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
      * @return $this
      */
     public function setTipo($tipo)
@@ -298,7 +298,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @param string $cpf N\u00FAmero do CPF, quando PF.
      * @return $this
      */
     public function setCpf($cpf)
@@ -319,7 +319,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets cnpj
-     * @param string $cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @param string $cnpj N\u00FAmero do CNPJ, quando PJ.
      * @return $this
      */
     public function setCnpj($cnpj)
@@ -361,7 +361,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00C3\u00BAmero da Identidade
+     * @param string $numero_identidade N\u00FAmero da Identidade
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -382,7 +382,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00C3\u00A3o expedidor do RG.
+     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -403,7 +403,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
      * @return $this
      */
     public function setSexo($sexo)
@@ -445,7 +445,7 @@ class PessoaResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+     * @param string $data_emissao_identidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)

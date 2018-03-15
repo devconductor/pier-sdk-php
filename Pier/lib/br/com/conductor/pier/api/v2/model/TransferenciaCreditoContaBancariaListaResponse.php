@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransferenciaCreditoContaBancariaListaResponse Class Doc Comment
  *
  * @category    Class
- * @description Listagem de Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * @description Listagem de Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -52,9 +52,12 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_transferencia' => 'int',
+        'id_conta' => 'int',
+        'id_cartao' => 'int',
         'valor_compra' => 'Number',
         'valor_contrato' => 'Number',
         'data_compra' => 'string',
+        'status' => 'int',
         'status_processamento' => 'string'
     );
   
@@ -68,9 +71,12 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id_transferencia' => 'idTransferencia',
+        'id_conta' => 'idConta',
+        'id_cartao' => 'idCartao',
         'valor_compra' => 'valorCompra',
         'valor_contrato' => 'valorContrato',
         'data_compra' => 'dataCompra',
+        'status' => 'status',
         'status_processamento' => 'statusProcessamento'
     );
   
@@ -84,9 +90,12 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
       */
     static $setters = array(
         'id_transferencia' => 'setIdTransferencia',
+        'id_conta' => 'setIdConta',
+        'id_cartao' => 'setIdCartao',
         'valor_compra' => 'setValorCompra',
         'valor_contrato' => 'setValorContrato',
         'data_compra' => 'setDataCompra',
+        'status' => 'setStatus',
         'status_processamento' => 'setStatusProcessamento'
     );
   
@@ -100,9 +109,12 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
       */
     static $getters = array(
         'id_transferencia' => 'getIdTransferencia',
+        'id_conta' => 'getIdConta',
+        'id_cartao' => 'getIdCartao',
         'valor_compra' => 'getValorCompra',
         'valor_contrato' => 'getValorContrato',
         'data_compra' => 'getDataCompra',
+        'status' => 'getStatus',
         'status_processamento' => 'getStatusProcessamento'
     );
   
@@ -112,28 +124,46 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
 
     
     /**
-      * $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+      * $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
       * @var int
       */
     protected $id_transferencia;
     
     /**
-      * $valor_compra Valor da transfer\u00C3\u00AAncia.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+      * @var int
+      */
+    protected $id_cartao;
+    
+    /**
+      * $valor_compra Valor da transfer\u00EAncia.
       * @var Number
       */
     protected $valor_compra;
     
     /**
-      * $valor_contrato Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+      * $valor_contrato Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
       * @var Number
       */
     protected $valor_contrato;
     
     /**
-      * $data_compra Data da transfer\u00C3\u00AAncia.
+      * $data_compra Data da transfer\u00EAncia.
       * @var string
       */
     protected $data_compra;
+    
+    /**
+      * $status C\u00F3digo de status de processamento.
+      * @var int
+      */
+    protected $status;
     
     /**
       * $status_processamento Status Processamento.
@@ -151,9 +181,12 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id_transferencia = $data["id_transferencia"];
+            $this->id_conta = $data["id_conta"];
+            $this->id_cartao = $data["id_cartao"];
             $this->valor_compra = $data["valor_compra"];
             $this->valor_contrato = $data["valor_contrato"];
             $this->data_compra = $data["data_compra"];
+            $this->status = $data["status"];
             $this->status_processamento = $data["status_processamento"];
         }
     }
@@ -169,13 +202,55 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
   
     /**
      * Sets id_transferencia
-     * @param int $id_transferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+     * @param int $id_transferencia C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
      * @return $this
      */
     public function setIdTransferencia($id_transferencia)
     {
         
         $this->id_transferencia = $id_transferencia;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_cartao
+     * @return int
+     */
+    public function getIdCartao()
+    {
+        return $this->id_cartao;
+    }
+  
+    /**
+     * Sets id_cartao
+     * @param int $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+     * @return $this
+     */
+    public function setIdCartao($id_cartao)
+    {
+        
+        $this->id_cartao = $id_cartao;
         return $this;
     }
     
@@ -190,7 +265,7 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
   
     /**
      * Sets valor_compra
-     * @param Number $valor_compra Valor da transfer\u00C3\u00AAncia.
+     * @param Number $valor_compra Valor da transfer\u00EAncia.
      * @return $this
      */
     public function setValorCompra($valor_compra)
@@ -211,7 +286,7 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
   
     /**
      * Sets valor_contrato
-     * @param Number $valor_contrato Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+     * @param Number $valor_contrato Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
      * @return $this
      */
     public function setValorContrato($valor_contrato)
@@ -232,13 +307,34 @@ class TransferenciaCreditoContaBancariaListaResponse implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param string $data_compra Data da transfer\u00C3\u00AAncia.
+     * @param string $data_compra Data da transfer\u00EAncia.
      * @return $this
      */
     public function setDataCompra($data_compra)
     {
         
         $this->data_compra = $data_compra;
+        return $this;
+    }
+    
+    /**
+     * Gets status
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+  
+    /**
+     * Sets status
+     * @param int $status C\u00F3digo de status de processamento.
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        
+        $this->status = $status;
         return $this;
     }
     

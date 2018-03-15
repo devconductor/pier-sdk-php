@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConfiguracaoRegistroCobrancaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
+ * @description Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,19 +152,19 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+      * $id C\u00F3digo identificador da configura\u00E7\u00E3o.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_emissor C\u00C3\u00B3digo do emissor.
+      * $id_emissor C\u00F3digo do emissor.
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $codigo_banco C\u00C3\u00B3digo do Banco.
+      * $codigo_banco C\u00F3digo do Banco.
       * @var int
       */
     protected $codigo_banco;
@@ -236,7 +236,7 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
     protected $uri_adicional;
     
     /**
-      * $status Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+      * $status Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
       * @var string
       */
     protected $status;
@@ -279,7 +279,7 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+     * @param int $id C\u00F3digo identificador da configura\u00E7\u00E3o.
      * @return $this
      */
     public function setId($id)
@@ -300,7 +300,7 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00C3\u00B3digo do emissor.
+     * @param int $id_emissor C\u00F3digo do emissor.
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -321,7 +321,7 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
   
     /**
      * Sets codigo_banco
-     * @param int $codigo_banco C\u00C3\u00B3digo do Banco.
+     * @param int $codigo_banco C\u00F3digo do Banco.
      * @return $this
      */
     public function setCodigoBanco($codigo_banco)
@@ -573,7 +573,7 @@ class ConfiguracaoRegistroCobrancaResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+     * @param string $status Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
      * @return $this
      */
     public function setStatus($status)

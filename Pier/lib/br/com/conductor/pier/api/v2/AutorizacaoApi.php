@@ -94,7 +94,7 @@ class AutorizacaoApi
     /**
      * autorizarPorContaUsingPOST
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Autoriza transa\u00E7\u00E3o financeira por idConta
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsPorIdCartaoRequest $transacao_on_us_por_id_cartao_request transacaoOnUsPorIdCartaoRequest (required)
@@ -111,7 +111,7 @@ class AutorizacaoApi
     /**
      * autorizarPorContaUsingPOSTWithHttpInfo
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Autoriza transa\u00E7\u00E3o financeira por idConta
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsPorIdCartaoRequest $transacao_on_us_por_id_cartao_request transacaoOnUsPorIdCartaoRequest (required)
@@ -199,7 +199,7 @@ class AutorizacaoApi
     /**
      * autorizarUsingPOST
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Autoriza transa\u00E7\u00E3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -215,7 +215,7 @@ class AutorizacaoApi
     /**
      * autorizarUsingPOSTWithHttpInfo
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Autoriza transa\u00E7\u00E3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\AutorizacaoOnUsRequest $autorizacao_on_us_request autorizacaoOnUsRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
@@ -290,7 +290,7 @@ class AutorizacaoApi
     /**
      * autorizarUsingPOST1
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Autoriza transa\u00E7\u00E3o financeira por idCartao
      *
      * @param int $id Id Cartao (required)
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsPorIdCartaoRequest $transacao_on_us_por_id_cartao_request transacaoOnUsPorIdCartaoRequest (required)
@@ -307,7 +307,7 @@ class AutorizacaoApi
     /**
      * autorizarUsingPOST1WithHttpInfo
      *
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Autoriza transa\u00E7\u00E3o financeira por idCartao
      *
      * @param int $id Id Cartao (required)
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsPorIdCartaoRequest $transacao_on_us_por_id_cartao_request transacaoOnUsPorIdCartaoRequest (required)
@@ -395,7 +395,7 @@ class AutorizacaoApi
     /**
      * cancelarPorIdContaUsingPOST
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Cancela transa\u00E7\u00E3o financeira por idConta
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
@@ -412,7 +412,7 @@ class AutorizacaoApi
     /**
      * cancelarPorIdContaUsingPOSTWithHttpInfo
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Cancela transa\u00E7\u00E3o financeira por idConta
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
@@ -500,7 +500,7 @@ class AutorizacaoApi
     /**
      * cancelarUsingPOST2
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00E7\u00E3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest $cancelamento_request cancelamentoRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -516,7 +516,7 @@ class AutorizacaoApi
     /**
      * cancelarUsingPOST2WithHttpInfo
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+     * Cancela transa\u00E7\u00E3o financeira
      *
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoOnUsRequest $cancelamento_request cancelamentoRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)
@@ -591,7 +591,7 @@ class AutorizacaoApi
     /**
      * cancelarUsingPOST3
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Cancela transa\u00E7\u00E3o financeira por idCartao
      *
      * @param int $id Id Cartao (required)
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
@@ -608,7 +608,7 @@ class AutorizacaoApi
     /**
      * cancelarUsingPOST3WithHttpInfo
      *
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+     * Cancela transa\u00E7\u00E3o financeira por idCartao
      *
      * @param int $id Id Cartao (required)
      * @param \br.com.conductor.pier.api.v2.model\CancelamentoTransacaoPorIdCartaoRequest $cancelamento_request cancelamentoRequest (required)
@@ -696,7 +696,7 @@ class AutorizacaoApi
     /**
      * listarCodigosProcessamentoAutorizacaoUsingGET
      *
-     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+     * Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
      *
      * @return object[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -711,7 +711,7 @@ class AutorizacaoApi
     /**
      * listarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo
      *
-     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+     * Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
      *
      * @return Array of object[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -777,7 +777,7 @@ class AutorizacaoApi
     /**
      * simularUsingPOST
      *
-     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Simula planos de transa\u00E7\u00F5es
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse
@@ -793,7 +793,7 @@ class AutorizacaoApi
     /**
      * simularUsingPOSTWithHttpInfo
      *
-     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Simula planos de transa\u00E7\u00F5es
      *
      * @param \br.com.conductor.pier.api.v2.model\TransacaoOnUsRequest $transacoes_request transacoesRequest (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransacaoOnUsResponse, HTTP status code, HTTP response headers (array of strings)

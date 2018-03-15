@@ -96,13 +96,13 @@ class ServicoContaApi
      *
      * Atribuir Anuidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $id_anuidade Identificador da anuidade (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $ddd DDD do celular (optional)
-     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param string $celular N\u00FAmero do celular (optional)
      * @param int $id_operadora Identificador da operadora do celular (optional)
      * @param int $id_origem_comercial Identificador da origem comercial (optional)
      * @return object
@@ -120,13 +120,13 @@ class ServicoContaApi
      *
      * Atribuir Anuidade
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @param int $id_anuidade Identificador da anuidade (required)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @param string $ddd DDD do celular (optional)
-     * @param string $celular N\u00C3\u00BAmero do celular (optional)
+     * @param string $celular N\u00FAmero do celular (optional)
      * @param int $id_operadora Identificador da operadora do celular (optional)
      * @param int $id_origem_comercial Identificador da origem comercial (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
@@ -245,9 +245,9 @@ class ServicoContaApi
     /**
      * ativarEnvioFaturaEmailUsingPOST
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -261,9 +261,9 @@ class ServicoContaApi
     /**
      * ativarEnvioFaturaEmailUsingPOSTWithHttpInfo
      *
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+     *  Ativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -340,9 +340,9 @@ class ServicoContaApi
     /**
      * desativarEnvioFaturaEmailUsingPOST
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -356,9 +356,9 @@ class ServicoContaApi
     /**
      * desativarEnvioFaturaEmailUsingPOSTWithHttpInfo
      *
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
+     * Desativa o servi\u00E7o de envio de fatura por email
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id). (required)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -437,9 +437,9 @@ class ServicoContaApi
      *
      * Listar Anuidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageAnuidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -455,9 +455,9 @@ class ServicoContaApi
      *
      * Listar Anuidades
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAnuidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -540,9 +540,9 @@ class ServicoContaApi
      *
      * Listar Operadoras
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageOperadoraResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -558,9 +558,9 @@ class ServicoContaApi
      *
      * Listar Operadoras
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOperadoraResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */

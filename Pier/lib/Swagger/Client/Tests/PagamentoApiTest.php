@@ -66,12 +66,32 @@ class PagamentoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for consultarUsingGET
+     *
+     * Consulta os dados de um determinado acordo
+     *
+     */
+    public function test_consultarUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarPagamentosUsingGET1
      *
-     * Lista hist\u00C3\u00B3rico de pagamentos
+     * Lista hist\u00F3rico de pagamentos
      *
      */
     public function test_listarPagamentosUsingGET1() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET
+     *
+     * Lista os acordos existentes na base
+     *
+     */
+    public function test_listarUsingGET() {
 
     }
     

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DetalheOportunidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do detalhe da resposta do recurso Oportunidades
+ * @description Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DetalheOportunidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do detalhe
+      * $id C\u00F3digo identificador do detalhe
       * @var int
       */
     protected $id;
     
     /**
-      * $nome_campo Nome do conte\u00C3\u00BAdo
+      * $nome_campo Nome do conte\u00FAdo
       * @var string
       */
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do detalhe
+      * $conteudo Conte\u00FAdo do detalhe
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do detalhe
+     * @param int $id C\u00F3digo identificador do detalhe
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets nome_campo
-     * @param string $nome_campo Nome do conte\u00C3\u00BAdo
+     * @param string $nome_campo Nome do conte\u00FAdo
      * @return $this
      */
     public function setNomeCampo($nome_campo)
@@ -189,7 +189,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do detalhe
+     * @param string $conteudo Conte\u00FAdo do detalhe
      * @return $this
      */
     public function setConteudo($conteudo)

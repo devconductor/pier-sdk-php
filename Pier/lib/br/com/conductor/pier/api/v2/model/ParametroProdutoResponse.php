@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ParametroProdutoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta Par\u00C3\u00A2metro Produto
+ * @description Objeto de Resposta Par\u00E2metro Produto
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class ParametroProdutoResponse implements ArrayAccess
 
     
     /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $tipo_origem_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
+      * $tipo_origem_transacao Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).
       * @var string
       */
     protected $tipo_origem_transacao;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+      * $descricao Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
       * @var string
       */
     protected $descricao;
     
     /**
-      * $valor_parametro Valor do Par\u00C3\u00A2metro.
+      * $valor_parametro Valor do Par\u00E2metro.
       * @var Number
       */
     protected $valor_parametro;
     
     /**
-      * $data_validade Data de Validade do Par\u00C3\u00A2metro do Produto.
+      * $data_validade Data de Validade do Par\u00E2metro do Produto.
       * @var string
       */
     protected $data_validade;
@@ -169,7 +169,7 @@ class ParametroProdutoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -190,7 +190,7 @@ class ParametroProdutoResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
+     * @param string $tipo_origem_transacao Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -214,7 +214,7 @@ class ParametroProdutoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $descricao Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
      * @return $this
      */
     public function setDescricao($descricao)
@@ -235,7 +235,7 @@ class ParametroProdutoResponse implements ArrayAccess
   
     /**
      * Sets valor_parametro
-     * @param Number $valor_parametro Valor do Par\u00C3\u00A2metro.
+     * @param Number $valor_parametro Valor do Par\u00E2metro.
      * @return $this
      */
     public function setValorParametro($valor_parametro)
@@ -256,7 +256,7 @@ class ParametroProdutoResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Data de Validade do Par\u00C3\u00A2metro do Produto.
+     * @param string $data_validade Data de Validade do Par\u00E2metro do Produto.
      * @return $this
      */
     public function setDataValidade($data_validade)

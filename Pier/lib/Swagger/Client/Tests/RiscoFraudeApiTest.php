@@ -66,19 +66,19 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET27
      *
-     * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+     * Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET27() {
 
     }
     
     /**
      * Test case for listarTiposResolucaoUsingGET
      *
-     * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+     * Listar os tipos de resolu\u00E7\u00E3o de fraude
      *
      */
     public function test_listarTiposResolucaoUsingGET() {
@@ -88,7 +88,7 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for negarUsingPOST
      *
-     * Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
      */
     public function test_negarUsingPOST() {
@@ -98,10 +98,20 @@ class RiscoFraudeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for reconhecerUsingPOST
      *
-     * Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+     * Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
      *
      */
     public function test_reconhecerUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for validarDadosPortadorUsingPOST
+     *
+     * Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+     *
+     */
+    public function test_validarDadosPortadorUsingPOST() {
 
     }
     

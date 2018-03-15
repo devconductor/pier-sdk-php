@@ -59,7 +59,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
         'valor_pagamento' => 'Number',
         'data_hora_pagamento' => 'string',
         'data_hora_entrada_pagamento' => 'string',
-        'data_vencimento_parcela_acordo' => 'string',
         'status' => 'int'
     );
   
@@ -80,7 +79,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
         'valor_pagamento' => 'valorPagamento',
         'data_hora_pagamento' => 'dataHoraPagamento',
         'data_hora_entrada_pagamento' => 'dataHoraEntradaPagamento',
-        'data_vencimento_parcela_acordo' => 'dataVencimentoParcelaAcordo',
         'status' => 'status'
     );
   
@@ -101,7 +99,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
         'valor_pagamento' => 'setValorPagamento',
         'data_hora_pagamento' => 'setDataHoraPagamento',
         'data_hora_entrada_pagamento' => 'setDataHoraEntradaPagamento',
-        'data_vencimento_parcela_acordo' => 'setDataVencimentoParcelaAcordo',
         'status' => 'setStatus'
     );
   
@@ -122,7 +119,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
         'valor_pagamento' => 'getValorPagamento',
         'data_hora_pagamento' => 'getDataHoraPagamento',
         'data_hora_entrada_pagamento' => 'getDataHoraEntradaPagamento',
-        'data_vencimento_parcela_acordo' => 'getDataVencimentoParcelaAcordo',
         'status' => 'getStatus'
     );
   
@@ -132,31 +128,31 @@ class HistoricoPagamentoResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
+      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+      * $id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
       * @var int
       */
     protected $id_pagamento;
     
     /**
-      * $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+      * $id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
       * @var int
       */
     protected $id_banco;
     
     /**
-      * $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+      * $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
       * @var int
       */
     protected $id_cartao;
@@ -168,7 +164,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
     protected $valor_pagamento;
     
     /**
-      * $data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+      * $data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
       * @var string
       */
     protected $data_hora_pagamento;
@@ -180,13 +176,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
     protected $data_hora_entrada_pagamento;
     
     /**
-      * $data_vencimento_parcela_acordo Data e Hora do vencimento da parcela do acordo
-      * @var string
-      */
-    protected $data_vencimento_parcela_acordo;
-    
-    /**
-      * $status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+      * $status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
       * @var int
       */
     protected $status;
@@ -208,7 +198,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
             $this->valor_pagamento = $data["valor_pagamento"];
             $this->data_hora_pagamento = $data["data_hora_pagamento"];
             $this->data_hora_entrada_pagamento = $data["data_hora_entrada_pagamento"];
-            $this->data_vencimento_parcela_acordo = $data["data_vencimento_parcela_acordo"];
             $this->status = $data["status"];
         }
     }
@@ -224,7 +213,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -245,7 +234,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_pagamento
-     * @param int $id_pagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+     * @param int $id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
      * @return $this
      */
     public function setIdPagamento($id_pagamento)
@@ -266,7 +255,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -287,7 +276,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_banco
-     * @param int $id_banco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+     * @param int $id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
      * @return $this
      */
     public function setIdBanco($id_banco)
@@ -308,7 +297,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+     * @param int $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -350,7 +339,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_pagamento
-     * @param string $data_hora_pagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+     * @param string $data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
      * @return $this
      */
     public function setDataHoraPagamento($data_hora_pagamento)
@@ -382,27 +371,6 @@ class HistoricoPagamentoResponse implements ArrayAccess
     }
     
     /**
-     * Gets data_vencimento_parcela_acordo
-     * @return string
-     */
-    public function getDataVencimentoParcelaAcordo()
-    {
-        return $this->data_vencimento_parcela_acordo;
-    }
-  
-    /**
-     * Sets data_vencimento_parcela_acordo
-     * @param string $data_vencimento_parcela_acordo Data e Hora do vencimento da parcela do acordo
-     * @return $this
-     */
-    public function setDataVencimentoParcelaAcordo($data_vencimento_parcela_acordo)
-    {
-        
-        $this->data_vencimento_parcela_acordo = $data_vencimento_parcela_acordo;
-        return $this;
-    }
-    
-    /**
      * Gets status
      * @return int
      */
@@ -413,7 +381,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+     * @param int $status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
      * @return $this
      */
     public function setStatus($status)

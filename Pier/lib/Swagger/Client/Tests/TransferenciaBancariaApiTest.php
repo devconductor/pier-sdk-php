@@ -68,7 +68,7 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for atualizarUsingPUT1
      *
-     * Atualiza conta banc\u00C3\u00A1ria portador
+     * Atualiza conta banc\u00E1ria portador
      *
      */
     public function test_atualizarUsingPUT1() {
@@ -76,9 +76,29 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for cancelarTransferenciaCreditoContaBancariaUsingPOST
+     *
+     * Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     */
+    public function test_cancelarTransferenciaCreditoContaBancariaUsingPOST() {
+
+    }
+    
+    /**
+     * Test case for confirmarTransferenciaCreditoContaBancariaUsingPOST
+     *
+     * Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     */
+    public function test_confirmarTransferenciaCreditoContaBancariaUsingPOST() {
+
+    }
+    
+    /**
      * Test case for consultarTransferenciaBancariaUsingGET
      *
-     * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+     * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
      *
      */
     public function test_consultarTransferenciaBancariaUsingGET() {
@@ -86,29 +106,29 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for consultarUsingGET12
      *
-     * Consulta conta banc\u00C3\u00A1ria portador
+     * Consulta conta banc\u00E1ria portador
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET12() {
 
     }
     
     /**
-     * Test case for consultarUsingGET40
+     * Test case for consultarUsingGET41
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
      *
      */
-    public function test_consultarUsingGET40() {
+    public function test_consultarUsingGET41() {
 
     }
     
     /**
      * Test case for listarTransferenciaBancariaUsingGET
      *
-     * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
      *
      */
     public function test_listarTransferenciaBancariaUsingGET() {
@@ -116,29 +136,29 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET14
+     * Test case for listarUsingGET15
      *
-     * Lista contas banc\u00C3\u00A1rias portador
+     * Lista contas banc\u00E1rias portador
      *
      */
-    public function test_listarUsingGET14() {
+    public function test_listarUsingGET15() {
 
     }
     
     /**
-     * Test case for listarUsingGET47
+     * Test case for listarUsingGET49
      *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     * Listar as transfer\u00EAncias banc\u00E1rias realizadas
      *
      */
-    public function test_listarUsingGET47() {
+    public function test_listarUsingGET49() {
 
     }
     
     /**
      * Test case for salvarUsingPOST8
      *
-     * Cadastra uma conta banc\u00C3\u00A1ria do portador
+     * Cadastra uma conta banc\u00E1ria do portador
      *
      */
     public function test_salvarUsingPOST8() {
@@ -148,7 +168,7 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for simularTransferenciaBancariaUsingPOST
      *
-     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
      *
      */
     public function test_simularTransferenciaBancariaUsingPOST() {
@@ -158,7 +178,7 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transferenciaCreditoContaBancariaUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      */
     public function test_transferenciaCreditoContaBancariaUsingPOST() {
@@ -168,7 +188,7 @@ class TransferenciaBancariaApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transferirUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      */
     public function test_transferirUsingPOST() {

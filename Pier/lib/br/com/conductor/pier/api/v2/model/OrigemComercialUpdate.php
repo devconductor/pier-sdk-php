@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OrigemComercialUpdate Class Doc Comment
  *
  * @category    Class
- * @description Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
+ * @description Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -186,7 +186,7 @@ class OrigemComercialUpdate implements ArrayAccess
     protected $nome;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+      * $descricao Descri\u00E7\u00E3o da origem comercial
       * @var string
       */
     protected $descricao;
@@ -216,55 +216,55 @@ class OrigemComercialUpdate implements ArrayAccess
     protected $status;
     
     /**
-      * $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+      * $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
       * @var bool
       */
     protected $flag_pre_aprovado;
     
     /**
-      * $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+      * $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
       * @var bool
       */
     protected $flag_aprovacao_imediata;
     
     /**
-      * $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
+      * $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
       * @var string
       */
     protected $nome_fantasia_plastico;
     
     /**
-      * $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+      * $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
       * @var bool
       */
     protected $flag_cartao_provisorio;
     
     /**
-      * $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
+      * $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
       * @var bool
       */
     protected $flag_cartao_definitivo;
     
     /**
-      * $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+      * $usuario Usu\u00E1rio para autentica\u00E7\u00E3o
       * @var string
       */
     protected $usuario;
     
     /**
-      * $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+      * $senha Senha para autentica\u00E7\u00E3o
       * @var string
       */
     protected $senha;
     
     /**
-      * $flag_origem_externa Indica se \u00C3\u00A9 origem externa
+      * $flag_origem_externa Indica se \u00E9 origem externa
       * @var bool
       */
     protected $flag_origem_externa;
     
     /**
-      * $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+      * $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
       * @var bool
       */
     protected $flag_modificado;
@@ -276,13 +276,13 @@ class OrigemComercialUpdate implements ArrayAccess
     protected $flag_envia_fatura_usuario;
     
     /**
-      * $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
+      * $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
       * @var bool
       */
     protected $flag_credito_faturamento;
     
     /**
-      * $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+      * $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
       * @var bool
       */
     protected $flag_concede_limite_provisorio;
@@ -300,7 +300,7 @@ class OrigemComercialUpdate implements ArrayAccess
     protected $flag_embossing_loja;
     
     /**
-      * $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+      * $flag_consulta_previa Indica se realiza consulta pr\u00E9via
       * @var bool
       */
     protected $flag_consulta_previa;
@@ -377,7 +377,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+     * @param string $descricao Descri\u00E7\u00E3o da origem comercial
      * @return $this
      */
     public function setDescricao($descricao)
@@ -482,7 +482,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_pre_aprovado
-     * @param bool $flag_pre_aprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+     * @param bool $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
      * @return $this
      */
     public function setFlagPreAprovado($flag_pre_aprovado)
@@ -503,7 +503,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_aprovacao_imediata
-     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
      * @return $this
      */
     public function setFlagAprovacaoImediata($flag_aprovacao_imediata)
@@ -524,7 +524,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets nome_fantasia_plastico
-     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00C3\u00A1stico
+     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
      * @return $this
      */
     public function setNomeFantasiaPlastico($nome_fantasia_plastico)
@@ -545,7 +545,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_cartao_provisorio
-     * @param bool $flag_cartao_provisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+     * @param bool $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
      * @return $this
      */
     public function setFlagCartaoProvisorio($flag_cartao_provisorio)
@@ -566,7 +566,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_cartao_definitivo
-     * @param bool $flag_cartao_definitivo Indica se permite cart\u00C3\u00A3o definitivo
+     * @param bool $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
      * @return $this
      */
     public function setFlagCartaoDefinitivo($flag_cartao_definitivo)
@@ -587,7 +587,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $usuario Usu\u00E1rio para autentica\u00E7\u00E3o
      * @return $this
      */
     public function setUsuario($usuario)
@@ -608,7 +608,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+     * @param string $senha Senha para autentica\u00E7\u00E3o
      * @return $this
      */
     public function setSenha($senha)
@@ -629,7 +629,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_origem_externa
-     * @param bool $flag_origem_externa Indica se \u00C3\u00A9 origem externa
+     * @param bool $flag_origem_externa Indica se \u00E9 origem externa
      * @return $this
      */
     public function setFlagOrigemExterna($flag_origem_externa)
@@ -650,7 +650,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_modificado
-     * @param bool $flag_modificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+     * @param bool $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
      * @return $this
      */
     public function setFlagModificado($flag_modificado)
@@ -692,7 +692,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_credito_faturamento
-     * @param bool $flag_credito_faturamento Indica se permite cr\u00C3\u00A9dito de faturamento
+     * @param bool $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
      * @return $this
      */
     public function setFlagCreditoFaturamento($flag_credito_faturamento)
@@ -713,7 +713,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_concede_limite_provisorio
-     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00C3\u00B3rio
+     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
      * @return $this
      */
     public function setFlagConcedeLimiteProvisorio($flag_concede_limite_provisorio)
@@ -776,7 +776,7 @@ class OrigemComercialUpdate implements ArrayAccess
   
     /**
      * Sets flag_consulta_previa
-     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00C3\u00A9via
+     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00E9via
      * @return $this
      */
     public function setFlagConsultaPrevia($flag_consulta_previa)

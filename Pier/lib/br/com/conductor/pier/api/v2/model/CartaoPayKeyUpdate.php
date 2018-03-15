@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoPayKeyUpdate Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso de atualiza\u00C3\u00A7\u00C3\u00A3o de chave
+ * @description Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class CartaoPayKeyUpdate implements ArrayAccess
 
     
     /**
-      * $chave_criptograma Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+      * $chave_criptograma Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
       * @var string
       */
     protected $chave_criptograma;
@@ -125,7 +125,7 @@ class CartaoPayKeyUpdate implements ArrayAccess
   
     /**
      * Sets chave_criptograma
-     * @param string $chave_criptograma Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+     * @param string $chave_criptograma Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
      * @return $this
      */
     public function setChaveCriptograma($chave_criptograma)

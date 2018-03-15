@@ -66,12 +66,12 @@ class AvisoViagemApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET4
+     * Test case for consultarUsingGET5
      *
      * Consultar um aviso viagem de acordo com o id passado
      *
      */
-    public function test_consultarUsingGET4() {
+    public function test_consultarUsingGET5() {
 
     }
     
@@ -96,12 +96,12 @@ class AvisoViagemApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET6
+     * Test case for listarUsingGET7
      *
      * Lista os avisos viagens gerados pelo Emissor
      *
      */
-    public function test_listarUsingGET6() {
+    public function test_listarUsingGET7() {
 
     }
     

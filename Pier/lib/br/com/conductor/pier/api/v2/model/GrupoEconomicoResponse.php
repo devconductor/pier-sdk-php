@@ -38,7 +38,7 @@ use \ArrayAccess;
  * GrupoEconomicoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
+ * @description Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -71,6 +71,7 @@ class GrupoEconomicoResponse implements ArrayAccess
         'pagamento_decendial_terceiro' => 'int',
         'pagamento_quinzenal_primeiro' => 'int',
         'pagamento_quinzenal_segundo' => 'int',
+        'id_credor_rav' => 'int',
         'percentual_rav' => 'Number',
         'recebe_rav' => 'string',
         'percentual_multiplica' => 'Number',
@@ -108,6 +109,7 @@ class GrupoEconomicoResponse implements ArrayAccess
         'pagamento_decendial_terceiro' => 'pagamentoDecendialTerceiro',
         'pagamento_quinzenal_primeiro' => 'pagamentoQuinzenalPrimeiro',
         'pagamento_quinzenal_segundo' => 'pagamentoQuinzenalSegundo',
+        'id_credor_rav' => 'idCredorRAV',
         'percentual_rav' => 'percentualRAV',
         'recebe_rav' => 'recebeRAV',
         'percentual_multiplica' => 'percentualMultiplica',
@@ -145,6 +147,7 @@ class GrupoEconomicoResponse implements ArrayAccess
         'pagamento_decendial_terceiro' => 'setPagamentoDecendialTerceiro',
         'pagamento_quinzenal_primeiro' => 'setPagamentoQuinzenalPrimeiro',
         'pagamento_quinzenal_segundo' => 'setPagamentoQuinzenalSegundo',
+        'id_credor_rav' => 'setIdCredorRav',
         'percentual_rav' => 'setPercentualRav',
         'recebe_rav' => 'setRecebeRav',
         'percentual_multiplica' => 'setPercentualMultiplica',
@@ -182,6 +185,7 @@ class GrupoEconomicoResponse implements ArrayAccess
         'pagamento_decendial_terceiro' => 'getPagamentoDecendialTerceiro',
         'pagamento_quinzenal_primeiro' => 'getPagamentoQuinzenalPrimeiro',
         'pagamento_quinzenal_segundo' => 'getPagamentoQuinzenalSegundo',
+        'id_credor_rav' => 'getIdCredorRav',
         'percentual_rav' => 'getPercentualRav',
         'recebe_rav' => 'getRecebeRav',
         'percentual_multiplica' => 'getPercentualMultiplica',
@@ -196,13 +200,13 @@ class GrupoEconomicoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+      * $id C\u00F3digo identificador do grupo econ\u00F4mico
       * @var int
       */
     protected $id;
     
     /**
-      * $razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+      * $razao_social Raz\u00E3o social da pessoa jur\u00EDdica
       * @var string
       */
     protected $razao_social;
@@ -214,13 +218,13 @@ class GrupoEconomicoResponse implements ArrayAccess
     protected $nome_credor;
     
     /**
-      * $numero_receita_federal N\u00C3\u00BAmero da Receita Federal
+      * $numero_receita_federal N\u00FAmero da Receita Federal
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+      * $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
       * @var string
       */
     protected $inscricao_estadual;
@@ -232,37 +236,37 @@ class GrupoEconomicoResponse implements ArrayAccess
     protected $contato;
     
     /**
-      * $banco C\u00C3\u00B3digo do banco
+      * $banco C\u00F3digo do banco
       * @var int
       */
     protected $banco;
     
     /**
-      * $agencia C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+      * $agencia C\u00F3digo da ag\u00EAncia
       * @var int
       */
     protected $agencia;
     
     /**
-      * $digito_agencia D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+      * $digito_agencia D\u00EDgito verificador da ag\u00EAncia
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $conta_corrente C\u00C3\u00B3digo da Conta Corrente
+      * $conta_corrente C\u00F3digo da Conta Corrente
       * @var string
       */
     protected $conta_corrente;
     
     /**
-      * $digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente
+      * $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
       * @var string
       */
     protected $digito_conta_corrente;
     
     /**
-      * $usuario Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+      * $usuario Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
       * @var string
       */
     protected $usuario;
@@ -314,6 +318,12 @@ class GrupoEconomicoResponse implements ArrayAccess
       * @var int
       */
     protected $pagamento_quinzenal_segundo;
+    
+    /**
+      * $id_credor_rav Identificador do credor RAV
+      * @var int
+      */
+    protected $id_credor_rav;
     
     /**
       * $percentual_rav Valor percentual do RAV do credor
@@ -380,6 +390,7 @@ class GrupoEconomicoResponse implements ArrayAccess
             $this->pagamento_decendial_terceiro = $data["pagamento_decendial_terceiro"];
             $this->pagamento_quinzenal_primeiro = $data["pagamento_quinzenal_primeiro"];
             $this->pagamento_quinzenal_segundo = $data["pagamento_quinzenal_segundo"];
+            $this->id_credor_rav = $data["id_credor_rav"];
             $this->percentual_rav = $data["percentual_rav"];
             $this->recebe_rav = $data["recebe_rav"];
             $this->percentual_multiplica = $data["percentual_multiplica"];
@@ -400,7 +411,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+     * @param int $id C\u00F3digo identificador do grupo econ\u00F4mico
      * @return $this
      */
     public function setId($id)
@@ -421,7 +432,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+     * @param string $razao_social Raz\u00E3o social da pessoa jur\u00EDdica
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -463,7 +474,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00C3\u00BAmero da Receita Federal
+     * @param string $numero_receita_federal N\u00FAmero da Receita Federal
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -484,7 +495,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets inscricao_estadual
-     * @param string $inscricao_estadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+     * @param string $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
      * @return $this
      */
     public function setInscricaoEstadual($inscricao_estadual)
@@ -526,7 +537,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00C3\u00B3digo do banco
+     * @param int $banco C\u00F3digo do banco
      * @return $this
      */
     public function setBanco($banco)
@@ -547,7 +558,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets agencia
-     * @param int $agencia C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+     * @param int $agencia C\u00F3digo da ag\u00EAncia
      * @return $this
      */
     public function setAgencia($agencia)
@@ -568,7 +579,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+     * @param string $digito_agencia D\u00EDgito verificador da ag\u00EAncia
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -589,7 +600,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets conta_corrente
-     * @param string $conta_corrente C\u00C3\u00B3digo da Conta Corrente
+     * @param string $conta_corrente C\u00F3digo da Conta Corrente
      * @return $this
      */
     public function setContaCorrente($conta_corrente)
@@ -610,7 +621,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets digito_conta_corrente
-     * @param string $digito_conta_corrente D\u00C3\u00ADgito Verificador da Conta Corrente
+     * @param string $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
      * @return $this
      */
     public function setDigitoContaCorrente($digito_conta_corrente)
@@ -631,7 +642,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+     * @param string $usuario Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
      * @return $this
      */
     public function setUsuario($usuario)
@@ -812,6 +823,27 @@ class GrupoEconomicoResponse implements ArrayAccess
     {
         
         $this->pagamento_quinzenal_segundo = $pagamento_quinzenal_segundo;
+        return $this;
+    }
+    
+    /**
+     * Gets id_credor_rav
+     * @return int
+     */
+    public function getIdCredorRav()
+    {
+        return $this->id_credor_rav;
+    }
+  
+    /**
+     * Sets id_credor_rav
+     * @param int $id_credor_rav Identificador do credor RAV
+     * @return $this
+     */
+    public function setIdCredorRav($id_credor_rav)
+    {
+        
+        $this->id_credor_rav = $id_credor_rav;
         return $this;
     }
     

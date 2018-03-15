@@ -96,7 +96,7 @@ class BeneficioPagamentoAtrasoResponse implements ArrayAccess
 
     
     /**
-      * $data_beneficio Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF.
+      * $data_beneficio Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
       * @var string
       */
     protected $data_beneficio;
@@ -125,7 +125,7 @@ class BeneficioPagamentoAtrasoResponse implements ArrayAccess
   
     /**
      * Sets data_beneficio
-     * @param string $data_beneficio Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF.
+     * @param string $data_beneficio Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
      * @return $this
      */
     public function setDataBeneficio($data_beneficio)

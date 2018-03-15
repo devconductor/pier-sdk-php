@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarFaturaUsingGET1**](FaturaApi.md#consultarFaturaUsingGET1) | **GET** /api/faturas/{dataVencimento} | Consulta fatura de um cliente
 [**consultarLancamentosFuturosFaturaUsingGET1**](FaturaApi.md#consultarLancamentosFuturosFaturaUsingGET1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
-[**enviarFaturaEmailUsingPOST**](FaturaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
+[**enviarFaturaEmailUsingPOST**](FaturaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00AA via de fatura por E-mail
 [**listarFaturasUsingGET1**](FaturaApi.md#listarFaturasUsingGET1) | **GET** /api/faturas | Listar faturas de um cliente.
 [**visualizarDocumentoUsingGET**](FaturaApi.md#visualizarDocumentoUsingGET) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
 
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FaturaApi();
 $data_vencimento = "data_vencimento_example"; // string | Data Vencimento
-$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id_conta = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 try { 
     $result = $api_instance->consultarFaturaUsingGET1($data_vencimento, $id_conta);
@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data_vencimento** | **string**| Data Vencimento | 
- **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_conta** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -71,11 +71,11 @@ Lista os planos de parcelamento da fatura de uma conta.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FaturaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-$data_vencimento_padrao = "data_vencimento_padrao_example"; // string | Indica a data de vencimento padr\u00C3\u00A3o das faturas
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+$data_vencimento_padrao = "data_vencimento_padrao_example"; // string | Indica a data de vencimento padr\u00E3o das faturas
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->consultarLancamentosFuturosFaturaUsingGET1($id, $data_vencimento_padrao, $sort, $page, $limit);
@@ -90,11 +90,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **data_vencimento_padrao** | **string**| Indica a data de vencimento padr\u00C3\u00A3o das faturas | 
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **data_vencimento_padrao** | **string**| Indica a data de vencimento padr\u00E3o das faturas | 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -114,7 +114,7 @@ No authorization required
 # **enviarFaturaEmailUsingPOST**
 > object enviarFaturaEmailUsingPOST($id, $data_vencimento, $email)
 
-Envia 2\u00C2\u00AA via de fatura por E-mail
+Envia 2\u00AA via de fatura por E-mail
 
 Envia a segunda via da fatura para o e-mail informado/cadastrado.
 
@@ -124,9 +124,9 @@ Envia a segunda via da fatura para o e-mail informado/cadastrado.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FaturaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $data_vencimento = "data_vencimento_example"; // string | Data de Vencimento da fatura (yyyy-MM-dd).
-$email = "email_example"; // string | E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+$email = "email_example"; // string | E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
 
 try { 
     $result = $api_instance->enviarFaturaEmailUsingPOST($id, $data_vencimento, $email);
@@ -141,9 +141,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **data_vencimento** | **string**| Data de Vencimento da fatura (yyyy-MM-dd). | 
- **email** | **string**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
+ **email** | **string**| E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. | [optional] 
 
 ### Return type
 
@@ -173,11 +173,11 @@ Lista faturas de um cliente.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FaturaApi();
-$id_conta = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id_conta = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $situacao_processamento = "TODAS"; // string | Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
-$sort = array("sort_example"); // string[] | Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-$page = 56; // int | P\u00C3\u00A1gina solicitada (Default = 0)
-$limit = 56; // int | Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+$sort = array("sort_example"); // string[] | Tipo de ordena\u00E7\u00E3o dos registros.
+$page = 56; // int | P\u00E1gina solicitada (Default = 0)
+$limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
     $result = $api_instance->listarFaturasUsingGET1($id_conta, $situacao_processamento, $sort, $page, $limit);
@@ -192,11 +192,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_conta** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id_conta** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **situacao_processamento** | **string**| Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. | [optional] [default to TODAS]
- **sort** | [**string[]**](string.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **int**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **int**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**string[]**](string.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **int**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **int**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -218,7 +218,7 @@ No authorization required
 
 Permite visualizar o extrato da fatura em formato PDF
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
 
 ### Example 
 ```php
@@ -226,7 +226,7 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de um
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\FaturaApi();
-$id = 789; // int | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+$id = 789; // int | C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 $data_vencimento = "data_vencimento_example"; // string | Data de Vencimento da fatura.
 
 try { 
@@ -242,7 +242,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **int**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **data_vencimento** | **string**| Data de Vencimento da fatura. | 
 
 ### Return type

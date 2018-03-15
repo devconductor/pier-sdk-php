@@ -180,7 +180,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
 
     
     /**
-      * $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+      * $razao_social Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
       * @var string
       */
     protected $razao_social;
@@ -192,13 +192,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $nome_fantasia;
     
     /**
-      * $cnpj N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+      * $cnpj N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
       * @var string
       */
     protected $cnpj;
     
     /**
-      * $inscricao_estadual N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+      * $inscricao_estadual N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
       * @var string
       */
     protected $inscricao_estadual;
@@ -222,13 +222,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $id_produto;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+      * $numero_agencia N\u00FAmero da ag\u00EAncia.
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+      * $numero_conta_corrente N\u00FAmero da conta corrente.
       * @var string
       */
     protected $numero_conta_corrente;
@@ -246,7 +246,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $dia_vencimento;
     
     /**
-      * $nome_impresso Nome que deve ser impresso no cart\u00C3\u00A3o
+      * $nome_impresso Nome que deve ser impresso no cart\u00E3o
       * @var string
       */
     protected $nome_impresso;
@@ -264,7 +264,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $canal_entrada;
     
     /**
-      * $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+      * $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
       * @var int
       */
     protected $valor_pontuacao;
@@ -276,19 +276,19 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $telefones;
     
     /**
-      * $enderecos Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+      * $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
       * @var \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]
       */
     protected $enderecos;
     
     /**
-      * $socios Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+      * $socios Apresenta os dados dos s\u00F3cios da empresa, caso exista
       * @var \br.com.conductor.pier.api.v2.model\PessoaPersist[]
       */
     protected $socios;
     
     /**
-      * $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+      * $referencias_comerciais Apresenta os dados das refer\u00EAncias comerciais
       * @var \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
       */
     protected $referencias_comerciais;
@@ -300,13 +300,13 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     protected $limite_global;
     
     /**
-      * $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+      * $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
       * @var Number
       */
     protected $limite_maximo;
     
     /**
-      * $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+      * $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
       * @var Number
       */
     protected $limite_parcelas;
@@ -356,7 +356,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+     * @param string $razao_social Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -398,7 +398,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets cnpj
-     * @param string $cnpj N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+     * @param string $cnpj N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
      * @return $this
      */
     public function setCnpj($cnpj)
@@ -419,7 +419,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets inscricao_estadual
-     * @param string $inscricao_estadual N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+     * @param string $inscricao_estadual N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
      * @return $this
      */
     public function setInscricaoEstadual($inscricao_estadual)
@@ -503,7 +503,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -524,7 +524,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -587,7 +587,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param string $nome_impresso Nome que deve ser impresso no cart\u00E3o
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -650,7 +650,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets valor_pontuacao
-     * @param int $valor_pontuacao Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+     * @param int $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
      * @return $this
      */
     public function setValorPontuacao($valor_pontuacao)
@@ -692,7 +692,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets enderecos
-     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[] $enderecos Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[] $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
      * @return $this
      */
     public function setEnderecos($enderecos)
@@ -713,7 +713,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets socios
-     * @param \br.com.conductor.pier.api.v2.model\PessoaPersist[] $socios Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+     * @param \br.com.conductor.pier.api.v2.model\PessoaPersist[] $socios Apresenta os dados dos s\u00F3cios da empresa, caso exista
      * @return $this
      */
     public function setSocios($socios)
@@ -734,7 +734,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets referencias_comerciais
-     * @param \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[] $referencias_comerciais Apresenta os dados das refer\u00C3\u00AAncias comerciais
+     * @param \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[] $referencias_comerciais Apresenta os dados das refer\u00EAncias comerciais
      * @return $this
      */
     public function setReferenciasComerciais($referencias_comerciais)
@@ -776,7 +776,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_maximo
-     * @param Number $limite_maximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+     * @param Number $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
      * @return $this
      */
     public function setLimiteMaximo($limite_maximo)
@@ -797,7 +797,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+     * @param Number $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)

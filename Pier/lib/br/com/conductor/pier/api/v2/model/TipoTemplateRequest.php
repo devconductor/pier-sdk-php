@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoTemplateRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+ * @description Representa\u00E7\u00E3o do tipo de template.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -110,7 +110,7 @@ class TipoTemplateRequest implements ArrayAccess
     protected $nome;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+      * $descricao Descri\u00E7\u00E3o do tipo de template.
       * @var string
       */
     protected $descricao;
@@ -168,7 +168,7 @@ class TipoTemplateRequest implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de template.
      * @return $this
      */
     public function setDescricao($descricao)

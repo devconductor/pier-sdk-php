@@ -136,13 +136,13 @@ class PessoaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo identificador da pessoa
+      * $id_pessoa C\u00F3digo identificador da pessoa
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+      * $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
       * @var string
       */
     protected $nome_mae;
@@ -154,13 +154,13 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $id_estado_civil;
     
     /**
-      * $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+      * $id_profissao Profiss\u00E3o da pessoa fisica
       * @var string
       */
     protected $id_profissao;
     
     /**
-      * $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+      * $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
       * @var int
       */
     protected $id_natureza_ocupacao;
@@ -172,19 +172,19 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $id_nacionalidade;
     
     /**
-      * $numero_banco N\u00C3\u00BAmero do banco.
+      * $numero_banco N\u00FAmero do banco.
       * @var int
       */
     protected $numero_banco;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+      * $numero_agencia N\u00FAmero da ag\u00EAncia.
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+      * $numero_conta_corrente N\u00FAmero da conta corrente.
       * @var string
       */
     protected $numero_conta_corrente;
@@ -196,7 +196,7 @@ class PessoaDetalheResponse implements ArrayAccess
     protected $email;
     
     /**
-      * $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+      * $nome_empresa Nome que deve ser impresso no cart\u00E3o
       * @var string
       */
     protected $nome_empresa;
@@ -235,7 +235,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo identificador da pessoa
+     * @param int $id_pessoa C\u00F3digo identificador da pessoa
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -256,7 +256,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_mae
-     * @param string $nome_mae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
      * @return $this
      */
     public function setNomeMae($nome_mae)
@@ -298,7 +298,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param string $id_profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * @param string $id_profissao Profiss\u00E3o da pessoa fisica
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -319,7 +319,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_natureza_ocupacao
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
      * @return $this
      */
     public function setIdNaturezaOcupacao($id_natureza_ocupacao)
@@ -361,7 +361,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_banco
-     * @param int $numero_banco N\u00C3\u00BAmero do banco.
+     * @param int $numero_banco N\u00FAmero do banco.
      * @return $this
      */
     public function setNumeroBanco($numero_banco)
@@ -382,7 +382,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -403,7 +403,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00C3\u00BAmero da conta corrente.
+     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -445,7 +445,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegracaoEmissorResponse Class Doc Comment
  *
  * @category    Class
- * @description Resposta do recurso de inclus\u00C3\u00A3o de registro para integra\u00C3\u00A7\u00C3\u00A3o
+ * @description Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,19 +116,19 @@ class IntegracaoEmissorResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor.
+      * $id C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+      * $id_arquivo C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
       * @var int
       */
     protected $id_arquivo;
@@ -140,13 +140,13 @@ class IntegracaoEmissorResponse implements ArrayAccess
     protected $status;
     
     /**
-      * $data_inclusao Data de inclus\u00C3\u00A3o do registro.
+      * $data_inclusao Data de inclus\u00E3o do registro.
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+      * $data_alteracao Data da ultima altera\u00E7\u00E3o do registro.
       * @var string
       */
     protected $data_alteracao;
@@ -180,7 +180,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor.
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -222,7 +222,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets id_arquivo
-     * @param int $id_arquivo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+     * @param int $id_arquivo C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
      * @return $this
      */
     public function setIdArquivo($id_arquivo)
@@ -264,7 +264,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00C3\u00A3o do registro.
+     * @param string $data_inclusao Data de inclus\u00E3o do registro.
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -285,7 +285,7 @@ class IntegracaoEmissorResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+     * @param string $data_alteracao Data da ultima altera\u00E7\u00E3o do registro.
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)

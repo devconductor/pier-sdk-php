@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PaisResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso pa\u00C3\u00ADses
+ * @description Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class PaisResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do pa\u00C3\u00ADs na base
+      * $id C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
       * @var int
       */
     protected $id;
     
     /**
-      * $codigo C\u00C3\u00B3digo identificador do pa\u00C3\u00ADs
+      * $codigo C\u00F3digo identificador do pa\u00EDs
       * @var string
       */
     protected $codigo;
     
     /**
-      * $sigla Sigla do pa\u00C3\u00ADs
+      * $sigla Sigla do pa\u00EDs
       * @var string
       */
     protected $sigla;
     
     /**
-      * $descricao Nome do pa\u00C3\u00ADs
+      * $descricao Nome do pa\u00EDs
       * @var string
       */
     protected $descricao;
     
     /**
-      * $continente Continente no qual o pa\u00C3\u00ADs faz parte
+      * $continente Continente no qual o pa\u00EDs faz parte
       * @var string
       */
     protected $continente;
     
     /**
-      * $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+      * $flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo
       * @var bool
       */
     protected $flag_ativo;
@@ -180,7 +180,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador \u00C3\u00BAnico do pa\u00C3\u00ADs na base
+     * @param int $id C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets codigo
-     * @param string $codigo C\u00C3\u00B3digo identificador do pa\u00C3\u00ADs
+     * @param string $codigo C\u00F3digo identificador do pa\u00EDs
      * @return $this
      */
     public function setCodigo($codigo)
@@ -222,7 +222,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets sigla
-     * @param string $sigla Sigla do pa\u00C3\u00ADs
+     * @param string $sigla Sigla do pa\u00EDs
      * @return $this
      */
     public function setSigla($sigla)
@@ -243,7 +243,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Nome do pa\u00C3\u00ADs
+     * @param string $descricao Nome do pa\u00EDs
      * @return $this
      */
     public function setDescricao($descricao)
@@ -264,7 +264,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets continente
-     * @param string $continente Continente no qual o pa\u00C3\u00ADs faz parte
+     * @param string $continente Continente no qual o pa\u00EDs faz parte
      * @return $this
      */
     public function setContinente($continente)
@@ -288,7 +288,7 @@ class PaisResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+     * @param bool $flag_ativo Atributo que representa se o pa\u00EDs est\u00E1 ativo
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

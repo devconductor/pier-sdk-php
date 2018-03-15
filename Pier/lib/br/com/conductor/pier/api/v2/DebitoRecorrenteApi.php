@@ -92,52 +92,52 @@ class DebitoRecorrenteApi
   
     
     /**
-     * listarUsingGET15
+     * listarUsingGET16
      *
-     * Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
+     * Lista os d\u00E9bitos recorrentes de uma Conta
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
-     * @param int $id_tipo_debito_recorrente C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id) (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_hora_inicio Data inicio do d\u00C3\u00A9bito recorrente. (optional)
-     * @param string $data_hora_fim Data fim do d\u00C3\u00A9bito recorrente. (optional)
-     * @param bool $ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. (optional)
-     * @param string $data_hora_ultimo_pagamento Data do \u00C3\u00BAltimo pagamento efetuado. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta (id) (required)
+     * @param int $id_tipo_debito_recorrente C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_hora_inicio Data inicio do d\u00E9bito recorrente. (optional)
+     * @param string $data_hora_fim Data fim do d\u00E9bito recorrente. (optional)
+     * @param bool $ativo Identifica se o d\u00E9bito recorrente est\u00E1 ativo. (optional)
+     * @param string $data_hora_ultimo_pagamento Data do \u00FAltimo pagamento efetuado. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
+    public function listarUsingGET16($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET16WithHttpInfo ($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET15WithHttpInfo
+     * listarUsingGET16WithHttpInfo
      *
-     * Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
+     * Lista os d\u00E9bitos recorrentes de uma Conta
      *
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) (required)
-     * @param int $id_tipo_debito_recorrente C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id) (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param string $data_hora_inicio Data inicio do d\u00C3\u00A9bito recorrente. (optional)
-     * @param string $data_hora_fim Data fim do d\u00C3\u00A9bito recorrente. (optional)
-     * @param bool $ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. (optional)
-     * @param string $data_hora_ultimo_pagamento Data do \u00C3\u00BAltimo pagamento efetuado. (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta (id) (required)
+     * @param int $id_tipo_debito_recorrente C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param string $data_hora_inicio Data inicio do d\u00E9bito recorrente. (optional)
+     * @param string $data_hora_fim Data fim do d\u00E9bito recorrente. (optional)
+     * @param bool $ativo Identifica se o d\u00E9bito recorrente est\u00E1 ativo. (optional)
+     * @param string $data_hora_ultimo_pagamento Data do \u00FAltimo pagamento efetuado. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET15WithHttpInfo($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
+    public function listarUsingGET16WithHttpInfo($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET15');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET16');
         }
   
         // parse inputs
@@ -235,43 +235,43 @@ class DebitoRecorrenteApi
     }
     
     /**
-     * listarUsingGET41
+     * listarUsingGET43
      *
      * Listar Tipos Debitos Recorrentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id). (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente. (optional)
-     * @param Number $valor Valor do tipo de d\u00C3\u00A9bito recorrente. (optional)
-     * @param bool $flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id). (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente. (optional)
+     * @param Number $valor Valor do tipo de d\u00E9bito recorrente. (optional)
+     * @param bool $flag_ativo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET41($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET43($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET41WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET43WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET41WithHttpInfo
+     * listarUsingGET43WithHttpInfo
      *
      * Listar Tipos Debitos Recorrentes
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id). (optional)
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente. (optional)
-     * @param Number $valor Valor do tipo de d\u00C3\u00A9bito recorrente. (optional)
-     * @param bool $flag_ativo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id). (optional)
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente. (optional)
+     * @param Number $valor Valor do tipo de d\u00E9bito recorrente. (optional)
+     * @param bool $flag_ativo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET41WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET43WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
         
   

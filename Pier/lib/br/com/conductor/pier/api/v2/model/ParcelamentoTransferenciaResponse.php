@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ParcelamentoTransferenciaResponse Class Doc Comment
  *
  * @category    Class
- * @description Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * @description Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,7 +120,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
 
     
     /**
-      * $numero_parcela N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+      * $numero_parcela N\u00FAmero de parcelas dispon\u00EDveis.
       * @var int
       */
     protected $numero_parcela;
@@ -138,13 +138,13 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
     protected $valor_total;
     
     /**
-      * $valor_tac Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+      * $valor_tac Valor da tarifa de contrata\u00E7\u00E3o.
       * @var Number
       */
     protected $valor_tac;
     
     /**
-      * $valor_iof IOF
+      * $valor_iof IOF calculado para o cliente
       * @var Number
       */
     protected $valor_iof;
@@ -191,7 +191,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param int $numero_parcela N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+     * @param int $numero_parcela N\u00FAmero de parcelas dispon\u00EDveis.
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -254,7 +254,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_tac
-     * @param Number $valor_tac Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+     * @param Number $valor_tac Valor da tarifa de contrata\u00E7\u00E3o.
      * @return $this
      */
     public function setValorTac($valor_tac)
@@ -275,7 +275,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_iof
-     * @param Number $valor_iof IOF
+     * @param Number $valor_iof IOF calculado para o cliente
      * @return $this
      */
     public function setValorIof($valor_iof)

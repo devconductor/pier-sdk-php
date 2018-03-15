@@ -94,7 +94,7 @@ class EnderecoNacionalApi
     /**
      * consultarEnderecoUsingGET
      *
-     * Consultar Endere\u00C3\u00A7o
+     * Consultar Endere\u00E7o
      *
      * @param string $cep CEP (required)
      * @return \br.com.conductor.pier.api.v2.model\EnderecoResponse
@@ -110,7 +110,7 @@ class EnderecoNacionalApi
     /**
      * consultarEnderecoUsingGETWithHttpInfo
      *
-     * Consultar Endere\u00C3\u00A7o
+     * Consultar Endere\u00E7o
      *
      * @param string $cep CEP (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\EnderecoResponse, HTTP status code, HTTP response headers (array of strings)

@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PageCodigoSegurancaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de C\u00C3\u00B3digos de Seguran\u00C3\u00A7a
+ * @description Lista de C\u00F3digos de Seguran\u00E7a
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

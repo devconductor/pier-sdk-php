@@ -112,13 +112,13 @@ class HistoricoTelefoneResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $telefone Apresenta o N\u00C3\u00BAmero do telefone.
+      * $telefone Apresenta o N\u00FAmero do telefone.
       * @var string
       */
     protected $telefone;
@@ -130,7 +130,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
     protected $id_tipo_telefone;
     
     /**
-      * $tipo_telefone Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+      * $tipo_telefone Apresenta a descri\u00E7\u00E3o do tipo do telefone.
       * @var string
       */
     protected $tipo_telefone;
@@ -169,7 +169,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone Apresenta o N\u00C3\u00BAmero do telefone.
+     * @param string $telefone Apresenta o N\u00FAmero do telefone.
      * @return $this
      */
     public function setTelefone($telefone)
@@ -232,7 +232,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets tipo_telefone
-     * @param string $tipo_telefone Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+     * @param string $tipo_telefone Apresenta a descri\u00E7\u00E3o do tipo do telefone.
      * @return $this
      */
     public function setTipoTelefone($tipo_telefone)

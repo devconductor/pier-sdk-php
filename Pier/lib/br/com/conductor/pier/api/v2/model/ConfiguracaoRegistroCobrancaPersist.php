@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConfiguracaoRegistroCobrancaPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online
+ * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -144,7 +144,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
 
     
     /**
-      * $codigo_banco C\u00C3\u00B3digo do Banco.
+      * $codigo_banco C\u00F3digo do Banco.
       * @var int
       */
     protected $codigo_banco;
@@ -216,7 +216,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
     protected $uri_adicional;
     
     /**
-      * $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+      * $status Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
       * @var string
       */
     protected $status;
@@ -257,7 +257,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets codigo_banco
-     * @param int $codigo_banco C\u00C3\u00B3digo do Banco.
+     * @param int $codigo_banco C\u00F3digo do Banco.
      * @return $this
      */
     public function setCodigoBanco($codigo_banco)
@@ -509,7 +509,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
      * @return $this
      */
     public function setStatus($status)

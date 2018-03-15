@@ -120,37 +120,37 @@ class TelefoneResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
+      * $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
+      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $ddd C\u00C3\u00B3digo DDD do telefone.
+      * $ddd C\u00F3digo DDD do telefone.
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00C3\u00BAmero do telefone.
+      * $telefone N\u00FAmero do telefone.
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00C3\u00BAmero do ramal.
+      * $ramal N\u00FAmero do ramal.
       * @var string
       */
     protected $ramal;
@@ -191,7 +191,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
+     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -233,7 +233,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
+     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -254,7 +254,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00C3\u00B3digo DDD do telefone.
+     * @param string $ddd C\u00F3digo DDD do telefone.
      * @return $this
      */
     public function setDdd($ddd)
@@ -275,7 +275,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00C3\u00BAmero do telefone.
+     * @param string $telefone N\u00FAmero do telefone.
      * @return $this
      */
     public function setTelefone($telefone)
@@ -296,7 +296,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00C3\u00BAmero do ramal.
+     * @param string $ramal N\u00FAmero do ramal.
      * @return $this
      */
     public function setRamal($ramal)

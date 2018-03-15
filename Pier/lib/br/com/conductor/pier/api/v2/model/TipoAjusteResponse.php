@@ -100,13 +100,13 @@ class TipoAjusteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do tipo de ajuste.
+      * $id C\u00F3digo identificador do tipo de ajuste.
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+      * $descricao Descri\u00E7\u00E3o do tipo de ajuste.
       * @var string
       */
     protected $descricao;
@@ -136,7 +136,7 @@ class TipoAjusteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do tipo de ajuste.
+     * @param int $id C\u00F3digo identificador do tipo de ajuste.
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class TipoAjusteResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+     * @param string $descricao Descri\u00E7\u00E3o do tipo de ajuste.
      * @return $this
      */
     public function setDescricao($descricao)

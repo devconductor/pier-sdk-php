@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * CartaoPayUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description Represneta\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+ * @description Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * UsuarioResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
+ * @description Representa\u00E7\u00E3o do recurso Usuario
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class UsuarioResponse implements ArrayAccess
 
     
     /**
-      * $id Id do Usu\u00C3\u00A1rio
+      * $id Id do Usu\u00E1rio
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Usu\u00C3\u00A1rio
+      * $nome Nome do Usu\u00E1rio
       * @var string
       */
     protected $nome;
     
     /**
-      * $login Login do Usu\u00C3\u00A1rio
+      * $login Login do Usu\u00E1rio
       * @var string
       */
     protected $login;
     
     /**
-      * $id_emissor Id do emissor do usu\u00C3\u00A1rio
+      * $id_emissor Id do emissor do usu\u00E1rio
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $cpf CPF do Usu\u00C3\u00A1rio
+      * $cpf CPF do Usu\u00E1rio
       * @var string
       */
     protected $cpf;
     
     /**
-      * $email Email do Usu\u00C3\u00A1rio
+      * $email Email do Usu\u00E1rio
       * @var string
       */
     protected $email;
     
     /**
-      * $status Status do Usu\u00C3\u00A1rio
+      * $status Status do Usu\u00E1rio
       * @var string
       */
     protected $status;
     
     /**
-      * $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+      * $data_criacao Data de cria\u00E7\u00E3o do Usu\u00E1rio
       * @var string
       */
     protected $data_criacao;
     
     /**
-      * $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+      * $data_modificacao Data de modifica\u00E7\u00E3o do Usu\u00E1rio
       * @var string
       */
     protected $data_modificacao;
     
     /**
-      * $tentativas_incorretas N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+      * $tentativas_incorretas N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
       * @var int
       */
     protected $tentativas_incorretas;
@@ -224,7 +224,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do Usu\u00C3\u00A1rio
+     * @param int $id Id do Usu\u00E1rio
      * @return $this
      */
     public function setId($id)
@@ -245,7 +245,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Usu\u00C3\u00A1rio
+     * @param string $nome Nome do Usu\u00E1rio
      * @return $this
      */
     public function setNome($nome)
@@ -266,7 +266,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets login
-     * @param string $login Login do Usu\u00C3\u00A1rio
+     * @param string $login Login do Usu\u00E1rio
      * @return $this
      */
     public function setLogin($login)
@@ -287,7 +287,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor Id do emissor do usu\u00C3\u00A1rio
+     * @param int $id_emissor Id do emissor do usu\u00E1rio
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -308,7 +308,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf CPF do Usu\u00C3\u00A1rio
+     * @param string $cpf CPF do Usu\u00E1rio
      * @return $this
      */
     public function setCpf($cpf)
@@ -329,7 +329,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email do Usu\u00C3\u00A1rio
+     * @param string $email Email do Usu\u00E1rio
      * @return $this
      */
     public function setEmail($email)
@@ -350,7 +350,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do Usu\u00C3\u00A1rio
+     * @param string $status Status do Usu\u00E1rio
      * @return $this
      */
     public function setStatus($status)
@@ -374,7 +374,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_criacao
-     * @param string $data_criacao Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+     * @param string $data_criacao Data de cria\u00E7\u00E3o do Usu\u00E1rio
      * @return $this
      */
     public function setDataCriacao($data_criacao)
@@ -395,7 +395,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param string $data_modificacao Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+     * @param string $data_modificacao Data de modifica\u00E7\u00E3o do Usu\u00E1rio
      * @return $this
      */
     public function setDataModificacao($data_modificacao)
@@ -416,7 +416,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets tentativas_incorretas
-     * @param int $tentativas_incorretas N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+     * @param int $tentativas_incorretas N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
      * @return $this
      */
     public function setTentativasIncorretas($tentativas_incorretas)

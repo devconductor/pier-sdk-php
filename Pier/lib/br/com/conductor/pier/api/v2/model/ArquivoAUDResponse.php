@@ -150,7 +150,7 @@ class ArquivoAUDResponse implements ArrayAccess
     protected $rev;
     
     /**
-      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
       * @var int
       */
     protected $rev_type;
@@ -198,25 +198,25 @@ class ArquivoAUDResponse implements ArrayAccess
     protected $uri;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00C3\u00A3o do arquivo auditado
+      * $data_hora_inclusao Data de inclus\u00E3o do arquivo auditado
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+      * $data_hora_alteracao Data de altera\u00E7\u00E3o do arquivo auditado
       * @var string
       */
     protected $data_hora_alteracao;
     
     /**
-      * $extensao Extens\u00C3\u00A3o do arquivo auditado
+      * $extensao Extens\u00E3o do arquivo auditado
       * @var string
       */
     protected $extensao;
     
     /**
-      * $parametros Lista  de par\u00C3\u00A2metros do arquivo auditado
+      * $parametros Lista  de par\u00E2metros do arquivo auditado
       * @var \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[]
       */
     protected $parametros;
@@ -278,7 +278,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
      * @return $this
      */
     public function setRevType($rev_type)
@@ -446,7 +446,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00C3\u00A3o do arquivo auditado
+     * @param string $data_hora_inclusao Data de inclus\u00E3o do arquivo auditado
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -467,7 +467,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_alteracao
-     * @param string $data_hora_alteracao Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+     * @param string $data_hora_alteracao Data de altera\u00E7\u00E3o do arquivo auditado
      * @return $this
      */
     public function setDataHoraAlteracao($data_hora_alteracao)
@@ -488,7 +488,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Extens\u00C3\u00A3o do arquivo auditado
+     * @param string $extensao Extens\u00E3o do arquivo auditado
      * @return $this
      */
     public function setExtensao($extensao)
@@ -509,7 +509,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets parametros
-     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[] $parametros Lista  de par\u00C3\u00A2metros do arquivo auditado
+     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[] $parametros Lista  de par\u00E2metros do arquivo auditado
      * @return $this
      */
     public function setParametros($parametros)

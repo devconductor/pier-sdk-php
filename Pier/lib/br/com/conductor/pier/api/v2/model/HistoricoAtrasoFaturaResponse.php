@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoAtrasoFaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Hist\u00C3\u00B3rico Pagamento Fatura Atraso
+ * @description Hist\u00F3rico Pagamento Fatura Atraso
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

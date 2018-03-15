@@ -88,7 +88,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT11
      *
-     * Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Altera uma Regra Opera\u00E7\u00E3o
      *
      */
     public function test_alterarUsingPUT11() {
@@ -128,7 +128,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for alterarUsingPUT8
      *
-     * Alterar Grupo Econ\u00C3\u00B4mico
+     * Alterar Grupo Econ\u00F4mico
      *
      */
     public function test_alterarUsingPUT8() {
@@ -158,7 +158,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cadastrarUsingPOST3
      *
-     * Cadastrar Grupo Econ\u00C3\u00B4mico
+     * Cadastrar Grupo Econ\u00F4mico
      *
      */
     public function test_cadastrarUsingPOST3() {
@@ -168,7 +168,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultaOperacaoUsingGET
      *
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
      *
      */
     public function test_consultaOperacaoUsingGET() {
@@ -186,39 +186,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET16
+     * Test case for consultarUsingGET17
      *
      * Consultar estabelecimento por id
      *
      */
-    public function test_consultarUsingGET16() {
+    public function test_consultarUsingGET17() {
 
     }
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
-     * Consultar grupo econ\u00C3\u00B4mico
-     *
-     */
-    public function test_consultarUsingGET18() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET20
-     *
-     * Apresenta os dados de uma determinada maquineta
+     * Consultar grupo econ\u00F4mico
      *
      */
-    public function test_consultarUsingGET20() {
+    public function test_consultarUsingGET19() {
 
     }
     
     /**
      * Test case for consultarUsingGET21
      *
-     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta os dados de uma determinada maquineta
      *
      */
     public function test_consultarUsingGET21() {
@@ -226,39 +216,49 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET29
+     * Test case for consultarUsingGET22
+     *
+     * Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+     *
+     */
+    public function test_consultarUsingGET22() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET30
      *
      * Apresenta os dados de um determinado telefone de um estabelecimento
      *
      */
-    public function test_consultarUsingGET29() {
+    public function test_consultarUsingGET30() {
 
     }
     
     /**
-     * Test case for consultarUsingGET31
+     * Test case for consultarUsingGET32
      *
      * Apresenta os dados de um determinado Terminal
      *
      */
-    public function test_consultarUsingGET31() {
+    public function test_consultarUsingGET32() {
 
     }
     
     /**
-     * Test case for consultarUsingGET43
+     * Test case for consultarUsingGET44
      *
-     * Apresenta os dados de um determinado V\u00C3\u00ADnculo
+     * Apresenta os dados de um determinado V\u00EDnculo
      *
      */
-    public function test_consultarUsingGET43() {
+    public function test_consultarUsingGET44() {
 
     }
     
     /**
      * Test case for desabilitarVinculoUsingPOST
      *
-     * Desabilitar um V\u00C3\u00ADnculo
+     * Desabilitar um V\u00EDnculo
      *
      */
     public function test_desabilitarVinculoUsingPOST() {
@@ -268,7 +268,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desabilitarVinculoUsingPOST1
      *
-     * Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
      */
     public function test_desabilitarVinculoUsingPOST1() {
@@ -278,7 +278,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for habilitarVinculoUsingPOST
      *
-     * Habilitar um V\u00C3\u00ADnculo
+     * Habilitar um V\u00EDnculo
      *
      */
     public function test_habilitarVinculoUsingPOST() {
@@ -288,7 +288,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for habilitarVinculoUsingPOST1
      *
-     * Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+     * Habilitar um v\u00EDnculo opera\u00E7\u00E3o
      *
      */
     public function test_habilitarVinculoUsingPOST1() {
@@ -298,7 +298,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listaOperacaoUsingGET
      *
-     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+     * Apresenta dados de opera\u00E7\u00F5es em uma lista
      *
      */
     public function test_listaOperacaoUsingGET() {
@@ -336,12 +336,32 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for listarTiposEstabelecimentosUsingGET
+     *
+     * Lista os tipos de estabelecimentos
+     *
+     */
+    public function test_listarTiposEstabelecimentosUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarTiposMaquinetasUsingGET
      *
      * Lista os Tipos de  Maquinetas
      *
      */
     public function test_listarTiposMaquinetasUsingGET() {
+
+    }
+    
+    /**
+     * Test case for listarTiposOrigensComerciaisUsingGET
+     *
+     * Listar tipos de origens comerciais
+     *
+     */
+    public function test_listarTiposOrigensComerciaisUsingGET() {
 
     }
     
@@ -356,29 +376,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET21
+     * Test case for listarUsingGET22
      *
      * Lista Estabelecimentos
      *
      */
-    public function test_listarUsingGET21() {
+    public function test_listarUsingGET22() {
 
     }
     
     /**
-     * Test case for listarUsingGET23
+     * Test case for listarUsingGET24
      *
-     * Listar grupos econ\u00C3\u00B4micos
+     * Listar grupos econ\u00F4micos
      *
      */
-    public function test_listarUsingGET23() {
+    public function test_listarUsingGET24() {
 
     }
     
     /**
      * Test case for listarUsingGET25
      *
-     * Lista as Maquinetas
+     * Listar grupos de origens comerciais
      *
      */
     public function test_listarUsingGET25() {
@@ -386,19 +406,9 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET26
-     *
-     * Lista os tipos de moedas do emissor 
-     *
-     */
-    public function test_listarUsingGET26() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET27
      *
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+     * Lista as Maquinetas
      *
      */
     public function test_listarUsingGET27() {
@@ -406,19 +416,29 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET38
+     * Test case for listarUsingGET28
      *
-     * Lista os Telefones Estabelecimentos
+     * Lista os tipos de moedas do emissor 
      *
      */
-    public function test_listarUsingGET38() {
+    public function test_listarUsingGET28() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET29
+     *
+     * Lista as Regras Opera\u00E7\u00F5es
+     *
+     */
+    public function test_listarUsingGET29() {
 
     }
     
     /**
      * Test case for listarUsingGET40
      *
-     * Lista os Terminais cadastrados no Emissor
+     * Lista os Telefones Estabelecimentos
      *
      */
     public function test_listarUsingGET40() {
@@ -426,22 +446,32 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET51
+     * Test case for listarUsingGET42
      *
-     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+     * Lista os Terminais cadastrados no Emissor
      *
      */
-    public function test_listarUsingGET51() {
+    public function test_listarUsingGET42() {
 
     }
     
     /**
-     * Test case for listarUsingGET52
+     * Test case for listarUsingGET53
      *
-     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+     * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
      *
      */
-    public function test_listarUsingGET52() {
+    public function test_listarUsingGET53() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET54
+     *
+     * Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+     *
+     */
+    public function test_listarUsingGET54() {
 
     }
     
@@ -458,7 +488,7 @@ class EstabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for salvarUsingPOST17
      *
-     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+     * Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
      *
      */
     public function test_salvarUsingPOST17() {

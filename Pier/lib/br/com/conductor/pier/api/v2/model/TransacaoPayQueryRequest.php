@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoPayQueryRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta
+ * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -114,7 +114,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
     protected $numero_cartao;
     
     /**
-      * $id_cartao Id do cart\u00C3\u00A3o
+      * $id_cartao Id do cart\u00E3o
       * @var int
       */
     protected $id_cartao;
@@ -126,7 +126,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
     protected $origem;
     
     /**
-      * $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+      * $sort Tipo de ordena\u00E7\u00E3o dos registros.
       * @var string[]
       */
     protected $sort;
@@ -179,7 +179,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Id do cart\u00C3\u00A3o
+     * @param int $id_cartao Id do cart\u00E3o
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -221,7 +221,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets sort
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros.
      * @return $this
      */
     public function setSort($sort)

@@ -110,7 +110,7 @@ class CampanhaPersist implements ArrayAccess
     protected $nome;
     
     /**
-      * $id_tipo_campanha C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha.
+      * $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
       * @var int
       */
     protected $id_tipo_campanha;
@@ -168,7 +168,7 @@ class CampanhaPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_campanha
-     * @param int $id_tipo_campanha C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha.
+     * @param int $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
      * @return $this
      */
     public function setIdTipoCampanha($id_tipo_campanha)

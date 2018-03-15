@@ -140,55 +140,55 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
 
     
     /**
-      * $nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+      * $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
       * @var string
       */
     protected $nome_agencia;
     
     /**
-      * $banco C\u00C3\u00B3digo do banco
+      * $banco C\u00F3digo do banco
       * @var int
       */
     protected $banco;
     
     /**
-      * $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+      * $numero_agencia N\u00FAmero da ag\u00EAncia
       * @var string
       */
     protected $numero_agencia;
     
     /**
-      * $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+      * $digito_agencia D\u00EDgito da ag\u00EAncia
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $numero_conta N\u00C3\u00BAmero da conta
+      * $numero_conta N\u00FAmero da conta
       * @var string
       */
     protected $numero_conta;
     
     /**
-      * $digito_conta D\u00C3\u00ADgito da conta
+      * $digito_conta D\u00EDgito da conta
       * @var string
       */
     protected $digito_conta;
     
     /**
-      * $flag_ativo Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+      * $flag_ativo Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
       * @var int
       */
     protected $flag_ativo;
     
     /**
-      * $flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+      * $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
       * @var int
       */
     protected $flag_conta_origem_doc;
     
     /**
-      * $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+      * $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
       * @var int
       */
     protected $flag_conta_poupanca;
@@ -206,7 +206,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
     protected $numero_receira_federal;
     
     /**
-      * $titularidade Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+      * $titularidade Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
       * @var int
       */
     protected $titularidade;
@@ -246,7 +246,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets nome_agencia
-     * @param string $nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+     * @param string $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
      * @return $this
      */
     public function setNomeAgencia($nome_agencia)
@@ -267,7 +267,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00C3\u00B3digo do banco
+     * @param int $banco C\u00F3digo do banco
      * @return $this
      */
     public function setBanco($banco)
@@ -288,7 +288,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+     * @param string $numero_agencia N\u00FAmero da ag\u00EAncia
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -309,7 +309,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+     * @param string $digito_agencia D\u00EDgito da ag\u00EAncia
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -330,7 +330,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets numero_conta
-     * @param string $numero_conta N\u00C3\u00BAmero da conta
+     * @param string $numero_conta N\u00FAmero da conta
      * @return $this
      */
     public function setNumeroConta($numero_conta)
@@ -351,7 +351,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets digito_conta
-     * @param string $digito_conta D\u00C3\u00ADgito da conta
+     * @param string $digito_conta D\u00EDgito da conta
      * @return $this
      */
     public function setDigitoConta($digito_conta)
@@ -372,7 +372,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+     * @param int $flag_ativo Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)
@@ -393,7 +393,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets flag_conta_origem_doc
-     * @param int $flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+     * @param int $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
      * @return $this
      */
     public function setFlagContaOrigemDoc($flag_conta_origem_doc)
@@ -414,7 +414,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets flag_conta_poupanca
-     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
      * @return $this
      */
     public function setFlagContaPoupanca($flag_conta_poupanca)
@@ -477,7 +477,7 @@ class ContaBancariaPortadorUpdate implements ArrayAccess
   
     /**
      * Sets titularidade
-     * @param int $titularidade Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+     * @param int $titularidade Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
      * @return $this
      */
     public function setTitularidade($titularidade)

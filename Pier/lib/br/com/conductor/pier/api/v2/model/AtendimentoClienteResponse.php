@@ -148,37 +148,37 @@ class AtendimentoClienteResponse implements ArrayAccess
 
     
     /**
-      * $id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
+      * $id_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
       * @var int
       */
     protected $id_atendimento;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+      * $id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
       * @var int
       */
     protected $id_tipo_atendimento;
     
     /**
-      * $descricao_tipo_atendimento Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento
+      * $descricao_tipo_atendimento Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
       * @var string
       */
     protected $descricao_tipo_atendimento;
     
     /**
-      * $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+      * $conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
       * @var string
       */
     protected $conteudo_atendimento;
     
     /**
-      * $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+      * $detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
       * @var string
       */
     protected $detalhes_atendimento;
@@ -190,7 +190,7 @@ class AtendimentoClienteResponse implements ArrayAccess
     protected $nome_atendente;
     
     /**
-      * $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.
+      * $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
       * @var string
       */
     protected $nome_sistema;
@@ -220,13 +220,13 @@ class AtendimentoClienteResponse implements ArrayAccess
     protected $data_agendamento;
     
     /**
-      * $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+      * $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
       * @var string
       */
     protected $data_processamento;
     
     /**
-      * $flag_processamento Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.
+      * $flag_processamento Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
       * @var int
       */
     protected $flag_processamento;
@@ -268,7 +268,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_atendimento
-     * @param int $id_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
+     * @param int $id_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
      * @return $this
      */
     public function setIdAtendimento($id_atendimento)
@@ -289,7 +289,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -310,7 +310,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_atendimento
-     * @param int $id_tipo_atendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+     * @param int $id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
      * @return $this
      */
     public function setIdTipoAtendimento($id_tipo_atendimento)
@@ -331,7 +331,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_atendimento
-     * @param string $descricao_tipo_atendimento Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento
+     * @param string $descricao_tipo_atendimento Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
      * @return $this
      */
     public function setDescricaoTipoAtendimento($descricao_tipo_atendimento)
@@ -352,7 +352,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets conteudo_atendimento
-     * @param string $conteudo_atendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+     * @param string $conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
      * @return $this
      */
     public function setConteudoAtendimento($conteudo_atendimento)
@@ -373,7 +373,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets detalhes_atendimento
-     * @param string $detalhes_atendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+     * @param string $detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
      * @return $this
      */
     public function setDetalhesAtendimento($detalhes_atendimento)
@@ -415,7 +415,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets nome_sistema
-     * @param string $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.
+     * @param string $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
      * @return $this
      */
     public function setNomeSistema($nome_sistema)
@@ -520,7 +520,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_processamento
-     * @param string $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+     * @param string $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
      * @return $this
      */
     public function setDataProcessamento($data_processamento)
@@ -541,7 +541,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets flag_processamento
-     * @param int $flag_processamento Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.
+     * @param int $flag_processamento Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
      * @return $this
      */
     public function setFlagProcessamento($flag_processamento)

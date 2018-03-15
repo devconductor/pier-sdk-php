@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TaxaAntecipacaoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
+ * @description Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class TaxaAntecipacaoRequest implements ArrayAccess
 
     
     /**
-      * $tipo_transacao C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+      * $tipo_transacao C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
       * @var string
       */
     protected $tipo_transacao;
     
     /**
-      * $valor_taxa Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+      * $valor_taxa Valor da Taxa de Antecipa\u00E7\u00E3o.
       * @var Number
       */
     protected $valor_taxa;
@@ -136,7 +136,7 @@ class TaxaAntecipacaoRequest implements ArrayAccess
   
     /**
      * Sets tipo_transacao
-     * @param string $tipo_transacao C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+     * @param string $tipo_transacao C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
      * @return $this
      */
     public function setTipoTransacao($tipo_transacao)
@@ -160,7 +160,7 @@ class TaxaAntecipacaoRequest implements ArrayAccess
   
     /**
      * Sets valor_taxa
-     * @param Number $valor_taxa Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+     * @param Number $valor_taxa Valor da Taxa de Antecipa\u00E7\u00E3o.
      * @return $this
      */
     public function setValorTaxa($valor_taxa)

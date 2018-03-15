@@ -112,31 +112,31 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
+      * $razao_social Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
       * @var string
       */
     protected $razao_social;
     
     /**
-      * $nome_contrato Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
+      * $nome_contrato Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
       * @var string
       */
     protected $nome_contrato;
     
     /**
-      * $ddd Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+      * $ddd Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+      * $telefone Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
       * @var string
       */
     protected $telefone;
     
     /**
-      * $email Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+      * $email Apresenta o e-mail de contato da refer\u00EAncia comercial
       * @var string
       */
     protected $email;
@@ -169,7 +169,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
+     * @param string $razao_social Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -190,7 +190,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets nome_contrato
-     * @param string $nome_contrato Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
+     * @param string $nome_contrato Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
      * @return $this
      */
     public function setNomeContrato($nome_contrato)
@@ -211,7 +211,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+     * @param string $ddd Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
      * @return $this
      */
     public function setDdd($ddd)
@@ -232,7 +232,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+     * @param string $telefone Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
      * @return $this
      */
     public function setTelefone($telefone)
@@ -253,7 +253,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+     * @param string $email Apresenta o e-mail de contato da refer\u00EAncia comercial
      * @return $this
      */
     public function setEmail($email)

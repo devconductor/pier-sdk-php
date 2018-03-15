@@ -96,12 +96,12 @@ class FAQApi
      *
      * Adiciona uma nova FAQ
      *
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (required)
+     * @param string $resposta Conte\u00FAdo da resposta. (required)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -117,12 +117,12 @@ class FAQApi
      *
      * Adiciona uma nova FAQ
      *
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (required)
+     * @param string $resposta Conte\u00FAdo da resposta. (required)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -222,12 +222,12 @@ class FAQApi
      * Alterar FAQ
      *
      * @param int $id Id (required)
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (required)
+     * @param string $resposta Conte\u00FAdo da resposta. (required)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -244,12 +244,12 @@ class FAQApi
      * Alterar FAQ
      *
      * @param int $id Id (required)
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (required)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (required)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (required)
+     * @param string $resposta Conte\u00FAdo da resposta. (required)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -356,7 +356,7 @@ class FAQApi
     }
     
     /**
-     * consultarUsingGET17
+     * consultarUsingGET18
      *
      * Consultar FAQ por id
      *
@@ -364,15 +364,15 @@ class FAQApi
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17($id)
+    public function consultarUsingGET18($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET17WithHttpInfo
+     * consultarUsingGET18WithHttpInfo
      *
      * Consultar FAQ por id
      *
@@ -380,12 +380,12 @@ class FAQApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17WithHttpInfo($id)
+    public function consultarUsingGET18WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET18');
         }
   
         // parse inputs
@@ -451,49 +451,49 @@ class FAQApi
     }
     
     /**
-     * listarUsingGET22
+     * listarUsingGET23
      *
      * Lista FAQs
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_faq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id). (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (optional)
+     * @param string $resposta Conte\u00FAdo da resposta. (optional)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageFaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET22WithHttpInfo
+     * listarUsingGET23WithHttpInfo
      *
      * Lista FAQs
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_faq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). (optional)
-     * @param string $pergunta Conte\u00C3\u00BAdo da pergunta. (optional)
-     * @param string $resposta Conte\u00C3\u00BAdo da resposta. (optional)
-     * @param int $relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta. (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_faq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id). (optional)
+     * @param string $pergunta Conte\u00FAdo da pergunta. (optional)
+     * @param string $resposta Conte\u00FAdo da resposta. (optional)
+     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta. (optional)
      * @param string $plataforma Plataforma em que a FAQ se encaixa. (optional)
      * @param string $categoria Categoria de assunto do qual a FAQ se trata. (optional)
-     * @param string $status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)
+     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ. (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageFaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
+    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id_faq = null, $pergunta = null, $resposta = null, $relevancia = null, $plataforma = null, $categoria = null, $status = null)
     {
         
   

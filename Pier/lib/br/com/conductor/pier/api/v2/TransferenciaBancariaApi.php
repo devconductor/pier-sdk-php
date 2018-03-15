@@ -94,9 +94,9 @@ class TransferenciaBancariaApi
     /**
      * atualizarUsingPUT1
      *
-     * Atualiza conta banc\u00C3\u00A1ria portador
+     * Atualiza conta banc\u00E1ria portador
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorUpdate $update update (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -111,9 +111,9 @@ class TransferenciaBancariaApi
     /**
      * atualizarUsingPUT1WithHttpInfo
      *
-     * Atualiza conta banc\u00C3\u00A1ria portador
+     * Atualiza conta banc\u00E1ria portador
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id). (required)
      * @param \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorUpdate $update update (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
@@ -197,11 +197,201 @@ class TransferenciaBancariaApi
     }
     
     /**
+     * cancelarTransferenciaCreditoContaBancariaUsingPOST
+     *
+     * Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarTransferenciaCreditoContaBancariaUsingPOST($id_transferencia)
+    {
+        list($response, $statusCode, $httpHeader) = $this->cancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo ($id_transferencia);
+        return $response; 
+    }
+
+
+    /**
+     * cancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo
+     *
+     * Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo($id_transferencia)
+    {
+        
+        // verify the required parameter 'id_transferencia' is set
+        if ($id_transferencia === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling cancelarTransferenciaCreditoContaBancariaUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_transferencia !== null) {
+            $resourcePath = str_replace(
+                "{" . "idTransferencia" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_transferencia),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * confirmarTransferenciaCreditoContaBancariaUsingPOST
+     *
+     * Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @return string
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function confirmarTransferenciaCreditoContaBancariaUsingPOST($id_transferencia)
+    {
+        list($response, $statusCode, $httpHeader) = $this->confirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo ($id_transferencia);
+        return $response; 
+    }
+
+
+    /**
+     * confirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo
+     *
+     * Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     *
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function confirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo($id_transferencia)
+    {
+        
+        // verify the required parameter 'id_transferencia' is set
+        if ($id_transferencia === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling confirmarTransferenciaCreditoContaBancariaUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_transferencia !== null) {
+            $resourcePath = str_replace(
+                "{" . "idTransferencia" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_transferencia),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'string'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarTransferenciaBancariaUsingGET
      *
-     * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+     * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
      *
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -215,9 +405,9 @@ class TransferenciaBancariaApi
     /**
      * consultarTransferenciaBancariaUsingGETWithHttpInfo
      *
-     * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+     * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
      *
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
@@ -292,36 +482,36 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * consultarUsingGET11
+     * consultarUsingGET12
      *
-     * Consulta conta banc\u00C3\u00A1ria portador
+     * Consulta conta banc\u00E1ria portador
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id). (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11($id)
+    public function consultarUsingGET12($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET11WithHttpInfo
+     * consultarUsingGET12WithHttpInfo
      *
-     * Consulta conta banc\u00C3\u00A1ria portador
+     * Consulta conta banc\u00E1ria portador
      *
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id). (required)
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id). (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET11WithHttpInfo($id)
+    public function consultarUsingGET12WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
         }
   
         // parse inputs
@@ -387,44 +577,44 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * consultarUsingGET40
+     * consultarUsingGET41
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
      *
      * @param int $id Id Conta (required)
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @param int $id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET41($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET41WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET40WithHttpInfo
+     * consultarUsingGET41WithHttpInfo
      *
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+     * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
      *
      * @param int $id Id Conta (required)
-     * @param int $id_transferencia Id Transfer\u00C3\u00AAncia (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
+     * @param int $id_transferencia Id Transfer\u00EAncia (required)
+     * @param int $id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET41WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET41');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET41');
         }
   
         // parse inputs
@@ -504,20 +694,21 @@ class TransferenciaBancariaApi
     /**
      * listarTransferenciaBancariaUsingGET
      *
-     * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)
-     * @param string $data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)
-     * @param string $data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)
+     * @param string $data_solicitacao_inicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)
+     * @param string $data_solicitacao_final Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)
+     * @param int $status C\u00F3digo do status do processamento (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaCreditoContaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarTransferenciaBancariaUsingGET($sort = null, $page = null, $limit = null, $id_conta = null, $data_solicitacao_inicial = null, $data_solicitacao_final = null)
+    public function listarTransferenciaBancariaUsingGET($sort = null, $page = null, $limit = null, $id_conta = null, $data_solicitacao_inicial = null, $data_solicitacao_final = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarTransferenciaBancariaUsingGETWithHttpInfo ($sort, $page, $limit, $id_conta, $data_solicitacao_inicial, $data_solicitacao_final);
+        list($response, $statusCode, $httpHeader) = $this->listarTransferenciaBancariaUsingGETWithHttpInfo ($sort, $page, $limit, $id_conta, $data_solicitacao_inicial, $data_solicitacao_final, $status);
         return $response; 
     }
 
@@ -525,18 +716,19 @@ class TransferenciaBancariaApi
     /**
      * listarTransferenciaBancariaUsingGETWithHttpInfo
      *
-     * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
      *
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)
-     * @param string $data_solicitacao_inicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)
-     * @param string $data_solicitacao_final Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)
+     * @param string $data_solicitacao_inicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)
+     * @param string $data_solicitacao_final Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)
+     * @param int $status C\u00F3digo do status do processamento (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaCreditoContaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarTransferenciaBancariaUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $data_solicitacao_inicial = null, $data_solicitacao_final = null)
+    public function listarTransferenciaBancariaUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $data_solicitacao_inicial = null, $data_solicitacao_final = null, $status = null)
     {
         
   
@@ -580,6 +772,10 @@ class TransferenciaBancariaApi
         
         if ($data_solicitacao_final !== null) {
             $queryParams['dataSolicitacaoFinal'] = $this->apiClient->getSerializer()->toQueryValue($data_solicitacao_final);
+        }// query params
+        
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
         }
         
         
@@ -623,51 +819,51 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET14
+     * listarUsingGET15
      *
-     * Lista contas banc\u00C3\u00A1rias portador
+     * Lista contas banc\u00E1rias portador
      *
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)
-     * @param string $nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)
-     * @param string $numero_conta N\u00C3\u00BAmero da conta (optional)
-     * @param int $flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)
-     * @param int $id_pessoa_fisica C\u00C3\u00B3digo da pessoa (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta cart\u00E3o (optional)
+     * @param string $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia (optional)
+     * @param string $numero_agencia N\u00FAmero da ag\u00EAncia (optional)
+     * @param string $numero_conta N\u00FAmero da conta (optional)
+     * @param int $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)
+     * @param int $id_pessoa_fisica C\u00F3digo da pessoa (optional)
      * @param string $favorecido Nome do favorecido (optional)
      * @param string $numero_receira_federal Documento do favorecido (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET15($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET14WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET15WithHttpInfo ($id_conta, $nome_agencia, $numero_agencia, $numero_conta, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET14WithHttpInfo
+     * listarUsingGET15WithHttpInfo
      *
-     * Lista contas banc\u00C3\u00A1rias portador
+     * Lista contas banc\u00E1rias portador
      *
-     * @param int $id_conta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)
-     * @param string $nome_agencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)
-     * @param string $numero_agencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)
-     * @param string $numero_conta N\u00C3\u00BAmero da conta (optional)
-     * @param int $flag_conta_origem_doc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)
-     * @param int $id_pessoa_fisica C\u00C3\u00B3digo da pessoa (optional)
+     * @param int $id_conta C\u00F3digo identificador da conta cart\u00E3o (optional)
+     * @param string $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia (optional)
+     * @param string $numero_agencia N\u00FAmero da ag\u00EAncia (optional)
+     * @param string $numero_conta N\u00FAmero da conta (optional)
+     * @param int $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)
+     * @param int $id_pessoa_fisica C\u00F3digo da pessoa (optional)
      * @param string $favorecido Nome do favorecido (optional)
      * @param string $numero_receira_federal Documento do favorecido (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET14WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET15WithHttpInfo($id_conta = null, $nome_agencia = null, $numero_agencia = null, $numero_conta = null, $flag_conta_origem_doc = null, $id_pessoa_fisica = null, $favorecido = null, $numero_receira_federal = null, $sort = null, $page = null, $limit = null)
     {
         
   
@@ -774,44 +970,44 @@ class TransferenciaBancariaApi
     }
     
     /**
-     * listarUsingGET47
+     * listarUsingGET49
      *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     * Listar as transfer\u00EAncias banc\u00E1rias realizadas
      *
      * @param int $id Id Conta (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET47($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET49($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET47WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET49WithHttpInfo ($id, $id_conta_bancaria_destino, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET47WithHttpInfo
+     * listarUsingGET49WithHttpInfo
      *
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     * Listar as transfer\u00EAncias banc\u00E1rias realizadas
      *
      * @param int $id Id Conta (required)
-     * @param int $id_conta_bancaria_destino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)
-     * @param string[] $sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)
-     * @param int $page P\u00C3\u00A1gina solicitada (Default = 0) (optional)
-     * @param int $limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)
+     * @param int $id_conta_bancaria_destino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)
+     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros. (optional)
+     * @param int $page P\u00E1gina solicitada (Default = 0) (optional)
+     * @param int $limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET47WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
+    public function listarUsingGET49WithHttpInfo($id, $id_conta_bancaria_destino = null, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET47');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET49');
         }
   
         // parse inputs
@@ -899,7 +1095,7 @@ class TransferenciaBancariaApi
     /**
      * salvarUsingPOST8
      *
-     * Cadastra uma conta banc\u00C3\u00A1ria do portador
+     * Cadastra uma conta banc\u00E1ria do portador
      *
      * @param \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
@@ -915,7 +1111,7 @@ class TransferenciaBancariaApi
     /**
      * salvarUsingPOST8WithHttpInfo
      *
-     * Cadastra uma conta banc\u00C3\u00A1ria do portador
+     * Cadastra uma conta banc\u00E1ria do portador
      *
      * @param \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
@@ -990,7 +1186,7 @@ class TransferenciaBancariaApi
     /**
      * simularTransferenciaBancariaUsingPOST
      *
-     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
      *
      * @param \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest $request request (required)
      * @return \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
@@ -1006,7 +1202,7 @@ class TransferenciaBancariaApi
     /**
      * simularTransferenciaBancariaUsingPOSTWithHttpInfo
      *
-     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
      *
      * @param \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaRequest $request request (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1081,7 +1277,7 @@ class TransferenciaBancariaApi
     /**
      * transferenciaCreditoContaBancariaUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      * @param \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaPersist $persist persist (required)
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaResponse
@@ -1097,7 +1293,7 @@ class TransferenciaBancariaApi
     /**
      * transferenciaCreditoContaBancariaUsingPOSTWithHttpInfo
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      * @param \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaPersist $persist persist (required)
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
@@ -1172,7 +1368,7 @@ class TransferenciaBancariaApi
     /**
      * transferirUsingPOST
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)
@@ -1189,7 +1385,7 @@ class TransferenciaBancariaApi
     /**
      * transferirUsingPOSTWithHttpInfo
      *
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
      *
      * @param int $id Id Conta (required)
      * @param \br.com.conductor.pier.api.v2.model\TransferenciaBancariaPersist $transferencia_bancaria_persist transferenciaBancariaPersist (required)

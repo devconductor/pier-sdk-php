@@ -172,13 +172,13 @@ class AdicionalDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional
+      * $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
       * @var int
       */
     protected $id_pessoa;
@@ -190,13 +190,13 @@ class AdicionalDetalheResponse implements ArrayAccess
     protected $nome;
     
     /**
-      * $nome_impresso Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o
+      * $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $numero_receita_federal N\u00C3\u00BAmero do CPF ou CNPJ do Adicional
+      * $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional
       * @var string
       */
     protected $numero_receita_federal;
@@ -208,19 +208,19 @@ class AdicionalDetalheResponse implements ArrayAccess
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00C3\u00BAmero do Documento de Identidade do Adicional
+      * $numero_identidade N\u00FAmero do Documento de Identidade do Adicional
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional
+      * $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
       * @var string
       */
     protected $orgao_expedidor_identidade;
@@ -232,43 +232,43 @@ class AdicionalDetalheResponse implements ArrayAccess
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
+      * $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
+      * $id_estado_civil C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional
       * @var int
       */
     protected $id_estado_civil;
     
     /**
-      * $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
+      * $id_profissao C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional
       * @var int
       */
     protected $id_profissao;
     
     /**
-      * $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
+      * $id_nacionalidade C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional
       * @var int
       */
     protected $id_nacionalidade;
     
     /**
-      * $id_parentesco C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+      * $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
       * @var int
       */
     protected $id_parentesco;
     
     /**
-      * $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+      * $email C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
       * @var string
       */
     protected $email;
     
     /**
-      * $flag_ativo Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+      * $flag_ativo Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
       * @var int
       */
     protected $flag_ativo;
@@ -334,7 +334,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -355,7 +355,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional
+     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -397,7 +397,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o
+     * @param string $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -418,7 +418,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00C3\u00BAmero do CPF ou CNPJ do Adicional
+     * @param string $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -460,7 +460,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
      * @return $this
      */
     public function setSexo($sexo)
@@ -481,7 +481,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00C3\u00BAmero do Documento de Identidade do Adicional
+     * @param string $numero_identidade N\u00FAmero do Documento de Identidade do Adicional
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -502,7 +502,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional
+     * @param string $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -544,7 +544,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
+     * @param string $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -565,7 +565,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_estado_civil
-     * @param int $id_estado_civil C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
+     * @param int $id_estado_civil C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional
      * @return $this
      */
     public function setIdEstadoCivil($id_estado_civil)
@@ -586,7 +586,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param int $id_profissao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
+     * @param int $id_profissao C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -607,7 +607,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_nacionalidade
-     * @param int $id_nacionalidade C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
+     * @param int $id_nacionalidade C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional
      * @return $this
      */
     public function setIdNacionalidade($id_nacionalidade)
@@ -628,7 +628,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_parentesco
-     * @param int $id_parentesco C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+     * @param int $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
      * @return $this
      */
     public function setIdParentesco($id_parentesco)
@@ -649,7 +649,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+     * @param string $email C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
      * @return $this
      */
     public function setEmail($email)
@@ -670,7 +670,7 @@ class AdicionalDetalheResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+     * @param int $flag_ativo Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

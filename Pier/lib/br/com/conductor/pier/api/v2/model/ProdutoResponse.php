@@ -108,13 +108,13 @@ class ProdutoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+      * $nome Descri\u00E7\u00E3o do Nome do Produto.
       * @var string
       */
     protected $nome;
@@ -126,7 +126,7 @@ class ProdutoResponse implements ArrayAccess
     protected $status;
     
     /**
-      * $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+      * $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
       * @var int
       */
     protected $id_fantasia_basica;
@@ -158,7 +158,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+     * @param string $nome Descri\u00E7\u00E3o do Nome do Produto.
      * @return $this
      */
     public function setNome($nome)
@@ -221,7 +221,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets id_fantasia_basica
-     * @param int $id_fantasia_basica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+     * @param int $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
      * @return $this
      */
     public function setIdFantasiaBasica($id_fantasia_basica)

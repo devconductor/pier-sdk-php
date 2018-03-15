@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EnderecoAprovadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Endere\u00C3\u00A7o Aprovado
+ * @description Objeto Endere\u00E7o Aprovado
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -140,19 +140,19 @@ class EnderecoAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+      * $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
       * @var int
       */
     protected $id_tipo_endereco;
     
     /**
-      * $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+      * $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
       * @var string
       */
     protected $cep;
@@ -164,19 +164,19 @@ class EnderecoAprovadoResponse implements ArrayAccess
     protected $logradouro;
     
     /**
-      * $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+      * $numero Apresenta o n\u00FAmero do endere\u00E7o
       * @var int
       */
     protected $numero;
     
     /**
-      * $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+      * $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
       * @var string
       */
     protected $complemento;
     
     /**
-      * $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+      * $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
       * @var string
       */
     protected $ponto_referencia;
@@ -206,7 +206,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
     protected $pais;
     
     /**
-      * $endereco_correspondencia Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
+      * $endereco_correspondencia Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
       * @var bool
       */
     protected $endereco_correspondencia;
@@ -246,7 +246,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
      * @return $this
      */
     public function setId($id)
@@ -267,7 +267,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_endereco
-     * @param int $id_tipo_endereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
      * @return $this
      */
     public function setIdTipoEndereco($id_tipo_endereco)
@@ -288,7 +288,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
      * @return $this
      */
     public function setCep($cep)
@@ -330,7 +330,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets numero
-     * @param int $numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o
      * @return $this
      */
     public function setNumero($numero)
@@ -351,7 +351,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
      * @return $this
      */
     public function setComplemento($complemento)
@@ -372,7 +372,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets ponto_referencia
-     * @param string $ponto_referencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
      * @return $this
      */
     public function setPontoReferencia($ponto_referencia)
@@ -477,7 +477,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets endereco_correspondencia
-     * @param bool $endereco_correspondencia Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
+     * @param bool $endereco_correspondencia Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
      * @return $this
      */
     public function setEnderecoCorrespondencia($endereco_correspondencia)

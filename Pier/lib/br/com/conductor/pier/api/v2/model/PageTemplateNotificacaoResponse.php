@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageTemplateNotificacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Notifica\u00C3\u00A7\u00C3\u00B5es (layouts) de E-mail
+ * @description Lista de Notifica\u00E7\u00F5es (layouts) de E-mail
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

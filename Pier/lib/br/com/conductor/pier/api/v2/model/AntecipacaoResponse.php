@@ -204,19 +204,19 @@ class AntecipacaoResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+      * $id C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_compra C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra
+      * $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra
       * @var int
       */
     protected $id_compra;
@@ -264,7 +264,7 @@ class AntecipacaoResponse implements ArrayAccess
     protected $data_compra;
     
     /**
-      * $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $status;
@@ -276,7 +276,7 @@ class AntecipacaoResponse implements ArrayAccess
     protected $nome_estabelecimento;
     
     /**
-      * $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
       * @var string
       */
     protected $tipo_origem_transacao;
@@ -288,49 +288,49 @@ class AntecipacaoResponse implements ArrayAccess
     protected $cidade;
     
     /**
-      * $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+      * $pais Pa\u00EDs onde a compra foi realizada.
       * @var string
       */
     protected $pais;
     
     /**
-      * $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $latitude;
     
     /**
-      * $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+      * $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
       * @var string
       */
     protected $longitude;
     
     /**
-      * $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+      * $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+      * $descricao_produto Descri\u00E7\u00E3o do produto da compra.
       * @var string
       */
     protected $descricao_produto;
     
     /**
-      * $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
       * @var string
       */
     protected $descricao_estabelecimento;
@@ -431,7 +431,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
      * @return $this
      */
     public function setId($id)
@@ -452,7 +452,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -473,7 +473,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_compra
-     * @param int $id_compra C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra
+     * @param int $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra
      * @return $this
      */
     public function setIdCompra($id_compra)
@@ -641,7 +641,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setStatus($status)
@@ -683,7 +683,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -725,7 +725,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Pa\u00C3\u00ADs onde a compra foi realizada.
+     * @param string $pais Pa\u00EDs onde a compra foi realizada.
      * @return $this
      */
     public function setPais($pais)
@@ -746,7 +746,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets latitude
-     * @param string $latitude Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setLatitude($latitude)
@@ -767,7 +767,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets longitude
-     * @param string $longitude Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+     * @param string $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
      * @return $this
      */
     public function setLongitude($longitude)
@@ -788,7 +788,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @param int $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -809,7 +809,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -830,7 +830,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -851,7 +851,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+     * @param string $descricao_produto Descri\u00E7\u00E3o do produto da compra.
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -872,7 +872,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)

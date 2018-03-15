@@ -86,19 +86,9 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
-     *
-     * Consulta documentos
-     *
-     */
-    public function test_consultarUsingGET13() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET14
      *
-     * Consultar templates dos documentos
+     * Consulta documentos
      *
      */
     public function test_consultarUsingGET14() {
@@ -106,19 +96,29 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET38
+     * Test case for consultarUsingGET15
+     *
+     * Consultar templates dos documentos
+     *
+     */
+    public function test_consultarUsingGET15() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET39
      *
      * Consultar tipo de template
      *
      */
-    public function test_consultarUsingGET38() {
+    public function test_consultarUsingGET39() {
 
     }
     
     /**
      * Test case for integrarUsingPOST1
      *
-     * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+     * Integra um arquivo a reposit\u00F3rios remotos.
      *
      */
     public function test_integrarUsingPOST1() {
@@ -126,19 +126,9 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET18
-     *
-     * Lista documentos
-     *
-     */
-    public function test_listarUsingGET18() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET19
      *
-     * Lista os templates dos documentos
+     * Lista documentos
      *
      */
     public function test_listarUsingGET19() {
@@ -146,12 +136,22 @@ class DocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET45
+     * Test case for listarUsingGET20
+     *
+     * Lista os templates dos documentos
+     *
+     */
+    public function test_listarUsingGET20() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET47
      *
      * Lista os tipos de templates
      *
      */
-    public function test_listarUsingGET45() {
+    public function test_listarUsingGET47() {
 
     }
     

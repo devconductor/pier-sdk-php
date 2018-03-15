@@ -38,7 +38,7 @@ use \ArrayAccess;
  * StatusCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
+ * @description Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class StatusCartaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+      * $nome Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
       * @var string
       */
     protected $nome;
     
     /**
-      * $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $permite_desbloquear Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_desbloquear;
     
     /**
-      * $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $permite_atribuir_como_bloqueio Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_atribuir_como_bloqueio;
     
     /**
-      * $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $permite_atribuir_como_cancelamento Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $permite_atribuir_como_cancelamento;
     
     /**
-      * $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+      * $cobrar_tarifa_ao_emitir_nova_via Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
       * @var int
       */
     protected $cobrar_tarifa_ao_emitir_nova_via;
@@ -180,7 +180,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+     * @param string $nome Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
      * @return $this
      */
     public function setNome($nome)
@@ -222,7 +222,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets permite_desbloquear
-     * @param int $permite_desbloquear Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_desbloquear Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteDesbloquear($permite_desbloquear)
@@ -243,7 +243,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets permite_atribuir_como_bloqueio
-     * @param int $permite_atribuir_como_bloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_atribuir_como_bloqueio Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAtribuirComoBloqueio($permite_atribuir_como_bloqueio)
@@ -264,7 +264,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets permite_atribuir_como_cancelamento
-     * @param int $permite_atribuir_como_cancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @param int $permite_atribuir_como_cancelamento Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setPermiteAtribuirComoCancelamento($permite_atribuir_como_cancelamento)
@@ -285,7 +285,7 @@ class StatusCartaoResponse implements ArrayAccess
   
     /**
      * Sets cobrar_tarifa_ao_emitir_nova_via
-     * @param int $cobrar_tarifa_ao_emitir_nova_via Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+     * @param int $cobrar_tarifa_ao_emitir_nova_via Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
      * @return $this
      */
     public function setCobrarTarifaAoEmitirNovaVia($cobrar_tarifa_ao_emitir_nova_via)

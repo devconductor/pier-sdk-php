@@ -112,31 +112,31 @@ class UsuarioPersist implements ArrayAccess
 
     
     /**
-      * $nome Apresenta o nome do usu\u00C3\u00A1rio.
+      * $nome Apresenta o nome do usu\u00E1rio.
       * @var string
       */
     protected $nome;
     
     /**
-      * $login Apresenta o login do usu\u00C3\u00A1rio.
+      * $login Apresenta o login do usu\u00E1rio.
       * @var string
       */
     protected $login;
     
     /**
-      * $cpf N\u00C3\u00BAmero do CPF.
+      * $cpf N\u00FAmero do CPF.
       * @var string
       */
     protected $cpf;
     
     /**
-      * $email Apresenta o email do usu\u00C3\u00A1rio.
+      * $email Apresenta o email do usu\u00E1rio.
       * @var string
       */
     protected $email;
     
     /**
-      * $senha Apresenta a senha do usu\u00C3\u00A1rio.
+      * $senha Apresenta a senha do usu\u00E1rio.
       * @var string
       */
     protected $senha;
@@ -169,7 +169,7 @@ class UsuarioPersist implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Apresenta o nome do usu\u00C3\u00A1rio.
+     * @param string $nome Apresenta o nome do usu\u00E1rio.
      * @return $this
      */
     public function setNome($nome)
@@ -190,7 +190,7 @@ class UsuarioPersist implements ArrayAccess
   
     /**
      * Sets login
-     * @param string $login Apresenta o login do usu\u00C3\u00A1rio.
+     * @param string $login Apresenta o login do usu\u00E1rio.
      * @return $this
      */
     public function setLogin($login)
@@ -211,7 +211,7 @@ class UsuarioPersist implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00C3\u00BAmero do CPF.
+     * @param string $cpf N\u00FAmero do CPF.
      * @return $this
      */
     public function setCpf($cpf)
@@ -232,7 +232,7 @@ class UsuarioPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Apresenta o email do usu\u00C3\u00A1rio.
+     * @param string $email Apresenta o email do usu\u00E1rio.
      * @return $this
      */
     public function setEmail($email)
@@ -253,7 +253,7 @@ class UsuarioPersist implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Apresenta a senha do usu\u00C3\u00A1rio.
+     * @param string $senha Apresenta a senha do usu\u00E1rio.
      * @return $this
      */
     public function setSenha($senha)

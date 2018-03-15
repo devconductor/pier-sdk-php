@@ -38,7 +38,7 @@ use \ArrayAccess;
  * StatusOportunidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusOportunidade
+ * @description Representa\u00E7\u00E3o da resposta do recurso StatusOportunidade
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,13 +112,13 @@ class StatusOportunidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00C3\u00B3digo identificador do StatusOportunidade
+      * $id C\u00F3digo identificador do StatusOportunidade
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_oportunidade C\u00C3\u00B3digo identificador do TipoOportunidade
+      * $id_tipo_oportunidade C\u00F3digo identificador do TipoOportunidade
       * @var int
       */
     protected $id_tipo_oportunidade;
@@ -136,7 +136,7 @@ class StatusOportunidadeResponse implements ArrayAccess
     protected $descricao;
     
     /**
-      * $flag_ativo Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+      * $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
       * @var bool
       */
     protected $flag_ativo;
@@ -169,7 +169,7 @@ class StatusOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00C3\u00B3digo identificador do StatusOportunidade
+     * @param int $id C\u00F3digo identificador do StatusOportunidade
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class StatusOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_oportunidade
-     * @param int $id_tipo_oportunidade C\u00C3\u00B3digo identificador do TipoOportunidade
+     * @param int $id_tipo_oportunidade C\u00F3digo identificador do TipoOportunidade
      * @return $this
      */
     public function setIdTipoOportunidade($id_tipo_oportunidade)
@@ -253,7 +253,7 @@ class StatusOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+     * @param bool $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PageEstagioCartaoResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+ * @description Lista de Est\u00E1gios Cart\u00F5es
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

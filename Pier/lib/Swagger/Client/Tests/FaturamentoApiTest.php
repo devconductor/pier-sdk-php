@@ -78,7 +78,7 @@ class FaturamentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cadastrarFaturamentoPorContaUsingPOST
      *
-     * Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+     * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
      *
      */
     public function test_cadastrarFaturamentoPorContaUsingPOST() {
@@ -108,7 +108,7 @@ class FaturamentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desativarFaturamentoPorContaUsingPOST
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
      *
      */
     public function test_desativarFaturamentoPorContaUsingPOST() {
@@ -118,7 +118,7 @@ class FaturamentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for desativarTipoFaturamentoUsingPOST
      *
-     * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+     * Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
      *
      */
     public function test_desativarTipoFaturamentoUsingPOST() {
@@ -128,7 +128,7 @@ class FaturamentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarFaturamentoPorContaUsingGET
      *
-     * Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+     * Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
      *
      */
     public function test_listarFaturamentoPorContaUsingGET() {

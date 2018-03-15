@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ValidaSenhaCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+ * @description Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -118,13 +118,13 @@ class ValidaSenhaCartaoResponse implements ArrayAccess
     protected $mensagem;
     
     /**
-      * $id_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+      * $id_status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
       * @var int
       */
     protected $id_status_cartao;
     
     /**
-      * $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+      * $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
       * @var string
       */
     protected $status_cartao;
@@ -136,7 +136,7 @@ class ValidaSenhaCartaoResponse implements ArrayAccess
     protected $quantidade_tentativas;
     
     /**
-      * $quantidade_maxima_tentativas Quantidade m\u00C3\u00A1xima tentativas permitidas
+      * $quantidade_maxima_tentativas Quantidade m\u00E1xima tentativas permitidas
       * @var int
       */
     protected $quantidade_maxima_tentativas;
@@ -190,7 +190,7 @@ class ValidaSenhaCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status_cartao
-     * @param int $id_status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+     * @param int $id_status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
      * @return $this
      */
     public function setIdStatusCartao($id_status_cartao)
@@ -211,7 +211,7 @@ class ValidaSenhaCartaoResponse implements ArrayAccess
   
     /**
      * Sets status_cartao
-     * @param string $status_cartao Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+     * @param string $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
      * @return $this
      */
     public function setStatusCartao($status_cartao)
@@ -253,7 +253,7 @@ class ValidaSenhaCartaoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_maxima_tentativas
-     * @param int $quantidade_maxima_tentativas Quantidade m\u00C3\u00A1xima tentativas permitidas
+     * @param int $quantidade_maxima_tentativas Quantidade m\u00E1xima tentativas permitidas
      * @return $this
      */
     public function setQuantidadeMaximaTentativas($quantidade_maxima_tentativas)

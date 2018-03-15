@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoDetalhesPersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
+ * @description Objeto ArquivoParametros para persist\u00EAncia de dados.
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -106,7 +106,7 @@ class ArquivoDetalhesPersist implements ArrayAccess
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00C3\u00BAdo do nomeCampo
+      * $conteudo Conte\u00FAdo do nomeCampo
       * @var string
       */
     protected $conteudo;
@@ -157,7 +157,7 @@ class ArquivoDetalhesPersist implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00C3\u00BAdo do nomeCampo
+     * @param string $conteudo Conte\u00FAdo do nomeCampo
      * @return $this
      */
     public function setConteudo($conteudo)
