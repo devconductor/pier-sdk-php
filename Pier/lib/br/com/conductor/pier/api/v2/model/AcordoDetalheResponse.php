@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AcordoDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Acordo detalhado
+ * @description {{{acordo_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -160,103 +160,103 @@ class AcordoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+      * $id {{{acordo_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+      * $id_conta {{{acordo_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $status_acordo Status do acordo.
+      * $status_acordo {{{acordo_response_status_acordo_value}}}
       * @var int
       */
     protected $status_acordo;
     
     /**
-      * $valor_acordo Valor do Acordo.
+      * $valor_acordo {{{acordo_response_valor_acordo_value}}}
       * @var Number
       */
     protected $valor_acordo;
     
     /**
-      * $data_acordo Data e Hora do acordo.
+      * $data_acordo {{{acordo_response_data_acordo_value}}}
       * @var string
       */
     protected $data_acordo;
     
     /**
-      * $quantidade_parcelas Quantidade de parcelas do acordo.
+      * $quantidade_parcelas {{{acordo_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $saldo_atual_final Saldo atual final.
+      * $saldo_atual_final {{{acordo_response_saldo_atual_final_value}}}
       * @var Number
       */
     protected $saldo_atual_final;
     
     /**
-      * $dias_em_atraso Dias em atraso.
+      * $dias_em_atraso {{{acordo_response_dias_em_atraso_value}}}
       * @var int
       */
     protected $dias_em_atraso;
     
     /**
-      * $status_conta Status da conta.
+      * $status_conta {{{acordo_detalhe_response_status_conta_value}}}
       * @var int
       */
     protected $status_conta;
     
     /**
-      * $assessoria_atual Assessoria atual.
+      * $assessoria_atual {{{acordo_detalhe_response_assessoria_atual_value}}}
       * @var string
       */
     protected $assessoria_atual;
     
     /**
-      * $total_pagamentos Total de pagamentos.
+      * $total_pagamentos {{{acordo_detalhe_response_total_pagamentos_value}}}
       * @var Number
       */
     protected $total_pagamentos;
     
     /**
-      * $data_vencimento_cobranca Data do vencimento da cobran\u00E7a.
+      * $data_vencimento_cobranca {{{acordo_detalhe_response_data_vencimento_cobranca_value}}}
       * @var string
       */
     protected $data_vencimento_cobranca;
     
     /**
-      * $data_quebra_acordo Data da quebra do acordo.
+      * $data_quebra_acordo {{{acordo_detalhe_response_data_quebra_acordo_value}}}
       * @var string
       */
     protected $data_quebra_acordo;
     
     /**
-      * $valor_parcela1 Valor da parcela 1.
+      * $valor_parcela1 {{{acordo_detalhe_response_valor_parcela1_value}}}
       * @var Number
       */
     protected $valor_parcela1;
     
     /**
-      * $valor_parcela_n Valor da parcela N.
+      * $valor_parcela_n {{{acordo_detalhe_response_valor_parcela_n_value}}}
       * @var Number
       */
     protected $valor_parcela_n;
     
     /**
-      * $parcela_pedida Parcela pedida.
+      * $parcela_pedida {{{acordo_detalhe_response_parcela_pedida_value}}}
       * @var int
       */
     protected $parcela_pedida;
     
     /**
-      * $vencimento_parcela_pedida Data de vencimento da parcela pedida.
+      * $vencimento_parcela_pedida {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}
       * @var string
       */
     protected $vencimento_parcela_pedida;
@@ -301,7 +301,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+     * @param int $id {{{acordo_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -322,7 +322,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+     * @param int $id_conta {{{acordo_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -343,7 +343,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets status_acordo
-     * @param int $status_acordo Status do acordo.
+     * @param int $status_acordo {{{acordo_response_status_acordo_value}}}
      * @return $this
      */
     public function setStatusAcordo($status_acordo)
@@ -364,7 +364,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_acordo
-     * @param Number $valor_acordo Valor do Acordo.
+     * @param Number $valor_acordo {{{acordo_response_valor_acordo_value}}}
      * @return $this
      */
     public function setValorAcordo($valor_acordo)
@@ -385,7 +385,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_acordo
-     * @param string $data_acordo Data e Hora do acordo.
+     * @param string $data_acordo {{{acordo_response_data_acordo_value}}}
      * @return $this
      */
     public function setDataAcordo($data_acordo)
@@ -406,7 +406,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Quantidade de parcelas do acordo.
+     * @param int $quantidade_parcelas {{{acordo_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -427,7 +427,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_atual_final
-     * @param Number $saldo_atual_final Saldo atual final.
+     * @param Number $saldo_atual_final {{{acordo_response_saldo_atual_final_value}}}
      * @return $this
      */
     public function setSaldoAtualFinal($saldo_atual_final)
@@ -448,7 +448,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets dias_em_atraso
-     * @param int $dias_em_atraso Dias em atraso.
+     * @param int $dias_em_atraso {{{acordo_response_dias_em_atraso_value}}}
      * @return $this
      */
     public function setDiasEmAtraso($dias_em_atraso)
@@ -469,7 +469,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets status_conta
-     * @param int $status_conta Status da conta.
+     * @param int $status_conta {{{acordo_detalhe_response_status_conta_value}}}
      * @return $this
      */
     public function setStatusConta($status_conta)
@@ -490,7 +490,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets assessoria_atual
-     * @param string $assessoria_atual Assessoria atual.
+     * @param string $assessoria_atual {{{acordo_detalhe_response_assessoria_atual_value}}}
      * @return $this
      */
     public function setAssessoriaAtual($assessoria_atual)
@@ -511,7 +511,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_pagamentos
-     * @param Number $total_pagamentos Total de pagamentos.
+     * @param Number $total_pagamentos {{{acordo_detalhe_response_total_pagamentos_value}}}
      * @return $this
      */
     public function setTotalPagamentos($total_pagamentos)
@@ -532,7 +532,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_cobranca
-     * @param string $data_vencimento_cobranca Data do vencimento da cobran\u00E7a.
+     * @param string $data_vencimento_cobranca {{{acordo_detalhe_response_data_vencimento_cobranca_value}}}
      * @return $this
      */
     public function setDataVencimentoCobranca($data_vencimento_cobranca)
@@ -553,7 +553,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_quebra_acordo
-     * @param string $data_quebra_acordo Data da quebra do acordo.
+     * @param string $data_quebra_acordo {{{acordo_detalhe_response_data_quebra_acordo_value}}}
      * @return $this
      */
     public function setDataQuebraAcordo($data_quebra_acordo)
@@ -574,7 +574,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela1
-     * @param Number $valor_parcela1 Valor da parcela 1.
+     * @param Number $valor_parcela1 {{{acordo_detalhe_response_valor_parcela1_value}}}
      * @return $this
      */
     public function setValorParcela1($valor_parcela1)
@@ -595,7 +595,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela_n
-     * @param Number $valor_parcela_n Valor da parcela N.
+     * @param Number $valor_parcela_n {{{acordo_detalhe_response_valor_parcela_n_value}}}
      * @return $this
      */
     public function setValorParcelaN($valor_parcela_n)
@@ -616,7 +616,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets parcela_pedida
-     * @param int $parcela_pedida Parcela pedida.
+     * @param int $parcela_pedida {{{acordo_detalhe_response_parcela_pedida_value}}}
      * @return $this
      */
     public function setParcelaPedida($parcela_pedida)
@@ -637,7 +637,7 @@ class AcordoDetalheResponse implements ArrayAccess
   
     /**
      * Sets vencimento_parcela_pedida
-     * @param string $vencimento_parcela_pedida Data de vencimento da parcela pedida.
+     * @param string $vencimento_parcela_pedida {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}
      * @return $this
      */
     public function setVencimentoParcelaPedida($vencimento_parcela_pedida)

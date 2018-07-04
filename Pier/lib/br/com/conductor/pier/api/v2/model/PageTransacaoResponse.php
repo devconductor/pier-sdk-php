@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageTransacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de transa\u00E7\u00F5es de uma conta
+ * @description {{{page_transacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

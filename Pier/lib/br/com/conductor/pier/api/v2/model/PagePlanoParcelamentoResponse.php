@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PagePlanoParcelamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
+ * @description {{{page_plano_parcelamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

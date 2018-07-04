@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo | [optional] 
-**nome** | **string** | Nome do status do arquivo | [optional] 
-**descricao** | **string** | Descri\u00E7\u00E3o do status do arquivo | [optional] 
+**id** | **int** | {{{status_arquivo_response_id_value}}} | [optional] 
+**nome** | **string** | {{{status_arquivo_response_nome_value}}} | [optional] 
+**descricao** | **string** | {{{status_arquivo_response_descricao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

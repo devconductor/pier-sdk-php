@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ContaBancariaPortadorResponse Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{conta_bancaria_portador_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,91 +152,91 @@ class ContaBancariaPortadorResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador da conta banc\u00E1ria
+      * $id {{{conta_bancaria_portador_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta cart\u00E3o
+      * $id_conta {{{conta_bancaria_portador_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
+      * $nome_agencia {{{conta_bancaria_portador_response_nome_agencia_value}}}
       * @var string
       */
     protected $nome_agencia;
     
     /**
-      * $banco C\u00F3digo do banco
+      * $banco {{{conta_bancaria_portador_response_banco_value}}}
       * @var int
       */
     protected $banco;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia
+      * $numero_agencia {{{conta_bancaria_portador_response_numero_agencia_value}}}
       * @var string
       */
     protected $numero_agencia;
     
     /**
-      * $digito_agencia D\u00EDgito da ag\u00EAncia
+      * $digito_agencia {{{conta_bancaria_portador_response_digito_agencia_value}}}
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $numero_conta N\u00FAmero da conta
+      * $numero_conta {{{conta_bancaria_portador_response_numero_conta_value}}}
       * @var string
       */
     protected $numero_conta;
     
     /**
-      * $digito_conta D\u00EDgito da conta
+      * $digito_conta {{{conta_bancaria_portador_response_digito_conta_value}}}
       * @var string
       */
     protected $digito_conta;
     
     /**
-      * $flag_ativo Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
+      * $flag_ativo {{{conta_bancaria_portador_response_flag_ativo_value}}}
       * @var int
       */
     protected $flag_ativo;
     
     /**
-      * $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+      * $flag_conta_origem_doc {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
       * @var int
       */
     protected $flag_conta_origem_doc;
     
     /**
-      * $id_pessoa_fisica C\u00F3digo da pessoa
+      * $id_pessoa_fisica {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
       * @var int
       */
     protected $id_pessoa_fisica;
     
     /**
-      * $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
+      * $flag_conta_poupanca {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
       * @var int
       */
     protected $flag_conta_poupanca;
     
     /**
-      * $favorecido Nome do favorecido
+      * $favorecido {{{conta_bancaria_portador_response_favorecido_value}}}
       * @var string
       */
     protected $favorecido;
     
     /**
-      * $numero_receira_federal Documento do favorecido
+      * $numero_receira_federal {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
       * @var string
       */
     protected $numero_receira_federal;
     
     /**
-      * $titularidade Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
+      * $titularidade {{{conta_bancaria_portador_response_titularidade_value}}}
       * @var int
       */
     protected $titularidade;
@@ -279,7 +279,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador da conta banc\u00E1ria
+     * @param int $id {{{conta_bancaria_portador_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -300,7 +300,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta cart\u00E3o
+     * @param int $id_conta {{{conta_bancaria_portador_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -321,7 +321,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets nome_agencia
-     * @param string $nome_agencia Descri\u00E7\u00E3o da ag\u00EAncia
+     * @param string $nome_agencia {{{conta_bancaria_portador_response_nome_agencia_value}}}
      * @return $this
      */
     public function setNomeAgencia($nome_agencia)
@@ -342,7 +342,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00F3digo do banco
+     * @param int $banco {{{conta_bancaria_portador_response_banco_value}}}
      * @return $this
      */
     public function setBanco($banco)
@@ -363,7 +363,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param string $numero_agencia N\u00FAmero da ag\u00EAncia
+     * @param string $numero_agencia {{{conta_bancaria_portador_response_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -384,7 +384,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00EDgito da ag\u00EAncia
+     * @param string $digito_agencia {{{conta_bancaria_portador_response_digito_agencia_value}}}
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -405,7 +405,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets numero_conta
-     * @param string $numero_conta N\u00FAmero da conta
+     * @param string $numero_conta {{{conta_bancaria_portador_response_numero_conta_value}}}
      * @return $this
      */
     public function setNumeroConta($numero_conta)
@@ -426,7 +426,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets digito_conta
-     * @param string $digito_conta D\u00EDgito da conta
+     * @param string $digito_conta {{{conta_bancaria_portador_response_digito_conta_value}}}
      * @return $this
      */
     public function setDigitoConta($digito_conta)
@@ -447,7 +447,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
+     * @param int $flag_ativo {{{conta_bancaria_portador_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)
@@ -468,7 +468,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets flag_conta_origem_doc
-     * @param int $flag_conta_origem_doc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+     * @param int $flag_conta_origem_doc {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
      * @return $this
      */
     public function setFlagContaOrigemDoc($flag_conta_origem_doc)
@@ -489,7 +489,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa_fisica
-     * @param int $id_pessoa_fisica C\u00F3digo da pessoa
+     * @param int $id_pessoa_fisica {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
      * @return $this
      */
     public function setIdPessoaFisica($id_pessoa_fisica)
@@ -510,7 +510,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets flag_conta_poupanca
-     * @param int $flag_conta_poupanca Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
+     * @param int $flag_conta_poupanca {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
      * @return $this
      */
     public function setFlagContaPoupanca($flag_conta_poupanca)
@@ -531,7 +531,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets favorecido
-     * @param string $favorecido Nome do favorecido
+     * @param string $favorecido {{{conta_bancaria_portador_response_favorecido_value}}}
      * @return $this
      */
     public function setFavorecido($favorecido)
@@ -552,7 +552,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets numero_receira_federal
-     * @param string $numero_receira_federal Documento do favorecido
+     * @param string $numero_receira_federal {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
      * @return $this
      */
     public function setNumeroReceiraFederal($numero_receira_federal)
@@ -573,7 +573,7 @@ class ContaBancariaPortadorResponse implements ArrayAccess
   
     /**
      * Sets titularidade
-     * @param int $titularidade Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
+     * @param int $titularidade {{{conta_bancaria_portador_response_titularidade_value}}}
      * @return $this
      */
     public function setTitularidade($titularidade)

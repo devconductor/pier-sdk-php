@@ -38,7 +38,7 @@ use \ArrayAccess;
  * JobResponse Class Doc Comment
  *
  * @category    Class
- * @description Job
+ * @description {{{job_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class JobResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do Job
+      * $id {{{job_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descricao do Job
+      * $descricao {{{job_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $groovy Script Groovy do Job
+      * $groovy {{{job_response_groovy_value}}}
       * @var string
       */
     protected $groovy;
     
     /**
-      * $cron Cron do Job
+      * $cron {{{job_response_cron_value}}}
       * @var string
       */
     protected $cron;
     
     /**
-      * $status Status do Job no agendador de tarefas
+      * $status {{{job_response_status_value}}}
       * @var string
       */
     protected $status;
@@ -169,7 +169,7 @@ class JobResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do Job
+     * @param int $id {{{job_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class JobResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descricao do Job
+     * @param string $descricao {{{job_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -211,7 +211,7 @@ class JobResponse implements ArrayAccess
   
     /**
      * Sets groovy
-     * @param string $groovy Script Groovy do Job
+     * @param string $groovy {{{job_response_groovy_value}}}
      * @return $this
      */
     public function setGroovy($groovy)
@@ -232,7 +232,7 @@ class JobResponse implements ArrayAccess
   
     /**
      * Sets cron
-     * @param string $cron Cron do Job
+     * @param string $cron {{{job_response_cron_value}}}
      * @return $this
      */
     public function setCron($cron)
@@ -253,7 +253,7 @@ class JobResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do Job no agendador de tarefas
+     * @param string $status {{{job_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

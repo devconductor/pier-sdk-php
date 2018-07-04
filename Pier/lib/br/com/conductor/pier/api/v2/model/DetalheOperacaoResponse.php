@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DetalheOperacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso Operacao
+ * @description {{{detalhe_operacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -168,115 +168,115 @@ class DetalheOperacaoResponse implements ArrayAccess
 
     
     /**
-      * $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+      * $id_operacao {{{detalhe_operacao_response_id_operacao_value}}}
       * @var int
       */
     protected $id_operacao;
     
     /**
-      * $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+      * $codigo_processamento {{{detalhe_operacao_response_codigo_processamento_value}}}
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $codigo_processamento_cancelamento C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+      * $codigo_processamento_cancelamento {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
       * @var string
       */
     protected $codigo_processamento_cancelamento;
     
     /**
-      * $nome_operacao Nome da opera\u00E7\u00E3o
+      * $nome_operacao {{{detalhe_operacao_response_nome_operacao_value}}}
       * @var string
       */
     protected $nome_operacao;
     
     /**
-      * $descricao_operacao Descri\u00E7\u00E3o da opera\u00E7\u00E3o
+      * $descricao_operacao {{{detalhe_operacao_response_descricao_operacao_value}}}
       * @var string
       */
     protected $descricao_operacao;
     
     /**
-      * $plano_minimo Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
+      * $plano_minimo {{{detalhe_operacao_response_plano_minimo_value}}}
       * @var int
       */
     protected $plano_minimo;
     
     /**
-      * $plano_maximo Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
+      * $plano_maximo {{{detalhe_operacao_response_plano_maximo_value}}}
       * @var int
       */
     protected $plano_maximo;
     
     /**
-      * $valor_minimo  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
+      * $valor_minimo {{{detalhe_operacao_response_valor_minimo_value}}}
       * @var Number
       */
     protected $valor_minimo;
     
     /**
-      * $valor_maximo  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
+      * $valor_maximo {{{detalhe_operacao_response_valor_maximo_value}}}
       * @var Number
       */
     protected $valor_maximo;
     
     /**
-      * $flag_cobra_juros Flag indicativa para crobran\u00E7a de juros
+      * $flag_cobra_juros {{{detalhe_operacao_response_flag_cobra_juros_value}}}
       * @var bool
       */
     protected $flag_cobra_juros;
     
     /**
-      * $taxa_juros Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
+      * $taxa_juros {{{detalhe_operacao_response_taxa_juros_value}}}
       * @var Number
       */
     protected $taxa_juros;
     
     /**
-      * $flag_cobra_tarifa Flag indicativa para crobran\u00E7a de tarifas
+      * $flag_cobra_tarifa {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
       * @var bool
       */
     protected $flag_cobra_tarifa;
     
     /**
-      * $taxa_tarifa Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
+      * $taxa_tarifa {{{detalhe_operacao_response_taxa_tarifa_value}}}
       * @var Number
       */
     protected $taxa_tarifa;
     
     /**
-      * $valor_tac Valor da taxa de abertura de conta
+      * $valor_tac {{{detalhe_operacao_response_valor_tac_value}}}
       * @var Number
       */
     protected $valor_tac;
     
     /**
-      * $percentual_tac Percentual da taxa de abertura de conta
+      * $percentual_tac {{{detalhe_operacao_response_percentual_tac_value}}}
       * @var Number
       */
     protected $percentual_tac;
     
     /**
-      * $valor_operacao Valor da opera\u00E7\u00E3o
+      * $valor_operacao {{{detalhe_operacao_response_valor_operacao_value}}}
       * @var Number
       */
     protected $valor_operacao;
     
     /**
-      * $carencia Quantidade de meses para car\u00EAncia
+      * $carencia {{{detalhe_operacao_response_carencia_value}}}
       * @var int
       */
     protected $carencia;
     
     /**
-      * $excedente_permitido Valor excedente permitido para opera\u00E7\u00E3o
+      * $excedente_permitido {{{detalhe_operacao_response_excedente_permitido_value}}}
       * @var Number
       */
     protected $excedente_permitido;
     
     /**
-      * $flag_permitir_parcelamento Permitir transa\u00E7\u00F5es parceladas
+      * $flag_permitir_parcelamento {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
       * @var bool
       */
     protected $flag_permitir_parcelamento;
@@ -323,7 +323,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+     * @param int $id_operacao {{{detalhe_operacao_response_id_operacao_value}}}
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -344,7 +344,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+     * @param string $codigo_processamento {{{detalhe_operacao_response_codigo_processamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -365,7 +365,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento_cancelamento
-     * @param string $codigo_processamento_cancelamento C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+     * @param string $codigo_processamento_cancelamento {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamentoCancelamento($codigo_processamento_cancelamento)
@@ -386,7 +386,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets nome_operacao
-     * @param string $nome_operacao Nome da opera\u00E7\u00E3o
+     * @param string $nome_operacao {{{detalhe_operacao_response_nome_operacao_value}}}
      * @return $this
      */
     public function setNomeOperacao($nome_operacao)
@@ -407,7 +407,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_operacao
-     * @param string $descricao_operacao Descri\u00E7\u00E3o da opera\u00E7\u00E3o
+     * @param string $descricao_operacao {{{detalhe_operacao_response_descricao_operacao_value}}}
      * @return $this
      */
     public function setDescricaoOperacao($descricao_operacao)
@@ -428,7 +428,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets plano_minimo
-     * @param int $plano_minimo Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
+     * @param int $plano_minimo {{{detalhe_operacao_response_plano_minimo_value}}}
      * @return $this
      */
     public function setPlanoMinimo($plano_minimo)
@@ -449,7 +449,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets plano_maximo
-     * @param int $plano_maximo Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
+     * @param int $plano_maximo {{{detalhe_operacao_response_plano_maximo_value}}}
      * @return $this
      */
     public function setPlanoMaximo($plano_maximo)
@@ -470,7 +470,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_minimo
-     * @param Number $valor_minimo  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
+     * @param Number $valor_minimo {{{detalhe_operacao_response_valor_minimo_value}}}
      * @return $this
      */
     public function setValorMinimo($valor_minimo)
@@ -491,7 +491,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo
-     * @param Number $valor_maximo  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
+     * @param Number $valor_maximo {{{detalhe_operacao_response_valor_maximo_value}}}
      * @return $this
      */
     public function setValorMaximo($valor_maximo)
@@ -512,7 +512,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_cobra_juros
-     * @param bool $flag_cobra_juros Flag indicativa para crobran\u00E7a de juros
+     * @param bool $flag_cobra_juros {{{detalhe_operacao_response_flag_cobra_juros_value}}}
      * @return $this
      */
     public function setFlagCobraJuros($flag_cobra_juros)
@@ -533,7 +533,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets taxa_juros
-     * @param Number $taxa_juros Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
+     * @param Number $taxa_juros {{{detalhe_operacao_response_taxa_juros_value}}}
      * @return $this
      */
     public function setTaxaJuros($taxa_juros)
@@ -554,7 +554,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_cobra_tarifa
-     * @param bool $flag_cobra_tarifa Flag indicativa para crobran\u00E7a de tarifas
+     * @param bool $flag_cobra_tarifa {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
      * @return $this
      */
     public function setFlagCobraTarifa($flag_cobra_tarifa)
@@ -575,7 +575,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets taxa_tarifa
-     * @param Number $taxa_tarifa Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
+     * @param Number $taxa_tarifa {{{detalhe_operacao_response_taxa_tarifa_value}}}
      * @return $this
      */
     public function setTaxaTarifa($taxa_tarifa)
@@ -596,7 +596,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_tac
-     * @param Number $valor_tac Valor da taxa de abertura de conta
+     * @param Number $valor_tac {{{detalhe_operacao_response_valor_tac_value}}}
      * @return $this
      */
     public function setValorTac($valor_tac)
@@ -617,7 +617,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets percentual_tac
-     * @param Number $percentual_tac Percentual da taxa de abertura de conta
+     * @param Number $percentual_tac {{{detalhe_operacao_response_percentual_tac_value}}}
      * @return $this
      */
     public function setPercentualTac($percentual_tac)
@@ -638,7 +638,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_operacao
-     * @param Number $valor_operacao Valor da opera\u00E7\u00E3o
+     * @param Number $valor_operacao {{{detalhe_operacao_response_valor_operacao_value}}}
      * @return $this
      */
     public function setValorOperacao($valor_operacao)
@@ -659,7 +659,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets carencia
-     * @param int $carencia Quantidade de meses para car\u00EAncia
+     * @param int $carencia {{{detalhe_operacao_response_carencia_value}}}
      * @return $this
      */
     public function setCarencia($carencia)
@@ -680,7 +680,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets excedente_permitido
-     * @param Number $excedente_permitido Valor excedente permitido para opera\u00E7\u00E3o
+     * @param Number $excedente_permitido {{{detalhe_operacao_response_excedente_permitido_value}}}
      * @return $this
      */
     public function setExcedentePermitido($excedente_permitido)
@@ -701,7 +701,7 @@ class DetalheOperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_permitir_parcelamento
-     * @param bool $flag_permitir_parcelamento Permitir transa\u00E7\u00F5es parceladas
+     * @param bool $flag_permitir_parcelamento {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
      * @return $this
      */
     public function setFlagPermitirParcelamento($flag_permitir_parcelamento)

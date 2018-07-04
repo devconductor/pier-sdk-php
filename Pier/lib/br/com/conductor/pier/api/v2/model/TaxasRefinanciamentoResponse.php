@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TaxasRefinanciamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
+ * @description {{{taxas_refinanciamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -180,133 +180,133 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
 
     
     /**
-      * $id ID das taxas
+      * $id {{{taxas_refinanciamento_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta ID da conta
+      * $id_conta {{{taxas_refinanciamento_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_produto ID do produto
+      * $id_produto {{{taxas_refinanciamento_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_plano_conta ID do plano de contas
+      * $id_plano_conta {{{taxas_refinanciamento_response_id_plano_conta_value}}}
       * @var int
       */
     protected $id_plano_conta;
     
     /**
-      * $id_plano_pct ID do plano PCT
+      * $id_plano_pct {{{taxas_refinanciamento_response_id_plano_pct_value}}}
       * @var int
       */
     protected $id_plano_pct;
     
     /**
-      * $id_plano_credito_taxa ID do plano credito taxa
+      * $id_plano_credito_taxa {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
       * @var int
       */
     protected $id_plano_credito_taxa;
     
     /**
-      * $data_entrada Data de entrada
+      * $data_entrada {{{taxas_refinanciamento_response_data_entrada_value}}}
       * @var string
       */
     protected $data_entrada;
     
     /**
-      * $vencimento Vencimento das taxas
+      * $vencimento {{{taxas_refinanciamento_response_vencimento_value}}}
       * @var string
       */
     protected $vencimento;
     
     /**
-      * $recuperacao_encargos_financeiros Recupera\u00E7\u00E3o de encargos financeiro
+      * $recuperacao_encargos_financeiros {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
       * @var Number
       */
     protected $recuperacao_encargos_financeiros;
     
     /**
-      * $comissao_garantia Descri\u00E7\u00E3o da comiss\u00E3o de garantia
+      * $comissao_garantia {{{taxas_refinanciamento_response_comissao_garantia_value}}}
       * @var Number
       */
     protected $comissao_garantia;
     
     /**
-      * $agenciamento Descri\u00E7\u00E3o do agenciamento
+      * $agenciamento {{{taxas_refinanciamento_response_agenciamento_value}}}
       * @var Number
       */
     protected $agenciamento;
     
     /**
-      * $taxa_maxima_proximo_periodo Taxa m\u00E1xima do proximo per\u00EDodo
+      * $taxa_maxima_proximo_periodo {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
       * @var Number
       */
     protected $taxa_maxima_proximo_periodo;
     
     /**
-      * $taxa_encargos_financiamento Taxa de encargos do financiamento
+      * $taxa_encargos_financiamento {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
       * @var Number
       */
     protected $taxa_encargos_financiamento;
     
     /**
-      * $taxa_maxima_saque Taxa m\u00E1xima de saque
+      * $taxa_maxima_saque {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
       * @var Number
       */
     protected $taxa_maxima_saque;
     
     /**
-      * $taxa_saque Taxa de saque
+      * $taxa_saque {{{taxas_refinanciamento_response_taxa_saque_value}}}
       * @var Number
       */
     protected $taxa_saque;
     
     /**
-      * $taxa_maxima_compra_juros Taxa m\u00E1xima de compras juros
+      * $taxa_maxima_compra_juros {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
       * @var Number
       */
     protected $taxa_maxima_compra_juros;
     
     /**
-      * $taxa_compra_juros Taxa de juros compra
+      * $taxa_compra_juros {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
       * @var Number
       */
     protected $taxa_compra_juros;
     
     /**
-      * $taxa_permanencia Taxa de permanencia
+      * $taxa_permanencia {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
       * @var Number
       */
     protected $taxa_permanencia;
     
     /**
-      * $taxa_refinanciamento Taxa de permanencia
+      * $taxa_refinanciamento {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
       * @var Number
       */
     protected $taxa_refinanciamento;
     
     /**
-      * $taxa_recuperacao_refinanciamento Taxa de permanencia
+      * $taxa_recuperacao_refinanciamento {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
       * @var Number
       */
     protected $taxa_recuperacao_refinanciamento;
     
     /**
-      * $taxa_perc_calc_pagamento_minimo Taxa Percelamento pagamento minimo
+      * $taxa_perc_calc_pagamento_minimo {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
       * @var Number
       */
     protected $taxa_perc_calc_pagamento_minimo;
     
     /**
-      * $plano_taxa_default Plano de taxa padr\u00E3o
+      * $plano_taxa_default {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
       * @var int
       */
     protected $plano_taxa_default;
@@ -356,7 +356,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID das taxas
+     * @param int $id {{{taxas_refinanciamento_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -377,7 +377,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta ID da conta
+     * @param int $id_conta {{{taxas_refinanciamento_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -398,7 +398,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto ID do produto
+     * @param int $id_produto {{{taxas_refinanciamento_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -419,7 +419,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id_plano_conta
-     * @param int $id_plano_conta ID do plano de contas
+     * @param int $id_plano_conta {{{taxas_refinanciamento_response_id_plano_conta_value}}}
      * @return $this
      */
     public function setIdPlanoConta($id_plano_conta)
@@ -440,7 +440,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id_plano_pct
-     * @param int $id_plano_pct ID do plano PCT
+     * @param int $id_plano_pct {{{taxas_refinanciamento_response_id_plano_pct_value}}}
      * @return $this
      */
     public function setIdPlanoPct($id_plano_pct)
@@ -461,7 +461,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets id_plano_credito_taxa
-     * @param int $id_plano_credito_taxa ID do plano credito taxa
+     * @param int $id_plano_credito_taxa {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
      * @return $this
      */
     public function setIdPlanoCreditoTaxa($id_plano_credito_taxa)
@@ -482,7 +482,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets data_entrada
-     * @param string $data_entrada Data de entrada
+     * @param string $data_entrada {{{taxas_refinanciamento_response_data_entrada_value}}}
      * @return $this
      */
     public function setDataEntrada($data_entrada)
@@ -503,7 +503,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets vencimento
-     * @param string $vencimento Vencimento das taxas
+     * @param string $vencimento {{{taxas_refinanciamento_response_vencimento_value}}}
      * @return $this
      */
     public function setVencimento($vencimento)
@@ -524,7 +524,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets recuperacao_encargos_financeiros
-     * @param Number $recuperacao_encargos_financeiros Recupera\u00E7\u00E3o de encargos financeiro
+     * @param Number $recuperacao_encargos_financeiros {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
      * @return $this
      */
     public function setRecuperacaoEncargosFinanceiros($recuperacao_encargos_financeiros)
@@ -545,7 +545,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets comissao_garantia
-     * @param Number $comissao_garantia Descri\u00E7\u00E3o da comiss\u00E3o de garantia
+     * @param Number $comissao_garantia {{{taxas_refinanciamento_response_comissao_garantia_value}}}
      * @return $this
      */
     public function setComissaoGarantia($comissao_garantia)
@@ -566,7 +566,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets agenciamento
-     * @param Number $agenciamento Descri\u00E7\u00E3o do agenciamento
+     * @param Number $agenciamento {{{taxas_refinanciamento_response_agenciamento_value}}}
      * @return $this
      */
     public function setAgenciamento($agenciamento)
@@ -587,7 +587,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Taxa m\u00E1xima do proximo per\u00EDodo
+     * @param Number $taxa_maxima_proximo_periodo {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
      * @return $this
      */
     public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)
@@ -608,7 +608,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_encargos_financiamento
-     * @param Number $taxa_encargos_financiamento Taxa de encargos do financiamento
+     * @param Number $taxa_encargos_financiamento {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
      * @return $this
      */
     public function setTaxaEncargosFinanciamento($taxa_encargos_financiamento)
@@ -629,7 +629,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_saque
-     * @param Number $taxa_maxima_saque Taxa m\u00E1xima de saque
+     * @param Number $taxa_maxima_saque {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
      * @return $this
      */
     public function setTaxaMaximaSaque($taxa_maxima_saque)
@@ -650,7 +650,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_saque
-     * @param Number $taxa_saque Taxa de saque
+     * @param Number $taxa_saque {{{taxas_refinanciamento_response_taxa_saque_value}}}
      * @return $this
      */
     public function setTaxaSaque($taxa_saque)
@@ -671,7 +671,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_compra_juros
-     * @param Number $taxa_maxima_compra_juros Taxa m\u00E1xima de compras juros
+     * @param Number $taxa_maxima_compra_juros {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
      * @return $this
      */
     public function setTaxaMaximaCompraJuros($taxa_maxima_compra_juros)
@@ -692,7 +692,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_compra_juros
-     * @param Number $taxa_compra_juros Taxa de juros compra
+     * @param Number $taxa_compra_juros {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
      * @return $this
      */
     public function setTaxaCompraJuros($taxa_compra_juros)
@@ -713,7 +713,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_permanencia
-     * @param Number $taxa_permanencia Taxa de permanencia
+     * @param Number $taxa_permanencia {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
      * @return $this
      */
     public function setTaxaPermanencia($taxa_permanencia)
@@ -734,7 +734,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_refinanciamento
-     * @param Number $taxa_refinanciamento Taxa de permanencia
+     * @param Number $taxa_refinanciamento {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
      * @return $this
      */
     public function setTaxaRefinanciamento($taxa_refinanciamento)
@@ -755,7 +755,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_recuperacao_refinanciamento
-     * @param Number $taxa_recuperacao_refinanciamento Taxa de permanencia
+     * @param Number $taxa_recuperacao_refinanciamento {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
      * @return $this
      */
     public function setTaxaRecuperacaoRefinanciamento($taxa_recuperacao_refinanciamento)
@@ -776,7 +776,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_perc_calc_pagamento_minimo
-     * @param Number $taxa_perc_calc_pagamento_minimo Taxa Percelamento pagamento minimo
+     * @param Number $taxa_perc_calc_pagamento_minimo {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
      * @return $this
      */
     public function setTaxaPercCalcPagamentoMinimo($taxa_perc_calc_pagamento_minimo)
@@ -797,7 +797,7 @@ class TaxasRefinanciamentoResponse implements ArrayAccess
   
     /**
      * Sets plano_taxa_default
-     * @param int $plano_taxa_default Plano de taxa padr\u00E3o
+     * @param int $plano_taxa_default {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
      * @return $this
      */
     public function setPlanoTaxaDefault($plano_taxa_default)

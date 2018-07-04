@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Id do est\u00E1gio cart\u00E3o | [optional] 
-**nome** | **string** | Nome do status impress\u00E3o | [optional] 
+**id** | **int** | {{{status_impressao_response_id_value}}} | [optional] 
+**nome** | **string** | {{{status_impressao_response_nome_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

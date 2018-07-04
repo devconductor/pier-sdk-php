@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoSMSResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto SMS
+ * @description {{{notificacao_s_m_s_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -160,103 +160,103 @@ class NotificacaoSMSResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo Identificador.
+      * $id {{{notificacao_s_m_s_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nsu N\u00FAmero sequencial \u00FAnico.
+      * $nsu {{{notificacao_s_m_s_response_nsu_value}}}
       * @var int
       */
     protected $nsu;
     
     /**
-      * $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
+      * $id_emissor {{{notificacao_s_m_s_response_id_emissor_value}}}
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $tipo_evento TipoEvento de notifica\u00E7\u00E3o
+      * $tipo_evento {{{notificacao_s_m_s_response_tipo_evento_value}}}
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $status Status de envio da notifica\u00E7\u00E3o
+      * $status {{{notificacao_s_m_s_response_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $descricao_status Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
+      * $descricao_status {{{notificacao_s_m_s_response_descricao_status_value}}}
       * @var string
       */
     protected $descricao_status;
     
     /**
-      * $id_pessoa C\u00F3digo identificado da pessoa
+      * $id_pessoa {{{notificacao_s_m_s_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta
+      * $id_conta {{{notificacao_s_m_s_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $celular Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+      * $celular {{{notificacao_s_m_s_response_celular_value}}}
       * @var string
       */
     protected $celular;
     
     /**
-      * $operadora Apresenta a operadora do celular a ser eviado o SMS
+      * $operadora {{{notificacao_s_m_s_response_operadora_value}}}
       * @var string
       */
     protected $operadora;
     
     /**
-      * $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
+      * $conteudo {{{notificacao_s_m_s_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
     
     /**
-      * $resposta Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
+      * $resposta {{{notificacao_s_m_s_response_resposta_value}}}
       * @var string
       */
     protected $resposta;
     
     /**
-      * $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
+      * $data_agendamento {{{notificacao_s_m_s_response_data_agendamento_value}}}
       * @var string
       */
     protected $data_agendamento;
     
     /**
-      * $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00E7\u00E3o
+      * $quantidade_tentativas_envio {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
       * @var int
       */
     protected $quantidade_tentativas_envio;
     
     /**
-      * $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+      * $data_inclusao {{{notificacao_s_m_s_response_data_inclusao_value}}}
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
+      * $data_alteracao_status {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
       * @var string
       */
     protected $data_alteracao_status;
     
     /**
-      * $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+      * $protocolo {{{notificacao_s_m_s_response_protocolo_value}}}
       * @var string
       */
     protected $protocolo;
@@ -301,7 +301,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo Identificador.
+     * @param int $id {{{notificacao_s_m_s_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -322,7 +322,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets nsu
-     * @param int $nsu N\u00FAmero sequencial \u00FAnico.
+     * @param int $nsu {{{notificacao_s_m_s_response_nsu_value}}}
      * @return $this
      */
     public function setNsu($nsu)
@@ -343,7 +343,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
+     * @param int $id_emissor {{{notificacao_s_m_s_response_id_emissor_value}}}
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -364,7 +364,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento TipoEvento de notifica\u00E7\u00E3o
+     * @param string $tipo_evento {{{notificacao_s_m_s_response_tipo_evento_value}}}
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
@@ -388,7 +388,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status de envio da notifica\u00E7\u00E3o
+     * @param string $status {{{notificacao_s_m_s_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -412,7 +412,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets descricao_status
-     * @param string $descricao_status Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
+     * @param string $descricao_status {{{notificacao_s_m_s_response_descricao_status_value}}}
      * @return $this
      */
     public function setDescricaoStatus($descricao_status)
@@ -433,7 +433,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo identificado da pessoa
+     * @param int $id_pessoa {{{notificacao_s_m_s_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -454,7 +454,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta
+     * @param int $id_conta {{{notificacao_s_m_s_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -475,7 +475,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets celular
-     * @param string $celular Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+     * @param string $celular {{{notificacao_s_m_s_response_celular_value}}}
      * @return $this
      */
     public function setCelular($celular)
@@ -496,7 +496,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets operadora
-     * @param string $operadora Apresenta a operadora do celular a ser eviado o SMS
+     * @param string $operadora {{{notificacao_s_m_s_response_operadora_value}}}
      * @return $this
      */
     public function setOperadora($operadora)
@@ -517,7 +517,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
+     * @param string $conteudo {{{notificacao_s_m_s_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -538,7 +538,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets resposta
-     * @param string $resposta Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
+     * @param string $resposta {{{notificacao_s_m_s_response_resposta_value}}}
      * @return $this
      */
     public function setResposta($resposta)
@@ -559,7 +559,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param string $data_agendamento Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
+     * @param string $data_agendamento {{{notificacao_s_m_s_response_data_agendamento_value}}}
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -580,7 +580,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets quantidade_tentativas_envio
-     * @param int $quantidade_tentativas_envio Quantidade de tentativas e envio da notifica\u00E7\u00E3o
+     * @param int $quantidade_tentativas_envio {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
      * @return $this
      */
     public function setQuantidadeTentativasEnvio($quantidade_tentativas_envio)
@@ -601,7 +601,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+     * @param string $data_inclusao {{{notificacao_s_m_s_response_data_inclusao_value}}}
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -622,7 +622,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao_status
-     * @param string $data_alteracao_status Apresenta a data e em que o Stattjus do registro foi modificado
+     * @param string $data_alteracao_status {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
      * @return $this
      */
     public function setDataAlteracaoStatus($data_alteracao_status)
@@ -643,7 +643,7 @@ class NotificacaoSMSResponse implements ArrayAccess
   
     /**
      * Sets protocolo
-     * @param string $protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+     * @param string $protocolo {{{notificacao_s_m_s_response_protocolo_value}}}
      * @return $this
      */
     public function setProtocolo($protocolo)

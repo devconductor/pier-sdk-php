@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AnexoNotificacaoEmailRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o.
+ * @description {{{anexo_notificacao_email_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class AnexoNotificacaoEmailRequest implements ArrayAccess
 
     
     /**
-      * $id_documento ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o.
+      * $id_documento {{{anexo_notificacao_email_request_id_documento_value}}}
       * @var int
       */
     protected $id_documento;
@@ -125,7 +125,7 @@ class AnexoNotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets id_documento
-     * @param int $id_documento ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o.
+     * @param int $id_documento {{{anexo_notificacao_email_request_id_documento_value}}}
      * @return $this
      */
     public function setIdDocumento($id_documento)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoPaySecureRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
+ * @description {{{transacao_pay_secure_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -148,85 +148,85 @@ class TransacaoPaySecureRequest implements ArrayAccess
 
     
     /**
-      * $data_hora_transacao Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
+      * $data_hora_transacao {{{transacao_pay_secure_request_data_hora_transacao_value}}}
       * @var string
       */
     protected $data_hora_transacao;
     
     /**
-      * $numero_cartao Numero do cartao (criptografado)
+      * $numero_cartao {{{transacao_pay_generic_request_numero_cartao_value}}}
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $id_cartao Id do cart\u00E3o
+      * $id_cartao {{{transacao_pay_generic_request_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $valor Valor da transa\u00E7\u00E3o em moeda local
+      * $valor {{{transacao_pay_secure_request_valor_value}}}
       * @var Number
       */
     protected $valor;
     
     /**
-      * $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
+      * $nsu_origem {{{transacao_pay_secure_request_nsu_origem_value}}}
       * @var string
       */
     protected $nsu_origem;
     
     /**
-      * $nome_portador_cartao Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
+      * $nome_portador_cartao {{{transacao_pay_secure_request_nome_portador_cartao_value}}}
       * @var string
       */
     protected $nome_portador_cartao;
     
     /**
-      * $origem Origem da transa\u00E7\u00E3o
+      * $origem {{{transacao_pay_generic_request_origem_value}}}
       * @var string
       */
     protected $origem;
     
     /**
-      * $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+      * $terminal_requisitante {{{transacao_pay_secure_request_terminal_requisitante_value}}}
       * @var string
       */
     protected $terminal_requisitante;
     
     /**
-      * $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+      * $codigo_processamento {{{transacao_pay_secure_request_codigo_processamento_value}}}
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $data_validade_cartao Data de Validade do Cart\u00E3o. Ex: AAMM
+      * $data_validade_cartao {{{transacao_pay_secure_request_data_validade_cartao_value}}}
       * @var string
       */
     protected $data_validade_cartao;
     
     /**
-      * $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+      * $numero_estabelecimento {{{transacao_pay_secure_request_numero_estabelecimento_value}}}
       * @var string
       */
     protected $numero_estabelecimento;
     
     /**
-      * $numero_parcelas N\u00FAmero de Parcelas.
+      * $numero_parcelas {{{transacao_pay_secure_request_numero_parcelas_value}}}
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $codigo_seguranca_cartao C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
+      * $codigo_seguranca_cartao {{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}}
       * @var string
       */
     protected $codigo_seguranca_cartao;
     
     /**
-      * $sort Tipo de ordena\u00E7\u00E3o dos registros.
+      * $sort {{{global_menssagem_sort_sort}}}
       * @var string[]
       */
     protected $sort;
@@ -268,7 +268,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets data_hora_transacao
-     * @param string $data_hora_transacao Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
+     * @param string $data_hora_transacao {{{transacao_pay_secure_request_data_hora_transacao_value}}}
      * @return $this
      */
     public function setDataHoraTransacao($data_hora_transacao)
@@ -289,7 +289,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao Numero do cartao (criptografado)
+     * @param string $numero_cartao {{{transacao_pay_generic_request_numero_cartao_value}}}
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -310,7 +310,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Id do cart\u00E3o
+     * @param int $id_cartao {{{transacao_pay_generic_request_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -331,7 +331,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor da transa\u00E7\u00E3o em moeda local
+     * @param Number $valor {{{transacao_pay_secure_request_valor_value}}}
      * @return $this
      */
     public function setValor($valor)
@@ -352,7 +352,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets nsu_origem
-     * @param string $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
+     * @param string $nsu_origem {{{transacao_pay_secure_request_nsu_origem_value}}}
      * @return $this
      */
     public function setNsuOrigem($nsu_origem)
@@ -373,7 +373,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets nome_portador_cartao
-     * @param string $nome_portador_cartao Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
+     * @param string $nome_portador_cartao {{{transacao_pay_secure_request_nome_portador_cartao_value}}}
      * @return $this
      */
     public function setNomePortadorCartao($nome_portador_cartao)
@@ -394,7 +394,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets origem
-     * @param string $origem Origem da transa\u00E7\u00E3o
+     * @param string $origem {{{transacao_pay_generic_request_origem_value}}}
      * @return $this
      */
     public function setOrigem($origem)
@@ -415,7 +415,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+     * @param string $terminal_requisitante {{{transacao_pay_secure_request_terminal_requisitante_value}}}
      * @return $this
      */
     public function setTerminalRequisitante($terminal_requisitante)
@@ -436,7 +436,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+     * @param string $codigo_processamento {{{transacao_pay_secure_request_codigo_processamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -457,7 +457,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets data_validade_cartao
-     * @param string $data_validade_cartao Data de Validade do Cart\u00E3o. Ex: AAMM
+     * @param string $data_validade_cartao {{{transacao_pay_secure_request_data_validade_cartao_value}}}
      * @return $this
      */
     public function setDataValidadeCartao($data_validade_cartao)
@@ -478,7 +478,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param string $numero_estabelecimento N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+     * @param string $numero_estabelecimento {{{transacao_pay_secure_request_numero_estabelecimento_value}}}
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -499,7 +499,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00FAmero de Parcelas.
+     * @param int $numero_parcelas {{{transacao_pay_secure_request_numero_parcelas_value}}}
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -520,7 +520,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets codigo_seguranca_cartao
-     * @param string $codigo_seguranca_cartao C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
+     * @param string $codigo_seguranca_cartao {{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}}
      * @return $this
      */
     public function setCodigoSegurancaCartao($codigo_seguranca_cartao)
@@ -541,7 +541,7 @@ class TransacaoPaySecureRequest implements ArrayAccess
   
     /**
      * Sets sort
-     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param string[] $sort {{{global_menssagem_sort_sort}}}
      * @return $this
      */
     public function setSort($sort)

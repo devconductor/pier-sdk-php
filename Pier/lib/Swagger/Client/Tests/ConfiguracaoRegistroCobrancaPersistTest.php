@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * ConfiguracaoRegistroCobrancaPersistTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
+ * @description {{{configuracao_registro_cobranca_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

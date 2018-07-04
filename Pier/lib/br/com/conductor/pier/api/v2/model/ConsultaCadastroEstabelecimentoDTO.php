@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConsultaCadastroEstabelecimentoDTO Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class ConsultaCadastroEstabelecimentoDTO implements ArrayAccess
 
     
     /**
-      * $data_hora_consulta Data hora de cadastro.
+      * $data_hora_consulta {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
       * @var string
       */
     protected $data_hora_consulta;
     
     /**
-      * $status Status da consulta (1 - OK, 2 - NOK).
+      * $status {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $tipo_entidade Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO).
+      * $tipo_entidade {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
       * @var string
       */
     protected $tipo_entidade;
@@ -147,7 +147,7 @@ class ConsultaCadastroEstabelecimentoDTO implements ArrayAccess
   
     /**
      * Sets data_hora_consulta
-     * @param string $data_hora_consulta Data hora de cadastro.
+     * @param string $data_hora_consulta {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
      * @return $this
      */
     public function setDataHoraConsulta($data_hora_consulta)
@@ -168,7 +168,7 @@ class ConsultaCadastroEstabelecimentoDTO implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status da consulta (1 - OK, 2 - NOK).
+     * @param string $status {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -192,7 +192,7 @@ class ConsultaCadastroEstabelecimentoDTO implements ArrayAccess
   
     /**
      * Sets tipo_entidade
-     * @param string $tipo_entidade Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO).
+     * @param string $tipo_entidade {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
      * @return $this
      */
     public function setTipoEntidade($tipo_entidade)

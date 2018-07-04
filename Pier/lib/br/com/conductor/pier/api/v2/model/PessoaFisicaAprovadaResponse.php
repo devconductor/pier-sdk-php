@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PessoaFisicaAprovadaResponse Class Doc Comment
  *
  * @category    Class
- * @description PessoaFisicaAprovadaResponse
+ * @description {{{pessoa_fisica_aprovada_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -220,193 +220,193 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)
+      * $id {{{pessoa_fisica_aprovada_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Apresenta o nome completo da pessoa fisica.
+      * $nome {{{pessoa_fisica_aprovada_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
+      * $nome_mae {{{pessoa_fisica_aprovada_response_nome_mae_value}}}
       * @var string
       */
     protected $nome_mae;
     
     /**
-      * $data_nascimento Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
+      * $data_nascimento {{{pessoa_fisica_aprovada_response_data_nascimento_value}}}
       * @var string
       */
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+      * $sexo {{{pessoa_fisica_aprovada_response_sexo_value}}}
       * @var string
       */
     protected $sexo;
     
     /**
-      * $cpf N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
+      * $cpf {{{pessoa_fisica_aprovada_response_cpf_value}}}
       * @var string
       */
     protected $cpf;
     
     /**
-      * $numero_identidade N\u00FAmero da identidade.
+      * $numero_identidade {{{pessoa_fisica_aprovada_response_numero_identidade_value}}}
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00E3o expedidor da Identidade.
+      * $orgao_expedidor_identidade {{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}}
       * @var string
       */
     protected $orgao_expedidor_identidade;
     
     /**
-      * $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+      * $unidade_federativa_identidade {{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}}
       * @var string
       */
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00E3o da Identidade no formato aaaa-MM-dd
+      * $data_emissao_identidade {{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}}
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $id_estado_civil Id Estado civil da pessoa fisica
+      * $id_estado_civil {{{pessoa_fisica_aprovada_response_id_estado_civil_value}}}
       * @var int
       */
     protected $id_estado_civil;
     
     /**
-      * $id_profissao Profiss\u00E3o da pessoa fisica
+      * $id_profissao {{{pessoa_fisica_aprovada_response_id_profissao_value}}}
       * @var string
       */
     protected $id_profissao;
     
     /**
-      * $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+      * $id_natureza_ocupacao {{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}}
       * @var int
       */
     protected $id_natureza_ocupacao;
     
     /**
-      * $id_nacionalidade Id Nacionalidade da pessoa fisica
+      * $id_nacionalidade {{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}}
       * @var int
       */
     protected $id_nacionalidade;
     
     /**
-      * $id_origem_comercial Id da origem comercial
+      * $id_origem_comercial {{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}}
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $id_produto Id do produto
+      * $id_produto {{{pessoa_fisica_aprovada_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia.
+      * $numero_agencia {{{pessoa_fisica_aprovada_response_numero_agencia_value}}}
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00FAmero da conta corrente.
+      * $numero_conta_corrente {{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}}
       * @var string
       */
     protected $numero_conta_corrente;
     
     /**
-      * $email Email da pessoa fisica
+      * $email {{{pessoa_fisica_aprovada_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $dia_vencimento Dia vencimento
+      * $dia_vencimento {{{pessoa_fisica_aprovada_response_dia_vencimento_value}}}
       * @var int
       */
     protected $dia_vencimento;
     
     /**
-      * $nome_impresso Nome que deve ser impresso no cart\u00E3o
+      * $nome_impresso {{{pessoa_fisica_aprovada_response_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $nome_empresa Nome da empresa
+      * $nome_empresa {{{pessoa_fisica_aprovada_response_nome_empresa_value}}}
       * @var string
       */
     protected $nome_empresa;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
+      * $id_conta {{{pessoa_fisica_aprovada_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_proposta C\u00F3digo de identifica\u00E7\u00E3o da proposta
+      * $id_proposta {{{pessoa_fisica_aprovada_response_id_proposta_value}}}
       * @var int
       */
     protected $id_proposta;
     
     /**
-      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * $canal_entrada {{{pessoa_fisica_aprovada_response_canal_entrada_value}}}
       * @var string
       */
     protected $canal_entrada;
     
     /**
-      * $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+      * $valor_pontuacao {{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}}
       * @var int
       */
     protected $valor_pontuacao;
     
     /**
-      * $telefones Apresenta os telefones da empresa
+      * $telefones {{{pessoa_fisica_aprovada_response_telefones_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]
       */
     protected $telefones;
     
     /**
-      * $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+      * $enderecos {{{pessoa_fisica_aprovada_response_enderecos_value}}}
       * @var \br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[]
       */
     protected $enderecos;
     
     /**
-      * $limite_global Valor do Limite Global
+      * $limite_global {{{pessoa_fisica_aprovada_response_limite_global_value}}}
       * @var Number
       */
     protected $limite_global;
     
     /**
-      * $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+      * $limite_maximo {{{pessoa_fisica_aprovada_response_limite_maximo_value}}}
       * @var Number
       */
     protected $limite_maximo;
     
     /**
-      * $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+      * $limite_parcelas {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
       * @var Number
       */
     protected $limite_parcelas;
     
     /**
-      * $limite_consignado Valor do limite de margem consignado
+      * $limite_consignado {{{pessoa_fisica_aprovada_response_limite_consignado_value}}}
       * @var Number
       */
     protected $limite_consignado;
@@ -466,7 +466,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)
+     * @param int $id {{{pessoa_fisica_aprovada_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -487,7 +487,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Apresenta o nome completo da pessoa fisica.
+     * @param string $nome {{{pessoa_fisica_aprovada_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -508,7 +508,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets nome_mae
-     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
+     * @param string $nome_mae {{{pessoa_fisica_aprovada_response_nome_mae_value}}}
      * @return $this
      */
     public function setNomeMae($nome_mae)
@@ -529,7 +529,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
+     * @param string $data_nascimento {{{pessoa_fisica_aprovada_response_data_nascimento_value}}}
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -550,7 +550,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+     * @param string $sexo {{{pessoa_fisica_aprovada_response_sexo_value}}}
      * @return $this
      */
     public function setSexo($sexo)
@@ -571,7 +571,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
+     * @param string $cpf {{{pessoa_fisica_aprovada_response_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)
@@ -592,7 +592,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00FAmero da identidade.
+     * @param string $numero_identidade {{{pessoa_fisica_aprovada_response_numero_identidade_value}}}
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -613,7 +613,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor da Identidade.
+     * @param string $orgao_expedidor_identidade {{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}}
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -634,7 +634,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets unidade_federativa_identidade
-     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @param string $unidade_federativa_identidade {{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}}
      * @return $this
      */
     public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
@@ -655,7 +655,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade no formato aaaa-MM-dd
+     * @param string $data_emissao_identidade {{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}}
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -676,7 +676,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_estado_civil
-     * @param int $id_estado_civil Id Estado civil da pessoa fisica
+     * @param int $id_estado_civil {{{pessoa_fisica_aprovada_response_id_estado_civil_value}}}
      * @return $this
      */
     public function setIdEstadoCivil($id_estado_civil)
@@ -697,7 +697,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param string $id_profissao Profiss\u00E3o da pessoa fisica
+     * @param string $id_profissao {{{pessoa_fisica_aprovada_response_id_profissao_value}}}
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -718,7 +718,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_natureza_ocupacao
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+     * @param int $id_natureza_ocupacao {{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}}
      * @return $this
      */
     public function setIdNaturezaOcupacao($id_natureza_ocupacao)
@@ -739,7 +739,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_nacionalidade
-     * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica
+     * @param int $id_nacionalidade {{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}}
      * @return $this
      */
     public function setIdNacionalidade($id_nacionalidade)
@@ -760,7 +760,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_origem_comercial
-     * @param int $id_origem_comercial Id da origem comercial
+     * @param int $id_origem_comercial {{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}}
      * @return $this
      */
     public function setIdOrigemComercial($id_origem_comercial)
@@ -781,7 +781,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto Id do produto
+     * @param int $id_produto {{{pessoa_fisica_aprovada_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -802,7 +802,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
+     * @param int $numero_agencia {{{pessoa_fisica_aprovada_response_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -823,7 +823,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
+     * @param string $numero_conta_corrente {{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}}
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -844,7 +844,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email da pessoa fisica
+     * @param string $email {{{pessoa_fisica_aprovada_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -865,7 +865,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets dia_vencimento
-     * @param int $dia_vencimento Dia vencimento
+     * @param int $dia_vencimento {{{pessoa_fisica_aprovada_response_dia_vencimento_value}}}
      * @return $this
      */
     public function setDiaVencimento($dia_vencimento)
@@ -886,7 +886,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome que deve ser impresso no cart\u00E3o
+     * @param string $nome_impresso {{{pessoa_fisica_aprovada_response_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -907,7 +907,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Nome da empresa
+     * @param string $nome_empresa {{{pessoa_fisica_aprovada_response_nome_empresa_value}}}
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)
@@ -928,7 +928,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
+     * @param int $id_conta {{{pessoa_fisica_aprovada_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -949,7 +949,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets id_proposta
-     * @param int $id_proposta C\u00F3digo de identifica\u00E7\u00E3o da proposta
+     * @param int $id_proposta {{{pessoa_fisica_aprovada_response_id_proposta_value}}}
      * @return $this
      */
     public function setIdProposta($id_proposta)
@@ -970,7 +970,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets canal_entrada
-     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @param string $canal_entrada {{{pessoa_fisica_aprovada_response_canal_entrada_value}}}
      * @return $this
      */
     public function setCanalEntrada($canal_entrada)
@@ -991,7 +991,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets valor_pontuacao
-     * @param int $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+     * @param int $valor_pontuacao {{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}}
      * @return $this
      */
     public function setValorPontuacao($valor_pontuacao)
@@ -1012,7 +1012,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones Apresenta os telefones da empresa
+     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones {{{pessoa_fisica_aprovada_response_telefones_value}}}
      * @return $this
      */
     public function setTelefones($telefones)
@@ -1033,7 +1033,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets enderecos
-     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[] $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoResponse[] $enderecos {{{pessoa_fisica_aprovada_response_enderecos_value}}}
      * @return $this
      */
     public function setEnderecos($enderecos)
@@ -1054,7 +1054,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param Number $limite_global Valor do Limite Global
+     * @param Number $limite_global {{{pessoa_fisica_aprovada_response_limite_global_value}}}
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -1075,7 +1075,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets limite_maximo
-     * @param Number $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+     * @param Number $limite_maximo {{{pessoa_fisica_aprovada_response_limite_maximo_value}}}
      * @return $this
      */
     public function setLimiteMaximo($limite_maximo)
@@ -1096,7 +1096,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+     * @param Number $limite_parcelas {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)
@@ -1117,7 +1117,7 @@ class PessoaFisicaAprovadaResponse implements ArrayAccess
   
     /**
      * Sets limite_consignado
-     * @param Number $limite_consignado Valor do limite de margem consignado
+     * @param Number $limite_consignado {{{pessoa_fisica_aprovada_response_limite_consignado_value}}}
      * @return $this
      */
     public function setLimiteConsignado($limite_consignado)

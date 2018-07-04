@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoDetalhadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta para o recurso de Documento
+ * @description {{{documento_detalhado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class DocumentoDetalhadoResponse implements ArrayAccess
 
     
     /**
-      * $id ID do Documento.
+      * $id {{{documento_detalhado_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_template_documento ID do Template de Documento associado.
+      * $id_template_documento {{{documento_detalhado_response_id_template_documento_value}}}
       * @var int
       */
     protected $id_template_documento;
     
     /**
-      * $nome Nome do Documento.
+      * $nome {{{documento_detalhado_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $documento Representa\u00E7\u00E3o do documento em Base64.
+      * $documento {{{documento_detalhado_response_documento_value}}}
       * @var string
       */
     protected $documento;
     
     /**
-      * $extensao Extens\u00E3o do Documento.
+      * $extensao {{{documento_detalhado_response_extensao_value}}}
       * @var string
       */
     protected $extensao;
     
     /**
-      * $documento_detalhes Detalhamento do documento.
+      * $documento_detalhes {{{documento_detalhado_response_documento_detalhes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[]
       */
     protected $documento_detalhes;
@@ -180,7 +180,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID do Documento.
+     * @param int $id {{{documento_detalhado_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_template_documento
-     * @param int $id_template_documento ID do Template de Documento associado.
+     * @param int $id_template_documento {{{documento_detalhado_response_id_template_documento_value}}}
      * @return $this
      */
     public function setIdTemplateDocumento($id_template_documento)
@@ -222,7 +222,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Documento.
+     * @param string $nome {{{documento_detalhado_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -243,7 +243,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets documento
-     * @param string $documento Representa\u00E7\u00E3o do documento em Base64.
+     * @param string $documento {{{documento_detalhado_response_documento_value}}}
      * @return $this
      */
     public function setDocumento($documento)
@@ -264,7 +264,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Extens\u00E3o do Documento.
+     * @param string $extensao {{{documento_detalhado_response_extensao_value}}}
      * @return $this
      */
     public function setExtensao($extensao)
@@ -285,7 +285,7 @@ class DocumentoDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets documento_detalhes
-     * @param \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[] $documento_detalhes Detalhamento do documento.
+     * @param \br.com.conductor.pier.api.v2.model\DocumentoDetalheResponse[] $documento_detalhes {{{documento_detalhado_response_documento_detalhes_value}}}
      * @return $this
      */
     public function setDocumentoDetalhes($documento_detalhes)

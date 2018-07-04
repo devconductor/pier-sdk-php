@@ -38,7 +38,7 @@ use \ArrayAccess;
  * GrupoEconomicoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
+ * @description {{{grupo_economico_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -200,163 +200,163 @@ class GrupoEconomicoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do grupo econ\u00F4mico
+      * $id {{{grupo_economico_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $razao_social Raz\u00E3o social da pessoa jur\u00EDdica
+      * $razao_social {{{grupo_economico_response_razao_social_value}}}
       * @var string
       */
     protected $razao_social;
     
     /**
-      * $nome_credor Nome do credor
+      * $nome_credor {{{grupo_economico_response_nome_credor_value}}}
       * @var string
       */
     protected $nome_credor;
     
     /**
-      * $numero_receita_federal N\u00FAmero da Receita Federal
+      * $numero_receita_federal {{{grupo_economico_response_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
+      * $inscricao_estadual {{{grupo_economico_response_inscricao_estadual_value}}}
       * @var string
       */
     protected $inscricao_estadual;
     
     /**
-      * $contato Nome da pessoa para entrar em contato
+      * $contato {{{grupo_economico_response_contato_value}}}
       * @var string
       */
     protected $contato;
     
     /**
-      * $banco C\u00F3digo do banco
+      * $banco {{{grupo_economico_response_banco_value}}}
       * @var int
       */
     protected $banco;
     
     /**
-      * $agencia C\u00F3digo da ag\u00EAncia
+      * $agencia {{{grupo_economico_response_agencia_value}}}
       * @var int
       */
     protected $agencia;
     
     /**
-      * $digito_agencia D\u00EDgito verificador da ag\u00EAncia
+      * $digito_agencia {{{grupo_economico_response_digito_agencia_value}}}
       * @var string
       */
     protected $digito_agencia;
     
     /**
-      * $conta_corrente C\u00F3digo da Conta Corrente
+      * $conta_corrente {{{grupo_economico_response_conta_corrente_value}}}
       * @var string
       */
     protected $conta_corrente;
     
     /**
-      * $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
+      * $digito_conta_corrente {{{grupo_economico_response_digito_conta_corrente_value}}}
       * @var string
       */
     protected $digito_conta_corrente;
     
     /**
-      * $usuario Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
+      * $usuario {{{grupo_economico_response_usuario_value}}}
       * @var string
       */
     protected $usuario;
     
     /**
-      * $periodicidade Periodicidade do pagamento
+      * $periodicidade {{{grupo_economico_response_periodicidade_value}}}
       * @var string
       */
     protected $periodicidade;
     
     /**
-      * $pagamento_semanal Dia para pagamento semanal
+      * $pagamento_semanal {{{grupo_economico_response_pagamento_semanal_value}}}
       * @var string
       */
     protected $pagamento_semanal;
     
     /**
-      * $pagamento_mensal Dia da data para o pagamento mensal
+      * $pagamento_mensal {{{grupo_economico_response_pagamento_mensal_value}}}
       * @var int
       */
     protected $pagamento_mensal;
     
     /**
-      * $pagamento_decendial_primeiro Dia da data para o primeiro pagamento decendial
+      * $pagamento_decendial_primeiro {{{grupo_economico_response_pagamento_decendial_primeiro_value}}}
       * @var int
       */
     protected $pagamento_decendial_primeiro;
     
     /**
-      * $pagamento_decendial_segundo Dia da data para o segundo pagamento decendial
+      * $pagamento_decendial_segundo {{{grupo_economico_response_pagamento_decendial_segundo_value}}}
       * @var int
       */
     protected $pagamento_decendial_segundo;
     
     /**
-      * $pagamento_decendial_terceiro Dia da data para o terceiro pagamento decendial
+      * $pagamento_decendial_terceiro {{{grupo_economico_response_pagamento_decendial_terceiro_value}}}
       * @var int
       */
     protected $pagamento_decendial_terceiro;
     
     /**
-      * $pagamento_quinzenal_primeiro Dia da data para o primeiro pagamento quinzenal
+      * $pagamento_quinzenal_primeiro {{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}
       * @var int
       */
     protected $pagamento_quinzenal_primeiro;
     
     /**
-      * $pagamento_quinzenal_segundo Dia da data para o segundo pagamento quinzenal
+      * $pagamento_quinzenal_segundo {{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}
       * @var int
       */
     protected $pagamento_quinzenal_segundo;
     
     /**
-      * $id_credor_rav Identificador do credor RAV
+      * $id_credor_rav {{{grupo_economico_response_id_credor_r_a_v_value}}}
       * @var int
       */
     protected $id_credor_rav;
     
     /**
-      * $percentual_rav Valor percentual do RAV do credor
+      * $percentual_rav {{{grupo_economico_response_percentual_r_a_v_value}}}
       * @var Number
       */
     protected $percentual_rav;
     
     /**
-      * $recebe_rav Indica se o credor recebe RAV e o tipo
+      * $recebe_rav {{{grupo_economico_response_recebe_r_a_v_value}}}
       * @var string
       */
     protected $recebe_rav;
     
     /**
-      * $percentual_multiplica Percentual Multiplica
+      * $percentual_multiplica {{{grupo_economico_response_percentual_multiplica_value}}}
       * @var Number
       */
     protected $percentual_multiplica;
     
     /**
-      * $taxa_adm Taxa Administrativa
+      * $taxa_adm {{{grupo_economico_response_taxa_adm_value}}}
       * @var Number
       */
     protected $taxa_adm;
     
     /**
-      * $taxa_banco Taxa do Banco
+      * $taxa_banco {{{grupo_economico_response_taxa_banco_value}}}
       * @var Number
       */
     protected $taxa_banco;
     
     /**
-      * $limite_rav Valor limite do RAV
+      * $limite_rav {{{grupo_economico_response_limite_r_a_v_value}}}
       * @var Number
       */
     protected $limite_rav;
@@ -411,7 +411,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do grupo econ\u00F4mico
+     * @param int $id {{{grupo_economico_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -432,7 +432,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Raz\u00E3o social da pessoa jur\u00EDdica
+     * @param string $razao_social {{{grupo_economico_response_razao_social_value}}}
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -453,7 +453,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets nome_credor
-     * @param string $nome_credor Nome do credor
+     * @param string $nome_credor {{{grupo_economico_response_nome_credor_value}}}
      * @return $this
      */
     public function setNomeCredor($nome_credor)
@@ -474,7 +474,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00FAmero da Receita Federal
+     * @param string $numero_receita_federal {{{grupo_economico_response_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -495,7 +495,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets inscricao_estadual
-     * @param string $inscricao_estadual N\u00FAmero da inscri\u00E7\u00E3o estadual
+     * @param string $inscricao_estadual {{{grupo_economico_response_inscricao_estadual_value}}}
      * @return $this
      */
     public function setInscricaoEstadual($inscricao_estadual)
@@ -516,7 +516,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets contato
-     * @param string $contato Nome da pessoa para entrar em contato
+     * @param string $contato {{{grupo_economico_response_contato_value}}}
      * @return $this
      */
     public function setContato($contato)
@@ -537,7 +537,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00F3digo do banco
+     * @param int $banco {{{grupo_economico_response_banco_value}}}
      * @return $this
      */
     public function setBanco($banco)
@@ -558,7 +558,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets agencia
-     * @param int $agencia C\u00F3digo da ag\u00EAncia
+     * @param int $agencia {{{grupo_economico_response_agencia_value}}}
      * @return $this
      */
     public function setAgencia($agencia)
@@ -579,7 +579,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets digito_agencia
-     * @param string $digito_agencia D\u00EDgito verificador da ag\u00EAncia
+     * @param string $digito_agencia {{{grupo_economico_response_digito_agencia_value}}}
      * @return $this
      */
     public function setDigitoAgencia($digito_agencia)
@@ -600,7 +600,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets conta_corrente
-     * @param string $conta_corrente C\u00F3digo da Conta Corrente
+     * @param string $conta_corrente {{{grupo_economico_response_conta_corrente_value}}}
      * @return $this
      */
     public function setContaCorrente($conta_corrente)
@@ -621,7 +621,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets digito_conta_corrente
-     * @param string $digito_conta_corrente D\u00EDgito Verificador da Conta Corrente
+     * @param string $digito_conta_corrente {{{grupo_economico_response_digito_conta_corrente_value}}}
      * @return $this
      */
     public function setDigitoContaCorrente($digito_conta_corrente)
@@ -642,7 +642,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
+     * @param string $usuario {{{grupo_economico_response_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)
@@ -663,7 +663,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets periodicidade
-     * @param string $periodicidade Periodicidade do pagamento
+     * @param string $periodicidade {{{grupo_economico_response_periodicidade_value}}}
      * @return $this
      */
     public function setPeriodicidade($periodicidade)
@@ -687,7 +687,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_semanal
-     * @param string $pagamento_semanal Dia para pagamento semanal
+     * @param string $pagamento_semanal {{{grupo_economico_response_pagamento_semanal_value}}}
      * @return $this
      */
     public function setPagamentoSemanal($pagamento_semanal)
@@ -711,7 +711,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_mensal
-     * @param int $pagamento_mensal Dia da data para o pagamento mensal
+     * @param int $pagamento_mensal {{{grupo_economico_response_pagamento_mensal_value}}}
      * @return $this
      */
     public function setPagamentoMensal($pagamento_mensal)
@@ -732,7 +732,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_decendial_primeiro
-     * @param int $pagamento_decendial_primeiro Dia da data para o primeiro pagamento decendial
+     * @param int $pagamento_decendial_primeiro {{{grupo_economico_response_pagamento_decendial_primeiro_value}}}
      * @return $this
      */
     public function setPagamentoDecendialPrimeiro($pagamento_decendial_primeiro)
@@ -753,7 +753,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_decendial_segundo
-     * @param int $pagamento_decendial_segundo Dia da data para o segundo pagamento decendial
+     * @param int $pagamento_decendial_segundo {{{grupo_economico_response_pagamento_decendial_segundo_value}}}
      * @return $this
      */
     public function setPagamentoDecendialSegundo($pagamento_decendial_segundo)
@@ -774,7 +774,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_decendial_terceiro
-     * @param int $pagamento_decendial_terceiro Dia da data para o terceiro pagamento decendial
+     * @param int $pagamento_decendial_terceiro {{{grupo_economico_response_pagamento_decendial_terceiro_value}}}
      * @return $this
      */
     public function setPagamentoDecendialTerceiro($pagamento_decendial_terceiro)
@@ -795,7 +795,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_quinzenal_primeiro
-     * @param int $pagamento_quinzenal_primeiro Dia da data para o primeiro pagamento quinzenal
+     * @param int $pagamento_quinzenal_primeiro {{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}
      * @return $this
      */
     public function setPagamentoQuinzenalPrimeiro($pagamento_quinzenal_primeiro)
@@ -816,7 +816,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets pagamento_quinzenal_segundo
-     * @param int $pagamento_quinzenal_segundo Dia da data para o segundo pagamento quinzenal
+     * @param int $pagamento_quinzenal_segundo {{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}
      * @return $this
      */
     public function setPagamentoQuinzenalSegundo($pagamento_quinzenal_segundo)
@@ -837,7 +837,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets id_credor_rav
-     * @param int $id_credor_rav Identificador do credor RAV
+     * @param int $id_credor_rav {{{grupo_economico_response_id_credor_r_a_v_value}}}
      * @return $this
      */
     public function setIdCredorRav($id_credor_rav)
@@ -858,7 +858,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets percentual_rav
-     * @param Number $percentual_rav Valor percentual do RAV do credor
+     * @param Number $percentual_rav {{{grupo_economico_response_percentual_r_a_v_value}}}
      * @return $this
      */
     public function setPercentualRav($percentual_rav)
@@ -879,7 +879,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets recebe_rav
-     * @param string $recebe_rav Indica se o credor recebe RAV e o tipo
+     * @param string $recebe_rav {{{grupo_economico_response_recebe_r_a_v_value}}}
      * @return $this
      */
     public function setRecebeRav($recebe_rav)
@@ -903,7 +903,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets percentual_multiplica
-     * @param Number $percentual_multiplica Percentual Multiplica
+     * @param Number $percentual_multiplica {{{grupo_economico_response_percentual_multiplica_value}}}
      * @return $this
      */
     public function setPercentualMultiplica($percentual_multiplica)
@@ -924,7 +924,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets taxa_adm
-     * @param Number $taxa_adm Taxa Administrativa
+     * @param Number $taxa_adm {{{grupo_economico_response_taxa_adm_value}}}
      * @return $this
      */
     public function setTaxaAdm($taxa_adm)
@@ -945,7 +945,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets taxa_banco
-     * @param Number $taxa_banco Taxa do Banco
+     * @param Number $taxa_banco {{{grupo_economico_response_taxa_banco_value}}}
      * @return $this
      */
     public function setTaxaBanco($taxa_banco)
@@ -966,7 +966,7 @@ class GrupoEconomicoResponse implements ArrayAccess
   
     /**
      * Sets limite_rav
-     * @param Number $limite_rav Valor limite do RAV
+     * @param Number $limite_rav {{{grupo_economico_response_limite_r_a_v_value}}}
      * @return $this
      */
     public function setLimiteRav($limite_rav)

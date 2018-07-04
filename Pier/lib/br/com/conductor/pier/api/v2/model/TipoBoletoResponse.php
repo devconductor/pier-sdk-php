@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoBoletoResponse Class Doc Comment
  *
  * @category    Class
- * @description Fatura
+ * @description {{{tipo_boleto_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class TipoBoletoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do tipo de boleto.
+      * $id {{{tipo_boleto_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do tipo de boleto.
+      * $descricao {{{tipo_boleto_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $banco C\u00F3digo identificador do banco.
+      * $banco {{{tipo_boleto_response_banco_value}}}
       * @var int
       */
     protected $banco;
     
     /**
-      * $faixa_nosso_numero Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.
+      * $faixa_nosso_numero {{{tipo_boleto_response_faixa_nosso_numero_value}}}
       * @var int
       */
     protected $faixa_nosso_numero;
     
     /**
-      * $min_nosso_numero N\u00FAmero minimo para o nosso n\u00FAmero.
+      * $min_nosso_numero {{{tipo_boleto_response_min_nosso_numero_value}}}
       * @var Number
       */
     protected $min_nosso_numero;
     
     /**
-      * $max_nosso_numero N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.
+      * $max_nosso_numero {{{tipo_boleto_response_max_nosso_numero_value}}}
       * @var Number
       */
     protected $max_nosso_numero;
     
     /**
-      * $tam_nosso_numero Tamanho do nosso n\u00FAmero.
+      * $tam_nosso_numero {{{tipo_boleto_response_tam_nosso_numero_value}}}
       * @var int
       */
     protected $tam_nosso_numero;
     
     /**
-      * $ultimo_nosso_numero \u00DAltimo nosso n\u00FAmero utilizado.
+      * $ultimo_nosso_numero {{{tipo_boleto_response_ultimo_nosso_numero_value}}}
       * @var Number
       */
     protected $ultimo_nosso_numero;
@@ -202,7 +202,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do tipo de boleto.
+     * @param int $id {{{tipo_boleto_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do tipo de boleto.
+     * @param string $descricao {{{tipo_boleto_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -244,7 +244,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets banco
-     * @param int $banco C\u00F3digo identificador do banco.
+     * @param int $banco {{{tipo_boleto_response_banco_value}}}
      * @return $this
      */
     public function setBanco($banco)
@@ -265,7 +265,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets faixa_nosso_numero
-     * @param int $faixa_nosso_numero Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.
+     * @param int $faixa_nosso_numero {{{tipo_boleto_response_faixa_nosso_numero_value}}}
      * @return $this
      */
     public function setFaixaNossoNumero($faixa_nosso_numero)
@@ -286,7 +286,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets min_nosso_numero
-     * @param Number $min_nosso_numero N\u00FAmero minimo para o nosso n\u00FAmero.
+     * @param Number $min_nosso_numero {{{tipo_boleto_response_min_nosso_numero_value}}}
      * @return $this
      */
     public function setMinNossoNumero($min_nosso_numero)
@@ -307,7 +307,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets max_nosso_numero
-     * @param Number $max_nosso_numero N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.
+     * @param Number $max_nosso_numero {{{tipo_boleto_response_max_nosso_numero_value}}}
      * @return $this
      */
     public function setMaxNossoNumero($max_nosso_numero)
@@ -328,7 +328,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets tam_nosso_numero
-     * @param int $tam_nosso_numero Tamanho do nosso n\u00FAmero.
+     * @param int $tam_nosso_numero {{{tipo_boleto_response_tam_nosso_numero_value}}}
      * @return $this
      */
     public function setTamNossoNumero($tam_nosso_numero)
@@ -349,7 +349,7 @@ class TipoBoletoResponse implements ArrayAccess
   
     /**
      * Sets ultimo_nosso_numero
-     * @param Number $ultimo_nosso_numero \u00DAltimo nosso n\u00FAmero utilizado.
+     * @param Number $ultimo_nosso_numero {{{tipo_boleto_response_ultimo_nosso_numero_value}}}
      * @return $this
      */
     public function setUltimoNossoNumero($ultimo_nosso_numero)

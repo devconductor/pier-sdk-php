@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * NotificacaoEmailRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
+ * @description {{{notificacao_email_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

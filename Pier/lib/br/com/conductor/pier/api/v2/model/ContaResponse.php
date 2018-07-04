@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ContaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto conta
+ * @description {{{conta_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -136,67 +136,67 @@ class ContaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+      * $id {{{conta_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+      * $id_produto {{{conta_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+      * $id_origem_comercial {{{conta_response_id_origem_comercial_value}}}
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+      * $id_pessoa {{{conta_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+      * $id_status_conta {{{conta_response_id_status_conta_value}}}
       * @var int
       */
     protected $id_status_conta;
     
     /**
-      * $dia_vencimento Apresenta o dia de vencimento.
+      * $dia_vencimento {{{conta_response_dia_vencimento_value}}}
       * @var int
       */
     protected $dia_vencimento;
     
     /**
-      * $melhor_dia_compra Apresenta o melhor dia de compra.
+      * $melhor_dia_compra {{{conta_response_melhor_dia_compra_value}}}
       * @var int
       */
     protected $melhor_dia_compra;
     
     /**
-      * $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+      * $data_status_conta {{{conta_response_data_status_conta_value}}}
       * @var string
       */
     protected $data_status_conta;
     
     /**
-      * $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+      * $data_cadastro {{{conta_response_data_cadastro_value}}}
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+      * $data_ultima_alteracao_vencimento {{{conta_response_data_ultima_alteracao_vencimento_value}}}
       * @var string
       */
     protected $data_ultima_alteracao_vencimento;
     
     /**
-      * $valor_renda Apresenta o valor da renda comprovada
+      * $valor_renda {{{conta_response_valor_renda_value}}}
       * @var Number
       */
     protected $valor_renda;
@@ -235,7 +235,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+     * @param int $id {{{conta_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+     * @param int $id_produto {{{conta_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -277,7 +277,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets id_origem_comercial
-     * @param int $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+     * @param int $id_origem_comercial {{{conta_response_id_origem_comercial_value}}}
      * @return $this
      */
     public function setIdOrigemComercial($id_origem_comercial)
@@ -298,7 +298,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+     * @param int $id_pessoa {{{conta_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -319,7 +319,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets id_status_conta
-     * @param int $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+     * @param int $id_status_conta {{{conta_response_id_status_conta_value}}}
      * @return $this
      */
     public function setIdStatusConta($id_status_conta)
@@ -340,7 +340,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets dia_vencimento
-     * @param int $dia_vencimento Apresenta o dia de vencimento.
+     * @param int $dia_vencimento {{{conta_response_dia_vencimento_value}}}
      * @return $this
      */
     public function setDiaVencimento($dia_vencimento)
@@ -361,7 +361,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets melhor_dia_compra
-     * @param int $melhor_dia_compra Apresenta o melhor dia de compra.
+     * @param int $melhor_dia_compra {{{conta_response_melhor_dia_compra_value}}}
      * @return $this
      */
     public function setMelhorDiaCompra($melhor_dia_compra)
@@ -382,7 +382,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_status_conta
-     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+     * @param string $data_status_conta {{{conta_response_data_status_conta_value}}}
      * @return $this
      */
     public function setDataStatusConta($data_status_conta)
@@ -403,7 +403,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+     * @param string $data_cadastro {{{conta_response_data_cadastro_value}}}
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -424,7 +424,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets data_ultima_alteracao_vencimento
-     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+     * @param string $data_ultima_alteracao_vencimento {{{conta_response_data_ultima_alteracao_vencimento_value}}}
      * @return $this
      */
     public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)
@@ -445,7 +445,7 @@ class ContaResponse implements ArrayAccess
   
     /**
      * Sets valor_renda
-     * @param Number $valor_renda Apresenta o valor da renda comprovada
+     * @param Number $valor_renda {{{conta_response_valor_renda_value}}}
      * @return $this
      */
     public function setValorRenda($valor_renda)

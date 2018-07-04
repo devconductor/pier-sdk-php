@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * CartaoPayCadastroResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Resposta da requisi\u00E7\u00E3o para cadastro de cart\u00E3o
+ * @description {{{cartao_pay_cadastro_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

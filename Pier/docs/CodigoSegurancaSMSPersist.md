@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ddd** | **string** | DDD do n\u00FAmero de telefone para envio do sms. | [optional] 
-**telefone** | **string** | N\u00FAmero do telefone para envio do sms. | [optional] 
+**ddd** | **string** | {{{codigo_seguranca_s_m_s_persist_ddd_value}}} | [optional] 
+**telefone** | **string** | {{{codigo_seguranca_s_m_s_persist_telefone_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

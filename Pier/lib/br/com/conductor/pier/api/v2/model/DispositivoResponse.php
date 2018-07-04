@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DispositivoResponse Class Doc Comment
  *
  * @category    Class
- * @description Dispositivo Mobile
+ * @description {{{dispositivo_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class DispositivoResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do dispositivo.
+      * $id {{{dispositivo_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $token Token do dispositivo.
+      * $token {{{dispositivo_response_token_value}}}
       * @var string
       */
     protected $token;
     
     /**
-      * $id_aplicacao_mobile Identificador da Aplica\u00E7\u00E3o.
+      * $id_aplicacao_mobile {{{dispositivo_response_id_aplicacao_mobile_value}}}
       * @var int
       */
     protected $id_aplicacao_mobile;
     
     /**
-      * $id_usuario Identificador do usu\u00E1rio.
+      * $id_usuario {{{dispositivo_response_id_usuario_value}}}
       * @var int
       */
     protected $id_usuario;
@@ -158,7 +158,7 @@ class DispositivoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do dispositivo.
+     * @param int $id {{{dispositivo_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class DispositivoResponse implements ArrayAccess
   
     /**
      * Sets token
-     * @param string $token Token do dispositivo.
+     * @param string $token {{{dispositivo_response_token_value}}}
      * @return $this
      */
     public function setToken($token)
@@ -200,7 +200,7 @@ class DispositivoResponse implements ArrayAccess
   
     /**
      * Sets id_aplicacao_mobile
-     * @param int $id_aplicacao_mobile Identificador da Aplica\u00E7\u00E3o.
+     * @param int $id_aplicacao_mobile {{{dispositivo_response_id_aplicacao_mobile_value}}}
      * @return $this
      */
     public function setIdAplicacaoMobile($id_aplicacao_mobile)
@@ -221,7 +221,7 @@ class DispositivoResponse implements ArrayAccess
   
     /**
      * Sets id_usuario
-     * @param int $id_usuario Identificador do usu\u00E1rio.
+     * @param int $id_usuario {{{dispositivo_response_id_usuario_value}}}
      * @return $this
      */
     public function setIdUsuario($id_usuario)

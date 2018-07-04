@@ -38,7 +38,7 @@ use \ArrayAccess;
  * LimiteDisponibilidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Limite Disponibilidade
+ * @description {{{limite_disponibilidade_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -180,133 +180,133 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
+      * $id {{{limite_disponibilidade_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $limite_global Valor do limite de cr\u00E9dito.
+      * $limite_global {{{limite_disponibilidade_response_limite_global_value}}}
       * @var Number
       */
     protected $limite_global;
     
     /**
-      * $limite_compra Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
+      * $limite_compra {{{limite_disponibilidade_response_limite_compra_value}}}
       * @var Number
       */
     protected $limite_compra;
     
     /**
-      * $limite_parcelado Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
+      * $limite_parcelado {{{limite_disponibilidade_response_limite_parcelado_value}}}
       * @var Number
       */
     protected $limite_parcelado;
     
     /**
-      * $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+      * $limite_parcelas {{{limite_disponibilidade_response_limite_parcelas_value}}}
       * @var Number
       */
     protected $limite_parcelas;
     
     /**
-      * $limite_saque_global Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
+      * $limite_saque_global {{{limite_disponibilidade_response_limite_saque_global_value}}}
       * @var Number
       */
     protected $limite_saque_global;
     
     /**
-      * $limite_saque_periodo Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+      * $limite_saque_periodo {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
       * @var Number
       */
     protected $limite_saque_periodo;
     
     /**
-      * $limite_consignado Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
+      * $limite_consignado {{{limite_disponibilidade_response_limite_consignado_value}}}
       * @var Number
       */
     protected $limite_consignado;
     
     /**
-      * $limite_internacional_compra Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
+      * $limite_internacional_compra {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
       * @var Number
       */
     protected $limite_internacional_compra;
     
     /**
-      * $limite_internacional_parcelado Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
+      * $limite_internacional_parcelado {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
       * @var Number
       */
     protected $limite_internacional_parcelado;
     
     /**
-      * $limite_internacional_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+      * $limite_internacional_parcelas {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
       * @var Number
       */
     protected $limite_internacional_parcelas;
     
     /**
-      * $limite_internacional_saque_global Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
+      * $limite_internacional_saque_global {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
       * @var Number
       */
     protected $limite_internacional_saque_global;
     
     /**
-      * $limite_internacional_saque_periodo Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
+      * $limite_internacional_saque_periodo {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
       * @var Number
       */
     protected $limite_internacional_saque_periodo;
     
     /**
-      * $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
+      * $limite_maximo {{{limite_disponibilidade_response_limite_maximo_value}}}
       * @var Number
       */
     protected $limite_maximo;
     
     /**
-      * $saldo_disponivel_global Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
+      * $saldo_disponivel_global {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
       * @var Number
       */
     protected $saldo_disponivel_global;
     
     /**
-      * $saldo_disponivel_compra Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
+      * $saldo_disponivel_compra {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
       * @var Number
       */
     protected $saldo_disponivel_compra;
     
     /**
-      * $saldo_disponivel_parcelado Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
+      * $saldo_disponivel_parcelado {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
       * @var Number
       */
     protected $saldo_disponivel_parcelado;
     
     /**
-      * $saldo_disponivel_parcelas Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+      * $saldo_disponivel_parcelas {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
       * @var Number
       */
     protected $saldo_disponivel_parcelas;
     
     /**
-      * $saldo_disponivel_saque Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+      * $saldo_disponivel_saque {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
       * @var Number
       */
     protected $saldo_disponivel_saque;
     
     /**
-      * $saldo_pontos_fidelidade Saldo atual de pontos do programa de fidelidade.
+      * $saldo_pontos_fidelidade {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
       * @var Number
       */
     protected $saldo_pontos_fidelidade;
     
     /**
-      * $saldo_disponivel_compra_internacional Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
+      * $saldo_disponivel_compra_internacional {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
       * @var Number
       */
     protected $saldo_disponivel_compra_internacional;
     
     /**
-      * $saldo_disponivel_saque_internacional Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
+      * $saldo_disponivel_saque_internacional {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
       * @var Number
       */
     protected $saldo_disponivel_saque_internacional;
@@ -356,7 +356,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
+     * @param int $id {{{limite_disponibilidade_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -377,7 +377,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param Number $limite_global Valor do limite de cr\u00E9dito.
+     * @param Number $limite_global {{{limite_disponibilidade_response_limite_global_value}}}
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -398,7 +398,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_compra
-     * @param Number $limite_compra Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
+     * @param Number $limite_compra {{{limite_disponibilidade_response_limite_compra_value}}}
      * @return $this
      */
     public function setLimiteCompra($limite_compra)
@@ -419,7 +419,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_parcelado
-     * @param Number $limite_parcelado Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
+     * @param Number $limite_parcelado {{{limite_disponibilidade_response_limite_parcelado_value}}}
      * @return $this
      */
     public function setLimiteParcelado($limite_parcelado)
@@ -440,7 +440,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+     * @param Number $limite_parcelas {{{limite_disponibilidade_response_limite_parcelas_value}}}
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)
@@ -461,7 +461,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_saque_global
-     * @param Number $limite_saque_global Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
+     * @param Number $limite_saque_global {{{limite_disponibilidade_response_limite_saque_global_value}}}
      * @return $this
      */
     public function setLimiteSaqueGlobal($limite_saque_global)
@@ -482,7 +482,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_saque_periodo
-     * @param Number $limite_saque_periodo Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+     * @param Number $limite_saque_periodo {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
      * @return $this
      */
     public function setLimiteSaquePeriodo($limite_saque_periodo)
@@ -503,7 +503,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_consignado
-     * @param Number $limite_consignado Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
+     * @param Number $limite_consignado {{{limite_disponibilidade_response_limite_consignado_value}}}
      * @return $this
      */
     public function setLimiteConsignado($limite_consignado)
@@ -524,7 +524,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_compra
-     * @param Number $limite_internacional_compra Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
+     * @param Number $limite_internacional_compra {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
      * @return $this
      */
     public function setLimiteInternacionalCompra($limite_internacional_compra)
@@ -545,7 +545,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_parcelado
-     * @param Number $limite_internacional_parcelado Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
+     * @param Number $limite_internacional_parcelado {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
      * @return $this
      */
     public function setLimiteInternacionalParcelado($limite_internacional_parcelado)
@@ -566,7 +566,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_parcelas
-     * @param Number $limite_internacional_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+     * @param Number $limite_internacional_parcelas {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
      * @return $this
      */
     public function setLimiteInternacionalParcelas($limite_internacional_parcelas)
@@ -587,7 +587,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_saque_global
-     * @param Number $limite_internacional_saque_global Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
+     * @param Number $limite_internacional_saque_global {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
      * @return $this
      */
     public function setLimiteInternacionalSaqueGlobal($limite_internacional_saque_global)
@@ -608,7 +608,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_saque_periodo
-     * @param Number $limite_internacional_saque_periodo Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
+     * @param Number $limite_internacional_saque_periodo {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
      * @return $this
      */
     public function setLimiteInternacionalSaquePeriodo($limite_internacional_saque_periodo)
@@ -629,7 +629,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets limite_maximo
-     * @param Number $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
+     * @param Number $limite_maximo {{{limite_disponibilidade_response_limite_maximo_value}}}
      * @return $this
      */
     public function setLimiteMaximo($limite_maximo)
@@ -650,7 +650,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_global
-     * @param Number $saldo_disponivel_global Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
+     * @param Number $saldo_disponivel_global {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
      * @return $this
      */
     public function setSaldoDisponivelGlobal($saldo_disponivel_global)
@@ -671,7 +671,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_compra
-     * @param Number $saldo_disponivel_compra Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
+     * @param Number $saldo_disponivel_compra {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
      * @return $this
      */
     public function setSaldoDisponivelCompra($saldo_disponivel_compra)
@@ -692,7 +692,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelado
-     * @param Number $saldo_disponivel_parcelado Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
+     * @param Number $saldo_disponivel_parcelado {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
      * @return $this
      */
     public function setSaldoDisponivelParcelado($saldo_disponivel_parcelado)
@@ -713,7 +713,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelas
-     * @param Number $saldo_disponivel_parcelas Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+     * @param Number $saldo_disponivel_parcelas {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
      * @return $this
      */
     public function setSaldoDisponivelParcelas($saldo_disponivel_parcelas)
@@ -734,7 +734,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque
-     * @param Number $saldo_disponivel_saque Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+     * @param Number $saldo_disponivel_saque {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
      * @return $this
      */
     public function setSaldoDisponivelSaque($saldo_disponivel_saque)
@@ -755,7 +755,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_pontos_fidelidade
-     * @param Number $saldo_pontos_fidelidade Saldo atual de pontos do programa de fidelidade.
+     * @param Number $saldo_pontos_fidelidade {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
      * @return $this
      */
     public function setSaldoPontosFidelidade($saldo_pontos_fidelidade)
@@ -776,7 +776,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_compra_internacional
-     * @param Number $saldo_disponivel_compra_internacional Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
+     * @param Number $saldo_disponivel_compra_internacional {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
      * @return $this
      */
     public function setSaldoDisponivelCompraInternacional($saldo_disponivel_compra_internacional)
@@ -797,7 +797,7 @@ class LimiteDisponibilidadeResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque_internacional
-     * @param Number $saldo_disponivel_saque_internacional Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
+     * @param Number $saldo_disponivel_saque_internacional {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
      * @return $this
      */
     public function setSaldoDisponivelSaqueInternacional($saldo_disponivel_saque_internacional)

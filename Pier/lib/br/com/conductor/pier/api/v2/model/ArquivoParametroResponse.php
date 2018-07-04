@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoParametroResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response de par\u00E2metros do arquivo.
+ * @description {{{arquivo_parametro_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class ArquivoParametroResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
+      * $id {{{arquivo_parametro_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome_campo Nome que identifica o detalhe do arquivo
+      * $nome_campo {{{arquivo_parametro_response_nome_campo_value}}}
       * @var string
       */
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00FAdo do nomeCampo
+      * $conteudo {{{arquivo_parametro_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class ArquivoParametroResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
+     * @param int $id {{{arquivo_parametro_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class ArquivoParametroResponse implements ArrayAccess
   
     /**
      * Sets nome_campo
-     * @param string $nome_campo Nome que identifica o detalhe do arquivo
+     * @param string $nome_campo {{{arquivo_parametro_response_nome_campo_value}}}
      * @return $this
      */
     public function setNomeCampo($nome_campo)
@@ -189,7 +189,7 @@ class ArquivoParametroResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00FAdo do nomeCampo
+     * @param string $conteudo {{{arquivo_parametro_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)

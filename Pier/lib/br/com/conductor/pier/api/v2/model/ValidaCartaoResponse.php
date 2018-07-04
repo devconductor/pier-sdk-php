@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ValidaCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
+ * @description {{{valida_cartao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class ValidaCartaoResponse implements ArrayAccess
 
     
     /**
-      * $id_status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
+      * $id_status_cartao {{{valida_cartao_response_id_status_cartao_value}}}
       * @var int
       */
     protected $id_status_cartao;
     
     /**
-      * $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
+      * $status_cartao {{{valida_cartao_response_status_cartao_value}}}
       * @var string
       */
     protected $status_cartao;
     
     /**
-      * $id_status_conta Descri\u00E7\u00E3o do status da conta
+      * $id_status_conta {{{valida_cartao_response_id_status_conta_value}}}
       * @var int
       */
     protected $id_status_conta;
     
     /**
-      * $status_conta Descri\u00E7\u00E3o do status da conta
+      * $status_conta {{{valida_cartao_response_status_conta_value}}}
       * @var string
       */
     protected $status_conta;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta.
+      * $id_conta {{{valida_cartao_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia.
+      * $numero_agencia {{{valida_cartao_response_numero_agencia_value}}}
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00FAmero da conta corrente.
+      * $numero_conta_corrente {{{valida_cartao_response_numero_conta_corrente_value}}}
       * @var string
       */
     protected $numero_conta_corrente;
     
     /**
-      * $criptograma_resposta Criptograma de resposta
+      * $criptograma_resposta {{{valida_cartao_response_criptograma_resposta_value}}}
       * @var string
       */
     protected $criptograma_resposta;
@@ -202,7 +202,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status_cartao
-     * @param int $id_status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
+     * @param int $id_status_cartao {{{valida_cartao_response_id_status_cartao_value}}}
      * @return $this
      */
     public function setIdStatusCartao($id_status_cartao)
@@ -223,7 +223,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets status_cartao
-     * @param string $status_cartao Descri\u00E7\u00E3o do status do cart\u00E3o
+     * @param string $status_cartao {{{valida_cartao_response_status_cartao_value}}}
      * @return $this
      */
     public function setStatusCartao($status_cartao)
@@ -244,7 +244,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_status_conta
-     * @param int $id_status_conta Descri\u00E7\u00E3o do status da conta
+     * @param int $id_status_conta {{{valida_cartao_response_id_status_conta_value}}}
      * @return $this
      */
     public function setIdStatusConta($id_status_conta)
@@ -265,7 +265,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets status_conta
-     * @param string $status_conta Descri\u00E7\u00E3o do status da conta
+     * @param string $status_conta {{{valida_cartao_response_status_conta_value}}}
      * @return $this
      */
     public function setStatusConta($status_conta)
@@ -286,7 +286,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta.
+     * @param int $id_conta {{{valida_cartao_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -307,7 +307,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
+     * @param int $numero_agencia {{{valida_cartao_response_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -328,7 +328,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
+     * @param string $numero_conta_corrente {{{valida_cartao_response_numero_conta_corrente_value}}}
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -349,7 +349,7 @@ class ValidaCartaoResponse implements ArrayAccess
   
     /**
      * Sets criptograma_resposta
-     * @param string $criptograma_resposta Criptograma de resposta
+     * @param string $criptograma_resposta {{{valida_cartao_response_criptograma_resposta_value}}}
      * @return $this
      */
     public function setCriptogramaResposta($criptograma_resposta)

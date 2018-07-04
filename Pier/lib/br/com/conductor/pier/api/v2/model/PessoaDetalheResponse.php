@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PessoaDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description PessoaDetalheResponse
+ * @description {{{pessoa_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -136,67 +136,67 @@ class PessoaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id_pessoa C\u00F3digo identificador da pessoa
+      * $id_pessoa {{{pessoa_detalhe_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
+      * $nome_mae {{{pessoa_detalhe_response_nome_mae_value}}}
       * @var string
       */
     protected $nome_mae;
     
     /**
-      * $id_estado_civil Id Estado civil da pessoa fisica
+      * $id_estado_civil {{{pessoa_detalhe_response_id_estado_civil_value}}}
       * @var int
       */
     protected $id_estado_civil;
     
     /**
-      * $id_profissao Profiss\u00E3o da pessoa fisica
+      * $id_profissao {{{pessoa_detalhe_response_id_profissao_value}}}
       * @var string
       */
     protected $id_profissao;
     
     /**
-      * $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+      * $id_natureza_ocupacao {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
       * @var int
       */
     protected $id_natureza_ocupacao;
     
     /**
-      * $id_nacionalidade Id Nacionalidade da pessoa fisica
+      * $id_nacionalidade {{{pessoa_detalhe_response_id_nacionalidade_value}}}
       * @var int
       */
     protected $id_nacionalidade;
     
     /**
-      * $numero_banco N\u00FAmero do banco.
+      * $numero_banco {{{pessoa_detalhe_response_numero_banco_value}}}
       * @var int
       */
     protected $numero_banco;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia.
+      * $numero_agencia {{{pessoa_detalhe_response_numero_agencia_value}}}
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00FAmero da conta corrente.
+      * $numero_conta_corrente {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
       * @var string
       */
     protected $numero_conta_corrente;
     
     /**
-      * $email Email da pessoa fisica
+      * $email {{{pessoa_detalhe_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $nome_empresa Nome que deve ser impresso no cart\u00E3o
+      * $nome_empresa {{{pessoa_detalhe_response_nome_empresa_value}}}
       * @var string
       */
     protected $nome_empresa;
@@ -235,7 +235,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo identificador da pessoa
+     * @param int $id_pessoa {{{pessoa_detalhe_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -256,7 +256,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_mae
-     * @param string $nome_mae Apresenta o nome da m\u00E3e da pessoa fisica
+     * @param string $nome_mae {{{pessoa_detalhe_response_nome_mae_value}}}
      * @return $this
      */
     public function setNomeMae($nome_mae)
@@ -277,7 +277,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_estado_civil
-     * @param int $id_estado_civil Id Estado civil da pessoa fisica
+     * @param int $id_estado_civil {{{pessoa_detalhe_response_id_estado_civil_value}}}
      * @return $this
      */
     public function setIdEstadoCivil($id_estado_civil)
@@ -298,7 +298,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param string $id_profissao Profiss\u00E3o da pessoa fisica
+     * @param string $id_profissao {{{pessoa_detalhe_response_id_profissao_value}}}
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -319,7 +319,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_natureza_ocupacao
-     * @param int $id_natureza_ocupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+     * @param int $id_natureza_ocupacao {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
      * @return $this
      */
     public function setIdNaturezaOcupacao($id_natureza_ocupacao)
@@ -340,7 +340,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_nacionalidade
-     * @param int $id_nacionalidade Id Nacionalidade da pessoa fisica
+     * @param int $id_nacionalidade {{{pessoa_detalhe_response_id_nacionalidade_value}}}
      * @return $this
      */
     public function setIdNacionalidade($id_nacionalidade)
@@ -361,7 +361,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_banco
-     * @param int $numero_banco N\u00FAmero do banco.
+     * @param int $numero_banco {{{pessoa_detalhe_response_numero_banco_value}}}
      * @return $this
      */
     public function setNumeroBanco($numero_banco)
@@ -382,7 +382,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
+     * @param int $numero_agencia {{{pessoa_detalhe_response_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -403,7 +403,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
+     * @param string $numero_conta_corrente {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -424,7 +424,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email da pessoa fisica
+     * @param string $email {{{pessoa_detalhe_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -445,7 +445,7 @@ class PessoaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_empresa
-     * @param string $nome_empresa Nome que deve ser impresso no cart\u00E3o
+     * @param string $nome_empresa {{{pessoa_detalhe_response_nome_empresa_value}}}
      * @return $this
      */
     public function setNomeEmpresa($nome_empresa)

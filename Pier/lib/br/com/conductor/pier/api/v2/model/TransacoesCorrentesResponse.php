@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacoesCorrentesResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto transacoes correntes
+ * @description {{{transacoes_correntes_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -244,229 +244,229 @@ class TransacoesCorrentesResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+      * $id {{{transacoes_correntes_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_transacao C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+      * $id_tipo_transacao {{{transacoes_correntes_response_id_tipo_transacao_value}}}
       * @var int
       */
     protected $id_tipo_transacao;
     
     /**
-      * $descricao_abreviada Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
+      * $descricao_abreviada {{{transacoes_correntes_response_descricao_abreviada_value}}}
       * @var string
       */
     protected $descricao_abreviada;
     
     /**
-      * $status_transacao Status de Processamento da Transa\u00E7\u00E3o.
+      * $status_transacao {{{transacoes_correntes_response_status_transacao_value}}}
       * @var string
       */
     protected $status_transacao;
     
     /**
-      * $id_evento C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).
+      * $id_evento {{{transacoes_correntes_response_id_evento_value}}}
       * @var int
       */
     protected $id_evento;
     
     /**
-      * $tipo_evento Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.
+      * $tipo_evento {{{transacoes_correntes_response_tipo_evento_value}}}
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+      * $id_conta {{{transacoes_correntes_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $cartao_mascarado N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+      * $cartao_mascarado {{{transacoes_correntes_response_cartao_mascarado_value}}}
       * @var string
       */
     protected $cartao_mascarado;
     
     /**
-      * $nome_portador Nome completo do Portador do Cart\u00E3o.
+      * $nome_portador {{{transacoes_correntes_response_nome_portador_value}}}
       * @var string
       */
     protected $nome_portador;
     
     /**
-      * $data_transacao Data em que a Transa\u00E7\u00E3o foi realizada.
+      * $data_transacao {{{transacoes_correntes_response_data_transacao_value}}}
       * @var string
       */
     protected $data_transacao;
     
     /**
-      * $data_faturamento Data de Faturamento da Transa\u00E7\u00E3o.
+      * $data_faturamento {{{transacoes_correntes_response_data_faturamento_value}}}
       * @var string
       */
     protected $data_faturamento;
     
     /**
-      * $data_vencimento Data de Vencimento da Fatura.
+      * $data_vencimento {{{transacoes_correntes_response_data_vencimento_value}}}
       * @var string
       */
     protected $data_vencimento;
     
     /**
-      * $modo_entrada_transacao Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
+      * $modo_entrada_transacao {{{transacoes_correntes_response_modo_entrada_transacao_value}}}
       * @var string
       */
     protected $modo_entrada_transacao;
     
     /**
-      * $valor_taxa_embarque Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
+      * $valor_taxa_embarque {{{transacoes_correntes_response_valor_taxa_embarque_value}}}
       * @var Number
       */
     protected $valor_taxa_embarque;
     
     /**
-      * $valor_entrada Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+      * $valor_entrada {{{transacoes_correntes_response_valor_entrada_value}}}
       * @var Number
       */
     protected $valor_entrada;
     
     /**
-      * $valor_brl Valor da Transa\u00E7\u00E3o em Real (BRL).
+      * $valor_brl {{{transacoes_correntes_response_valor_b_r_l_value}}}
       * @var Number
       */
     protected $valor_brl;
     
     /**
-      * $valor_usd Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
+      * $valor_usd {{{transacoes_correntes_response_valor_u_s_d_value}}}
       * @var Number
       */
     protected $valor_usd;
     
     /**
-      * $cotacao_usd Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
+      * $cotacao_usd {{{transacoes_correntes_response_cotacao_u_s_d_value}}}
       * @var Number
       */
     protected $cotacao_usd;
     
     /**
-      * $data_cotacao_usd Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
+      * $data_cotacao_usd {{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}
       * @var string
       */
     protected $data_cotacao_usd;
     
     /**
-      * $codigo_moeda_origem C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
+      * $codigo_moeda_origem {{{transacoes_correntes_response_codigo_moeda_origem_value}}}
       * @var string
       */
     protected $codigo_moeda_origem;
     
     /**
-      * $codigo_moeda_destino C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
+      * $codigo_moeda_destino {{{transacoes_correntes_response_codigo_moeda_destino_value}}}
       * @var string
       */
     protected $codigo_moeda_destino;
     
     /**
-      * $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+      * $codigo_autorizacao {{{transacoes_correntes_response_codigo_autorizacao_value}}}
       * @var string
       */
     protected $codigo_autorizacao;
     
     /**
-      * $codigo_referencia C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
+      * $codigo_referencia {{{transacoes_correntes_response_codigo_referencia_value}}}
       * @var string
       */
     protected $codigo_referencia;
     
     /**
-      * $codigo_terminal C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
+      * $codigo_terminal {{{transacoes_correntes_response_codigo_terminal_value}}}
       * @var string
       */
     protected $codigo_terminal;
     
     /**
-      * $codigo_mcc C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+      * $codigo_mcc {{{transacoes_correntes_response_codigo_m_c_c_value}}}
       * @var int
       */
     protected $codigo_mcc;
     
     /**
-      * $grupo_mcc C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
+      * $grupo_mcc {{{transacoes_correntes_response_grupo_m_c_c_value}}}
       * @var int
       */
     protected $grupo_mcc;
     
     /**
-      * $grupo_descricao_mcc Descri\u00E7\u00E3o do grupo do Estabelecimento.
+      * $grupo_descricao_mcc {{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}
       * @var string
       */
     protected $grupo_descricao_mcc;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+      * $id_estabelecimento {{{transacoes_correntes_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $nome_estabelecimento Nome do Estabelecimento.
+      * $nome_estabelecimento {{{transacoes_correntes_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+      * $nome_fantasia_estabelecimento {{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}
       * @var string
       */
     protected $nome_fantasia_estabelecimento;
     
     /**
-      * $localidade_estabelecimento Localidade do Estabelecimento.
+      * $localidade_estabelecimento {{{transacoes_correntes_response_localidade_estabelecimento_value}}}
       * @var string
       */
     protected $localidade_estabelecimento;
     
     /**
-      * $plano_parcelamento Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+      * $plano_parcelamento {{{transacoes_correntes_response_plano_parcelamento_value}}}
       * @var int
       */
     protected $plano_parcelamento;
     
     /**
-      * $numero_parcela Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+      * $numero_parcela {{{transacoes_correntes_response_numero_parcela_value}}}
       * @var int
       */
     protected $numero_parcela;
     
     /**
-      * $detalhes_transacao Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+      * $detalhes_transacao {{{transacoes_correntes_response_detalhes_transacao_value}}}
       * @var string
       */
     protected $detalhes_transacao;
     
     /**
-      * $flag_credito Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+      * $flag_credito {{{transacoes_correntes_response_flag_credito_value}}}
       * @var int
       */
     protected $flag_credito;
     
     /**
-      * $flag_faturado Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+      * $flag_faturado {{{transacoes_correntes_response_flag_faturado_value}}}
       * @var int
       */
     protected $flag_faturado;
     
     /**
-      * $flag_estorno Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+      * $flag_estorno {{{transacoes_correntes_response_flag_estorno_value}}}
       * @var int
       */
     protected $flag_estorno;
     
     /**
-      * $id_transacao_estorno C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+      * $id_transacao_estorno {{{transacoes_correntes_response_id_transacao_estorno_value}}}
       * @var int
       */
     protected $id_transacao_estorno;
@@ -532,7 +532,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+     * @param int $id {{{transacoes_correntes_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -553,7 +553,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_transacao
-     * @param int $id_tipo_transacao C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+     * @param int $id_tipo_transacao {{{transacoes_correntes_response_id_tipo_transacao_value}}}
      * @return $this
      */
     public function setIdTipoTransacao($id_tipo_transacao)
@@ -574,7 +574,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets descricao_abreviada
-     * @param string $descricao_abreviada Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
+     * @param string $descricao_abreviada {{{transacoes_correntes_response_descricao_abreviada_value}}}
      * @return $this
      */
     public function setDescricaoAbreviada($descricao_abreviada)
@@ -595,7 +595,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets status_transacao
-     * @param string $status_transacao Status de Processamento da Transa\u00E7\u00E3o.
+     * @param string $status_transacao {{{transacoes_correntes_response_status_transacao_value}}}
      * @return $this
      */
     public function setStatusTransacao($status_transacao)
@@ -616,7 +616,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id_evento
-     * @param int $id_evento C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).
+     * @param int $id_evento {{{transacoes_correntes_response_id_evento_value}}}
      * @return $this
      */
     public function setIdEvento($id_evento)
@@ -637,7 +637,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.
+     * @param string $tipo_evento {{{transacoes_correntes_response_tipo_evento_value}}}
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
@@ -658,7 +658,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+     * @param int $id_conta {{{transacoes_correntes_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -679,7 +679,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets cartao_mascarado
-     * @param string $cartao_mascarado N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+     * @param string $cartao_mascarado {{{transacoes_correntes_response_cartao_mascarado_value}}}
      * @return $this
      */
     public function setCartaoMascarado($cartao_mascarado)
@@ -700,7 +700,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets nome_portador
-     * @param string $nome_portador Nome completo do Portador do Cart\u00E3o.
+     * @param string $nome_portador {{{transacoes_correntes_response_nome_portador_value}}}
      * @return $this
      */
     public function setNomePortador($nome_portador)
@@ -721,7 +721,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets data_transacao
-     * @param string $data_transacao Data em que a Transa\u00E7\u00E3o foi realizada.
+     * @param string $data_transacao {{{transacoes_correntes_response_data_transacao_value}}}
      * @return $this
      */
     public function setDataTransacao($data_transacao)
@@ -742,7 +742,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets data_faturamento
-     * @param string $data_faturamento Data de Faturamento da Transa\u00E7\u00E3o.
+     * @param string $data_faturamento {{{transacoes_correntes_response_data_faturamento_value}}}
      * @return $this
      */
     public function setDataFaturamento($data_faturamento)
@@ -763,7 +763,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param string $data_vencimento Data de Vencimento da Fatura.
+     * @param string $data_vencimento {{{transacoes_correntes_response_data_vencimento_value}}}
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -784,7 +784,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets modo_entrada_transacao
-     * @param string $modo_entrada_transacao Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
+     * @param string $modo_entrada_transacao {{{transacoes_correntes_response_modo_entrada_transacao_value}}}
      * @return $this
      */
     public function setModoEntradaTransacao($modo_entrada_transacao)
@@ -805,7 +805,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets valor_taxa_embarque
-     * @param Number $valor_taxa_embarque Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
+     * @param Number $valor_taxa_embarque {{{transacoes_correntes_response_valor_taxa_embarque_value}}}
      * @return $this
      */
     public function setValorTaxaEmbarque($valor_taxa_embarque)
@@ -826,7 +826,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets valor_entrada
-     * @param Number $valor_entrada Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+     * @param Number $valor_entrada {{{transacoes_correntes_response_valor_entrada_value}}}
      * @return $this
      */
     public function setValorEntrada($valor_entrada)
@@ -847,7 +847,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets valor_brl
-     * @param Number $valor_brl Valor da Transa\u00E7\u00E3o em Real (BRL).
+     * @param Number $valor_brl {{{transacoes_correntes_response_valor_b_r_l_value}}}
      * @return $this
      */
     public function setValorBrl($valor_brl)
@@ -868,7 +868,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets valor_usd
-     * @param Number $valor_usd Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
+     * @param Number $valor_usd {{{transacoes_correntes_response_valor_u_s_d_value}}}
      * @return $this
      */
     public function setValorUsd($valor_usd)
@@ -889,7 +889,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets cotacao_usd
-     * @param Number $cotacao_usd Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
+     * @param Number $cotacao_usd {{{transacoes_correntes_response_cotacao_u_s_d_value}}}
      * @return $this
      */
     public function setCotacaoUsd($cotacao_usd)
@@ -910,7 +910,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets data_cotacao_usd
-     * @param string $data_cotacao_usd Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
+     * @param string $data_cotacao_usd {{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}
      * @return $this
      */
     public function setDataCotacaoUsd($data_cotacao_usd)
@@ -931,7 +931,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda_origem
-     * @param string $codigo_moeda_origem C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
+     * @param string $codigo_moeda_origem {{{transacoes_correntes_response_codigo_moeda_origem_value}}}
      * @return $this
      */
     public function setCodigoMoedaOrigem($codigo_moeda_origem)
@@ -952,7 +952,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda_destino
-     * @param string $codigo_moeda_destino C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
+     * @param string $codigo_moeda_destino {{{transacoes_correntes_response_codigo_moeda_destino_value}}}
      * @return $this
      */
     public function setCodigoMoedaDestino($codigo_moeda_destino)
@@ -973,7 +973,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_autorizacao
-     * @param string $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+     * @param string $codigo_autorizacao {{{transacoes_correntes_response_codigo_autorizacao_value}}}
      * @return $this
      */
     public function setCodigoAutorizacao($codigo_autorizacao)
@@ -994,7 +994,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_referencia
-     * @param string $codigo_referencia C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
+     * @param string $codigo_referencia {{{transacoes_correntes_response_codigo_referencia_value}}}
      * @return $this
      */
     public function setCodigoReferencia($codigo_referencia)
@@ -1015,7 +1015,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_terminal
-     * @param string $codigo_terminal C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
+     * @param string $codigo_terminal {{{transacoes_correntes_response_codigo_terminal_value}}}
      * @return $this
      */
     public function setCodigoTerminal($codigo_terminal)
@@ -1036,7 +1036,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets codigo_mcc
-     * @param int $codigo_mcc C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+     * @param int $codigo_mcc {{{transacoes_correntes_response_codigo_m_c_c_value}}}
      * @return $this
      */
     public function setCodigoMcc($codigo_mcc)
@@ -1057,7 +1057,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets grupo_mcc
-     * @param int $grupo_mcc C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
+     * @param int $grupo_mcc {{{transacoes_correntes_response_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setGrupoMcc($grupo_mcc)
@@ -1078,7 +1078,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets grupo_descricao_mcc
-     * @param string $grupo_descricao_mcc Descri\u00E7\u00E3o do grupo do Estabelecimento.
+     * @param string $grupo_descricao_mcc {{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}
      * @return $this
      */
     public function setGrupoDescricaoMcc($grupo_descricao_mcc)
@@ -1099,7 +1099,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+     * @param int $id_estabelecimento {{{transacoes_correntes_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -1120,7 +1120,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do Estabelecimento.
+     * @param string $nome_estabelecimento {{{transacoes_correntes_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -1141,7 +1141,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia_estabelecimento
-     * @param string $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+     * @param string $nome_fantasia_estabelecimento {{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
@@ -1162,7 +1162,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets localidade_estabelecimento
-     * @param string $localidade_estabelecimento Localidade do Estabelecimento.
+     * @param string $localidade_estabelecimento {{{transacoes_correntes_response_localidade_estabelecimento_value}}}
      * @return $this
      */
     public function setLocalidadeEstabelecimento($localidade_estabelecimento)
@@ -1183,7 +1183,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets plano_parcelamento
-     * @param int $plano_parcelamento Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+     * @param int $plano_parcelamento {{{transacoes_correntes_response_plano_parcelamento_value}}}
      * @return $this
      */
     public function setPlanoParcelamento($plano_parcelamento)
@@ -1204,7 +1204,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param int $numero_parcela Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+     * @param int $numero_parcela {{{transacoes_correntes_response_numero_parcela_value}}}
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -1225,7 +1225,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets detalhes_transacao
-     * @param string $detalhes_transacao Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+     * @param string $detalhes_transacao {{{transacoes_correntes_response_detalhes_transacao_value}}}
      * @return $this
      */
     public function setDetalhesTransacao($detalhes_transacao)
@@ -1246,7 +1246,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets flag_credito
-     * @param int $flag_credito Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+     * @param int $flag_credito {{{transacoes_correntes_response_flag_credito_value}}}
      * @return $this
      */
     public function setFlagCredito($flag_credito)
@@ -1267,7 +1267,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets flag_faturado
-     * @param int $flag_faturado Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+     * @param int $flag_faturado {{{transacoes_correntes_response_flag_faturado_value}}}
      * @return $this
      */
     public function setFlagFaturado($flag_faturado)
@@ -1288,7 +1288,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets flag_estorno
-     * @param int $flag_estorno Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+     * @param int $flag_estorno {{{transacoes_correntes_response_flag_estorno_value}}}
      * @return $this
      */
     public function setFlagEstorno($flag_estorno)
@@ -1309,7 +1309,7 @@ class TransacoesCorrentesResponse implements ArrayAccess
   
     /**
      * Sets id_transacao_estorno
-     * @param int $id_transacao_estorno C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+     * @param int $id_transacao_estorno {{{transacoes_correntes_response_id_transacao_estorno_value}}}
      * @return $this
      */
     public function setIdTransacaoEstorno($id_transacao_estorno)

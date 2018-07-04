@@ -38,7 +38,7 @@ use \ArrayAccess;
  * VinculoEstabelecimentoAdquirentePersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto VinculoEstabelecimentoPersist
+ * @description {{{vinculo_estabelecimento_adquirente_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
 
     
     /**
-      * $id_estabelecimento Apresenta o id do estabelecimento.
+      * $id_estabelecimento {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_adquirente Apresenta o id do adquirente.
+      * $id_adquirente {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
       * @var int
       */
     protected $id_adquirente;
     
     /**
-      * $codigo_estabelecimento_adquirente Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
+      * $codigo_estabelecimento_adquirente {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
       * @var string
       */
     protected $codigo_estabelecimento_adquirente;
@@ -147,7 +147,7 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento Apresenta o id do estabelecimento.
+     * @param int $id_estabelecimento {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -168,7 +168,7 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
   
     /**
      * Sets id_adquirente
-     * @param int $id_adquirente Apresenta o id do adquirente.
+     * @param int $id_adquirente {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
      * @return $this
      */
     public function setIdAdquirente($id_adquirente)
@@ -189,7 +189,7 @@ class VinculoEstabelecimentoAdquirentePersist implements ArrayAccess
   
     /**
      * Sets codigo_estabelecimento_adquirente
-     * @param string $codigo_estabelecimento_adquirente Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
+     * @param string $codigo_estabelecimento_adquirente {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
      * @return $this
      */
     public function setCodigoEstabelecimentoAdquirente($codigo_estabelecimento_adquirente)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaDetalhesResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
+ * @description {{{antecipacao_simulada_detalhes_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
 
     
     /**
-      * $quantidade_parcelas Quantidade de parcelas do plano de parcelamento simulado.
+      * $quantidade_parcelas {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $valor_parcelas Valor total das parcelas do plano de parcelamento.
+      * $valor_parcelas {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
       * @var Number
       */
     protected $valor_parcelas;
     
     /**
-      * $valor_desconto Valor do desconto para o plano de parcelamento.
+      * $valor_desconto {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
       * @var Number
       */
     protected $valor_desconto;
     
     /**
-      * $valor_parcelas_desconto Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
+      * $valor_parcelas_desconto {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
       * @var Number
       */
     protected $valor_parcelas_desconto;
@@ -158,7 +158,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Quantidade de parcelas do plano de parcelamento simulado.
+     * @param int $quantidade_parcelas {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -179,7 +179,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
   
     /**
      * Sets valor_parcelas
-     * @param Number $valor_parcelas Valor total das parcelas do plano de parcelamento.
+     * @param Number $valor_parcelas {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
      * @return $this
      */
     public function setValorParcelas($valor_parcelas)
@@ -200,7 +200,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
   
     /**
      * Sets valor_desconto
-     * @param Number $valor_desconto Valor do desconto para o plano de parcelamento.
+     * @param Number $valor_desconto {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
      * @return $this
      */
     public function setValorDesconto($valor_desconto)
@@ -221,7 +221,7 @@ class AntecipacaoSimuladaDetalhesResponse implements ArrayAccess
   
     /**
      * Sets valor_parcelas_desconto
-     * @param Number $valor_parcelas_desconto Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
+     * @param Number $valor_parcelas_desconto {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
      * @return $this
      */
     public function setValorParcelasDesconto($valor_parcelas_desconto)

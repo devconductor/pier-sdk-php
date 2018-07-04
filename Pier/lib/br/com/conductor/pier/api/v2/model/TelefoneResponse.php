@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta de Telefone
+ * @description {{{telefone_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class TelefoneResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+      * $id {{{telefone_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+      * $id_tipo_telefone {{{telefone_response_id_tipo_telefone_value}}}
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
+      * $id_pessoa {{{telefone_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $ddd C\u00F3digo DDD do telefone.
+      * $ddd {{{telefone_response_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone.
+      * $telefone {{{telefone_response_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00FAmero do ramal.
+      * $ramal {{{telefone_response_ramal_value}}}
       * @var string
       */
     protected $ramal;
     
     /**
-      * $status Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
+      * $status {{{telefone_response_status_value}}}
       * @var int
       */
     protected $status;
@@ -191,7 +191,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+     * @param int $id {{{telefone_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+     * @param int $id_tipo_telefone {{{telefone_response_id_tipo_telefone_value}}}
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -233,7 +233,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
+     * @param int $id_pessoa {{{telefone_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -254,7 +254,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00F3digo DDD do telefone.
+     * @param string $ddd {{{telefone_response_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -275,7 +275,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone.
+     * @param string $telefone {{{telefone_response_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -296,7 +296,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00FAmero do ramal.
+     * @param string $ramal {{{telefone_response_ramal_value}}}
      * @return $this
      */
     public function setRamal($ramal)
@@ -317,7 +317,7 @@ class TelefoneResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
+     * @param int $status {{{telefone_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

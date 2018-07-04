@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoTemplateResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso do Template de Documento
+ * @description {{{documento_template_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class DocumentoTemplateResponse implements ArrayAccess
 
     
     /**
-      * $id ID do Template do Documento.
+      * $id {{{documento_template_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_template ID do Tipo de Template.
+      * $id_tipo_template {{{documento_template_response_id_tipo_template_value}}}
       * @var int
       */
     protected $id_tipo_template;
@@ -136,7 +136,7 @@ class DocumentoTemplateResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID do Template do Documento.
+     * @param int $id {{{documento_template_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class DocumentoTemplateResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_template
-     * @param int $id_tipo_template ID do Tipo de Template.
+     * @param int $id_tipo_template {{{documento_template_response_id_tipo_template_value}}}
      * @return $this
      */
     public function setIdTipoTemplate($id_tipo_template)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageTransferenciaCreditoContaBancariaResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Transfer\u00EAncias de cr\u00E9dito conta banc\u00E1ria
+ * @description {{{page_transferencia_credito_conta_bancaria_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

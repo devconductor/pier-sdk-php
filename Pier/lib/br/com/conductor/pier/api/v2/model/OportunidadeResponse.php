@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OportunidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso Oportunidades
+ * @description {{{oportunidade_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class OportunidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador da oportunidade
+      * $id {{{oportunidade_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
+      * $id_tipo_oportunidade {{{oportunidade_response_id_tipo_oportunidade_value}}}
       * @var int
       */
     protected $id_tipo_oportunidade;
     
     /**
-      * $id_status_oportunidade C\u00F3digo identificador do status oportunidade
+      * $id_status_oportunidade {{{oportunidade_response_id_status_oportunidade_value}}}
       * @var int
       */
     protected $id_status_oportunidade;
     
     /**
-      * $data_cadastro Data cadastro da oportunidade.
+      * $data_cadastro {{{oportunidade_response_data_cadastro_value}}}
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $data_atualizacao Data atualiza\u00E7\u00E3o da oportunidade.
+      * $data_atualizacao {{{oportunidade_response_data_atualizacao_value}}}
       * @var string
       */
     protected $data_atualizacao;
     
     /**
-      * $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+      * $numero_receita_federal {{{oportunidade_response_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade
+      * $data_inicio_vigencia {{{oportunidade_response_data_inicio_vigencia_value}}}
       * @var string
       */
     protected $data_inicio_vigencia;
     
     /**
-      * $data_fim_vigencia Fim da vig\u00EAncia da oportunidade
+      * $data_fim_vigencia {{{oportunidade_response_data_fim_vigencia_value}}}
       * @var string
       */
     protected $data_fim_vigencia;
     
     /**
-      * $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+      * $flag_ativo {{{oportunidade_response_flag_ativo_value}}}
       * @var bool
       */
     protected $flag_ativo;
     
     /**
-      * $detalhes Lista de detalhes da oportunidade
+      * $detalhes {{{oportunidade_response_detalhes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\DetalheOportunidadeResponse[]
       */
     protected $detalhes;
@@ -224,7 +224,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador da oportunidade
+     * @param int $id {{{oportunidade_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -245,7 +245,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_oportunidade
-     * @param int $id_tipo_oportunidade C\u00F3digo identificador do tipo oportunidade
+     * @param int $id_tipo_oportunidade {{{oportunidade_response_id_tipo_oportunidade_value}}}
      * @return $this
      */
     public function setIdTipoOportunidade($id_tipo_oportunidade)
@@ -266,7 +266,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id_status_oportunidade
-     * @param int $id_status_oportunidade C\u00F3digo identificador do status oportunidade
+     * @param int $id_status_oportunidade {{{oportunidade_response_id_status_oportunidade_value}}}
      * @return $this
      */
     public function setIdStatusOportunidade($id_status_oportunidade)
@@ -287,7 +287,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Data cadastro da oportunidade.
+     * @param string $data_cadastro {{{oportunidade_response_data_cadastro_value}}}
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -308,7 +308,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_atualizacao
-     * @param string $data_atualizacao Data atualiza\u00E7\u00E3o da oportunidade.
+     * @param string $data_atualizacao {{{oportunidade_response_data_atualizacao_value}}}
      * @return $this
      */
     public function setDataAtualizacao($data_atualizacao)
@@ -329,7 +329,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+     * @param string $numero_receita_federal {{{oportunidade_response_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -350,7 +350,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_inicio_vigencia
-     * @param string $data_inicio_vigencia In\u00EDcio da vig\u00EAncia da oportunidade
+     * @param string $data_inicio_vigencia {{{oportunidade_response_data_inicio_vigencia_value}}}
      * @return $this
      */
     public function setDataInicioVigencia($data_inicio_vigencia)
@@ -371,7 +371,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets data_fim_vigencia
-     * @param string $data_fim_vigencia Fim da vig\u00EAncia da oportunidade
+     * @param string $data_fim_vigencia {{{oportunidade_response_data_fim_vigencia_value}}}
      * @return $this
      */
     public function setDataFimVigencia($data_fim_vigencia)
@@ -392,7 +392,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+     * @param bool $flag_ativo {{{oportunidade_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)
@@ -413,7 +413,7 @@ class OportunidadeResponse implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\DetalheOportunidadeResponse[] $detalhes Lista de detalhes da oportunidade
+     * @param \br.com.conductor.pier.api.v2.model\DetalheOportunidadeResponse[] $detalhes {{{oportunidade_response_detalhes_value}}}
      * @return $this
      */
     public function setDetalhes($detalhes)

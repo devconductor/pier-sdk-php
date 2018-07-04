@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Identificador do tipo de moeda. | [optional] 
-**codigo_moeda** | **string** | C\u00F3digo identificador do tipo de moeda. | [optional] 
-**simbolo** | **string** | S\u00EDmbolo da Moeda. | [optional] 
-**descricao** | **string** | Descri\u00E7\u00E3o do tipo da moeda. | [optional] 
+**id** | **int** | {{{moeda_response_id_value}}} | [optional] 
+**codigo_moeda** | **string** | {{{moeda_response_codigo_moeda_value}}} | [optional] 
+**simbolo** | **string** | {{{moeda_response_simbolo_value}}} | [optional] 
+**descricao** | **string** | {{{moeda_response_descricao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoPayUpdate Class Doc Comment
  *
  * @category    Class
- * @description Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * @description {{{cartao_pay_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class CartaoPayUpdate implements ArrayAccess
 
     
     /**
-      * $status Status do cart\u00E3o
+      * $status {{{cartao_pay_update_status_value}}}
       * @var string
       */
     protected $status;
@@ -125,7 +125,7 @@ class CartaoPayUpdate implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do cart\u00E3o
+     * @param string $status {{{cartao_pay_update_status_value}}}
      * @return $this
      */
     public function setStatus($status)

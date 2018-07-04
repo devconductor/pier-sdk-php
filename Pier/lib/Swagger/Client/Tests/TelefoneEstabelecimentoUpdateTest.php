@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * TelefoneEstabelecimentoUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto Telefone
+ * @description {{{telefone_estabelecimento_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

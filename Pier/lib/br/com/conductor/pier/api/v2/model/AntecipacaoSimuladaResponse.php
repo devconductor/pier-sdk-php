@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
+ * @description {{{antecipacao_simulada_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -204,139 +204,139 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $id_antecipacao_simulada C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
+      * $id_antecipacao_simulada {{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}
       * @var int
       */
     protected $id_antecipacao_simulada;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta.
+      * $id_conta {{{antecipacao_simulada_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_compra C\u00F3digo identificador do evento compra.
+      * $id_compra {{{antecipacao_simulada_response_id_compra_value}}}
       * @var int
       */
     protected $id_compra;
     
     /**
-      * $id_tipo_transacao C\u00F3digo identificador do tipo do evento compra.
+      * $id_tipo_transacao {{{antecipacao_simulada_response_id_tipo_transacao_value}}}
       * @var int
       */
     protected $id_tipo_transacao;
     
     /**
-      * $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00E1veis.
+      * $quantidade_parcelas_antecipaveis {{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}
       * @var int
       */
     protected $quantidade_parcelas_antecipaveis;
     
     /**
-      * $valor_parcela Valor da parcela.
+      * $valor_parcela {{{antecipacao_simulada_response_valor_parcela_value}}}
       * @var Number
       */
     protected $valor_parcela;
     
     /**
-      * $data_hora_simulacao Data e hora em que a simula\u00E7\u00E3o foi feita.
+      * $data_hora_simulacao {{{antecipacao_simulada_response_data_hora_simulacao_value}}}
       * @var string
       */
     protected $data_hora_simulacao;
     
     /**
-      * $taxa_antecipacao_ano Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
+      * $taxa_antecipacao_ano {{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}
       * @var Number
       */
     protected $taxa_antecipacao_ano;
     
     /**
-      * $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00E7\u00E3o
+      * $nome_estabelecimento {{{antecipacao_simulada_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+      * $status {{{antecipacao_simulada_response_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $data_compra Data da compra.
+      * $data_compra {{{antecipacao_simulada_response_data_compra_value}}}
       * @var string
       */
     protected $data_compra;
     
     /**
-      * $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+      * $tipo_origem_transacao {{{antecipacao_simulada_response_tipo_origem_transacao_value}}}
       * @var string
       */
     protected $tipo_origem_transacao;
     
     /**
-      * $cidade Cidade onde a compra foi realizada.
+      * $cidade {{{antecipacao_simulada_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $pais Pa\u00EDs onde a compra foi realizada.
+      * $pais {{{antecipacao_simulada_response_pais_value}}}
       * @var string
       */
     protected $pais;
     
     /**
-      * $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+      * $latitude {{{antecipacao_simulada_response_latitude_value}}}
       * @var string
       */
     protected $latitude;
     
     /**
-      * $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+      * $longitude {{{antecipacao_simulada_response_longitude_value}}}
       * @var string
       */
     protected $longitude;
     
     /**
-      * $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+      * $id_grupo_mcc {{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+      * $descricao_grupo_mcc {{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+      * $id_produto {{{antecipacao_simulada_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+      * $descricao_produto {{{antecipacao_simulada_response_descricao_produto_value}}}
       * @var string
       */
     protected $descricao_produto;
     
     /**
-      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
+      * $descricao_estabelecimento {{{antecipacao_simulada_response_descricao_estabelecimento_value}}}
       * @var string
       */
     protected $descricao_estabelecimento;
     
     /**
-      * $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+      * $nome_fantasia_estabelecimento {{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}
       * @var string
       */
     protected $nome_fantasia_estabelecimento;
     
     /**
-      * $detalhes Detalhes da simula\u00E7\u00E3o.
+      * $detalhes {{{antecipacao_simulada_response_detalhes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[]
       */
     protected $detalhes;
@@ -431,7 +431,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_antecipacao_simulada
-     * @param int $id_antecipacao_simulada C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
+     * @param int $id_antecipacao_simulada {{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}
      * @return $this
      */
     public function setIdAntecipacaoSimulada($id_antecipacao_simulada)
@@ -452,7 +452,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta.
+     * @param int $id_conta {{{antecipacao_simulada_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -473,7 +473,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_compra
-     * @param int $id_compra C\u00F3digo identificador do evento compra.
+     * @param int $id_compra {{{antecipacao_simulada_response_id_compra_value}}}
      * @return $this
      */
     public function setIdCompra($id_compra)
@@ -494,7 +494,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_transacao
-     * @param int $id_tipo_transacao C\u00F3digo identificador do tipo do evento compra.
+     * @param int $id_tipo_transacao {{{antecipacao_simulada_response_id_tipo_transacao_value}}}
      * @return $this
      */
     public function setIdTipoTransacao($id_tipo_transacao)
@@ -515,7 +515,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas_antecipaveis
-     * @param int $quantidade_parcelas_antecipaveis Quantidade de parcelas antecip\u00E1veis.
+     * @param int $quantidade_parcelas_antecipaveis {{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}
      * @return $this
      */
     public function setQuantidadeParcelasAntecipaveis($quantidade_parcelas_antecipaveis)
@@ -536,7 +536,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela
-     * @param Number $valor_parcela Valor da parcela.
+     * @param Number $valor_parcela {{{antecipacao_simulada_response_valor_parcela_value}}}
      * @return $this
      */
     public function setValorParcela($valor_parcela)
@@ -557,7 +557,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_simulacao
-     * @param string $data_hora_simulacao Data e hora em que a simula\u00E7\u00E3o foi feita.
+     * @param string $data_hora_simulacao {{{antecipacao_simulada_response_data_hora_simulacao_value}}}
      * @return $this
      */
     public function setDataHoraSimulacao($data_hora_simulacao)
@@ -578,7 +578,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets taxa_antecipacao_ano
-     * @param Number $taxa_antecipacao_ano Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
+     * @param Number $taxa_antecipacao_ano {{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}
      * @return $this
      */
     public function setTaxaAntecipacaoAno($taxa_antecipacao_ano)
@@ -599,7 +599,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Estabelecimento onde foi realizada a transa\u00E7\u00E3o
+     * @param string $nome_estabelecimento {{{antecipacao_simulada_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -620,7 +620,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+     * @param string $status {{{antecipacao_simulada_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -641,7 +641,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param string $data_compra Data da compra.
+     * @param string $data_compra {{{antecipacao_simulada_response_data_compra_value}}}
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -662,7 +662,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+     * @param string $tipo_origem_transacao {{{antecipacao_simulada_response_tipo_origem_transacao_value}}}
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -683,7 +683,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Cidade onde a compra foi realizada.
+     * @param string $cidade {{{antecipacao_simulada_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -704,7 +704,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Pa\u00EDs onde a compra foi realizada.
+     * @param string $pais {{{antecipacao_simulada_response_pais_value}}}
      * @return $this
      */
     public function setPais($pais)
@@ -725,7 +725,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets latitude
-     * @param string $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $latitude {{{antecipacao_simulada_response_latitude_value}}}
      * @return $this
      */
     public function setLatitude($latitude)
@@ -746,7 +746,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets longitude
-     * @param string $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $longitude {{{antecipacao_simulada_response_longitude_value}}}
      * @return $this
      */
     public function setLongitude($longitude)
@@ -767,7 +767,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+     * @param int $id_grupo_mcc {{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -788,7 +788,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+     * @param string $descricao_grupo_mcc {{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -809,7 +809,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+     * @param int $id_produto {{{antecipacao_simulada_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -830,7 +830,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+     * @param string $descricao_produto {{{antecipacao_simulada_response_descricao_produto_value}}}
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -851,7 +851,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
+     * @param string $descricao_estabelecimento {{{antecipacao_simulada_response_descricao_estabelecimento_value}}}
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)
@@ -872,7 +872,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia_estabelecimento
-     * @param string $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+     * @param string $nome_fantasia_estabelecimento {{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
@@ -893,7 +893,7 @@ class AntecipacaoSimuladaResponse implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[] $detalhes Detalhes da simula\u00E7\u00E3o.
+     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaDetalhesResponse[] $detalhes {{{antecipacao_simulada_response_detalhes_value}}}
      * @return $this
      */
     public function setDetalhes($detalhes)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EmprestimoPessoalResponse Class Doc Comment
  *
  * @category    Class
- * @description Resposta do recurso de simular empr\u00E9stimos/financiamentos
+ * @description {{{emprestimo_pessoal_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -134,49 +134,49 @@ class EmprestimoPessoalResponse implements ArrayAccess
     protected $planos_parcelamentos;
     
     /**
-      * $valor_solicitado Valor solicitado do empr\u00E9stimo/financiamento
+      * $valor_solicitado {{{emprestimo_pessoal_response_valor_solicitado_value}}}
       * @var Number
       */
     protected $valor_solicitado;
     
     /**
-      * $valor_maximo_solicitacao Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
+      * $valor_maximo_solicitacao {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
       * @var Number
       */
     protected $valor_maximo_solicitacao;
     
     /**
-      * $numero_parcelas N\u00FAmero de parcelas solicitado
+      * $numero_parcelas {{{emprestimo_pessoal_response_numero_parcelas_value}}}
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $valor_maximo_parcela Limite m\u00E1ximo de parcela permitido
+      * $valor_maximo_parcela {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
       * @var Number
       */
     protected $valor_maximo_parcela;
     
     /**
-      * $data_primeira_parcela Data do desconto da primeira parcela
+      * $data_primeira_parcela {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
       * @var string
       */
     protected $data_primeira_parcela;
     
     /**
-      * $periodo_taxa Per\u00EDodo de aplica da taxa de juros
+      * $periodo_taxa {{{emprestimo_pessoal_response_periodo_taxa_value}}}
       * @var string
       */
     protected $periodo_taxa;
     
     /**
-      * $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+      * $sistema_amortizacao {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
       * @var string
       */
     protected $sistema_amortizacao;
     
     /**
-      * $taxa_juros Valor percentual da taxa de juros a ser aplicada
+      * $taxa_juros {{{emprestimo_pessoal_response_taxa_juros_value}}}
       * @var Number
       */
     protected $taxa_juros;
@@ -234,7 +234,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_solicitado
-     * @param Number $valor_solicitado Valor solicitado do empr\u00E9stimo/financiamento
+     * @param Number $valor_solicitado {{{emprestimo_pessoal_response_valor_solicitado_value}}}
      * @return $this
      */
     public function setValorSolicitado($valor_solicitado)
@@ -255,7 +255,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo_solicitacao
-     * @param Number $valor_maximo_solicitacao Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
+     * @param Number $valor_maximo_solicitacao {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
      * @return $this
      */
     public function setValorMaximoSolicitacao($valor_maximo_solicitacao)
@@ -276,7 +276,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00FAmero de parcelas solicitado
+     * @param int $numero_parcelas {{{emprestimo_pessoal_response_numero_parcelas_value}}}
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -297,7 +297,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo_parcela
-     * @param Number $valor_maximo_parcela Limite m\u00E1ximo de parcela permitido
+     * @param Number $valor_maximo_parcela {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
      * @return $this
      */
     public function setValorMaximoParcela($valor_maximo_parcela)
@@ -318,7 +318,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets data_primeira_parcela
-     * @param string $data_primeira_parcela Data do desconto da primeira parcela
+     * @param string $data_primeira_parcela {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
      * @return $this
      */
     public function setDataPrimeiraParcela($data_primeira_parcela)
@@ -339,7 +339,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets periodo_taxa
-     * @param string $periodo_taxa Per\u00EDodo de aplica da taxa de juros
+     * @param string $periodo_taxa {{{emprestimo_pessoal_response_periodo_taxa_value}}}
      * @return $this
      */
     public function setPeriodoTaxa($periodo_taxa)
@@ -360,7 +360,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets sistema_amortizacao
-     * @param string $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+     * @param string $sistema_amortizacao {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
      * @return $this
      */
     public function setSistemaAmortizacao($sistema_amortizacao)
@@ -381,7 +381,7 @@ class EmprestimoPessoalResponse implements ArrayAccess
   
     /**
      * Sets taxa_juros
-     * @param Number $taxa_juros Valor percentual da taxa de juros a ser aplicada
+     * @param Number $taxa_juros {{{emprestimo_pessoal_response_taxa_juros_value}}}
      * @return $this
      */
     public function setTaxaJuros($taxa_juros)

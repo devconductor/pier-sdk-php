@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoParametroAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response da auditoria dos par\u00E2metros do arquivo.
+ * @description {{{arquivo_parametro_a_u_d_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class ArquivoParametroAUDResponse implements ArrayAccess
 
     
     /**
-      * $rev Identificador da auditoria arquivo
+      * $rev {{{arquivo_parametro_a_u_d_response_rev_value}}}
       * @var int
       */
     protected $rev;
     
     /**
-      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+      * $rev_type {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
       * @var int
       */
     protected $rev_type;
     
     /**
-      * $id Identificador do par\u00E2metro
+      * $id {{{arquivo_parametro_a_u_d_response_id_value}}}
       * @var string
       */
     protected $id;
     
     /**
-      * $parametro Nome do par\u00E2metro
+      * $parametro {{{arquivo_parametro_a_u_d_response_parametro_value}}}
       * @var string
       */
     protected $parametro;
     
     /**
-      * $conteudo Conte\u00FAdo do par\u00E2metro
+      * $conteudo {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00E3o do par\u00E2metro
+      * $data_hora_inclusao {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_alteracao Data de altera\u00E7\u00E3o do par\u00E2metro
+      * $data_hora_alteracao {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
       * @var string
       */
     protected $data_hora_alteracao;
@@ -191,7 +191,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets rev
-     * @param int $rev Identificador da auditoria arquivo
+     * @param int $rev {{{arquivo_parametro_a_u_d_response_rev_value}}}
      * @return $this
      */
     public function setRev($rev)
@@ -212,7 +212,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+     * @param int $rev_type {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
      * @return $this
      */
     public function setRevType($rev_type)
@@ -233,7 +233,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param string $id Identificador do par\u00E2metro
+     * @param string $id {{{arquivo_parametro_a_u_d_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -254,7 +254,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets parametro
-     * @param string $parametro Nome do par\u00E2metro
+     * @param string $parametro {{{arquivo_parametro_a_u_d_response_parametro_value}}}
      * @return $this
      */
     public function setParametro($parametro)
@@ -275,7 +275,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00FAdo do par\u00E2metro
+     * @param string $conteudo {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -296,7 +296,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00E3o do par\u00E2metro
+     * @param string $data_hora_inclusao {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -317,7 +317,7 @@ class ArquivoParametroAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_alteracao
-     * @param string $data_hora_alteracao Data de altera\u00E7\u00E3o do par\u00E2metro
+     * @param string $data_hora_alteracao {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
      * @return $this
      */
     public function setDataHoraAlteracao($data_hora_alteracao)

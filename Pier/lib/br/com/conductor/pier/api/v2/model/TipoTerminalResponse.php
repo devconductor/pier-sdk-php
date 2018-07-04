@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoTerminalResponse Class Doc Comment
  *
  * @category    Class
- * @description ObjetoTipoTerminal
+ * @description {{{tipo_terminal_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class TipoTerminalResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
+      * $id {{{tipo_terminal_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao_terminal Descri\u00E7\u00E3o do Tipo Terminal.
+      * $descricao_terminal {{{tipo_terminal_response_descricao_terminal_value}}}
       * @var string
       */
     protected $descricao_terminal;
@@ -136,7 +136,7 @@ class TipoTerminalResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
+     * @param int $id {{{tipo_terminal_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class TipoTerminalResponse implements ArrayAccess
   
     /**
      * Sets descricao_terminal
-     * @param string $descricao_terminal Descri\u00E7\u00E3o do Tipo Terminal.
+     * @param string $descricao_terminal {{{tipo_terminal_response_descricao_terminal_value}}}
      * @return $this
      */
     public function setDescricaoTerminal($descricao_terminal)

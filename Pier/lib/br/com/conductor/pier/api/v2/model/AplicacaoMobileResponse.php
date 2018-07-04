@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AplicacaoMobileResponse Class Doc Comment
  *
  * @category    Class
- * @description Aplicacao Mobile
+ * @description {{{aplicacao_mobile_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class AplicacaoMobileResponse implements ArrayAccess
 
     
     /**
-      * $id Apresenta o identificador da aplicacao.
+      * $id {{{aplicacao_mobile_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_plataforma_mobile Apresenta o identificador da plataforma.
+      * $id_plataforma_mobile {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
       * @var int
       */
     protected $id_plataforma_mobile;
     
     /**
-      * $token Apresenta o token da aplicacao.
+      * $token {{{aplicacao_mobile_response_token_value}}}
       * @var string
       */
     protected $token;
     
     /**
-      * $cor Apresenta a cor da mensagem da aplicacao.
+      * $cor {{{aplicacao_mobile_response_cor_value}}}
       * @var string
       */
     protected $cor;
     
     /**
-      * $som Apresenta o som da mensagem da aplicacao
+      * $som {{{aplicacao_mobile_response_som_value}}}
       * @var string
       */
     protected $som;
     
     /**
-      * $icone Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
+      * $icone {{{aplicacao_mobile_response_icone_value}}}
       * @var string
       */
     protected $icone;
     
     /**
-      * $certificado_base64 Apresenta o certificado da aplica\u00E7\u00E3o.
+      * $certificado_base64 {{{aplicacao_mobile_response_certificado_base64_value}}}
       * @var string
       */
     protected $certificado_base64;
     
     /**
-      * $senha Apresenta a senha da aplica\u00E7\u00E3o.
+      * $senha {{{aplicacao_mobile_response_senha_value}}}
       * @var string
       */
     protected $senha;
@@ -202,7 +202,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Apresenta o identificador da aplicacao.
+     * @param int $id {{{aplicacao_mobile_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets id_plataforma_mobile
-     * @param int $id_plataforma_mobile Apresenta o identificador da plataforma.
+     * @param int $id_plataforma_mobile {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
      * @return $this
      */
     public function setIdPlataformaMobile($id_plataforma_mobile)
@@ -244,7 +244,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets token
-     * @param string $token Apresenta o token da aplicacao.
+     * @param string $token {{{aplicacao_mobile_response_token_value}}}
      * @return $this
      */
     public function setToken($token)
@@ -265,7 +265,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets cor
-     * @param string $cor Apresenta a cor da mensagem da aplicacao.
+     * @param string $cor {{{aplicacao_mobile_response_cor_value}}}
      * @return $this
      */
     public function setCor($cor)
@@ -286,7 +286,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets som
-     * @param string $som Apresenta o som da mensagem da aplicacao
+     * @param string $som {{{aplicacao_mobile_response_som_value}}}
      * @return $this
      */
     public function setSom($som)
@@ -307,7 +307,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets icone
-     * @param string $icone Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
+     * @param string $icone {{{aplicacao_mobile_response_icone_value}}}
      * @return $this
      */
     public function setIcone($icone)
@@ -328,7 +328,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets certificado_base64
-     * @param string $certificado_base64 Apresenta o certificado da aplica\u00E7\u00E3o.
+     * @param string $certificado_base64 {{{aplicacao_mobile_response_certificado_base64_value}}}
      * @return $this
      */
     public function setCertificadoBase64($certificado_base64)
@@ -349,7 +349,7 @@ class AplicacaoMobileResponse implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Apresenta a senha da aplica\u00E7\u00E3o.
+     * @param string $senha {{{aplicacao_mobile_response_senha_value}}}
      * @return $this
      */
     public function setSenha($senha)

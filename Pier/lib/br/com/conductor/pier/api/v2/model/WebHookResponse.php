@@ -38,7 +38,7 @@ use \ArrayAccess;
  * WebHookResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso WebHook
+ * @description {{{web_hook_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class WebHookResponse implements ArrayAccess
 
     
     /**
-      * $id Id do WebHook
+      * $id {{{web_hook_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $tipo_evento TipoEvento a ser chamado pelo WebHook
+      * $tipo_evento {{{web_hook_response_tipo_evento_value}}}
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $metodo M\u00E9todo que a ser chamado pelo WebHook
+      * $metodo {{{web_hook_response_metodo_value}}}
       * @var string
       */
     protected $metodo;
     
     /**
-      * $url URL que a ser consumida pelo WebHook
+      * $url {{{web_hook_response_url_value}}}
       * @var string
       */
     protected $url;
     
     /**
-      * $status Status do WebHook
+      * $status {{{web_hook_response_status_value}}}
       * @var string
       */
     protected $status;
@@ -169,7 +169,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do WebHook
+     * @param int $id {{{web_hook_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento TipoEvento a ser chamado pelo WebHook
+     * @param string $tipo_evento {{{web_hook_response_tipo_evento_value}}}
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
@@ -214,7 +214,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets metodo
-     * @param string $metodo M\u00E9todo que a ser chamado pelo WebHook
+     * @param string $metodo {{{web_hook_response_metodo_value}}}
      * @return $this
      */
     public function setMetodo($metodo)
@@ -238,7 +238,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets url
-     * @param string $url URL que a ser consumida pelo WebHook
+     * @param string $url {{{web_hook_response_url_value}}}
      * @return $this
      */
     public function setUrl($url)
@@ -259,7 +259,7 @@ class WebHookResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do WebHook
+     * @param string $status {{{web_hook_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

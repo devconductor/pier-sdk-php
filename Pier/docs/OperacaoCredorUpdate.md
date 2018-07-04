@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_operacao** | **int** | Apresenta o id da Opera\u00E7\u00E3o. | [optional] 
-**id_credor** | **int** | Apresenta o id do Credor. | [optional] 
-**id_produto** | **int** | Apresenta o id do produto que vai ser alterado. | [optional] 
-**remuneracao_percentual** | [**Number**](Number.md) | Remunera\u00E7\u00E3o Percentual. | [optional] 
-**remuneracao_fixa** | [**Number**](Number.md) | Remunera\u00E7\u00E3o Fixa. | [optional] 
-**periodicidade** | **string** | Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)). | [optional] 
-**vencimento_primeira_parcela** | **int** | Vencimento da primeira parcela. | [optional] 
-**dias_afastamento** | **int** | Dias afastamento. | [optional] 
-**fator_multiplicador** | **string** | Fator multiplicador (FORA_AGENDA(0), AGENDA(1)). | [optional] 
-**flag_taxa_fixada** | **bool** | Flag taxa fixada. | [optional] 
-**plano_minimo** | **int** | Plano m\u00EDnimo da regra. | [optional] 
-**plano_maximo** | **int** | Plano m\u00E1ximo da regra. | [optional] 
+**id_operacao** | **int** | {{{operacao_credor_update_id_operacao_value}}} | 
+**id_grupo_economico** | **int** | {{{operacao_credor_update_id_grupo_economico_value}}} | 
+**id_produto** | **int** | {{{operacao_credor_update_id_produto_value}}} | [optional] 
+**remuneracao_percentual** | [**Number**](Number.md) | {{{operacao_credor_update_remuneracao_percentual_value}}} | [optional] 
+**remuneracao_fixa** | [**Number**](Number.md) | {{{operacao_credor_update_remuneracao_fixa_value}}} | [optional] 
+**periodicidade** | **string** | {{{operacao_credor_update_periodicidade_value}}} | [optional] 
+**vencimento_primeira_parcela** | **int** | {{{operacao_credor_update_vencimento_primeira_parcela_value}}} | [optional] 
+**dias_afastamento** | **int** | {{{operacao_credor_update_dias_afastamento_value}}} | [optional] 
+**fator_multiplicador** | **string** | {{{operacao_credor_update_fator_multiplicador_value}}} | [optional] 
+**flag_taxa_fixada** | **bool** | {{{operacao_credor_update_flag_taxa_fixada_value}}} | [optional] 
+**plano_minimo** | **int** | {{{operacao_credor_update_plano_minimo_value}}} | 
+**plano_maximo** | **int** | {{{operacao_credor_update_plano_maximo_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

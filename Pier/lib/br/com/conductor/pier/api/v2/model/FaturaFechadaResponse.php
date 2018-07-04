@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FaturaFechadaResponse Class Doc Comment
  *
  * @category    Class
- * @description Fatura
+ * @description {{{fatura_fechada_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -204,169 +204,169 @@ class FaturaFechadaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador da fatura.
+      * $id {{{fatura_fechada_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta.
+      * $id_conta {{{fatura_fechada_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
+      * $flag_emite_fatura {{{fatura_fechada_response_flag_emite_fatura_value}}}
       * @var int
       */
     protected $flag_emite_fatura;
     
     /**
-      * $data_vencimento_fatura Data de vencimento da fatura.
+      * $data_vencimento_fatura {{{fatura_fechada_response_data_vencimento_fatura_value}}}
       * @var string
       */
     protected $data_vencimento_fatura;
     
     /**
-      * $valor_total_fatura Valor para pagamento total da fatura.
+      * $valor_total_fatura {{{fatura_fechada_response_valor_total_fatura_value}}}
       * @var Number
       */
     protected $valor_total_fatura;
     
     /**
-      * $valor_fatura_anterior Valor total da fatura anterior.
+      * $valor_fatura_anterior {{{fatura_fechada_response_valor_fatura_anterior_value}}}
       * @var Number
       */
     protected $valor_fatura_anterior;
     
     /**
-      * $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
+      * $valor_pagamento_minimo {{{fatura_fechada_response_valor_pagamento_minimo_value}}}
       * @var Number
       */
     protected $valor_pagamento_minimo;
     
     /**
-      * $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
+      * $total_compras_nacionais {{{fatura_fechada_response_total_compras_nacionais_value}}}
       * @var Number
       */
     protected $total_compras_nacionais;
     
     /**
-      * $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
+      * $total_compras_internacionas {{{fatura_fechada_response_total_compras_internacionas_value}}}
       * @var Number
       */
     protected $total_compras_internacionas;
     
     /**
-      * $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
+      * $total_saques_nacionais {{{fatura_fechada_response_total_saques_nacionais_value}}}
       * @var Number
       */
     protected $total_saques_nacionais;
     
     /**
-      * $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
+      * $total_saques_internacionais {{{fatura_fechada_response_total_saques_internacionais_value}}}
       * @var Number
       */
     protected $total_saques_internacionais;
     
     /**
-      * $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
+      * $total_debitos_nacionais {{{fatura_fechada_response_total_debitos_nacionais_value}}}
       * @var Number
       */
     protected $total_debitos_nacionais;
     
     /**
-      * $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
+      * $total_debitos_recorrentes {{{fatura_fechada_response_total_debitos_recorrentes_value}}}
       * @var Number
       */
     protected $total_debitos_recorrentes;
     
     /**
-      * $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
+      * $total_debitos_internacionais {{{fatura_fechada_response_total_debitos_internacionais_value}}}
       * @var Number
       */
     protected $total_debitos_internacionais;
     
     /**
-      * $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
+      * $total_debitos_diversos_nacionais {{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}
       * @var Number
       */
     protected $total_debitos_diversos_nacionais;
     
     /**
-      * $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
+      * $total_debitos_opcionais {{{fatura_fechada_response_total_debitos_opcionais_value}}}
       * @var Number
       */
     protected $total_debitos_opcionais;
     
     /**
-      * $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
+      * $total_pagamentos {{{fatura_fechada_response_total_pagamentos_value}}}
       * @var Number
       */
     protected $total_pagamentos;
     
     /**
-      * $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
+      * $total_creditos_nacionais {{{fatura_fechada_response_total_creditos_nacionais_value}}}
       * @var Number
       */
     protected $total_creditos_nacionais;
     
     /**
-      * $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
+      * $total_ajustes {{{fatura_fechada_response_total_ajustes_value}}}
       * @var Number
       */
     protected $total_ajustes;
     
     /**
-      * $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
+      * $total_tarifas {{{fatura_fechada_response_total_tarifas_value}}}
       * @var Number
       */
     protected $total_tarifas;
     
     /**
-      * $total_multa Valor total da multa lan\u00E7ada na fatura.
+      * $total_multa {{{fatura_fechada_response_total_multa_value}}}
       * @var Number
       */
     protected $total_multa;
     
     /**
-      * $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
+      * $total_juros {{{fatura_fechada_response_total_juros_value}}}
       * @var Number
       */
     protected $total_juros;
     
     /**
-      * $taxa_rotativo Valor percentual da taxa de juros rotativos.
+      * $taxa_rotativo {{{fatura_fechada_response_taxa_rotativo_value}}}
       * @var Number
       */
     protected $taxa_rotativo;
     
     /**
-      * $taxa_saque Valor percentual da taxa de saque.
+      * $taxa_saque {{{fatura_fechada_response_taxa_saque_value}}}
       * @var Number
       */
     protected $taxa_saque;
     
     /**
-      * $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
+      * $taxa_maxima_proximo_periodo {{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}
       * @var Number
       */
     protected $taxa_maxima_proximo_periodo;
     
     /**
-      * $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+      * $total_servicos {{{fatura_fechada_response_total_servicos_value}}}
       * @var Number
       */
     protected $total_servicos;
     
     /**
-      * $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
+      * $total_parcelado_nacionais {{{fatura_fechada_response_total_parcelado_nacionais_value}}}
       * @var Number
       */
     protected $total_parcelado_nacionais;
     
     /**
-      * $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
+      * $total_parcelado_internacionais {{{fatura_fechada_response_total_parcelado_internacionais_value}}}
       * @var Number
       */
     protected $total_parcelado_internacionais;
@@ -422,7 +422,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador da fatura.
+     * @param int $id {{{fatura_fechada_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -443,7 +443,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta.
+     * @param int $id_conta {{{fatura_fechada_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -464,7 +464,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
+     * @param int $flag_emite_fatura {{{fatura_fechada_response_flag_emite_fatura_value}}}
      * @return $this
      */
     public function setFlagEmiteFatura($flag_emite_fatura)
@@ -485,7 +485,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_fatura
-     * @param string $data_vencimento_fatura Data de vencimento da fatura.
+     * @param string $data_vencimento_fatura {{{fatura_fechada_response_data_vencimento_fatura_value}}}
      * @return $this
      */
     public function setDataVencimentoFatura($data_vencimento_fatura)
@@ -506,7 +506,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets valor_total_fatura
-     * @param Number $valor_total_fatura Valor para pagamento total da fatura.
+     * @param Number $valor_total_fatura {{{fatura_fechada_response_valor_total_fatura_value}}}
      * @return $this
      */
     public function setValorTotalFatura($valor_total_fatura)
@@ -527,7 +527,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets valor_fatura_anterior
-     * @param Number $valor_fatura_anterior Valor total da fatura anterior.
+     * @param Number $valor_fatura_anterior {{{fatura_fechada_response_valor_fatura_anterior_value}}}
      * @return $this
      */
     public function setValorFaturaAnterior($valor_fatura_anterior)
@@ -548,7 +548,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
+     * @param Number $valor_pagamento_minimo {{{fatura_fechada_response_valor_pagamento_minimo_value}}}
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)
@@ -569,7 +569,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_compras_nacionais
-     * @param Number $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
+     * @param Number $total_compras_nacionais {{{fatura_fechada_response_total_compras_nacionais_value}}}
      * @return $this
      */
     public function setTotalComprasNacionais($total_compras_nacionais)
@@ -590,7 +590,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_compras_internacionas
-     * @param Number $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
+     * @param Number $total_compras_internacionas {{{fatura_fechada_response_total_compras_internacionas_value}}}
      * @return $this
      */
     public function setTotalComprasInternacionas($total_compras_internacionas)
@@ -611,7 +611,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_saques_nacionais
-     * @param Number $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
+     * @param Number $total_saques_nacionais {{{fatura_fechada_response_total_saques_nacionais_value}}}
      * @return $this
      */
     public function setTotalSaquesNacionais($total_saques_nacionais)
@@ -632,7 +632,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_saques_internacionais
-     * @param Number $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
+     * @param Number $total_saques_internacionais {{{fatura_fechada_response_total_saques_internacionais_value}}}
      * @return $this
      */
     public function setTotalSaquesInternacionais($total_saques_internacionais)
@@ -653,7 +653,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_nacionais
-     * @param Number $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_nacionais {{{fatura_fechada_response_total_debitos_nacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosNacionais($total_debitos_nacionais)
@@ -674,7 +674,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_recorrentes
-     * @param Number $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
+     * @param Number $total_debitos_recorrentes {{{fatura_fechada_response_total_debitos_recorrentes_value}}}
      * @return $this
      */
     public function setTotalDebitosRecorrentes($total_debitos_recorrentes)
@@ -695,7 +695,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_internacionais
-     * @param Number $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_internacionais {{{fatura_fechada_response_total_debitos_internacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosInternacionais($total_debitos_internacionais)
@@ -716,7 +716,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_diversos_nacionais
-     * @param Number $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_diversos_nacionais {{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosDiversosNacionais($total_debitos_diversos_nacionais)
@@ -737,7 +737,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_opcionais
-     * @param Number $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_opcionais {{{fatura_fechada_response_total_debitos_opcionais_value}}}
      * @return $this
      */
     public function setTotalDebitosOpcionais($total_debitos_opcionais)
@@ -758,7 +758,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_pagamentos
-     * @param Number $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
+     * @param Number $total_pagamentos {{{fatura_fechada_response_total_pagamentos_value}}}
      * @return $this
      */
     public function setTotalPagamentos($total_pagamentos)
@@ -779,7 +779,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_creditos_nacionais
-     * @param Number $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_creditos_nacionais {{{fatura_fechada_response_total_creditos_nacionais_value}}}
      * @return $this
      */
     public function setTotalCreditosNacionais($total_creditos_nacionais)
@@ -800,7 +800,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_ajustes
-     * @param Number $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
+     * @param Number $total_ajustes {{{fatura_fechada_response_total_ajustes_value}}}
      * @return $this
      */
     public function setTotalAjustes($total_ajustes)
@@ -821,7 +821,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_tarifas
-     * @param Number $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
+     * @param Number $total_tarifas {{{fatura_fechada_response_total_tarifas_value}}}
      * @return $this
      */
     public function setTotalTarifas($total_tarifas)
@@ -842,7 +842,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_multa
-     * @param Number $total_multa Valor total da multa lan\u00E7ada na fatura.
+     * @param Number $total_multa {{{fatura_fechada_response_total_multa_value}}}
      * @return $this
      */
     public function setTotalMulta($total_multa)
@@ -863,7 +863,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_juros
-     * @param Number $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
+     * @param Number $total_juros {{{fatura_fechada_response_total_juros_value}}}
      * @return $this
      */
     public function setTotalJuros($total_juros)
@@ -884,7 +884,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets taxa_rotativo
-     * @param Number $taxa_rotativo Valor percentual da taxa de juros rotativos.
+     * @param Number $taxa_rotativo {{{fatura_fechada_response_taxa_rotativo_value}}}
      * @return $this
      */
     public function setTaxaRotativo($taxa_rotativo)
@@ -905,7 +905,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets taxa_saque
-     * @param Number $taxa_saque Valor percentual da taxa de saque.
+     * @param Number $taxa_saque {{{fatura_fechada_response_taxa_saque_value}}}
      * @return $this
      */
     public function setTaxaSaque($taxa_saque)
@@ -926,7 +926,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
+     * @param Number $taxa_maxima_proximo_periodo {{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}
      * @return $this
      */
     public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)
@@ -947,7 +947,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_servicos
-     * @param Number $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+     * @param Number $total_servicos {{{fatura_fechada_response_total_servicos_value}}}
      * @return $this
      */
     public function setTotalServicos($total_servicos)
@@ -968,7 +968,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_parcelado_nacionais
-     * @param Number $total_parcelado_nacionais Apresenta a soma de todos os valores parcelados + compras nacionais.
+     * @param Number $total_parcelado_nacionais {{{fatura_fechada_response_total_parcelado_nacionais_value}}}
      * @return $this
      */
     public function setTotalParceladoNacionais($total_parcelado_nacionais)
@@ -989,7 +989,7 @@ class FaturaFechadaResponse implements ArrayAccess
   
     /**
      * Sets total_parcelado_internacionais
-     * @param Number $total_parcelado_internacionais Apresenta a soma de todos os valores parcelados + compras internacionais.
+     * @param Number $total_parcelado_internacionais {{{fatura_fechada_response_total_parcelado_internacionais_value}}}
      * @return $this
      */
     public function setTotalParceladoInternacionais($total_parcelado_internacionais)

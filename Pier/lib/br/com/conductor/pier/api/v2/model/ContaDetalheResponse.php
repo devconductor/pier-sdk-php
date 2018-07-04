@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ContaDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto conta
+ * @description {{{conta_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -196,157 +196,157 @@ class ContaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+      * $id {{{conta_detalhe_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+      * $id_pessoa {{{conta_detalhe_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
+      * $nome {{{conta_detalhe_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+      * $id_produto {{{conta_detalhe_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+      * $id_origem_comercial {{{conta_detalhe_response_id_origem_comercial_value}}}
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $nome_origem_comercial Nome da origem comercial
+      * $nome_origem_comercial {{{conta_detalhe_response_nome_origem_comercial_value}}}
       * @var string
       */
     protected $nome_origem_comercial;
     
     /**
-      * $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
+      * $id_fantasia_basica {{{conta_detalhe_response_id_fantasia_basica_value}}}
       * @var int
       */
     protected $id_fantasia_basica;
     
     /**
-      * $nome_fantasia_basica Nome da Fantasia Basica
+      * $nome_fantasia_basica {{{conta_detalhe_response_nome_fantasia_basica_value}}}
       * @var string
       */
     protected $nome_fantasia_basica;
     
     /**
-      * $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+      * $id_status_conta {{{conta_detalhe_response_id_status_conta_value}}}
       * @var int
       */
     protected $id_status_conta;
     
     /**
-      * $status_conta Descri\u00E7\u00E3o do status da conta
+      * $status_conta {{{conta_detalhe_response_status_conta_value}}}
       * @var string
       */
     protected $status_conta;
     
     /**
-      * $dia_vencimento Apresenta o dia de vencimento.
+      * $dia_vencimento {{{conta_detalhe_response_dia_vencimento_value}}}
       * @var int
       */
     protected $dia_vencimento;
     
     /**
-      * $melhor_dia_compra Apresenta o melhor dia de compra.
+      * $melhor_dia_compra {{{conta_detalhe_response_melhor_dia_compra_value}}}
       * @var int
       */
     protected $melhor_dia_compra;
     
     /**
-      * $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+      * $data_status_conta {{{conta_detalhe_response_data_status_conta_value}}}
       * @var string
       */
     protected $data_status_conta;
     
     /**
-      * $valor_renda Valor da renda comprovada.
+      * $valor_renda {{{conta_detalhe_response_valor_renda_value}}}
       * @var Number
       */
     protected $valor_renda;
     
     /**
-      * $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+      * $data_cadastro {{{conta_detalhe_response_data_cadastro_value}}}
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+      * $data_ultima_alteracao_vencimento {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
       * @var string
       */
     protected $data_ultima_alteracao_vencimento;
     
     /**
-      * $data_hora_ultima_compra Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+      * $data_hora_ultima_compra {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
       * @var string
       */
     protected $data_hora_ultima_compra;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia.
+      * $numero_agencia {{{conta_detalhe_response_numero_agencia_value}}}
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00FAmero da conta corrente.
+      * $numero_conta_corrente {{{conta_detalhe_response_numero_conta_corrente_value}}}
       * @var string
       */
     protected $numero_conta_corrente;
     
     /**
-      * $forma_envio_fatura Forma de envio da fatura.
+      * $forma_envio_fatura {{{conta_detalhe_response_forma_envio_fatura_value}}}
       * @var string
       */
     protected $forma_envio_fatura;
     
     /**
-      * $titular Apresenta se a pessoa \u00E9 titular da conta.
+      * $titular {{{conta_detalhe_response_titular_value}}}
       * @var bool
       */
     protected $titular;
     
     /**
-      * $limite_global Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+      * $limite_global {{{conta_detalhe_response_limite_global_value}}}
       * @var Number
       */
     protected $limite_global;
     
     /**
-      * $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+      * $limite_saque_global {{{conta_detalhe_response_limite_saque_global_value}}}
       * @var Number
       */
     protected $limite_saque_global;
     
     /**
-      * $saldo_disponivel_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+      * $saldo_disponivel_global {{{conta_detalhe_response_saldo_disponivel_global_value}}}
       * @var Number
       */
     protected $saldo_disponivel_global;
     
     /**
-      * $saldo_disponivel_saque Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+      * $saldo_disponivel_saque {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
       * @var Number
       */
     protected $saldo_disponivel_saque;
     
     /**
-      * $dias_atraso Apresenta a quantidade de dias que a conta esta em atraso
+      * $dias_atraso {{{conta_detalhe_response_dias_atraso_value}}}
       * @var int
       */
     protected $dias_atraso;
@@ -400,7 +400,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+     * @param int $id {{{conta_detalhe_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -421,7 +421,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+     * @param int $id_pessoa {{{conta_detalhe_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -442,7 +442,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
+     * @param string $nome {{{conta_detalhe_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -463,7 +463,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+     * @param int $id_produto {{{conta_detalhe_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -484,7 +484,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_origem_comercial
-     * @param int $id_origem_comercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+     * @param int $id_origem_comercial {{{conta_detalhe_response_id_origem_comercial_value}}}
      * @return $this
      */
     public function setIdOrigemComercial($id_origem_comercial)
@@ -505,7 +505,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_origem_comercial
-     * @param string $nome_origem_comercial Nome da origem comercial
+     * @param string $nome_origem_comercial {{{conta_detalhe_response_nome_origem_comercial_value}}}
      * @return $this
      */
     public function setNomeOrigemComercial($nome_origem_comercial)
@@ -526,7 +526,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_fantasia_basica
-     * @param int $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
+     * @param int $id_fantasia_basica {{{conta_detalhe_response_id_fantasia_basica_value}}}
      * @return $this
      */
     public function setIdFantasiaBasica($id_fantasia_basica)
@@ -547,7 +547,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia_basica
-     * @param string $nome_fantasia_basica Nome da Fantasia Basica
+     * @param string $nome_fantasia_basica {{{conta_detalhe_response_nome_fantasia_basica_value}}}
      * @return $this
      */
     public function setNomeFantasiaBasica($nome_fantasia_basica)
@@ -568,7 +568,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_status_conta
-     * @param int $id_status_conta C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+     * @param int $id_status_conta {{{conta_detalhe_response_id_status_conta_value}}}
      * @return $this
      */
     public function setIdStatusConta($id_status_conta)
@@ -589,7 +589,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets status_conta
-     * @param string $status_conta Descri\u00E7\u00E3o do status da conta
+     * @param string $status_conta {{{conta_detalhe_response_status_conta_value}}}
      * @return $this
      */
     public function setStatusConta($status_conta)
@@ -610,7 +610,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets dia_vencimento
-     * @param int $dia_vencimento Apresenta o dia de vencimento.
+     * @param int $dia_vencimento {{{conta_detalhe_response_dia_vencimento_value}}}
      * @return $this
      */
     public function setDiaVencimento($dia_vencimento)
@@ -631,7 +631,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets melhor_dia_compra
-     * @param int $melhor_dia_compra Apresenta o melhor dia de compra.
+     * @param int $melhor_dia_compra {{{conta_detalhe_response_melhor_dia_compra_value}}}
      * @return $this
      */
     public function setMelhorDiaCompra($melhor_dia_compra)
@@ -652,7 +652,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_status_conta
-     * @param string $data_status_conta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+     * @param string $data_status_conta {{{conta_detalhe_response_data_status_conta_value}}}
      * @return $this
      */
     public function setDataStatusConta($data_status_conta)
@@ -673,7 +673,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_renda
-     * @param Number $valor_renda Valor da renda comprovada.
+     * @param Number $valor_renda {{{conta_detalhe_response_valor_renda_value}}}
      * @return $this
      */
     public function setValorRenda($valor_renda)
@@ -694,7 +694,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Apresenta a data em que o cart\u00E3o foi gerado.
+     * @param string $data_cadastro {{{conta_detalhe_response_data_cadastro_value}}}
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -715,7 +715,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_ultima_alteracao_vencimento
-     * @param string $data_ultima_alteracao_vencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+     * @param string $data_ultima_alteracao_vencimento {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
      * @return $this
      */
     public function setDataUltimaAlteracaoVencimento($data_ultima_alteracao_vencimento)
@@ -736,7 +736,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_hora_ultima_compra
-     * @param string $data_hora_ultima_compra Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+     * @param string $data_hora_ultima_compra {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
      * @return $this
      */
     public function setDataHoraUltimaCompra($data_hora_ultima_compra)
@@ -757,7 +757,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
+     * @param int $numero_agencia {{{conta_detalhe_response_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -778,7 +778,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
+     * @param string $numero_conta_corrente {{{conta_detalhe_response_numero_conta_corrente_value}}}
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -799,7 +799,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets forma_envio_fatura
-     * @param string $forma_envio_fatura Forma de envio da fatura.
+     * @param string $forma_envio_fatura {{{conta_detalhe_response_forma_envio_fatura_value}}}
      * @return $this
      */
     public function setFormaEnvioFatura($forma_envio_fatura)
@@ -820,7 +820,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets titular
-     * @param bool $titular Apresenta se a pessoa \u00E9 titular da conta.
+     * @param bool $titular {{{conta_detalhe_response_titular_value}}}
      * @return $this
      */
     public function setTitular($titular)
@@ -841,7 +841,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param Number $limite_global Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+     * @param Number $limite_global {{{conta_detalhe_response_limite_global_value}}}
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -862,7 +862,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_saque_global
-     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+     * @param Number $limite_saque_global {{{conta_detalhe_response_limite_saque_global_value}}}
      * @return $this
      */
     public function setLimiteSaqueGlobal($limite_saque_global)
@@ -883,7 +883,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_global
-     * @param Number $saldo_disponivel_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+     * @param Number $saldo_disponivel_global {{{conta_detalhe_response_saldo_disponivel_global_value}}}
      * @return $this
      */
     public function setSaldoDisponivelGlobal($saldo_disponivel_global)
@@ -904,7 +904,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque
-     * @param Number $saldo_disponivel_saque Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+     * @param Number $saldo_disponivel_saque {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
      * @return $this
      */
     public function setSaldoDisponivelSaque($saldo_disponivel_saque)
@@ -925,7 +925,7 @@ class ContaDetalheResponse implements ArrayAccess
   
     /**
      * Sets dias_atraso
-     * @param int $dias_atraso Apresenta a quantidade de dias que a conta esta em atraso
+     * @param int $dias_atraso {{{conta_detalhe_response_dias_atraso_value}}}
      * @return $this
      */
     public function setDiasAtraso($dias_atraso)

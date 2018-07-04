@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PageTipoAjusteResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista dos tipos de ajustes
+ * @description {{{page_tipo_ajuste_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

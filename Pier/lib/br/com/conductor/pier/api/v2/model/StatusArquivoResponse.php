@@ -38,7 +38,7 @@ use \ArrayAccess;
  * StatusArquivoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response do status arquivo.
+ * @description {{{status_arquivo_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class StatusArquivoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+      * $id {{{status_arquivo_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do status do arquivo
+      * $nome {{{status_arquivo_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do status do arquivo
+      * $descricao {{{status_arquivo_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -147,7 +147,7 @@ class StatusArquivoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+     * @param int $id {{{status_arquivo_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class StatusArquivoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do status do arquivo
+     * @param string $nome {{{status_arquivo_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -189,7 +189,7 @@ class StatusArquivoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do status do arquivo
+     * @param string $descricao {{{status_arquivo_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

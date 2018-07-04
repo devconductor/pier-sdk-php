@@ -38,7 +38,7 @@ use \ArrayAccess;
  * MCCResponse Class Doc Comment
  *
  * @category    Class
- * @description ObjetoMCC
+ * @description {{{m_c_c_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class MCCResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).
+      * $id {{{m_c_c_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao descricao do MCC.
+      * $descricao {{{m_c_c_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -136,7 +136,7 @@ class MCCResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).
+     * @param int $id {{{m_c_c_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class MCCResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao descricao do MCC.
+     * @param string $descricao {{{m_c_c_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

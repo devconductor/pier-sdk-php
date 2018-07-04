@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TerminalPersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto Terminal
+ * @description {{{terminal_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class TerminalPersist implements ArrayAccess
 
     
     /**
-      * $id_estabelecimento Apresenta o id do estabelecimento.
+      * $id_estabelecimento {{{terminal_persist_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $flag_consulta_extrato Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+      * $flag_consulta_extrato {{{terminal_persist_flag_consulta_extrato_value}}}
       * @var bool
       */
     protected $flag_consulta_extrato;
     
     /**
-      * $flag_terminal_virtual Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+      * $flag_terminal_virtual {{{terminal_persist_flag_terminal_virtual_value}}}
       * @var bool
       */
     protected $flag_terminal_virtual;
@@ -147,7 +147,7 @@ class TerminalPersist implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento Apresenta o id do estabelecimento.
+     * @param int $id_estabelecimento {{{terminal_persist_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -168,7 +168,7 @@ class TerminalPersist implements ArrayAccess
   
     /**
      * Sets flag_consulta_extrato
-     * @param bool $flag_consulta_extrato Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+     * @param bool $flag_consulta_extrato {{{terminal_persist_flag_consulta_extrato_value}}}
      * @return $this
      */
     public function setFlagConsultaExtrato($flag_consulta_extrato)
@@ -189,7 +189,7 @@ class TerminalPersist implements ArrayAccess
   
     /**
      * Sets flag_terminal_virtual
-     * @param bool $flag_terminal_virtual Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+     * @param bool $flag_terminal_virtual {{{terminal_persist_flag_terminal_virtual_value}}}
      * @return $this
      */
     public function setFlagTerminalVirtual($flag_terminal_virtual)

@@ -3,19 +3,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**codigo_banco** | **int** | C\u00F3digo do Banco. | 
-**uri** | **string** | URL de acesso ao banco. | [optional] 
-**key_store_name** | **string** | Caminho do certificado digital do emissor. | [optional] 
-**key_store_password** | **string** | Senha do certificado digital do emissor. | [optional] 
-**keystore_alias** | **string** | Alias do certificado digital do emissor. | [optional] 
-**key_store_private_key_password** | **string** | Senha da chave privada do certificado digital do emissor. | [optional] 
-**type_keystore** | **string** | Tipo do certificado digital do emissor. | [optional] 
-**trust_store_name** | **string** | Caminho do certificado digital do banco. | [optional] 
-**trust_store_password** | **string** | Senha do certificado digital do banco. | [optional] 
-**truststore_alias** | **string** | Alias do certificado digital do banco. | [optional] 
-**type_truststore** | **string** | Tipo do certificado digital do banco. | [optional] 
-**uri_adicional** | **string** | URL adicional de acesso ao banco. | [optional] 
-**status** | **string** | Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o. | 
+**codigo_banco** | **int** | {{{configuracao_registro_cobranca_persist_codigo_banco_value}}} | 
+**uri** | **string** | {{{configuracao_registro_cobranca_persist_uri_value}}} | [optional] 
+**key_store_name** | **string** | {{{configuracao_registro_cobranca_persist_key_store_name_value}}} | [optional] 
+**key_store_password** | **string** | {{{configuracao_registro_cobranca_persist_key_store_password_value}}} | [optional] 
+**keystore_alias** | **string** | {{{configuracao_registro_cobranca_persist_keystore_alias_value}}} | [optional] 
+**key_store_private_key_password** | **string** | {{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}} | [optional] 
+**type_keystore** | **string** | {{{configuracao_registro_cobranca_persist_type_keystore_value}}} | [optional] 
+**trust_store_name** | **string** | {{{configuracao_registro_cobranca_persist_trust_store_name_value}}} | [optional] 
+**trust_store_password** | **string** | {{{configuracao_registro_cobranca_persist_trust_store_password_value}}} | [optional] 
+**truststore_alias** | **string** | {{{configuracao_registro_cobranca_persist_truststore_alias_value}}} | [optional] 
+**type_truststore** | **string** | {{{configuracao_registro_cobranca_persist_type_truststore_value}}} | [optional] 
+**uri_adicional** | **string** | {{{configuracao_registro_cobranca_persist_uri_adicional_value}}} | [optional] 
+**status** | **string** | {{{configuracao_registro_cobranca_persist_status_value}}} | 
+**secret** | **string** | {{{configuracao_registro_cobranca_persist_secret_value}}} | [optional] 
+**client_id** | **string** | {{{configuracao_registro_cobranca_persist_client_id_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

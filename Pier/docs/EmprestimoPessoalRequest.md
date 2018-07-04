@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**valor_solicitado** | [**Number**](Number.md) | Valor do empr\u00E9stimo/financiamento | 
-**numero_parcelas** | **int** | N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento | 
-**taxa_juros** | [**Number**](Number.md) | Valor percentual da taxa de juros a ser aplicada | 
-**periodo_taxa** | **string** | Per\u00EDodo de aplica da taxa de juros | 
-**sistema_amortizacao** | **string** | Sistema para amortiza\u00E7\u00E3o do valor das parcelas | 
-**numero_meses_carencia** | **int** | N\u00FAmero de meses para cobran\u00E7a da primeira parcela | [optional] 
+**valor_solicitado** | [**Number**](Number.md) | {{{emprestimo_pessoal_request_valor_solicitado_value}}} | 
+**numero_parcelas** | **int** | {{{emprestimo_pessoal_request_numero_parcelas_value}}} | 
+**taxa_juros** | [**Number**](Number.md) | {{{emprestimo_pessoal_request_taxa_juros_value}}} | 
+**periodo_taxa** | **string** | {{{emprestimo_pessoal_request_periodo_taxa_value}}} | 
+**sistema_amortizacao** | **string** | {{{emprestimo_pessoal_request_sistema_amortizacao_value}}} | 
+**numero_meses_carencia** | **int** | {{{emprestimo_pessoal_request_numero_meses_carencia_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

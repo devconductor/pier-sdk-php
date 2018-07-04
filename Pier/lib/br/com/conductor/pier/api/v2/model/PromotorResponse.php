@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PromotorResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Promotor
+ * @description {{{promotor_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class PromotorResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
+      * $id {{{promotor_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Promotor
+      * $nome {{{promotor_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $data_cadastro Data da Inclus\u00E3o
+      * $data_cadastro {{{promotor_response_data_cadastro_value}}}
       * @var string
       */
     protected $data_cadastro;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+      * $id_estabelecimento {{{promotor_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
+      * $id_usuario {{{promotor_response_id_usuario_value}}}
       * @var int
       */
     protected $id_usuario;
@@ -169,7 +169,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
+     * @param int $id {{{promotor_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Promotor
+     * @param string $nome {{{promotor_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -211,7 +211,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro
-     * @param string $data_cadastro Data da Inclus\u00E3o
+     * @param string $data_cadastro {{{promotor_response_data_cadastro_value}}}
      * @return $this
      */
     public function setDataCadastro($data_cadastro)
@@ -232,7 +232,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+     * @param int $id_estabelecimento {{{promotor_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -253,7 +253,7 @@ class PromotorResponse implements ArrayAccess
   
     /**
      * Sets id_usuario
-     * @param int $id_usuario C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
+     * @param int $id_usuario {{{promotor_response_id_usuario_value}}}
      * @return $this
      */
     public function setIdUsuario($id_usuario)

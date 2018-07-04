@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * LoteCartoesPrePagosResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lote Cart\u00F5es Pr\u00E9-Pagos
+ * @description {{{lote_cartoes_pre_pagos_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

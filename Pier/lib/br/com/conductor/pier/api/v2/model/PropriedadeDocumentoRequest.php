@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PropriedadeDocumentoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que encapsula as propriedades do detalhamento do documento.
+ * @description {{{propriedade_documento_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class PropriedadeDocumentoRequest implements ArrayAccess
 
     
     /**
-      * $chave Valor da propriedade do Documento.
+      * $chave {{{propriedade_documento_request_chave_value}}}
       * @var string
       */
     protected $chave;
     
     /**
-      * $valor Valor da propriedade do Documento.
+      * $valor {{{propriedade_documento_request_valor_value}}}
       * @var string
       */
     protected $valor;
     
     /**
-      * $detalhes_tipo Tipo da propriedade do Documento.
+      * $detalhes_tipo {{{propriedade_documento_request_detalhes_tipo_value}}}
       * @var string
       */
     protected $detalhes_tipo;
     
     /**
-      * $flag_indice Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
+      * $flag_indice {{{propriedade_documento_request_flag_indice_value}}}
       * @var bool
       */
     protected $flag_indice;
@@ -158,7 +158,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
   
     /**
      * Sets chave
-     * @param string $chave Valor da propriedade do Documento.
+     * @param string $chave {{{propriedade_documento_request_chave_value}}}
      * @return $this
      */
     public function setChave($chave)
@@ -179,7 +179,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
   
     /**
      * Sets valor
-     * @param string $valor Valor da propriedade do Documento.
+     * @param string $valor {{{propriedade_documento_request_valor_value}}}
      * @return $this
      */
     public function setValor($valor)
@@ -200,7 +200,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
   
     /**
      * Sets detalhes_tipo
-     * @param string $detalhes_tipo Tipo da propriedade do Documento.
+     * @param string $detalhes_tipo {{{propriedade_documento_request_detalhes_tipo_value}}}
      * @return $this
      */
     public function setDetalhesTipo($detalhes_tipo)
@@ -224,7 +224,7 @@ class PropriedadeDocumentoRequest implements ArrayAccess
   
     /**
      * Sets flag_indice
-     * @param bool $flag_indice Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
+     * @param bool $flag_indice {{{propriedade_documento_request_flag_indice_value}}}
      * @return $this
      */
     public function setFlagIndice($flag_indice)

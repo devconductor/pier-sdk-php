@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegrarArquivoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
+ * @description {{{integrar_arquivo_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class IntegrarArquivoRequest implements ArrayAccess
 
     
     /**
-      * $numero_receita_federal N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+      * $numero_receita_federal {{{integrar_arquivo_request_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
@@ -125,7 +125,7 @@ class IntegrarArquivoRequest implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+     * @param string $numero_receita_federal {{{integrar_arquivo_request_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)

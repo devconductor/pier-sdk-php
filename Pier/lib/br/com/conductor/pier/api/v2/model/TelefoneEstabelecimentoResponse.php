@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneEstabelecimentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta de Telefone Estabelecimento
+ * @description {{{telefone_estabelecimento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+      * $id {{{telefone_estabelecimento_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.
+      * $id_estabelecimento {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $ddd C\u00F3digo DDD do telefone.
+      * $ddd {{{telefone_estabelecimento_response_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone.
+      * $telefone {{{telefone_estabelecimento_response_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00FAmero do ramal.
+      * $ramal {{{telefone_estabelecimento_response_ramal_value}}}
       * @var string
       */
     protected $ramal;
@@ -169,7 +169,7 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+     * @param int $id {{{telefone_estabelecimento_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.
+     * @param int $id_estabelecimento {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -211,7 +211,7 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00F3digo DDD do telefone.
+     * @param string $ddd {{{telefone_estabelecimento_response_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -232,7 +232,7 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone.
+     * @param string $telefone {{{telefone_estabelecimento_response_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -253,7 +253,7 @@ class TelefoneEstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00FAmero do ramal.
+     * @param string $ramal {{{telefone_estabelecimento_response_ramal_value}}}
      * @return $this
      */
     public function setRamal($ramal)

@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PlanoParcelamentoTransferenciaCreditoContaBancariaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+ * @description {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * DetalhesFaturaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto contendo os detalhes de uma fatura
+ * @description {{{detalhes_fatura_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

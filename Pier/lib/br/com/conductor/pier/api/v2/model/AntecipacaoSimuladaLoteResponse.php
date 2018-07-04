@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoSimuladaLoteResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
+ * @description {{{antecipacao_simulada_lote_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
 
     
     /**
-      * $valor_total_antecipado Valor total antecipado.
+      * $valor_total_antecipado {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
       * @var Number
       */
     protected $valor_total_antecipado;
     
     /**
-      * $valor_total_desconto Valor total do desconto.
+      * $valor_total_desconto {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
       * @var Number
       */
     protected $valor_total_desconto;
     
     /**
-      * $valor_total_com_desconto Valor total antecipado com o desconto.
+      * $valor_total_com_desconto {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
       * @var Number
       */
     protected $valor_total_com_desconto;
     
     /**
-      * $antecipacoes_simuladas Antecipa\u00E7\u00F5es Simuladas.
+      * $antecipacoes_simuladas {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
       * @var \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[]
       */
     protected $antecipacoes_simuladas;
@@ -158,7 +158,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets valor_total_antecipado
-     * @param Number $valor_total_antecipado Valor total antecipado.
+     * @param Number $valor_total_antecipado {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
      * @return $this
      */
     public function setValorTotalAntecipado($valor_total_antecipado)
@@ -179,7 +179,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets valor_total_desconto
-     * @param Number $valor_total_desconto Valor total do desconto.
+     * @param Number $valor_total_desconto {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
      * @return $this
      */
     public function setValorTotalDesconto($valor_total_desconto)
@@ -200,7 +200,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets valor_total_com_desconto
-     * @param Number $valor_total_com_desconto Valor total antecipado com o desconto.
+     * @param Number $valor_total_com_desconto {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
      * @return $this
      */
     public function setValorTotalComDesconto($valor_total_com_desconto)
@@ -221,7 +221,7 @@ class AntecipacaoSimuladaLoteResponse implements ArrayAccess
   
     /**
      * Sets antecipacoes_simuladas
-     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[] $antecipacoes_simuladas Antecipa\u00E7\u00F5es Simuladas.
+     * @param \br.com.conductor.pier.api.v2.model\AntecipacaoSimuladaResponse[] $antecipacoes_simuladas {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
      * @return $this
      */
     public function setAntecipacoesSimuladas($antecipacoes_simuladas)

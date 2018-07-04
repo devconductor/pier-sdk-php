@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). | [optional] 
-**descricao** | **string** | Desci\u00E7\u00E3o do tipo de faturamento. | [optional] 
-**flag_apenas_demonstrativo** | **bool** | Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. | [optional] 
-**id_convenio** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. | [optional] 
+**id** | **int** | {{{tipo_faturamento_response_id_value}}} | [optional] 
+**descricao** | **string** | {{{tipo_faturamento_response_descricao_value}}} | [optional] 
+**flag_apenas_demonstrativo** | **bool** | {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}} | [optional] 
+**id_convenio** | **int** | {{{tipo_faturamento_response_id_convenio_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

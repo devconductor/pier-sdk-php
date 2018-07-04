@@ -38,7 +38,7 @@ use \ArrayAccess;
  * BaseResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso Base
+ * @description {{{base_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,8 +55,8 @@ class BaseResponse implements ArrayAccess
         'servidor' => 'string',
         'usuario' => 'string',
         'nome_base' => 'string',
-        'senha_criptografada' => 'bool',
         'domain' => 'string',
+        'senha_criptografada' => 'bool',
         'nome_base_controle_acesso' => 'string',
         'id_emissor' => 'int',
         'servidor_controle_acesso' => 'string',
@@ -78,8 +78,8 @@ class BaseResponse implements ArrayAccess
         'servidor' => 'servidor',
         'usuario' => 'usuario',
         'nome_base' => 'nomeBase',
-        'senha_criptografada' => 'senhaCriptografada',
         'domain' => 'domain',
+        'senha_criptografada' => 'senhaCriptografada',
         'nome_base_controle_acesso' => 'nomeBaseControleAcesso',
         'id_emissor' => 'idEmissor',
         'servidor_controle_acesso' => 'servidorControleAcesso',
@@ -101,8 +101,8 @@ class BaseResponse implements ArrayAccess
         'servidor' => 'setServidor',
         'usuario' => 'setUsuario',
         'nome_base' => 'setNomeBase',
-        'senha_criptografada' => 'setSenhaCriptografada',
         'domain' => 'setDomain',
+        'senha_criptografada' => 'setSenhaCriptografada',
         'nome_base_controle_acesso' => 'setNomeBaseControleAcesso',
         'id_emissor' => 'setIdEmissor',
         'servidor_controle_acesso' => 'setServidorControleAcesso',
@@ -124,8 +124,8 @@ class BaseResponse implements ArrayAccess
         'servidor' => 'getServidor',
         'usuario' => 'getUsuario',
         'nome_base' => 'getNomeBase',
-        'senha_criptografada' => 'getSenhaCriptografada',
         'domain' => 'getDomain',
+        'senha_criptografada' => 'getSenhaCriptografada',
         'nome_base_controle_acesso' => 'getNomeBaseControleAcesso',
         'id_emissor' => 'getIdEmissor',
         'servidor_controle_acesso' => 'getServidorControleAcesso',
@@ -140,73 +140,73 @@ class BaseResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador da base
+      * $id {{{base_dto_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $servidor IP do servidor
+      * $servidor {{{base_dto_servidor_value}}}
       * @var string
       */
     protected $servidor;
     
     /**
-      * $usuario Nome do usu\u00E1rio
+      * $usuario {{{base_dto_usuario_value}}}
       * @var string
       */
     protected $usuario;
     
     /**
-      * $nome_base Nome da base
+      * $nome_base {{{base_dto_nome_base_value}}}
       * @var string
       */
     protected $nome_base;
     
     /**
-      * $senha_criptografada senha Criptografada
-      * @var bool
-      */
-    protected $senha_criptografada;
-    
-    /**
-      * $domain Dom\u00EDnio da base
+      * $domain {{{base_dto_domain_value}}}
       * @var string
       */
     protected $domain;
     
     /**
-      * $nome_base_controle_acesso Nome da base de controle acesso
+      * $senha_criptografada {{{base_dto_senha_criptografada_value}}}
+      * @var bool
+      */
+    protected $senha_criptografada;
+    
+    /**
+      * $nome_base_controle_acesso {{{base_dto_nome_base_controle_acesso_value}}}
       * @var string
       */
     protected $nome_base_controle_acesso;
     
     /**
-      * $id_emissor C\u00F3digo do identificador do emissor
+      * $id_emissor {{{base_dto_id_emissor_value}}}
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $servidor_controle_acesso Servidor do controle de acesso
+      * $servidor_controle_acesso {{{base_dto_servidor_controle_acesso_value}}}
       * @var string
       */
     protected $servidor_controle_acesso;
     
     /**
-      * $nome_base_usuarios Nome da base de usu\u00E1rios
+      * $nome_base_usuarios {{{base_dto_nome_base_usuarios_value}}}
       * @var string
       */
     protected $nome_base_usuarios;
     
     /**
-      * $servidor_usuarios Servidor do controle de acesso
+      * $servidor_usuarios {{{base_dto_servidor_usuarios_value}}}
       * @var string
       */
     protected $servidor_usuarios;
     
     /**
-      * $flag_cluster Flag Cluester
+      * $flag_cluster {{{base_dto_flag_cluster_value}}}
       * @var bool
       */
     protected $flag_cluster;
@@ -224,8 +224,8 @@ class BaseResponse implements ArrayAccess
             $this->servidor = $data["servidor"];
             $this->usuario = $data["usuario"];
             $this->nome_base = $data["nome_base"];
-            $this->senha_criptografada = $data["senha_criptografada"];
             $this->domain = $data["domain"];
+            $this->senha_criptografada = $data["senha_criptografada"];
             $this->nome_base_controle_acesso = $data["nome_base_controle_acesso"];
             $this->id_emissor = $data["id_emissor"];
             $this->servidor_controle_acesso = $data["servidor_controle_acesso"];
@@ -246,7 +246,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador da base
+     * @param int $id {{{base_dto_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -267,7 +267,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets servidor
-     * @param string $servidor IP do servidor
+     * @param string $servidor {{{base_dto_servidor_value}}}
      * @return $this
      */
     public function setServidor($servidor)
@@ -288,7 +288,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Nome do usu\u00E1rio
+     * @param string $usuario {{{base_dto_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)
@@ -309,34 +309,13 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets nome_base
-     * @param string $nome_base Nome da base
+     * @param string $nome_base {{{base_dto_nome_base_value}}}
      * @return $this
      */
     public function setNomeBase($nome_base)
     {
         
         $this->nome_base = $nome_base;
-        return $this;
-    }
-    
-    /**
-     * Gets senha_criptografada
-     * @return bool
-     */
-    public function getSenhaCriptografada()
-    {
-        return $this->senha_criptografada;
-    }
-  
-    /**
-     * Sets senha_criptografada
-     * @param bool $senha_criptografada senha Criptografada
-     * @return $this
-     */
-    public function setSenhaCriptografada($senha_criptografada)
-    {
-        
-        $this->senha_criptografada = $senha_criptografada;
         return $this;
     }
     
@@ -351,13 +330,34 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets domain
-     * @param string $domain Dom\u00EDnio da base
+     * @param string $domain {{{base_dto_domain_value}}}
      * @return $this
      */
     public function setDomain($domain)
     {
         
         $this->domain = $domain;
+        return $this;
+    }
+    
+    /**
+     * Gets senha_criptografada
+     * @return bool
+     */
+    public function getSenhaCriptografada()
+    {
+        return $this->senha_criptografada;
+    }
+  
+    /**
+     * Sets senha_criptografada
+     * @param bool $senha_criptografada {{{base_dto_senha_criptografada_value}}}
+     * @return $this
+     */
+    public function setSenhaCriptografada($senha_criptografada)
+    {
+        
+        $this->senha_criptografada = $senha_criptografada;
         return $this;
     }
     
@@ -372,7 +372,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets nome_base_controle_acesso
-     * @param string $nome_base_controle_acesso Nome da base de controle acesso
+     * @param string $nome_base_controle_acesso {{{base_dto_nome_base_controle_acesso_value}}}
      * @return $this
      */
     public function setNomeBaseControleAcesso($nome_base_controle_acesso)
@@ -393,7 +393,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor C\u00F3digo do identificador do emissor
+     * @param int $id_emissor {{{base_dto_id_emissor_value}}}
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -414,7 +414,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets servidor_controle_acesso
-     * @param string $servidor_controle_acesso Servidor do controle de acesso
+     * @param string $servidor_controle_acesso {{{base_dto_servidor_controle_acesso_value}}}
      * @return $this
      */
     public function setServidorControleAcesso($servidor_controle_acesso)
@@ -435,7 +435,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets nome_base_usuarios
-     * @param string $nome_base_usuarios Nome da base de usu\u00E1rios
+     * @param string $nome_base_usuarios {{{base_dto_nome_base_usuarios_value}}}
      * @return $this
      */
     public function setNomeBaseUsuarios($nome_base_usuarios)
@@ -456,7 +456,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets servidor_usuarios
-     * @param string $servidor_usuarios Servidor do controle de acesso
+     * @param string $servidor_usuarios {{{base_dto_servidor_usuarios_value}}}
      * @return $this
      */
     public function setServidorUsuarios($servidor_usuarios)
@@ -477,7 +477,7 @@ class BaseResponse implements ArrayAccess
   
     /**
      * Sets flag_cluster
-     * @param bool $flag_cluster Flag Cluester
+     * @param bool $flag_cluster {{{base_dto_flag_cluster_value}}}
      * @return $this
      */
     public function setFlagCluster($flag_cluster)

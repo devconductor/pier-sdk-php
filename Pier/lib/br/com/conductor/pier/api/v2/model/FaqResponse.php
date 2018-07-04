@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FaqResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto FAQ
+ * @description {{{faq_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class FaqResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+      * $id {{{faq_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $pergunta Conte\u00FAdo da pergunta.
+      * $pergunta {{{faq_response_pergunta_value}}}
       * @var string
       */
     protected $pergunta;
     
     /**
-      * $resposta Conte\u00FAdo da resposta.
+      * $resposta {{{faq_response_resposta_value}}}
       * @var string
       */
     protected $resposta;
     
     /**
-      * $relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
+      * $relevancia {{{faq_response_relevancia_value}}}
       * @var int
       */
     protected $relevancia;
     
     /**
-      * $plataforma Plataforma em que a FAQ se encaixa.
+      * $plataforma {{{faq_response_plataforma_value}}}
       * @var string
       */
     protected $plataforma;
     
     /**
-      * $categoria Categoria de assunto do qual a FAQ se trata.
+      * $categoria {{{faq_response_categoria_value}}}
       * @var string
       */
     protected $categoria;
     
     /**
-      * $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
+      * $status {{{faq_response_status_value}}}
       * @var string
       */
     protected $status;
@@ -191,7 +191,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+     * @param int $id {{{faq_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets pergunta
-     * @param string $pergunta Conte\u00FAdo da pergunta.
+     * @param string $pergunta {{{faq_response_pergunta_value}}}
      * @return $this
      */
     public function setPergunta($pergunta)
@@ -233,7 +233,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets resposta
-     * @param string $resposta Conte\u00FAdo da resposta.
+     * @param string $resposta {{{faq_response_resposta_value}}}
      * @return $this
      */
     public function setResposta($resposta)
@@ -254,7 +254,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets relevancia
-     * @param int $relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
+     * @param int $relevancia {{{faq_response_relevancia_value}}}
      * @return $this
      */
     public function setRelevancia($relevancia)
@@ -275,7 +275,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets plataforma
-     * @param string $plataforma Plataforma em que a FAQ se encaixa.
+     * @param string $plataforma {{{faq_response_plataforma_value}}}
      * @return $this
      */
     public function setPlataforma($plataforma)
@@ -296,7 +296,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets categoria
-     * @param string $categoria Categoria de assunto do qual a FAQ se trata.
+     * @param string $categoria {{{faq_response_categoria_value}}}
      * @return $this
      */
     public function setCategoria($categoria)
@@ -317,7 +317,7 @@ class FaqResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
+     * @param string $status {{{faq_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

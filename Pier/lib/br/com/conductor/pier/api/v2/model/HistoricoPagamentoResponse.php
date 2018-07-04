@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoPagamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto HistoricoPagamentoResponse
+ * @description {{{historico_pagamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -128,55 +128,55 @@ class HistoricoPagamentoResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+      * $id_conta {{{historico_pagamento_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+      * $id_pagamento {{{historico_pagamento_response_id_pagamento_value}}}
       * @var int
       */
     protected $id_pagamento;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+      * $id_estabelecimento {{{historico_pagamento_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+      * $id_banco {{{historico_pagamento_response_id_banco_value}}}
       * @var int
       */
     protected $id_banco;
     
     /**
-      * $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+      * $id_cartao {{{historico_pagamento_response_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $valor_pagamento Valor do Pagamento
+      * $valor_pagamento {{{historico_pagamento_response_valor_pagamento_value}}}
       * @var Number
       */
     protected $valor_pagamento;
     
     /**
-      * $data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+      * $data_hora_pagamento {{{historico_pagamento_response_data_hora_pagamento_value}}}
       * @var string
       */
     protected $data_hora_pagamento;
     
     /**
-      * $data_hora_entrada_pagamento Data e Hora em que o registro do Pagamento foi cadastrado
+      * $data_hora_entrada_pagamento {{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}
       * @var string
       */
     protected $data_hora_entrada_pagamento;
     
     /**
-      * $status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
+      * $status {{{historico_pagamento_response_status_value}}}
       * @var int
       */
     protected $status;
@@ -213,7 +213,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+     * @param int $id_conta {{{historico_pagamento_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -234,7 +234,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_pagamento
-     * @param int $id_pagamento C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+     * @param int $id_pagamento {{{historico_pagamento_response_id_pagamento_value}}}
      * @return $this
      */
     public function setIdPagamento($id_pagamento)
@@ -255,7 +255,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+     * @param int $id_estabelecimento {{{historico_pagamento_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -276,7 +276,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_banco
-     * @param int $id_banco C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+     * @param int $id_banco {{{historico_pagamento_response_id_banco_value}}}
      * @return $this
      */
     public function setIdBanco($id_banco)
@@ -297,7 +297,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+     * @param int $id_cartao {{{historico_pagamento_response_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -318,7 +318,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento
-     * @param Number $valor_pagamento Valor do Pagamento
+     * @param Number $valor_pagamento {{{historico_pagamento_response_valor_pagamento_value}}}
      * @return $this
      */
     public function setValorPagamento($valor_pagamento)
@@ -339,7 +339,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_pagamento
-     * @param string $data_hora_pagamento Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+     * @param string $data_hora_pagamento {{{historico_pagamento_response_data_hora_pagamento_value}}}
      * @return $this
      */
     public function setDataHoraPagamento($data_hora_pagamento)
@@ -360,7 +360,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_entrada_pagamento
-     * @param string $data_hora_entrada_pagamento Data e Hora em que o registro do Pagamento foi cadastrado
+     * @param string $data_hora_entrada_pagamento {{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}
      * @return $this
      */
     public function setDataHoraEntradaPagamento($data_hora_entrada_pagamento)
@@ -381,7 +381,7 @@ class HistoricoPagamentoResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
+     * @param int $status {{{historico_pagamento_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

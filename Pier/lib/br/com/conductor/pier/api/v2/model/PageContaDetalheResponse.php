@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageContaDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista detalhes contas
+ * @description {{{page_conta_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

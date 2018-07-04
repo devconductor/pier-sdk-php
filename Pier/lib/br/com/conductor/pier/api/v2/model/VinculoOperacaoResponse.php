@@ -38,7 +38,7 @@ use \ArrayAccess;
  * VinculoOperacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description ObjetoVinculoOperacao
+ * @description {{{vinculo_operacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class VinculoOperacaoResponse implements ArrayAccess
 
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+      * $id_produto {{{vinculo_operacao_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+      * $id_operacao {{{vinculo_operacao_response_id_operacao_value}}}
       * @var int
       */
     protected $id_operacao;
     
     /**
-      * $codigo_processamento C\u00F3digo de processamento.
+      * $codigo_processamento {{{vinculo_operacao_response_codigo_processamento_value}}}
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $codigo_mcc C\u00F3digo MCC.
+      * $codigo_mcc {{{vinculo_operacao_response_codigo_m_c_c_value}}}
       * @var int
       */
     protected $codigo_mcc;
@@ -158,7 +158,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+     * @param int $id_produto {{{vinculo_operacao_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -179,7 +179,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+     * @param int $id_operacao {{{vinculo_operacao_response_id_operacao_value}}}
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -200,7 +200,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00F3digo de processamento.
+     * @param string $codigo_processamento {{{vinculo_operacao_response_codigo_processamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -221,7 +221,7 @@ class VinculoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_mcc
-     * @param int $codigo_mcc C\u00F3digo MCC.
+     * @param int $codigo_mcc {{{vinculo_operacao_response_codigo_m_c_c_value}}}
      * @return $this
      */
     public function setCodigoMcc($codigo_mcc)

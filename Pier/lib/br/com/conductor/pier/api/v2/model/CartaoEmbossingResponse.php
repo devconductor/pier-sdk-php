@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoEmbossingResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
+ * @description {{{cartao_embossing_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class CartaoEmbossingResponse implements ArrayAccess
 
     
     /**
-      * $flag_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+      * $flag_virtual {{{cartao_embossing_response_flag_virtual_value}}}
       * @var int
       */
     protected $flag_virtual;
     
     /**
-      * $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+      * $id_conta {{{cartao_embossing_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+      * $id_pessoa {{{cartao_embossing_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+      * $id_cartao {{{cartao_embossing_response_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_bandeira Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+      * $id_bandeira {{{cartao_embossing_response_id_bandeira_value}}}
       * @var int
       */
     protected $id_bandeira;
     
     /**
-      * $id_tipo_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+      * $id_tipo_cartao {{{cartao_embossing_response_id_tipo_cartao_value}}}
       * @var int
       */
     protected $id_tipo_cartao;
     
     /**
-      * $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+      * $data_geracao {{{cartao_embossing_response_data_geracao_value}}}
       * @var string
       */
     protected $data_geracao;
     
     /**
-      * $data_validade Apresenta a data de Validade do Cart\u00E3o.
+      * $data_validade {{{cartao_embossing_response_data_validade_value}}}
       * @var string
       */
     protected $data_validade;
     
     /**
-      * $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+      * $nome_origem_comercial {{{cartao_embossing_response_nome_origem_comercial_value}}}
       * @var string
       */
     protected $nome_origem_comercial;
     
     /**
-      * $cpf Apresenta o CPF do Portador do Cart\u00E3o.
+      * $cpf {{{cartao_embossing_response_cpf_value}}}
       * @var string
       */
     protected $cpf;
@@ -224,7 +224,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets flag_virtual
-     * @param int $flag_virtual Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+     * @param int $flag_virtual {{{cartao_embossing_response_flag_virtual_value}}}
      * @return $this
      */
     public function setFlagVirtual($flag_virtual)
@@ -245,7 +245,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+     * @param int $id_conta {{{cartao_embossing_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -266,7 +266,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+     * @param int $id_pessoa {{{cartao_embossing_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -287,7 +287,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+     * @param int $id_cartao {{{cartao_embossing_response_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -308,7 +308,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets id_bandeira
-     * @param int $id_bandeira Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+     * @param int $id_bandeira {{{cartao_embossing_response_id_bandeira_value}}}
      * @return $this
      */
     public function setIdBandeira($id_bandeira)
@@ -329,7 +329,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+     * @param int $id_tipo_cartao {{{cartao_embossing_response_id_tipo_cartao_value}}}
      * @return $this
      */
     public function setIdTipoCartao($id_tipo_cartao)
@@ -350,7 +350,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets data_geracao
-     * @param string $data_geracao Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+     * @param string $data_geracao {{{cartao_embossing_response_data_geracao_value}}}
      * @return $this
      */
     public function setDataGeracao($data_geracao)
@@ -371,7 +371,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de Validade do Cart\u00E3o.
+     * @param string $data_validade {{{cartao_embossing_response_data_validade_value}}}
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -392,7 +392,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets nome_origem_comercial
-     * @param string $nome_origem_comercial Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+     * @param string $nome_origem_comercial {{{cartao_embossing_response_nome_origem_comercial_value}}}
      * @return $this
      */
     public function setNomeOrigemComercial($nome_origem_comercial)
@@ -413,7 +413,7 @@ class CartaoEmbossingResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf Apresenta o CPF do Portador do Cart\u00E3o.
+     * @param string $cpf {{{cartao_embossing_response_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)

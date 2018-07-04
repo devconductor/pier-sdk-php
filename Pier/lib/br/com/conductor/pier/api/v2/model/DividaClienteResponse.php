@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DividaClienteResponse Class Doc Comment
  *
  * @category    Class
- * @description D\u00EDvida do cliente
+ * @description {{{divida_cliente_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -160,103 +160,103 @@ class DividaClienteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+      * $id {{{divida_cliente_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $data_vencimento_fatura_atraso Data de vencimento da cobran\u00E7a
+      * $data_vencimento_fatura_atraso {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
       * @var string
       */
     protected $data_vencimento_fatura_atraso;
     
     /**
-      * $quantidade_dias_atraso Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
+      * $quantidade_dias_atraso {{{divida_cliente_response_quantidade_dias_atraso_value}}}
       * @var int
       */
     protected $quantidade_dias_atraso;
     
     /**
-      * $data_vencimento_acordo Data de vencimento do acordo
+      * $data_vencimento_acordo {{{divida_cliente_response_data_vencimento_acordo_value}}}
       * @var string
       */
     protected $data_vencimento_acordo;
     
     /**
-      * $quantidade_dias_atraso_corrigido Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
+      * $quantidade_dias_atraso_corrigido {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
       * @var int
       */
     protected $quantidade_dias_atraso_corrigido;
     
     /**
-      * $valor_saldo_devedor Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
+      * $valor_saldo_devedor {{{divida_cliente_response_valor_saldo_devedor_value}}}
       * @var Number
       */
     protected $valor_saldo_devedor;
     
     /**
-      * $taxa_correcao Percentual de corre\u00E7\u00E3o
+      * $taxa_correcao {{{divida_cliente_response_taxa_correcao_value}}}
       * @var Number
       */
     protected $taxa_correcao;
     
     /**
-      * $valor_correcao Valor da corre\u00E7\u00E3o
+      * $valor_correcao {{{divida_cliente_response_valor_correcao_value}}}
       * @var Number
       */
     protected $valor_correcao;
     
     /**
-      * $valor_iof Valor do IOF devido
+      * $valor_iof {{{divida_cliente_response_valor_i_o_f_value}}}
       * @var Number
       */
     protected $valor_iof;
     
     /**
-      * $valor_saldo_corrigido Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
+      * $valor_saldo_corrigido {{{divida_cliente_response_valor_saldo_corrigido_value}}}
       * @var Number
       */
     protected $valor_saldo_corrigido;
     
     /**
-      * $id_status_conta C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
+      * $id_status_conta {{{divida_cliente_response_id_status_conta_value}}}
       * @var int
       */
     protected $id_status_conta;
     
     /**
-      * $descricao_status_conta Descri\u00E7\u00E3o do status da conta
+      * $descricao_status_conta {{{divida_cliente_response_descricao_status_conta_value}}}
       * @var string
       */
     protected $descricao_status_conta;
     
     /**
-      * $id_status_acordo C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
+      * $id_status_acordo {{{divida_cliente_response_id_status_acordo_value}}}
       * @var int
       */
     protected $id_status_acordo;
     
     /**
-      * $descricao_status_acordo Descri\u00E7\u00E3o do status do acordo
+      * $descricao_status_acordo {{{divida_cliente_response_descricao_status_acordo_value}}}
       * @var string
       */
     protected $descricao_status_acordo;
     
     /**
-      * $id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
+      * $id_escritorio_cobranca {{{divida_cliente_response_id_escritorio_cobranca_value}}}
       * @var int
       */
     protected $id_escritorio_cobranca;
     
     /**
-      * $nome_escritorio_cobranca Nome do escrit\u00F3rio de cobran\u00E7a
+      * $nome_escritorio_cobranca {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
       * @var string
       */
     protected $nome_escritorio_cobranca;
     
     /**
-      * $email_pessoa_conta Email do devedor
+      * $email_pessoa_conta {{{divida_cliente_response_email_pessoa_conta_value}}}
       * @var string
       */
     protected $email_pessoa_conta;
@@ -301,7 +301,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+     * @param int $id {{{divida_cliente_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -322,7 +322,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_fatura_atraso
-     * @param string $data_vencimento_fatura_atraso Data de vencimento da cobran\u00E7a
+     * @param string $data_vencimento_fatura_atraso {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
      * @return $this
      */
     public function setDataVencimentoFaturaAtraso($data_vencimento_fatura_atraso)
@@ -343,7 +343,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets quantidade_dias_atraso
-     * @param int $quantidade_dias_atraso Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
+     * @param int $quantidade_dias_atraso {{{divida_cliente_response_quantidade_dias_atraso_value}}}
      * @return $this
      */
     public function setQuantidadeDiasAtraso($quantidade_dias_atraso)
@@ -364,7 +364,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_acordo
-     * @param string $data_vencimento_acordo Data de vencimento do acordo
+     * @param string $data_vencimento_acordo {{{divida_cliente_response_data_vencimento_acordo_value}}}
      * @return $this
      */
     public function setDataVencimentoAcordo($data_vencimento_acordo)
@@ -385,7 +385,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets quantidade_dias_atraso_corrigido
-     * @param int $quantidade_dias_atraso_corrigido Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
+     * @param int $quantidade_dias_atraso_corrigido {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
      * @return $this
      */
     public function setQuantidadeDiasAtrasoCorrigido($quantidade_dias_atraso_corrigido)
@@ -406,7 +406,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets valor_saldo_devedor
-     * @param Number $valor_saldo_devedor Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
+     * @param Number $valor_saldo_devedor {{{divida_cliente_response_valor_saldo_devedor_value}}}
      * @return $this
      */
     public function setValorSaldoDevedor($valor_saldo_devedor)
@@ -427,7 +427,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets taxa_correcao
-     * @param Number $taxa_correcao Percentual de corre\u00E7\u00E3o
+     * @param Number $taxa_correcao {{{divida_cliente_response_taxa_correcao_value}}}
      * @return $this
      */
     public function setTaxaCorrecao($taxa_correcao)
@@ -448,7 +448,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets valor_correcao
-     * @param Number $valor_correcao Valor da corre\u00E7\u00E3o
+     * @param Number $valor_correcao {{{divida_cliente_response_valor_correcao_value}}}
      * @return $this
      */
     public function setValorCorrecao($valor_correcao)
@@ -469,7 +469,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets valor_iof
-     * @param Number $valor_iof Valor do IOF devido
+     * @param Number $valor_iof {{{divida_cliente_response_valor_i_o_f_value}}}
      * @return $this
      */
     public function setValorIof($valor_iof)
@@ -490,7 +490,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets valor_saldo_corrigido
-     * @param Number $valor_saldo_corrigido Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
+     * @param Number $valor_saldo_corrigido {{{divida_cliente_response_valor_saldo_corrigido_value}}}
      * @return $this
      */
     public function setValorSaldoCorrigido($valor_saldo_corrigido)
@@ -511,7 +511,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets id_status_conta
-     * @param int $id_status_conta C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
+     * @param int $id_status_conta {{{divida_cliente_response_id_status_conta_value}}}
      * @return $this
      */
     public function setIdStatusConta($id_status_conta)
@@ -532,7 +532,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets descricao_status_conta
-     * @param string $descricao_status_conta Descri\u00E7\u00E3o do status da conta
+     * @param string $descricao_status_conta {{{divida_cliente_response_descricao_status_conta_value}}}
      * @return $this
      */
     public function setDescricaoStatusConta($descricao_status_conta)
@@ -553,7 +553,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets id_status_acordo
-     * @param int $id_status_acordo C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
+     * @param int $id_status_acordo {{{divida_cliente_response_id_status_acordo_value}}}
      * @return $this
      */
     public function setIdStatusAcordo($id_status_acordo)
@@ -574,7 +574,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets descricao_status_acordo
-     * @param string $descricao_status_acordo Descri\u00E7\u00E3o do status do acordo
+     * @param string $descricao_status_acordo {{{divida_cliente_response_descricao_status_acordo_value}}}
      * @return $this
      */
     public function setDescricaoStatusAcordo($descricao_status_acordo)
@@ -595,7 +595,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets id_escritorio_cobranca
-     * @param int $id_escritorio_cobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
+     * @param int $id_escritorio_cobranca {{{divida_cliente_response_id_escritorio_cobranca_value}}}
      * @return $this
      */
     public function setIdEscritorioCobranca($id_escritorio_cobranca)
@@ -616,7 +616,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets nome_escritorio_cobranca
-     * @param string $nome_escritorio_cobranca Nome do escrit\u00F3rio de cobran\u00E7a
+     * @param string $nome_escritorio_cobranca {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
      * @return $this
      */
     public function setNomeEscritorioCobranca($nome_escritorio_cobranca)
@@ -637,7 +637,7 @@ class DividaClienteResponse implements ArrayAccess
   
     /**
      * Sets email_pessoa_conta
-     * @param string $email_pessoa_conta Email do devedor
+     * @param string $email_pessoa_conta {{{divida_cliente_response_email_pessoa_conta_value}}}
      * @return $this
      */
     public function setEmailPessoaConta($email_pessoa_conta)

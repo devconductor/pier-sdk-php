@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoTelefoneResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta para historico de telefones
+ * @description {{{historico_telefone_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class HistoricoTelefoneResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
+      * $id {{{historico_telefone_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $telefone Apresenta o N\u00FAmero do telefone.
+      * $telefone {{{historico_telefone_response_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $id_tipo_telefone Apresenta o id do tipo do telefone.
+      * $id_tipo_telefone {{{historico_telefone_response_id_tipo_telefone_value}}}
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $tipo_telefone Apresenta a descri\u00E7\u00E3o do tipo do telefone.
+      * $tipo_telefone {{{historico_telefone_response_tipo_telefone_value}}}
       * @var string
       */
     protected $tipo_telefone;
     
     /**
-      * $data_modificacao Apresenta a data que o telefone fora alterado.
+      * $data_modificacao {{{historico_telefone_response_data_modificacao_value}}}
       * @var string
       */
     protected $data_modificacao;
@@ -169,7 +169,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
+     * @param int $id {{{historico_telefone_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone Apresenta o N\u00FAmero do telefone.
+     * @param string $telefone {{{historico_telefone_response_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -211,7 +211,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone Apresenta o id do tipo do telefone.
+     * @param int $id_tipo_telefone {{{historico_telefone_response_id_tipo_telefone_value}}}
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -232,7 +232,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets tipo_telefone
-     * @param string $tipo_telefone Apresenta a descri\u00E7\u00E3o do tipo do telefone.
+     * @param string $tipo_telefone {{{historico_telefone_response_tipo_telefone_value}}}
      * @return $this
      */
     public function setTipoTelefone($tipo_telefone)
@@ -253,7 +253,7 @@ class HistoricoTelefoneResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param string $data_modificacao Apresenta a data que o telefone fora alterado.
+     * @param string $data_modificacao {{{historico_telefone_response_data_modificacao_value}}}
      * @return $this
      */
     public function setDataModificacao($data_modificacao)

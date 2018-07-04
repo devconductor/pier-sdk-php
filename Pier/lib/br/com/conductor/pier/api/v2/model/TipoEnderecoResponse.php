@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoEnderecoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
+ * @description {{{tipo_endereco_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class TipoEnderecoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+      * $id {{{tipo_endereco_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Tipo do Endere\u00E7o
+      * $nome {{{tipo_endereco_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -136,7 +136,7 @@ class TipoEnderecoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+     * @param int $id {{{tipo_endereco_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class TipoEnderecoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Tipo do Endere\u00E7o
+     * @param string $nome {{{tipo_endereco_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

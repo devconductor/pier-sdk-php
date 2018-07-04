@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_status_cartao** | **int** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**status_cartao** | **string** | Descri\u00E7\u00E3o do status do cart\u00E3o | [optional] 
-**id_status_conta** | **int** | Descri\u00E7\u00E3o do status da conta | [optional] 
-**status_conta** | **string** | Descri\u00E7\u00E3o do status da conta | [optional] 
-**id_conta** | **int** | C\u00F3digo identificador da conta. | [optional] 
-**numero_agencia** | **int** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numero_conta_corrente** | **string** | N\u00FAmero da conta corrente. | [optional] 
-**criptograma_resposta** | **string** | Criptograma de resposta | [optional] 
+**id_status_cartao** | **int** | {{{valida_cartao_response_id_status_cartao_value}}} | [optional] 
+**status_cartao** | **string** | {{{valida_cartao_response_status_cartao_value}}} | [optional] 
+**id_status_conta** | **int** | {{{valida_cartao_response_id_status_conta_value}}} | [optional] 
+**status_conta** | **string** | {{{valida_cartao_response_status_conta_value}}} | [optional] 
+**id_conta** | **int** | {{{valida_cartao_response_id_conta_value}}} | [optional] 
+**numero_agencia** | **int** | {{{valida_cartao_response_numero_agencia_value}}} | [optional] 
+**numero_conta_corrente** | **string** | {{{valida_cartao_response_numero_conta_corrente_value}}} | [optional] 
+**criptograma_resposta** | **string** | {{{valida_cartao_response_criptograma_resposta_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

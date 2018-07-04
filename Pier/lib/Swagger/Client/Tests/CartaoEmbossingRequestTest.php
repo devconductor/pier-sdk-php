@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * CartaoEmbossingRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
+ * @description {{{cartao_embossing_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

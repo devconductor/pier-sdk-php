@@ -38,7 +38,7 @@ use \ArrayAccess;
  * StatusOportunidadeAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD
+ * @description {{{status_oportunidade_a_u_d_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
 
     
     /**
-      * $rev C\u00F3digo identificador da auditoria dos tipos oportunidades
+      * $rev {{{status_oportunidade_a_u_d_response_rev_value}}}
       * @var int
       */
     protected $rev;
     
     /**
-      * $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+      * $rev_type {{{status_oportunidade_a_u_d_response_rev_type_value}}}
       * @var int
       */
     protected $rev_type;
     
     /**
-      * $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+      * $rev_date {{{status_oportunidade_a_u_d_response_rev_date_value}}}
       * @var string
       */
     protected $rev_date;
     
     /**
-      * $id C\u00F3digo identificador do StatusOportunidade
+      * $id {{{status_oportunidade_a_u_d_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_oportunidade C\u00F3digo identificador do TipoOportunidade
+      * $id_tipo_oportunidade {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
       * @var int
       */
     protected $id_tipo_oportunidade;
     
     /**
-      * $nome Nome do status oportunidade
+      * $nome {{{status_oportunidade_a_u_d_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descricao do StatusOportunidade
+      * $descricao {{{status_oportunidade_a_u_d_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
+      * $flag_ativo {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
       * @var bool
       */
     protected $flag_ativo;
@@ -202,7 +202,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev
-     * @param int $rev C\u00F3digo identificador da auditoria dos tipos oportunidades
+     * @param int $rev {{{status_oportunidade_a_u_d_response_rev_value}}}
      * @return $this
      */
     public function setRev($rev)
@@ -223,7 +223,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param int $rev_type {{{status_oportunidade_a_u_d_response_rev_type_value}}}
      * @return $this
      */
     public function setRevType($rev_type)
@@ -244,7 +244,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_date
-     * @param string $rev_date Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param string $rev_date {{{status_oportunidade_a_u_d_response_rev_date_value}}}
      * @return $this
      */
     public function setRevDate($rev_date)
@@ -265,7 +265,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do StatusOportunidade
+     * @param int $id {{{status_oportunidade_a_u_d_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -286,7 +286,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_oportunidade
-     * @param int $id_tipo_oportunidade C\u00F3digo identificador do TipoOportunidade
+     * @param int $id_tipo_oportunidade {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
      * @return $this
      */
     public function setIdTipoOportunidade($id_tipo_oportunidade)
@@ -307,7 +307,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do status oportunidade
+     * @param string $nome {{{status_oportunidade_a_u_d_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -328,7 +328,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descricao do StatusOportunidade
+     * @param string $descricao {{{status_oportunidade_a_u_d_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -349,7 +349,7 @@ class StatusOportunidadeAUDResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
+     * @param bool $flag_ativo {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

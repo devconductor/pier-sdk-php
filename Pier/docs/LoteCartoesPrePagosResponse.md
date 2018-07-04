@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id). | 
-**id_origem_comercial** | **int** | C\u00F3digo identificador da origem comercial. | 
-**id_produto** | **int** | C\u00F3digo identificador do Produto. | 
-**id_tipo_cartao** | **int** | C\u00F3digo identificador do tipo do cart\u00E3o. | 
-**id_imagem** | **int** | C\u00F3digo identificador da Imagem do cart\u00E3o. | 
-**id_endereco** | **int** | C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o. | 
-**quantidade** | **int** | N\u00FAmero de cart\u00F5es existentes no Lote. | 
-**data_cadastro** | **string** | Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos. | 
-**usuario_cadastro** | **string** | Nome do usu\u00E1rio que criou o lote. | 
-**status_processamento** | **int** | Indica o status de processamento do lote. | 
-**identificador_externo** | **string** | N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). | 
+**id** | **int** | {{{lote_cartoes_pre_pagos_response_id_value}}} | 
+**id_origem_comercial** | **int** | {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}} | 
+**id_produto** | **int** | {{{lote_cartoes_pre_pagos_response_id_produto_value}}} | 
+**id_tipo_cartao** | **int** | {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}} | 
+**id_imagem** | **int** | {{{lote_cartoes_pre_pagos_response_id_imagem_value}}} | 
+**id_endereco** | **int** | {{{lote_cartoes_pre_pagos_response_id_endereco_value}}} | 
+**quantidade** | **int** | {{{lote_cartoes_pre_pagos_response_quantidade_value}}} | 
+**data_cadastro** | **string** | {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}} | 
+**usuario_cadastro** | **string** | {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}} | 
+**status_processamento** | **int** | {{{lote_cartoes_pre_pagos_response_status_processamento_value}}} | 
+**identificador_externo** | **string** | {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

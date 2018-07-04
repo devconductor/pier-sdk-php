@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoPayPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * @description {{{cartao_pay_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class CartaoPayPersist implements ArrayAccess
 
     
     /**
-      * $numero_cartao N\u00FAmero do cart\u00E3o criptografado
+      * $numero_cartao {{{cartao_pay_persist_numero_cartao_value}}}
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $data_validade Data de validade do cart\u00E3o
+      * $data_validade {{{cartao_pay_persist_data_validade_value}}}
       * @var string
       */
     protected $data_validade;
     
     /**
-      * $cvv CVV do cart\u00E3o criptografado
+      * $cvv {{{cartao_pay_persist_cvv_value}}}
       * @var string
       */
     protected $cvv;
     
     /**
-      * $numero_receita_federal CPF do portador do cart\u00E3o criptografado
+      * $numero_receita_federal {{{cartao_pay_persist_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $nome_impresso Nome impresso no cart\u00E3o criptografado
+      * $nome_impresso {{{cartao_pay_persist_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $chave_publica_device Chave p\u00FAblica do dispositivo criptografada
+      * $chave_publica_device {{{cartao_pay_persist_chave_publica_device_value}}}
       * @var string
       */
     protected $chave_publica_device;
@@ -180,7 +180,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao N\u00FAmero do cart\u00E3o criptografado
+     * @param string $numero_cartao {{{cartao_pay_persist_numero_cartao_value}}}
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -201,7 +201,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Data de validade do cart\u00E3o
+     * @param string $data_validade {{{cartao_pay_persist_data_validade_value}}}
      * @return $this
      */
     public function setDataValidade($data_validade)
@@ -222,7 +222,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets cvv
-     * @param string $cvv CVV do cart\u00E3o criptografado
+     * @param string $cvv {{{cartao_pay_persist_cvv_value}}}
      * @return $this
      */
     public function setCvv($cvv)
@@ -243,7 +243,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal CPF do portador do cart\u00E3o criptografado
+     * @param string $numero_receita_federal {{{cartao_pay_persist_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -264,7 +264,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome impresso no cart\u00E3o criptografado
+     * @param string $nome_impresso {{{cartao_pay_persist_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -285,7 +285,7 @@ class CartaoPayPersist implements ArrayAccess
   
     /**
      * Sets chave_publica_device
-     * @param string $chave_publica_device Chave p\u00FAblica do dispositivo criptografada
+     * @param string $chave_publica_device {{{cartao_pay_persist_chave_publica_device_value}}}
      * @return $this
      */
     public function setChavePublicaDevice($chave_publica_device)

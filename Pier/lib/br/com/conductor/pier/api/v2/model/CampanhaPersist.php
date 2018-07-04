@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CampanhaPersist Class Doc Comment
  *
  * @category    Class
- * @description Campanha
+ * @description {{{campanha_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class CampanhaPersist implements ArrayAccess
 
     
     /**
-      * $nome Nome da campanha.
+      * $nome {{{campanha_persist_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
+      * $id_tipo_campanha {{{campanha_persist_id_tipo_campanha_value}}}
       * @var int
       */
     protected $id_tipo_campanha;
     
     /**
-      * $planos_campanhas Lista com os planos de campanha.
+      * $planos_campanhas {{{campanha_persist_planos_campanhas_value}}}
       * @var \br.com.conductor.pier.api.v2.model\PlanoCampanhaPersist[]
       */
     protected $planos_campanhas;
@@ -147,7 +147,7 @@ class CampanhaPersist implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da campanha.
+     * @param string $nome {{{campanha_persist_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -168,7 +168,7 @@ class CampanhaPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_campanha
-     * @param int $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
+     * @param int $id_tipo_campanha {{{campanha_persist_id_tipo_campanha_value}}}
      * @return $this
      */
     public function setIdTipoCampanha($id_tipo_campanha)
@@ -189,7 +189,7 @@ class CampanhaPersist implements ArrayAccess
   
     /**
      * Sets planos_campanhas
-     * @param \br.com.conductor.pier.api.v2.model\PlanoCampanhaPersist[] $planos_campanhas Lista com os planos de campanha.
+     * @param \br.com.conductor.pier.api.v2.model\PlanoCampanhaPersist[] $planos_campanhas {{{campanha_persist_planos_campanhas_value}}}
      * @return $this
      */
     public function setPlanosCampanhas($planos_campanhas)

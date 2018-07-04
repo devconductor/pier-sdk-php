@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PortadorResponse Class Doc Comment
  *
  * @category    Class
- * @description Portador
+ * @description {{{portador_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class PortadorResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+      * $id_conta {{{portador_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+      * $id_produto {{{portador_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+      * $id_pessoa {{{portador_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_parentesco C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
+      * $id_parentesco {{{portador_response_id_parentesco_value}}}
       * @var int
       */
     protected $id_parentesco;
     
     /**
-      * $tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+      * $tipo_portador {{{portador_response_tipo_portador_value}}}
       * @var string
       */
     protected $tipo_portador;
     
     /**
-      * $nome_impresso Apresenta o nome a ser impresso no cart\u00E3o.
+      * $nome_impresso {{{portador_response_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $id_tipo_cartao Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
+      * $id_tipo_cartao {{{portador_response_id_tipo_cartao_value}}}
       * @var int
       */
     protected $id_tipo_cartao;
     
     /**
-      * $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
+      * $flag_ativo {{{portador_response_flag_ativo_value}}}
       * @var int
       */
     protected $flag_ativo;
     
     /**
-      * $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
+      * $data_cadastro_portador {{{portador_response_data_cadastro_portador_value}}}
       * @var string
       */
     protected $data_cadastro_portador;
     
     /**
-      * $data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
+      * $data_cancelamento_portador {{{portador_response_data_cancelamento_portador_value}}}
       * @var string
       */
     protected $data_cancelamento_portador;
@@ -224,7 +224,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+     * @param int $id_conta {{{portador_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -245,7 +245,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+     * @param int $id_produto {{{portador_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -266,7 +266,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+     * @param int $id_pessoa {{{portador_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -287,7 +287,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets id_parentesco
-     * @param int $id_parentesco C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
+     * @param int $id_parentesco {{{portador_response_id_parentesco_value}}}
      * @return $this
      */
     public function setIdParentesco($id_parentesco)
@@ -308,7 +308,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets tipo_portador
-     * @param string $tipo_portador Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+     * @param string $tipo_portador {{{portador_response_tipo_portador_value}}}
      * @return $this
      */
     public function setTipoPortador($tipo_portador)
@@ -329,7 +329,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Apresenta o nome a ser impresso no cart\u00E3o.
+     * @param string $nome_impresso {{{portador_response_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -350,7 +350,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_cartao
-     * @param int $id_tipo_cartao Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
+     * @param int $id_tipo_cartao {{{portador_response_id_tipo_cartao_value}}}
      * @return $this
      */
     public function setIdTipoCartao($id_tipo_cartao)
@@ -371,7 +371,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
+     * @param int $flag_ativo {{{portador_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)
@@ -392,7 +392,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro_portador
-     * @param string $data_cadastro_portador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
+     * @param string $data_cadastro_portador {{{portador_response_data_cadastro_portador_value}}}
      * @return $this
      */
     public function setDataCadastroPortador($data_cadastro_portador)
@@ -413,7 +413,7 @@ class PortadorResponse implements ArrayAccess
   
     /**
      * Sets data_cancelamento_portador
-     * @param string $data_cancelamento_portador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
+     * @param string $data_cancelamento_portador {{{portador_response_data_cancelamento_portador_value}}}
      * @return $this
      */
     public function setDataCancelamentoPortador($data_cancelamento_portador)

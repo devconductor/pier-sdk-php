@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * MoedaResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Tipo de moeda
+ * @description {{{moeda_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

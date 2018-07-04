@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransferenciaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto transferencia
+ * @description {{{transferencia_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class TransferenciaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+      * $id {{{transferencia_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
+      * $data_transferencia {{{transferencia_response_data_transferencia_value}}}
       * @var string
       */
     protected $data_transferencia;
     
     /**
-      * $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+      * $id_conta_origem {{{transferencia_response_id_conta_origem_value}}}
       * @var int
       */
     protected $id_conta_origem;
     
     /**
-      * $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
+      * $id_conta_destino {{{transferencia_response_id_conta_destino_value}}}
       * @var int
       */
     protected $id_conta_destino;
     
     /**
-      * $valor_transferencia Valor estabelecido para ser transferido.
+      * $valor_transferencia {{{transferencia_response_valor_transferencia_value}}}
       * @var Number
       */
     protected $valor_transferencia;
@@ -169,7 +169,7 @@ class TransferenciaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+     * @param int $id {{{transferencia_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class TransferenciaResponse implements ArrayAccess
   
     /**
      * Sets data_transferencia
-     * @param string $data_transferencia Data estabelecida para ocorrer a transfer\u00EAncia.
+     * @param string $data_transferencia {{{transferencia_response_data_transferencia_value}}}
      * @return $this
      */
     public function setDataTransferencia($data_transferencia)
@@ -211,7 +211,7 @@ class TransferenciaResponse implements ArrayAccess
   
     /**
      * Sets id_conta_origem
-     * @param int $id_conta_origem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+     * @param int $id_conta_origem {{{transferencia_response_id_conta_origem_value}}}
      * @return $this
      */
     public function setIdContaOrigem($id_conta_origem)
@@ -232,7 +232,7 @@ class TransferenciaResponse implements ArrayAccess
   
     /**
      * Sets id_conta_destino
-     * @param int $id_conta_destino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
+     * @param int $id_conta_destino {{{transferencia_response_id_conta_destino_value}}}
      * @return $this
      */
     public function setIdContaDestino($id_conta_destino)
@@ -253,7 +253,7 @@ class TransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_transferencia
-     * @param Number $valor_transferencia Valor estabelecido para ser transferido.
+     * @param Number $valor_transferencia {{{transferencia_response_valor_transferencia_value}}}
      * @return $this
      */
     public function setValorTransferencia($valor_transferencia)

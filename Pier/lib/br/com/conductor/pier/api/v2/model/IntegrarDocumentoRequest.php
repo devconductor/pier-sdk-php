@@ -38,7 +38,7 @@ use \ArrayAccess;
  * IntegrarDocumentoRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de requisi\u00E7\u00E3o.
+ * @description {{{integrar_documento_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class IntegrarDocumentoRequest implements ArrayAccess
 
     
     /**
-      * $id_template Identificador do template de documento
+      * $id_template {{{integrar_documento_request_id_template_value}}}
       * @var int
       */
     protected $id_template;
     
     /**
-      * $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+      * $arquivo {{{integrar_documento_request_arquivo_value}}}
       * @var string
       */
     protected $arquivo;
     
     /**
-      * $nome Nome do arquivo.
+      * $nome {{{integrar_documento_request_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $propriedades Lista de par\u00E2metros para montagem do documento.
+      * $propriedades {{{integrar_documento_request_propriedades_value}}}
       * @var \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
       */
     protected $propriedades;
@@ -158,7 +158,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets id_template
-     * @param int $id_template Identificador do template de documento
+     * @param int $id_template {{{integrar_documento_request_id_template_value}}}
      * @return $this
      */
     public function setIdTemplate($id_template)
@@ -179,7 +179,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets arquivo
-     * @param string $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+     * @param string $arquivo {{{integrar_documento_request_arquivo_value}}}
      * @return $this
      */
     public function setArquivo($arquivo)
@@ -200,7 +200,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do arquivo.
+     * @param string $nome {{{integrar_documento_request_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -221,7 +221,7 @@ class IntegrarDocumentoRequest implements ArrayAccess
   
     /**
      * Sets propriedades
-     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $propriedades Lista de par\u00E2metros para montagem do documento.
+     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $propriedades {{{integrar_documento_request_propriedades_value}}}
      * @return $this
      */
     public function setPropriedades($propriedades)

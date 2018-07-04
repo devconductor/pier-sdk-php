@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_chave_criptografia** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia. | [optional] 
-**cvv** | **string** | Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV). | [optional] 
+**id_chave_criptografia** | **int** | {{{valida_c_v_v_request_id_chave_criptografia_value}}} | [optional] 
+**cvv** | **string** | {{{valida_c_v_v_request_cvv_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoCampanhaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
+ * @description {{{plano_campanha_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class PlanoCampanhaResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do plano de campanha
+      * $id {{{plano_campanha_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $parcelas Quantidade de parcelas
+      * $parcelas {{{plano_campanha_response_parcelas_value}}}
       * @var int
       */
     protected $parcelas;
     
     /**
-      * $taxa Taxa de juros
+      * $taxa {{{plano_campanha_response_taxa_value}}}
       * @var Number
       */
     protected $taxa;
     
     /**
-      * $usuario Nome do usu\u00E1rio
+      * $usuario {{{plano_campanha_response_usuario_value}}}
       * @var string
       */
     protected $usuario;
@@ -158,7 +158,7 @@ class PlanoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do plano de campanha
+     * @param int $id {{{plano_campanha_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class PlanoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets parcelas
-     * @param int $parcelas Quantidade de parcelas
+     * @param int $parcelas {{{plano_campanha_response_parcelas_value}}}
      * @return $this
      */
     public function setParcelas($parcelas)
@@ -200,7 +200,7 @@ class PlanoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets taxa
-     * @param Number $taxa Taxa de juros
+     * @param Number $taxa {{{plano_campanha_response_taxa_value}}}
      * @return $this
      */
     public function setTaxa($taxa)
@@ -221,7 +221,7 @@ class PlanoCampanhaResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Nome do usu\u00E1rio
+     * @param string $usuario {{{plano_campanha_response_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * RiscoFraudeDetalhadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta de Risco de Fraude Detalhado
+ * @description {{{risco_fraude_detalhado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -200,163 +200,163 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
+      * $id {{{risco_fraude_detalhado_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_resolucao C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+      * $id_tipo_resolucao {{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}
       * @var int
       */
     protected $id_tipo_resolucao;
     
     /**
-      * $descricao_tipo_resolucao Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+      * $descricao_tipo_resolucao {{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}
       * @var string
       */
     protected $descricao_tipo_resolucao;
     
     /**
-      * $flag_alto_risco Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
+      * $flag_alto_risco {{{risco_fraude_detalhado_response_flag_alto_risco_value}}}
       * @var bool
       */
     protected $flag_alto_risco;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
+      * $id_conta {{{risco_fraude_detalhado_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+      * $id_cartao {{{risco_fraude_detalhado_response_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto
+      * $id_produto {{{risco_fraude_detalhado_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+      * $id_transacao {{{risco_fraude_detalhado_response_id_transacao_value}}}
       * @var int
       */
     protected $id_transacao;
     
     /**
-      * $data_transacao Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
+      * $data_transacao {{{risco_fraude_detalhado_response_data_transacao_value}}}
       * @var string
       */
     protected $data_transacao;
     
     /**
-      * $valor_transacao Valor da transa\u00E7\u00E3o classificada com risco de fraude
+      * $valor_transacao {{{risco_fraude_detalhado_response_valor_transacao_value}}}
       * @var Number
       */
     protected $valor_transacao;
     
     /**
-      * $codigo_moeda_origem C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
+      * $codigo_moeda_origem {{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}
       * @var string
       */
     protected $codigo_moeda_origem;
     
     /**
-      * $valor_origem Valor da transa\u00E7\u00E3o na moeda de origem
+      * $valor_origem {{{risco_fraude_detalhado_response_valor_origem_value}}}
       * @var Number
       */
     protected $valor_origem;
     
     /**
-      * $codigo_moeda_destino C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
+      * $codigo_moeda_destino {{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}
       * @var string
       */
     protected $codigo_moeda_destino;
     
     /**
-      * $valor_destino Valor da transa\u00E7\u00E3o na moeda de destino
+      * $valor_destino {{{risco_fraude_detalhado_response_valor_destino_value}}}
       * @var Number
       */
     protected $valor_destino;
     
     /**
-      * $nome_estabelecimento Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
+      * $nome_estabelecimento {{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $id_pais C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
+      * $id_pais {{{risco_fraude_detalhado_response_id_pais_value}}}
       * @var string
       */
     protected $id_pais;
     
     /**
-      * $codigo_resposta_autorizador C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
+      * $codigo_resposta_autorizador {{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}
       * @var string
       */
     protected $codigo_resposta_autorizador;
     
     /**
-      * $descricao_resposta_autorizador Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
+      * $descricao_resposta_autorizador {{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}
       * @var string
       */
     protected $descricao_resposta_autorizador;
     
     /**
-      * $codigo_resposta_fraude C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+      * $codigo_resposta_fraude {{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}
       * @var string
       */
     protected $codigo_resposta_fraude;
     
     /**
-      * $descricao_resposta_fraude Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+      * $descricao_resposta_fraude {{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}
       * @var string
       */
     protected $descricao_resposta_fraude;
     
     /**
-      * $origem_transacao Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
+      * $origem_transacao {{{risco_fraude_detalhado_response_origem_transacao_value}}}
       * @var string
       */
     protected $origem_transacao;
     
     /**
-      * $codigo_modo_entrada_terminal C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+      * $codigo_modo_entrada_terminal {{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}
       * @var string
       */
     protected $codigo_modo_entrada_terminal;
     
     /**
-      * $descricao_modo_entrada_terminal Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+      * $descricao_modo_entrada_terminal {{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}
       * @var string
       */
     protected $descricao_modo_entrada_terminal;
     
     /**
-      * $cpf N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
+      * $cpf {{{risco_fraude_detalhado_response_cpf_value}}}
       * @var string
       */
     protected $cpf;
     
     /**
-      * $cnpj N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
+      * $cnpj {{{risco_fraude_detalhado_response_cnpj_value}}}
       * @var string
       */
     protected $cnpj;
     
     /**
-      * $email Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
+      * $email {{{risco_fraude_detalhado_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $telefones Lista de telefones associados ao portador do Cart\u00E3o
+      * $telefones {{{risco_fraude_detalhado_response_telefones_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TelefoneResponse[]
       */
     protected $telefones;
@@ -411,7 +411,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
+     * @param int $id {{{risco_fraude_detalhado_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -432,7 +432,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_resolucao
-     * @param int $id_tipo_resolucao C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+     * @param int $id_tipo_resolucao {{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}
      * @return $this
      */
     public function setIdTipoResolucao($id_tipo_resolucao)
@@ -453,7 +453,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_resolucao
-     * @param string $descricao_tipo_resolucao Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+     * @param string $descricao_tipo_resolucao {{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}
      * @return $this
      */
     public function setDescricaoTipoResolucao($descricao_tipo_resolucao)
@@ -474,7 +474,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets flag_alto_risco
-     * @param bool $flag_alto_risco Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
+     * @param bool $flag_alto_risco {{{risco_fraude_detalhado_response_flag_alto_risco_value}}}
      * @return $this
      */
     public function setFlagAltoRisco($flag_alto_risco)
@@ -495,7 +495,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
+     * @param int $id_conta {{{risco_fraude_detalhado_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -516,7 +516,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+     * @param int $id_cartao {{{risco_fraude_detalhado_response_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -537,7 +537,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de identifica\u00E7\u00E3o do produto
+     * @param int $id_produto {{{risco_fraude_detalhado_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -558,7 +558,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+     * @param int $id_transacao {{{risco_fraude_detalhado_response_id_transacao_value}}}
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -579,7 +579,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets data_transacao
-     * @param string $data_transacao Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
+     * @param string $data_transacao {{{risco_fraude_detalhado_response_data_transacao_value}}}
      * @return $this
      */
     public function setDataTransacao($data_transacao)
@@ -600,7 +600,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets valor_transacao
-     * @param Number $valor_transacao Valor da transa\u00E7\u00E3o classificada com risco de fraude
+     * @param Number $valor_transacao {{{risco_fraude_detalhado_response_valor_transacao_value}}}
      * @return $this
      */
     public function setValorTransacao($valor_transacao)
@@ -621,7 +621,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda_origem
-     * @param string $codigo_moeda_origem C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
+     * @param string $codigo_moeda_origem {{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}
      * @return $this
      */
     public function setCodigoMoedaOrigem($codigo_moeda_origem)
@@ -642,7 +642,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets valor_origem
-     * @param Number $valor_origem Valor da transa\u00E7\u00E3o na moeda de origem
+     * @param Number $valor_origem {{{risco_fraude_detalhado_response_valor_origem_value}}}
      * @return $this
      */
     public function setValorOrigem($valor_origem)
@@ -663,7 +663,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda_destino
-     * @param string $codigo_moeda_destino C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
+     * @param string $codigo_moeda_destino {{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}
      * @return $this
      */
     public function setCodigoMoedaDestino($codigo_moeda_destino)
@@ -684,7 +684,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets valor_destino
-     * @param Number $valor_destino Valor da transa\u00E7\u00E3o na moeda de destino
+     * @param Number $valor_destino {{{risco_fraude_detalhado_response_valor_destino_value}}}
      * @return $this
      */
     public function setValorDestino($valor_destino)
@@ -705,7 +705,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
+     * @param string $nome_estabelecimento {{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -726,7 +726,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets id_pais
-     * @param string $id_pais C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
+     * @param string $id_pais {{{risco_fraude_detalhado_response_id_pais_value}}}
      * @return $this
      */
     public function setIdPais($id_pais)
@@ -747,7 +747,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets codigo_resposta_autorizador
-     * @param string $codigo_resposta_autorizador C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
+     * @param string $codigo_resposta_autorizador {{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}
      * @return $this
      */
     public function setCodigoRespostaAutorizador($codigo_resposta_autorizador)
@@ -768,7 +768,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets descricao_resposta_autorizador
-     * @param string $descricao_resposta_autorizador Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
+     * @param string $descricao_resposta_autorizador {{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}
      * @return $this
      */
     public function setDescricaoRespostaAutorizador($descricao_resposta_autorizador)
@@ -789,7 +789,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets codigo_resposta_fraude
-     * @param string $codigo_resposta_fraude C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+     * @param string $codigo_resposta_fraude {{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}
      * @return $this
      */
     public function setCodigoRespostaFraude($codigo_resposta_fraude)
@@ -810,7 +810,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets descricao_resposta_fraude
-     * @param string $descricao_resposta_fraude Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+     * @param string $descricao_resposta_fraude {{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}
      * @return $this
      */
     public function setDescricaoRespostaFraude($descricao_resposta_fraude)
@@ -831,7 +831,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets origem_transacao
-     * @param string $origem_transacao Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
+     * @param string $origem_transacao {{{risco_fraude_detalhado_response_origem_transacao_value}}}
      * @return $this
      */
     public function setOrigemTransacao($origem_transacao)
@@ -852,7 +852,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets codigo_modo_entrada_terminal
-     * @param string $codigo_modo_entrada_terminal C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+     * @param string $codigo_modo_entrada_terminal {{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}
      * @return $this
      */
     public function setCodigoModoEntradaTerminal($codigo_modo_entrada_terminal)
@@ -873,7 +873,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets descricao_modo_entrada_terminal
-     * @param string $descricao_modo_entrada_terminal Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+     * @param string $descricao_modo_entrada_terminal {{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}
      * @return $this
      */
     public function setDescricaoModoEntradaTerminal($descricao_modo_entrada_terminal)
@@ -894,7 +894,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
+     * @param string $cpf {{{risco_fraude_detalhado_response_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)
@@ -915,7 +915,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets cnpj
-     * @param string $cnpj N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
+     * @param string $cnpj {{{risco_fraude_detalhado_response_cnpj_value}}}
      * @return $this
      */
     public function setCnpj($cnpj)
@@ -936,7 +936,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
+     * @param string $email {{{risco_fraude_detalhado_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -957,7 +957,7 @@ class RiscoFraudeDetalhadoResponse implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $telefones Lista de telefones associados ao portador do Cart\u00E3o
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneResponse[] $telefones {{{risco_fraude_detalhado_response_telefones_value}}}
      * @return $this
      */
     public function setTelefones($telefones)

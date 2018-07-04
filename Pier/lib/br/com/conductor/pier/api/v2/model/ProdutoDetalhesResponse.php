@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ProdutoDetalhesResponse Class Doc Comment
  *
  * @category    Class
- * @description ProdutoDetalhes
+ * @description {{{produto_detalhes_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class ProdutoDetalhesResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+      * $id {{{produto_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Descri\u00E7\u00E3o do Nome do Produto.
+      * $nome {{{produto_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+      * $status {{{produto_response_status_value}}}
       * @var int
       */
     protected $status;
     
     /**
-      * $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+      * $id_fantasia_basica {{{produto_response_id_fantasia_basica_value}}}
       * @var int
       */
     protected $id_fantasia_basica;
     
     /**
-      * $fantasia_basica Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
+      * $fantasia_basica {{{produto_detalhes_response_fantasia_basica_value}}}
       * @var string
       */
     protected $fantasia_basica;
     
     /**
-      * $uso_exterior Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
+      * $uso_exterior {{{produto_detalhes_response_uso_exterior_value}}}
       * @var bool
       */
     protected $uso_exterior;
@@ -180,7 +180,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+     * @param int $id {{{produto_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Descri\u00E7\u00E3o do Nome do Produto.
+     * @param string $nome {{{produto_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -222,7 +222,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+     * @param int $status {{{produto_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -243,7 +243,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets id_fantasia_basica
-     * @param int $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+     * @param int $id_fantasia_basica {{{produto_response_id_fantasia_basica_value}}}
      * @return $this
      */
     public function setIdFantasiaBasica($id_fantasia_basica)
@@ -264,7 +264,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets fantasia_basica
-     * @param string $fantasia_basica Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
+     * @param string $fantasia_basica {{{produto_detalhes_response_fantasia_basica_value}}}
      * @return $this
      */
     public function setFantasiaBasica($fantasia_basica)
@@ -285,7 +285,7 @@ class ProdutoDetalhesResponse implements ArrayAccess
   
     /**
      * Sets uso_exterior
-     * @param bool $uso_exterior Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
+     * @param bool $uso_exterior {{{produto_detalhes_response_uso_exterior_value}}}
      * @return $this
      */
     public function setUsoExterior($uso_exterior)

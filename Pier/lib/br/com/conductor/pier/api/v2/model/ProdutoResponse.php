@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ProdutoResponse Class Doc Comment
  *
  * @category    Class
- * @description Produto
+ * @description {{{produto_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class ProdutoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+      * $id {{{produto_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Descri\u00E7\u00E3o do Nome do Produto.
+      * $nome {{{produto_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+      * $status {{{produto_response_status_value}}}
       * @var int
       */
     protected $status;
     
     /**
-      * $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+      * $id_fantasia_basica {{{produto_response_id_fantasia_basica_value}}}
       * @var int
       */
     protected $id_fantasia_basica;
@@ -158,7 +158,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+     * @param int $id {{{produto_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Descri\u00E7\u00E3o do Nome do Produto.
+     * @param string $nome {{{produto_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -200,7 +200,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+     * @param int $status {{{produto_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -221,7 +221,7 @@ class ProdutoResponse implements ArrayAccess
   
     /**
      * Sets id_fantasia_basica
-     * @param int $id_fantasia_basica C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+     * @param int $id_fantasia_basica {{{produto_response_id_fantasia_basica_value}}}
      * @return $this
      */
     public function setIdFantasiaBasica($id_fantasia_basica)

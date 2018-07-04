@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * DocumentoTemplatePersistTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do template do documento.
+ * @description {{{documento_template_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoResolucaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta de Tipo Resolu\u00E7\u00E3o
+ * @description {{{tipo_resolucao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class TipoResolucaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+      * $id {{{tipo_resolucao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+      * $descricao {{{tipo_resolucao_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -136,7 +136,7 @@ class TipoResolucaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+     * @param int $id {{{tipo_resolucao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class TipoResolucaoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+     * @param string $descricao {{{tipo_resolucao_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

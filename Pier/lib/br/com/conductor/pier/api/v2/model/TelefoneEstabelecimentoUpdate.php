@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneEstabelecimentoUpdate Class Doc Comment
  *
  * @category    Class
- * @description Objeto Telefone
+ * @description {{{telefone_estabelecimento_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class TelefoneEstabelecimentoUpdate implements ArrayAccess
 
     
     /**
-      * $ddd C\u00F3digo DDD do telefone.
+      * $ddd {{{telefone_estabelecimento_update_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone.
+      * $telefone {{{telefone_estabelecimento_update_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00FAmero do ramal.
+      * $ramal {{{telefone_estabelecimento_update_ramal_value}}}
       * @var string
       */
     protected $ramal;
@@ -147,7 +147,7 @@ class TelefoneEstabelecimentoUpdate implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00F3digo DDD do telefone.
+     * @param string $ddd {{{telefone_estabelecimento_update_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -168,7 +168,7 @@ class TelefoneEstabelecimentoUpdate implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone.
+     * @param string $telefone {{{telefone_estabelecimento_update_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -189,7 +189,7 @@ class TelefoneEstabelecimentoUpdate implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00FAmero do ramal.
+     * @param string $ramal {{{telefone_estabelecimento_update_ramal_value}}}
      * @return $this
      */
     public function setRamal($ramal)

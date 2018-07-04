@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoParcelamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
+ * @description {{{plano_parcelamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -172,121 +172,121 @@ class PlanoParcelamentoResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do parcelamento
+      * $id {{{plano_parcelamento_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $data_fechamento_fatura Data de fechamento da fatura
+      * $data_fechamento_fatura {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
       * @var string
       */
     protected $data_fechamento_fatura;
     
     /**
-      * $data_vencimento_padrao Data de vencimento padr\u00E3o
+      * $data_vencimento_padrao {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
       * @var string
       */
     protected $data_vencimento_padrao;
     
     /**
-      * $valor_total_fatura Valor total da fatura
+      * $valor_total_fatura {{{plano_parcelamento_response_valor_total_fatura_value}}}
       * @var Number
       */
     protected $valor_total_fatura;
     
     /**
-      * $quantidade_parcelas Quantidade de parcelas
+      * $quantidade_parcelas {{{plano_parcelamento_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $valor_parcela Valor da parcela
+      * $valor_parcela {{{plano_parcelamento_response_valor_parcela_value}}}
       * @var Number
       */
     protected $valor_parcela;
     
     /**
-      * $valor_entrada Valor de entrada
+      * $valor_entrada {{{plano_parcelamento_response_valor_entrada_value}}}
       * @var Number
       */
     protected $valor_entrada;
     
     /**
-      * $taxa_refinanciamento Taxa de refinanciamento
+      * $taxa_refinanciamento {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
       * @var Number
       */
     protected $taxa_refinanciamento;
     
     /**
-      * $custo_efetivo_total Custo efetivo total
+      * $custo_efetivo_total {{{plano_parcelamento_response_custo_efetivo_total_value}}}
       * @var Number
       */
     protected $custo_efetivo_total;
     
     /**
-      * $valor_total_refinanciamento Valor total de refinanciamento
+      * $valor_total_refinanciamento {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
       * @var Number
       */
     protected $valor_total_refinanciamento;
     
     /**
-      * $valor_iof Valor do IOF
+      * $valor_iof {{{plano_parcelamento_response_valor_i_o_f_value}}}
       * @var Number
       */
     protected $valor_iof;
     
     /**
-      * $valor_tac Valor do TAC
+      * $valor_tac {{{plano_parcelamento_response_valor_t_a_c_value}}}
       * @var Number
       */
     protected $valor_tac;
     
     /**
-      * $status_adesao Status da ades\u00E3o
+      * $status_adesao {{{plano_parcelamento_response_status_adesao_value}}}
       * @var int
       */
     protected $status_adesao;
     
     /**
-      * $data_inclusao Data de inclus\u00E3o
+      * $data_inclusao {{{plano_parcelamento_response_data_inclusao_value}}}
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_processamento_adesao Data de processamento da ades\u00E3o
+      * $data_processamento_adesao {{{plano_parcelamento_response_data_processamento_adesao_value}}}
       * @var string
       */
     protected $data_processamento_adesao;
     
     /**
-      * $id_conta Identificador da conta
+      * $id_conta {{{plano_parcelamento_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_servico_tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+      * $id_servico_tipo {{{plano_parcelamento_response_id_servico_tipo_value}}}
       * @var int
       */
     protected $id_servico_tipo;
     
     /**
-      * $descricao_servico_tipo Descri\u00E7\u00E3o do tipo de servi\u00E7o
+      * $descricao_servico_tipo {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
       * @var string
       */
     protected $descricao_servico_tipo;
     
     /**
-      * $com_entrada Indica se a fatura foi com entrada
+      * $com_entrada {{{plano_parcelamento_response_com_entrada_value}}}
       * @var bool
       */
     protected $com_entrada;
     
     /**
-      * $nome_campanha Nome da campanha
+      * $nome_campanha {{{plano_parcelamento_response_nome_campanha_value}}}
       * @var string
       */
     protected $nome_campanha;
@@ -334,7 +334,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do parcelamento
+     * @param int $id {{{plano_parcelamento_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -355,7 +355,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_fechamento_fatura
-     * @param string $data_fechamento_fatura Data de fechamento da fatura
+     * @param string $data_fechamento_fatura {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
      * @return $this
      */
     public function setDataFechamentoFatura($data_fechamento_fatura)
@@ -376,7 +376,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_padrao
-     * @param string $data_vencimento_padrao Data de vencimento padr\u00E3o
+     * @param string $data_vencimento_padrao {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
      * @return $this
      */
     public function setDataVencimentoPadrao($data_vencimento_padrao)
@@ -397,7 +397,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_total_fatura
-     * @param Number $valor_total_fatura Valor total da fatura
+     * @param Number $valor_total_fatura {{{plano_parcelamento_response_valor_total_fatura_value}}}
      * @return $this
      */
     public function setValorTotalFatura($valor_total_fatura)
@@ -418,7 +418,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Quantidade de parcelas
+     * @param int $quantidade_parcelas {{{plano_parcelamento_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -439,7 +439,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela
-     * @param Number $valor_parcela Valor da parcela
+     * @param Number $valor_parcela {{{plano_parcelamento_response_valor_parcela_value}}}
      * @return $this
      */
     public function setValorParcela($valor_parcela)
@@ -460,7 +460,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_entrada
-     * @param Number $valor_entrada Valor de entrada
+     * @param Number $valor_entrada {{{plano_parcelamento_response_valor_entrada_value}}}
      * @return $this
      */
     public function setValorEntrada($valor_entrada)
@@ -481,7 +481,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets taxa_refinanciamento
-     * @param Number $taxa_refinanciamento Taxa de refinanciamento
+     * @param Number $taxa_refinanciamento {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
      * @return $this
      */
     public function setTaxaRefinanciamento($taxa_refinanciamento)
@@ -502,7 +502,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets custo_efetivo_total
-     * @param Number $custo_efetivo_total Custo efetivo total
+     * @param Number $custo_efetivo_total {{{plano_parcelamento_response_custo_efetivo_total_value}}}
      * @return $this
      */
     public function setCustoEfetivoTotal($custo_efetivo_total)
@@ -523,7 +523,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_total_refinanciamento
-     * @param Number $valor_total_refinanciamento Valor total de refinanciamento
+     * @param Number $valor_total_refinanciamento {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
      * @return $this
      */
     public function setValorTotalRefinanciamento($valor_total_refinanciamento)
@@ -544,7 +544,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_iof
-     * @param Number $valor_iof Valor do IOF
+     * @param Number $valor_iof {{{plano_parcelamento_response_valor_i_o_f_value}}}
      * @return $this
      */
     public function setValorIof($valor_iof)
@@ -565,7 +565,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets valor_tac
-     * @param Number $valor_tac Valor do TAC
+     * @param Number $valor_tac {{{plano_parcelamento_response_valor_t_a_c_value}}}
      * @return $this
      */
     public function setValorTac($valor_tac)
@@ -586,7 +586,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets status_adesao
-     * @param int $status_adesao Status da ades\u00E3o
+     * @param int $status_adesao {{{plano_parcelamento_response_status_adesao_value}}}
      * @return $this
      */
     public function setStatusAdesao($status_adesao)
@@ -607,7 +607,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00E3o
+     * @param string $data_inclusao {{{plano_parcelamento_response_data_inclusao_value}}}
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -628,7 +628,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets data_processamento_adesao
-     * @param string $data_processamento_adesao Data de processamento da ades\u00E3o
+     * @param string $data_processamento_adesao {{{plano_parcelamento_response_data_processamento_adesao_value}}}
      * @return $this
      */
     public function setDataProcessamentoAdesao($data_processamento_adesao)
@@ -649,7 +649,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta Identificador da conta
+     * @param int $id_conta {{{plano_parcelamento_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -670,7 +670,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets id_servico_tipo
-     * @param int $id_servico_tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+     * @param int $id_servico_tipo {{{plano_parcelamento_response_id_servico_tipo_value}}}
      * @return $this
      */
     public function setIdServicoTipo($id_servico_tipo)
@@ -691,7 +691,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets descricao_servico_tipo
-     * @param string $descricao_servico_tipo Descri\u00E7\u00E3o do tipo de servi\u00E7o
+     * @param string $descricao_servico_tipo {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
      * @return $this
      */
     public function setDescricaoServicoTipo($descricao_servico_tipo)
@@ -712,7 +712,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets com_entrada
-     * @param bool $com_entrada Indica se a fatura foi com entrada
+     * @param bool $com_entrada {{{plano_parcelamento_response_com_entrada_value}}}
      * @return $this
      */
     public function setComEntrada($com_entrada)
@@ -733,7 +733,7 @@ class PlanoParcelamentoResponse implements ArrayAccess
   
     /**
      * Sets nome_campanha
-     * @param string $nome_campanha Nome da campanha
+     * @param string $nome_campanha {{{plano_parcelamento_response_nome_campanha_value}}}
      * @return $this
      */
     public function setNomeCampanha($nome_campanha)

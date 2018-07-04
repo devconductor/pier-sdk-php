@@ -38,7 +38,7 @@ use \ArrayAccess;
  * UsuarioResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso Usuario
+ * @description {{{usuario_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -60,7 +60,8 @@ class UsuarioResponse implements ArrayAccess
         'status' => 'string',
         'data_criacao' => 'string',
         'data_modificacao' => 'string',
-        'tentativas_incorretas' => 'int'
+        'tentativas_incorretas' => 'int',
+        'bloquear_acesso' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -81,7 +82,8 @@ class UsuarioResponse implements ArrayAccess
         'status' => 'status',
         'data_criacao' => 'dataCriacao',
         'data_modificacao' => 'dataModificacao',
-        'tentativas_incorretas' => 'tentativasIncorretas'
+        'tentativas_incorretas' => 'tentativasIncorretas',
+        'bloquear_acesso' => 'bloquearAcesso'
     );
   
     static function attributeMap() {
@@ -102,7 +104,8 @@ class UsuarioResponse implements ArrayAccess
         'status' => 'setStatus',
         'data_criacao' => 'setDataCriacao',
         'data_modificacao' => 'setDataModificacao',
-        'tentativas_incorretas' => 'setTentativasIncorretas'
+        'tentativas_incorretas' => 'setTentativasIncorretas',
+        'bloquear_acesso' => 'setBloquearAcesso'
     );
   
     static function setters() {
@@ -123,7 +126,8 @@ class UsuarioResponse implements ArrayAccess
         'status' => 'getStatus',
         'data_criacao' => 'getDataCriacao',
         'data_modificacao' => 'getDataModificacao',
-        'tentativas_incorretas' => 'getTentativasIncorretas'
+        'tentativas_incorretas' => 'getTentativasIncorretas',
+        'bloquear_acesso' => 'getBloquearAcesso'
     );
   
     static function getters() {
@@ -132,64 +136,70 @@ class UsuarioResponse implements ArrayAccess
 
     
     /**
-      * $id Id do Usu\u00E1rio
+      * $id {{{usuario_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Usu\u00E1rio
+      * $nome {{{usuario_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $login Login do Usu\u00E1rio
+      * $login {{{usuario_response_login_value}}}
       * @var string
       */
     protected $login;
     
     /**
-      * $id_emissor Id do emissor do usu\u00E1rio
+      * $id_emissor {{{usuario_response_id_emissor_value}}}
       * @var int
       */
     protected $id_emissor;
     
     /**
-      * $cpf CPF do Usu\u00E1rio
+      * $cpf {{{usuario_response_cpf_value}}}
       * @var string
       */
     protected $cpf;
     
     /**
-      * $email Email do Usu\u00E1rio
+      * $email {{{usuario_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $status Status do Usu\u00E1rio
+      * $status {{{usuario_response_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $data_criacao Data de cria\u00E7\u00E3o do Usu\u00E1rio
+      * $data_criacao {{{usuario_response_data_criacao_value}}}
       * @var string
       */
     protected $data_criacao;
     
     /**
-      * $data_modificacao Data de modifica\u00E7\u00E3o do Usu\u00E1rio
+      * $data_modificacao {{{usuario_response_data_modificacao_value}}}
       * @var string
       */
     protected $data_modificacao;
     
     /**
-      * $tentativas_incorretas N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
+      * $tentativas_incorretas {{{usuario_response_tentativas_incorretas_value}}}
       * @var int
       */
     protected $tentativas_incorretas;
+    
+    /**
+      * $bloquear_acesso {{{usuario_response_bloquear_acesso_descricao}}}
+      * @var bool
+      */
+    protected $bloquear_acesso;
     
 
     /**
@@ -210,6 +220,7 @@ class UsuarioResponse implements ArrayAccess
             $this->data_criacao = $data["data_criacao"];
             $this->data_modificacao = $data["data_modificacao"];
             $this->tentativas_incorretas = $data["tentativas_incorretas"];
+            $this->bloquear_acesso = $data["bloquear_acesso"];
         }
     }
     
@@ -224,7 +235,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do Usu\u00E1rio
+     * @param int $id {{{usuario_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -245,7 +256,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Usu\u00E1rio
+     * @param string $nome {{{usuario_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -266,7 +277,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets login
-     * @param string $login Login do Usu\u00E1rio
+     * @param string $login {{{usuario_response_login_value}}}
      * @return $this
      */
     public function setLogin($login)
@@ -287,7 +298,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets id_emissor
-     * @param int $id_emissor Id do emissor do usu\u00E1rio
+     * @param int $id_emissor {{{usuario_response_id_emissor_value}}}
      * @return $this
      */
     public function setIdEmissor($id_emissor)
@@ -308,7 +319,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf CPF do Usu\u00E1rio
+     * @param string $cpf {{{usuario_response_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)
@@ -329,7 +340,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email do Usu\u00E1rio
+     * @param string $email {{{usuario_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -350,7 +361,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do Usu\u00E1rio
+     * @param string $status {{{usuario_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -374,7 +385,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_criacao
-     * @param string $data_criacao Data de cria\u00E7\u00E3o do Usu\u00E1rio
+     * @param string $data_criacao {{{usuario_response_data_criacao_value}}}
      * @return $this
      */
     public function setDataCriacao($data_criacao)
@@ -395,7 +406,7 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param string $data_modificacao Data de modifica\u00E7\u00E3o do Usu\u00E1rio
+     * @param string $data_modificacao {{{usuario_response_data_modificacao_value}}}
      * @return $this
      */
     public function setDataModificacao($data_modificacao)
@@ -416,13 +427,34 @@ class UsuarioResponse implements ArrayAccess
   
     /**
      * Sets tentativas_incorretas
-     * @param int $tentativas_incorretas N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
+     * @param int $tentativas_incorretas {{{usuario_response_tentativas_incorretas_value}}}
      * @return $this
      */
     public function setTentativasIncorretas($tentativas_incorretas)
     {
         
         $this->tentativas_incorretas = $tentativas_incorretas;
+        return $this;
+    }
+    
+    /**
+     * Gets bloquear_acesso
+     * @return bool
+     */
+    public function getBloquearAcesso()
+    {
+        return $this->bloquear_acesso;
+    }
+  
+    /**
+     * Sets bloquear_acesso
+     * @param bool $bloquear_acesso {{{usuario_response_bloquear_acesso_descricao}}}
+     * @return $this
+     */
+    public function setBloquearAcesso($bloquear_acesso)
+    {
+        
+        $this->bloquear_acesso = $bloquear_acesso;
         return $this;
     }
     

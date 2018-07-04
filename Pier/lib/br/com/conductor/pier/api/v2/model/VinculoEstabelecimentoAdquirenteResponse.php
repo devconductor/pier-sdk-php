@@ -38,7 +38,7 @@ use \ArrayAccess;
  * VinculoEstabelecimentoAdquirenteResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta do VinculoEstabelecimentoAdquirente
+ * @description {{{vinculo_estabelecimento_adquirente_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
+      * $id {{{vinculo_estabelecimento_adquirente_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+      * $id_estabelecimento {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
+      * $id_adquirente {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
       * @var int
       */
     protected $id_adquirente;
     
     /**
-      * $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
+      * $codigo_estabelecimento_adquirente {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
       * @var string
       */
     protected $codigo_estabelecimento_adquirente;
     
     /**
-      * $data_hora_cadastro Data de cadastro do v\u00EDnculo.
+      * $data_hora_cadastro {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
       * @var string
       */
     protected $data_hora_cadastro;
     
     /**
-      * $mensagem Data de cadastro do v\u00EDnculo.
+      * $mensagem {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
       * @var string
       */
     protected $mensagem;
     
     /**
-      * $status Data de cadastro do v\u00EDnculo.
+      * $status {{{vinculo_estabelecimento_adquirente_response_status_value}}}
       * @var int
       */
     protected $status;
@@ -191,7 +191,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
+     * @param int $id {{{vinculo_estabelecimento_adquirente_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+     * @param int $id_estabelecimento {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -233,7 +233,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets id_adquirente
-     * @param int $id_adquirente C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
+     * @param int $id_adquirente {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
      * @return $this
      */
     public function setIdAdquirente($id_adquirente)
@@ -254,7 +254,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets codigo_estabelecimento_adquirente
-     * @param string $codigo_estabelecimento_adquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
+     * @param string $codigo_estabelecimento_adquirente {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
      * @return $this
      */
     public function setCodigoEstabelecimentoAdquirente($codigo_estabelecimento_adquirente)
@@ -275,7 +275,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets data_hora_cadastro
-     * @param string $data_hora_cadastro Data de cadastro do v\u00EDnculo.
+     * @param string $data_hora_cadastro {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
      * @return $this
      */
     public function setDataHoraCadastro($data_hora_cadastro)
@@ -296,7 +296,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets mensagem
-     * @param string $mensagem Data de cadastro do v\u00EDnculo.
+     * @param string $mensagem {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
      * @return $this
      */
     public function setMensagem($mensagem)
@@ -317,7 +317,7 @@ class VinculoEstabelecimentoAdquirenteResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Data de cadastro do v\u00EDnculo.
+     * @param int $status {{{vinculo_estabelecimento_adquirente_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
