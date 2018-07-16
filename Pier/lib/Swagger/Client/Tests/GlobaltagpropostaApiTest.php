@@ -76,12 +76,12 @@ class GlobaltagpropostaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET32
+     * Test case for consultarUsingGET33
      *
      * {{{proposta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET32() {
+    public function test_consultarUsingGET33() {
 
     }
     

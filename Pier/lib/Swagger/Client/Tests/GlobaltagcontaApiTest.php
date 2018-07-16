@@ -136,6 +136,16 @@ class GlobaltagcontaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for cadastrarUsingPOST
+     *
+     * {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+     *
+     */
+    public function test_cadastrarUsingPOST() {
+
+    }
+    
+    /**
      * Test case for cancelarUsingPOST1
      *
      * {{{conta_resource_cancelar}}}
@@ -186,22 +196,32 @@ class GlobaltagcontaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET1
      *
-     * {{{conta_resource_consultar}}}
+     * {{{aderir_pagamento_sabado_recurso_consultar}}}
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET1() {
 
     }
     
     /**
-     * Test case for consultarUsingGET48
+     * Test case for consultarUsingGET14
+     *
+     * {{{conta_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET14() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET49
      *
      * {{{transferencia_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET48() {
+    public function test_consultarUsingGET49() {
 
     }
     

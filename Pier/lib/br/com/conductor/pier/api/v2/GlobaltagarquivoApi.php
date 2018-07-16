@@ -92,7 +92,7 @@ class GlobaltagarquivoApi
   
     
     /**
-     * consultarUsingGET4
+     * consultarUsingGET5
      *
      * {{{arquivo_resource_consultar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagarquivoApi
      * @return \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4($id)
+    public function consultarUsingGET5($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET4WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET4WithHttpInfo
+     * consultarUsingGET5WithHttpInfo
      *
      * {{{arquivo_resource_consultar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagarquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET4WithHttpInfo($id)
+    public function consultarUsingGET5WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET4');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
         }
   
         // parse inputs

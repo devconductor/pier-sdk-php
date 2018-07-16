@@ -76,12 +76,12 @@ class GlobaltagajustefinanceiroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET2
+     * Test case for consultarUsingGET3
      *
      * {{{ajuste_financeiro_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET2() {
+    public function test_consultarUsingGET3() {
 
     }
     

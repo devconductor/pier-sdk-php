@@ -225,7 +225,7 @@ class GlobaltagajustefinanceiroApi
     }
     
     /**
-     * consultarUsingGET2
+     * consultarUsingGET3
      *
      * {{{ajuste_financeiro_resource_consultar}}}
      *
@@ -233,15 +233,15 @@ class GlobaltagajustefinanceiroApi
      * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET2($id)
+    public function consultarUsingGET3($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET3WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET2WithHttpInfo
+     * consultarUsingGET3WithHttpInfo
      *
      * {{{ajuste_financeiro_resource_consultar}}}
      *
@@ -249,12 +249,12 @@ class GlobaltagajustefinanceiroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET2WithHttpInfo($id)
+    public function consultarUsingGET3WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET3');
         }
   
         // parse inputs

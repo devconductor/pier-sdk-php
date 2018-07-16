@@ -92,6 +92,111 @@ class GlobaltagtransferenciabancariaApi
   
     
     /**
+     * atualizarTaxasJurosContasUsingPUT
+     *
+     * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ $update update (required)
+     * @return \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function atualizarTaxasJurosContasUsingPUT($id, $update)
+    {
+        list($response, $statusCode, $httpHeader) = $this->atualizarTaxasJurosContasUsingPUTWithHttpInfo ($id, $update);
+        return $response; 
+    }
+
+
+    /**
+     * atualizarTaxasJurosContasUsingPUTWithHttpInfo
+     *
+     * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ $update update (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function atualizarTaxasJurosContasUsingPUTWithHttpInfo($id, $update)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarTaxasJurosContasUsingPUT');
+        }
+        // verify the required parameter 'update' is set
+        if ($update === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling atualizarTaxasJurosContasUsingPUT');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/taxas-transferencias";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($update)) {
+            $_tempBody = $update;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'PUT',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * atualizarUsingPUT1
      *
      * {{{conta_bancaria_resource_atualizar}}}
@@ -387,6 +492,111 @@ class GlobaltagtransferenciabancariaApi
     }
     
     /**
+     * consultarTaxasJurosContasUsingGET
+     *
+     * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param int $numero_meses_carencia numeroMesesCarencia (required)
+     * @return \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTaxasJurosContasUsingGET($id, $numero_meses_carencia)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarTaxasJurosContasUsingGETWithHttpInfo ($id, $numero_meses_carencia);
+        return $response; 
+    }
+
+
+    /**
+     * consultarTaxasJurosContasUsingGETWithHttpInfo
+     *
+     * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param int $numero_meses_carencia numeroMesesCarencia (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarTaxasJurosContasUsingGETWithHttpInfo($id, $numero_meses_carencia)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarTaxasJurosContasUsingGET');
+        }
+        // verify the required parameter 'numero_meses_carencia' is set
+        if ($numero_meses_carencia === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $numero_meses_carencia when calling consultarTaxasJurosContasUsingGET');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/taxas-transferencias";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($numero_meses_carencia !== null) {
+            $queryParams['numeroMesesCarencia'] = $this->apiClient->getSerializer()->toQueryValue($numero_meses_carencia);
+        }
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * consultarTransferenciaBancariaUsingGET
      *
      * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
@@ -482,7 +692,7 @@ class GlobaltagtransferenciabancariaApi
     }
     
     /**
-     * consultarUsingGET12
+     * consultarUsingGET13
      *
      * {{{conta_bancaria_resource_consultar}}}
      *
@@ -490,15 +700,15 @@ class GlobaltagtransferenciabancariaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12($id)
+    public function consultarUsingGET13($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET12WithHttpInfo
+     * consultarUsingGET13WithHttpInfo
      *
      * {{{conta_bancaria_resource_consultar}}}
      *
@@ -506,12 +716,12 @@ class GlobaltagtransferenciabancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET12WithHttpInfo($id)
+    public function consultarUsingGET13WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
         }
   
         // parse inputs
@@ -577,7 +787,7 @@ class GlobaltagtransferenciabancariaApi
     }
     
     /**
-     * consultarUsingGET47
+     * consultarUsingGET48
      *
      * {{{transferencia_bancaria_resource_consultar}}}
      *
@@ -587,15 +797,15 @@ class GlobaltagtransferenciabancariaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET47($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET48($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET47WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET48WithHttpInfo ($id, $id_transferencia, $id_conta_bancaria_destino);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET47WithHttpInfo
+     * consultarUsingGET48WithHttpInfo
      *
      * {{{transferencia_bancaria_resource_consultar}}}
      *
@@ -605,16 +815,16 @@ class GlobaltagtransferenciabancariaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET47WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
+    public function consultarUsingGET48WithHttpInfo($id, $id_transferencia, $id_conta_bancaria_destino = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET47');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET48');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET47');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET48');
         }
   
         // parse inputs
@@ -1096,6 +1306,111 @@ class GlobaltagtransferenciabancariaApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarTaxasJurosContasUsingPOST
+     *
+     * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarTaxasJurosContasUsingPOST($id, $persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarTaxasJurosContasUsingPOSTWithHttpInfo ($id, $persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarTaxasJurosContasUsingPOSTWithHttpInfo
+     *
+     * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+     *
+     * @param int $id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarTaxasJurosContasUsingPOSTWithHttpInfo($id, $persist)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling salvarTaxasJurosContasUsingPOST');
+        }
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarTaxasJurosContasUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/taxas-transferencias";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

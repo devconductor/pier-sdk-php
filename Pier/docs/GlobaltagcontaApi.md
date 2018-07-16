@@ -11,13 +11,15 @@ Method | HTTP request | Description
 [**ativarAnuidadeUsingPOST**](GlobaltagcontaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | {{{conta_resource_ativar_anuidade}}}
 [**ativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email | {{{conta_resource_ativar_envio_fatura_email}}}
 [**bloquearUsingPOST1**](GlobaltagcontaApi.md#bloquearUsingPOST1) | **POST** /api/contas/{id}/bloquear | {{{conta_resource_bloquear}}}
+[**cadastrarUsingPOST**](GlobaltagcontaApi.md#cadastrarUsingPOST) | **POST** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_cadastrar}}}
 [**cancelarUsingPOST1**](GlobaltagcontaApi.md#cancelarUsingPOST1) | **POST** /api/contas/{id}/cancelar | {{{conta_resource_cancelar}}}
 [**consultarBeneficioPagamentoAtrasoUsingGET**](GlobaltagcontaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 [**consultarBoletoEmitidoUsingGET**](GlobaltagcontaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | {{{conta_resource_consultar_boleto_emitido}}}
 [**consultarDividaAtualizadaClienteUsingGET**](GlobaltagcontaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultarTaxasTarifasUsingGET**](GlobaltagcontaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
-[**consultarUsingGET13**](GlobaltagcontaApi.md#consultarUsingGET13) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultarUsingGET48**](GlobaltagcontaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultarUsingGET1**](GlobaltagcontaApi.md#consultarUsingGET1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
+[**consultarUsingGET14**](GlobaltagcontaApi.md#consultarUsingGET14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultarUsingGET49**](GlobaltagcontaApi.md#consultarUsingGET49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
 [**desativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerarBoletoRecargaUsingPOST**](GlobaltagcontaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerarCartaoEmbossingUsingPOST**](GlobaltagcontaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -402,6 +404,51 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **cadastrarUsingPOST**
+> \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse cadastrarUsingPOST($id)
+
+{{{aderir_pagamento_sabado_recurso_cadastrar}}}
+
+{{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
+$id = 789; // int | {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+
+try { 
+    $result = $api_instance->cadastrarUsingPOST($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcontaApi->cadastrarUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **cancelarUsingPOST1**
 > \br.com.conductor.pier.api.v2.model\ContaResponse cancelarUsingPOST1($id, $id_status, $authorization)
 
@@ -655,8 +702,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET13($id, $authorization)
+# **consultarUsingGET1**
+> \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse consultarUsingGET1($id, $data_vencimento)
+
+{{{aderir_pagamento_sabado_recurso_consultar}}}
+
+{{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
+$id = 789; // int | {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+$data_vencimento = "data_vencimento_example"; // string | {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+
+try { 
+    $result = $api_instance->consultarUsingGET1($id, $data_vencimento);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET1: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} | 
+ **data_vencimento** | **string**| {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **consultarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET14($id, $authorization)
 
 {{{conta_resource_consultar}}}
 
@@ -672,10 +766,10 @@ $id = 789; // int | {{{conta_resource_consultar_param_id}}}
 $authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarUsingGET13($id, $authorization);
+    $result = $api_instance->consultarUsingGET14($id, $authorization);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -702,8 +796,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET48**
-> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET48($id, $id_transferencia)
+# **consultarUsingGET49**
+> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET49($id, $id_transferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -719,10 +813,10 @@ $id = 789; // int | {{{transferencia_resource_consultar_param_id_conta}}}
 $id_transferencia = 789; // int | {{{transferencia_resource_consultar_param_id_transferencia}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET48($id, $id_transferencia);
+    $result = $api_instance->consultarUsingGET49($id, $id_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET48: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET49: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1258,7 +1352,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarProcessadasUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao)
+> \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao, $recupera_encargos)
 
 {{{transacoes_correntes_resource_listar_processadas}}}
 
@@ -1278,9 +1372,10 @@ $data_vencimento = "data_vencimento_example"; // string | {{{transacoes_processa
 $data_inicio = "data_inicio_example"; // string | {{{transacoes_processadas_request_data_inicio_value}}}
 $data_fim = "data_fim_example"; // string | {{{transacoes_processadas_request_data_fim_value}}}
 $id_tipo_transacao = 789; // int | {{{transacoes_processadas_request_tipo_transacao}}}
+$recupera_encargos = 56; // int | {{{transacoes_processadas_request_recupera_encargos}}}
 
 try { 
-    $result = $api_instance->listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
+    $result = $api_instance->listarProcessadasUsingGET($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao, $recupera_encargos);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->listarProcessadasUsingGET: ', $e->getMessage(), "\n";
@@ -1300,6 +1395,7 @@ Name | Type | Description  | Notes
  **data_inicio** | **string**| {{{transacoes_processadas_request_data_inicio_value}}} | [optional] 
  **data_fim** | **string**| {{{transacoes_processadas_request_data_fim_value}}} | [optional] 
  **id_tipo_transacao** | **int**| {{{transacoes_processadas_request_tipo_transacao}}} | [optional] 
+ **recupera_encargos** | **int**| {{{transacoes_processadas_request_recupera_encargos}}} | [optional] 
 
 ### Return type
 

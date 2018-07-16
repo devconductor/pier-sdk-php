@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | {{{estagio_cartao_resource_consultar_estagio_cartao}}}
 [**consultarStatusCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | {{{status_cartao_resource_consultar_status_cartao}}}
-[**consultarUsingGET35**](GlobaltagstatusparametroApi.md#consultarUsingGET35) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
-[**consultarUsingGET36**](GlobaltagstatusparametroApi.md#consultarUsingGET36) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
+[**consultarUsingGET36**](GlobaltagstatusparametroApi.md#consultarUsingGET36) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
+[**consultarUsingGET37**](GlobaltagstatusparametroApi.md#consultarUsingGET37) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
 [**listarEstagiosCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | {{{estagio_cartao_resource_listar_estagios_cartoes}}}
 [**listarStatusCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | {{{status_cartao_resource_listar_status_cartoes}}}
 [**listarTiposEventosTransacoesUsingGET**](GlobaltagstatusparametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | {{{enum_resource_listar_tipos_eventos_transacoes}}}
@@ -105,8 +105,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET35**
-> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET35($id)
+# **consultarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\StatusContaResponse consultarUsingGET36($id)
 
 {{{status_conta_resource_consultar}}}
 
@@ -121,10 +121,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagstatuspara
 $id = 789; // int | {{{status_conta_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET35($id);
+    $result = $api_instance->consultarUsingGET36($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagstatusparametroApi->consultarUsingGET35: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagstatusparametroApi->consultarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -150,8 +150,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET36**
-> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET36($id)
+# **consultarUsingGET37**
+> \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse consultarUsingGET37($id)
 
 {{{status_impressao_resource_consultar}}}
 
@@ -166,10 +166,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagstatuspara
 $id = 789; // int | {{{status_impressao_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET36($id);
+    $result = $api_instance->consultarUsingGET37($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagstatusparametroApi->consultarUsingGET36: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagstatusparametroApi->consultarUsingGET37: ', $e->getMessage(), "\n";
 }
 ?>
 ```

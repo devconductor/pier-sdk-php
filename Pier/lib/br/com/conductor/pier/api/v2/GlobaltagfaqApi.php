@@ -356,7 +356,7 @@ class GlobaltagfaqApi
     }
     
     /**
-     * consultarUsingGET20
+     * consultarUsingGET21
      *
      * {{{faq_resource_consultar}}}
      *
@@ -364,15 +364,15 @@ class GlobaltagfaqApi
      * @return \br.com.conductor.pier.api.v2.model\FaqResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20($id)
+    public function consultarUsingGET21($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET21WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET20WithHttpInfo
+     * consultarUsingGET21WithHttpInfo
      *
      * {{{faq_resource_consultar}}}
      *
@@ -380,12 +380,12 @@ class GlobaltagfaqApi
      * @return Array of \br.com.conductor.pier.api.v2.model\FaqResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20WithHttpInfo($id)
+    public function consultarUsingGET21WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET21');
         }
   
         // parse inputs

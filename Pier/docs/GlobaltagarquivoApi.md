@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET4**](GlobaltagarquivoApi.md#consultarUsingGET4) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultarUsingGET5**](GlobaltagarquivoApi.md#consultarUsingGET5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrarUsingPOST**](GlobaltagarquivoApi.md#integrarUsingPOST) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listarPorNumeroReceitaFederalUsingGET**](GlobaltagarquivoApi.md#listarPorNumeroReceitaFederalUsingGET) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listarStatusArquivosUsingGET**](GlobaltagarquivoApi.md#listarStatusArquivosUsingGET) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**salvarUsingPOST1**](GlobaltagarquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | {{{arquivo_resource_salvar}}}
 
 
-# **consultarUsingGET4**
-> \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse consultarUsingGET4($id)
+# **consultarUsingGET5**
+> \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse consultarUsingGET5($id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -30,10 +30,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagarquivoApi
 $id = 789; // int | {{{arquivo_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET4($id);
+    $result = $api_instance->consultarUsingGET5($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagarquivoApi->consultarUsingGET4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagarquivoApi->consultarUsingGET5: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -86,12 +86,12 @@ class GlobaltagfaqApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET20
+     * Test case for consultarUsingGET21
      *
      * {{{faq_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET20() {
+    public function test_consultarUsingGET21() {
 
     }
     

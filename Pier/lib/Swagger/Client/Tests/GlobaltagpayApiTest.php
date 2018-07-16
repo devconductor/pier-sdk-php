@@ -96,12 +96,12 @@ class GlobaltagpayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarUsingGET9
      *
      * {{{cartao_pay_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarUsingGET9() {
 
     }
     

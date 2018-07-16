@@ -530,7 +530,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * consultarUsingGET25
+     * consultarUsingGET26
      *
      * {{{oportunidade_resource_consultar}}}
      *
@@ -538,15 +538,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET25WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
      * {{{oportunidade_resource_consultar}}}
      *
@@ -554,12 +554,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs
@@ -625,7 +625,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * consultarUsingGET44
+     * consultarUsingGET45
      *
      * {{{tipo_oportunidade_resource_consultar}}}
      *
@@ -633,15 +633,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET44($id)
+    public function consultarUsingGET45($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET44WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET45WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET44WithHttpInfo
+     * consultarUsingGET45WithHttpInfo
      *
      * {{{tipo_oportunidade_resource_consultar}}}
      *
@@ -649,12 +649,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET44WithHttpInfo($id)
+    public function consultarUsingGET45WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET44');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET45');
         }
   
         // parse inputs

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](GlobaltagcartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | {{{cartao_resource_consultar_limite_disponibilidade}}}
 [**consultarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 [**consultarPortadorUsingGET**](GlobaltagcartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | {{{cartao_resource_consultar_portador}}}
-[**consultarUsingGET9**](GlobaltagcartaoApi.md#consultarUsingGET9) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**consultarUsingGET10**](GlobaltagcartaoApi.md#consultarUsingGET10) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
 [**desbloquearSenhaIncorretaUsingPOST**](GlobaltagcartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | {{{cartao_resource_desbloquear_senha_incorreta}}}
 [**desbloquearUsingPOST**](GlobaltagcartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | {{{cartao_resource_desbloquear}}}
 [**gerarLotesCartoesPrePagosUsingPOST**](GlobaltagcartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -616,8 +616,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET9($id, $authorization)
+# **consultarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET10($id, $authorization)
 
 {{{cartao_resource_consultar}}}
 
@@ -633,10 +633,10 @@ $id = 789; // int | {{{cartao_resource_consultar_param_id}}}
 $authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarUsingGET9($id, $authorization);
+    $result = $api_instance->consultarUsingGET10($id, $authorization);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcartaoApi->consultarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcartaoApi->consultarUsingGET10: ', $e->getMessage(), "\n";
 }
 ?>
 ```

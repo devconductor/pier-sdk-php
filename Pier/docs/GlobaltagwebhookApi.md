@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT24**](GlobaltagwebhookApi.md#alterarUsingPUT24) | **PUT** /api/webhooks/{id} | {{{web_hook_resource_alterar}}}
-[**consultarUsingGET52**](GlobaltagwebhookApi.md#consultarUsingGET52) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
+[**consultarUsingGET53**](GlobaltagwebhookApi.md#consultarUsingGET53) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
 [**listarUsingGET66**](GlobaltagwebhookApi.md#listarUsingGET66) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
 [**salvarUsingPOST35**](GlobaltagwebhookApi.md#salvarUsingPOST35) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
 
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET52**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET52($id)
+# **consultarUsingGET53**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET53($id)
 
 {{{web_hook_resource_consultar}}}
 
@@ -75,10 +75,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagwebhookApi
 $id = 789; // int | {{{web_hook_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET52($id);
+    $result = $api_instance->consultarUsingGET53($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagwebhookApi->consultarUsingGET52: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagwebhookApi->consultarUsingGET53: ', $e->getMessage(), "\n";
 }
 ?>
 ```

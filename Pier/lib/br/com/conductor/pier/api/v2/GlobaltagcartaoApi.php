@@ -1394,7 +1394,7 @@ class GlobaltagcartaoApi
     }
     
     /**
-     * consultarUsingGET9
+     * consultarUsingGET10
      *
      * {{{cartao_resource_consultar}}}
      *
@@ -1403,15 +1403,15 @@ class GlobaltagcartaoApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9($id, $authorization = null)
+    public function consultarUsingGET10($id, $authorization = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id, $authorization);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET9WithHttpInfo
+     * consultarUsingGET10WithHttpInfo
      *
      * {{{cartao_resource_consultar}}}
      *
@@ -1420,12 +1420,12 @@ class GlobaltagcartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9WithHttpInfo($id, $authorization = null)
+    public function consultarUsingGET10WithHttpInfo($id, $authorization = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
         }
   
         // parse inputs

@@ -197,7 +197,7 @@ class GlobaltagpropostaApi
     }
     
     /**
-     * consultarUsingGET32
+     * consultarUsingGET33
      *
      * {{{proposta_resource_consultar}}}
      *
@@ -205,15 +205,15 @@ class GlobaltagpropostaApi
      * @return \br.com.conductor.pier.api.v2.model\PropostaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET32($id)
+    public function consultarUsingGET33($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET32WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET33WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET32WithHttpInfo
+     * consultarUsingGET33WithHttpInfo
      *
      * {{{proposta_resource_consultar}}}
      *
@@ -221,12 +221,12 @@ class GlobaltagpropostaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PropostaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET32WithHttpInfo($id)
+    public function consultarUsingGET33WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET32');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET33');
         }
   
         // parse inputs

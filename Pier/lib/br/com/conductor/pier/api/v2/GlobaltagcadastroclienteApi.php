@@ -1124,7 +1124,7 @@ class GlobaltagcadastroclienteApi
     }
     
     /**
-     * cadastrarUsingPOST
+     * cadastrarUsingPOST1
      *
      * {{{adicional_resource_cadastrar}}}
      *
@@ -1133,15 +1133,15 @@ class GlobaltagcadastroclienteApi
      * @return \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarUsingPOST($id, $persist)
+    public function cadastrarUsingPOST1($id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->cadastrarUsingPOSTWithHttpInfo ($id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->cadastrarUsingPOST1WithHttpInfo ($id, $persist);
         return $response; 
     }
 
 
     /**
-     * cadastrarUsingPOSTWithHttpInfo
+     * cadastrarUsingPOST1WithHttpInfo
      *
      * {{{adicional_resource_cadastrar}}}
      *
@@ -1150,16 +1150,16 @@ class GlobaltagcadastroclienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarUsingPOSTWithHttpInfo($id, $persist)
+    public function cadastrarUsingPOST1WithHttpInfo($id, $persist)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarUsingPOST1');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling cadastrarUsingPOST');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling cadastrarUsingPOST1');
         }
   
         // parse inputs
@@ -1229,7 +1229,102 @@ class GlobaltagcadastroclienteApi
     }
     
     /**
-     * consultarUsingGET1
+     * consultarUsingGET19
+     *
+     * {{{endereco_resource_consultar}}}
+     *
+     * @param int $id {{{endereco_resource_consultar_param_id}}} (required)
+     * @return \br.com.conductor.pier.api.v2.model\EnderecoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET19($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET19WithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET19WithHttpInfo
+     *
+     * {{{endereco_resource_consultar}}}
+     *
+     * @param int $id {{{endereco_resource_consultar_param_id}}} (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\EnderecoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET19WithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET19');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/enderecos/{id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\EnderecoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\EnderecoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\EnderecoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET2
      *
      * {{{adicional_resource_consultar}}}
      *
@@ -1238,15 +1333,15 @@ class GlobaltagcadastroclienteApi
      * @return \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1($id, $id_pessoa)
+    public function consultarUsingGET2($id, $id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id, $id_pessoa);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET2WithHttpInfo ($id, $id_pessoa);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET1WithHttpInfo
+     * consultarUsingGET2WithHttpInfo
      *
      * {{{adicional_resource_consultar}}}
      *
@@ -1255,16 +1350,16 @@ class GlobaltagcadastroclienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\AdicionalDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET1WithHttpInfo($id, $id_pessoa)
+    public function consultarUsingGET2WithHttpInfo($id, $id_pessoa)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET2');
         }
         // verify the required parameter 'id_pessoa' is set
         if ($id_pessoa === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling consultarUsingGET1');
+            throw new \InvalidArgumentException('Missing the required parameter $id_pessoa when calling consultarUsingGET2');
         }
   
         // parse inputs
@@ -1338,102 +1433,7 @@ class GlobaltagcadastroclienteApi
     }
     
     /**
-     * consultarUsingGET18
-     *
-     * {{{endereco_resource_consultar}}}
-     *
-     * @param int $id {{{endereco_resource_consultar_param_id}}} (required)
-     * @return \br.com.conductor.pier.api.v2.model\EnderecoResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET18($id)
-    {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id);
-        return $response; 
-    }
-
-
-    /**
-     * consultarUsingGET18WithHttpInfo
-     *
-     * {{{endereco_resource_consultar}}}
-     *
-     * @param int $id {{{endereco_resource_consultar_param_id}}} (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\EnderecoResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function consultarUsingGET18WithHttpInfo($id)
-    {
-        
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET18');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/enderecos/{id}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        // path params
-        
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'GET',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\EnderecoResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\EnderecoResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\EnderecoResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * consultarUsingGET29
+     * consultarUsingGET30
      *
      * {{{pessoa_detalhe_resource_consultar}}}
      *
@@ -1441,15 +1441,15 @@ class GlobaltagcadastroclienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29($id)
+    public function consultarUsingGET30($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET29WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET30WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET29WithHttpInfo
+     * consultarUsingGET30WithHttpInfo
      *
      * {{{pessoa_detalhe_resource_consultar}}}
      *
@@ -1457,12 +1457,12 @@ class GlobaltagcadastroclienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET29WithHttpInfo($id)
+    public function consultarUsingGET30WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET29');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET30');
         }
   
         // parse inputs
@@ -1528,7 +1528,7 @@ class GlobaltagcadastroclienteApi
     }
     
     /**
-     * consultarUsingGET30
+     * consultarUsingGET31
      *
      * {{{pessoa_resource_consultar}}}
      *
@@ -1536,15 +1536,15 @@ class GlobaltagcadastroclienteApi
      * @return \br.com.conductor.pier.api.v2.model\PessoaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET30($id)
+    public function consultarUsingGET31($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET30WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET31WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET30WithHttpInfo
+     * consultarUsingGET31WithHttpInfo
      *
      * {{{pessoa_resource_consultar}}}
      *
@@ -1552,12 +1552,12 @@ class GlobaltagcadastroclienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PessoaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET30WithHttpInfo($id)
+    public function consultarUsingGET31WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET30');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET31');
         }
   
         // parse inputs
@@ -1623,7 +1623,7 @@ class GlobaltagcadastroclienteApi
     }
     
     /**
-     * consultarUsingGET38
+     * consultarUsingGET39
      *
      * {{{telefone_resource_consultar}}}
      *
@@ -1631,15 +1631,15 @@ class GlobaltagcadastroclienteApi
      * @return \br.com.conductor.pier.api.v2.model\TelefoneResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38($id)
+    public function consultarUsingGET39($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET38WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET38WithHttpInfo
+     * consultarUsingGET39WithHttpInfo
      *
      * {{{telefone_resource_consultar}}}
      *
@@ -1647,12 +1647,12 @@ class GlobaltagcadastroclienteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38WithHttpInfo($id)
+    public function consultarUsingGET39WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET38');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
         }
   
         // parse inputs

@@ -66,12 +66,12 @@ class GlobaltagboletoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET33
+     * Test case for consultarUsingGET34
      *
      * {{{boleto_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET33() {
+    public function test_consultarUsingGET34() {
 
     }
     

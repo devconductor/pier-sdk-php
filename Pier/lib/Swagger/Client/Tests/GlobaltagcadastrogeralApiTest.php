@@ -116,12 +116,12 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for cadastrarUsingPOST1
+     * Test case for cadastrarUsingPOST2
      *
      * {{{configuracao_registro_cobranca_resource_cadastrar}}}
      *
      */
-    public function test_cadastrarUsingPOST1() {
+    public function test_cadastrarUsingPOST2() {
 
     }
     
@@ -166,19 +166,9 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET10
-     *
-     * {{{configuracao_registro_cobranca_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET10() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET11
      *
-     * {{{configuracao_rotativo_resource_consultar}}}
+     * {{{configuracao_registro_cobranca_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET11() {
@@ -186,29 +176,29 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET31
+     * Test case for consultarUsingGET12
      *
-     * {{{produto_resource_consultar}}}
+     * {{{configuracao_rotativo_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET31() {
+    public function test_consultarUsingGET12() {
 
     }
     
     /**
-     * Test case for consultarUsingGET40
+     * Test case for consultarUsingGET32
      *
-     * {{{tipo_transacoes_ajuste_resource_consultar}}}
+     * {{{produto_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET40() {
+    public function test_consultarUsingGET32() {
 
     }
     
     /**
      * Test case for consultarUsingGET41
      *
-     * {{{tipo_boleto_resource_consultar}}}
+     * {{{tipo_transacoes_ajuste_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET41() {
@@ -218,7 +208,7 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET42
      *
-     * {{{tipo_endereco_resource_consultar}}}
+     * {{{tipo_boleto_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET42() {
@@ -228,7 +218,7 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET43
      *
-     * {{{tipo_operacao_resource_consultar}}}
+     * {{{tipo_endereco_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET43() {
@@ -236,32 +226,42 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET45
+     * Test case for consultarUsingGET44
+     *
+     * {{{tipo_operacao_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET44() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET46
      *
      * {{{tipo_telefone_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET45() {
+    public function test_consultarUsingGET46() {
 
     }
     
     /**
-     * Test case for consultarUsingGET5
+     * Test case for consultarUsingGET6
      *
      * {{{atendimento_cliente_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET5() {
+    public function test_consultarUsingGET6() {
 
     }
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET8
      *
      * {{{banco_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET8() {
 
     }
     

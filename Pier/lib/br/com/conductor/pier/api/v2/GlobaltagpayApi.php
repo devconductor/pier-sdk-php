@@ -427,7 +427,7 @@ class GlobaltagpayApi
     }
     
     /**
-     * consultarUsingGET8
+     * consultarUsingGET9
      *
      * {{{cartao_pay_resource_consultar}}}
      *
@@ -436,15 +436,15 @@ class GlobaltagpayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET8($device_id, $id)
+    public function consultarUsingGET9($device_id, $id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($device_id, $id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($device_id, $id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET8WithHttpInfo
+     * consultarUsingGET9WithHttpInfo
      *
      * {{{cartao_pay_resource_consultar}}}
      *
@@ -453,16 +453,16 @@ class GlobaltagpayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET8WithHttpInfo($device_id, $id)
+    public function consultarUsingGET9WithHttpInfo($device_id, $id)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET8');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET9');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
         }
   
         // parse inputs

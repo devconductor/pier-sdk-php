@@ -76,12 +76,12 @@ class GlobaltagwebhookApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET52
+     * Test case for consultarUsingGET53
      *
      * {{{web_hook_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET52() {
+    public function test_consultarUsingGET53() {
 
     }
     

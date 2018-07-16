@@ -261,7 +261,7 @@ class GlobaltaglimitedisponibilidadeApi
     }
     
     /**
-     * consultarUsingGET22
+     * consultarUsingGET23
      *
      * {{{limite_disponibilidade_resource_consultar}}}
      *
@@ -269,15 +269,15 @@ class GlobaltaglimitedisponibilidadeApi
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22($id_conta)
+    public function consultarUsingGET23($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id_conta);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET22WithHttpInfo
+     * consultarUsingGET23WithHttpInfo
      *
      * {{{limite_disponibilidade_resource_consultar}}}
      *
@@ -285,12 +285,12 @@ class GlobaltaglimitedisponibilidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22WithHttpInfo($id_conta)
+    public function consultarUsingGET23WithHttpInfo($id_conta)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET22');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET23');
         }
   
         // parse inputs

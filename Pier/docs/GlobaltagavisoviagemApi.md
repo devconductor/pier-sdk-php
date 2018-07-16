@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET6**](GlobaltagavisoviagemApi.md#consultarUsingGET6) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
+[**consultarUsingGET7**](GlobaltagavisoviagemApi.md#consultarUsingGET7) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
 [**desabilitarUsingPOST**](GlobaltagavisoviagemApi.md#desabilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/desabilitar | {{{aviso_viagem_resource_desabilitar}}}
 [**habilitarUsingPOST**](GlobaltagavisoviagemApi.md#habilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/habilitar | {{{aviso_viagem_resource_habilitar}}}
 [**listarUsingGET8**](GlobaltagavisoviagemApi.md#listarUsingGET8) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
 [**salvarUsingPOST3**](GlobaltagavisoviagemApi.md#salvarUsingPOST3) | **POST** /api/avisos-viagens | {{{aviso_viagem_resource_salvar}}}
 
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\AvisoViagemResponse consultarUsingGET6($id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\AvisoViagemResponse consultarUsingGET7($id)
 
 {{{aviso_viagem_resource_consultar}}}
 
@@ -27,10 +27,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagavisoviage
 $id = 789; // int | {{{aviso_viagem_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET6($id);
+    $result = $api_instance->consultarUsingGET7($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagavisoviagemApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagavisoviagemApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

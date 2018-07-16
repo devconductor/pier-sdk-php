@@ -66,12 +66,12 @@ class GlobaltagriscofraudeApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET34
+     * Test case for consultarUsingGET35
      *
      * {{{risco_fraude_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET34() {
+    public function test_consultarUsingGET35() {
 
     }
     

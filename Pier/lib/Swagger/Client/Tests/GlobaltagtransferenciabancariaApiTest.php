@@ -66,6 +66,16 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for atualizarTaxasJurosContasUsingPUT
+     *
+     * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+     *
+     */
+    public function test_atualizarTaxasJurosContasUsingPUT() {
+
+    }
+    
+    /**
      * Test case for atualizarUsingPUT1
      *
      * {{{conta_bancaria_resource_atualizar}}}
@@ -96,6 +106,16 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarTaxasJurosContasUsingGET
+     *
+     * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+     *
+     */
+    public function test_consultarTaxasJurosContasUsingGET() {
+
+    }
+    
+    /**
      * Test case for consultarTransferenciaBancariaUsingGET
      *
      * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
@@ -106,22 +126,22 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET12
+     * Test case for consultarUsingGET13
      *
      * {{{conta_bancaria_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET12() {
+    public function test_consultarUsingGET13() {
 
     }
     
     /**
-     * Test case for consultarUsingGET47
+     * Test case for consultarUsingGET48
      *
      * {{{transferencia_bancaria_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET47() {
+    public function test_consultarUsingGET48() {
 
     }
     
@@ -152,6 +172,16 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function test_listarUsingGET59() {
+
+    }
+    
+    /**
+     * Test case for salvarTaxasJurosContasUsingPOST
+     *
+     * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+     *
+     */
+    public function test_salvarTaxasJurosContasUsingPOST() {
 
     }
     

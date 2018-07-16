@@ -4,20 +4,70 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**atualizarTaxasJurosContasUsingPUT**](GlobaltagtransferenciabancariaApi.md#atualizarTaxasJurosContasUsingPUT) | **PUT** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
 [**atualizarUsingPUT1**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
 [**cancelarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#cancelarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar | {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
 [**confirmarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#confirmarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar | {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria}}}
+[**consultarTaxasJurosContasUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTaxasJurosContasUsingGET) | **GET** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
 [**consultarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
-[**consultarUsingGET12**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET12) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
-[**consultarUsingGET47**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET47) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
+[**consultarUsingGET13**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET13) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
+[**consultarUsingGET48**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
 [**listarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
 [**listarUsingGET16**](GlobaltagtransferenciabancariaApi.md#listarUsingGET16) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
 [**listarUsingGET59**](GlobaltagtransferenciabancariaApi.md#listarUsingGET59) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
+[**salvarTaxasJurosContasUsingPOST**](GlobaltagtransferenciabancariaApi.md#salvarTaxasJurosContasUsingPOST) | **POST** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
 [**salvarUsingPOST7**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
 [**simularTransferenciaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
 [**transferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferencia_credito_conta_bancaria}}}
 [**transferirUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferir}}}
 
+
+# **atualizarTaxasJurosContasUsingPUT**
+> \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse atualizarTaxasJurosContasUsingPUT($id, $update)
+
+{{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagtransferenciabancariaApi();
+$id = 789; // int | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+$update = new \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_(); // \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ | update
+
+try { 
+    $result = $api_instance->atualizarTaxasJurosContasUsingPUT($id, $update);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->atualizarTaxasJurosContasUsingPUT: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **update** | [**\br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_**](\br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_.md)| update | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **atualizarUsingPUT1**
 > \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse atualizarUsingPUT1($id, $update)
@@ -156,6 +206,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **consultarTaxasJurosContasUsingGET**
+> \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse consultarTaxasJurosContasUsingGET($id, $numero_meses_carencia)
+
+{{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagtransferenciabancariaApi();
+$id = 789; // int | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+$numero_meses_carencia = 56; // int | numeroMesesCarencia
+
+try { 
+    $result = $api_instance->consultarTaxasJurosContasUsingGET($id, $numero_meses_carencia);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarTaxasJurosContasUsingGET: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **numero_meses_carencia** | **int**| numeroMesesCarencia | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **consultarTransferenciaBancariaUsingGET**
 > \br.com.conductor.pier.api.v2.model\TransferenciaCreditoContaBancariaResponse consultarTransferenciaBancariaUsingGET($id_transferencia)
 
@@ -201,8 +298,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET12($id)
+# **consultarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET13($id)
 
 {{{conta_bancaria_resource_consultar}}}
 
@@ -217,10 +314,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagtransferen
 $id = 789; // int | {{{conta_bancaria_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET13($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -246,8 +343,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET47**
-> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET47($id, $id_transferencia, $id_conta_bancaria_destino)
+# **consultarUsingGET48**
+> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET48($id, $id_transferencia, $id_conta_bancaria_destino)
 
 {{{transferencia_bancaria_resource_consultar}}}
 
@@ -264,10 +361,10 @@ $id_transferencia = 789; // int | {{{transferencia_bancaria_resource_consultar_p
 $id_conta_bancaria_destino = 789; // int | {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET47($id, $id_transferencia, $id_conta_bancaria_destino);
+    $result = $api_instance->consultarUsingGET48($id, $id_transferencia, $id_conta_bancaria_destino);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET47: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET48: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -462,6 +559,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salvarTaxasJurosContasUsingPOST**
+> \br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse salvarTaxasJurosContasUsingPOST($id, $persist)
+
+{{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagtransferenciabancariaApi();
+$id = 789; // int | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+$persist = new \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_(); // \br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_ | persist
+
+try { 
+    $result = $api_instance->salvarTaxasJurosContasUsingPOST($id, $persist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->salvarTaxasJurosContasUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **persist** | [**\br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_**](\br.com.conductor.pier.api.v2.model\TaxaJurosContaPersistValue_.md)| persist | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
 
 ### Authorization
 

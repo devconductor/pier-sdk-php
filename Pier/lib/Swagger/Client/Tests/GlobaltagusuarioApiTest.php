@@ -126,22 +126,22 @@ class GlobaltagusuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for consultarUsingGET15
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_consultarUsingGET15() {
 
     }
     
     /**
-     * Test case for consultarUsingGET50
+     * Test case for consultarUsingGET51
      *
      * {{{usuario_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET50() {
+    public function test_consultarUsingGET51() {
 
     }
     

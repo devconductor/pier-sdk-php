@@ -66,12 +66,12 @@ class GlobaltagarquivoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET4
+     * Test case for consultarUsingGET5
      *
      * {{{arquivo_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET4() {
+    public function test_consultarUsingGET5() {
 
     }
     

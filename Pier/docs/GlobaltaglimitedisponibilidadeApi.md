@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT9**](GlobaltaglimitedisponibilidadeApi.md#alterarUsingPUT9) | **PUT** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_alterar}}}
-[**consultarUsingGET22**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET22) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**consultarUsingGET23**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET23) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
 
 
 # **alterarUsingPUT9**
@@ -79,8 +79,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET22($id_conta)
+# **consultarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarUsingGET23($id_conta)
 
 {{{limite_disponibilidade_resource_consultar}}}
 
@@ -95,10 +95,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltaglimitedisp
 $id_conta = 789; // int | {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET22($id_conta);
+    $result = $api_instance->consultarUsingGET23($id_conta);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltaglimitedisponibilidadeApi->consultarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltaglimitedisponibilidadeApi->consultarUsingGET23: ', $e->getMessage(), "\n";
 }
 ?>
 ```

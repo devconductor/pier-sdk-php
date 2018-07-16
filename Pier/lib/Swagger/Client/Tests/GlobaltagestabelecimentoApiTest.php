@@ -146,22 +146,22 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for cadastrarUsingPOST2
+     * Test case for cadastrarUsingPOST3
      *
      * {{{estabelecimento_resource_cadastrar}}}
      *
      */
-    public function test_cadastrarUsingPOST2() {
+    public function test_cadastrarUsingPOST3() {
 
     }
     
     /**
-     * Test case for cadastrarUsingPOST3
+     * Test case for cadastrarUsingPOST4
      *
      * {{{grupo_economico_resource_cadastrar}}}
      *
      */
-    public function test_cadastrarUsingPOST3() {
+    public function test_cadastrarUsingPOST4() {
 
     }
     
@@ -186,39 +186,29 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET19
+     * Test case for consultarUsingGET20
      *
      * {{{estabelecimento_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET19() {
+    public function test_consultarUsingGET20() {
 
     }
     
     /**
-     * Test case for consultarUsingGET21
+     * Test case for consultarUsingGET22
      *
      * {{{grupo_economico_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET21() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET23
-     *
-     * {{{maquineta_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET23() {
+    public function test_consultarUsingGET22() {
 
     }
     
     /**
      * Test case for consultarUsingGET24
      *
-     * {{{operacao_credor_resource_consultar}}}
+     * {{{maquineta_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET24() {
@@ -226,32 +216,42 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET37
+     * Test case for consultarUsingGET25
+     *
+     * {{{operacao_credor_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET25() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET38
      *
      * {{{telefone_estabelecimento_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET37() {
+    public function test_consultarUsingGET38() {
 
     }
     
     /**
-     * Test case for consultarUsingGET39
+     * Test case for consultarUsingGET40
      *
      * {{{terminal_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET39() {
+    public function test_consultarUsingGET40() {
 
     }
     
     /**
-     * Test case for consultarUsingGET51
+     * Test case for consultarUsingGET52
      *
      * {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET51() {
+    public function test_consultarUsingGET52() {
 
     }
     

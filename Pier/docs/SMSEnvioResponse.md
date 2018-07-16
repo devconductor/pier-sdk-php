@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **conteudo** | **string** | {{{sms_envio_response_conteudo_value}}} | [optional] 
 **quantidade_tentativas_envio** | **int** | {{{sms_envio_response_quantidade_tentativas_envio_value}}} | [optional] 
 **data_inclusao** | **string** | {{{s_m_s_envio_response_data_inclusao_value}}} | [optional] 
+**cpf** | **string** | {{{sms_envio_response_cpf_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

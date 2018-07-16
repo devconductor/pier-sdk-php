@@ -86,19 +86,9 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET16
-     *
-     * {{{documento_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET16() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET17
      *
-     * {{{documento_template_resource_consultar}}}
+     * {{{documento_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET17() {
@@ -106,12 +96,22 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET46
+     * Test case for consultarUsingGET18
+     *
+     * {{{documento_template_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET18() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET47
      *
      * {{{tipo_template_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET46() {
+    public function test_consultarUsingGET47() {
 
     }
     

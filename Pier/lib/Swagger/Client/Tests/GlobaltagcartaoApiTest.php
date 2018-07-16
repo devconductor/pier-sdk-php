@@ -186,12 +186,12 @@ class GlobaltagcartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET9
+     * Test case for consultarUsingGET10
      *
      * {{{cartao_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET10() {
 
     }
     

@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPOST**](GlobaltagpropostaApi.md#alterarUsingPOST) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultarUsingGET32**](GlobaltagpropostaApi.md#consultarUsingGET32) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultarUsingGET33**](GlobaltagpropostaApi.md#consultarUsingGET33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listarStatusPropostaUsingGET**](GlobaltagpropostaApi.md#listarStatusPropostaUsingGET) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
 [**listarUsingGET44**](GlobaltagpropostaApi.md#listarUsingGET44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET32**
-> \br.com.conductor.pier.api.v2.model\PropostaResponse consultarUsingGET32($id)
+# **consultarUsingGET33**
+> \br.com.conductor.pier.api.v2.model\PropostaResponse consultarUsingGET33($id)
 
 {{{proposta_resource_consultar}}}
 
@@ -73,10 +73,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagpropostaAp
 $id = 789; // int | {{{proposta_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET32($id);
+    $result = $api_instance->consultarUsingGET33($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpropostaApi->consultarUsingGET32: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpropostaApi->consultarUsingGET33: ', $e->getMessage(), "\n";
 }
 ?>
 ```

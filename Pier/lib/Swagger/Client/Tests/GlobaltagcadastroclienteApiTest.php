@@ -146,49 +146,39 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for cadastrarUsingPOST
+     * Test case for cadastrarUsingPOST1
      *
      * {{{adicional_resource_cadastrar}}}
      *
      */
-    public function test_cadastrarUsingPOST() {
+    public function test_cadastrarUsingPOST1() {
 
     }
     
     /**
-     * Test case for consultarUsingGET1
-     *
-     * {{{adicional_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET1() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET19
      *
      * {{{endereco_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET19() {
 
     }
     
     /**
-     * Test case for consultarUsingGET29
+     * Test case for consultarUsingGET2
      *
-     * {{{pessoa_detalhe_resource_consultar}}}
+     * {{{adicional_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET29() {
+    public function test_consultarUsingGET2() {
 
     }
     
     /**
      * Test case for consultarUsingGET30
      *
-     * {{{pessoa_resource_consultar}}}
+     * {{{pessoa_detalhe_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET30() {
@@ -196,12 +186,22 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET38
+     * Test case for consultarUsingGET31
+     *
+     * {{{pessoa_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET31() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET39
      *
      * {{{telefone_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET38() {
+    public function test_consultarUsingGET39() {
 
     }
     

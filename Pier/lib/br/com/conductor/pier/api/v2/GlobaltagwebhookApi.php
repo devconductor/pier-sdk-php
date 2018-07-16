@@ -203,7 +203,7 @@ class GlobaltagwebhookApi
     }
     
     /**
-     * consultarUsingGET52
+     * consultarUsingGET53
      *
      * {{{web_hook_resource_consultar}}}
      *
@@ -211,15 +211,15 @@ class GlobaltagwebhookApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET52($id)
+    public function consultarUsingGET53($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET52WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET53WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET52WithHttpInfo
+     * consultarUsingGET53WithHttpInfo
      *
      * {{{web_hook_resource_consultar}}}
      *
@@ -227,12 +227,12 @@ class GlobaltagwebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET52WithHttpInfo($id)
+    public function consultarUsingGET53WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET52');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET53');
         }
   
         // parse inputs

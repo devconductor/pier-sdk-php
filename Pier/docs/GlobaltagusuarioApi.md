@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**ativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#ativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
 [**atualizarUsingPUT2**](GlobaltagusuarioApi.md#atualizarUsingPUT2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultarContasVinculadasUsingGET**](GlobaltagusuarioApi.md#consultarContasVinculadasUsingGET) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultarUsingGET14**](GlobaltagusuarioApi.md#consultarUsingGET14) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultarUsingGET50**](GlobaltagusuarioApi.md#consultarUsingGET50) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultarUsingGET15**](GlobaltagusuarioApi.md#consultarUsingGET15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultarUsingGET51**](GlobaltagusuarioApi.md#consultarUsingGET51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#desativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
 [**listarUsingGET62**](GlobaltagusuarioApi.md#listarUsingGET62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperarSenhaUsingPOST**](GlobaltagusuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
@@ -307,8 +307,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse consultarUsingGET14($id_usuario, $sort, $page, $limit)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse consultarUsingGET15($id_usuario, $sort, $page, $limit)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -326,10 +326,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET14($id_usuario, $sort, $page, $limit);
+    $result = $api_instance->consultarUsingGET15($id_usuario, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -358,8 +358,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET50**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET50($id)
+# **consultarUsingGET51**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET51($id)
 
 {{{usuario_resource_consultar}}}
 
@@ -374,10 +374,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi
 $id = 789; // int | {{{usuario_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET50($id);
+    $result = $api_instance->consultarUsingGET51($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET50: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET51: ', $e->getMessage(), "\n";
 }
 ?>
 ```

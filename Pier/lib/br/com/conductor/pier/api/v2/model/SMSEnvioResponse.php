@@ -57,7 +57,8 @@ class SMSEnvioResponse implements ArrayAccess
         'celular' => 'string',
         'conteudo' => 'string',
         'quantidade_tentativas_envio' => 'int',
-        'data_inclusao' => 'string'
+        'data_inclusao' => 'string',
+        'cpf' => 'string'
     );
   
     static function swaggerTypes() {
@@ -75,7 +76,8 @@ class SMSEnvioResponse implements ArrayAccess
         'celular' => 'celular',
         'conteudo' => 'conteudo',
         'quantidade_tentativas_envio' => 'quantidadeTentativasEnvio',
-        'data_inclusao' => 'dataInclusao'
+        'data_inclusao' => 'dataInclusao',
+        'cpf' => 'cpf'
     );
   
     static function attributeMap() {
@@ -93,7 +95,8 @@ class SMSEnvioResponse implements ArrayAccess
         'celular' => 'setCelular',
         'conteudo' => 'setConteudo',
         'quantidade_tentativas_envio' => 'setQuantidadeTentativasEnvio',
-        'data_inclusao' => 'setDataInclusao'
+        'data_inclusao' => 'setDataInclusao',
+        'cpf' => 'setCpf'
     );
   
     static function setters() {
@@ -111,7 +114,8 @@ class SMSEnvioResponse implements ArrayAccess
         'celular' => 'getCelular',
         'conteudo' => 'getConteudo',
         'quantidade_tentativas_envio' => 'getQuantidadeTentativasEnvio',
-        'data_inclusao' => 'getDataInclusao'
+        'data_inclusao' => 'getDataInclusao',
+        'cpf' => 'getCpf'
     );
   
     static function getters() {
@@ -161,6 +165,12 @@ class SMSEnvioResponse implements ArrayAccess
       */
     protected $data_inclusao;
     
+    /**
+      * $cpf {{{sms_envio_response_cpf_value}}}
+      * @var string
+      */
+    protected $cpf;
+    
 
     /**
      * Constructor
@@ -177,6 +187,7 @@ class SMSEnvioResponse implements ArrayAccess
             $this->conteudo = $data["conteudo"];
             $this->quantidade_tentativas_envio = $data["quantidade_tentativas_envio"];
             $this->data_inclusao = $data["data_inclusao"];
+            $this->cpf = $data["cpf"];
         }
     }
     
@@ -324,6 +335,27 @@ class SMSEnvioResponse implements ArrayAccess
     {
         
         $this->data_inclusao = $data_inclusao;
+        return $this;
+    }
+    
+    /**
+     * Gets cpf
+     * @return string
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+  
+    /**
+     * Sets cpf
+     * @param string $cpf {{{sms_envio_response_cpf_value}}}
+     * @return $this
+     */
+    public function setCpf($cpf)
+    {
+        
+        $this->cpf = $cpf;
         return $this;
     }
     

@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustarContaUsingPOST**](GlobaltagajustefinanceiroApi.md#ajustarContaUsingPOST) | **POST** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_ajustar_conta}}}
-[**consultarUsingGET2**](GlobaltagajustefinanceiroApi.md#consultarUsingGET2) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
+[**consultarUsingGET3**](GlobaltagajustefinanceiroApi.md#consultarUsingGET3) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
 [**listarUsingGET2**](GlobaltagajustefinanceiroApi.md#listarUsingGET2) | **GET** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_listar}}}
 
 
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET2**
-> \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse consultarUsingGET2($id)
+# **consultarUsingGET3**
+> \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse consultarUsingGET3($id)
 
 {{{ajuste_financeiro_resource_consultar}}}
 
@@ -80,10 +80,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagajustefina
 $id = 789; // int | {{{ajuste_financeiro_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET2($id);
+    $result = $api_instance->consultarUsingGET3($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagajustefinanceiroApi->consultarUsingGET2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagajustefinanceiroApi->consultarUsingGET3: ', $e->getMessage(), "\n";
 }
 ?>
 ```

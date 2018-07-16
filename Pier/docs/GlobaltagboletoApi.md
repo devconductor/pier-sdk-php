@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET33**](GlobaltagboletoApi.md#consultarUsingGET33) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultarUsingGET34**](GlobaltagboletoApi.md#consultarUsingGET34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviarBoletoEmailUsingPOST**](GlobaltagboletoApi.md#enviarBoletoEmailUsingPOST) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerarBoletoUsingPOST**](GlobaltagboletoApi.md#gerarBoletoUsingPOST) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
 [**listarUsingGET45**](GlobaltagboletoApi.md#listarUsingGET45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**visualizarBoletoUsingGET**](GlobaltagboletoApi.md#visualizarBoletoUsingGET) | **GET** /api/boletos/{id}/arquivo.pdf | {{{boleto_resource_visualizar_boleto}}}
 
 
-# **consultarUsingGET33**
-> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarUsingGET33($id)
+# **consultarUsingGET34**
+> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarUsingGET34($id)
 
 {{{boleto_resource_consultar}}}
 
@@ -28,10 +28,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagboletoApi(
 $id = 789; // int | {{{boleto_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET33($id);
+    $result = $api_instance->consultarUsingGET34($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagboletoApi->consultarUsingGET33: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagboletoApi->consultarUsingGET34: ', $e->getMessage(), "\n";
 }
 ?>
 ```

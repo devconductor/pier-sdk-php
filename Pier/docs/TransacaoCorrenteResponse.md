@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **tipo_estabelecimento** | **string** | {{{transacao_corrente_response_tipo_estabelecimento_value}}} | [optional] 
 **id_grupo_mcc** | **int** | {{{transacao_corrente_response_id_grupo_m_c_c_value}}} | [optional] 
 **flag_solicitou_contestacao** | **int** | {{{transacao_corrente_response_flag_solicitou_contestacao_value}}} | [optional] 
+**tipo_transacao** | **int** | {{{transacao_corrente_response_tipo_transacao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

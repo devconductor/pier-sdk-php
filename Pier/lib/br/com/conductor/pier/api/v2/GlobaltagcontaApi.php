@@ -937,6 +937,97 @@ class GlobaltagcontaApi
     }
     
     /**
+     * cadastrarUsingPOST
+     *
+     * {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+     *
+     * @param int $id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} (required)
+     * @return \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cadastrarUsingPOST($id)
+    {
+        list($response, $statusCode, $httpHeader) = $this->cadastrarUsingPOSTWithHttpInfo ($id);
+        return $response; 
+    }
+
+
+    /**
+     * cadastrarUsingPOSTWithHttpInfo
+     *
+     * {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+     *
+     * @param int $id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function cadastrarUsingPOSTWithHttpInfo($id)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling cadastrarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/adesoes-pagamentos-sabados";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * cancelarUsingPOST1
      *
      * {{{conta_resource_cancelar}}}
@@ -1508,7 +1599,108 @@ class GlobaltagcontaApi
     }
     
     /**
-     * consultarUsingGET13
+     * consultarUsingGET1
+     *
+     * {{{aderir_pagamento_sabado_recurso_consultar}}}
+     *
+     * @param int $id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} (required)
+     * @param string $data_vencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} (required)
+     * @return \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET1($id, $data_vencimento)
+    {
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET1WithHttpInfo ($id, $data_vencimento);
+        return $response; 
+    }
+
+
+    /**
+     * consultarUsingGET1WithHttpInfo
+     *
+     * {{{aderir_pagamento_sabado_recurso_consultar}}}
+     *
+     * @param int $id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} (required)
+     * @param string $data_vencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function consultarUsingGET1WithHttpInfo($id, $data_vencimento)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET1');
+        }
+        // verify the required parameter 'data_vencimento' is set
+        if ($data_vencimento === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data_vencimento when calling consultarUsingGET1');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/adesoes-pagamentos-sabados";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($data_vencimento !== null) {
+            $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\AdesaoPagamentoSabadoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * consultarUsingGET14
      *
      * {{{conta_resource_consultar}}}
      *
@@ -1517,15 +1709,15 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13($id, $authorization = null)
+    public function consultarUsingGET14($id, $authorization = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET13WithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id, $authorization);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET13WithHttpInfo
+     * consultarUsingGET14WithHttpInfo
      *
      * {{{conta_resource_consultar}}}
      *
@@ -1534,12 +1726,12 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET13WithHttpInfo($id, $authorization = null)
+    public function consultarUsingGET14WithHttpInfo($id, $authorization = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET13');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET14');
         }
   
         // parse inputs
@@ -1609,7 +1801,7 @@ class GlobaltagcontaApi
     }
     
     /**
-     * consultarUsingGET48
+     * consultarUsingGET49
      *
      * {{{transferencia_resource_consultar}}}
      *
@@ -1618,15 +1810,15 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET48($id, $id_transferencia)
+    public function consultarUsingGET49($id, $id_transferencia)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET48WithHttpInfo ($id, $id_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET49WithHttpInfo ($id, $id_transferencia);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET48WithHttpInfo
+     * consultarUsingGET49WithHttpInfo
      *
      * {{{transferencia_resource_consultar}}}
      *
@@ -1635,16 +1827,16 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET48WithHttpInfo($id, $id_transferencia)
+    public function consultarUsingGET49WithHttpInfo($id, $id_transferencia)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET48');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET49');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET48');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET49');
         }
   
         // parse inputs
@@ -2894,12 +3086,13 @@ class GlobaltagcontaApi
      * @param string $data_inicio {{{transacoes_processadas_request_data_inicio_value}}} (optional)
      * @param string $data_fim {{{transacoes_processadas_request_data_fim_value}}} (optional)
      * @param int $id_tipo_transacao {{{transacoes_processadas_request_tipo_transacao}}} (optional)
+     * @param int $recupera_encargos {{{transacoes_processadas_request_recupera_encargos}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarProcessadasUsingGET($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
+    public function listarProcessadasUsingGET($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null, $recupera_encargos = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarProcessadasUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarProcessadasUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao, $recupera_encargos);
         return $response; 
     }
 
@@ -2917,10 +3110,11 @@ class GlobaltagcontaApi
      * @param string $data_inicio {{{transacoes_processadas_request_data_inicio_value}}} (optional)
      * @param string $data_fim {{{transacoes_processadas_request_data_fim_value}}} (optional)
      * @param int $id_tipo_transacao {{{transacoes_processadas_request_tipo_transacao}}} (optional)
+     * @param int $recupera_encargos {{{transacoes_processadas_request_recupera_encargos}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacoesCorrentesResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarProcessadasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
+    public function listarProcessadasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null, $recupera_encargos = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2972,6 +3166,10 @@ class GlobaltagcontaApi
         
         if ($id_tipo_transacao !== null) {
             $queryParams['idTipoTransacao'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_transacao);
+        }// query params
+        
+        if ($recupera_encargos !== null) {
+            $queryParams['recuperaEncargos'] = $this->apiClient->getSerializer()->toQueryValue($recupera_encargos);
         }
         
         // path params

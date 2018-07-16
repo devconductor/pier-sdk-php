@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**atualizarChaveUsingPOST**](GlobaltagpayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
 [**atualizarUsingPUT**](GlobaltagpayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirmaAtualizacaoChaveUsingPOST**](GlobaltagpayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultarUsingGET8**](GlobaltagpayApi.md#consultarUsingGET8) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultarUsingGET9**](GlobaltagpayApi.md#consultarUsingGET9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listarCodigosRespostaUsingGET**](GlobaltagpayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listarModosEntradaUsingGET**](GlobaltagpayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listarOperacoesUsingGET**](GlobaltagpayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
@@ -162,8 +162,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET8($device_id, $id)
+# **consultarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET9($device_id, $id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -179,10 +179,10 @@ $device_id = "device_id_example"; // string | {{{cartao_pay_resource_consultar_p
 $id = 789; // int | {{{cartao_pay_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET8($device_id, $id);
+    $result = $api_instance->consultarUsingGET9($device_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpayApi->consultarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpayApi->consultarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```

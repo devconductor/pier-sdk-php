@@ -92,7 +92,7 @@ class GlobaltagboletoApi
   
     
     /**
-     * consultarUsingGET33
+     * consultarUsingGET34
      *
      * {{{boleto_resource_consultar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagboletoApi
      * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET33($id)
+    public function consultarUsingGET34($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET33WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET34WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET33WithHttpInfo
+     * consultarUsingGET34WithHttpInfo
      *
      * {{{boleto_resource_consultar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagboletoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET33WithHttpInfo($id)
+    public function consultarUsingGET34WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET33');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET34');
         }
   
         // parse inputs

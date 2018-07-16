@@ -68,7 +68,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'int',
         'tipo_estabelecimento' => 'string',
         'id_grupo_mcc' => 'int',
-        'flag_solicitou_contestacao' => 'int'
+        'flag_solicitou_contestacao' => 'int',
+        'tipo_transacao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -97,7 +98,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'flagCredito',
         'tipo_estabelecimento' => 'tipoEstabelecimento',
         'id_grupo_mcc' => 'idGrupoMCC',
-        'flag_solicitou_contestacao' => 'flagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'flagSolicitouContestacao',
+        'tipo_transacao' => 'tipoTransacao'
     );
   
     static function attributeMap() {
@@ -126,7 +128,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'setFlagCredito',
         'tipo_estabelecimento' => 'setTipoEstabelecimento',
         'id_grupo_mcc' => 'setIdGrupoMcc',
-        'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao',
+        'tipo_transacao' => 'setTipoTransacao'
     );
   
     static function setters() {
@@ -155,7 +158,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'getFlagCredito',
         'tipo_estabelecimento' => 'getTipoEstabelecimento',
         'id_grupo_mcc' => 'getIdGrupoMcc',
-        'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao',
+        'tipo_transacao' => 'getTipoTransacao'
     );
   
     static function getters() {
@@ -271,6 +275,12 @@ class TransacaoCorrenteResponse implements ArrayAccess
       */
     protected $flag_solicitou_contestacao;
     
+    /**
+      * $tipo_transacao {{{transacao_corrente_response_tipo_transacao_value}}}
+      * @var int
+      */
+    protected $tipo_transacao;
+    
 
     /**
      * Constructor
@@ -298,6 +308,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
             $this->tipo_estabelecimento = $data["tipo_estabelecimento"];
             $this->id_grupo_mcc = $data["id_grupo_mcc"];
             $this->flag_solicitou_contestacao = $data["flag_solicitou_contestacao"];
+            $this->tipo_transacao = $data["tipo_transacao"];
         }
     }
     
@@ -676,6 +687,27 @@ class TransacaoCorrenteResponse implements ArrayAccess
     {
         
         $this->flag_solicitou_contestacao = $flag_solicitou_contestacao;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_transacao
+     * @return int
+     */
+    public function getTipoTransacao()
+    {
+        return $this->tipo_transacao;
+    }
+  
+    /**
+     * Sets tipo_transacao
+     * @param int $tipo_transacao {{{transacao_corrente_response_tipo_transacao_value}}}
+     * @return $this
+     */
+    public function setTipoTransacao($tipo_transacao)
+    {
+        
+        $this->tipo_transacao = $tipo_transacao;
         return $this;
     }
     

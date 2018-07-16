@@ -12,17 +12,17 @@ Method | HTTP request | Description
 [**alterarUsingPUT6**](GlobaltagestabelecimentoApi.md#alterarUsingPUT6) | **PUT** /api/estabelecimentos/{id} | {{{estabelecimento_resource_alterar}}}
 [**alterarUsingPUT8**](GlobaltagestabelecimentoApi.md#alterarUsingPUT8) | **PUT** /api/grupos-economicos/{id} | {{{grupo_economico_resource_alterar}}}
 [**cadastrarOrigemComercialUsingPOST**](GlobaltagestabelecimentoApi.md#cadastrarOrigemComercialUsingPOST) | **POST** /api/origens-comerciais | {{{origem_comercial_resource_cadastrar_origem_comercial}}}
-[**cadastrarUsingPOST2**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
-[**cadastrarUsingPOST3**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
+[**cadastrarUsingPOST3**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
+[**cadastrarUsingPOST4**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consultaOperacaoUsingGET**](GlobaltagestabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultarOrigemComercialUsingGET**](GlobaltagestabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultarUsingGET19**](GlobaltagestabelecimentoApi.md#consultarUsingGET19) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultarUsingGET21**](GlobaltagestabelecimentoApi.md#consultarUsingGET21) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultarUsingGET23**](GlobaltagestabelecimentoApi.md#consultarUsingGET23) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultarUsingGET37**](GlobaltagestabelecimentoApi.md#consultarUsingGET37) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultarUsingGET39**](GlobaltagestabelecimentoApi.md#consultarUsingGET39) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultarUsingGET51**](GlobaltagestabelecimentoApi.md#consultarUsingGET51) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultarUsingGET20**](GlobaltagestabelecimentoApi.md#consultarUsingGET20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultarUsingGET25**](GlobaltagestabelecimentoApi.md#consultarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultarUsingGET38**](GlobaltagestabelecimentoApi.md#consultarUsingGET38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultarUsingGET52**](GlobaltagestabelecimentoApi.md#consultarUsingGET52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitarVinculoUsingPOST1**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -426,8 +426,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cadastrarUsingPOST2**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse cadastrarUsingPOST2($persist)
+# **cadastrarUsingPOST3**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse cadastrarUsingPOST3($persist)
 
 {{{estabelecimento_resource_cadastrar}}}
 
@@ -442,10 +442,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $persist = new \br.com.conductor.pier.api.v2.model\EstabelecimentoPersist(); // \br.com.conductor.pier.api.v2.model\EstabelecimentoPersist | persist
 
 try { 
-    $result = $api_instance->cadastrarUsingPOST2($persist);
+    $result = $api_instance->cadastrarUsingPOST3($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->cadastrarUsingPOST2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->cadastrarUsingPOST3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -471,8 +471,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cadastrarUsingPOST3**
-> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse cadastrarUsingPOST3($grupo_economico_dto)
+# **cadastrarUsingPOST4**
+> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse cadastrarUsingPOST4($grupo_economico_dto)
 
 {{{grupo_economico_resource_cadastrar}}}
 
@@ -487,10 +487,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $grupo_economico_dto = new \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO(); // \br.com.conductor.pier.api.v2.model\GrupoEconomicoDTO | GrupoEconomicoDTO
 
 try { 
-    $result = $api_instance->cadastrarUsingPOST3($grupo_economico_dto);
+    $result = $api_instance->cadastrarUsingPOST4($grupo_economico_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->cadastrarUsingPOST3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->cadastrarUsingPOST4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -606,8 +606,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET19**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET19($id)
+# **consultarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET20($id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -622,10 +622,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET19($id);
+    $result = $api_instance->consultarUsingGET20($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET19: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -651,8 +651,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET21($id)
+# **consultarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET22($id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -667,10 +667,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{grupo_economico_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET21($id);
+    $result = $api_instance->consultarUsingGET22($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -696,8 +696,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET23**
-> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET23($id)
+# **consultarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET24($id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -712,10 +712,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{maquineta_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET23($id);
+    $result = $api_instance->consultarUsingGET24($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET23: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -741,8 +741,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET24($id)
+# **consultarUsingGET25**
+> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET25($id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -757,10 +757,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{operacao_credor_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET24($id);
+    $result = $api_instance->consultarUsingGET25($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET25: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -786,8 +786,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET37**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET37($id)
+# **consultarUsingGET38**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET38($id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -802,10 +802,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{telefone_estabelecimento_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET37($id);
+    $result = $api_instance->consultarUsingGET38($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET37: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET38: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -831,8 +831,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET39**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET39($id)
+# **consultarUsingGET40**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET40($id)
 
 {{{terminal_resource_consultar}}}
 
@@ -847,10 +847,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{terminal_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET39($id);
+    $result = $api_instance->consultarUsingGET40($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET39: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET40: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -876,8 +876,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET51**
-> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET51($id)
+# **consultarUsingGET52**
+> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52($id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -892,10 +892,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET51($id);
+    $result = $api_instance->consultarUsingGET52($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET51: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET52: ', $e->getMessage(), "\n";
 }
 ?>
 ```

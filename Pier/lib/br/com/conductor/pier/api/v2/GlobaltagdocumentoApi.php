@@ -302,7 +302,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET16
+     * consultarUsingGET17
      *
      * {{{documento_resource_consultar}}}
      *
@@ -310,15 +310,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16($id)
+    public function consultarUsingGET17($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET16WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * {{{documento_resource_consultar}}}
      *
@@ -326,12 +326,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET16WithHttpInfo($id)
+    public function consultarUsingGET17WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
         }
   
         // parse inputs
@@ -397,7 +397,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET17
+     * consultarUsingGET18
      *
      * {{{documento_template_resource_consultar}}}
      *
@@ -405,15 +405,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17($id)
+    public function consultarUsingGET18($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET17WithHttpInfo
+     * consultarUsingGET18WithHttpInfo
      *
      * {{{documento_template_resource_consultar}}}
      *
@@ -421,12 +421,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17WithHttpInfo($id)
+    public function consultarUsingGET18WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET18');
         }
   
         // parse inputs
@@ -492,7 +492,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET46
+     * consultarUsingGET47
      *
      * {{{tipo_template_resource_consultar}}}
      *
@@ -500,15 +500,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET46($id)
+    public function consultarUsingGET47($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET46WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET47WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET46WithHttpInfo
+     * consultarUsingGET47WithHttpInfo
      *
      * {{{tipo_template_resource_consultar}}}
      *
@@ -516,12 +516,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET46WithHttpInfo($id)
+    public function consultarUsingGET47WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET46');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET47');
         }
   
         // parse inputs

@@ -76,12 +76,12 @@ class GlobaltaglimitedisponibilidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET22
+     * Test case for consultarUsingGET23
      *
      * {{{limite_disponibilidade_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET22() {
+    public function test_consultarUsingGET23() {
 
     }
     

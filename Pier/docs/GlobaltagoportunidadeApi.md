@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterarUsingPUT12**](GlobaltagoportunidadeApi.md#alterarUsingPUT12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterarUsingPUT20**](GlobaltagoportunidadeApi.md#alterarUsingPUT20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultarStatusUsingGET**](GlobaltagoportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultarUsingGET25**](GlobaltagoportunidadeApi.md#consultarUsingGET25) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultarUsingGET44**](GlobaltagoportunidadeApi.md#consultarUsingGET44) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultarUsingGET26**](GlobaltagoportunidadeApi.md#consultarUsingGET26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultarUsingGET45**](GlobaltagoportunidadeApi.md#consultarUsingGET45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listarAuditoriasStatusUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listarAuditoriasUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listarAuditoriasUsingGET1**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
@@ -211,8 +211,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\OportunidadeResponse consultarUsingGET25($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\OportunidadeResponse consultarUsingGET26($id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -227,10 +227,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $id = 789; // int | {{{oportunidade_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET25($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -256,8 +256,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET44**
-> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse consultarUsingGET44($id)
+# **consultarUsingGET45**
+> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse consultarUsingGET45($id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -272,10 +272,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $id = 789; // int | {{{tipo_oportunidade_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET44($id);
+    $result = $api_instance->consultarUsingGET45($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET44: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET45: ', $e->getMessage(), "\n";
 }
 ?>
 ```

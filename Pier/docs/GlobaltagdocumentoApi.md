@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT21**](GlobaltagdocumentoApi.md#alterarUsingPUT21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
 [**atualizarUsingPUT3**](GlobaltagdocumentoApi.md#atualizarUsingPUT3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultarUsingGET16**](GlobaltagdocumentoApi.md#consultarUsingGET16) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultarUsingGET46**](GlobaltagdocumentoApi.md#consultarUsingGET46) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultarUsingGET18**](GlobaltagdocumentoApi.md#consultarUsingGET18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultarUsingGET47**](GlobaltagdocumentoApi.md#consultarUsingGET47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrarUsingPOST1**](GlobaltagdocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
 [**listarUsingGET21**](GlobaltagdocumentoApi.md#listarUsingGET21) | **GET** /api/documentos | {{{documento_resource_listar}}}
 [**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
@@ -112,8 +112,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET16($id)
+# **consultarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET17($id)
 
 {{{documento_resource_consultar}}}
 
@@ -128,10 +128,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{documento_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET16($id);
+    $result = $api_instance->consultarUsingGET17($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET17($id)
+# **consultarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET18($id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -173,10 +173,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{documento_template_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET17($id);
+    $result = $api_instance->consultarUsingGET18($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -202,8 +202,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET46**
-> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET46($id)
+# **consultarUsingGET47**
+> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET47($id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -218,10 +218,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{tipo_template_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET46($id);
+    $result = $api_instance->consultarUsingGET47($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET46: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET47: ', $e->getMessage(), "\n";
 }
 ?>
 ```

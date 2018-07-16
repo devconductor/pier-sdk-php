@@ -86,22 +86,22 @@ class GlobaltagstatusparametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET35
+     * Test case for consultarUsingGET36
      *
      * {{{status_conta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET35() {
+    public function test_consultarUsingGET36() {
 
     }
     
     /**
-     * Test case for consultarUsingGET36
+     * Test case for consultarUsingGET37
      *
      * {{{status_impressao_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET36() {
+    public function test_consultarUsingGET37() {
 
     }
     

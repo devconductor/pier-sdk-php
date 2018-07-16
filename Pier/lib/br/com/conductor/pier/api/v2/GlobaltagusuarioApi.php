@@ -720,7 +720,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * consultarUsingGET14
+     * consultarUsingGET15
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
@@ -731,15 +731,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET14($id_usuario, $sort = null, $page = null, $limit = null)
+    public function consultarUsingGET15($id_usuario, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id_usuario, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET15WithHttpInfo ($id_usuario, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET14WithHttpInfo
+     * consultarUsingGET15WithHttpInfo
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
@@ -750,12 +750,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET14WithHttpInfo($id_usuario, $sort = null, $page = null, $limit = null)
+    public function consultarUsingGET15WithHttpInfo($id_usuario, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id_usuario' is set
         if ($id_usuario === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_usuario when calling consultarUsingGET14');
+            throw new \InvalidArgumentException('Missing the required parameter $id_usuario when calling consultarUsingGET15');
         }
   
         // parse inputs
@@ -833,7 +833,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * consultarUsingGET50
+     * consultarUsingGET51
      *
      * {{{usuario_resource_consultar}}}
      *
@@ -841,15 +841,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET50($id)
+    public function consultarUsingGET51($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET50WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET51WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET50WithHttpInfo
+     * consultarUsingGET51WithHttpInfo
      *
      * {{{usuario_resource_consultar}}}
      *
@@ -857,12 +857,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET50WithHttpInfo($id)
+    public function consultarUsingGET51WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET50');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET51');
         }
   
         // parse inputs

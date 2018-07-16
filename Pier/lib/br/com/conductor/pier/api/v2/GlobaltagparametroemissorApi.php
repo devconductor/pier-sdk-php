@@ -92,7 +92,7 @@ class GlobaltagparametroemissorApi
   
     
     /**
-     * consultarUsingGET26
+     * consultarUsingGET27
      *
      * {{{parametro_emissor_recurso}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagparametroemissorApi
      * @return \br.com.conductor.pier.api.v2.model\ParametroEmissorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26($codigo)
+    public function consultarUsingGET27($codigo)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($codigo);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($codigo);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET26WithHttpInfo
+     * consultarUsingGET27WithHttpInfo
      *
      * {{{parametro_emissor_recurso}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagparametroemissorApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ParametroEmissorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26WithHttpInfo($codigo)
+    public function consultarUsingGET27WithHttpInfo($codigo)
     {
         
         // verify the required parameter 'codigo' is set
         if ($codigo === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $codigo when calling consultarUsingGET26');
+            throw new \InvalidArgumentException('Missing the required parameter $codigo when calling consultarUsingGET27');
         }
   
         // parse inputs
