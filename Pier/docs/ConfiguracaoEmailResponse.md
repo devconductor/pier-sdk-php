@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Id da Configura\u00E7\u00E3o EMAIL. | [optional] 
-**host** | **string** | IP (Host) do servidor de e-mail. | [optional] 
-**port** | **string** | Porta usada pelo servidor de e-mail. | [optional] 
-**port_tlsstarttls** | **string** | Porta usada pelo servi\u00E7o TLS/STARTTLS. | [optional] 
-**port_ssl** | **string** | Porta usada pelo servi\u00E7o SSL. | [optional] 
-**protocolo** | **string** | Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp). | [optional] 
-**requer_autenticacao** | **bool** | O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o. | [optional] 
-**requer_ssl** | **bool** | O servi\u00E7o de e-mail requer SSL. | [optional] 
-**requer_tls** | **bool** | O servi\u00E7o de e-mail requer TLS. | [optional] 
-**usuario** | **string** | Usuario do servi\u00E7o de e-mail. | [optional] 
-**senha** | **string** | Senha de usu\u00E1rio do servi\u00E7o de e-mail. | [optional] 
-**data_inclusao** | **string** | Data de inclus\u00E3o. | [optional] 
-**data_alteracao** | **string** | Data de altera\u00E7\u00E3o. | [optional] 
+**id** | **int** | {{{configuracao_email_response_id_value}}} | [optional] 
+**host** | **string** | {{{configuracao_email_response_host_value}}} | [optional] 
+**port** | **string** | {{{configuracao_email_response_port_value}}} | [optional] 
+**port_tlsstarttls** | **string** | {{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}} | [optional] 
+**port_ssl** | **string** | {{{configuracao_email_response_port_s_s_l_value}}} | [optional] 
+**protocolo** | **string** | {{{configuracao_email_response_protocolo_value}}} | [optional] 
+**requer_autenticacao** | **bool** | {{{configuracao_email_response_requer_autenticacao_value}}} | [optional] 
+**requer_ssl** | **bool** | {{{configuracao_email_response_requer_s_s_l_value}}} | [optional] 
+**requer_tls** | **bool** | {{{configuracao_email_response_requer_t_l_s_value}}} | [optional] 
+**usuario** | **string** | {{{configuracao_email_response_usuario_value}}} | [optional] 
+**senha** | **string** | {{{configuracao_email_response_senha_value}}} | [optional] 
+**data_inclusao** | **string** | {{{configuracao_email_response_data_inclusao_value}}} | [optional] 
+**data_alteracao** | **string** | {{{configuracao_email_response_data_alteracao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

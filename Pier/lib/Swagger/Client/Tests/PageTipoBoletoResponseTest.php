@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * PageTipoBoletoResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Lista dos tipos de boletos
+ * @description {{{page_tipo_boleto_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

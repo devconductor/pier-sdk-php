@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_transferencia** | **int** | C\u00F3digo de identifica\u00E7\u00E3o da transferencia. | [optional] 
-**id_conta** | **int** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**id_cartao** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o. | [optional] 
-**valor_compra** | [**Number**](Number.md) | Valor da transfer\u00EAncia. | [optional] 
-**valor_contrato** | [**Number**](Number.md) | Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque. | [optional] 
-**data_compra** | **string** | Data da transfer\u00EAncia. | [optional] 
-**status** | **int** | C\u00F3digo de status de processamento. | [optional] 
-**status_processamento** | **string** | Status Processamento. | [optional] 
+**id_transferencia** | **int** | {{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}} | [optional] 
+**id_conta** | **int** | {{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}} | [optional] 
+**id_cartao** | **int** | {{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}} | [optional] 
+**valor_compra** | [**Number**](Number.md) | {{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}} | [optional] 
+**valor_contrato** | [**Number**](Number.md) | {{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}} | [optional] 
+**data_compra** | **string** | {{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}} | [optional] 
+**status** | **int** | {{{transferencia_credito_conta_bancaria_lista_response_status_value}}} | [optional] 
+**status_processamento** | **string** | {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

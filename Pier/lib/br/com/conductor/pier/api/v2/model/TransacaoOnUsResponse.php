@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoOnUsResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta de Autoriza\u00E7\u00E3o
+ * @description {{{transacao_on_us_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class TransacaoOnUsResponse implements ArrayAccess
 
     
     /**
-      * $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+      * $nsu_origem {{{transacao_on_us_response_nsu_origem_value}}}
       * @var string
       */
     protected $nsu_origem;
     
     /**
-      * $nsu_autorizacao N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
+      * $nsu_autorizacao {{{transacao_on_us_response_nsu_autorizacao_value}}}
       * @var string
       */
     protected $nsu_autorizacao;
     
     /**
-      * $plano_de_parcelamento Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
+      * $plano_de_parcelamento {{{transacao_on_us_response_plano_de_parcelamento_value}}}
       * @var \br.com.conductor.pier.api.v2.model\MapOfstringAndstring[]
       */
     protected $plano_de_parcelamento;
     
     /**
-      * $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
+      * $codigo_autorizacao {{{transacao_on_us_response_codigo_autorizacao_value}}}
       * @var string
       */
     protected $codigo_autorizacao;
     
     /**
-      * $numero_mascarado_cartao N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+      * $numero_mascarado_cartao {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
       * @var string
       */
     protected $numero_mascarado_cartao;
     
     /**
-      * $nome_portador_cartao Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
+      * $nome_portador_cartao {{{transacao_on_us_response_nome_portador_cartao_value}}}
       * @var string
       */
     protected $nome_portador_cartao;
     
     /**
-      * $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+      * $terminal_requisitante {{{transacao_on_us_response_terminal_requisitante_value}}}
       * @var string
       */
     protected $terminal_requisitante;
@@ -191,7 +191,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets nsu_origem
-     * @param string $nsu_origem N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+     * @param string $nsu_origem {{{transacao_on_us_response_nsu_origem_value}}}
      * @return $this
      */
     public function setNsuOrigem($nsu_origem)
@@ -212,7 +212,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets nsu_autorizacao
-     * @param string $nsu_autorizacao N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
+     * @param string $nsu_autorizacao {{{transacao_on_us_response_nsu_autorizacao_value}}}
      * @return $this
      */
     public function setNsuAutorizacao($nsu_autorizacao)
@@ -233,7 +233,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets plano_de_parcelamento
-     * @param \br.com.conductor.pier.api.v2.model\MapOfstringAndstring[] $plano_de_parcelamento Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
+     * @param \br.com.conductor.pier.api.v2.model\MapOfstringAndstring[] $plano_de_parcelamento {{{transacao_on_us_response_plano_de_parcelamento_value}}}
      * @return $this
      */
     public function setPlanoDeParcelamento($plano_de_parcelamento)
@@ -254,7 +254,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets codigo_autorizacao
-     * @param string $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
+     * @param string $codigo_autorizacao {{{transacao_on_us_response_codigo_autorizacao_value}}}
      * @return $this
      */
     public function setCodigoAutorizacao($codigo_autorizacao)
@@ -275,7 +275,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets numero_mascarado_cartao
-     * @param string $numero_mascarado_cartao N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+     * @param string $numero_mascarado_cartao {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
      * @return $this
      */
     public function setNumeroMascaradoCartao($numero_mascarado_cartao)
@@ -296,7 +296,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets nome_portador_cartao
-     * @param string $nome_portador_cartao Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
+     * @param string $nome_portador_cartao {{{transacao_on_us_response_nome_portador_cartao_value}}}
      * @return $this
      */
     public function setNomePortadorCartao($nome_portador_cartao)
@@ -317,7 +317,7 @@ class TransacaoOnUsResponse implements ArrayAccess
   
     /**
      * Sets terminal_requisitante
-     * @param string $terminal_requisitante Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+     * @param string $terminal_requisitante {{{transacao_on_us_response_terminal_requisitante_value}}}
      * @return $this
      */
     public function setTerminalRequisitante($terminal_requisitante)

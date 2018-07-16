@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoAtrasoFaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Hist\u00F3rico Pagamento Fatura Atraso
+ * @description {{{historico_atraso_fatura_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
 
     
     /**
-      * $data_vencimento Data vencimento fatura.
+      * $data_vencimento {{{historico_atraso_fatura_response_data_vencimento_value}}}
       * @var string
       */
     protected $data_vencimento;
     
     /**
-      * $dias_pagamento_apos_vencimento Quantidade de dias em atraso.
+      * $dias_pagamento_apos_vencimento {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
       * @var int
       */
     protected $dias_pagamento_apos_vencimento;
@@ -136,7 +136,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param string $data_vencimento Data vencimento fatura.
+     * @param string $data_vencimento {{{historico_atraso_fatura_response_data_vencimento_value}}}
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -157,7 +157,7 @@ class HistoricoAtrasoFaturaResponse implements ArrayAccess
   
     /**
      * Sets dias_pagamento_apos_vencimento
-     * @param int $dias_pagamento_apos_vencimento Quantidade de dias em atraso.
+     * @param int $dias_pagamento_apos_vencimento {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
      * @return $this
      */
     public function setDiasPagamentoAposVencimento($dias_pagamento_apos_vencimento)

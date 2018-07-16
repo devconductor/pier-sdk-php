@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AtribuirAssinaturaClientePersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
+ * @description {{{atribuir_assinatura_cliente_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class AtribuirAssinaturaClientePersist implements ArrayAccess
 
     
     /**
-      * $id_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
+      * $id_arquivo {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
       * @var int
       */
     protected $id_arquivo;
@@ -125,7 +125,7 @@ class AtribuirAssinaturaClientePersist implements ArrayAccess
   
     /**
      * Sets id_arquivo
-     * @param int $id_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
+     * @param int $id_arquivo {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
      * @return $this
      */
     public function setIdArquivo($id_arquivo)

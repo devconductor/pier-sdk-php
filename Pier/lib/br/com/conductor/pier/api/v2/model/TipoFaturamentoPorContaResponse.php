@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoFaturamentoPorContaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Faturamento
+ * @description {{{tipo_faturamento_por_conta_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -53,7 +53,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
     static $swaggerTypes = array(
         'id' => 'int',
         'id_conta' => 'int',
-        'status' => 'bool',
+        'ativo' => 'bool',
         'id_tipo_faturamento' => 'int',
         'data_hora_inclusao' => 'string',
         'data_hora_cancelamento' => 'string',
@@ -71,7 +71,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
     static $attributeMap = array(
         'id' => 'id',
         'id_conta' => 'idConta',
-        'status' => 'status',
+        'ativo' => 'ativo',
         'id_tipo_faturamento' => 'idTipoFaturamento',
         'data_hora_inclusao' => 'dataHoraInclusao',
         'data_hora_cancelamento' => 'dataHoraCancelamento',
@@ -89,7 +89,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
     static $setters = array(
         'id' => 'setId',
         'id_conta' => 'setIdConta',
-        'status' => 'setStatus',
+        'ativo' => 'setAtivo',
         'id_tipo_faturamento' => 'setIdTipoFaturamento',
         'data_hora_inclusao' => 'setDataHoraInclusao',
         'data_hora_cancelamento' => 'setDataHoraCancelamento',
@@ -107,7 +107,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
     static $getters = array(
         'id' => 'getId',
         'id_conta' => 'getIdConta',
-        'status' => 'getStatus',
+        'ativo' => 'getAtivo',
         'id_tipo_faturamento' => 'getIdTipoFaturamento',
         'data_hora_inclusao' => 'getDataHoraInclusao',
         'data_hora_cancelamento' => 'getDataHoraCancelamento',
@@ -120,43 +120,43 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+      * $id {{{tipo_faturamento_por_conta_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
+      * $id_conta {{{tipo_faturamento_por_conta_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $status Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
+      * $ativo {{{tipo_faturamento_por_conta_response_status_value}}}
       * @var bool
       */
-    protected $status;
+    protected $ativo;
     
     /**
-      * $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
+      * $id_tipo_faturamento {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
       * @var int
       */
     protected $id_tipo_faturamento;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
+      * $data_hora_inclusao {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_cancelamento Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
+      * $data_hora_cancelamento {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
       * @var string
       */
     protected $data_hora_cancelamento;
     
     /**
-      * $modificado_por Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
+      * $modificado_por {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
       * @var string
       */
     protected $modificado_por;
@@ -172,7 +172,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->id_conta = $data["id_conta"];
-            $this->status = $data["status"];
+            $this->ativo = $data["ativo"];
             $this->id_tipo_faturamento = $data["id_tipo_faturamento"];
             $this->data_hora_inclusao = $data["data_hora_inclusao"];
             $this->data_hora_cancelamento = $data["data_hora_cancelamento"];
@@ -191,7 +191,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+     * @param int $id {{{tipo_faturamento_por_conta_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
+     * @param int $id_conta {{{tipo_faturamento_por_conta_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -223,23 +223,23 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
     }
     
     /**
-     * Gets status
+     * Gets ativo
      * @return bool
      */
-    public function getStatus()
+    public function getAtivo()
     {
-        return $this->status;
+        return $this->ativo;
     }
   
     /**
-     * Sets status
-     * @param bool $status Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
+     * Sets ativo
+     * @param bool $ativo {{{tipo_faturamento_por_conta_response_status_value}}}
      * @return $this
      */
-    public function setStatus($status)
+    public function setAtivo($ativo)
     {
         
-        $this->status = $status;
+        $this->ativo = $ativo;
         return $this;
     }
     
@@ -254,7 +254,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_faturamento
-     * @param int $id_tipo_faturamento C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
+     * @param int $id_tipo_faturamento {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
      * @return $this
      */
     public function setIdTipoFaturamento($id_tipo_faturamento)
@@ -275,7 +275,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
+     * @param string $data_hora_inclusao {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -296,7 +296,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_cancelamento
-     * @param string $data_hora_cancelamento Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
+     * @param string $data_hora_cancelamento {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
      * @return $this
      */
     public function setDataHoraCancelamento($data_hora_cancelamento)
@@ -317,7 +317,7 @@ class TipoFaturamentoPorContaResponse implements ArrayAccess
   
     /**
      * Sets modificado_por
-     * @param string $modificado_por Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
+     * @param string $modificado_por {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
      * @return $this
      */
     public function setModificadoPor($modificado_por)

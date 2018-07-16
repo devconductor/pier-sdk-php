@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rev** | **int** | Identificador da auditoria arquivo | [optional] 
-**rev_type** | **int** | Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo) | [optional] 
-**id** | **int** | Identificador do arquivo auditado | [optional] 
-**nome** | **string** | Nome do arquivo auditado | [optional] 
-**id_resposta_acesso_digital** | **string** | Identificador da resposta da Acesso Digital | [optional] 
-**data_hora_resposta_acesso_digital** | **string** | Data de resposta da Acesso Digital | [optional] 
-**id_resposta_neurotech** | **string** | Identificador da resposta da Neurotech | [optional] 
-**data_hora_resposta_neurotech** | **string** | Data de resposta da Neurotech | [optional] 
-**uri** | **string** | Uri de acesso | [optional] 
-**data_hora_inclusao** | **string** | Data de inclus\u00E3o do arquivo auditado | [optional] 
-**data_hora_alteracao** | **string** | Data de altera\u00E7\u00E3o do arquivo auditado | [optional] 
-**extensao** | **string** | Extens\u00E3o do arquivo auditado | [optional] 
-**parametros** | [**\br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[]**](ArquivoParametroAUDResponse.md) | Lista  de par\u00E2metros do arquivo auditado | [optional] 
+**rev** | **int** | {{{arquivo_a_u_d_response_rev_value}}} | [optional] 
+**rev_type** | **int** | {{{arquivo_a_u_d_response_rev_type_value}}} | [optional] 
+**id** | **int** | {{{arquivo_a_u_d_response_id_value}}} | [optional] 
+**nome** | **string** | {{{arquivo_a_u_d_response_nome_value}}} | [optional] 
+**id_resposta_acesso_digital** | **string** | {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}} | [optional] 
+**data_hora_resposta_acesso_digital** | **string** | {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}} | [optional] 
+**id_resposta_neurotech** | **string** | {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}} | [optional] 
+**data_hora_resposta_neurotech** | **string** | {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}} | [optional] 
+**uri** | **string** | {{{arquivo_a_u_d_response_uri_value}}} | [optional] 
+**data_hora_inclusao** | **string** | {{{arquivo_a_u_d_response_data_hora_inclusao_value}}} | [optional] 
+**data_hora_alteracao** | **string** | {{{arquivo_a_u_d_response_data_hora_alteracao_value}}} | [optional] 
+**extensao** | **string** | {{{arquivo_a_u_d_response_extensao_value}}} | [optional] 
+**parametros** | [**\br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[]**](ArquivoParametroAUDResponse.md) | {{{arquivo_a_u_d_response_parametros_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

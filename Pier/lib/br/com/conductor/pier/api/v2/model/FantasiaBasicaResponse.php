@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FantasiaBasicaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+ * @description {{{fantasia_basica_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class FantasiaBasicaResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador da fantasia b\u00E1sica
+      * $id {{{fantasia_basica_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome da fantasia b\u00E1sica
+      * $nome {{{fantasia_basica_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
+      * $descricao {{{fantasia_basica_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -147,7 +147,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador da fantasia b\u00E1sica
+     * @param int $id {{{fantasia_basica_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da fantasia b\u00E1sica
+     * @param string $nome {{{fantasia_basica_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -189,7 +189,7 @@ class FantasiaBasicaResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
+     * @param string $descricao {{{fantasia_basica_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

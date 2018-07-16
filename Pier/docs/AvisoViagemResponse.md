@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo identificador \u00FAnico do aviso viagem na base (id) | [optional] 
-**id_cartao** | **int** | C\u00F3digo identificador do cart\u00E3o na base (id) | [optional] 
-**codigo_pais** | **string** | Codigo identificador do pa\u00EDs na base (id) | [optional] 
-**data_inicio** | **string** | Data inicio do aviso viagem | [optional] 
-**data_fim** | **string** | Data fim do aviso viagem | [optional] 
-**flag_ativo** | **int** | Identifica se o aviso viagem esta ativo ou n\u00E3o | [optional] 
+**id** | **int** | {{{aviso_viagem_response_id_value}}} | [optional] 
+**id_cartao** | **int** | {{{aviso_viagem_response_id_cartao_value}}} | [optional] 
+**codigo_pais** | **string** | {{{aviso_viagem_response_codigo_pais_value}}} | [optional] 
+**data_inicio** | **string** | {{{aviso_viagem_response_data_inicio_value}}} | [optional] 
+**data_fim** | **string** | {{{aviso_viagem_response_data_fim_value}}} | [optional] 
+**flag_ativo** | **int** | {{{aviso_viagem_response_flag_ativo_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

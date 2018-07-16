@@ -38,7 +38,7 @@ use \ArrayAccess;
  * MaquinetaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta de Maquineta
+ * @description {{{maquineta_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class MaquinetaResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
+      * $id {{{maquineta_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
+      * $id_estabelecimento {{{maquineta_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
+      * $id_tipo_maquineta {{{maquineta_response_id_tipo_maquineta_value}}}
       * @var int
       */
     protected $id_tipo_maquineta;
     
     /**
-      * $valor Valor de manuten\u00E7\u00E3o da Maquineta.
+      * $valor {{{maquineta_response_valor_value}}}
       * @var Number
       */
     protected $valor;
     
     /**
-      * $data_hora_implantacao Data de implanta\u00E7\u00E3o da Maquineta.
+      * $data_hora_implantacao {{{maquineta_response_data_hora_implantacao_value}}}
       * @var string
       */
     protected $data_hora_implantacao;
     
     /**
-      * $data_hora_cadastramento Data de cadastramento da Maquineta.
+      * $data_hora_cadastramento {{{maquineta_response_data_hora_cadastramento_value}}}
       * @var string
       */
     protected $data_hora_cadastramento;
     
     /**
-      * $terminal N\u00FAmero do terminal vinculado a Maquineta.
+      * $terminal {{{maquineta_response_terminal_value}}}
       * @var string
       */
     protected $terminal;
     
     /**
-      * $usuario_apl Usu\u00E1rio da aplica\u00E7\u00E3o.
+      * $usuario_apl {{{maquineta_response_usuario_apl_value}}}
       * @var string
       */
     protected $usuario_apl;
@@ -202,7 +202,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
+     * @param int $id {{{maquineta_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
+     * @param int $id_estabelecimento {{{maquineta_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -244,7 +244,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_maquineta
-     * @param int $id_tipo_maquineta C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
+     * @param int $id_tipo_maquineta {{{maquineta_response_id_tipo_maquineta_value}}}
      * @return $this
      */
     public function setIdTipoMaquineta($id_tipo_maquineta)
@@ -265,7 +265,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor de manuten\u00E7\u00E3o da Maquineta.
+     * @param Number $valor {{{maquineta_response_valor_value}}}
      * @return $this
      */
     public function setValor($valor)
@@ -286,7 +286,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_implantacao
-     * @param string $data_hora_implantacao Data de implanta\u00E7\u00E3o da Maquineta.
+     * @param string $data_hora_implantacao {{{maquineta_response_data_hora_implantacao_value}}}
      * @return $this
      */
     public function setDataHoraImplantacao($data_hora_implantacao)
@@ -307,7 +307,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_cadastramento
-     * @param string $data_hora_cadastramento Data de cadastramento da Maquineta.
+     * @param string $data_hora_cadastramento {{{maquineta_response_data_hora_cadastramento_value}}}
      * @return $this
      */
     public function setDataHoraCadastramento($data_hora_cadastramento)
@@ -328,7 +328,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets terminal
-     * @param string $terminal N\u00FAmero do terminal vinculado a Maquineta.
+     * @param string $terminal {{{maquineta_response_terminal_value}}}
      * @return $this
      */
     public function setTerminal($terminal)
@@ -349,7 +349,7 @@ class MaquinetaResponse implements ArrayAccess
   
     /**
      * Sets usuario_apl
-     * @param string $usuario_apl Usu\u00E1rio da aplica\u00E7\u00E3o.
+     * @param string $usuario_apl {{{maquineta_response_usuario_apl_value}}}
      * @return $this
      */
     public function setUsuarioApl($usuario_apl)

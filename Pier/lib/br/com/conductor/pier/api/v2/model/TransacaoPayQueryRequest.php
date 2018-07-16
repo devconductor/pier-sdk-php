@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoPayQueryRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
+ * @description {{{transacao_pay_query_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class TransacaoPayQueryRequest implements ArrayAccess
 
     
     /**
-      * $numero_cartao Numero do cartao (criptografado)
+      * $numero_cartao {{{transacao_pay_generic_request_numero_cartao_value}}}
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $id_cartao Id do cart\u00E3o
+      * $id_cartao {{{transacao_pay_generic_request_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $origem Origem
+      * $origem {{{transacao_pay_query_request_origem_value}}}
       * @var string
       */
     protected $origem;
     
     /**
-      * $sort Tipo de ordena\u00E7\u00E3o dos registros.
+      * $sort {{{global_menssagem_sort_sort}}}
       * @var string[]
       */
     protected $sort;
@@ -158,7 +158,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao Numero do cartao (criptografado)
+     * @param string $numero_cartao {{{transacao_pay_generic_request_numero_cartao_value}}}
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -179,7 +179,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Id do cart\u00E3o
+     * @param int $id_cartao {{{transacao_pay_generic_request_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -200,7 +200,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets origem
-     * @param string $origem Origem
+     * @param string $origem {{{transacao_pay_query_request_origem_value}}}
      * @return $this
      */
     public function setOrigem($origem)
@@ -221,7 +221,7 @@ class TransacaoPayQueryRequest implements ArrayAccess
   
     /**
      * Sets sort
-     * @param string[] $sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param string[] $sort {{{global_menssagem_sort_sort}}}
      * @return $this
      */
     public function setSort($sort)

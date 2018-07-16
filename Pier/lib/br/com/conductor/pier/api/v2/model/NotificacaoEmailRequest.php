@@ -38,7 +38,7 @@ use \ArrayAccess;
  * NotificacaoEmailRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
+ * @description {{{notificacao_email_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class NotificacaoEmailRequest implements ArrayAccess
 
     
     /**
-      * $id_template_notificacao ID para o template da notifica\u00E7\u00E3o.
+      * $id_template_notificacao {{{notificacao_email_request_id_template_notificacao_value}}}
       * @var int
       */
     protected $id_template_notificacao;
     
     /**
-      * $destinatarios Lista de email(s) do(s) destinat\u00E1rio(s).
+      * $destinatarios {{{notificacao_email_request_destinatarios_value}}}
       * @var string[]
       */
     protected $destinatarios;
     
     /**
-      * $anexos Lista de ids dos anexos a serem enviados.
+      * $anexos {{{notificacao_email_request_anexos_value}}}
       * @var \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[]
       */
     protected $anexos;
     
     /**
-      * $parametros_conteudo Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
+      * $parametros_conteudo {{{notificacao_email_request_parametros_conteudo_value}}}
       * @var map[string,object]
       */
     protected $parametros_conteudo;
@@ -158,7 +158,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets id_template_notificacao
-     * @param int $id_template_notificacao ID para o template da notifica\u00E7\u00E3o.
+     * @param int $id_template_notificacao {{{notificacao_email_request_id_template_notificacao_value}}}
      * @return $this
      */
     public function setIdTemplateNotificacao($id_template_notificacao)
@@ -179,7 +179,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets destinatarios
-     * @param string[] $destinatarios Lista de email(s) do(s) destinat\u00E1rio(s).
+     * @param string[] $destinatarios {{{notificacao_email_request_destinatarios_value}}}
      * @return $this
      */
     public function setDestinatarios($destinatarios)
@@ -200,7 +200,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets anexos
-     * @param \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[] $anexos Lista de ids dos anexos a serem enviados.
+     * @param \br.com.conductor.pier.api.v2.model\AnexoNotificacaoEmailRequest[] $anexos {{{notificacao_email_request_anexos_value}}}
      * @return $this
      */
     public function setAnexos($anexos)
@@ -221,7 +221,7 @@ class NotificacaoEmailRequest implements ArrayAccess
   
     /**
      * Sets parametros_conteudo
-     * @param map[string,object] $parametros_conteudo Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
+     * @param map[string,object] $parametros_conteudo {{{notificacao_email_request_parametros_conteudo_value}}}
      * @return $this
      */
     public function setParametrosConteudo($parametros_conteudo)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoTemplateResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
+ * @description {{{tipo_template_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class TipoTemplateResponse implements ArrayAccess
 
     
     /**
-      * $id ID do Tipo de Template.
+      * $id {{{tipo_template_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do Tipo de Template.
+      * $nome {{{tipo_template_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do Tipo de Template.
+      * $descricao {{{tipo_template_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $sigla Sigla do Tipo de Template.
+      * $sigla {{{tipo_template_response_sigla_value}}}
       * @var string
       */
     protected $sigla;
@@ -158,7 +158,7 @@ class TipoTemplateResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID do Tipo de Template.
+     * @param int $id {{{tipo_template_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class TipoTemplateResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Tipo de Template.
+     * @param string $nome {{{tipo_template_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -200,7 +200,7 @@ class TipoTemplateResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do Tipo de Template.
+     * @param string $descricao {{{tipo_template_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -221,7 +221,7 @@ class TipoTemplateResponse implements ArrayAccess
   
     /**
      * Sets sigla
-     * @param string $sigla Sigla do Tipo de Template.
+     * @param string $sigla {{{tipo_template_response_sigla_value}}}
      * @return $this
      */
     public function setSigla($sigla)

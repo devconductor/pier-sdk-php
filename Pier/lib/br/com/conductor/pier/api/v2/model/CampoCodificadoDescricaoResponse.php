@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CampoCodificadoDescricaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Campo Condificado
+ * @description {{{campo_codificado_descricao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class CampoCodificadoDescricaoResponse implements ArrayAccess
 
     
     /**
-      * $codigo C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
+      * $codigo {{{campo_codificado_descricao_response_codigo_value}}}
       * @var int
       */
     protected $codigo;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do campo codificado.
+      * $descricao {{{campo_codificado_descricao_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -136,7 +136,7 @@ class CampoCodificadoDescricaoResponse implements ArrayAccess
   
     /**
      * Sets codigo
-     * @param int $codigo C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
+     * @param int $codigo {{{campo_codificado_descricao_response_codigo_value}}}
      * @return $this
      */
     public function setCodigo($codigo)
@@ -157,7 +157,7 @@ class CampoCodificadoDescricaoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do campo codificado.
+     * @param string $descricao {{{campo_codificado_descricao_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FaturaDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Detalhes da fatura
+ * @description {{{fatura_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class FaturaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+      * $id_conta {{{fatura_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $situacao_processamento Situa\u00E7\u00E3o de Processamento da fatura.
+      * $situacao_processamento {{{fatura_response_situacao_processamento_value}}}
       * @var string
       */
     protected $situacao_processamento;
     
     /**
-      * $pagamento_efetuado Status de pagamento efetuado.
+      * $pagamento_efetuado {{{fatura_response_pagamento_efetuado_value}}}
       * @var bool
       */
     protected $pagamento_efetuado;
     
     /**
-      * $data_vencimento_fatura Data de vencimento da fatura.
+      * $data_vencimento_fatura {{{fatura_response_data_vencimento_fatura_value}}}
       * @var string
       */
     protected $data_vencimento_fatura;
     
     /**
-      * $data_vencimento_real Data de vencimento real da fatura.
+      * $data_vencimento_real {{{fatura_response_data_vencimento_real_value}}}
       * @var string
       */
     protected $data_vencimento_real;
     
     /**
-      * $data_fechamento Data de fechamento da fatura.
+      * $data_fechamento {{{fatura_response_data_fechamento_value}}}
       * @var string
       */
     protected $data_fechamento;
     
     /**
-      * $valor_total Valor total da fatura.
+      * $valor_total {{{fatura_response_valor_total_value}}}
       * @var Number
       */
     protected $valor_total;
     
     /**
-      * $valor_pagamento_minimo Valor do pagamento m\u00EDnimo.
+      * $valor_pagamento_minimo {{{fatura_response_valor_pagamento_minimo_value}}}
       * @var Number
       */
     protected $valor_pagamento_minimo;
     
     /**
-      * $lancamentos_fatura_response Lista de lan\u00E7amentos da fatura.
+      * $lancamentos_fatura_response {{{fatura_detalhe_response_lancamentos_fatura_response_value}}}
       * @var \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]
       */
     protected $lancamentos_fatura_response;
     
     /**
-      * $saldo_anterior Valor do saldo anterior.
+      * $saldo_anterior {{{fatura_response_saldo_anterior_value}}}
       * @var Number
       */
     protected $saldo_anterior;
@@ -224,7 +224,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+     * @param int $id_conta {{{fatura_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -245,7 +245,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets situacao_processamento
-     * @param string $situacao_processamento Situa\u00E7\u00E3o de Processamento da fatura.
+     * @param string $situacao_processamento {{{fatura_response_situacao_processamento_value}}}
      * @return $this
      */
     public function setSituacaoProcessamento($situacao_processamento)
@@ -269,7 +269,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets pagamento_efetuado
-     * @param bool $pagamento_efetuado Status de pagamento efetuado.
+     * @param bool $pagamento_efetuado {{{fatura_response_pagamento_efetuado_value}}}
      * @return $this
      */
     public function setPagamentoEfetuado($pagamento_efetuado)
@@ -290,7 +290,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_fatura
-     * @param string $data_vencimento_fatura Data de vencimento da fatura.
+     * @param string $data_vencimento_fatura {{{fatura_response_data_vencimento_fatura_value}}}
      * @return $this
      */
     public function setDataVencimentoFatura($data_vencimento_fatura)
@@ -311,7 +311,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_real
-     * @param string $data_vencimento_real Data de vencimento real da fatura.
+     * @param string $data_vencimento_real {{{fatura_response_data_vencimento_real_value}}}
      * @return $this
      */
     public function setDataVencimentoReal($data_vencimento_real)
@@ -332,7 +332,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_fechamento
-     * @param string $data_fechamento Data de fechamento da fatura.
+     * @param string $data_fechamento {{{fatura_response_data_fechamento_value}}}
      * @return $this
      */
     public function setDataFechamento($data_fechamento)
@@ -353,7 +353,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_total
-     * @param Number $valor_total Valor total da fatura.
+     * @param Number $valor_total {{{fatura_response_valor_total_value}}}
      * @return $this
      */
     public function setValorTotal($valor_total)
@@ -374,7 +374,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor do pagamento m\u00EDnimo.
+     * @param Number $valor_pagamento_minimo {{{fatura_response_valor_pagamento_minimo_value}}}
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)
@@ -395,7 +395,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets lancamentos_fatura_response
-     * @param \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[] $lancamentos_fatura_response Lista de lan\u00E7amentos da fatura.
+     * @param \br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[] $lancamentos_fatura_response {{{fatura_detalhe_response_lancamentos_fatura_response_value}}}
      * @return $this
      */
     public function setLancamentosFaturaResponse($lancamentos_fatura_response)
@@ -416,7 +416,7 @@ class FaturaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_anterior
-     * @param Number $saldo_anterior Valor do saldo anterior.
+     * @param Number $saldo_anterior {{{fatura_response_saldo_anterior_value}}}
      * @return $this
      */
     public function setSaldoAnterior($saldo_anterior)

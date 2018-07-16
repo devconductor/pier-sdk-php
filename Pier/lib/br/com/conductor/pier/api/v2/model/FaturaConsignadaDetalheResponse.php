@@ -38,7 +38,7 @@ use \ArrayAccess;
  * FaturaConsignadaDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Fatura Consignada detalhe
+ * @description {{{fatura_consignada_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -284,289 +284,289 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador da fatura.
+      * $id {{{fatura_consignada_detalhe_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo identificador da conta (id).
+      * $id_conta {{{fatura_consignada_detalhe_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $limite_global Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+      * $limite_global {{{fatura_consignada_detalhe_response_limite_global_value}}}
       * @var Number
       */
     protected $limite_global;
     
     /**
-      * $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
+      * $flag_emite_fatura {{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}
       * @var int
       */
     protected $flag_emite_fatura;
     
     /**
-      * $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+      * $limite_compra {{{fatura_consignada_detalhe_response_limite_compra_value}}}
       * @var Number
       */
     protected $limite_compra;
     
     /**
-      * $data_vencimento_fatura Data de vencimento da fatura.
+      * $data_vencimento_fatura {{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}
       * @var string
       */
     protected $data_vencimento_fatura;
     
     /**
-      * $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.
+      * $limite_parcelado {{{fatura_consignada_detalhe_response_limite_parcelado_value}}}
       * @var Number
       */
     protected $limite_parcelado;
     
     /**
-      * $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+      * $limite_parcelas {{{fatura_consignada_detalhe_response_limite_parcelas_value}}}
       * @var Number
       */
     protected $limite_parcelas;
     
     /**
-      * $valor_total_fatura Valor para pagamento total da fatura.
+      * $valor_total_fatura {{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}
       * @var Number
       */
     protected $valor_total_fatura;
     
     /**
-      * $valor_fatura_anterior Valor total da fatura anterior.
+      * $valor_fatura_anterior {{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}
       * @var Number
       */
     protected $valor_fatura_anterior;
     
     /**
-      * $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
+      * $valor_pagamento_minimo {{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}
       * @var Number
       */
     protected $valor_pagamento_minimo;
     
     /**
-      * $valor_pagamento_consignado Valor da fatura pago atrav\u00E9s de desconto em folha.
+      * $valor_pagamento_consignado {{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}
       * @var Number
       */
     protected $valor_pagamento_consignado;
     
     /**
-      * $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+      * $limite_saque_global {{{fatura_consignada_detalhe_response_limite_saque_global_value}}}
       * @var Number
       */
     protected $limite_saque_global;
     
     /**
-      * $valor_pagamento_complementar Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
+      * $valor_pagamento_complementar {{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}
       * @var Number
       */
     protected $valor_pagamento_complementar;
     
     /**
-      * $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+      * $limite_saque_periodo {{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}
       * @var Number
       */
     protected $limite_saque_periodo;
     
     /**
-      * $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
+      * $total_compras_nacionais {{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}
       * @var Number
       */
     protected $total_compras_nacionais;
     
     /**
-      * $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.
+      * $limite_consignado {{{fatura_consignada_detalhe_response_limite_consignado_value}}}
       * @var Number
       */
     protected $limite_consignado;
     
     /**
-      * $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
+      * $total_compras_internacionas {{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}
       * @var Number
       */
     protected $total_compras_internacionas;
     
     /**
-      * $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.
+      * $limite_internacional_compra {{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}
       * @var Number
       */
     protected $limite_internacional_compra;
     
     /**
-      * $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
+      * $total_saques_nacionais {{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}
       * @var Number
       */
     protected $total_saques_nacionais;
     
     /**
-      * $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.
+      * $limite_internacional_parcelado {{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}
       * @var Number
       */
     protected $limite_internacional_parcelado;
     
     /**
-      * $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
+      * $total_saques_internacionais {{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}
       * @var Number
       */
     protected $total_saques_internacionais;
     
     /**
-      * $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+      * $limite_internacional_parcelas {{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}
       * @var Number
       */
     protected $limite_internacional_parcelas;
     
     /**
-      * $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
+      * $total_debitos_nacionais {{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}
       * @var Number
       */
     protected $total_debitos_nacionais;
     
     /**
-      * $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.
+      * $limite_internacional_saque_global {{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}
       * @var Number
       */
     protected $limite_internacional_saque_global;
     
     /**
-      * $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
+      * $total_debitos_recorrentes {{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}
       * @var Number
       */
     protected $total_debitos_recorrentes;
     
     /**
-      * $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.
+      * $limite_internacional_saque_periodo {{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}
       * @var Number
       */
     protected $limite_internacional_saque_periodo;
     
     /**
-      * $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
+      * $total_debitos_internacionais {{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}
       * @var Number
       */
     protected $total_debitos_internacionais;
     
     /**
-      * $saldo_disponivel_global Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.
+      * $saldo_disponivel_global {{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}
       * @var Number
       */
     protected $saldo_disponivel_global;
     
     /**
-      * $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
+      * $total_debitos_diversos_nacionais {{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}
       * @var Number
       */
     protected $total_debitos_diversos_nacionais;
     
     /**
-      * $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
+      * $saldo_disponivel_compra {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}
       * @var Number
       */
     protected $saldo_disponivel_compra;
     
     /**
-      * $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
+      * $total_debitos_opcionais {{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}
       * @var Number
       */
     protected $total_debitos_opcionais;
     
     /**
-      * $saldo_disponivel_parcelado Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
+      * $saldo_disponivel_parcelado {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}
       * @var Number
       */
     protected $saldo_disponivel_parcelado;
     
     /**
-      * $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
+      * $total_pagamentos {{{fatura_consignada_detalhe_response_total_pagamentos_value}}}
       * @var Number
       */
     protected $total_pagamentos;
     
     /**
-      * $saldo_disponivel_parcelas Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+      * $saldo_disponivel_parcelas {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}
       * @var Number
       */
     protected $saldo_disponivel_parcelas;
     
     /**
-      * $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
+      * $total_creditos_nacionais {{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}
       * @var Number
       */
     protected $total_creditos_nacionais;
     
     /**
-      * $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
+      * $total_ajustes {{{fatura_consignada_detalhe_response_total_ajustes_value}}}
       * @var Number
       */
     protected $total_ajustes;
     
     /**
-      * $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
+      * $total_tarifas {{{fatura_consignada_detalhe_response_total_tarifas_value}}}
       * @var Number
       */
     protected $total_tarifas;
     
     /**
-      * $total_multa Valor total da multa lan\u00E7ada na fatura.
+      * $total_multa {{{fatura_consignada_detalhe_response_total_multa_value}}}
       * @var Number
       */
     protected $total_multa;
     
     /**
-      * $saldo_disponivel_saque Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+      * $saldo_disponivel_saque {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}
       * @var Number
       */
     protected $saldo_disponivel_saque;
     
     /**
-      * $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
+      * $total_juros {{{fatura_consignada_detalhe_response_total_juros_value}}}
       * @var Number
       */
     protected $total_juros;
     
     /**
-      * $saldo_pontos_fidelidade Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.
+      * $saldo_pontos_fidelidade {{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}
       * @var Number
       */
     protected $saldo_pontos_fidelidade;
     
     /**
-      * $taxa_rotativo Valor percentual da taxa de juros rotativos.
+      * $taxa_rotativo {{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}
       * @var Number
       */
     protected $taxa_rotativo;
     
     /**
-      * $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.
+      * $saldo_disponivel_compra_internacional {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}
       * @var Number
       */
     protected $saldo_disponivel_compra_internacional;
     
     /**
-      * $taxa_saque Valor percentual da taxa de saque.
+      * $taxa_saque {{{fatura_consignada_detalhe_response_taxa_saque_value}}}
       * @var Number
       */
     protected $taxa_saque;
     
     /**
-      * $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.
+      * $saldo_disponivel_saque_internacional {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}
       * @var Number
       */
     protected $saldo_disponivel_saque_internacional;
     
     /**
-      * $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
+      * $taxa_maxima_proximo_periodo {{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}
       * @var Number
       */
     protected $taxa_maxima_proximo_periodo;
     
     /**
-      * $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+      * $total_servicos {{{fatura_consignada_detalhe_response_total_servicos_value}}}
       * @var Number
       */
     protected $total_servicos;
@@ -642,7 +642,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador da fatura.
+     * @param int $id {{{fatura_consignada_detalhe_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -663,7 +663,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta (id).
+     * @param int $id_conta {{{fatura_consignada_detalhe_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -684,7 +684,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param Number $limite_global Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+     * @param Number $limite_global {{{fatura_consignada_detalhe_response_limite_global_value}}}
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -705,7 +705,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets flag_emite_fatura
-     * @param int $flag_emite_fatura C\u00F3digo identificador da conta a qual a fatura se refere.
+     * @param int $flag_emite_fatura {{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}
      * @return $this
      */
     public function setFlagEmiteFatura($flag_emite_fatura)
@@ -726,7 +726,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_compra
-     * @param Number $limite_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+     * @param Number $limite_compra {{{fatura_consignada_detalhe_response_limite_compra_value}}}
      * @return $this
      */
     public function setLimiteCompra($limite_compra)
@@ -747,7 +747,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento_fatura
-     * @param string $data_vencimento_fatura Data de vencimento da fatura.
+     * @param string $data_vencimento_fatura {{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}
      * @return $this
      */
     public function setDataVencimentoFatura($data_vencimento_fatura)
@@ -768,7 +768,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_parcelado
-     * @param Number $limite_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.
+     * @param Number $limite_parcelado {{{fatura_consignada_detalhe_response_limite_parcelado_value}}}
      * @return $this
      */
     public function setLimiteParcelado($limite_parcelado)
@@ -789,7 +789,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+     * @param Number $limite_parcelas {{{fatura_consignada_detalhe_response_limite_parcelas_value}}}
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)
@@ -810,7 +810,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_total_fatura
-     * @param Number $valor_total_fatura Valor para pagamento total da fatura.
+     * @param Number $valor_total_fatura {{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}
      * @return $this
      */
     public function setValorTotalFatura($valor_total_fatura)
@@ -831,7 +831,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_fatura_anterior
-     * @param Number $valor_fatura_anterior Valor total da fatura anterior.
+     * @param Number $valor_fatura_anterior {{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}
      * @return $this
      */
     public function setValorFaturaAnterior($valor_fatura_anterior)
@@ -852,7 +852,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_minimo
-     * @param Number $valor_pagamento_minimo Valor m\u00EDnimo para pagamento da fatura.
+     * @param Number $valor_pagamento_minimo {{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}
      * @return $this
      */
     public function setValorPagamentoMinimo($valor_pagamento_minimo)
@@ -873,7 +873,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_consignado
-     * @param Number $valor_pagamento_consignado Valor da fatura pago atrav\u00E9s de desconto em folha.
+     * @param Number $valor_pagamento_consignado {{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}
      * @return $this
      */
     public function setValorPagamentoConsignado($valor_pagamento_consignado)
@@ -894,7 +894,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_saque_global
-     * @param Number $limite_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+     * @param Number $limite_saque_global {{{fatura_consignada_detalhe_response_limite_saque_global_value}}}
      * @return $this
      */
     public function setLimiteSaqueGlobal($limite_saque_global)
@@ -915,7 +915,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets valor_pagamento_complementar
-     * @param Number $valor_pagamento_complementar Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
+     * @param Number $valor_pagamento_complementar {{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}
      * @return $this
      */
     public function setValorPagamentoComplementar($valor_pagamento_complementar)
@@ -936,7 +936,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_saque_periodo
-     * @param Number $limite_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+     * @param Number $limite_saque_periodo {{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}
      * @return $this
      */
     public function setLimiteSaquePeriodo($limite_saque_periodo)
@@ -957,7 +957,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_compras_nacionais
-     * @param Number $total_compras_nacionais Valor total das compras nacionais lan\u00E7adas na fatura.
+     * @param Number $total_compras_nacionais {{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}
      * @return $this
      */
     public function setTotalComprasNacionais($total_compras_nacionais)
@@ -978,7 +978,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_consignado
-     * @param Number $limite_consignado Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.
+     * @param Number $limite_consignado {{{fatura_consignada_detalhe_response_limite_consignado_value}}}
      * @return $this
      */
     public function setLimiteConsignado($limite_consignado)
@@ -999,7 +999,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_compras_internacionas
-     * @param Number $total_compras_internacionas Valor total das compras internacionais lan\u00E7adas na fatura.
+     * @param Number $total_compras_internacionas {{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}
      * @return $this
      */
     public function setTotalComprasInternacionas($total_compras_internacionas)
@@ -1020,7 +1020,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_compra
-     * @param Number $limite_internacional_compra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.
+     * @param Number $limite_internacional_compra {{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}
      * @return $this
      */
     public function setLimiteInternacionalCompra($limite_internacional_compra)
@@ -1041,7 +1041,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_saques_nacionais
-     * @param Number $total_saques_nacionais Valor total dos saques nacionais lan\u00E7ados na fatura.
+     * @param Number $total_saques_nacionais {{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}
      * @return $this
      */
     public function setTotalSaquesNacionais($total_saques_nacionais)
@@ -1062,7 +1062,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_parcelado
-     * @param Number $limite_internacional_parcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.
+     * @param Number $limite_internacional_parcelado {{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}
      * @return $this
      */
     public function setLimiteInternacionalParcelado($limite_internacional_parcelado)
@@ -1083,7 +1083,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_saques_internacionais
-     * @param Number $total_saques_internacionais Valor total dos saques internacionais lan\u00E7ados na fatura.
+     * @param Number $total_saques_internacionais {{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}
      * @return $this
      */
     public function setTotalSaquesInternacionais($total_saques_internacionais)
@@ -1104,7 +1104,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_parcelas
-     * @param Number $limite_internacional_parcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+     * @param Number $limite_internacional_parcelas {{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}
      * @return $this
      */
     public function setLimiteInternacionalParcelas($limite_internacional_parcelas)
@@ -1125,7 +1125,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_nacionais
-     * @param Number $total_debitos_nacionais Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_nacionais {{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosNacionais($total_debitos_nacionais)
@@ -1146,7 +1146,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_saque_global
-     * @param Number $limite_internacional_saque_global Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.
+     * @param Number $limite_internacional_saque_global {{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}
      * @return $this
      */
     public function setLimiteInternacionalSaqueGlobal($limite_internacional_saque_global)
@@ -1167,7 +1167,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_recorrentes
-     * @param Number $total_debitos_recorrentes Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
+     * @param Number $total_debitos_recorrentes {{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}
      * @return $this
      */
     public function setTotalDebitosRecorrentes($total_debitos_recorrentes)
@@ -1188,7 +1188,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets limite_internacional_saque_periodo
-     * @param Number $limite_internacional_saque_periodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.
+     * @param Number $limite_internacional_saque_periodo {{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}
      * @return $this
      */
     public function setLimiteInternacionalSaquePeriodo($limite_internacional_saque_periodo)
@@ -1209,7 +1209,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_internacionais
-     * @param Number $total_debitos_internacionais Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_internacionais {{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosInternacionais($total_debitos_internacionais)
@@ -1230,7 +1230,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_global
-     * @param Number $saldo_disponivel_global Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.
+     * @param Number $saldo_disponivel_global {{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}
      * @return $this
      */
     public function setSaldoDisponivelGlobal($saldo_disponivel_global)
@@ -1251,7 +1251,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_diversos_nacionais
-     * @param Number $total_debitos_diversos_nacionais Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_diversos_nacionais {{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}
      * @return $this
      */
     public function setTotalDebitosDiversosNacionais($total_debitos_diversos_nacionais)
@@ -1272,7 +1272,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_compra
-     * @param Number $saldo_disponivel_compra Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
+     * @param Number $saldo_disponivel_compra {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}
      * @return $this
      */
     public function setSaldoDisponivelCompra($saldo_disponivel_compra)
@@ -1293,7 +1293,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_debitos_opcionais
-     * @param Number $total_debitos_opcionais Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
+     * @param Number $total_debitos_opcionais {{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}
      * @return $this
      */
     public function setTotalDebitosOpcionais($total_debitos_opcionais)
@@ -1314,7 +1314,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelado
-     * @param Number $saldo_disponivel_parcelado Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
+     * @param Number $saldo_disponivel_parcelado {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}
      * @return $this
      */
     public function setSaldoDisponivelParcelado($saldo_disponivel_parcelado)
@@ -1335,7 +1335,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_pagamentos
-     * @param Number $total_pagamentos Valor total dos pagamentos lan\u00E7ados na fatura.
+     * @param Number $total_pagamentos {{{fatura_consignada_detalhe_response_total_pagamentos_value}}}
      * @return $this
      */
     public function setTotalPagamentos($total_pagamentos)
@@ -1356,7 +1356,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_parcelas
-     * @param Number $saldo_disponivel_parcelas Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+     * @param Number $saldo_disponivel_parcelas {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}
      * @return $this
      */
     public function setSaldoDisponivelParcelas($saldo_disponivel_parcelas)
@@ -1377,7 +1377,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_creditos_nacionais
-     * @param Number $total_creditos_nacionais Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
+     * @param Number $total_creditos_nacionais {{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}
      * @return $this
      */
     public function setTotalCreditosNacionais($total_creditos_nacionais)
@@ -1398,7 +1398,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_ajustes
-     * @param Number $total_ajustes Valor total dos ajustes lan\u00E7ados na fatura.
+     * @param Number $total_ajustes {{{fatura_consignada_detalhe_response_total_ajustes_value}}}
      * @return $this
      */
     public function setTotalAjustes($total_ajustes)
@@ -1419,7 +1419,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_tarifas
-     * @param Number $total_tarifas Valor total das tarifas lan\u00E7adas na fatura.
+     * @param Number $total_tarifas {{{fatura_consignada_detalhe_response_total_tarifas_value}}}
      * @return $this
      */
     public function setTotalTarifas($total_tarifas)
@@ -1440,7 +1440,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_multa
-     * @param Number $total_multa Valor total da multa lan\u00E7ada na fatura.
+     * @param Number $total_multa {{{fatura_consignada_detalhe_response_total_multa_value}}}
      * @return $this
      */
     public function setTotalMulta($total_multa)
@@ -1461,7 +1461,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque
-     * @param Number $saldo_disponivel_saque Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+     * @param Number $saldo_disponivel_saque {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}
      * @return $this
      */
     public function setSaldoDisponivelSaque($saldo_disponivel_saque)
@@ -1482,7 +1482,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_juros
-     * @param Number $total_juros Valor total dos juros de mora lan\u00E7ados na fatura.
+     * @param Number $total_juros {{{fatura_consignada_detalhe_response_total_juros_value}}}
      * @return $this
      */
     public function setTotalJuros($total_juros)
@@ -1503,7 +1503,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_pontos_fidelidade
-     * @param Number $saldo_pontos_fidelidade Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.
+     * @param Number $saldo_pontos_fidelidade {{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}
      * @return $this
      */
     public function setSaldoPontosFidelidade($saldo_pontos_fidelidade)
@@ -1524,7 +1524,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets taxa_rotativo
-     * @param Number $taxa_rotativo Valor percentual da taxa de juros rotativos.
+     * @param Number $taxa_rotativo {{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}
      * @return $this
      */
     public function setTaxaRotativo($taxa_rotativo)
@@ -1545,7 +1545,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_compra_internacional
-     * @param Number $saldo_disponivel_compra_internacional Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.
+     * @param Number $saldo_disponivel_compra_internacional {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}
      * @return $this
      */
     public function setSaldoDisponivelCompraInternacional($saldo_disponivel_compra_internacional)
@@ -1566,7 +1566,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets taxa_saque
-     * @param Number $taxa_saque Valor percentual da taxa de saque.
+     * @param Number $taxa_saque {{{fatura_consignada_detalhe_response_taxa_saque_value}}}
      * @return $this
      */
     public function setTaxaSaque($taxa_saque)
@@ -1587,7 +1587,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets saldo_disponivel_saque_internacional
-     * @param Number $saldo_disponivel_saque_internacional Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.
+     * @param Number $saldo_disponivel_saque_internacional {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}
      * @return $this
      */
     public function setSaldoDisponivelSaqueInternacional($saldo_disponivel_saque_internacional)
@@ -1608,7 +1608,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets taxa_maxima_proximo_periodo
-     * @param Number $taxa_maxima_proximo_periodo Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
+     * @param Number $taxa_maxima_proximo_periodo {{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}
      * @return $this
      */
     public function setTaxaMaximaProximoPeriodo($taxa_maxima_proximo_periodo)
@@ -1629,7 +1629,7 @@ class FaturaConsignadaDetalheResponse implements ArrayAccess
   
     /**
      * Sets total_servicos
-     * @param Number $total_servicos Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+     * @param Number $total_servicos {{{fatura_consignada_detalhe_response_total_servicos_value}}}
      * @return $this
      */
     public function setTotalServicos($total_servicos)

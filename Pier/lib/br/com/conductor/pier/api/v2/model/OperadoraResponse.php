@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OperadoraResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+ * @description {{{operadora_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class OperadoraResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador da operadora
+      * $id {{{operadora_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome da operadora
+      * $nome {{{operadora_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -136,7 +136,7 @@ class OperadoraResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador da operadora
+     * @param int $id {{{operadora_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class OperadoraResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da operadora
+     * @param string $nome {{{operadora_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

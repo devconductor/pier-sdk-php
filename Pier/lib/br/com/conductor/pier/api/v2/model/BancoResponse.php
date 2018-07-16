@@ -38,7 +38,7 @@ use \ArrayAccess;
  * BancoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Banco
+ * @description {{{banco_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class BancoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
+      * $id {{{banco_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do banco
+      * $nome {{{banco_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do banco
+      * $descricao {{{banco_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $digito_banco Digito do banco
+      * $digito_banco {{{banco_response_digito_banco_value}}}
       * @var string
       */
     protected $digito_banco;
@@ -158,7 +158,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
+     * @param int $id {{{banco_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do banco
+     * @param string $nome {{{banco_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -200,7 +200,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do banco
+     * @param string $descricao {{{banco_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -221,7 +221,7 @@ class BancoResponse implements ArrayAccess
   
     /**
      * Sets digito_banco
-     * @param string $digito_banco Digito do banco
+     * @param string $digito_banco {{{banco_response_digito_banco_value}}}
      * @return $this
      */
     public function setDigitoBanco($digito_banco)

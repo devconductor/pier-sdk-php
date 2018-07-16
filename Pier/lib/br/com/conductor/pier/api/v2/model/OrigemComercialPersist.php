@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OrigemComercialPersist Class Doc Comment
  *
  * @category    Class
- * @description Par\u00E2metros de requisi\u00E7\u00E3o para cadastrar origem comercial
+ * @description {{{origem_comercial_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -184,139 +184,139 @@ class OrigemComercialPersist implements ArrayAccess
 
     
     /**
-      * $nome Nome da origem comercial
+      * $nome {{{origem_comercial_update_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o da origem comercial
+      * $descricao {{{origem_comercial_update_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $id_estabelecimento Identificador do estabelecimento
+      * $id_estabelecimento {{{origem_comercial_update_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $id_tipo_origem_comercial Identificador do tipo de origem comercial
+      * $id_tipo_origem_comercial {{{origem_comercial_update_id_tipo_origem_comercial_value}}}
       * @var int
       */
     protected $id_tipo_origem_comercial;
     
     /**
-      * $id_grupo_origem_comercial Identificador do grupo de origem comercial
+      * $id_grupo_origem_comercial {{{origem_comercial_update_id_grupo_origem_comercial_value}}}
       * @var int
       */
     protected $id_grupo_origem_comercial;
     
     /**
-      * $status Indica o status da origem comercial
+      * $status {{{origem_comercial_update_status_value}}}
       * @var int
       */
     protected $status;
     
     /**
-      * $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+      * $flag_pre_aprovado {{{origem_comercial_update_flag_pre_aprovado_value}}}
       * @var bool
       */
     protected $flag_pre_aprovado;
     
     /**
-      * $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
+      * $flag_aprovacao_imediata {{{origem_comercial_update_flag_aprovacao_imediata_value}}}
       * @var bool
       */
     protected $flag_aprovacao_imediata;
     
     /**
-      * $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
+      * $nome_fantasia_plastico {{{origem_comercial_update_nome_fantasia_plastico_value}}}
       * @var string
       */
     protected $nome_fantasia_plastico;
     
     /**
-      * $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
+      * $flag_cartao_provisorio {{{origem_comercial_update_flag_cartao_provisorio_value}}}
       * @var bool
       */
     protected $flag_cartao_provisorio;
     
     /**
-      * $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
+      * $flag_cartao_definitivo {{{origem_comercial_update_flag_cartao_definitivo_value}}}
       * @var bool
       */
     protected $flag_cartao_definitivo;
     
     /**
-      * $usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+      * $usuario {{{origem_comercial_update_usuario_value}}}
       * @var string
       */
     protected $usuario;
     
     /**
-      * $senha Senha para autentica\u00E7\u00E3o
+      * $senha {{{origem_comercial_update_senha_value}}}
       * @var string
       */
     protected $senha;
     
     /**
-      * $flag_origem_externa Indica se \u00E9 origem externa
+      * $flag_origem_externa {{{origem_comercial_update_flag_origem_externa_value}}}
       * @var bool
       */
     protected $flag_origem_externa;
     
     /**
-      * $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
+      * $flag_modificado {{{origem_comercial_update_flag_modificado_value}}}
       * @var bool
       */
     protected $flag_modificado;
     
     /**
-      * $flag_envia_fatura_usuario Indica se envia fatura
+      * $flag_envia_fatura_usuario {{{origem_comercial_update_flag_envia_fatura_usuario_value}}}
       * @var bool
       */
     protected $flag_envia_fatura_usuario;
     
     /**
-      * $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
+      * $flag_credito_faturamento {{{origem_comercial_update_flag_credito_faturamento_value}}}
       * @var bool
       */
     protected $flag_credito_faturamento;
     
     /**
-      * $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
+      * $flag_concede_limite_provisorio {{{origem_comercial_update_flag_concede_limite_provisorio_value}}}
       * @var bool
       */
     protected $flag_concede_limite_provisorio;
     
     /**
-      * $flag_digitalizar_doc Indica se digitaliza documento
+      * $flag_digitalizar_doc {{{origem_comercial_update_flag_digitalizar_doc_value}}}
       * @var bool
       */
     protected $flag_digitalizar_doc;
     
     /**
-      * $flag_embossing_loja Indica se realiza embossing em loja
+      * $flag_embossing_loja {{{origem_comercial_update_flag_embossing_loja_value}}}
       * @var bool
       */
     protected $flag_embossing_loja;
     
     /**
-      * $flag_consulta_previa Indica se realiza consulta pr\u00E9via
+      * $flag_consulta_previa {{{origem_comercial_update_flag_consulta_previa_value}}}
       * @var bool
       */
     protected $flag_consulta_previa;
     
     /**
-      * $tipo_pessoa Tipo de pessoa
+      * $tipo_pessoa {{{origem_comercial_update_tipo_pessoa_value}}}
       * @var string
       */
     protected $tipo_pessoa;
     
     /**
-      * $id_produto Identificador de Produto da origem comercial
+      * $id_produto {{{origem_comercial_persist_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
@@ -367,7 +367,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da origem comercial
+     * @param string $nome {{{origem_comercial_update_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -388,7 +388,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o da origem comercial
+     * @param string $descricao {{{origem_comercial_update_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -409,7 +409,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento Identificador do estabelecimento
+     * @param int $id_estabelecimento {{{origem_comercial_update_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -430,7 +430,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_origem_comercial
-     * @param int $id_tipo_origem_comercial Identificador do tipo de origem comercial
+     * @param int $id_tipo_origem_comercial {{{origem_comercial_update_id_tipo_origem_comercial_value}}}
      * @return $this
      */
     public function setIdTipoOrigemComercial($id_tipo_origem_comercial)
@@ -451,7 +451,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets id_grupo_origem_comercial
-     * @param int $id_grupo_origem_comercial Identificador do grupo de origem comercial
+     * @param int $id_grupo_origem_comercial {{{origem_comercial_update_id_grupo_origem_comercial_value}}}
      * @return $this
      */
     public function setIdGrupoOrigemComercial($id_grupo_origem_comercial)
@@ -472,7 +472,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Indica o status da origem comercial
+     * @param int $status {{{origem_comercial_update_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -493,7 +493,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_pre_aprovado
-     * @param bool $flag_pre_aprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+     * @param bool $flag_pre_aprovado {{{origem_comercial_update_flag_pre_aprovado_value}}}
      * @return $this
      */
     public function setFlagPreAprovado($flag_pre_aprovado)
@@ -514,7 +514,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_aprovacao_imediata
-     * @param bool $flag_aprovacao_imediata Indica se permite aprova\u00E7\u00E3o imediata
+     * @param bool $flag_aprovacao_imediata {{{origem_comercial_update_flag_aprovacao_imediata_value}}}
      * @return $this
      */
     public function setFlagAprovacaoImediata($flag_aprovacao_imediata)
@@ -535,7 +535,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets nome_fantasia_plastico
-     * @param string $nome_fantasia_plastico Nome fantasia impresso no pl\u00E1stico
+     * @param string $nome_fantasia_plastico {{{origem_comercial_update_nome_fantasia_plastico_value}}}
      * @return $this
      */
     public function setNomeFantasiaPlastico($nome_fantasia_plastico)
@@ -556,7 +556,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_cartao_provisorio
-     * @param bool $flag_cartao_provisorio Indica se permite cart\u00E3o provis\u00F3rio
+     * @param bool $flag_cartao_provisorio {{{origem_comercial_update_flag_cartao_provisorio_value}}}
      * @return $this
      */
     public function setFlagCartaoProvisorio($flag_cartao_provisorio)
@@ -577,7 +577,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_cartao_definitivo
-     * @param bool $flag_cartao_definitivo Indica se permite cart\u00E3o definitivo
+     * @param bool $flag_cartao_definitivo {{{origem_comercial_update_flag_cartao_definitivo_value}}}
      * @return $this
      */
     public function setFlagCartaoDefinitivo($flag_cartao_definitivo)
@@ -598,7 +598,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+     * @param string $usuario {{{origem_comercial_update_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)
@@ -619,7 +619,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets senha
-     * @param string $senha Senha para autentica\u00E7\u00E3o
+     * @param string $senha {{{origem_comercial_update_senha_value}}}
      * @return $this
      */
     public function setSenha($senha)
@@ -640,7 +640,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_origem_externa
-     * @param bool $flag_origem_externa Indica se \u00E9 origem externa
+     * @param bool $flag_origem_externa {{{origem_comercial_update_flag_origem_externa_value}}}
      * @return $this
      */
     public function setFlagOrigemExterna($flag_origem_externa)
@@ -661,7 +661,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_modificado
-     * @param bool $flag_modificado Indica se h\u00E1 modifica\u00E7\u00E3o
+     * @param bool $flag_modificado {{{origem_comercial_update_flag_modificado_value}}}
      * @return $this
      */
     public function setFlagModificado($flag_modificado)
@@ -682,7 +682,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_envia_fatura_usuario
-     * @param bool $flag_envia_fatura_usuario Indica se envia fatura
+     * @param bool $flag_envia_fatura_usuario {{{origem_comercial_update_flag_envia_fatura_usuario_value}}}
      * @return $this
      */
     public function setFlagEnviaFaturaUsuario($flag_envia_fatura_usuario)
@@ -703,7 +703,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_credito_faturamento
-     * @param bool $flag_credito_faturamento Indica se permite cr\u00E9dito de faturamento
+     * @param bool $flag_credito_faturamento {{{origem_comercial_update_flag_credito_faturamento_value}}}
      * @return $this
      */
     public function setFlagCreditoFaturamento($flag_credito_faturamento)
@@ -724,7 +724,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_concede_limite_provisorio
-     * @param bool $flag_concede_limite_provisorio Indica se concede limite provis\u00F3rio
+     * @param bool $flag_concede_limite_provisorio {{{origem_comercial_update_flag_concede_limite_provisorio_value}}}
      * @return $this
      */
     public function setFlagConcedeLimiteProvisorio($flag_concede_limite_provisorio)
@@ -745,7 +745,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_digitalizar_doc
-     * @param bool $flag_digitalizar_doc Indica se digitaliza documento
+     * @param bool $flag_digitalizar_doc {{{origem_comercial_update_flag_digitalizar_doc_value}}}
      * @return $this
      */
     public function setFlagDigitalizarDoc($flag_digitalizar_doc)
@@ -766,7 +766,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_embossing_loja
-     * @param bool $flag_embossing_loja Indica se realiza embossing em loja
+     * @param bool $flag_embossing_loja {{{origem_comercial_update_flag_embossing_loja_value}}}
      * @return $this
      */
     public function setFlagEmbossingLoja($flag_embossing_loja)
@@ -787,7 +787,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets flag_consulta_previa
-     * @param bool $flag_consulta_previa Indica se realiza consulta pr\u00E9via
+     * @param bool $flag_consulta_previa {{{origem_comercial_update_flag_consulta_previa_value}}}
      * @return $this
      */
     public function setFlagConsultaPrevia($flag_consulta_previa)
@@ -808,7 +808,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets tipo_pessoa
-     * @param string $tipo_pessoa Tipo de pessoa
+     * @param string $tipo_pessoa {{{origem_comercial_update_tipo_pessoa_value}}}
      * @return $this
      */
     public function setTipoPessoa($tipo_pessoa)
@@ -832,7 +832,7 @@ class OrigemComercialPersist implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto Identificador de Produto da origem comercial
+     * @param int $id_produto {{{origem_comercial_persist_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)

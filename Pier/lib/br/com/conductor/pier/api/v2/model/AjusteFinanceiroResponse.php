@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AjusteFinanceiroResponse Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{ajuste_financeiro_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class AjusteFinanceiroResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
+      * $id {{{ajuste_financeiro_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_ajuste C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
+      * $id_tipo_ajuste {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
       * @var int
       */
     protected $id_tipo_ajuste;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
+      * $id_conta {{{ajuste_financeiro_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $data_ajuste Data do ajuste
+      * $data_ajuste {{{ajuste_financeiro_response_data_ajuste_value}}}
       * @var string
       */
     protected $data_ajuste;
     
     /**
-      * $valor Valor do ajuste
+      * $valor {{{ajuste_financeiro_response_valor_value}}}
       * @var Number
       */
     protected $valor;
     
     /**
-      * $identificador_externo Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+      * $identificador_externo {{{ajuste_financeiro_response_identificador_externo_value}}}
       * @var string
       */
     protected $identificador_externo;
     
     /**
-      * $status Status do ajuste.
+      * $status {{{ajuste_financeiro_response_status_value}}}
       * @var int
       */
     protected $status;
@@ -191,7 +191,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
+     * @param int $id {{{ajuste_financeiro_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -212,7 +212,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_ajuste
-     * @param int $id_tipo_ajuste C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
+     * @param int $id_tipo_ajuste {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
      * @return $this
      */
     public function setIdTipoAjuste($id_tipo_ajuste)
@@ -233,7 +233,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
+     * @param int $id_conta {{{ajuste_financeiro_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -254,7 +254,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets data_ajuste
-     * @param string $data_ajuste Data do ajuste
+     * @param string $data_ajuste {{{ajuste_financeiro_response_data_ajuste_value}}}
      * @return $this
      */
     public function setDataAjuste($data_ajuste)
@@ -275,7 +275,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Valor do ajuste
+     * @param Number $valor {{{ajuste_financeiro_response_valor_value}}}
      * @return $this
      */
     public function setValor($valor)
@@ -296,7 +296,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets identificador_externo
-     * @param string $identificador_externo Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+     * @param string $identificador_externo {{{ajuste_financeiro_response_identificador_externo_value}}}
      * @return $this
      */
     public function setIdentificadorExterno($identificador_externo)
@@ -317,7 +317,7 @@ class AjusteFinanceiroResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Status do ajuste.
+     * @param int $status {{{ajuste_financeiro_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)

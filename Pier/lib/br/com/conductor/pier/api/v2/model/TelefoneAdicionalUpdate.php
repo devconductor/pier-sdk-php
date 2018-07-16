@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneAdicionalUpdate Class Doc Comment
  *
  * @category    Class
- * @description Objeto Telefone
+ * @description {{{telefone_adicional_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class TelefoneAdicionalUpdate implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+      * $id {{{telefone_adicional_update_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+      * $id_tipo_telefone {{{telefone_adicional_update_id_tipo_telefone_value}}}
       * @var int
       */
     protected $id_tipo_telefone;
     
     /**
-      * $ddd C\u00F3digo DDD do telefone.
+      * $ddd {{{telefone_adicional_update_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone.
+      * $telefone {{{telefone_adicional_update_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00FAmero do ramal.
+      * $ramal {{{telefone_adicional_update_ramal_value}}}
       * @var string
       */
     protected $ramal;
@@ -169,7 +169,7 @@ class TelefoneAdicionalUpdate implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+     * @param int $id {{{telefone_adicional_update_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -190,7 +190,7 @@ class TelefoneAdicionalUpdate implements ArrayAccess
   
     /**
      * Sets id_tipo_telefone
-     * @param int $id_tipo_telefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+     * @param int $id_tipo_telefone {{{telefone_adicional_update_id_tipo_telefone_value}}}
      * @return $this
      */
     public function setIdTipoTelefone($id_tipo_telefone)
@@ -211,7 +211,7 @@ class TelefoneAdicionalUpdate implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00F3digo DDD do telefone.
+     * @param string $ddd {{{telefone_adicional_update_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -232,7 +232,7 @@ class TelefoneAdicionalUpdate implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone.
+     * @param string $telefone {{{telefone_adicional_update_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -253,7 +253,7 @@ class TelefoneAdicionalUpdate implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00FAmero do ramal.
+     * @param string $ramal {{{telefone_adicional_update_ramal_value}}}
      * @return $this
      */
     public function setRamal($ramal)

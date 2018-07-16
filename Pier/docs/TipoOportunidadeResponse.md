@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo identificador do TipoOportunidade | 
-**descricao** | **string** | Descricao do TipoOportunidade | 
-**flag_ativo** | **bool** | Flag que representa se o tipo oportunidade est\u00E1 ativo | 
+**id** | **int** | {{{tipo_oportunidade_response_id_value}}} | 
+**descricao** | **string** | {{{tipo_oportunidade_response_descricao_value}}} | 
+**flag_ativo** | **bool** | {{{tipo_oportunidade_response_flag_ativo_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

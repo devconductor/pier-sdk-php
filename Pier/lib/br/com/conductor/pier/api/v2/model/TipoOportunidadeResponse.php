@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoOportunidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
+ * @description {{{tipo_oportunidade_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class TipoOportunidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do TipoOportunidade
+      * $id {{{tipo_oportunidade_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descricao do TipoOportunidade
+      * $descricao {{{tipo_oportunidade_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
+      * $flag_ativo {{{tipo_oportunidade_response_flag_ativo_value}}}
       * @var bool
       */
     protected $flag_ativo;
@@ -147,7 +147,7 @@ class TipoOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do TipoOportunidade
+     * @param int $id {{{tipo_oportunidade_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class TipoOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descricao do TipoOportunidade
+     * @param string $descricao {{{tipo_oportunidade_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -189,7 +189,7 @@ class TipoOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param bool $flag_ativo Flag que representa se o tipo oportunidade est\u00E1 ativo
+     * @param bool $flag_ativo {{{tipo_oportunidade_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)

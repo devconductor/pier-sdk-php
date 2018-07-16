@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DetalhesFaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto contendo os detalhes de uma fatura
+ * @description {{{detalhes_fatura_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class DetalhesFaturaResponse implements ArrayAccess
 
     
     /**
-      * $fatura Apresenta os detalhes da fatura
+      * $fatura {{{detalhes_fatura_response_fatura_value}}}
       * @var \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse
       */
     protected $fatura;
     
     /**
-      * $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+      * $transacoes {{{detalhes_fatura_response_transacoes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]
       */
     protected $transacoes;
@@ -136,7 +136,7 @@ class DetalhesFaturaResponse implements ArrayAccess
   
     /**
      * Sets fatura
-     * @param \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse $fatura Apresenta os detalhes da fatura
+     * @param \br.com.conductor.pier.api.v2.model\FaturaFechadaResponse $fatura {{{detalhes_fatura_response_fatura_value}}}
      * @return $this
      */
     public function setFatura($fatura)
@@ -157,7 +157,7 @@ class DetalhesFaturaResponse implements ArrayAccess
   
     /**
      * Sets transacoes
-     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes {{{detalhes_fatura_response_transacoes_value}}}
      * @return $this
      */
     public function setTransacoes($transacoes)

@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * OrigemComercialUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
+ * @description {{{origem_comercial_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

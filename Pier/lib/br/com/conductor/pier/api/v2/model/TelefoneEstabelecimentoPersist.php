@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TelefoneEstabelecimentoPersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto Telefone
+ * @description {{{telefone_estabelecimento_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class TelefoneEstabelecimentoPersist implements ArrayAccess
 
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+      * $id_estabelecimento {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $ddd C\u00F3digo DDD do telefone.
+      * $ddd {{{telefone_estabelecimento_persist_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone.
+      * $telefone {{{telefone_estabelecimento_persist_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $ramal N\u00FAmero do ramal.
+      * $ramal {{{telefone_estabelecimento_persist_ramal_value}}}
       * @var string
       */
     protected $ramal;
@@ -158,7 +158,7 @@ class TelefoneEstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+     * @param int $id_estabelecimento {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -179,7 +179,7 @@ class TelefoneEstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd C\u00F3digo DDD do telefone.
+     * @param string $ddd {{{telefone_estabelecimento_persist_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -200,7 +200,7 @@ class TelefoneEstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone.
+     * @param string $telefone {{{telefone_estabelecimento_persist_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -221,7 +221,7 @@ class TelefoneEstabelecimentoPersist implements ArrayAccess
   
     /**
      * Sets ramal
-     * @param string $ramal N\u00FAmero do ramal.
+     * @param string $ramal {{{telefone_estabelecimento_persist_ramal_value}}}
      * @return $this
      */
     public function setRamal($ramal)

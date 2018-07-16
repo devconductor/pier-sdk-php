@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EstabelecimentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Estabelecimento
+ * @description {{{estabelecimento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -260,253 +260,253 @@ class EstabelecimentoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+      * $id {{{estabelecimento_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+      * $numero_estabelecimento {{{estabelecimento_response_numero_estabelecimento_value}}}
       * @var string
       */
     protected $numero_estabelecimento;
     
     /**
-      * $flag_matriz Indica se \u00E9 matriz ou filial.
+      * $flag_matriz {{{estabelecimento_response_flag_matriz_value}}}
       * @var int
       */
     protected $flag_matriz;
     
     /**
-      * $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+      * $id_grupo_economico {{{estabelecimento_response_id_grupo_economico_value}}}
       * @var int
       */
     protected $id_grupo_economico;
     
     /**
-      * $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
+      * $numero_receita_federal {{{estabelecimento_response_numero_receita_federal_value}}}
       * @var int
       */
     protected $numero_receita_federal;
     
     /**
-      * $nome Nome do Estabelecimento.
+      * $nome {{{estabelecimento_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Raz\u00E3o Social do Estabelecimento.
+      * $descricao {{{estabelecimento_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
+      * $nome_fantasia {{{estabelecimento_response_nome_fantasia_value}}}
       * @var string
       */
     protected $nome_fantasia;
     
     /**
-      * $cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
+      * $cep {{{estabelecimento_response_cep_value}}}
       * @var string
       */
     protected $cep;
     
     /**
-      * $nome_logradouro Nome do Logradouro.
+      * $nome_logradouro {{{estabelecimento_response_nome_logradouro_value}}}
       * @var string
       */
     protected $nome_logradouro;
     
     /**
-      * $numero_endereco N\u00FAmero do endere\u00E7o.
+      * $numero_endereco {{{estabelecimento_response_numero_endereco_value}}}
       * @var string
       */
     protected $numero_endereco;
     
     /**
-      * $bairro Nome do bairro do endere\u00E7o.
+      * $bairro {{{estabelecimento_response_bairro_value}}}
       * @var string
       */
     protected $bairro;
     
     /**
-      * $cidade Nome da cidade do endere\u00E7o.
+      * $cidade {{{estabelecimento_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+      * $complemento {{{estabelecimento_response_complemento_value}}}
       * @var string
       */
     protected $complemento;
     
     /**
-      * $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+      * $uf {{{estabelecimento_response_uf_value}}}
       * @var string
       */
     protected $uf;
     
     /**
-      * $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
+      * $cep2 {{{estabelecimento_response_cep2_value}}}
       * @var string
       */
     protected $cep2;
     
     /**
-      * $nome_logradouro2 Nome do Logradouro .
+      * $nome_logradouro2 {{{estabelecimento_response_nome_logradouro2_value}}}
       * @var string
       */
     protected $nome_logradouro2;
     
     /**
-      * $numero_endereco2 N\u00FAmero do endere\u00E7o.
+      * $numero_endereco2 {{{estabelecimento_response_numero_endereco2_value}}}
       * @var string
       */
     protected $numero_endereco2;
     
     /**
-      * $bairro2 Nome do bairro do endere\u00E7o.
+      * $bairro2 {{{estabelecimento_response_bairro2_value}}}
       * @var string
       */
     protected $bairro2;
     
     /**
-      * $cidade2 Nome da cidade do endere\u00E7o.
+      * $cidade2 {{{estabelecimento_response_cidade2_value}}}
       * @var string
       */
     protected $cidade2;
     
     /**
-      * $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+      * $complemento2 {{{estabelecimento_response_complemento2_value}}}
       * @var string
       */
     protected $complemento2;
     
     /**
-      * $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+      * $uf2 {{{estabelecimento_response_uf2_value}}}
       * @var string
       */
     protected $uf2;
     
     /**
-      * $obs Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
+      * $obs {{{estabelecimento_response_obs_value}}}
       * @var string
       */
     protected $obs;
     
     /**
-      * $contato Nome da pessoa para contato com o Estabelecimento.
+      * $contato {{{estabelecimento_response_contato_value}}}
       * @var string
       */
     protected $contato;
     
     /**
-      * $email E-mail da pessoa para contato com o Estabelecimento.
+      * $email {{{estabelecimento_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+      * $flag_arquivo_secr_fazenda {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
       * @var int
       */
     protected $flag_arquivo_secr_fazenda;
     
     /**
-      * $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+      * $flag_cartao_digitado {{{estabelecimento_response_flag_cartao_digitado_value}}}
       * @var int
       */
     protected $flag_cartao_digitado;
     
     /**
-      * $inativo Indica se o estabelecimento est\u00E1 inativo.
+      * $inativo {{{estabelecimento_response_inativo_value}}}
       * @var int
       */
     protected $inativo;
     
     /**
-      * $id_moeda C\u00F3digo identificador da moeda.
+      * $id_moeda {{{estabelecimento_response_id_moeda_value}}}
       * @var int
       */
     protected $id_moeda;
     
     /**
-      * $id_pais Identificador de Pa\u00EDs.
+      * $id_pais {{{estabelecimento_response_id_pais_value}}}
       * @var int
       */
     protected $id_pais;
     
     /**
-      * $associado_spc_brasil N\u00FAmero do associado ao SPCBrasil.
+      * $associado_spc_brasil {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
       * @var int
       */
     protected $associado_spc_brasil;
     
     /**
-      * $mcc C\u00F3digo de Categoria de Mercado.
+      * $mcc {{{estabelecimento_response_mcc_value}}}
       * @var int
       */
     protected $mcc;
     
     /**
-      * $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+      * $id_tipo_estabelecimento {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
       * @var int
       */
     protected $id_tipo_estabelecimento;
     
     /**
-      * $correspondencia Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).
+      * $correspondencia {{{estabelecimento_response_correspondencia_value}}}
       * @var int
       */
     protected $correspondencia;
     
     /**
-      * $cargo_contato Cargo do contato do estabelecimento.
+      * $cargo_contato {{{estabelecimento_response_cargo_contato_value}}}
       * @var string
       */
     protected $cargo_contato;
     
     /**
-      * $tipo_pagamento Tipo do regime de pagamento do estabelecimento.
+      * $tipo_pagamento {{{estabelecimento_response_tipo_pagamento_value}}}
       * @var string
       */
     protected $tipo_pagamento;
     
     /**
-      * $consulta Consulta de cadastro n\u00FAmero um.
+      * $consulta {{{estabelecimento_response_consulta_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta;
     
     /**
-      * $consulta2 Consulta de cadastro n\u00FAmero dois.
+      * $consulta2 {{{estabelecimento_response_consulta2_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta2;
     
     /**
-      * $consulta3 Consulta de cadastro n\u00FAmero tr\u00EAs.
+      * $consulta3 {{{estabelecimento_response_consulta3_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO
       */
     protected $consulta3;
     
     /**
-      * $terminal Terminal do estabelecimento.
+      * $terminal {{{estabelecimento_response_terminal_value}}}
       * @var string
       */
     protected $terminal;
     
     /**
-      * $data_cadastramento Data de Cadastro do Estabelecimento.
+      * $data_cadastramento {{{estabelecimento_response_data_cadastramento_value}}}
       * @var string
       */
     protected $data_cadastramento;
     
     /**
-      * $usuario Usu\u00E1rio da aplica\u00E7\u00E3o.
+      * $usuario {{{estabelecimento_response_usuario_value}}}
       * @var string
       */
     protected $usuario;
@@ -576,7 +576,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+     * @param int $id {{{estabelecimento_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -597,7 +597,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param string $numero_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+     * @param string $numero_estabelecimento {{{estabelecimento_response_numero_estabelecimento_value}}}
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -618,7 +618,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets flag_matriz
-     * @param int $flag_matriz Indica se \u00E9 matriz ou filial.
+     * @param int $flag_matriz {{{estabelecimento_response_flag_matriz_value}}}
      * @return $this
      */
     public function setFlagMatriz($flag_matriz)
@@ -639,7 +639,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_economico
-     * @param int $id_grupo_economico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+     * @param int $id_grupo_economico {{{estabelecimento_response_id_grupo_economico_value}}}
      * @return $this
      */
     public function setIdGrupoEconomico($id_grupo_economico)
@@ -660,7 +660,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param int $numero_receita_federal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
+     * @param int $numero_receita_federal {{{estabelecimento_response_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -681,7 +681,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Estabelecimento.
+     * @param string $nome {{{estabelecimento_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -702,7 +702,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Raz\u00E3o Social do Estabelecimento.
+     * @param string $descricao {{{estabelecimento_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -723,7 +723,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia
-     * @param string $nome_fantasia T\u00EDtulo Comercial do Estabelecimento.
+     * @param string $nome_fantasia {{{estabelecimento_response_nome_fantasia_value}}}
      * @return $this
      */
     public function setNomeFantasia($nome_fantasia)
@@ -744,7 +744,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
+     * @param string $cep {{{estabelecimento_response_cep_value}}}
      * @return $this
      */
     public function setCep($cep)
@@ -765,7 +765,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets nome_logradouro
-     * @param string $nome_logradouro Nome do Logradouro.
+     * @param string $nome_logradouro {{{estabelecimento_response_nome_logradouro_value}}}
      * @return $this
      */
     public function setNomeLogradouro($nome_logradouro)
@@ -786,7 +786,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets numero_endereco
-     * @param string $numero_endereco N\u00FAmero do endere\u00E7o.
+     * @param string $numero_endereco {{{estabelecimento_response_numero_endereco_value}}}
      * @return $this
      */
     public function setNumeroEndereco($numero_endereco)
@@ -807,7 +807,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets bairro
-     * @param string $bairro Nome do bairro do endere\u00E7o.
+     * @param string $bairro {{{estabelecimento_response_bairro_value}}}
      * @return $this
      */
     public function setBairro($bairro)
@@ -828,7 +828,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Nome da cidade do endere\u00E7o.
+     * @param string $cidade {{{estabelecimento_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -849,7 +849,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+     * @param string $complemento {{{estabelecimento_response_complemento_value}}}
      * @return $this
      */
     public function setComplemento($complemento)
@@ -870,7 +870,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets uf
-     * @param string $uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+     * @param string $uf {{{estabelecimento_response_uf_value}}}
      * @return $this
      */
     public function setUf($uf)
@@ -891,7 +891,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets cep2
-     * @param string $cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
+     * @param string $cep2 {{{estabelecimento_response_cep2_value}}}
      * @return $this
      */
     public function setCep2($cep2)
@@ -912,7 +912,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets nome_logradouro2
-     * @param string $nome_logradouro2 Nome do Logradouro .
+     * @param string $nome_logradouro2 {{{estabelecimento_response_nome_logradouro2_value}}}
      * @return $this
      */
     public function setNomeLogradouro2($nome_logradouro2)
@@ -933,7 +933,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets numero_endereco2
-     * @param string $numero_endereco2 N\u00FAmero do endere\u00E7o.
+     * @param string $numero_endereco2 {{{estabelecimento_response_numero_endereco2_value}}}
      * @return $this
      */
     public function setNumeroEndereco2($numero_endereco2)
@@ -954,7 +954,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets bairro2
-     * @param string $bairro2 Nome do bairro do endere\u00E7o.
+     * @param string $bairro2 {{{estabelecimento_response_bairro2_value}}}
      * @return $this
      */
     public function setBairro2($bairro2)
@@ -975,7 +975,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets cidade2
-     * @param string $cidade2 Nome da cidade do endere\u00E7o.
+     * @param string $cidade2 {{{estabelecimento_response_cidade2_value}}}
      * @return $this
      */
     public function setCidade2($cidade2)
@@ -996,7 +996,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets complemento2
-     * @param string $complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+     * @param string $complemento2 {{{estabelecimento_response_complemento2_value}}}
      * @return $this
      */
     public function setComplemento2($complemento2)
@@ -1017,7 +1017,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets uf2
-     * @param string $uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+     * @param string $uf2 {{{estabelecimento_response_uf2_value}}}
      * @return $this
      */
     public function setUf2($uf2)
@@ -1038,7 +1038,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets obs
-     * @param string $obs Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
+     * @param string $obs {{{estabelecimento_response_obs_value}}}
      * @return $this
      */
     public function setObs($obs)
@@ -1059,7 +1059,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets contato
-     * @param string $contato Nome da pessoa para contato com o Estabelecimento.
+     * @param string $contato {{{estabelecimento_response_contato_value}}}
      * @return $this
      */
     public function setContato($contato)
@@ -1080,7 +1080,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email E-mail da pessoa para contato com o Estabelecimento.
+     * @param string $email {{{estabelecimento_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -1101,7 +1101,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets flag_arquivo_secr_fazenda
-     * @param int $flag_arquivo_secr_fazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+     * @param int $flag_arquivo_secr_fazenda {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
      * @return $this
      */
     public function setFlagArquivoSecrFazenda($flag_arquivo_secr_fazenda)
@@ -1122,7 +1122,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets flag_cartao_digitado
-     * @param int $flag_cartao_digitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+     * @param int $flag_cartao_digitado {{{estabelecimento_response_flag_cartao_digitado_value}}}
      * @return $this
      */
     public function setFlagCartaoDigitado($flag_cartao_digitado)
@@ -1143,7 +1143,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets inativo
-     * @param int $inativo Indica se o estabelecimento est\u00E1 inativo.
+     * @param int $inativo {{{estabelecimento_response_inativo_value}}}
      * @return $this
      */
     public function setInativo($inativo)
@@ -1164,7 +1164,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id_moeda
-     * @param int $id_moeda C\u00F3digo identificador da moeda.
+     * @param int $id_moeda {{{estabelecimento_response_id_moeda_value}}}
      * @return $this
      */
     public function setIdMoeda($id_moeda)
@@ -1185,7 +1185,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id_pais
-     * @param int $id_pais Identificador de Pa\u00EDs.
+     * @param int $id_pais {{{estabelecimento_response_id_pais_value}}}
      * @return $this
      */
     public function setIdPais($id_pais)
@@ -1206,7 +1206,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets associado_spc_brasil
-     * @param int $associado_spc_brasil N\u00FAmero do associado ao SPCBrasil.
+     * @param int $associado_spc_brasil {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
      * @return $this
      */
     public function setAssociadoSpcBrasil($associado_spc_brasil)
@@ -1227,7 +1227,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets mcc
-     * @param int $mcc C\u00F3digo de Categoria de Mercado.
+     * @param int $mcc {{{estabelecimento_response_mcc_value}}}
      * @return $this
      */
     public function setMcc($mcc)
@@ -1248,7 +1248,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_estabelecimento
-     * @param int $id_tipo_estabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+     * @param int $id_tipo_estabelecimento {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
      * @return $this
      */
     public function setIdTipoEstabelecimento($id_tipo_estabelecimento)
@@ -1269,7 +1269,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets correspondencia
-     * @param int $correspondencia Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).
+     * @param int $correspondencia {{{estabelecimento_response_correspondencia_value}}}
      * @return $this
      */
     public function setCorrespondencia($correspondencia)
@@ -1290,7 +1290,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets cargo_contato
-     * @param string $cargo_contato Cargo do contato do estabelecimento.
+     * @param string $cargo_contato {{{estabelecimento_response_cargo_contato_value}}}
      * @return $this
      */
     public function setCargoContato($cargo_contato)
@@ -1311,7 +1311,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets tipo_pagamento
-     * @param string $tipo_pagamento Tipo do regime de pagamento do estabelecimento.
+     * @param string $tipo_pagamento {{{estabelecimento_response_tipo_pagamento_value}}}
      * @return $this
      */
     public function setTipoPagamento($tipo_pagamento)
@@ -1335,7 +1335,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets consulta
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta Consulta de cadastro n\u00FAmero um.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta {{{estabelecimento_response_consulta_value}}}
      * @return $this
      */
     public function setConsulta($consulta)
@@ -1356,7 +1356,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets consulta2
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta2 Consulta de cadastro n\u00FAmero dois.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta2 {{{estabelecimento_response_consulta2_value}}}
      * @return $this
      */
     public function setConsulta2($consulta2)
@@ -1377,7 +1377,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets consulta3
-     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta3 Consulta de cadastro n\u00FAmero tr\u00EAs.
+     * @param \br.com.conductor.pier.api.v2.model\ConsultaCadastroEstabelecimentoDTO $consulta3 {{{estabelecimento_response_consulta3_value}}}
      * @return $this
      */
     public function setConsulta3($consulta3)
@@ -1398,7 +1398,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets terminal
-     * @param string $terminal Terminal do estabelecimento.
+     * @param string $terminal {{{estabelecimento_response_terminal_value}}}
      * @return $this
      */
     public function setTerminal($terminal)
@@ -1419,7 +1419,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets data_cadastramento
-     * @param string $data_cadastramento Data de Cadastro do Estabelecimento.
+     * @param string $data_cadastramento {{{estabelecimento_response_data_cadastramento_value}}}
      * @return $this
      */
     public function setDataCadastramento($data_cadastramento)
@@ -1440,7 +1440,7 @@ class EstabelecimentoResponse implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Usu\u00E1rio da aplica\u00E7\u00E3o.
+     * @param string $usuario {{{estabelecimento_response_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)

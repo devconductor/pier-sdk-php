@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CompraResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Compra
+ * @description {{{compra_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -196,127 +196,127 @@ class CompraResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra.
+      * $id_compra {{{compra_response_id_compra_value}}}
       * @var int
       */
     protected $id_compra;
     
     /**
-      * $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+      * $status {{{compra_response_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $data_compra Data da compra.
+      * $data_compra {{{compra_response_data_compra_value}}}
       * @var string
       */
     protected $data_compra;
     
     /**
-      * $valor_total_compra Valor total da compra.
+      * $valor_total_compra {{{compra_response_valor_total_compra_value}}}
       * @var Number
       */
     protected $valor_total_compra;
     
     /**
-      * $valor_parcela Valor da parcela da compra.
+      * $valor_parcela {{{compra_response_valor_parcela_value}}}
       * @var Number
       */
     protected $valor_parcela;
     
     /**
-      * $primeira_parcela Valor da primeira parcela da compra.
+      * $primeira_parcela {{{compra_response_primeira_parcela_value}}}
       * @var Number
       */
     protected $primeira_parcela;
     
     /**
-      * $numero_parcelas N\u00FAmero de parcelas da compra.
+      * $numero_parcelas {{{compra_response_numero_parcelas_value}}}
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $numero_parcelas_antecipaveis N\u00FAmero de parcelas antecip\u00E1veis da compra.
+      * $numero_parcelas_antecipaveis {{{compra_response_numero_parcelas_antecipaveis_value}}}
       * @var int
       */
     protected $numero_parcelas_antecipaveis;
     
     /**
-      * $nome_estabelecimento Nome do estabelecimento da compra.
+      * $nome_estabelecimento {{{compra_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+      * $tipo_origem_transacao {{{compra_response_tipo_origem_transacao_value}}}
       * @var string
       */
     protected $tipo_origem_transacao;
     
     /**
-      * $cidade Cidade onde a compra foi realizada.
+      * $cidade {{{compra_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $pais Pa\u00EDs onde a compra foi realizada.
+      * $pais {{{compra_response_pais_value}}}
       * @var string
       */
     protected $pais;
     
     /**
-      * $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+      * $latitude {{{compra_response_latitude_value}}}
       * @var string
       */
     protected $latitude;
     
     /**
-      * $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+      * $longitude {{{compra_response_longitude_value}}}
       * @var string
       */
     protected $longitude;
     
     /**
-      * $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+      * $id_grupo_mcc {{{compra_response_id_grupo_m_c_c_value}}}
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+      * $descricao_grupo_mcc {{{compra_response_descricao_grupo_m_c_c_value}}}
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
+      * $id_conta {{{compra_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+      * $id_produto {{{compra_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+      * $descricao_produto {{{compra_response_descricao_produto_value}}}
       * @var string
       */
     protected $descricao_produto;
     
     /**
-      * $cartao N\u00FAmero do cart\u00E3o da compra.
+      * $cartao {{{compra_response_cartao_value}}}
       * @var string
       */
     protected $cartao;
     
     /**
-      * $nome_portador_cartao Nome do portador do cart\u00E3o da compra.
+      * $nome_portador_cartao {{{compra_response_nome_portador_cartao_value}}}
       * @var string
       */
     protected $nome_portador_cartao;
@@ -409,7 +409,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets id_compra
-     * @param int $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra.
+     * @param int $id_compra {{{compra_response_id_compra_value}}}
      * @return $this
      */
     public function setIdCompra($id_compra)
@@ -430,7 +430,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+     * @param string $status {{{compra_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -451,7 +451,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param string $data_compra Data da compra.
+     * @param string $data_compra {{{compra_response_data_compra_value}}}
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -472,7 +472,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets valor_total_compra
-     * @param Number $valor_total_compra Valor total da compra.
+     * @param Number $valor_total_compra {{{compra_response_valor_total_compra_value}}}
      * @return $this
      */
     public function setValorTotalCompra($valor_total_compra)
@@ -493,7 +493,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela
-     * @param Number $valor_parcela Valor da parcela da compra.
+     * @param Number $valor_parcela {{{compra_response_valor_parcela_value}}}
      * @return $this
      */
     public function setValorParcela($valor_parcela)
@@ -514,7 +514,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets primeira_parcela
-     * @param Number $primeira_parcela Valor da primeira parcela da compra.
+     * @param Number $primeira_parcela {{{compra_response_primeira_parcela_value}}}
      * @return $this
      */
     public function setPrimeiraParcela($primeira_parcela)
@@ -535,7 +535,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00FAmero de parcelas da compra.
+     * @param int $numero_parcelas {{{compra_response_numero_parcelas_value}}}
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -556,7 +556,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets numero_parcelas_antecipaveis
-     * @param int $numero_parcelas_antecipaveis N\u00FAmero de parcelas antecip\u00E1veis da compra.
+     * @param int $numero_parcelas_antecipaveis {{{compra_response_numero_parcelas_antecipaveis_value}}}
      * @return $this
      */
     public function setNumeroParcelasAntecipaveis($numero_parcelas_antecipaveis)
@@ -577,7 +577,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do estabelecimento da compra.
+     * @param string $nome_estabelecimento {{{compra_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -598,7 +598,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+     * @param string $tipo_origem_transacao {{{compra_response_tipo_origem_transacao_value}}}
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -619,7 +619,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Cidade onde a compra foi realizada.
+     * @param string $cidade {{{compra_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -640,7 +640,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Pa\u00EDs onde a compra foi realizada.
+     * @param string $pais {{{compra_response_pais_value}}}
      * @return $this
      */
     public function setPais($pais)
@@ -661,7 +661,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets latitude
-     * @param string $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $latitude {{{compra_response_latitude_value}}}
      * @return $this
      */
     public function setLatitude($latitude)
@@ -682,7 +682,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets longitude
-     * @param string $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $longitude {{{compra_response_longitude_value}}}
      * @return $this
      */
     public function setLongitude($longitude)
@@ -703,7 +703,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+     * @param int $id_grupo_mcc {{{compra_response_id_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -724,7 +724,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+     * @param string $descricao_grupo_mcc {{{compra_response_descricao_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -745,7 +745,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
+     * @param int $id_conta {{{compra_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -766,7 +766,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+     * @param int $id_produto {{{compra_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -787,7 +787,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+     * @param string $descricao_produto {{{compra_response_descricao_produto_value}}}
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -808,7 +808,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets cartao
-     * @param string $cartao N\u00FAmero do cart\u00E3o da compra.
+     * @param string $cartao {{{compra_response_cartao_value}}}
      * @return $this
      */
     public function setCartao($cartao)
@@ -829,7 +829,7 @@ class CompraResponse implements ArrayAccess
   
     /**
      * Sets nome_portador_cartao
-     * @param string $nome_portador_cartao Nome do portador do cart\u00E3o da compra.
+     * @param string $nome_portador_cartao {{{compra_response_nome_portador_cartao_value}}}
      * @return $this
      */
     public function setNomePortadorCartao($nome_portador_cartao)

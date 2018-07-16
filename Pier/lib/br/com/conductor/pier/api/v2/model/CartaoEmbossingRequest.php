@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoEmbossingRequest Class Doc Comment
  *
  * @category    Class
- * @description Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
+ * @description {{{cartao_embossing_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class CartaoEmbossingRequest implements ArrayAccess
 
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+      * $id_pessoa {{{cartao_embossing_request_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
+      * $id_tipo_plastico {{{cartao_embossing_request_id_tipo_plastico_value}}}
       * @var int
       */
     protected $id_tipo_plastico;
@@ -136,7 +136,7 @@ class CartaoEmbossingRequest implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+     * @param int $id_pessoa {{{cartao_embossing_request_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -157,7 +157,7 @@ class CartaoEmbossingRequest implements ArrayAccess
   
     /**
      * Sets id_tipo_plastico
-     * @param int $id_tipo_plastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
+     * @param int $id_tipo_plastico {{{cartao_embossing_request_id_tipo_plastico_value}}}
      * @return $this
      */
     public function setIdTipoPlastico($id_tipo_plastico)

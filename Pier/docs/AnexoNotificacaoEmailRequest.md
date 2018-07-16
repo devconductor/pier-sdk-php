@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_documento** | **int** | ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o. | [optional] 
+**id_documento** | **int** | {{{anexo_notificacao_email_request_id_documento_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

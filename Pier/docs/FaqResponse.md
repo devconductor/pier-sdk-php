@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id). | [optional] 
-**pergunta** | **string** | Conte\u00FAdo da pergunta. | [optional] 
-**resposta** | **string** | Conte\u00FAdo da resposta. | [optional] 
-**relevancia** | **int** | N\u00EDvel de relev\u00E2ncia da pergunta. | [optional] 
-**plataforma** | **string** | Plataforma em que a FAQ se encaixa. | [optional] 
-**categoria** | **string** | Categoria de assunto do qual a FAQ se trata. | [optional] 
-**status** | **string** | Status descrevendo a situa\u00E7\u00E3o atual da FAQ. | [optional] 
+**id** | **int** | {{{faq_response_id_value}}} | [optional] 
+**pergunta** | **string** | {{{faq_response_pergunta_value}}} | [optional] 
+**resposta** | **string** | {{{faq_response_resposta_value}}} | [optional] 
+**relevancia** | **int** | {{{faq_response_relevancia_value}}} | [optional] 
+**plataforma** | **string** | {{{faq_response_plataforma_value}}} | [optional] 
+**categoria** | **string** | {{{faq_response_categoria_value}}} | [optional] 
+**status** | **string** | {{{faq_response_status_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

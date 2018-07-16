@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CampanhaResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de campanha
+ * @description {{{campanha_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class CampanhaResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador da campanha
+      * $id {{{campanha_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome da campanha
+      * $nome {{{campanha_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
+      * $id_tipo_campanha {{{campanha_response_id_tipo_campanha_value}}}
       * @var int
       */
     protected $id_tipo_campanha;
     
     /**
-      * $planos_campanhas Lista de planos associados a Campanha
+      * $planos_campanhas {{{campanha_response_planos_campanhas_value}}}
       * @var \br.com.conductor.pier.api.v2.model\PlanoCampanhaResponse[]
       */
     protected $planos_campanhas;
@@ -158,7 +158,7 @@ class CampanhaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador da campanha
+     * @param int $id {{{campanha_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class CampanhaResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da campanha
+     * @param string $nome {{{campanha_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -200,7 +200,7 @@ class CampanhaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_campanha
-     * @param int $id_tipo_campanha C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
+     * @param int $id_tipo_campanha {{{campanha_response_id_tipo_campanha_value}}}
      * @return $this
      */
     public function setIdTipoCampanha($id_tipo_campanha)
@@ -221,7 +221,7 @@ class CampanhaResponse implements ArrayAccess
   
     /**
      * Sets planos_campanhas
-     * @param \br.com.conductor.pier.api.v2.model\PlanoCampanhaResponse[] $planos_campanhas Lista de planos associados a Campanha
+     * @param \br.com.conductor.pier.api.v2.model\PlanoCampanhaResponse[] $planos_campanhas {{{campanha_response_planos_campanhas_value}}}
      * @return $this
      */
     public function setPlanosCampanhas($planos_campanhas)

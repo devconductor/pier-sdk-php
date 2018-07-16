@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ControleVencimentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de Resposta dos Vencimentos
+ * @description {{{controle_vencimento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class ControleVencimentoResponse implements ArrayAccess
 
     
     /**
-      * $data_vencimento  Indica a data de vencimento das faturas
+      * $data_vencimento {{{controle_vencimento_response_data_vencimento_value}}}
       * @var string
       */
     protected $data_vencimento;
     
     /**
-      * $data_prevista_corte  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
+      * $data_prevista_corte {{{controle_vencimento_response_data_prevista_corte_value}}}
       * @var string
       */
     protected $data_prevista_corte;
     
     /**
-      * $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
+      * $data_hora_realizacao_corte {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
       * @var string
       */
     protected $data_hora_realizacao_corte;
     
     /**
-      * $data_prevista_faturamento Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
+      * $data_prevista_faturamento {{{controle_vencimento_response_data_prevista_faturamento_value}}}
       * @var string
       */
     protected $data_prevista_faturamento;
     
     /**
-      * $data_hora_realizacao_faturamento Indica a data e a hora que fora realizado o faturamento
+      * $data_hora_realizacao_faturamento {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
       * @var string
       */
     protected $data_hora_realizacao_faturamento;
     
     /**
-      * $data_real_vencimento Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
+      * $data_real_vencimento {{{controle_vencimento_response_data_real_vencimento_value}}}
       * @var string
       */
     protected $data_real_vencimento;
@@ -180,7 +180,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_vencimento
-     * @param string $data_vencimento  Indica a data de vencimento das faturas
+     * @param string $data_vencimento {{{controle_vencimento_response_data_vencimento_value}}}
      * @return $this
      */
     public function setDataVencimento($data_vencimento)
@@ -201,7 +201,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_prevista_corte
-     * @param string $data_prevista_corte  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
+     * @param string $data_prevista_corte {{{controle_vencimento_response_data_prevista_corte_value}}}
      * @return $this
      */
     public function setDataPrevistaCorte($data_prevista_corte)
@@ -222,7 +222,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_realizacao_corte
-     * @param string $data_hora_realizacao_corte Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
+     * @param string $data_hora_realizacao_corte {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
      * @return $this
      */
     public function setDataHoraRealizacaoCorte($data_hora_realizacao_corte)
@@ -243,7 +243,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_prevista_faturamento
-     * @param string $data_prevista_faturamento Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
+     * @param string $data_prevista_faturamento {{{controle_vencimento_response_data_prevista_faturamento_value}}}
      * @return $this
      */
     public function setDataPrevistaFaturamento($data_prevista_faturamento)
@@ -264,7 +264,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_hora_realizacao_faturamento
-     * @param string $data_hora_realizacao_faturamento Indica a data e a hora que fora realizado o faturamento
+     * @param string $data_hora_realizacao_faturamento {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
      * @return $this
      */
     public function setDataHoraRealizacaoFaturamento($data_hora_realizacao_faturamento)
@@ -285,7 +285,7 @@ class ControleVencimentoResponse implements ArrayAccess
   
     /**
      * Sets data_real_vencimento
-     * @param string $data_real_vencimento Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
+     * @param string $data_real_vencimento {{{controle_vencimento_response_data_real_vencimento_value}}}
      * @return $this
      */
     public function setDataRealVencimento($data_real_vencimento)

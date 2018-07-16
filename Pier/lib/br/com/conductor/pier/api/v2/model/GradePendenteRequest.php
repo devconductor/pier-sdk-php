@@ -38,7 +38,7 @@ use \ArrayAccess;
  * GradePendenteRequest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{grade_pendente_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class GradePendenteRequest implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00F3digo identificador da conta.
+      * $id_conta {{{grade_pendente_request_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $data_base Data do ajuste no formato yyyy-MM-dd.
+      * $data_base {{{grade_pendente_request_data_base_value}}}
       * @var string
       */
     protected $data_base;
@@ -136,7 +136,7 @@ class GradePendenteRequest implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo identificador da conta.
+     * @param int $id_conta {{{grade_pendente_request_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -157,7 +157,7 @@ class GradePendenteRequest implements ArrayAccess
   
     /**
      * Sets data_base
-     * @param string $data_base Data do ajuste no formato yyyy-MM-dd.
+     * @param string $data_base {{{grade_pendente_request_data_base_value}}}
      * @return $this
      */
     public function setDataBase($data_base)

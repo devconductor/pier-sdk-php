@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoParametrosRequest Class Doc Comment
  *
  * @category    Class
- * @description Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
+ * @description {{{documento_parametros_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DocumentoParametrosRequest implements ArrayAccess
 
     
     /**
-      * $id_template_documento ID para o template do documento.
+      * $id_template_documento {{{documento_parametros_request_id_template_documento_value}}}
       * @var int
       */
     protected $id_template_documento;
     
     /**
-      * $nome Nome para o arquivo.
+      * $nome {{{documento_parametros_request_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $parametros_conteudo Lista de par\u00E2metros para montagem do documento.
+      * $parametros_conteudo {{{documento_parametros_request_parametros_conteudo_value}}}
       * @var \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[]
       */
     protected $parametros_conteudo;
@@ -147,7 +147,7 @@ class DocumentoParametrosRequest implements ArrayAccess
   
     /**
      * Sets id_template_documento
-     * @param int $id_template_documento ID para o template do documento.
+     * @param int $id_template_documento {{{documento_parametros_request_id_template_documento_value}}}
      * @return $this
      */
     public function setIdTemplateDocumento($id_template_documento)
@@ -168,7 +168,7 @@ class DocumentoParametrosRequest implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome para o arquivo.
+     * @param string $nome {{{documento_parametros_request_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -189,7 +189,7 @@ class DocumentoParametrosRequest implements ArrayAccess
   
     /**
      * Sets parametros_conteudo
-     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $parametros_conteudo Lista de par\u00E2metros para montagem do documento.
+     * @param \br.com.conductor.pier.api.v2.model\PropriedadeDocumentoRequest[] $parametros_conteudo {{{documento_parametros_request_parametros_conteudo_value}}}
      * @return $this
      */
     public function setParametrosConteudo($parametros_conteudo)

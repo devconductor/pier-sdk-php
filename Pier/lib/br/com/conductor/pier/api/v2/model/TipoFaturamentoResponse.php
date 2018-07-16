@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoFaturamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Faturamento
+ * @description {{{tipo_faturamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class TipoFaturamentoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+      * $id {{{tipo_faturamento_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Desci\u00E7\u00E3o do tipo de faturamento.
+      * $descricao {{{tipo_faturamento_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+      * $flag_apenas_demonstrativo {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
       * @var bool
       */
     protected $flag_apenas_demonstrativo;
     
     /**
-      * $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+      * $id_convenio {{{tipo_faturamento_response_id_convenio_value}}}
       * @var int
       */
     protected $id_convenio;
@@ -158,7 +158,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+     * @param int $id {{{tipo_faturamento_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Desci\u00E7\u00E3o do tipo de faturamento.
+     * @param string $descricao {{{tipo_faturamento_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -200,7 +200,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets flag_apenas_demonstrativo
-     * @param bool $flag_apenas_demonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+     * @param bool $flag_apenas_demonstrativo {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
      * @return $this
      */
     public function setFlagApenasDemonstrativo($flag_apenas_demonstrativo)
@@ -221,7 +221,7 @@ class TipoFaturamentoResponse implements ArrayAccess
   
     /**
      * Sets id_convenio
-     * @param int $id_convenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+     * @param int $id_convenio {{{tipo_faturamento_response_id_convenio_value}}}
      * @return $this
      */
     public function setIdConvenio($id_convenio)

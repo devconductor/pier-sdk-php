@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de Identifica\u00E7\u00E3o da entidade. | [optional] 
-**descricao** | **string** | Descri\u00E7\u00E3o da entidade. | [optional] 
-**flag_ativo** | **bool** | Flag que indica se a entidade est\u00E1 ativa. | [optional] 
+**id** | **int** | {{{entidade_response_id_value}}} | [optional] 
+**descricao** | **string** | {{{entidade_response_descricao_value}}} | [optional] 
+**flag_ativo** | **bool** | {{{entidade_response_flag_ativo_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

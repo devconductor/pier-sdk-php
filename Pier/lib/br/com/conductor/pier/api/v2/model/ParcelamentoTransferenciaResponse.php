@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ParcelamentoTransferenciaResponse Class Doc Comment
  *
  * @category    Class
- * @description Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+ * @description {{{parcelamento_transferencia_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -120,43 +120,43 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
 
     
     /**
-      * $numero_parcela N\u00FAmero de parcelas dispon\u00EDveis.
+      * $numero_parcela {{{parcelamento_transferencia_response_numero_parcela_value}}}
       * @var int
       */
     protected $numero_parcela;
     
     /**
-      * $valor_parcelas Valor das demais parcelas.
+      * $valor_parcelas {{{parcelamento_transferencia_response_valor_parcelas_value}}}
       * @var Number
       */
     protected $valor_parcelas;
     
     /**
-      * $valor_total Valor total do financiamento.
+      * $valor_total {{{parcelamento_transferencia_response_valor_total_value}}}
       * @var Number
       */
     protected $valor_total;
     
     /**
-      * $valor_tac Valor da tarifa de contrata\u00E7\u00E3o.
+      * $valor_tac {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
       * @var Number
       */
     protected $valor_tac;
     
     /**
-      * $valor_iof IOF calculado para o cliente
+      * $valor_iof {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
       * @var Number
       */
     protected $valor_iof;
     
     /**
-      * $taxa_juros Valor da taxa de juros.
+      * $taxa_juros {{{parcelamento_transferencia_response_taxa_juros_value}}}
       * @var Number
       */
     protected $taxa_juros;
     
     /**
-      * $cet_anual CET anual.
+      * $cet_anual {{{parcelamento_transferencia_response_cet_anual_value}}}
       * @var Number
       */
     protected $cet_anual;
@@ -191,7 +191,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param int $numero_parcela N\u00FAmero de parcelas dispon\u00EDveis.
+     * @param int $numero_parcela {{{parcelamento_transferencia_response_numero_parcela_value}}}
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -212,7 +212,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_parcelas
-     * @param Number $valor_parcelas Valor das demais parcelas.
+     * @param Number $valor_parcelas {{{parcelamento_transferencia_response_valor_parcelas_value}}}
      * @return $this
      */
     public function setValorParcelas($valor_parcelas)
@@ -233,7 +233,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_total
-     * @param Number $valor_total Valor total do financiamento.
+     * @param Number $valor_total {{{parcelamento_transferencia_response_valor_total_value}}}
      * @return $this
      */
     public function setValorTotal($valor_total)
@@ -254,7 +254,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_tac
-     * @param Number $valor_tac Valor da tarifa de contrata\u00E7\u00E3o.
+     * @param Number $valor_tac {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
      * @return $this
      */
     public function setValorTac($valor_tac)
@@ -275,7 +275,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets valor_iof
-     * @param Number $valor_iof IOF calculado para o cliente
+     * @param Number $valor_iof {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
      * @return $this
      */
     public function setValorIof($valor_iof)
@@ -296,7 +296,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets taxa_juros
-     * @param Number $taxa_juros Valor da taxa de juros.
+     * @param Number $taxa_juros {{{parcelamento_transferencia_response_taxa_juros_value}}}
      * @return $this
      */
     public function setTaxaJuros($taxa_juros)
@@ -317,7 +317,7 @@ class ParcelamentoTransferenciaResponse implements ArrayAccess
   
     /**
      * Sets cet_anual
-     * @param Number $cet_anual CET anual.
+     * @param Number $cet_anual {{{parcelamento_transferencia_response_cet_anual_value}}}
      * @return $this
      */
     public function setCetAnual($cet_anual)

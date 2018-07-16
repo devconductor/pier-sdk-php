@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AcordoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Acordo
+ * @description {{{acordo_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class AcordoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+      * $id {{{acordo_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+      * $id_conta {{{acordo_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $status_acordo Status do acordo.
+      * $status_acordo {{{acordo_response_status_acordo_value}}}
       * @var int
       */
     protected $status_acordo;
     
     /**
-      * $valor_acordo Valor do Acordo.
+      * $valor_acordo {{{acordo_response_valor_acordo_value}}}
       * @var Number
       */
     protected $valor_acordo;
     
     /**
-      * $data_acordo Data e Hora do acordo.
+      * $data_acordo {{{acordo_response_data_acordo_value}}}
       * @var string
       */
     protected $data_acordo;
     
     /**
-      * $quantidade_parcelas Quantidade de parcelas do acordo.
+      * $quantidade_parcelas {{{acordo_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $saldo_atual_final Saldo atual final.
+      * $saldo_atual_final {{{acordo_response_saldo_atual_final_value}}}
       * @var Number
       */
     protected $saldo_atual_final;
     
     /**
-      * $dias_em_atraso Dias em atraso.
+      * $dias_em_atraso {{{acordo_response_dias_em_atraso_value}}}
       * @var int
       */
     protected $dias_em_atraso;
@@ -202,7 +202,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+     * @param int $id {{{acordo_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+     * @param int $id_conta {{{acordo_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -244,7 +244,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets status_acordo
-     * @param int $status_acordo Status do acordo.
+     * @param int $status_acordo {{{acordo_response_status_acordo_value}}}
      * @return $this
      */
     public function setStatusAcordo($status_acordo)
@@ -265,7 +265,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets valor_acordo
-     * @param Number $valor_acordo Valor do Acordo.
+     * @param Number $valor_acordo {{{acordo_response_valor_acordo_value}}}
      * @return $this
      */
     public function setValorAcordo($valor_acordo)
@@ -286,7 +286,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets data_acordo
-     * @param string $data_acordo Data e Hora do acordo.
+     * @param string $data_acordo {{{acordo_response_data_acordo_value}}}
      * @return $this
      */
     public function setDataAcordo($data_acordo)
@@ -307,7 +307,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Quantidade de parcelas do acordo.
+     * @param int $quantidade_parcelas {{{acordo_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -328,7 +328,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets saldo_atual_final
-     * @param Number $saldo_atual_final Saldo atual final.
+     * @param Number $saldo_atual_final {{{acordo_response_saldo_atual_final_value}}}
      * @return $this
      */
     public function setSaldoAtualFinal($saldo_atual_final)
@@ -349,7 +349,7 @@ class AcordoResponse implements ArrayAccess
   
     /**
      * Sets dias_em_atraso
-     * @param int $dias_em_atraso Dias em atraso.
+     * @param int $dias_em_atraso {{{acordo_response_dias_em_atraso_value}}}
      * @return $this
      */
     public function setDiasEmAtraso($dias_em_atraso)

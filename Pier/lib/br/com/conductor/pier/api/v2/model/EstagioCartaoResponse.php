@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EstagioCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso Est\u00E1gio Cart\u00E3o
+ * @description {{{estagio_cartao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class EstagioCartaoResponse implements ArrayAccess
 
     
     /**
-      * $id Id do est\u00E1gio cart\u00E3o
+      * $id {{{estagio_cartao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do est\u00E1gio cart\u00E3o
+      * $nome {{{estagio_cartao_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -136,7 +136,7 @@ class EstagioCartaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Id do est\u00E1gio cart\u00E3o
+     * @param int $id {{{estagio_cartao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class EstagioCartaoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do est\u00E1gio cart\u00E3o
+     * @param string $nome {{{estagio_cartao_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

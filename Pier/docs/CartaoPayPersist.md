@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numero_cartao** | **string** | N\u00FAmero do cart\u00E3o criptografado | 
-**data_validade** | **string** | Data de validade do cart\u00E3o | [optional] 
-**cvv** | **string** | CVV do cart\u00E3o criptografado | [optional] 
-**numero_receita_federal** | **string** | CPF do portador do cart\u00E3o criptografado | [optional] 
-**nome_impresso** | **string** | Nome impresso no cart\u00E3o criptografado | [optional] 
-**chave_publica_device** | **string** | Chave p\u00FAblica do dispositivo criptografada | 
+**numero_cartao** | **string** | {{{cartao_pay_persist_numero_cartao_value}}} | 
+**data_validade** | **string** | {{{cartao_pay_persist_data_validade_value}}} | [optional] 
+**cvv** | **string** | {{{cartao_pay_persist_cvv_value}}} | [optional] 
+**numero_receita_federal** | **string** | {{{cartao_pay_persist_numero_receita_federal_value}}} | [optional] 
+**nome_impresso** | **string** | {{{cartao_pay_persist_nome_impresso_value}}} | [optional] 
+**chave_publica_device** | **string** | {{{cartao_pay_persist_chave_publica_device_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

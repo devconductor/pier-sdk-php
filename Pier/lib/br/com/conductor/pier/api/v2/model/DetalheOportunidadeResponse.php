@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DetalheOportunidadeResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades
+ * @description {{{detalhe_oportunidade_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DetalheOportunidadeResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do detalhe
+      * $id {{{detalhe_oportunidade_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome_campo Nome do conte\u00FAdo
+      * $nome_campo {{{detalhe_oportunidade_response_nome_campo_value}}}
       * @var string
       */
     protected $nome_campo;
     
     /**
-      * $conteudo Conte\u00FAdo do detalhe
+      * $conteudo {{{detalhe_oportunidade_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do detalhe
+     * @param int $id {{{detalhe_oportunidade_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets nome_campo
-     * @param string $nome_campo Nome do conte\u00FAdo
+     * @param string $nome_campo {{{detalhe_oportunidade_response_nome_campo_value}}}
      * @return $this
      */
     public function setNomeCampo($nome_campo)
@@ -189,7 +189,7 @@ class DetalheOportunidadeResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00FAdo do detalhe
+     * @param string $conteudo {{{detalhe_oportunidade_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)

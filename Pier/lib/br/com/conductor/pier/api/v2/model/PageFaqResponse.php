@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageFaqResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de FAQs
+ * @description {{{page_faq_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

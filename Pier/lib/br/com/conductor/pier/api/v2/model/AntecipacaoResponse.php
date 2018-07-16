@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AntecipacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{antecipacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -204,139 +204,139 @@ class AntecipacaoResponse implements ArrayAccess
     protected $uf;
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
+      * $id {{{antecipacao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
+      * $id_conta {{{antecipacao_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra
+      * $id_compra {{{antecipacao_response_id_compra_value}}}
       * @var int
       */
     protected $id_compra;
     
     /**
-      * $quantidade_parcelas_total Apresenta o numero total de parcelas da compra
+      * $quantidade_parcelas_total {{{antecipacao_response_quantidade_parcelas_total_value}}}
       * @var int
       */
     protected $quantidade_parcelas_total;
     
     /**
-      * $quantidade_parcelas_antecipadas Apresenta o numero de parcelas antecipadas
+      * $quantidade_parcelas_antecipadas {{{antecipacao_response_quantidade_parcelas_antecipadas_value}}}
       * @var int
       */
     protected $quantidade_parcelas_antecipadas;
     
     /**
-      * $valor_parcela Apresenta o valor de cada parcela antecipadas
+      * $valor_parcela {{{antecipacao_response_valor_parcela_value}}}
       * @var Number
       */
     protected $valor_parcela;
     
     /**
-      * $valor_desconto_total Apresenta o valor total do desconto
+      * $valor_desconto_total {{{antecipacao_response_valor_desconto_total_value}}}
       * @var Number
       */
     protected $valor_desconto_total;
     
     /**
-      * $valor_total_com_desconto Apresenta o valor total com desconto
+      * $valor_total_com_desconto {{{antecipacao_response_valor_total_com_desconto_value}}}
       * @var Number
       */
     protected $valor_total_com_desconto;
     
     /**
-      * $taxa_desconto Apresenta a taxa de desconto
+      * $taxa_desconto {{{antecipacao_response_taxa_desconto_value}}}
       * @var Number
       */
     protected $taxa_desconto;
     
     /**
-      * $data_compra Data da compra.
+      * $data_compra {{{antecipacao_response_data_compra_value}}}
       * @var string
       */
     protected $data_compra;
     
     /**
-      * $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+      * $status {{{antecipacao_response_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $nome_estabelecimento Nome do estabelecimento da compra.
+      * $nome_estabelecimento {{{antecipacao_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+      * $tipo_origem_transacao {{{antecipacao_response_tipo_origem_transacao_value}}}
       * @var string
       */
     protected $tipo_origem_transacao;
     
     /**
-      * $cidade Cidade onde a compra foi realizada.
+      * $cidade {{{antecipacao_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $pais Pa\u00EDs onde a compra foi realizada.
+      * $pais {{{antecipacao_response_pais_value}}}
       * @var string
       */
     protected $pais;
     
     /**
-      * $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+      * $latitude {{{antecipacao_response_latitude_value}}}
       * @var string
       */
     protected $latitude;
     
     /**
-      * $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+      * $longitude {{{antecipacao_response_longitude_value}}}
       * @var string
       */
     protected $longitude;
     
     /**
-      * $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+      * $id_grupo_mcc {{{antecipacao_response_id_grupo_m_c_c_value}}}
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+      * $descricao_grupo_mcc {{{antecipacao_response_descricao_grupo_m_c_c_value}}}
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+      * $id_produto {{{antecipacao_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+      * $descricao_produto {{{antecipacao_response_descricao_produto_value}}}
       * @var string
       */
     protected $descricao_produto;
     
     /**
-      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
+      * $descricao_estabelecimento {{{antecipacao_response_descricao_estabelecimento_value}}}
       * @var string
       */
     protected $descricao_estabelecimento;
     
     /**
-      * $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+      * $nome_fantasia_estabelecimento {{{antecipacao_response_nome_fantasia_estabelecimento_value}}}
       * @var string
       */
     protected $nome_fantasia_estabelecimento;
@@ -431,7 +431,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
+     * @param int $id {{{antecipacao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -452,7 +452,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta
+     * @param int $id_conta {{{antecipacao_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -473,7 +473,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_compra
-     * @param int $id_compra C\u00F3digo de identifica\u00E7\u00E3o da compra
+     * @param int $id_compra {{{antecipacao_response_id_compra_value}}}
      * @return $this
      */
     public function setIdCompra($id_compra)
@@ -494,7 +494,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas_total
-     * @param int $quantidade_parcelas_total Apresenta o numero total de parcelas da compra
+     * @param int $quantidade_parcelas_total {{{antecipacao_response_quantidade_parcelas_total_value}}}
      * @return $this
      */
     public function setQuantidadeParcelasTotal($quantidade_parcelas_total)
@@ -515,7 +515,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas_antecipadas
-     * @param int $quantidade_parcelas_antecipadas Apresenta o numero de parcelas antecipadas
+     * @param int $quantidade_parcelas_antecipadas {{{antecipacao_response_quantidade_parcelas_antecipadas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelasAntecipadas($quantidade_parcelas_antecipadas)
@@ -536,7 +536,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela
-     * @param Number $valor_parcela Apresenta o valor de cada parcela antecipadas
+     * @param Number $valor_parcela {{{antecipacao_response_valor_parcela_value}}}
      * @return $this
      */
     public function setValorParcela($valor_parcela)
@@ -557,7 +557,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_desconto_total
-     * @param Number $valor_desconto_total Apresenta o valor total do desconto
+     * @param Number $valor_desconto_total {{{antecipacao_response_valor_desconto_total_value}}}
      * @return $this
      */
     public function setValorDescontoTotal($valor_desconto_total)
@@ -578,7 +578,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_total_com_desconto
-     * @param Number $valor_total_com_desconto Apresenta o valor total com desconto
+     * @param Number $valor_total_com_desconto {{{antecipacao_response_valor_total_com_desconto_value}}}
      * @return $this
      */
     public function setValorTotalComDesconto($valor_total_com_desconto)
@@ -599,7 +599,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets taxa_desconto
-     * @param Number $taxa_desconto Apresenta a taxa de desconto
+     * @param Number $taxa_desconto {{{antecipacao_response_taxa_desconto_value}}}
      * @return $this
      */
     public function setTaxaDesconto($taxa_desconto)
@@ -620,7 +620,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets data_compra
-     * @param string $data_compra Data da compra.
+     * @param string $data_compra {{{antecipacao_response_data_compra_value}}}
      * @return $this
      */
     public function setDataCompra($data_compra)
@@ -641,7 +641,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+     * @param string $status {{{antecipacao_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -662,7 +662,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do estabelecimento da compra.
+     * @param string $nome_estabelecimento {{{antecipacao_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -683,7 +683,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_origem_transacao
-     * @param string $tipo_origem_transacao Tipo de transa\u00E7\u00E3o da compra.
+     * @param string $tipo_origem_transacao {{{antecipacao_response_tipo_origem_transacao_value}}}
      * @return $this
      */
     public function setTipoOrigemTransacao($tipo_origem_transacao)
@@ -704,7 +704,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Cidade onde a compra foi realizada.
+     * @param string $cidade {{{antecipacao_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -725,7 +725,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Pa\u00EDs onde a compra foi realizada.
+     * @param string $pais {{{antecipacao_response_pais_value}}}
      * @return $this
      */
     public function setPais($pais)
@@ -746,7 +746,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets latitude
-     * @param string $latitude Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $latitude {{{antecipacao_response_latitude_value}}}
      * @return $this
      */
     public function setLatitude($latitude)
@@ -767,7 +767,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets longitude
-     * @param string $longitude Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+     * @param string $longitude {{{antecipacao_response_longitude_value}}}
      * @return $this
      */
     public function setLongitude($longitude)
@@ -788,7 +788,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+     * @param int $id_grupo_mcc {{{antecipacao_response_id_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -809,7 +809,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do Grupo MCC da compra.
+     * @param string $descricao_grupo_mcc {{{antecipacao_response_descricao_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -830,7 +830,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+     * @param int $id_produto {{{antecipacao_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -851,7 +851,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_produto
-     * @param string $descricao_produto Descri\u00E7\u00E3o do produto da compra.
+     * @param string $descricao_produto {{{antecipacao_response_descricao_produto_value}}}
      * @return $this
      */
     public function setDescricaoProduto($descricao_produto)
@@ -872,7 +872,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento da compra.
+     * @param string $descricao_estabelecimento {{{antecipacao_response_descricao_estabelecimento_value}}}
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)
@@ -893,7 +893,7 @@ class AntecipacaoResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia_estabelecimento
-     * @param string $nome_fantasia_estabelecimento Nome fantasia do estabelecimento da compra.
+     * @param string $nome_fantasia_estabelecimento {{{antecipacao_response_nome_fantasia_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)

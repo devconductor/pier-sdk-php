@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nome** | **string** | Nome completo do Adicional. | 
-**nome_impresso** | **string** | Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o. | [optional] 
-**numero_receita_federal** | **string** | N\u00FAmero do CPF ou CNPJ do Adicional. | 
-**data_nascimento** | **string** | Data de Nascimento do Adicional em formato yyyy-MM-dd. | [optional] 
-**sexo** | **string** | C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado). | [optional] 
-**numero_identidade** | **string** | N\u00FAmero do Documento de Identidade do Adicional. | [optional] 
-**orgao_expedidor_identidade** | **string** | Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional. | [optional] 
-**unidade_federativa_identidade** | **string** | Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido. | [optional] 
-**data_emissao_identidade** | **string** | Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd. | [optional] 
-**id_parentesco** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular. | [optional] 
-**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[]**](TelefoneAdicionalUpdate.md) | Lista de telefones do adicional. | [optional] 
+**nome** | **string** | {{{adicional_update_nome_value}}} | 
+**nome_impresso** | **string** | {{{adicional_update_nome_impresso_value}}} | [optional] 
+**numero_receita_federal** | **string** | {{{adicional_update_numero_receita_federal_value}}} | 
+**data_nascimento** | **string** | {{{adicional_update_data_nascimento_value}}} | [optional] 
+**sexo** | **string** | {{{adicional_update_sexo_value}}} | [optional] 
+**numero_identidade** | **string** | {{{adicional_update_numero_identidade_value}}} | [optional] 
+**orgao_expedidor_identidade** | **string** | {{{adicional_update_orgao_expedidor_identidade_value}}} | [optional] 
+**unidade_federativa_identidade** | **string** | {{{adicional_update_unidade_federativa_identidade_value}}} | [optional] 
+**data_emissao_identidade** | **string** | {{{adicional_update_data_emissao_identidade_value}}} | [optional] 
+**id_parentesco** | **int** | {{{adicional_update_id_parentesco_value}}} | [optional] 
+**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefoneAdicionalUpdate[]**](TelefoneAdicionalUpdate.md) | {{{adicional_update_telefones_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

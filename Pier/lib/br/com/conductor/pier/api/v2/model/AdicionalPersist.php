@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AdicionalPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da entrada do recurso de cadastrar adicionais
+ * @description {{{adicional_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,91 +152,91 @@ class AdicionalPersist implements ArrayAccess
 
     
     /**
-      * $nome Nome completo do Adicional.
+      * $nome {{{adicional_persist_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
+      * $nome_impresso {{{adicional_persist_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional.
+      * $numero_receita_federal {{{adicional_persist_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $data_nascimento Data de Nascimento do Adicional em formato yyyy-MM-dd.
+      * $data_nascimento {{{adicional_persist_data_nascimento_value}}}
       * @var string
       */
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+      * $sexo {{{adicional_persist_sexo_value}}}
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00FAmero do Documento de Identidade do Adicional.
+      * $numero_identidade {{{adicional_persist_numero_identidade_value}}}
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
+      * $orgao_expedidor_identidade {{{adicional_persist_orgao_expedidor_identidade_value}}}
       * @var string
       */
     protected $orgao_expedidor_identidade;
     
     /**
-      * $unidade_federativa_identidade Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
+      * $unidade_federativa_identidade {{{adicional_persist_unidade_federativa_identidade_value}}}
       * @var string
       */
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+      * $data_emissao_identidade {{{adicional_persist_data_emissao_identidade_value}}}
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $id_estado_civil C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional.
+      * $id_estado_civil {{{adicional_persist_id_estado_civil_value}}}
       * @var int
       */
     protected $id_estado_civil;
     
     /**
-      * $id_profissao C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional.
+      * $id_profissao {{{adicional_persist_id_profissao_value}}}
       * @var int
       */
     protected $id_profissao;
     
     /**
-      * $id_nacionalidade C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.
+      * $id_nacionalidade {{{adicional_persist_id_nacionalidade_value}}}
       * @var int
       */
     protected $id_nacionalidade;
     
     /**
-      * $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+      * $id_parentesco {{{adicional_persist_id_parentesco_value}}}
       * @var int
       */
     protected $id_parentesco;
     
     /**
-      * $email C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+      * $email {{{adicional_persist_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $telefones Lista de telefones do adicional.
+      * $telefones {{{adicional_persist_telefones_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[]
       */
     protected $telefones;
@@ -279,7 +279,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome completo do Adicional.
+     * @param string $nome {{{adicional_persist_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -300,7 +300,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
+     * @param string $nome_impresso {{{adicional_persist_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -321,7 +321,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional.
+     * @param string $numero_receita_federal {{{adicional_persist_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -342,7 +342,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento Data de Nascimento do Adicional em formato yyyy-MM-dd.
+     * @param string $data_nascimento {{{adicional_persist_data_nascimento_value}}}
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -363,7 +363,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+     * @param string $sexo {{{adicional_persist_sexo_value}}}
      * @return $this
      */
     public function setSexo($sexo)
@@ -384,7 +384,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00FAmero do Documento de Identidade do Adicional.
+     * @param string $numero_identidade {{{adicional_persist_numero_identidade_value}}}
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -405,7 +405,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
+     * @param string $orgao_expedidor_identidade {{{adicional_persist_orgao_expedidor_identidade_value}}}
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -426,7 +426,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets unidade_federativa_identidade
-     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
+     * @param string $unidade_federativa_identidade {{{adicional_persist_unidade_federativa_identidade_value}}}
      * @return $this
      */
     public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
@@ -447,7 +447,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+     * @param string $data_emissao_identidade {{{adicional_persist_data_emissao_identidade_value}}}
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -468,7 +468,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets id_estado_civil
-     * @param int $id_estado_civil C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional.
+     * @param int $id_estado_civil {{{adicional_persist_id_estado_civil_value}}}
      * @return $this
      */
     public function setIdEstadoCivil($id_estado_civil)
@@ -489,7 +489,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets id_profissao
-     * @param int $id_profissao C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional.
+     * @param int $id_profissao {{{adicional_persist_id_profissao_value}}}
      * @return $this
      */
     public function setIdProfissao($id_profissao)
@@ -510,7 +510,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets id_nacionalidade
-     * @param int $id_nacionalidade C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.
+     * @param int $id_nacionalidade {{{adicional_persist_id_nacionalidade_value}}}
      * @return $this
      */
     public function setIdNacionalidade($id_nacionalidade)
@@ -531,7 +531,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets id_parentesco
-     * @param int $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+     * @param int $id_parentesco {{{adicional_persist_id_parentesco_value}}}
      * @return $this
      */
     public function setIdParentesco($id_parentesco)
@@ -552,7 +552,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+     * @param string $email {{{adicional_persist_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -573,7 +573,7 @@ class AdicionalPersist implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[] $telefones Lista de telefones do adicional.
+     * @param \br.com.conductor.pier.api.v2.model\TelefoneAdicionalPersist[] $telefones {{{adicional_persist_telefones_value}}}
      * @return $this
      */
     public function setTelefones($telefones)

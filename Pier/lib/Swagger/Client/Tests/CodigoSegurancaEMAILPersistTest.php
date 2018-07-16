@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * CodigoSegurancaEMAILPersistTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+ * @description {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

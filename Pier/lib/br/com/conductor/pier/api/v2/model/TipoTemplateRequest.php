@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoTemplateRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do tipo de template.
+ * @description {{{tipo_template_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class TipoTemplateRequest implements ArrayAccess
 
     
     /**
-      * $nome Nome do tipo de template.
+      * $nome {{{tipo_template_request_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do tipo de template.
+      * $descricao {{{tipo_template_request_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $sigla Sigla do tipo de template.
+      * $sigla {{{tipo_template_request_sigla_value}}}
       * @var string
       */
     protected $sigla;
@@ -147,7 +147,7 @@ class TipoTemplateRequest implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do tipo de template.
+     * @param string $nome {{{tipo_template_request_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -168,7 +168,7 @@ class TipoTemplateRequest implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do tipo de template.
+     * @param string $descricao {{{tipo_template_request_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -189,7 +189,7 @@ class TipoTemplateRequest implements ArrayAccess
   
     /**
      * Sets sigla
-     * @param string $sigla Sigla do tipo de template.
+     * @param string $sigla {{{tipo_template_request_sigla_value}}}
      * @return $this
      */
     public function setSigla($sigla)

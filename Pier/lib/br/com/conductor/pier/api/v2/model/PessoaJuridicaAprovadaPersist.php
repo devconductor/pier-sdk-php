@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PessoaJuridicaAprovadaPersist Class Doc Comment
  *
  * @category    Class
- * @description PessoaJuridicaAprovadaPersist
+ * @description {{{pessoa_juridica_aprovada_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -58,6 +58,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'data_abertura_empresa' => 'string',
         'id_origem_comercial' => 'int',
         'id_produto' => 'int',
+        'numero_banco' => 'int',
         'numero_agencia' => 'int',
         'numero_conta_corrente' => 'string',
         'email' => 'string',
@@ -66,10 +67,10 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'valor_renda' => 'Number',
         'canal_entrada' => 'string',
         'valor_pontuacao' => 'int',
-        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]',
-        'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]',
-        'socios' => '\br.com.conductor.pier.api.v2.model\PessoaPersist[]',
-        'referencias_comerciais' => '\br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]',
+        'telefones' => '\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersistValue_[]',
+        'enderecos' => '\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersistValue_[]',
+        'socios' => '\br.com.conductor.pier.api.v2.model\SocioAprovadoPersistValue_[]',
+        'referencias_comerciais' => '\br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoPersistValue_[]',
         'limite_global' => 'Number',
         'limite_maximo' => 'Number',
         'limite_parcelas' => 'Number'
@@ -91,6 +92,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'data_abertura_empresa' => 'dataAberturaEmpresa',
         'id_origem_comercial' => 'idOrigemComercial',
         'id_produto' => 'idProduto',
+        'numero_banco' => 'numeroBanco',
         'numero_agencia' => 'numeroAgencia',
         'numero_conta_corrente' => 'numeroContaCorrente',
         'email' => 'email',
@@ -124,6 +126,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'data_abertura_empresa' => 'setDataAberturaEmpresa',
         'id_origem_comercial' => 'setIdOrigemComercial',
         'id_produto' => 'setIdProduto',
+        'numero_banco' => 'setNumeroBanco',
         'numero_agencia' => 'setNumeroAgencia',
         'numero_conta_corrente' => 'setNumeroContaCorrente',
         'email' => 'setEmail',
@@ -157,6 +160,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
         'data_abertura_empresa' => 'getDataAberturaEmpresa',
         'id_origem_comercial' => 'getIdOrigemComercial',
         'id_produto' => 'getIdProduto',
+        'numero_banco' => 'getNumeroBanco',
         'numero_agencia' => 'getNumeroAgencia',
         'numero_conta_corrente' => 'getNumeroContaCorrente',
         'email' => 'getEmail',
@@ -180,133 +184,139 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
 
     
     /**
-      * $razao_social Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
+      * $razao_social {{{pessoa_juridica_aprovada_persist_razao_social_value}}}
       * @var string
       */
     protected $razao_social;
     
     /**
-      * $nome_fantasia Apresenta o nome fantasia da empresa.
+      * $nome_fantasia {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}}
       * @var string
       */
     protected $nome_fantasia;
     
     /**
-      * $cnpj N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+      * $cnpj {{{pessoa_juridica_aprovada_persist_cnpj_value}}}
       * @var string
       */
     protected $cnpj;
     
     /**
-      * $inscricao_estadual N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
+      * $inscricao_estadual {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}}
       * @var string
       */
     protected $inscricao_estadual;
     
     /**
-      * $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+      * $data_abertura_empresa {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}}
       * @var string
       */
     protected $data_abertura_empresa;
     
     /**
-      * $id_origem_comercial Id da origem comercial
+      * $id_origem_comercial {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}}
       * @var int
       */
     protected $id_origem_comercial;
     
     /**
-      * $id_produto Id do produto
+      * $id_produto {{{pessoa_juridica_aprovada_persist_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $numero_agencia N\u00FAmero da ag\u00EAncia.
+      * $numero_banco {{{pessoa_juridica_aprovada_persist_numero_banco_value}}}
+      * @var int
+      */
+    protected $numero_banco;
+    
+    /**
+      * $numero_agencia {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}}
       * @var int
       */
     protected $numero_agencia;
     
     /**
-      * $numero_conta_corrente N\u00FAmero da conta corrente.
+      * $numero_conta_corrente {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}}
       * @var string
       */
     protected $numero_conta_corrente;
     
     /**
-      * $email Email da empresa
+      * $email {{{pessoa_juridica_aprovada_persist_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $dia_vencimento Dia vencimento
+      * $dia_vencimento {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}}
       * @var int
       */
     protected $dia_vencimento;
     
     /**
-      * $nome_impresso Nome que deve ser impresso no cart\u00E3o
+      * $nome_impresso {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $valor_renda Apresenta o valor da renda compravada
+      * $valor_renda {{{pessoa_juridica_aprovada_persist_valor_renda_value}}}
       * @var Number
       */
     protected $valor_renda;
     
     /**
-      * $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+      * $canal_entrada {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}}
       * @var string
       */
     protected $canal_entrada;
     
     /**
-      * $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+      * $valor_pontuacao {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}}
       * @var int
       */
     protected $valor_pontuacao;
     
     /**
-      * $telefones Apresenta os telefones da empresa
-      * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
+      * $telefones {{{pessoa_juridica_aprovada_persist_telefones_value}}}
+      * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersistValue_[]
       */
     protected $telefones;
     
     /**
-      * $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
-      * @var \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]
+      * $enderecos {{{pessoa_juridica_aprovada_persist_enderecos_value}}}
+      * @var \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersistValue_[]
       */
     protected $enderecos;
     
     /**
-      * $socios Apresenta os dados dos s\u00F3cios da empresa, caso exista
-      * @var \br.com.conductor.pier.api.v2.model\PessoaPersist[]
+      * $socios {{{pessoa_juridica_aprovada_persist_socios_value}}}
+      * @var \br.com.conductor.pier.api.v2.model\SocioAprovadoPersistValue_[]
       */
     protected $socios;
     
     /**
-      * $referencias_comerciais Apresenta os dados das refer\u00EAncias comerciais
-      * @var \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+      * $referencias_comerciais {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}}
+      * @var \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoPersistValue_[]
       */
     protected $referencias_comerciais;
     
     /**
-      * $limite_global Valor do Limite Global
+      * $limite_global {{{pessoa_juridica_aprovada_persist_limite_global_value}}}
       * @var Number
       */
     protected $limite_global;
     
     /**
-      * $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+      * $limite_maximo {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}}
       * @var Number
       */
     protected $limite_maximo;
     
     /**
-      * $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+      * $limite_parcelas {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}}
       * @var Number
       */
     protected $limite_parcelas;
@@ -327,6 +337,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
             $this->data_abertura_empresa = $data["data_abertura_empresa"];
             $this->id_origem_comercial = $data["id_origem_comercial"];
             $this->id_produto = $data["id_produto"];
+            $this->numero_banco = $data["numero_banco"];
             $this->numero_agencia = $data["numero_agencia"];
             $this->numero_conta_corrente = $data["numero_conta_corrente"];
             $this->email = $data["email"];
@@ -356,7 +367,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
+     * @param string $razao_social {{{pessoa_juridica_aprovada_persist_razao_social_value}}}
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -377,7 +388,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_fantasia
-     * @param string $nome_fantasia Apresenta o nome fantasia da empresa.
+     * @param string $nome_fantasia {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}}
      * @return $this
      */
     public function setNomeFantasia($nome_fantasia)
@@ -398,7 +409,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets cnpj
-     * @param string $cnpj N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+     * @param string $cnpj {{{pessoa_juridica_aprovada_persist_cnpj_value}}}
      * @return $this
      */
     public function setCnpj($cnpj)
@@ -419,7 +430,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets inscricao_estadual
-     * @param string $inscricao_estadual N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
+     * @param string $inscricao_estadual {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}}
      * @return $this
      */
     public function setInscricaoEstadual($inscricao_estadual)
@@ -440,7 +451,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets data_abertura_empresa
-     * @param string $data_abertura_empresa Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+     * @param string $data_abertura_empresa {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}}
      * @return $this
      */
     public function setDataAberturaEmpresa($data_abertura_empresa)
@@ -461,7 +472,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets id_origem_comercial
-     * @param int $id_origem_comercial Id da origem comercial
+     * @param int $id_origem_comercial {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}}
      * @return $this
      */
     public function setIdOrigemComercial($id_origem_comercial)
@@ -482,13 +493,34 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto Id do produto
+     * @param int $id_produto {{{pessoa_juridica_aprovada_persist_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
     {
         
         $this->id_produto = $id_produto;
+        return $this;
+    }
+    
+    /**
+     * Gets numero_banco
+     * @return int
+     */
+    public function getNumeroBanco()
+    {
+        return $this->numero_banco;
+    }
+  
+    /**
+     * Sets numero_banco
+     * @param int $numero_banco {{{pessoa_juridica_aprovada_persist_numero_banco_value}}}
+     * @return $this
+     */
+    public function setNumeroBanco($numero_banco)
+    {
+        
+        $this->numero_banco = $numero_banco;
         return $this;
     }
     
@@ -503,7 +535,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_agencia
-     * @param int $numero_agencia N\u00FAmero da ag\u00EAncia.
+     * @param int $numero_agencia {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}}
      * @return $this
      */
     public function setNumeroAgencia($numero_agencia)
@@ -524,7 +556,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets numero_conta_corrente
-     * @param string $numero_conta_corrente N\u00FAmero da conta corrente.
+     * @param string $numero_conta_corrente {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}}
      * @return $this
      */
     public function setNumeroContaCorrente($numero_conta_corrente)
@@ -545,7 +577,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email da empresa
+     * @param string $email {{{pessoa_juridica_aprovada_persist_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -566,7 +598,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets dia_vencimento
-     * @param int $dia_vencimento Dia vencimento
+     * @param int $dia_vencimento {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}}
      * @return $this
      */
     public function setDiaVencimento($dia_vencimento)
@@ -587,7 +619,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome que deve ser impresso no cart\u00E3o
+     * @param string $nome_impresso {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -608,7 +640,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets valor_renda
-     * @param Number $valor_renda Apresenta o valor da renda compravada
+     * @param Number $valor_renda {{{pessoa_juridica_aprovada_persist_valor_renda_value}}}
      * @return $this
      */
     public function setValorRenda($valor_renda)
@@ -629,7 +661,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets canal_entrada
-     * @param string $canal_entrada Indica o canal pelo qual o cadastro do cliente foi realizado
+     * @param string $canal_entrada {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}}
      * @return $this
      */
     public function setCanalEntrada($canal_entrada)
@@ -650,7 +682,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets valor_pontuacao
-     * @param int $valor_pontuacao Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+     * @param int $valor_pontuacao {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}}
      * @return $this
      */
     public function setValorPontuacao($valor_pontuacao)
@@ -662,7 +694,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets telefones
-     * @return \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]
+     * @return \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersistValue_[]
      */
     public function getTelefones()
     {
@@ -671,7 +703,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[] $telefones Apresenta os telefones da empresa
+     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersistValue_[] $telefones {{{pessoa_juridica_aprovada_persist_telefones_value}}}
      * @return $this
      */
     public function setTelefones($telefones)
@@ -683,7 +715,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets enderecos
-     * @return \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]
+     * @return \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersistValue_[]
      */
     public function getEnderecos()
     {
@@ -692,7 +724,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets enderecos
-     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[] $enderecos Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+     * @param \br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersistValue_[] $enderecos {{{pessoa_juridica_aprovada_persist_enderecos_value}}}
      * @return $this
      */
     public function setEnderecos($enderecos)
@@ -704,7 +736,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets socios
-     * @return \br.com.conductor.pier.api.v2.model\PessoaPersist[]
+     * @return \br.com.conductor.pier.api.v2.model\SocioAprovadoPersistValue_[]
      */
     public function getSocios()
     {
@@ -713,7 +745,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets socios
-     * @param \br.com.conductor.pier.api.v2.model\PessoaPersist[] $socios Apresenta os dados dos s\u00F3cios da empresa, caso exista
+     * @param \br.com.conductor.pier.api.v2.model\SocioAprovadoPersistValue_[] $socios {{{pessoa_juridica_aprovada_persist_socios_value}}}
      * @return $this
      */
     public function setSocios($socios)
@@ -725,7 +757,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
     
     /**
      * Gets referencias_comerciais
-     * @return \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]
+     * @return \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoPersistValue_[]
      */
     public function getReferenciasComerciais()
     {
@@ -734,7 +766,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets referencias_comerciais
-     * @param \br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[] $referencias_comerciais Apresenta os dados das refer\u00EAncias comerciais
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoPersistValue_[] $referencias_comerciais {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}}
      * @return $this
      */
     public function setReferenciasComerciais($referencias_comerciais)
@@ -755,7 +787,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_global
-     * @param Number $limite_global Valor do Limite Global
+     * @param Number $limite_global {{{pessoa_juridica_aprovada_persist_limite_global_value}}}
      * @return $this
      */
     public function setLimiteGlobal($limite_global)
@@ -776,7 +808,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_maximo
-     * @param Number $limite_maximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+     * @param Number $limite_maximo {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}}
      * @return $this
      */
     public function setLimiteMaximo($limite_maximo)
@@ -797,7 +829,7 @@ class PessoaJuridicaAprovadaPersist implements ArrayAccess
   
     /**
      * Sets limite_parcelas
-     * @param Number $limite_parcelas Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+     * @param Number $limite_parcelas {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}}
      * @return $this
      */
     public function setLimiteParcelas($limite_parcelas)

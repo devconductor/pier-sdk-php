@@ -38,7 +38,7 @@ use \ArrayAccess;
  * MoedaResponse Class Doc Comment
  *
  * @category    Class
- * @description Tipo de moeda
+ * @description {{{moeda_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -108,25 +108,25 @@ class MoedaResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador do tipo de moeda.
+      * $id {{{moeda_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $codigo_moeda C\u00F3digo identificador do tipo de moeda.
+      * $codigo_moeda {{{moeda_response_codigo_moeda_value}}}
       * @var string
       */
     protected $codigo_moeda;
     
     /**
-      * $simbolo S\u00EDmbolo da Moeda.
+      * $simbolo {{{moeda_response_simbolo_value}}}
       * @var string
       */
     protected $simbolo;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do tipo da moeda.
+      * $descricao {{{moeda_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -158,7 +158,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do tipo de moeda.
+     * @param int $id {{{moeda_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -179,7 +179,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets codigo_moeda
-     * @param string $codigo_moeda C\u00F3digo identificador do tipo de moeda.
+     * @param string $codigo_moeda {{{moeda_response_codigo_moeda_value}}}
      * @return $this
      */
     public function setCodigoMoeda($codigo_moeda)
@@ -200,7 +200,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets simbolo
-     * @param string $simbolo S\u00EDmbolo da Moeda.
+     * @param string $simbolo {{{moeda_response_simbolo_value}}}
      * @return $this
      */
     public function setSimbolo($simbolo)
@@ -221,7 +221,7 @@ class MoedaResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do tipo da moeda.
+     * @param string $descricao {{{moeda_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

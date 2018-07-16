@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoAUDResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response da auditoria do arquivo.
+ * @description {{{arquivo_a_u_d_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -144,79 +144,79 @@ class ArquivoAUDResponse implements ArrayAccess
 
     
     /**
-      * $rev Identificador da auditoria arquivo
+      * $rev {{{arquivo_a_u_d_response_rev_value}}}
       * @var int
       */
     protected $rev;
     
     /**
-      * $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+      * $rev_type {{{arquivo_a_u_d_response_rev_type_value}}}
       * @var int
       */
     protected $rev_type;
     
     /**
-      * $id Identificador do arquivo auditado
+      * $id {{{arquivo_a_u_d_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do arquivo auditado
+      * $nome {{{arquivo_a_u_d_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $id_resposta_acesso_digital Identificador da resposta da Acesso Digital
+      * $id_resposta_acesso_digital {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
       * @var string
       */
     protected $id_resposta_acesso_digital;
     
     /**
-      * $data_hora_resposta_acesso_digital Data de resposta da Acesso Digital
+      * $data_hora_resposta_acesso_digital {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
       * @var string
       */
     protected $data_hora_resposta_acesso_digital;
     
     /**
-      * $id_resposta_neurotech Identificador da resposta da Neurotech
+      * $id_resposta_neurotech {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
       * @var string
       */
     protected $id_resposta_neurotech;
     
     /**
-      * $data_hora_resposta_neurotech Data de resposta da Neurotech
+      * $data_hora_resposta_neurotech {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
       * @var string
       */
     protected $data_hora_resposta_neurotech;
     
     /**
-      * $uri Uri de acesso
+      * $uri {{{arquivo_a_u_d_response_uri_value}}}
       * @var string
       */
     protected $uri;
     
     /**
-      * $data_hora_inclusao Data de inclus\u00E3o do arquivo auditado
+      * $data_hora_inclusao {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
       * @var string
       */
     protected $data_hora_inclusao;
     
     /**
-      * $data_hora_alteracao Data de altera\u00E7\u00E3o do arquivo auditado
+      * $data_hora_alteracao {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
       * @var string
       */
     protected $data_hora_alteracao;
     
     /**
-      * $extensao Extens\u00E3o do arquivo auditado
+      * $extensao {{{arquivo_a_u_d_response_extensao_value}}}
       * @var string
       */
     protected $extensao;
     
     /**
-      * $parametros Lista  de par\u00E2metros do arquivo auditado
+      * $parametros {{{arquivo_a_u_d_response_parametros_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[]
       */
     protected $parametros;
@@ -257,7 +257,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets rev
-     * @param int $rev Identificador da auditoria arquivo
+     * @param int $rev {{{arquivo_a_u_d_response_rev_value}}}
      * @return $this
      */
     public function setRev($rev)
@@ -278,7 +278,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets rev_type
-     * @param int $rev_type Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+     * @param int $rev_type {{{arquivo_a_u_d_response_rev_type_value}}}
      * @return $this
      */
     public function setRevType($rev_type)
@@ -299,7 +299,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador do arquivo auditado
+     * @param int $id {{{arquivo_a_u_d_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -320,7 +320,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do arquivo auditado
+     * @param string $nome {{{arquivo_a_u_d_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -341,7 +341,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets id_resposta_acesso_digital
-     * @param string $id_resposta_acesso_digital Identificador da resposta da Acesso Digital
+     * @param string $id_resposta_acesso_digital {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
      * @return $this
      */
     public function setIdRespostaAcessoDigital($id_resposta_acesso_digital)
@@ -362,7 +362,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_resposta_acesso_digital
-     * @param string $data_hora_resposta_acesso_digital Data de resposta da Acesso Digital
+     * @param string $data_hora_resposta_acesso_digital {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
      * @return $this
      */
     public function setDataHoraRespostaAcessoDigital($data_hora_resposta_acesso_digital)
@@ -383,7 +383,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets id_resposta_neurotech
-     * @param string $id_resposta_neurotech Identificador da resposta da Neurotech
+     * @param string $id_resposta_neurotech {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
      * @return $this
      */
     public function setIdRespostaNeurotech($id_resposta_neurotech)
@@ -404,7 +404,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_resposta_neurotech
-     * @param string $data_hora_resposta_neurotech Data de resposta da Neurotech
+     * @param string $data_hora_resposta_neurotech {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
      * @return $this
      */
     public function setDataHoraRespostaNeurotech($data_hora_resposta_neurotech)
@@ -425,7 +425,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets uri
-     * @param string $uri Uri de acesso
+     * @param string $uri {{{arquivo_a_u_d_response_uri_value}}}
      * @return $this
      */
     public function setUri($uri)
@@ -446,7 +446,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inclusao
-     * @param string $data_hora_inclusao Data de inclus\u00E3o do arquivo auditado
+     * @param string $data_hora_inclusao {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
      * @return $this
      */
     public function setDataHoraInclusao($data_hora_inclusao)
@@ -467,7 +467,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets data_hora_alteracao
-     * @param string $data_hora_alteracao Data de altera\u00E7\u00E3o do arquivo auditado
+     * @param string $data_hora_alteracao {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
      * @return $this
      */
     public function setDataHoraAlteracao($data_hora_alteracao)
@@ -488,7 +488,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Extens\u00E3o do arquivo auditado
+     * @param string $extensao {{{arquivo_a_u_d_response_extensao_value}}}
      * @return $this
      */
     public function setExtensao($extensao)
@@ -509,7 +509,7 @@ class ArquivoAUDResponse implements ArrayAccess
   
     /**
      * Sets parametros
-     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[] $parametros Lista  de par\u00E2metros do arquivo auditado
+     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroAUDResponse[] $parametros {{{arquivo_a_u_d_response_parametros_value}}}
      * @return $this
      */
     public function setParametros($parametros)

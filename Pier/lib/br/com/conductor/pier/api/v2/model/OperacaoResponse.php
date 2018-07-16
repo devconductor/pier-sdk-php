@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OperacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso Operacao
+ * @description {{{operacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class OperacaoResponse implements ArrayAccess
 
     
     /**
-      * $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+      * $id_operacao {{{operacao_response_id_operacao_value}}}
       * @var int
       */
     protected $id_operacao;
     
     /**
-      * $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+      * $codigo_processamento {{{operacao_response_codigo_processamento_value}}}
       * @var string
       */
     protected $codigo_processamento;
     
     /**
-      * $codigo_processamento_cancelamento C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+      * $codigo_processamento_cancelamento {{{operacao_response_codigo_processamento_cancelamento_value}}}
       * @var string
       */
     protected $codigo_processamento_cancelamento;
     
     /**
-      * $nome_operacao Nome da opera\u00E7\u00E3o
+      * $nome_operacao {{{operacao_response_nome_operacao_value}}}
       * @var string
       */
     protected $nome_operacao;
     
     /**
-      * $flag_cobra_juros Flag indicativa para crobran\u00E7a de juros
+      * $flag_cobra_juros {{{operacao_response_flag_cobra_juros_value}}}
       * @var bool
       */
     protected $flag_cobra_juros;
     
     /**
-      * $flag_cobra_tarifa Flag indicativa para crobran\u00E7a de tarifas
+      * $flag_cobra_tarifa {{{operacao_response_flag_cobra_tarifa_value}}}
       * @var bool
       */
     protected $flag_cobra_tarifa;
     
     /**
-      * $carencia Quantidade de meses para car\u00EAncia
+      * $carencia {{{operacao_response_carencia_value}}}
       * @var int
       */
     protected $carencia;
     
     /**
-      * $flag_permitir_parcelamento Permitir transa\u00E7\u00F5es parceladas
+      * $flag_permitir_parcelamento {{{operacao_response_flag_permitir_parcelamento_value}}}
       * @var bool
       */
     protected $flag_permitir_parcelamento;
@@ -202,7 +202,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+     * @param int $id_operacao {{{operacao_response_id_operacao_value}}}
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -223,7 +223,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento
-     * @param string $codigo_processamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+     * @param string $codigo_processamento {{{operacao_response_codigo_processamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamento($codigo_processamento)
@@ -244,7 +244,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets codigo_processamento_cancelamento
-     * @param string $codigo_processamento_cancelamento C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+     * @param string $codigo_processamento_cancelamento {{{operacao_response_codigo_processamento_cancelamento_value}}}
      * @return $this
      */
     public function setCodigoProcessamentoCancelamento($codigo_processamento_cancelamento)
@@ -265,7 +265,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets nome_operacao
-     * @param string $nome_operacao Nome da opera\u00E7\u00E3o
+     * @param string $nome_operacao {{{operacao_response_nome_operacao_value}}}
      * @return $this
      */
     public function setNomeOperacao($nome_operacao)
@@ -286,7 +286,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_cobra_juros
-     * @param bool $flag_cobra_juros Flag indicativa para crobran\u00E7a de juros
+     * @param bool $flag_cobra_juros {{{operacao_response_flag_cobra_juros_value}}}
      * @return $this
      */
     public function setFlagCobraJuros($flag_cobra_juros)
@@ -307,7 +307,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_cobra_tarifa
-     * @param bool $flag_cobra_tarifa Flag indicativa para crobran\u00E7a de tarifas
+     * @param bool $flag_cobra_tarifa {{{operacao_response_flag_cobra_tarifa_value}}}
      * @return $this
      */
     public function setFlagCobraTarifa($flag_cobra_tarifa)
@@ -328,7 +328,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets carencia
-     * @param int $carencia Quantidade de meses para car\u00EAncia
+     * @param int $carencia {{{operacao_response_carencia_value}}}
      * @return $this
      */
     public function setCarencia($carencia)
@@ -349,7 +349,7 @@ class OperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_permitir_parcelamento
-     * @param bool $flag_permitir_parcelamento Permitir transa\u00E7\u00F5es parceladas
+     * @param bool $flag_permitir_parcelamento {{{operacao_response_flag_permitir_parcelamento_value}}}
      * @return $this
      */
     public function setFlagPermitirParcelamento($flag_permitir_parcelamento)

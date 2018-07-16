@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ValidaCVVRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o de valida\u00E7\u00E3o do CVV.
+ * @description {{{valida_c_v_v_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class ValidaCVVRequest implements ArrayAccess
 
     
     /**
-      * $id_chave_criptografia C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia.
+      * $id_chave_criptografia {{{valida_c_v_v_request_id_chave_criptografia_value}}}
       * @var int
       */
     protected $id_chave_criptografia;
     
     /**
-      * $cvv Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV).
+      * $cvv {{{valida_c_v_v_request_cvv_value}}}
       * @var string
       */
     protected $cvv;
@@ -136,7 +136,7 @@ class ValidaCVVRequest implements ArrayAccess
   
     /**
      * Sets id_chave_criptografia
-     * @param int $id_chave_criptografia C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia.
+     * @param int $id_chave_criptografia {{{valida_c_v_v_request_id_chave_criptografia_value}}}
      * @return $this
      */
     public function setIdChaveCriptografia($id_chave_criptografia)
@@ -157,7 +157,7 @@ class ValidaCVVRequest implements ArrayAccess
   
     /**
      * Sets cvv
-     * @param string $cvv Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV).
+     * @param string $cvv {{{valida_c_v_v_request_cvv_value}}}
      * @return $this
      */
     public function setCvv($cvv)

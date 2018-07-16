@@ -38,7 +38,7 @@ use \ArrayAccess;
  * BeneficioPagamentoAtrasoResponse Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description {{{beneficio_pagamento_atraso_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -96,7 +96,7 @@ class BeneficioPagamentoAtrasoResponse implements ArrayAccess
 
     
     /**
-      * $data_beneficio Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
+      * $data_beneficio {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
       * @var string
       */
     protected $data_beneficio;
@@ -125,7 +125,7 @@ class BeneficioPagamentoAtrasoResponse implements ArrayAccess
   
     /**
      * Sets data_beneficio
-     * @param string $data_beneficio Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
+     * @param string $data_beneficio {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
      * @return $this
      */
     public function setDataBeneficio($data_beneficio)

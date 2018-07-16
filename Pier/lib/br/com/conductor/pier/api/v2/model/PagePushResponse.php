@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PagePushResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Push
+ * @description {{{page_push_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,7 +51,7 @@ class PagePushResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PagePushResponse implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]
+      * @var \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PagePushResponse implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PagePushResponse implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[] $content 
      * @return $this
      */
     public function setContent($content)

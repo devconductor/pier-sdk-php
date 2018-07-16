@@ -38,7 +38,7 @@ use \ArrayAccess;
  * GrupoOrigemComercialResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta do grupo de origem comercial
+ * @description {{{grupo_origem_comercial_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class GrupoOrigemComercialResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.
+      * $id {{{grupo_origem_comercial_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome do grupo da origem comercial
+      * $nome {{{grupo_origem_comercial_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -136,7 +136,7 @@ class GrupoOrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.
+     * @param int $id {{{grupo_origem_comercial_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class GrupoOrigemComercialResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do grupo da origem comercial
+     * @param string $nome {{{grupo_origem_comercial_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

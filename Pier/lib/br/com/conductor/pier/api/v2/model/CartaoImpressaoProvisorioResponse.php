@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CartaoImpressaoProvisorioResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto cart\u00E3o provis\u00F3rio
+ * @description {{{cartao_impressao_provisorio_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -126,37 +126,37 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
     protected $flag_virtual;
     
     /**
-      * $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+      * $id_conta {{{cartao_impressao_provisorio_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+      * $id_pessoa {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+      * $id_cartao {{{cartao_impressao_provisorio_response_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
+      * $numero_cartao {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
       * @var string
       */
     protected $numero_cartao;
     
     /**
-      * $nome_plastico Apresenta o nome do Portador do Cart\u00E3o.
+      * $nome_plastico {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
       * @var string
       */
     protected $nome_plastico;
     
     /**
-      * $data_validade Apresenta a data de Validade do Cart\u00E3o.
+      * $data_validade {{{cartao_impressao_provisorio_response_data_validade_value}}}
       * @var string
       */
     protected $data_validade;
@@ -212,7 +212,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+     * @param int $id_conta {{{cartao_impressao_provisorio_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -233,7 +233,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+     * @param int $id_pessoa {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -254,7 +254,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+     * @param int $id_cartao {{{cartao_impressao_provisorio_response_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -275,7 +275,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao
-     * @param string $numero_cartao Apresenta o n\u00FAmero do cart\u00E3o.
+     * @param string $numero_cartao {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
      * @return $this
      */
     public function setNumeroCartao($numero_cartao)
@@ -296,7 +296,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets nome_plastico
-     * @param string $nome_plastico Apresenta o nome do Portador do Cart\u00E3o.
+     * @param string $nome_plastico {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
      * @return $this
      */
     public function setNomePlastico($nome_plastico)
@@ -317,7 +317,7 @@ class CartaoImpressaoProvisorioResponse implements ArrayAccess
   
     /**
      * Sets data_validade
-     * @param string $data_validade Apresenta a data de Validade do Cart\u00E3o.
+     * @param string $data_validade {{{cartao_impressao_provisorio_response_data_validade_value}}}
      * @return $this
      */
     public function setDataValidade($data_validade)

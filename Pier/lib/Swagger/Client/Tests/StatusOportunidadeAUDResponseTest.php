@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * StatusOportunidadeAUDResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD
+ * @description {{{status_oportunidade_a_u_d_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

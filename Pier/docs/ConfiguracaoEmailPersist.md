@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | **string** | IP (Host) do servidor de e-mail. | [optional] 
-**port** | **string** | Porta usada pelo servidor de e-mail. | [optional] 
-**port_tlsstarttls** | **string** | Porta usada pelo servi\u00E7o TLS/STARTTLS. | [optional] 
-**port_ssl** | **string** | Porta usada pelo servi\u00E7o SSL. | [optional] 
-**protocolo** | **string** | Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail. | [optional] 
-**requer_autenticacao** | **bool** | O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o. | [optional] 
-**requer_ssl** | **bool** | O servi\u00E7o de e-mail requer SSL. | [optional] 
-**requer_tls** | **bool** | O servi\u00E7o de e-mail requer TLS. | [optional] 
-**usuario** | **string** | Usuario do servi\u00E7o de e-mail. | [optional] 
-**senha** | **string** | Senha de usu\u00E1rio do servi\u00E7o de e-mail. | [optional] 
+**host** | **string** | {{{configuracao_email_persist_host_value}}} | [optional] 
+**port** | **string** | {{{configuracao_email_persist_port_value}}} | [optional] 
+**port_tlsstarttls** | **string** | {{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}} | [optional] 
+**port_ssl** | **string** | {{{configuracao_email_persist_port_s_s_l_value}}} | [optional] 
+**protocolo** | **string** | {{{configuracao_email_persist_protocolo_value}}} | [optional] 
+**requer_autenticacao** | **bool** | {{{configuracao_email_persist_requer_autenticacao_value}}} | [optional] 
+**requer_ssl** | **bool** | {{{configuracao_email_persist_requer_s_s_l_value}}} | [optional] 
+**requer_tls** | **bool** | {{{configuracao_email_persist_requer_t_l_s_value}}} | [optional] 
+**usuario** | **string** | {{{configuracao_email_persist_usuario_value}}} | [optional] 
+**senha** | **string** | {{{configuracao_email_persist_senha_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

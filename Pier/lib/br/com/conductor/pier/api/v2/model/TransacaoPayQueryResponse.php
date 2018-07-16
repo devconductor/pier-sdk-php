@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoPayQueryResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o
+ * @description {{{transacao_pay_query_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class TransacaoPayQueryResponse implements ArrayAccess
 
     
     /**
-      * $codigo Resultado de consulta de conta
+      * $codigo {{{transacao_pay_query_response_codigo_value}}}
       * @var string
       */
     protected $codigo;
     
     /**
-      * $descricao Mensagem descrevendo resposta.
+      * $descricao {{{transacao_pay_query_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
@@ -136,7 +136,7 @@ class TransacaoPayQueryResponse implements ArrayAccess
   
     /**
      * Sets codigo
-     * @param string $codigo Resultado de consulta de conta
+     * @param string $codigo {{{transacao_pay_query_response_codigo_value}}}
      * @return $this
      */
     public function setCodigo($codigo)
@@ -157,7 +157,7 @@ class TransacaoPayQueryResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Mensagem descrevendo resposta.
+     * @param string $descricao {{{transacao_pay_query_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)

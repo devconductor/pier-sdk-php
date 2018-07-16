@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_conta** | **int** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**situacao_processamento** | **string** | Situa\u00E7\u00E3o de Processamento da fatura. | [optional] 
-**pagamento_efetuado** | **bool** | Status de pagamento efetuado. | [optional] 
-**data_vencimento_fatura** | **string** | Data de vencimento da fatura. | [optional] 
-**data_vencimento_real** | **string** | Data de vencimento real da fatura. | [optional] 
-**data_fechamento** | **string** | Data de fechamento da fatura. | [optional] 
-**valor_total** | [**Number**](Number.md) | Valor total da fatura. | [optional] 
-**valor_pagamento_minimo** | [**Number**](Number.md) | Valor do pagamento m\u00EDnimo. | [optional] 
-**lancamentos_fatura_response** | [**\br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]**](LancamentoFaturaResponse.md) | Lista de lan\u00E7amentos da fatura. | [optional] 
-**saldo_anterior** | [**Number**](Number.md) | Valor do saldo anterior. | [optional] 
+**id_conta** | **int** | {{{fatura_response_id_conta_value}}} | [optional] 
+**situacao_processamento** | **string** | {{{fatura_response_situacao_processamento_value}}} | [optional] 
+**pagamento_efetuado** | **bool** | {{{fatura_response_pagamento_efetuado_value}}} | [optional] 
+**data_vencimento_fatura** | **string** | {{{fatura_response_data_vencimento_fatura_value}}} | [optional] 
+**data_vencimento_real** | **string** | {{{fatura_response_data_vencimento_real_value}}} | [optional] 
+**data_fechamento** | **string** | {{{fatura_response_data_fechamento_value}}} | [optional] 
+**valor_total** | [**Number**](Number.md) | {{{fatura_response_valor_total_value}}} | [optional] 
+**valor_pagamento_minimo** | [**Number**](Number.md) | {{{fatura_response_valor_pagamento_minimo_value}}} | [optional] 
+**lancamentos_fatura_response** | [**\br.com.conductor.pier.api.v2.model\LancamentoFaturaResponse[]**](LancamentoFaturaResponse.md) | {{{fatura_detalhe_response_lancamentos_fatura_response_value}}} | [optional] 
+**saldo_anterior** | [**Number**](Number.md) | {{{fatura_response_saldo_anterior_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

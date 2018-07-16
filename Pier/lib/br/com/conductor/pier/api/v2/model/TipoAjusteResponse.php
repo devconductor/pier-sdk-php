@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoAjusteResponse Class Doc Comment
  *
  * @category    Class
- * @description Tipo de ajuste
+ * @description {{{tipo_ajuste_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -52,7 +52,8 @@ class TipoAjusteResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id' => 'int',
-        'descricao' => 'string'
+        'descricao' => 'string',
+        'transacoes' => '\br.com.conductor.pier.api.v2.model\TipoTransacaoAjusteResponse[]'
     );
   
     static function swaggerTypes() {
@@ -65,7 +66,8 @@ class TipoAjusteResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id' => 'id',
-        'descricao' => 'descricao'
+        'descricao' => 'descricao',
+        'transacoes' => 'transacoes'
     );
   
     static function attributeMap() {
@@ -78,7 +80,8 @@ class TipoAjusteResponse implements ArrayAccess
       */
     static $setters = array(
         'id' => 'setId',
-        'descricao' => 'setDescricao'
+        'descricao' => 'setDescricao',
+        'transacoes' => 'setTransacoes'
     );
   
     static function setters() {
@@ -91,7 +94,8 @@ class TipoAjusteResponse implements ArrayAccess
       */
     static $getters = array(
         'id' => 'getId',
-        'descricao' => 'getDescricao'
+        'descricao' => 'getDescricao',
+        'transacoes' => 'getTransacoes'
     );
   
     static function getters() {
@@ -100,16 +104,22 @@ class TipoAjusteResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do tipo de ajuste.
+      * $id {{{tipo_ajuste_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $descricao Descri\u00E7\u00E3o do tipo de ajuste.
+      * $descricao {{{tipo_ajuste_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
+    
+    /**
+      * $transacoes {{{tipo_ajuste_response_transacoes_value}}}
+      * @var \br.com.conductor.pier.api.v2.model\TipoTransacaoAjusteResponse[]
+      */
+    protected $transacoes;
     
 
     /**
@@ -122,6 +132,7 @@ class TipoAjusteResponse implements ArrayAccess
         if ($data != null) {
             $this->id = $data["id"];
             $this->descricao = $data["descricao"];
+            $this->transacoes = $data["transacoes"];
         }
     }
     
@@ -136,7 +147,7 @@ class TipoAjusteResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do tipo de ajuste.
+     * @param int $id {{{tipo_ajuste_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,13 +168,34 @@ class TipoAjusteResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Descri\u00E7\u00E3o do tipo de ajuste.
+     * @param string $descricao {{{tipo_ajuste_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
     {
         
         $this->descricao = $descricao;
+        return $this;
+    }
+    
+    /**
+     * Gets transacoes
+     * @return \br.com.conductor.pier.api.v2.model\TipoTransacaoAjusteResponse[]
+     */
+    public function getTransacoes()
+    {
+        return $this->transacoes;
+    }
+  
+    /**
+     * Sets transacoes
+     * @param \br.com.conductor.pier.api.v2.model\TipoTransacaoAjusteResponse[] $transacoes {{{tipo_ajuste_response_transacoes_value}}}
+     * @return $this
+     */
+    public function setTransacoes($transacoes)
+    {
+        
+        $this->transacoes = $transacoes;
         return $this;
     }
     

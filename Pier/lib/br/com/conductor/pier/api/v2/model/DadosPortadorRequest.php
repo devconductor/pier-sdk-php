@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DadosPortadorRequest Class Doc Comment
  *
  * @category    Class
- * @description Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador.
+ * @description {{{dados_portador_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -124,49 +124,49 @@ class DadosPortadorRequest implements ArrayAccess
 
     
     /**
-      * $cartao N\u00FAmero do cart\u00E3o.
+      * $cartao {{{dados_portador_request_cartao_value}}}
       * @var string
       */
     protected $cartao;
     
     /**
-      * $cpf N\u00FAmero do CPF.
+      * $cpf {{{dados_portador_request_cpf_value}}}
       * @var string
       */
     protected $cpf;
     
     /**
-      * $nome Nome do portador.
+      * $nome {{{dados_portador_request_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $data_nascimento Data de nascimento do portador do cart\u00E3o.
+      * $data_nascimento {{{dados_portador_request_data_nascimento_value}}}
       * @var string
       */
     protected $data_nascimento;
     
     /**
-      * $cep_residencial CEP da resid\u00EAncia do portador da conta.
+      * $cep_residencial {{{dados_portador_request_cep_residencial_value}}}
       * @var string
       */
     protected $cep_residencial;
     
     /**
-      * $email E-mail do portador do cart\u00E3o.
+      * $email {{{dados_portador_request_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $ddd DDD do n\u00FAmero de telefone do portador do cart\u00E3o.
+      * $ddd {{{dados_portador_request_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone N\u00FAmero do telefone do portador do cart\u00E3o.
+      * $telefone {{{dados_portador_request_telefone_value}}}
       * @var string
       */
     protected $telefone;
@@ -202,7 +202,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets cartao
-     * @param string $cartao N\u00FAmero do cart\u00E3o.
+     * @param string $cartao {{{dados_portador_request_cartao_value}}}
      * @return $this
      */
     public function setCartao($cartao)
@@ -223,7 +223,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00FAmero do CPF.
+     * @param string $cpf {{{dados_portador_request_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)
@@ -244,7 +244,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do portador.
+     * @param string $nome {{{dados_portador_request_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -265,7 +265,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento Data de nascimento do portador do cart\u00E3o.
+     * @param string $data_nascimento {{{dados_portador_request_data_nascimento_value}}}
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -286,7 +286,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets cep_residencial
-     * @param string $cep_residencial CEP da resid\u00EAncia do portador da conta.
+     * @param string $cep_residencial {{{dados_portador_request_cep_residencial_value}}}
      * @return $this
      */
     public function setCepResidencial($cep_residencial)
@@ -307,7 +307,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email E-mail do portador do cart\u00E3o.
+     * @param string $email {{{dados_portador_request_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -328,7 +328,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd DDD do n\u00FAmero de telefone do portador do cart\u00E3o.
+     * @param string $ddd {{{dados_portador_request_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -349,7 +349,7 @@ class DadosPortadorRequest implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone N\u00FAmero do telefone do portador do cart\u00E3o.
+     * @param string $telefone {{{dados_portador_request_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)

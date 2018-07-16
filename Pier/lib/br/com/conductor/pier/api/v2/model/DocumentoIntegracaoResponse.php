@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoIntegracaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
+ * @description {{{documento_integracao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DocumentoIntegracaoResponse implements ArrayAccess
 
     
     /**
-      * $id ID do Documento Integrado.
+      * $id {{{documento_integracao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_template ID do Template de Documento associado.
+      * $id_template {{{documento_integracao_response_id_template_value}}}
       * @var int
       */
     protected $id_template;
     
     /**
-      * $nome Nome do Documento.
+      * $nome {{{documento_integracao_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -147,7 +147,7 @@ class DocumentoIntegracaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID do Documento Integrado.
+     * @param int $id {{{documento_integracao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class DocumentoIntegracaoResponse implements ArrayAccess
   
     /**
      * Sets id_template
-     * @param int $id_template ID do Template de Documento associado.
+     * @param int $id_template {{{documento_integracao_response_id_template_value}}}
      * @return $this
      */
     public function setIdTemplate($id_template)
@@ -189,7 +189,7 @@ class DocumentoIntegracaoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do Documento.
+     * @param string $nome {{{documento_integracao_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

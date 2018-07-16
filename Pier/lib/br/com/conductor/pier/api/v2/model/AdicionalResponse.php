@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AdicionalResponse Class Doc Comment
  *
  * @category    Class
- * @description Resposta do recurso de cadastrar adicional
+ * @description {{{adicional_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,91 +152,91 @@ class AdicionalResponse implements ArrayAccess
 
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
+      * $id_conta {{{adicional_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
+      * $id_pessoa {{{adicional_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $nome Nome completo do Adicional
+      * $nome {{{adicional_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
+      * $nome_impresso {{{adicional_response_nome_impresso_value}}}
       * @var string
       */
     protected $nome_impresso;
     
     /**
-      * $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional
+      * $numero_receita_federal {{{adicional_response_numero_receita_federal_value}}}
       * @var string
       */
     protected $numero_receita_federal;
     
     /**
-      * $data_nascimento Data de Nascimento do Adicional
+      * $data_nascimento {{{adicional_response_data_nascimento_value}}}
       * @var string
       */
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+      * $sexo {{{adicional_response_sexo_value}}}
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00FAmero do Documento de Identidade do Adicional
+      * $numero_identidade {{{adicional_response_numero_identidade_value}}}
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
+      * $orgao_expedidor_identidade {{{adicional_response_orgao_expedidor_identidade_value}}}
       * @var string
       */
     protected $orgao_expedidor_identidade;
     
     /**
-      * $unidade_federativa_identidade Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+      * $unidade_federativa_identidade {{{adicional_response_unidade_federativa_identidade_value}}}
       * @var string
       */
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional
+      * $data_emissao_identidade {{{adicional_response_data_emissao_identidade_value}}}
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
+      * $id_parentesco {{{adicional_response_id_parentesco_value}}}
       * @var int
       */
     protected $id_parentesco;
     
     /**
-      * $flag_ativo Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
+      * $flag_ativo {{{adicional_response_flag_ativo_value}}}
       * @var int
       */
     protected $flag_ativo;
     
     /**
-      * $data_cadastro_portador Indica a data de cadastro do adicional
+      * $data_cadastro_portador {{{adicional_response_data_cadastro_portador_value}}}
       * @var string
       */
     protected $data_cadastro_portador;
     
     /**
-      * $data_cancelamento_portador Indica a data de cancelamento do adicional
+      * $data_cancelamento_portador {{{adicional_response_data_cancelamento_portador_value}}}
       * @var string
       */
     protected $data_cancelamento_portador;
@@ -279,7 +279,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
+     * @param int $id_conta {{{adicional_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -300,7 +300,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
+     * @param int $id_pessoa {{{adicional_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -321,7 +321,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome completo do Adicional
+     * @param string $nome {{{adicional_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -342,7 +342,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets nome_impresso
-     * @param string $nome_impresso Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
+     * @param string $nome_impresso {{{adicional_response_nome_impresso_value}}}
      * @return $this
      */
     public function setNomeImpresso($nome_impresso)
@@ -363,7 +363,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets numero_receita_federal
-     * @param string $numero_receita_federal N\u00FAmero do CPF ou CNPJ do Adicional
+     * @param string $numero_receita_federal {{{adicional_response_numero_receita_federal_value}}}
      * @return $this
      */
     public function setNumeroReceitaFederal($numero_receita_federal)
@@ -384,7 +384,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento Data de Nascimento do Adicional
+     * @param string $data_nascimento {{{adicional_response_data_nascimento_value}}}
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -405,7 +405,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+     * @param string $sexo {{{adicional_response_sexo_value}}}
      * @return $this
      */
     public function setSexo($sexo)
@@ -426,7 +426,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00FAmero do Documento de Identidade do Adicional
+     * @param string $numero_identidade {{{adicional_response_numero_identidade_value}}}
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -447,7 +447,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
+     * @param string $orgao_expedidor_identidade {{{adicional_response_orgao_expedidor_identidade_value}}}
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -468,7 +468,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets unidade_federativa_identidade
-     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+     * @param string $unidade_federativa_identidade {{{adicional_response_unidade_federativa_identidade_value}}}
      * @return $this
      */
     public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
@@ -489,7 +489,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data de emiss\u00E3o do Documento de Identidade do Adicional
+     * @param string $data_emissao_identidade {{{adicional_response_data_emissao_identidade_value}}}
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -510,7 +510,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets id_parentesco
-     * @param int $id_parentesco C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
+     * @param int $id_parentesco {{{adicional_response_id_parentesco_value}}}
      * @return $this
      */
     public function setIdParentesco($id_parentesco)
@@ -531,7 +531,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets flag_ativo
-     * @param int $flag_ativo Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
+     * @param int $flag_ativo {{{adicional_response_flag_ativo_value}}}
      * @return $this
      */
     public function setFlagAtivo($flag_ativo)
@@ -552,7 +552,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets data_cadastro_portador
-     * @param string $data_cadastro_portador Indica a data de cadastro do adicional
+     * @param string $data_cadastro_portador {{{adicional_response_data_cadastro_portador_value}}}
      * @return $this
      */
     public function setDataCadastroPortador($data_cadastro_portador)
@@ -573,7 +573,7 @@ class AdicionalResponse implements ArrayAccess
   
     /**
      * Sets data_cancelamento_portador
-     * @param string $data_cancelamento_portador Indica a data de cancelamento do adicional
+     * @param string $data_cancelamento_portador {{{adicional_response_data_cancelamento_portador_value}}}
      * @return $this
      */
     public function setDataCancelamentoPortador($data_cancelamento_portador)

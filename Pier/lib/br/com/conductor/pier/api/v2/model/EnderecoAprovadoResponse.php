@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EnderecoAprovadoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Endere\u00E7o Aprovado
+ * @description {{{endereco_aprovado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -140,73 +140,73 @@ class EnderecoAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+      * $id {{{endereco_aprovado_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+      * $id_tipo_endereco {{{endereco_aprovado_response_id_tipo_endereco_value}}}
       * @var int
       */
     protected $id_tipo_endereco;
     
     /**
-      * $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+      * $cep {{{endereco_aprovado_response_cep_value}}}
       * @var string
       */
     protected $cep;
     
     /**
-      * $logradouro Apresenta o nome do Logradouro
+      * $logradouro {{{endereco_aprovado_response_logradouro_value}}}
       * @var string
       */
     protected $logradouro;
     
     /**
-      * $numero Apresenta o n\u00FAmero do endere\u00E7o
+      * $numero {{{endereco_aprovado_response_numero_value}}}
       * @var int
       */
     protected $numero;
     
     /**
-      * $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+      * $complemento {{{endereco_aprovado_response_complemento_value}}}
       * @var string
       */
     protected $complemento;
     
     /**
-      * $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+      * $ponto_referencia {{{endereco_aprovado_response_ponto_referencia_value}}}
       * @var string
       */
     protected $ponto_referencia;
     
     /**
-      * $bairro Apresenta nome do bairro
+      * $bairro {{{endereco_aprovado_response_bairro_value}}}
       * @var string
       */
     protected $bairro;
     
     /**
-      * $cidade Apresenta nome da cidade
+      * $cidade {{{endereco_aprovado_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $uf Apresenta sigla da Unidade Federativa
+      * $uf {{{endereco_aprovado_response_uf_value}}}
       * @var string
       */
     protected $uf;
     
     /**
-      * $pais Apresenta nome do Pais
+      * $pais {{{endereco_aprovado_response_pais_value}}}
       * @var string
       */
     protected $pais;
     
     /**
-      * $endereco_correspondencia Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
+      * $endereco_correspondencia {{{endereco_aprovado_response_endereco_correspondencia_value}}}
       * @var bool
       */
     protected $endereco_correspondencia;
@@ -246,7 +246,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+     * @param int $id {{{endereco_aprovado_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -267,7 +267,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_endereco
-     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+     * @param int $id_tipo_endereco {{{endereco_aprovado_response_id_tipo_endereco_value}}}
      * @return $this
      */
     public function setIdTipoEndereco($id_tipo_endereco)
@@ -288,7 +288,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+     * @param string $cep {{{endereco_aprovado_response_cep_value}}}
      * @return $this
      */
     public function setCep($cep)
@@ -309,7 +309,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets logradouro
-     * @param string $logradouro Apresenta o nome do Logradouro
+     * @param string $logradouro {{{endereco_aprovado_response_logradouro_value}}}
      * @return $this
      */
     public function setLogradouro($logradouro)
@@ -330,7 +330,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets numero
-     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o
+     * @param int $numero {{{endereco_aprovado_response_numero_value}}}
      * @return $this
      */
     public function setNumero($numero)
@@ -351,7 +351,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+     * @param string $complemento {{{endereco_aprovado_response_complemento_value}}}
      * @return $this
      */
     public function setComplemento($complemento)
@@ -372,7 +372,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets ponto_referencia
-     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+     * @param string $ponto_referencia {{{endereco_aprovado_response_ponto_referencia_value}}}
      * @return $this
      */
     public function setPontoReferencia($ponto_referencia)
@@ -393,7 +393,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets bairro
-     * @param string $bairro Apresenta nome do bairro
+     * @param string $bairro {{{endereco_aprovado_response_bairro_value}}}
      * @return $this
      */
     public function setBairro($bairro)
@@ -414,7 +414,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Apresenta nome da cidade
+     * @param string $cidade {{{endereco_aprovado_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -435,7 +435,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets uf
-     * @param string $uf Apresenta sigla da Unidade Federativa
+     * @param string $uf {{{endereco_aprovado_response_uf_value}}}
      * @return $this
      */
     public function setUf($uf)
@@ -456,7 +456,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Apresenta nome do Pais
+     * @param string $pais {{{endereco_aprovado_response_pais_value}}}
      * @return $this
      */
     public function setPais($pais)
@@ -477,7 +477,7 @@ class EnderecoAprovadoResponse implements ArrayAccess
   
     /**
      * Sets endereco_correspondencia
-     * @param bool $endereco_correspondencia Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
+     * @param bool $endereco_correspondencia {{{endereco_aprovado_response_endereco_correspondencia_value}}}
      * @return $this
      */
     public function setEnderecoCorrespondencia($endereco_correspondencia)

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Identificador do plano de campanha | [optional] 
-**parcelas** | **int** | Quantidade de parcelas | [optional] 
-**taxa** | [**Number**](Number.md) | Taxa de juros | [optional] 
-**usuario** | **string** | Nome do usu\u00E1rio | [optional] 
+**id** | **int** | {{{plano_campanha_response_id_value}}} | [optional] 
+**parcelas** | **int** | {{{plano_campanha_response_parcelas_value}}} | [optional] 
+**taxa** | [**Number**](Number.md) | {{{plano_campanha_response_taxa_value}}} | [optional] 
+**usuario** | **string** | {{{plano_campanha_response_usuario_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,21 +3,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo identificador da configura\u00E7\u00E3o. | [optional] 
-**id_emissor** | **int** | C\u00F3digo do emissor. | [optional] 
-**codigo_banco** | **int** | C\u00F3digo do Banco. | [optional] 
-**uri** | **string** | URL de acesso ao banco. | [optional] 
-**key_store_name** | **string** | Caminho do certificado digital do emissor. | [optional] 
-**key_store_password** | **string** | Senha do certificado digital do emissor. | [optional] 
-**keystore_alias** | **string** | Alias do certificado digital do emissor. | [optional] 
-**key_store_private_key_password** | **string** | Senha da chave privada do certificado digital do emissor. | [optional] 
-**type_keystore** | **string** | Tipo do certificado digital do emissor. | [optional] 
-**trust_store_name** | **string** | Caminho do certificado digital do banco. | [optional] 
-**trust_store_password** | **string** | Senha do certificado digital do banco. | [optional] 
-**truststore_alias** | **string** | Alias do certificado digital do banco. | [optional] 
-**type_truststore** | **string** | Tipo do certificado digital do banco. | [optional] 
-**uri_adicional** | **string** | URL adicional de acesso ao banco. | [optional] 
-**status** | **string** | Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa. | [optional] 
+**id** | **int** | {{{configuracao_registro_cobranca_response_id_value}}} | [optional] 
+**id_emissor** | **int** | {{{configuracao_registro_cobranca_response_id_emissor_value}}} | [optional] 
+**codigo_banco** | **int** | {{{configuracao_registro_cobranca_response_codigo_banco_value}}} | [optional] 
+**uri** | **string** | {{{configuracao_registro_cobranca_response_uri_value}}} | [optional] 
+**key_store_name** | **string** | {{{configuracao_registro_cobranca_response_key_store_name_value}}} | [optional] 
+**key_store_password** | **string** | {{{configuracao_registro_cobranca_response_key_store_password_value}}} | [optional] 
+**keystore_alias** | **string** | {{{configuracao_registro_cobranca_response_keystore_alias_value}}} | [optional] 
+**key_store_private_key_password** | **string** | {{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}} | [optional] 
+**type_keystore** | **string** | {{{configuracao_registro_cobranca_response_type_keystore_value}}} | [optional] 
+**trust_store_name** | **string** | {{{configuracao_registro_cobranca_response_trust_store_name_value}}} | [optional] 
+**trust_store_password** | **string** | {{{configuracao_registro_cobranca_response_trust_store_password_value}}} | [optional] 
+**truststore_alias** | **string** | {{{configuracao_registro_cobranca_response_truststore_alias_value}}} | [optional] 
+**type_truststore** | **string** | {{{configuracao_registro_cobranca_response_type_truststore_value}}} | [optional] 
+**uri_adicional** | **string** | {{{configuracao_registro_cobranca_response_uri_adicional_value}}} | [optional] 
+**status** | **string** | {{{configuracao_registro_cobranca_response_status_value}}} | [optional] 
+**secret** | **string** | {{{configuracao_registro_cobranca_persist_secret_value}}} | 
+**client_id** | **string** | {{{configuracao_registro_cobranca_persist_client_id_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

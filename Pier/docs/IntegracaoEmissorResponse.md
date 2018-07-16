@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor. | [optional] 
-**id_conta** | **int** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**id_arquivo** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do arquivo. | [optional] 
-**status** | **string** | Status do registro. | [optional] 
-**data_inclusao** | **string** | Data de inclus\u00E3o do registro. | [optional] 
-**data_alteracao** | **string** | Data da ultima altera\u00E7\u00E3o do registro. | [optional] 
+**id** | **int** | {{{integracao_emissor_response_id_value}}} | [optional] 
+**id_conta** | **int** | {{{integracao_emissor_response_id_conta_value}}} | [optional] 
+**id_arquivo** | **int** | {{{integracao_emissor_response_id_arquivo_value}}} | [optional] 
+**status** | **string** | {{{integracao_emissor_response_status_value}}} | [optional] 
+**data_inclusao** | **string** | {{{integracao_emissor_response_data_inclusao_value}}} | [optional] 
+**data_alteracao** | **string** | {{{integracao_emissor_response_data_alteracao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

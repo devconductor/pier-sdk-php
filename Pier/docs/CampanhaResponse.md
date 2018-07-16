@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Identificador da campanha | [optional] 
-**nome** | **string** | Nome da campanha | [optional] 
-**id_tipo_campanha** | **int** | C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence | [optional] 
-**planos_campanhas** | [**\br.com.conductor.pier.api.v2.model\PlanoCampanhaResponse[]**](PlanoCampanhaResponse.md) | Lista de planos associados a Campanha | 
+**id** | **int** | {{{campanha_response_id_value}}} | [optional] 
+**nome** | **string** | {{{campanha_response_nome_value}}} | [optional] 
+**id_tipo_campanha** | **int** | {{{campanha_response_id_tipo_campanha_value}}} | [optional] 
+**planos_campanhas** | [**\br.com.conductor.pier.api.v2.model\PlanoCampanhaResponse[]**](PlanoCampanhaResponse.md) | {{{campanha_response_planos_campanhas_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Response do arquivo.
+ * @description {{{arquivo_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -136,67 +136,67 @@ class ArquivoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de identifica\u00E7\u00E3o do arquivo
+      * $id {{{arquivo_detalhe_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_tipo_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
+      * $id_tipo_arquivo {{{arquivo_detalhe_response_id_tipo_arquivo_value}}}
       * @var int
       */
     protected $id_tipo_arquivo;
     
     /**
-      * $nome_tipo_arquivo Descri\u00E7\u00E3o do tipo do arquivo
+      * $nome_tipo_arquivo {{{arquivo_detalhe_response_nome_tipo_arquivo_value}}}
       * @var string
       */
     protected $nome_tipo_arquivo;
     
     /**
-      * $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+      * $arquivo {{{arquivo_detalhe_response_arquivo_value}}}
       * @var string
       */
     protected $arquivo;
     
     /**
-      * $id_status_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
+      * $id_status_arquivo {{{arquivo_detalhe_response_id_status_arquivo_value}}}
       * @var int
       */
     protected $id_status_arquivo;
     
     /**
-      * $nome_status_arquivo Desci\u00E7\u00E3o do status do arquivo
+      * $nome_status_arquivo {{{arquivo_detalhe_response_nome_status_arquivo_value}}}
       * @var string
       */
     protected $nome_status_arquivo;
     
     /**
-      * $nome Nome do arquivo
+      * $nome {{{arquivo_detalhe_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $extensao Formato/Extens\u00E3o do arquivo
+      * $extensao {{{arquivo_detalhe_response_extensao_value}}}
       * @var string
       */
     protected $extensao;
     
     /**
-      * $data_inclusao Data de inclus\u00E3o do arquivo.
+      * $data_inclusao {{{arquivo_detalhe_response_data_inclusao_value}}}
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
+      * $data_alteracao {{{arquivo_detalhe_response_data_alteracao_value}}}
       * @var string
       */
     protected $data_alteracao;
     
     /**
-      * $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
+      * $detalhes {{{arquivo_detalhe_response_detalhes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[]
       */
     protected $detalhes;
@@ -235,7 +235,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de identifica\u00E7\u00E3o do arquivo
+     * @param int $id {{{arquivo_detalhe_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -256,7 +256,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_arquivo
-     * @param int $id_tipo_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
+     * @param int $id_tipo_arquivo {{{arquivo_detalhe_response_id_tipo_arquivo_value}}}
      * @return $this
      */
     public function setIdTipoArquivo($id_tipo_arquivo)
@@ -277,7 +277,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_tipo_arquivo
-     * @param string $nome_tipo_arquivo Descri\u00E7\u00E3o do tipo do arquivo
+     * @param string $nome_tipo_arquivo {{{arquivo_detalhe_response_nome_tipo_arquivo_value}}}
      * @return $this
      */
     public function setNomeTipoArquivo($nome_tipo_arquivo)
@@ -298,7 +298,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets arquivo
-     * @param string $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+     * @param string $arquivo {{{arquivo_detalhe_response_arquivo_value}}}
      * @return $this
      */
     public function setArquivo($arquivo)
@@ -319,7 +319,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_status_arquivo
-     * @param int $id_status_arquivo C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
+     * @param int $id_status_arquivo {{{arquivo_detalhe_response_id_status_arquivo_value}}}
      * @return $this
      */
     public function setIdStatusArquivo($id_status_arquivo)
@@ -340,7 +340,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome_status_arquivo
-     * @param string $nome_status_arquivo Desci\u00E7\u00E3o do status do arquivo
+     * @param string $nome_status_arquivo {{{arquivo_detalhe_response_nome_status_arquivo_value}}}
      * @return $this
      */
     public function setNomeStatusArquivo($nome_status_arquivo)
@@ -361,7 +361,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do arquivo
+     * @param string $nome {{{arquivo_detalhe_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -382,7 +382,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Formato/Extens\u00E3o do arquivo
+     * @param string $extensao {{{arquivo_detalhe_response_extensao_value}}}
      * @return $this
      */
     public function setExtensao($extensao)
@@ -403,7 +403,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data de inclus\u00E3o do arquivo.
+     * @param string $data_inclusao {{{arquivo_detalhe_response_data_inclusao_value}}}
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -424,7 +424,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
+     * @param string $data_alteracao {{{arquivo_detalhe_response_data_alteracao_value}}}
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)
@@ -445,7 +445,7 @@ class ArquivoDetalheResponse implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[] $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
+     * @param \br.com.conductor.pier.api.v2.model\ArquivoParametroResponse[] $detalhes {{{arquivo_detalhe_response_detalhes_value}}}
      * @return $this
      */
     public function setDetalhes($detalhes)

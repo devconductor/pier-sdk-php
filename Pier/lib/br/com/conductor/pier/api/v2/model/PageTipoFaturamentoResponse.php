@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageTipoFaturamentoResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Tipos de Faturamentos
+ * @description {{{page_tipo_faturamento_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

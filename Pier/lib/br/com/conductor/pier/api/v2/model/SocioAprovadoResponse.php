@@ -38,7 +38,7 @@ use \ArrayAccess;
  * SocioAprovadoResponse Class Doc Comment
  *
  * @category    Class
- * @description PessoaPersist
+ * @description {{{socio_aprovado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -148,85 +148,85 @@ class SocioAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+      * $id {{{socio_aprovado_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Apresenta o Nome do Socio
+      * $nome {{{socio_aprovado_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $cpf N\u00FAmero do CPF, quando PF.
+      * $cpf {{{socio_aprovado_response_cpf_value}}}
       * @var string
       */
     protected $cpf;
     
     /**
-      * $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+      * $data_nascimento {{{socio_aprovado_response_data_nascimento_value}}}
       * @var string
       */
     protected $data_nascimento;
     
     /**
-      * $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+      * $sexo {{{socio_aprovado_response_sexo_value}}}
       * @var string
       */
     protected $sexo;
     
     /**
-      * $numero_identidade N\u00FAmero da Identidade.
+      * $numero_identidade {{{socio_aprovado_response_numero_identidade_value}}}
       * @var string
       */
     protected $numero_identidade;
     
     /**
-      * $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
+      * $orgao_expedidor_identidade {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
       * @var string
       */
     protected $orgao_expedidor_identidade;
     
     /**
-      * $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+      * $unidade_federativa_identidade {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
       * @var string
       */
     protected $unidade_federativa_identidade;
     
     /**
-      * $data_emissao_identidade Data emiss\u00E3o da Identidade
+      * $data_emissao_identidade {{{socio_aprovado_response_data_emissao_identidade_value}}}
       * @var string
       */
     protected $data_emissao_identidade;
     
     /**
-      * $estado_civil Estado civil do s\u00F3cio
+      * $estado_civil {{{socio_aprovado_response_estado_civil_value}}}
       * @var string
       */
     protected $estado_civil;
     
     /**
-      * $profissao Profiss\u00E3o do s\u00F3cio
+      * $profissao {{{socio_aprovado_response_profissao_value}}}
       * @var string
       */
     protected $profissao;
     
     /**
-      * $nacionalidade Nacionalidade do s\u00F3cio
+      * $nacionalidade {{{socio_aprovado_response_nacionalidade_value}}}
       * @var string
       */
     protected $nacionalidade;
     
     /**
-      * $email Email do s\u00F3cio
+      * $email {{{socio_aprovado_response_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $telefones Informa os telefones do s\u00F3cio
+      * $telefones {{{socio_aprovado_response_telefones_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[]
       */
     protected $telefones;
@@ -268,7 +268,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+     * @param int $id {{{socio_aprovado_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -289,7 +289,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Apresenta o Nome do Socio
+     * @param string $nome {{{socio_aprovado_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -310,7 +310,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf N\u00FAmero do CPF, quando PF.
+     * @param string $cpf {{{socio_aprovado_response_cpf_value}}}
      * @return $this
      */
     public function setCpf($cpf)
@@ -331,7 +331,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets data_nascimento
-     * @param string $data_nascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+     * @param string $data_nascimento {{{socio_aprovado_response_data_nascimento_value}}}
      * @return $this
      */
     public function setDataNascimento($data_nascimento)
@@ -352,7 +352,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets sexo
-     * @param string $sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+     * @param string $sexo {{{socio_aprovado_response_sexo_value}}}
      * @return $this
      */
     public function setSexo($sexo)
@@ -373,7 +373,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets numero_identidade
-     * @param string $numero_identidade N\u00FAmero da Identidade.
+     * @param string $numero_identidade {{{socio_aprovado_response_numero_identidade_value}}}
      * @return $this
      */
     public function setNumeroIdentidade($numero_identidade)
@@ -394,7 +394,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets orgao_expedidor_identidade
-     * @param string $orgao_expedidor_identidade Org\u00E3o expedidor do RG.
+     * @param string $orgao_expedidor_identidade {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
      * @return $this
      */
     public function setOrgaoExpedidorIdentidade($orgao_expedidor_identidade)
@@ -415,7 +415,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets unidade_federativa_identidade
-     * @param string $unidade_federativa_identidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @param string $unidade_federativa_identidade {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
      * @return $this
      */
     public function setUnidadeFederativaIdentidade($unidade_federativa_identidade)
@@ -436,7 +436,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets data_emissao_identidade
-     * @param string $data_emissao_identidade Data emiss\u00E3o da Identidade
+     * @param string $data_emissao_identidade {{{socio_aprovado_response_data_emissao_identidade_value}}}
      * @return $this
      */
     public function setDataEmissaoIdentidade($data_emissao_identidade)
@@ -457,7 +457,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets estado_civil
-     * @param string $estado_civil Estado civil do s\u00F3cio
+     * @param string $estado_civil {{{socio_aprovado_response_estado_civil_value}}}
      * @return $this
      */
     public function setEstadoCivil($estado_civil)
@@ -478,7 +478,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets profissao
-     * @param string $profissao Profiss\u00E3o do s\u00F3cio
+     * @param string $profissao {{{socio_aprovado_response_profissao_value}}}
      * @return $this
      */
     public function setProfissao($profissao)
@@ -499,7 +499,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets nacionalidade
-     * @param string $nacionalidade Nacionalidade do s\u00F3cio
+     * @param string $nacionalidade {{{socio_aprovado_response_nacionalidade_value}}}
      * @return $this
      */
     public function setNacionalidade($nacionalidade)
@@ -520,7 +520,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Email do s\u00F3cio
+     * @param string $email {{{socio_aprovado_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -541,7 +541,7 @@ class SocioAprovadoResponse implements ArrayAccess
   
     /**
      * Sets telefones
-     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones Informa os telefones do s\u00F3cio
+     * @param \br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaResponse[] $telefones {{{socio_aprovado_response_telefones_value}}}
      * @return $this
      */
     public function setTelefones($telefones)

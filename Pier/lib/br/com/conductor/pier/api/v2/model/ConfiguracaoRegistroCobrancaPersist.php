@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConfiguracaoRegistroCobrancaPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
+ * @description {{{configuracao_registro_cobranca_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -63,7 +63,9 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
         'truststore_alias' => 'string',
         'type_truststore' => 'string',
         'uri_adicional' => 'string',
-        'status' => 'string'
+        'status' => 'string',
+        'secret' => 'string',
+        'client_id' => 'string'
     );
   
     static function swaggerTypes() {
@@ -87,7 +89,9 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
         'truststore_alias' => 'truststoreAlias',
         'type_truststore' => 'typeTruststore',
         'uri_adicional' => 'uriAdicional',
-        'status' => 'status'
+        'status' => 'status',
+        'secret' => 'secret',
+        'client_id' => 'clientID'
     );
   
     static function attributeMap() {
@@ -111,7 +115,9 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
         'truststore_alias' => 'setTruststoreAlias',
         'type_truststore' => 'setTypeTruststore',
         'uri_adicional' => 'setUriAdicional',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'secret' => 'setSecret',
+        'client_id' => 'setClientId'
     );
   
     static function setters() {
@@ -135,7 +141,9 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
         'truststore_alias' => 'getTruststoreAlias',
         'type_truststore' => 'getTypeTruststore',
         'uri_adicional' => 'getUriAdicional',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'secret' => 'getSecret',
+        'client_id' => 'getClientId'
     );
   
     static function getters() {
@@ -144,82 +152,94 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
 
     
     /**
-      * $codigo_banco C\u00F3digo do Banco.
+      * $codigo_banco {{{configuracao_registro_cobranca_persist_codigo_banco_value}}}
       * @var int
       */
     protected $codigo_banco;
     
     /**
-      * $uri URL de acesso ao banco.
+      * $uri {{{configuracao_registro_cobranca_persist_uri_value}}}
       * @var string
       */
     protected $uri;
     
     /**
-      * $key_store_name Caminho do certificado digital do emissor.
+      * $key_store_name {{{configuracao_registro_cobranca_persist_key_store_name_value}}}
       * @var string
       */
     protected $key_store_name;
     
     /**
-      * $key_store_password Senha do certificado digital do emissor.
+      * $key_store_password {{{configuracao_registro_cobranca_persist_key_store_password_value}}}
       * @var string
       */
     protected $key_store_password;
     
     /**
-      * $keystore_alias Alias do certificado digital do emissor.
+      * $keystore_alias {{{configuracao_registro_cobranca_persist_keystore_alias_value}}}
       * @var string
       */
     protected $keystore_alias;
     
     /**
-      * $key_store_private_key_password Senha da chave privada do certificado digital do emissor.
+      * $key_store_private_key_password {{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}}
       * @var string
       */
     protected $key_store_private_key_password;
     
     /**
-      * $type_keystore Tipo do certificado digital do emissor.
+      * $type_keystore {{{configuracao_registro_cobranca_persist_type_keystore_value}}}
       * @var string
       */
     protected $type_keystore;
     
     /**
-      * $trust_store_name Caminho do certificado digital do banco.
+      * $trust_store_name {{{configuracao_registro_cobranca_persist_trust_store_name_value}}}
       * @var string
       */
     protected $trust_store_name;
     
     /**
-      * $trust_store_password Senha do certificado digital do banco.
+      * $trust_store_password {{{configuracao_registro_cobranca_persist_trust_store_password_value}}}
       * @var string
       */
     protected $trust_store_password;
     
     /**
-      * $truststore_alias Alias do certificado digital do banco.
+      * $truststore_alias {{{configuracao_registro_cobranca_persist_truststore_alias_value}}}
       * @var string
       */
     protected $truststore_alias;
     
     /**
-      * $type_truststore Tipo do certificado digital do banco.
+      * $type_truststore {{{configuracao_registro_cobranca_persist_type_truststore_value}}}
       * @var string
       */
     protected $type_truststore;
     
     /**
-      * $uri_adicional URL adicional de acesso ao banco.
+      * $uri_adicional {{{configuracao_registro_cobranca_persist_uri_adicional_value}}}
       * @var string
       */
     protected $uri_adicional;
     
     /**
-      * $status Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
+      * $status {{{configuracao_registro_cobranca_persist_status_value}}}
       * @var string
       */
     protected $status;
+    
+    /**
+      * $secret {{{configuracao_registro_cobranca_persist_secret_value}}}
+      * @var string
+      */
+    protected $secret;
+    
+    /**
+      * $client_id {{{configuracao_registro_cobranca_persist_client_id_value}}}
+      * @var string
+      */
+    protected $client_id;
     
 
     /**
@@ -243,6 +263,8 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
             $this->type_truststore = $data["type_truststore"];
             $this->uri_adicional = $data["uri_adicional"];
             $this->status = $data["status"];
+            $this->secret = $data["secret"];
+            $this->client_id = $data["client_id"];
         }
     }
     
@@ -257,7 +279,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets codigo_banco
-     * @param int $codigo_banco C\u00F3digo do Banco.
+     * @param int $codigo_banco {{{configuracao_registro_cobranca_persist_codigo_banco_value}}}
      * @return $this
      */
     public function setCodigoBanco($codigo_banco)
@@ -278,7 +300,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets uri
-     * @param string $uri URL de acesso ao banco.
+     * @param string $uri {{{configuracao_registro_cobranca_persist_uri_value}}}
      * @return $this
      */
     public function setUri($uri)
@@ -299,7 +321,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets key_store_name
-     * @param string $key_store_name Caminho do certificado digital do emissor.
+     * @param string $key_store_name {{{configuracao_registro_cobranca_persist_key_store_name_value}}}
      * @return $this
      */
     public function setKeyStoreName($key_store_name)
@@ -320,7 +342,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets key_store_password
-     * @param string $key_store_password Senha do certificado digital do emissor.
+     * @param string $key_store_password {{{configuracao_registro_cobranca_persist_key_store_password_value}}}
      * @return $this
      */
     public function setKeyStorePassword($key_store_password)
@@ -341,7 +363,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets keystore_alias
-     * @param string $keystore_alias Alias do certificado digital do emissor.
+     * @param string $keystore_alias {{{configuracao_registro_cobranca_persist_keystore_alias_value}}}
      * @return $this
      */
     public function setKeystoreAlias($keystore_alias)
@@ -362,7 +384,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets key_store_private_key_password
-     * @param string $key_store_private_key_password Senha da chave privada do certificado digital do emissor.
+     * @param string $key_store_private_key_password {{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}}
      * @return $this
      */
     public function setKeyStorePrivateKeyPassword($key_store_private_key_password)
@@ -383,7 +405,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets type_keystore
-     * @param string $type_keystore Tipo do certificado digital do emissor.
+     * @param string $type_keystore {{{configuracao_registro_cobranca_persist_type_keystore_value}}}
      * @return $this
      */
     public function setTypeKeystore($type_keystore)
@@ -404,7 +426,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets trust_store_name
-     * @param string $trust_store_name Caminho do certificado digital do banco.
+     * @param string $trust_store_name {{{configuracao_registro_cobranca_persist_trust_store_name_value}}}
      * @return $this
      */
     public function setTrustStoreName($trust_store_name)
@@ -425,7 +447,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets trust_store_password
-     * @param string $trust_store_password Senha do certificado digital do banco.
+     * @param string $trust_store_password {{{configuracao_registro_cobranca_persist_trust_store_password_value}}}
      * @return $this
      */
     public function setTrustStorePassword($trust_store_password)
@@ -446,7 +468,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets truststore_alias
-     * @param string $truststore_alias Alias do certificado digital do banco.
+     * @param string $truststore_alias {{{configuracao_registro_cobranca_persist_truststore_alias_value}}}
      * @return $this
      */
     public function setTruststoreAlias($truststore_alias)
@@ -467,7 +489,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets type_truststore
-     * @param string $type_truststore Tipo do certificado digital do banco.
+     * @param string $type_truststore {{{configuracao_registro_cobranca_persist_type_truststore_value}}}
      * @return $this
      */
     public function setTypeTruststore($type_truststore)
@@ -488,7 +510,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets uri_adicional
-     * @param string $uri_adicional URL adicional de acesso ao banco.
+     * @param string $uri_adicional {{{configuracao_registro_cobranca_persist_uri_adicional_value}}}
      * @return $this
      */
     public function setUriAdicional($uri_adicional)
@@ -509,7 +531,7 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
+     * @param string $status {{{configuracao_registro_cobranca_persist_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -519,6 +541,48 @@ class ConfiguracaoRegistroCobrancaPersist implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'INATIVO', 'ATIVO'");
         }
         $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets secret
+     * @return string
+     */
+    public function getSecret()
+    {
+        return $this->secret;
+    }
+  
+    /**
+     * Sets secret
+     * @param string $secret {{{configuracao_registro_cobranca_persist_secret_value}}}
+     * @return $this
+     */
+    public function setSecret($secret)
+    {
+        
+        $this->secret = $secret;
+        return $this;
+    }
+    
+    /**
+     * Gets client_id
+     * @return string
+     */
+    public function getClientId()
+    {
+        return $this->client_id;
+    }
+  
+    /**
+     * Sets client_id
+     * @param string $client_id {{{configuracao_registro_cobranca_persist_client_id_value}}}
+     * @return $this
+     */
+    public function setClientId($client_id)
+    {
+        
+        $this->client_id = $client_id;
         return $this;
     }
     

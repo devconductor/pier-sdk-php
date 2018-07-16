@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoTemplatePersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do template do documento.
+ * @description {{{documento_template_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DocumentoTemplatePersist implements ArrayAccess
 
     
     /**
-      * $id_tipo_template ID para o Tipo de Template vinculado ao template.
+      * $id_tipo_template {{{documento_template_persist_id_tipo_template_value}}}
       * @var int
       */
     protected $id_tipo_template;
     
     /**
-      * $template Template para o conte\u00FAdo do documento.
+      * $template {{{documento_template_persist_template_value}}}
       * @var string
       */
     protected $template;
     
     /**
-      * $integracoes Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
+      * $integracoes {{{documento_template_persist_integracoes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
       */
     protected $integracoes;
@@ -147,7 +147,7 @@ class DocumentoTemplatePersist implements ArrayAccess
   
     /**
      * Sets id_tipo_template
-     * @param int $id_tipo_template ID para o Tipo de Template vinculado ao template.
+     * @param int $id_tipo_template {{{documento_template_persist_id_tipo_template_value}}}
      * @return $this
      */
     public function setIdTipoTemplate($id_tipo_template)
@@ -168,7 +168,7 @@ class DocumentoTemplatePersist implements ArrayAccess
   
     /**
      * Sets template
-     * @param string $template Template para o conte\u00FAdo do documento.
+     * @param string $template {{{documento_template_persist_template_value}}}
      * @return $this
      */
     public function setTemplate($template)
@@ -189,7 +189,7 @@ class DocumentoTemplatePersist implements ArrayAccess
   
     /**
      * Sets integracoes
-     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $integracoes Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $integracoes {{{documento_template_persist_integracoes_value}}}
      * @return $this
      */
     public function setIntegracoes($integracoes)

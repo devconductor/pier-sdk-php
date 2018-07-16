@@ -38,7 +38,7 @@ use \ArrayAccess;
  * LancamentoFaturaResponse Class Doc Comment
  *
  * @category    Class
- * @description Fatura futura
+ * @description {{{lancamento_fatura_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -192,151 +192,151 @@ class LancamentoFaturaResponse implements ArrayAccess
 
     
     /**
-      * $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+      * $id_transacao {{{lancamento_fatura_response_id_transacao_value}}}
       * @var int
       */
     protected $id_transacao;
     
     /**
-      * $descricao_tipo_transacao Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
+      * $descricao_tipo_transacao {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
       * @var string
       */
     protected $descricao_tipo_transacao;
     
     /**
-      * $id_tipo_evento C\u00F3digo identificador do tipo do evento
+      * $id_tipo_evento {{{lancamento_fatura_response_id_tipo_evento_value}}}
       * @var int
       */
     protected $id_tipo_evento;
     
     /**
-      * $descricao_tipo_evento Descri\u00E7\u00E3o do tipo do evento
+      * $descricao_tipo_evento {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
       * @var string
       */
     protected $descricao_tipo_evento;
     
     /**
-      * $id_evento C\u00F3digo identificador do evento
+      * $id_evento {{{lancamento_fatura_response_id_evento_value}}}
       * @var int
       */
     protected $id_evento;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+      * $id_conta {{{lancamento_fatura_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $complemento Descri\u00E7\u00E3o complementar do evento
+      * $complemento {{{lancamento_fatura_response_complemento_value}}}
       * @var string
       */
     protected $complemento;
     
     /**
-      * $valor_brl Valor em reais
+      * $valor_brl {{{lancamento_fatura_response_valor_b_r_l_value}}}
       * @var Number
       */
     protected $valor_brl;
     
     /**
-      * $valor_usd Valor em dolar
+      * $valor_usd {{{lancamento_fatura_response_valor_u_s_d_value}}}
       * @var Number
       */
     protected $valor_usd;
     
     /**
-      * $numero_parcela N\u00FAmero da parcela
+      * $numero_parcela {{{lancamento_fatura_response_numero_parcela_value}}}
       * @var int
       */
     protected $numero_parcela;
     
     /**
-      * $quantidade_parcelas Quantidade de parcelas
+      * $quantidade_parcelas {{{lancamento_fatura_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $data_hora_transacao Data da transa\u00E7\u00E3o
+      * $data_hora_transacao {{{lancamento_fatura_response_data_hora_transacao_value}}}
       * @var string
       */
     protected $data_hora_transacao;
     
     /**
-      * $nome_estabelecimento Nome do estabelecimento
+      * $nome_estabelecimento {{{lancamento_fatura_response_nome_estabelecimento_value}}}
       * @var string
       */
     protected $nome_estabelecimento;
     
     /**
-      * $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento
+      * $descricao_estabelecimento {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
       * @var string
       */
     protected $descricao_estabelecimento;
     
     /**
-      * $nome_fantasia_estabelecimento Nome fantasia do estabelecimento
+      * $nome_fantasia_estabelecimento {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
       * @var string
       */
     protected $nome_fantasia_estabelecimento;
     
     /**
-      * $flag_credito Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
+      * $flag_credito {{{lancamento_fatura_response_flag_credito_value}}}
       * @var bool
       */
     protected $flag_credito;
     
     /**
-      * $id_mcc C\u00F3digo identificador do MCC (Merchant Category Codes)
+      * $id_mcc {{{lancamento_fatura_response_id_m_c_c_value}}}
       * @var int
       */
     protected $id_mcc;
     
     /**
-      * $id_grupo_mcc C\u00F3digo identificador do grupo MCC
+      * $id_grupo_mcc {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $descricao_grupo_mcc Descri\u00E7\u00E3o do grupo MCC
+      * $descricao_grupo_mcc {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
       * @var string
       */
     protected $descricao_grupo_mcc;
     
     /**
-      * $titular Indica se o portador do cart\u00E3o \u00E9 o titular da conta
+      * $titular {{{lancamento_fatura_response_titular_value}}}
       * @var bool
       */
     protected $titular;
     
     /**
-      * $nome_portador Nome impresso no cart\u00E3o
+      * $nome_portador {{{lancamento_fatura_response_nome_portador_value}}}
       * @var string
       */
     protected $nome_portador;
     
     /**
-      * $numero_cartao_mascarado N\u00FAmero do cart\u00E3o mascarado
+      * $numero_cartao_mascarado {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
       * @var string
       */
     protected $numero_cartao_mascarado;
     
     /**
-      * $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
+      * $flag_solicitou_contestacao {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
       * @var bool
       */
     protected $flag_solicitou_contestacao;
     
     /**
-      * $valor_taxa_embarque Valor da taxa de embarque
+      * $valor_taxa_embarque {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
       * @var Number
       */
     protected $valor_taxa_embarque;
     
     /**
-      * $descricao_abreviada Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
+      * $descricao_abreviada {{{lancamento_fatura_response_descricao_abreviada_value}}}
       * @var string
       */
     protected $descricao_abreviada;
@@ -389,7 +389,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+     * @param int $id_transacao {{{lancamento_fatura_response_id_transacao_value}}}
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -410,7 +410,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_transacao
-     * @param string $descricao_tipo_transacao Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
+     * @param string $descricao_tipo_transacao {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
      * @return $this
      */
     public function setDescricaoTipoTransacao($descricao_tipo_transacao)
@@ -431,7 +431,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_evento
-     * @param int $id_tipo_evento C\u00F3digo identificador do tipo do evento
+     * @param int $id_tipo_evento {{{lancamento_fatura_response_id_tipo_evento_value}}}
      * @return $this
      */
     public function setIdTipoEvento($id_tipo_evento)
@@ -452,7 +452,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_evento
-     * @param string $descricao_tipo_evento Descri\u00E7\u00E3o do tipo do evento
+     * @param string $descricao_tipo_evento {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
      * @return $this
      */
     public function setDescricaoTipoEvento($descricao_tipo_evento)
@@ -473,7 +473,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_evento
-     * @param int $id_evento C\u00F3digo identificador do evento
+     * @param int $id_evento {{{lancamento_fatura_response_id_evento_value}}}
      * @return $this
      */
     public function setIdEvento($id_evento)
@@ -494,7 +494,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+     * @param int $id_conta {{{lancamento_fatura_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -515,7 +515,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Descri\u00E7\u00E3o complementar do evento
+     * @param string $complemento {{{lancamento_fatura_response_complemento_value}}}
      * @return $this
      */
     public function setComplemento($complemento)
@@ -536,7 +536,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets valor_brl
-     * @param Number $valor_brl Valor em reais
+     * @param Number $valor_brl {{{lancamento_fatura_response_valor_b_r_l_value}}}
      * @return $this
      */
     public function setValorBrl($valor_brl)
@@ -557,7 +557,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets valor_usd
-     * @param Number $valor_usd Valor em dolar
+     * @param Number $valor_usd {{{lancamento_fatura_response_valor_u_s_d_value}}}
      * @return $this
      */
     public function setValorUsd($valor_usd)
@@ -578,7 +578,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets numero_parcela
-     * @param int $numero_parcela N\u00FAmero da parcela
+     * @param int $numero_parcela {{{lancamento_fatura_response_numero_parcela_value}}}
      * @return $this
      */
     public function setNumeroParcela($numero_parcela)
@@ -599,7 +599,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Quantidade de parcelas
+     * @param int $quantidade_parcelas {{{lancamento_fatura_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -620,7 +620,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets data_hora_transacao
-     * @param string $data_hora_transacao Data da transa\u00E7\u00E3o
+     * @param string $data_hora_transacao {{{lancamento_fatura_response_data_hora_transacao_value}}}
      * @return $this
      */
     public function setDataHoraTransacao($data_hora_transacao)
@@ -641,7 +641,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do estabelecimento
+     * @param string $nome_estabelecimento {{{lancamento_fatura_response_nome_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeEstabelecimento($nome_estabelecimento)
@@ -662,7 +662,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_estabelecimento
-     * @param string $descricao_estabelecimento Descri\u00E7\u00E3o do estabelecimento
+     * @param string $descricao_estabelecimento {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
      * @return $this
      */
     public function setDescricaoEstabelecimento($descricao_estabelecimento)
@@ -683,7 +683,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets nome_fantasia_estabelecimento
-     * @param string $nome_fantasia_estabelecimento Nome fantasia do estabelecimento
+     * @param string $nome_fantasia_estabelecimento {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
      * @return $this
      */
     public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
@@ -704,7 +704,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets flag_credito
-     * @param bool $flag_credito Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
+     * @param bool $flag_credito {{{lancamento_fatura_response_flag_credito_value}}}
      * @return $this
      */
     public function setFlagCredito($flag_credito)
@@ -725,7 +725,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_mcc
-     * @param int $id_mcc C\u00F3digo identificador do MCC (Merchant Category Codes)
+     * @param int $id_mcc {{{lancamento_fatura_response_id_m_c_c_value}}}
      * @return $this
      */
     public function setIdMcc($id_mcc)
@@ -746,7 +746,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc C\u00F3digo identificador do grupo MCC
+     * @param int $id_grupo_mcc {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -767,7 +767,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_grupo_mcc
-     * @param string $descricao_grupo_mcc Descri\u00E7\u00E3o do grupo MCC
+     * @param string $descricao_grupo_mcc {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setDescricaoGrupoMcc($descricao_grupo_mcc)
@@ -788,7 +788,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets titular
-     * @param bool $titular Indica se o portador do cart\u00E3o \u00E9 o titular da conta
+     * @param bool $titular {{{lancamento_fatura_response_titular_value}}}
      * @return $this
      */
     public function setTitular($titular)
@@ -809,7 +809,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets nome_portador
-     * @param string $nome_portador Nome impresso no cart\u00E3o
+     * @param string $nome_portador {{{lancamento_fatura_response_nome_portador_value}}}
      * @return $this
      */
     public function setNomePortador($nome_portador)
@@ -830,7 +830,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets numero_cartao_mascarado
-     * @param string $numero_cartao_mascarado N\u00FAmero do cart\u00E3o mascarado
+     * @param string $numero_cartao_mascarado {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
      * @return $this
      */
     public function setNumeroCartaoMascarado($numero_cartao_mascarado)
@@ -851,7 +851,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets flag_solicitou_contestacao
-     * @param bool $flag_solicitou_contestacao Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
+     * @param bool $flag_solicitou_contestacao {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
      * @return $this
      */
     public function setFlagSolicitouContestacao($flag_solicitou_contestacao)
@@ -872,7 +872,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets valor_taxa_embarque
-     * @param Number $valor_taxa_embarque Valor da taxa de embarque
+     * @param Number $valor_taxa_embarque {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
      * @return $this
      */
     public function setValorTaxaEmbarque($valor_taxa_embarque)
@@ -893,7 +893,7 @@ class LancamentoFaturaResponse implements ArrayAccess
   
     /**
      * Sets descricao_abreviada
-     * @param string $descricao_abreviada Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
+     * @param string $descricao_abreviada {{{lancamento_fatura_response_descricao_abreviada_value}}}
      * @return $this
      */
     public function setDescricaoAbreviada($descricao_abreviada)

@@ -3,28 +3,29 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**razao_social** | **string** | Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;. | 
-**nome_fantasia** | **string** | Apresenta o nome fantasia da empresa. | [optional] 
-**cnpj** | **string** | N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ) | 
-**inscricao_estadual** | **string** | N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE). | [optional] 
-**data_abertura_empresa** | **string** | Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd. | 
-**id_origem_comercial** | **int** | Id da origem comercial | 
-**id_produto** | **int** | Id do produto | 
-**numero_agencia** | **int** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numero_conta_corrente** | **string** | N\u00FAmero da conta corrente. | [optional] 
-**email** | **string** | Email da empresa | [optional] 
-**dia_vencimento** | **int** | Dia vencimento | 
-**nome_impresso** | **string** | Nome que deve ser impresso no cart\u00E3o | [optional] 
-**valor_renda** | [**Number**](Number.md) | Apresenta o valor da renda compravada | [optional] 
-**canal_entrada** | **string** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
-**valor_pontuacao** | **int** | Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0) | [optional] 
-**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersist[]**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
-**enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersist[]**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros | 
-**socios** | [**\br.com.conductor.pier.api.v2.model\PessoaPersist[]**](PessoaPersist.md) | Apresenta os dados dos s\u00F3cios da empresa, caso exista | [optional] 
-**referencias_comerciais** | [**\br.com.conductor.pier.api.v2.model\RefenciaComercialAprovadoPersist[]**](RefenciaComercialAprovadoPersist.md) | Apresenta os dados das refer\u00EAncias comerciais | [optional] 
-**limite_global** | [**Number**](Number.md) | Valor do Limite Global | 
-**limite_maximo** | [**Number**](Number.md) | Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es | 
-**limite_parcelas** | [**Number**](Number.md) | Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras | 
+**razao_social** | **string** | {{{pessoa_juridica_aprovada_persist_razao_social_value}}} | 
+**nome_fantasia** | **string** | {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}} | [optional] 
+**cnpj** | **string** | {{{pessoa_juridica_aprovada_persist_cnpj_value}}} | 
+**inscricao_estadual** | **string** | {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}} | [optional] 
+**data_abertura_empresa** | **string** | {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}} | 
+**id_origem_comercial** | **int** | {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}} | 
+**id_produto** | **int** | {{{pessoa_juridica_aprovada_persist_id_produto_value}}} | 
+**numero_banco** | **int** | {{{pessoa_juridica_aprovada_persist_numero_banco_value}}} | [optional] 
+**numero_agencia** | **int** | {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}} | [optional] 
+**numero_conta_corrente** | **string** | {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}} | [optional] 
+**email** | **string** | {{{pessoa_juridica_aprovada_persist_email_value}}} | [optional] 
+**dia_vencimento** | **int** | {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}} | 
+**nome_impresso** | **string** | {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}} | [optional] 
+**valor_renda** | [**Number**](Number.md) | {{{pessoa_juridica_aprovada_persist_valor_renda_value}}} | [optional] 
+**canal_entrada** | **string** | {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}} | [optional] 
+**valor_pontuacao** | **int** | {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}} | [optional] 
+**telefones** | [**\br.com.conductor.pier.api.v2.model\TelefonePessoaAprovadaPersistValue_[]**](TelefonePessoaAprovadaPersistValue_.md) | {{{pessoa_juridica_aprovada_persist_telefones_value}}} | [optional] 
+**enderecos** | [**\br.com.conductor.pier.api.v2.model\EnderecoAprovadoPersistValue_[]**](EnderecoAprovadoPersistValue_.md) | {{{pessoa_juridica_aprovada_persist_enderecos_value}}} | 
+**socios** | [**\br.com.conductor.pier.api.v2.model\SocioAprovadoPersistValue_[]**](SocioAprovadoPersistValue_.md) | {{{pessoa_juridica_aprovada_persist_socios_value}}} | [optional] 
+**referencias_comerciais** | [**\br.com.conductor.pier.api.v2.model\ReferenciaComercialAprovadoPersistValue_[]**](ReferenciaComercialAprovadoPersistValue_.md) | {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}} | [optional] 
+**limite_global** | [**Number**](Number.md) | {{{pessoa_juridica_aprovada_persist_limite_global_value}}} | 
+**limite_maximo** | [**Number**](Number.md) | {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}} | 
+**limite_parcelas** | [**Number**](Number.md) | {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

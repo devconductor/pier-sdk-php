@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlataformaMobileResponse Class Doc Comment
  *
  * @category    Class
- * @description Plataforma Mobile
+ * @description {{{plataforma_mobile_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class PlataformaMobileResponse implements ArrayAccess
 
     
     /**
-      * $id Identificador da Plataforma
+      * $id {{{plataforma_mobile_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $nome Nome da Plataforma
+      * $nome {{{plataforma_mobile_response_nome_value}}}
       * @var string
       */
     protected $nome;
@@ -136,7 +136,7 @@ class PlataformaMobileResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id Identificador da Plataforma
+     * @param int $id {{{plataforma_mobile_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -157,7 +157,7 @@ class PlataformaMobileResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome da Plataforma
+     * @param string $nome {{{plataforma_mobile_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)

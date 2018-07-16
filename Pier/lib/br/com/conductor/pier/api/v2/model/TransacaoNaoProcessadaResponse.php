@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoNaoProcessadaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto transacao N\u00E3o Processada
+ * @description {{{transacao_nao_processada_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,42 +51,41 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'id_tipo_transacao_nao_processada' => 'int',
-        'descricao_tipo_transacao_nao_processada' => 'string',
-        'descricao_abreviada' => 'string',
-        'id_conta' => 'int',
         'cartao_mascarado' => 'string',
-        'nome_portador' => 'string',
-        'data_origem' => 'string',
-        'data_faturamento' => 'string',
-        'data_vencimento' => 'string',
-        'modo_entrada_transacao' => 'string',
-        'valor_taxa_embarque' => 'Number',
-        'valor_entrada' => 'Number',
-        'valor_brl' => 'Number',
-        'valor_usd' => 'Number',
-        'cotacao_usd' => 'Number',
-        'data_cotacao_usd' => 'string',
-        'codigo_moeda_origem' => 'string',
-        'codigo_moeda_destino' => 'string',
         'codigo_autorizacao' => 'string',
+        'codigo_mcc' => 'int',
+        'codigo_moeda_destino' => 'string',
+        'codigo_moeda_origem' => 'string',
         'codigo_referencia' => 'string',
         'codigo_terminal' => 'string',
-        'codigo_mcc' => 'int',
-        'grupo_mcc' => 'int',
-        'grupo_descricao_mcc' => 'string',
-        'id_estabelecimento' => 'int',
-        'nome_estabelecimento' => 'string',
-        'nome_fantasia_estabelecimento' => 'string',
-        'localidade_estabelecimento' => 'string',
-        'plano_parcelamento' => 'int',
-        'numero_parcela' => 'int',
+        'cotacao_usd' => 'Number',
+        'data_cotacao_usd' => 'string',
+        'data_faturamento' => 'string',
+        'data_origem' => 'string',
+        'data_vencimento_real' => 'string',
+        'descricao_abreviada' => 'string',
+        'descricao_tipo_transacao_nao_processada' => 'string',
         'detalhes_transacao' => 'string',
         'flag_credito' => 'int',
         'flag_faturado' => 'int',
-        'flag_estorno' => 'int',
+        'grupo_descricao_mcc' => 'string',
+        'grupo_mcc' => 'int',
+        'id_conta' => 'int',
+        'id_estabelecimento' => 'int',
+        'id_tipo_transacao_nao_processada' => 'int',
         'id_transacao_estorno' => 'int',
-        'status' => 'int'
+        'localidade_estabelecimento' => 'string',
+        'modo_entrada_transacao' => 'string',
+        'nome_estabelecimento' => 'string',
+        'nome_fantasia_estabelecimento' => 'string',
+        'nome_portador' => 'string',
+        'parcela' => 'int',
+        'plano' => 'int',
+        'status' => 'int',
+        'taxa_embarque' => 'Number',
+        'valor_brl' => 'Number',
+        'valor_entrada' => 'Number',
+        'valor_usd' => 'Number'
     );
   
     static function swaggerTypes() {
@@ -98,42 +97,41 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'id_tipo_transacao_nao_processada' => 'idTipoTransacaoNaoProcessada',
-        'descricao_tipo_transacao_nao_processada' => 'descricaoTipoTransacaoNaoProcessada',
-        'descricao_abreviada' => 'descricaoAbreviada',
-        'id_conta' => 'idConta',
         'cartao_mascarado' => 'cartaoMascarado',
-        'nome_portador' => 'nomePortador',
-        'data_origem' => 'dataOrigem',
-        'data_faturamento' => 'dataFaturamento',
-        'data_vencimento' => 'dataVencimento',
-        'modo_entrada_transacao' => 'modoEntradaTransacao',
-        'valor_taxa_embarque' => 'valorTaxaEmbarque',
-        'valor_entrada' => 'valorEntrada',
-        'valor_brl' => 'valorBRL',
-        'valor_usd' => 'valorUSD',
-        'cotacao_usd' => 'cotacaoUSD',
-        'data_cotacao_usd' => 'dataCotacaoUSD',
-        'codigo_moeda_origem' => 'codigoMoedaOrigem',
-        'codigo_moeda_destino' => 'codigoMoedaDestino',
         'codigo_autorizacao' => 'codigoAutorizacao',
+        'codigo_mcc' => 'codigoMCC',
+        'codigo_moeda_destino' => 'codigoMoedaDestino',
+        'codigo_moeda_origem' => 'codigoMoedaOrigem',
         'codigo_referencia' => 'codigoReferencia',
         'codigo_terminal' => 'codigoTerminal',
-        'codigo_mcc' => 'codigoMCC',
-        'grupo_mcc' => 'grupoMCC',
-        'grupo_descricao_mcc' => 'grupoDescricaoMCC',
-        'id_estabelecimento' => 'idEstabelecimento',
-        'nome_estabelecimento' => 'nomeEstabelecimento',
-        'nome_fantasia_estabelecimento' => 'nomeFantasiaEstabelecimento',
-        'localidade_estabelecimento' => 'localidadeEstabelecimento',
-        'plano_parcelamento' => 'planoParcelamento',
-        'numero_parcela' => 'numeroParcela',
+        'cotacao_usd' => 'cotacaoUSD',
+        'data_cotacao_usd' => 'dataCotacaoUSD',
+        'data_faturamento' => 'dataFaturamento',
+        'data_origem' => 'dataOrigem',
+        'data_vencimento_real' => 'dataVencimentoReal',
+        'descricao_abreviada' => 'descricaoAbreviada',
+        'descricao_tipo_transacao_nao_processada' => 'descricaoTipoTransacaoNaoProcessada',
         'detalhes_transacao' => 'detalhesTransacao',
         'flag_credito' => 'flagCredito',
         'flag_faturado' => 'flagFaturado',
-        'flag_estorno' => 'flagEstorno',
+        'grupo_descricao_mcc' => 'grupoDescricaoMCC',
+        'grupo_mcc' => 'grupoMCC',
+        'id_conta' => 'idConta',
+        'id_estabelecimento' => 'idEstabelecimento',
+        'id_tipo_transacao_nao_processada' => 'idTipoTransacaoNaoProcessada',
         'id_transacao_estorno' => 'idTransacaoEstorno',
-        'status' => 'status'
+        'localidade_estabelecimento' => 'localidadeEstabelecimento',
+        'modo_entrada_transacao' => 'modoEntradaTransacao',
+        'nome_estabelecimento' => 'nomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'nomeFantasiaEstabelecimento',
+        'nome_portador' => 'nomePortador',
+        'parcela' => 'parcela',
+        'plano' => 'plano',
+        'status' => 'status',
+        'taxa_embarque' => 'taxaEmbarque',
+        'valor_brl' => 'valorBRL',
+        'valor_entrada' => 'valorEntrada',
+        'valor_usd' => 'valorUSD'
     );
   
     static function attributeMap() {
@@ -145,42 +143,41 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'id_tipo_transacao_nao_processada' => 'setIdTipoTransacaoNaoProcessada',
-        'descricao_tipo_transacao_nao_processada' => 'setDescricaoTipoTransacaoNaoProcessada',
-        'descricao_abreviada' => 'setDescricaoAbreviada',
-        'id_conta' => 'setIdConta',
         'cartao_mascarado' => 'setCartaoMascarado',
-        'nome_portador' => 'setNomePortador',
-        'data_origem' => 'setDataOrigem',
-        'data_faturamento' => 'setDataFaturamento',
-        'data_vencimento' => 'setDataVencimento',
-        'modo_entrada_transacao' => 'setModoEntradaTransacao',
-        'valor_taxa_embarque' => 'setValorTaxaEmbarque',
-        'valor_entrada' => 'setValorEntrada',
-        'valor_brl' => 'setValorBrl',
-        'valor_usd' => 'setValorUsd',
-        'cotacao_usd' => 'setCotacaoUsd',
-        'data_cotacao_usd' => 'setDataCotacaoUsd',
-        'codigo_moeda_origem' => 'setCodigoMoedaOrigem',
-        'codigo_moeda_destino' => 'setCodigoMoedaDestino',
         'codigo_autorizacao' => 'setCodigoAutorizacao',
+        'codigo_mcc' => 'setCodigoMcc',
+        'codigo_moeda_destino' => 'setCodigoMoedaDestino',
+        'codigo_moeda_origem' => 'setCodigoMoedaOrigem',
         'codigo_referencia' => 'setCodigoReferencia',
         'codigo_terminal' => 'setCodigoTerminal',
-        'codigo_mcc' => 'setCodigoMcc',
-        'grupo_mcc' => 'setGrupoMcc',
-        'grupo_descricao_mcc' => 'setGrupoDescricaoMcc',
-        'id_estabelecimento' => 'setIdEstabelecimento',
-        'nome_estabelecimento' => 'setNomeEstabelecimento',
-        'nome_fantasia_estabelecimento' => 'setNomeFantasiaEstabelecimento',
-        'localidade_estabelecimento' => 'setLocalidadeEstabelecimento',
-        'plano_parcelamento' => 'setPlanoParcelamento',
-        'numero_parcela' => 'setNumeroParcela',
+        'cotacao_usd' => 'setCotacaoUsd',
+        'data_cotacao_usd' => 'setDataCotacaoUsd',
+        'data_faturamento' => 'setDataFaturamento',
+        'data_origem' => 'setDataOrigem',
+        'data_vencimento_real' => 'setDataVencimentoReal',
+        'descricao_abreviada' => 'setDescricaoAbreviada',
+        'descricao_tipo_transacao_nao_processada' => 'setDescricaoTipoTransacaoNaoProcessada',
         'detalhes_transacao' => 'setDetalhesTransacao',
         'flag_credito' => 'setFlagCredito',
         'flag_faturado' => 'setFlagFaturado',
-        'flag_estorno' => 'setFlagEstorno',
+        'grupo_descricao_mcc' => 'setGrupoDescricaoMcc',
+        'grupo_mcc' => 'setGrupoMcc',
+        'id_conta' => 'setIdConta',
+        'id_estabelecimento' => 'setIdEstabelecimento',
+        'id_tipo_transacao_nao_processada' => 'setIdTipoTransacaoNaoProcessada',
         'id_transacao_estorno' => 'setIdTransacaoEstorno',
-        'status' => 'setStatus'
+        'localidade_estabelecimento' => 'setLocalidadeEstabelecimento',
+        'modo_entrada_transacao' => 'setModoEntradaTransacao',
+        'nome_estabelecimento' => 'setNomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'setNomeFantasiaEstabelecimento',
+        'nome_portador' => 'setNomePortador',
+        'parcela' => 'setParcela',
+        'plano' => 'setPlano',
+        'status' => 'setStatus',
+        'taxa_embarque' => 'setTaxaEmbarque',
+        'valor_brl' => 'setValorBrl',
+        'valor_entrada' => 'setValorEntrada',
+        'valor_usd' => 'setValorUsd'
     );
   
     static function setters() {
@@ -192,42 +189,41 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'id_tipo_transacao_nao_processada' => 'getIdTipoTransacaoNaoProcessada',
-        'descricao_tipo_transacao_nao_processada' => 'getDescricaoTipoTransacaoNaoProcessada',
-        'descricao_abreviada' => 'getDescricaoAbreviada',
-        'id_conta' => 'getIdConta',
         'cartao_mascarado' => 'getCartaoMascarado',
-        'nome_portador' => 'getNomePortador',
-        'data_origem' => 'getDataOrigem',
-        'data_faturamento' => 'getDataFaturamento',
-        'data_vencimento' => 'getDataVencimento',
-        'modo_entrada_transacao' => 'getModoEntradaTransacao',
-        'valor_taxa_embarque' => 'getValorTaxaEmbarque',
-        'valor_entrada' => 'getValorEntrada',
-        'valor_brl' => 'getValorBrl',
-        'valor_usd' => 'getValorUsd',
-        'cotacao_usd' => 'getCotacaoUsd',
-        'data_cotacao_usd' => 'getDataCotacaoUsd',
-        'codigo_moeda_origem' => 'getCodigoMoedaOrigem',
-        'codigo_moeda_destino' => 'getCodigoMoedaDestino',
         'codigo_autorizacao' => 'getCodigoAutorizacao',
+        'codigo_mcc' => 'getCodigoMcc',
+        'codigo_moeda_destino' => 'getCodigoMoedaDestino',
+        'codigo_moeda_origem' => 'getCodigoMoedaOrigem',
         'codigo_referencia' => 'getCodigoReferencia',
         'codigo_terminal' => 'getCodigoTerminal',
-        'codigo_mcc' => 'getCodigoMcc',
-        'grupo_mcc' => 'getGrupoMcc',
-        'grupo_descricao_mcc' => 'getGrupoDescricaoMcc',
-        'id_estabelecimento' => 'getIdEstabelecimento',
-        'nome_estabelecimento' => 'getNomeEstabelecimento',
-        'nome_fantasia_estabelecimento' => 'getNomeFantasiaEstabelecimento',
-        'localidade_estabelecimento' => 'getLocalidadeEstabelecimento',
-        'plano_parcelamento' => 'getPlanoParcelamento',
-        'numero_parcela' => 'getNumeroParcela',
+        'cotacao_usd' => 'getCotacaoUsd',
+        'data_cotacao_usd' => 'getDataCotacaoUsd',
+        'data_faturamento' => 'getDataFaturamento',
+        'data_origem' => 'getDataOrigem',
+        'data_vencimento_real' => 'getDataVencimentoReal',
+        'descricao_abreviada' => 'getDescricaoAbreviada',
+        'descricao_tipo_transacao_nao_processada' => 'getDescricaoTipoTransacaoNaoProcessada',
         'detalhes_transacao' => 'getDetalhesTransacao',
         'flag_credito' => 'getFlagCredito',
         'flag_faturado' => 'getFlagFaturado',
-        'flag_estorno' => 'getFlagEstorno',
+        'grupo_descricao_mcc' => 'getGrupoDescricaoMcc',
+        'grupo_mcc' => 'getGrupoMcc',
+        'id_conta' => 'getIdConta',
+        'id_estabelecimento' => 'getIdEstabelecimento',
+        'id_tipo_transacao_nao_processada' => 'getIdTipoTransacaoNaoProcessada',
         'id_transacao_estorno' => 'getIdTransacaoEstorno',
-        'status' => 'getStatus'
+        'localidade_estabelecimento' => 'getLocalidadeEstabelecimento',
+        'modo_entrada_transacao' => 'getModoEntradaTransacao',
+        'nome_estabelecimento' => 'getNomeEstabelecimento',
+        'nome_fantasia_estabelecimento' => 'getNomeFantasiaEstabelecimento',
+        'nome_portador' => 'getNomePortador',
+        'parcela' => 'getParcela',
+        'plano' => 'getPlano',
+        'status' => 'getStatus',
+        'taxa_embarque' => 'getTaxaEmbarque',
+        'valor_brl' => 'getValorBrl',
+        'valor_entrada' => 'getValorEntrada',
+        'valor_usd' => 'getValorUsd'
     );
   
     static function getters() {
@@ -236,220 +232,214 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
 
     
     /**
-      * $id_tipo_transacao_nao_processada C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
-      * @var int
-      */
-    protected $id_tipo_transacao_nao_processada;
-    
-    /**
-      * $descricao_tipo_transacao_nao_processada Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
-      * @var string
-      */
-    protected $descricao_tipo_transacao_nao_processada;
-    
-    /**
-      * $descricao_abreviada Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
-      * @var string
-      */
-    protected $descricao_abreviada;
-    
-    /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
-      * @var int
-      */
-    protected $id_conta;
-    
-    /**
-      * $cartao_mascarado N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+      * $cartao_mascarado {{{transacao_nao_processada_response_cartao_mascarado_value}}}
       * @var string
       */
     protected $cartao_mascarado;
     
     /**
-      * $nome_portador Nome completo do Portador do Cart\u00E3o.
-      * @var string
-      */
-    protected $nome_portador;
-    
-    /**
-      * $data_origem Data em que a Transa\u00E7\u00E3o foi realizada.
-      * @var string
-      */
-    protected $data_origem;
-    
-    /**
-      * $data_faturamento Data de Faturamento da Transa\u00E7\u00E3o.
-      * @var string
-      */
-    protected $data_faturamento;
-    
-    /**
-      * $data_vencimento Data de Vencimento da Fatura.
-      * @var string
-      */
-    protected $data_vencimento;
-    
-    /**
-      * $modo_entrada_transacao Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
-      * @var string
-      */
-    protected $modo_entrada_transacao;
-    
-    /**
-      * $valor_taxa_embarque Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
-      * @var Number
-      */
-    protected $valor_taxa_embarque;
-    
-    /**
-      * $valor_entrada Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
-      * @var Number
-      */
-    protected $valor_entrada;
-    
-    /**
-      * $valor_brl Valor da Transa\u00E7\u00E3o em Real (BRL).
-      * @var Number
-      */
-    protected $valor_brl;
-    
-    /**
-      * $valor_usd Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
-      * @var Number
-      */
-    protected $valor_usd;
-    
-    /**
-      * $cotacao_usd Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
-      * @var Number
-      */
-    protected $cotacao_usd;
-    
-    /**
-      * $data_cotacao_usd Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
-      * @var string
-      */
-    protected $data_cotacao_usd;
-    
-    /**
-      * $codigo_moeda_origem C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
-      * @var string
-      */
-    protected $codigo_moeda_origem;
-    
-    /**
-      * $codigo_moeda_destino C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
-      * @var string
-      */
-    protected $codigo_moeda_destino;
-    
-    /**
-      * $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+      * $codigo_autorizacao {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
       * @var string
       */
     protected $codigo_autorizacao;
     
     /**
-      * $codigo_referencia C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
-      * @var string
-      */
-    protected $codigo_referencia;
-    
-    /**
-      * $codigo_terminal C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
-      * @var string
-      */
-    protected $codigo_terminal;
-    
-    /**
-      * $codigo_mcc C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+      * $codigo_mcc {{{transacao_nao_processada_response_codigo_mcc_value}}}
       * @var int
       */
     protected $codigo_mcc;
     
     /**
-      * $grupo_mcc C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
-      * @var int
-      */
-    protected $grupo_mcc;
-    
-    /**
-      * $grupo_descricao_mcc Descri\u00E7\u00E3o do grupo do Estabelecimento.
+      * $codigo_moeda_destino {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
       * @var string
       */
-    protected $grupo_descricao_mcc;
+    protected $codigo_moeda_destino;
     
     /**
-      * $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
-      * @var int
-      */
-    protected $id_estabelecimento;
-    
-    /**
-      * $nome_estabelecimento Nome do Estabelecimento.
+      * $codigo_moeda_origem {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
       * @var string
       */
-    protected $nome_estabelecimento;
+    protected $codigo_moeda_origem;
     
     /**
-      * $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+      * $codigo_referencia {{{transacao_nao_processada_response_codigo_referencia_value}}}
       * @var string
       */
-    protected $nome_fantasia_estabelecimento;
+    protected $codigo_referencia;
     
     /**
-      * $localidade_estabelecimento Localidade do Estabelecimento.
+      * $codigo_terminal {{{transacao_nao_processada_response_codigo_terminal_value}}}
       * @var string
       */
-    protected $localidade_estabelecimento;
+    protected $codigo_terminal;
     
     /**
-      * $plano_parcelamento Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
-      * @var int
+      * $cotacao_usd {{{transacao_nao_processada_response_cotacao_usd_value}}}
+      * @var Number
       */
-    protected $plano_parcelamento;
+    protected $cotacao_usd;
     
     /**
-      * $numero_parcela Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
-      * @var int
+      * $data_cotacao_usd {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
+      * @var string
       */
-    protected $numero_parcela;
+    protected $data_cotacao_usd;
     
     /**
-      * $detalhes_transacao Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+      * $data_faturamento {{{transacao_nao_processada_response_data_faturamento_value}}}
+      * @var string
+      */
+    protected $data_faturamento;
+    
+    /**
+      * $data_origem {{{transacao_nao_processada_response_data_origem_value}}}
+      * @var string
+      */
+    protected $data_origem;
+    
+    /**
+      * $data_vencimento_real {{{transacao_nao_processada_response_data_vencimento_value}}}
+      * @var string
+      */
+    protected $data_vencimento_real;
+    
+    /**
+      * $descricao_abreviada {{{transacao_nao_processada_response_descricao_abreviada_value}}}
+      * @var string
+      */
+    protected $descricao_abreviada;
+    
+    /**
+      * $descricao_tipo_transacao_nao_processada {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
+      * @var string
+      */
+    protected $descricao_tipo_transacao_nao_processada;
+    
+    /**
+      * $detalhes_transacao {{{transacao_nao_processada_response_detalhes_transacao_value}}}
       * @var string
       */
     protected $detalhes_transacao;
     
     /**
-      * $flag_credito Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+      * $flag_credito {{{transacao_nao_processada_response_flag_credito_value}}}
       * @var int
       */
     protected $flag_credito;
     
     /**
-      * $flag_faturado Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+      * $flag_faturado {{{transacao_nao_processada_response_flag_faturado_value}}}
       * @var int
       */
     protected $flag_faturado;
     
     /**
-      * $flag_estorno Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
-      * @var int
+      * $grupo_descricao_mcc {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
+      * @var string
       */
-    protected $flag_estorno;
+    protected $grupo_descricao_mcc;
     
     /**
-      * $id_transacao_estorno C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+      * $grupo_mcc {{{transacao_nao_processada_response_grupo_mcc_value}}}
+      * @var int
+      */
+    protected $grupo_mcc;
+    
+    /**
+      * $id_conta {{{transacao_nao_processada_response_id_conta_value}}}
+      * @var int
+      */
+    protected $id_conta;
+    
+    /**
+      * $id_estabelecimento {{{transacao_nao_processada_response_id_estabelecimento_value}}}
+      * @var int
+      */
+    protected $id_estabelecimento;
+    
+    /**
+      * $id_tipo_transacao_nao_processada {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
+      * @var int
+      */
+    protected $id_tipo_transacao_nao_processada;
+    
+    /**
+      * $id_transacao_estorno {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
       * @var int
       */
     protected $id_transacao_estorno;
     
     /**
-      * $status Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+      * $localidade_estabelecimento {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
+      * @var string
+      */
+    protected $localidade_estabelecimento;
+    
+    /**
+      * $modo_entrada_transacao {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
+      * @var string
+      */
+    protected $modo_entrada_transacao;
+    
+    /**
+      * $nome_estabelecimento {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
+      * @var string
+      */
+    protected $nome_estabelecimento;
+    
+    /**
+      * $nome_fantasia_estabelecimento {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
+      * @var string
+      */
+    protected $nome_fantasia_estabelecimento;
+    
+    /**
+      * $nome_portador {{{transacao_nao_processada_response_nome_portador_value}}}
+      * @var string
+      */
+    protected $nome_portador;
+    
+    /**
+      * $parcela {{{transacao_nao_processada_response_numero_parcela_value}}}
+      * @var int
+      */
+    protected $parcela;
+    
+    /**
+      * $plano {{{transacao_nao_processada_response_plano_parcelamento_value}}}
+      * @var int
+      */
+    protected $plano;
+    
+    /**
+      * $status {{{transacao_nao_processada_response_status_value}}}
       * @var int
       */
     protected $status;
+    
+    /**
+      * $taxa_embarque {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
+      * @var Number
+      */
+    protected $taxa_embarque;
+    
+    /**
+      * $valor_brl {{{transacao_nao_processada_response_valor_brl_value}}}
+      * @var Number
+      */
+    protected $valor_brl;
+    
+    /**
+      * $valor_entrada {{{transacao_nao_processada_response_valor_entrada_value}}}
+      * @var Number
+      */
+    protected $valor_entrada;
+    
+    /**
+      * $valor_usd {{{transacao_nao_processada_response_valor_usd_value}}}
+      * @var Number
+      */
+    protected $valor_usd;
     
 
     /**
@@ -460,127 +450,42 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->id_tipo_transacao_nao_processada = $data["id_tipo_transacao_nao_processada"];
-            $this->descricao_tipo_transacao_nao_processada = $data["descricao_tipo_transacao_nao_processada"];
-            $this->descricao_abreviada = $data["descricao_abreviada"];
-            $this->id_conta = $data["id_conta"];
             $this->cartao_mascarado = $data["cartao_mascarado"];
-            $this->nome_portador = $data["nome_portador"];
-            $this->data_origem = $data["data_origem"];
-            $this->data_faturamento = $data["data_faturamento"];
-            $this->data_vencimento = $data["data_vencimento"];
-            $this->modo_entrada_transacao = $data["modo_entrada_transacao"];
-            $this->valor_taxa_embarque = $data["valor_taxa_embarque"];
-            $this->valor_entrada = $data["valor_entrada"];
-            $this->valor_brl = $data["valor_brl"];
-            $this->valor_usd = $data["valor_usd"];
-            $this->cotacao_usd = $data["cotacao_usd"];
-            $this->data_cotacao_usd = $data["data_cotacao_usd"];
-            $this->codigo_moeda_origem = $data["codigo_moeda_origem"];
-            $this->codigo_moeda_destino = $data["codigo_moeda_destino"];
             $this->codigo_autorizacao = $data["codigo_autorizacao"];
+            $this->codigo_mcc = $data["codigo_mcc"];
+            $this->codigo_moeda_destino = $data["codigo_moeda_destino"];
+            $this->codigo_moeda_origem = $data["codigo_moeda_origem"];
             $this->codigo_referencia = $data["codigo_referencia"];
             $this->codigo_terminal = $data["codigo_terminal"];
-            $this->codigo_mcc = $data["codigo_mcc"];
-            $this->grupo_mcc = $data["grupo_mcc"];
-            $this->grupo_descricao_mcc = $data["grupo_descricao_mcc"];
-            $this->id_estabelecimento = $data["id_estabelecimento"];
-            $this->nome_estabelecimento = $data["nome_estabelecimento"];
-            $this->nome_fantasia_estabelecimento = $data["nome_fantasia_estabelecimento"];
-            $this->localidade_estabelecimento = $data["localidade_estabelecimento"];
-            $this->plano_parcelamento = $data["plano_parcelamento"];
-            $this->numero_parcela = $data["numero_parcela"];
+            $this->cotacao_usd = $data["cotacao_usd"];
+            $this->data_cotacao_usd = $data["data_cotacao_usd"];
+            $this->data_faturamento = $data["data_faturamento"];
+            $this->data_origem = $data["data_origem"];
+            $this->data_vencimento_real = $data["data_vencimento_real"];
+            $this->descricao_abreviada = $data["descricao_abreviada"];
+            $this->descricao_tipo_transacao_nao_processada = $data["descricao_tipo_transacao_nao_processada"];
             $this->detalhes_transacao = $data["detalhes_transacao"];
             $this->flag_credito = $data["flag_credito"];
             $this->flag_faturado = $data["flag_faturado"];
-            $this->flag_estorno = $data["flag_estorno"];
+            $this->grupo_descricao_mcc = $data["grupo_descricao_mcc"];
+            $this->grupo_mcc = $data["grupo_mcc"];
+            $this->id_conta = $data["id_conta"];
+            $this->id_estabelecimento = $data["id_estabelecimento"];
+            $this->id_tipo_transacao_nao_processada = $data["id_tipo_transacao_nao_processada"];
             $this->id_transacao_estorno = $data["id_transacao_estorno"];
+            $this->localidade_estabelecimento = $data["localidade_estabelecimento"];
+            $this->modo_entrada_transacao = $data["modo_entrada_transacao"];
+            $this->nome_estabelecimento = $data["nome_estabelecimento"];
+            $this->nome_fantasia_estabelecimento = $data["nome_fantasia_estabelecimento"];
+            $this->nome_portador = $data["nome_portador"];
+            $this->parcela = $data["parcela"];
+            $this->plano = $data["plano"];
             $this->status = $data["status"];
+            $this->taxa_embarque = $data["taxa_embarque"];
+            $this->valor_brl = $data["valor_brl"];
+            $this->valor_entrada = $data["valor_entrada"];
+            $this->valor_usd = $data["valor_usd"];
         }
-    }
-    
-    /**
-     * Gets id_tipo_transacao_nao_processada
-     * @return int
-     */
-    public function getIdTipoTransacaoNaoProcessada()
-    {
-        return $this->id_tipo_transacao_nao_processada;
-    }
-  
-    /**
-     * Sets id_tipo_transacao_nao_processada
-     * @param int $id_tipo_transacao_nao_processada C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
-     * @return $this
-     */
-    public function setIdTipoTransacaoNaoProcessada($id_tipo_transacao_nao_processada)
-    {
-        
-        $this->id_tipo_transacao_nao_processada = $id_tipo_transacao_nao_processada;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_tipo_transacao_nao_processada
-     * @return string
-     */
-    public function getDescricaoTipoTransacaoNaoProcessada()
-    {
-        return $this->descricao_tipo_transacao_nao_processada;
-    }
-  
-    /**
-     * Sets descricao_tipo_transacao_nao_processada
-     * @param string $descricao_tipo_transacao_nao_processada Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
-     * @return $this
-     */
-    public function setDescricaoTipoTransacaoNaoProcessada($descricao_tipo_transacao_nao_processada)
-    {
-        
-        $this->descricao_tipo_transacao_nao_processada = $descricao_tipo_transacao_nao_processada;
-        return $this;
-    }
-    
-    /**
-     * Gets descricao_abreviada
-     * @return string
-     */
-    public function getDescricaoAbreviada()
-    {
-        return $this->descricao_abreviada;
-    }
-  
-    /**
-     * Sets descricao_abreviada
-     * @param string $descricao_abreviada Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
-     * @return $this
-     */
-    public function setDescricaoAbreviada($descricao_abreviada)
-    {
-        
-        $this->descricao_abreviada = $descricao_abreviada;
-        return $this;
-    }
-    
-    /**
-     * Gets id_conta
-     * @return int
-     */
-    public function getIdConta()
-    {
-        return $this->id_conta;
-    }
-  
-    /**
-     * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
-     * @return $this
-     */
-    public function setIdConta($id_conta)
-    {
-        
-        $this->id_conta = $id_conta;
-        return $this;
     }
     
     /**
@@ -594,286 +499,13 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets cartao_mascarado
-     * @param string $cartao_mascarado N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+     * @param string $cartao_mascarado {{{transacao_nao_processada_response_cartao_mascarado_value}}}
      * @return $this
      */
     public function setCartaoMascarado($cartao_mascarado)
     {
         
         $this->cartao_mascarado = $cartao_mascarado;
-        return $this;
-    }
-    
-    /**
-     * Gets nome_portador
-     * @return string
-     */
-    public function getNomePortador()
-    {
-        return $this->nome_portador;
-    }
-  
-    /**
-     * Sets nome_portador
-     * @param string $nome_portador Nome completo do Portador do Cart\u00E3o.
-     * @return $this
-     */
-    public function setNomePortador($nome_portador)
-    {
-        
-        $this->nome_portador = $nome_portador;
-        return $this;
-    }
-    
-    /**
-     * Gets data_origem
-     * @return string
-     */
-    public function getDataOrigem()
-    {
-        return $this->data_origem;
-    }
-  
-    /**
-     * Sets data_origem
-     * @param string $data_origem Data em que a Transa\u00E7\u00E3o foi realizada.
-     * @return $this
-     */
-    public function setDataOrigem($data_origem)
-    {
-        
-        $this->data_origem = $data_origem;
-        return $this;
-    }
-    
-    /**
-     * Gets data_faturamento
-     * @return string
-     */
-    public function getDataFaturamento()
-    {
-        return $this->data_faturamento;
-    }
-  
-    /**
-     * Sets data_faturamento
-     * @param string $data_faturamento Data de Faturamento da Transa\u00E7\u00E3o.
-     * @return $this
-     */
-    public function setDataFaturamento($data_faturamento)
-    {
-        
-        $this->data_faturamento = $data_faturamento;
-        return $this;
-    }
-    
-    /**
-     * Gets data_vencimento
-     * @return string
-     */
-    public function getDataVencimento()
-    {
-        return $this->data_vencimento;
-    }
-  
-    /**
-     * Sets data_vencimento
-     * @param string $data_vencimento Data de Vencimento da Fatura.
-     * @return $this
-     */
-    public function setDataVencimento($data_vencimento)
-    {
-        
-        $this->data_vencimento = $data_vencimento;
-        return $this;
-    }
-    
-    /**
-     * Gets modo_entrada_transacao
-     * @return string
-     */
-    public function getModoEntradaTransacao()
-    {
-        return $this->modo_entrada_transacao;
-    }
-  
-    /**
-     * Sets modo_entrada_transacao
-     * @param string $modo_entrada_transacao Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
-     * @return $this
-     */
-    public function setModoEntradaTransacao($modo_entrada_transacao)
-    {
-        
-        $this->modo_entrada_transacao = $modo_entrada_transacao;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_taxa_embarque
-     * @return Number
-     */
-    public function getValorTaxaEmbarque()
-    {
-        return $this->valor_taxa_embarque;
-    }
-  
-    /**
-     * Sets valor_taxa_embarque
-     * @param Number $valor_taxa_embarque Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
-     * @return $this
-     */
-    public function setValorTaxaEmbarque($valor_taxa_embarque)
-    {
-        
-        $this->valor_taxa_embarque = $valor_taxa_embarque;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_entrada
-     * @return Number
-     */
-    public function getValorEntrada()
-    {
-        return $this->valor_entrada;
-    }
-  
-    /**
-     * Sets valor_entrada
-     * @param Number $valor_entrada Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
-     * @return $this
-     */
-    public function setValorEntrada($valor_entrada)
-    {
-        
-        $this->valor_entrada = $valor_entrada;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_brl
-     * @return Number
-     */
-    public function getValorBrl()
-    {
-        return $this->valor_brl;
-    }
-  
-    /**
-     * Sets valor_brl
-     * @param Number $valor_brl Valor da Transa\u00E7\u00E3o em Real (BRL).
-     * @return $this
-     */
-    public function setValorBrl($valor_brl)
-    {
-        
-        $this->valor_brl = $valor_brl;
-        return $this;
-    }
-    
-    /**
-     * Gets valor_usd
-     * @return Number
-     */
-    public function getValorUsd()
-    {
-        return $this->valor_usd;
-    }
-  
-    /**
-     * Sets valor_usd
-     * @param Number $valor_usd Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
-     * @return $this
-     */
-    public function setValorUsd($valor_usd)
-    {
-        
-        $this->valor_usd = $valor_usd;
-        return $this;
-    }
-    
-    /**
-     * Gets cotacao_usd
-     * @return Number
-     */
-    public function getCotacaoUsd()
-    {
-        return $this->cotacao_usd;
-    }
-  
-    /**
-     * Sets cotacao_usd
-     * @param Number $cotacao_usd Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
-     * @return $this
-     */
-    public function setCotacaoUsd($cotacao_usd)
-    {
-        
-        $this->cotacao_usd = $cotacao_usd;
-        return $this;
-    }
-    
-    /**
-     * Gets data_cotacao_usd
-     * @return string
-     */
-    public function getDataCotacaoUsd()
-    {
-        return $this->data_cotacao_usd;
-    }
-  
-    /**
-     * Sets data_cotacao_usd
-     * @param string $data_cotacao_usd Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
-     * @return $this
-     */
-    public function setDataCotacaoUsd($data_cotacao_usd)
-    {
-        
-        $this->data_cotacao_usd = $data_cotacao_usd;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_moeda_origem
-     * @return string
-     */
-    public function getCodigoMoedaOrigem()
-    {
-        return $this->codigo_moeda_origem;
-    }
-  
-    /**
-     * Sets codigo_moeda_origem
-     * @param string $codigo_moeda_origem C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
-     * @return $this
-     */
-    public function setCodigoMoedaOrigem($codigo_moeda_origem)
-    {
-        
-        $this->codigo_moeda_origem = $codigo_moeda_origem;
-        return $this;
-    }
-    
-    /**
-     * Gets codigo_moeda_destino
-     * @return string
-     */
-    public function getCodigoMoedaDestino()
-    {
-        return $this->codigo_moeda_destino;
-    }
-  
-    /**
-     * Sets codigo_moeda_destino
-     * @param string $codigo_moeda_destino C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
-     * @return $this
-     */
-    public function setCodigoMoedaDestino($codigo_moeda_destino)
-    {
-        
-        $this->codigo_moeda_destino = $codigo_moeda_destino;
         return $this;
     }
     
@@ -888,13 +520,76 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets codigo_autorizacao
-     * @param string $codigo_autorizacao C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+     * @param string $codigo_autorizacao {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
      * @return $this
      */
     public function setCodigoAutorizacao($codigo_autorizacao)
     {
         
         $this->codigo_autorizacao = $codigo_autorizacao;
+        return $this;
+    }
+    
+    /**
+     * Gets codigo_mcc
+     * @return int
+     */
+    public function getCodigoMcc()
+    {
+        return $this->codigo_mcc;
+    }
+  
+    /**
+     * Sets codigo_mcc
+     * @param int $codigo_mcc {{{transacao_nao_processada_response_codigo_mcc_value}}}
+     * @return $this
+     */
+    public function setCodigoMcc($codigo_mcc)
+    {
+        
+        $this->codigo_mcc = $codigo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets codigo_moeda_destino
+     * @return string
+     */
+    public function getCodigoMoedaDestino()
+    {
+        return $this->codigo_moeda_destino;
+    }
+  
+    /**
+     * Sets codigo_moeda_destino
+     * @param string $codigo_moeda_destino {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
+     * @return $this
+     */
+    public function setCodigoMoedaDestino($codigo_moeda_destino)
+    {
+        
+        $this->codigo_moeda_destino = $codigo_moeda_destino;
+        return $this;
+    }
+    
+    /**
+     * Gets codigo_moeda_origem
+     * @return string
+     */
+    public function getCodigoMoedaOrigem()
+    {
+        return $this->codigo_moeda_origem;
+    }
+  
+    /**
+     * Sets codigo_moeda_origem
+     * @param string $codigo_moeda_origem {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
+     * @return $this
+     */
+    public function setCodigoMoedaOrigem($codigo_moeda_origem)
+    {
+        
+        $this->codigo_moeda_origem = $codigo_moeda_origem;
         return $this;
     }
     
@@ -909,7 +604,7 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets codigo_referencia
-     * @param string $codigo_referencia C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
+     * @param string $codigo_referencia {{{transacao_nao_processada_response_codigo_referencia_value}}}
      * @return $this
      */
     public function setCodigoReferencia($codigo_referencia)
@@ -930,7 +625,7 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets codigo_terminal
-     * @param string $codigo_terminal C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
+     * @param string $codigo_terminal {{{transacao_nao_processada_response_codigo_terminal_value}}}
      * @return $this
      */
     public function setCodigoTerminal($codigo_terminal)
@@ -941,191 +636,149 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
     }
     
     /**
-     * Gets codigo_mcc
-     * @return int
+     * Gets cotacao_usd
+     * @return Number
      */
-    public function getCodigoMcc()
+    public function getCotacaoUsd()
     {
-        return $this->codigo_mcc;
+        return $this->cotacao_usd;
     }
   
     /**
-     * Sets codigo_mcc
-     * @param int $codigo_mcc C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+     * Sets cotacao_usd
+     * @param Number $cotacao_usd {{{transacao_nao_processada_response_cotacao_usd_value}}}
      * @return $this
      */
-    public function setCodigoMcc($codigo_mcc)
+    public function setCotacaoUsd($cotacao_usd)
     {
         
-        $this->codigo_mcc = $codigo_mcc;
+        $this->cotacao_usd = $cotacao_usd;
         return $this;
     }
     
     /**
-     * Gets grupo_mcc
-     * @return int
-     */
-    public function getGrupoMcc()
-    {
-        return $this->grupo_mcc;
-    }
-  
-    /**
-     * Sets grupo_mcc
-     * @param int $grupo_mcc C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
-     * @return $this
-     */
-    public function setGrupoMcc($grupo_mcc)
-    {
-        
-        $this->grupo_mcc = $grupo_mcc;
-        return $this;
-    }
-    
-    /**
-     * Gets grupo_descricao_mcc
+     * Gets data_cotacao_usd
      * @return string
      */
-    public function getGrupoDescricaoMcc()
+    public function getDataCotacaoUsd()
     {
-        return $this->grupo_descricao_mcc;
+        return $this->data_cotacao_usd;
     }
   
     /**
-     * Sets grupo_descricao_mcc
-     * @param string $grupo_descricao_mcc Descri\u00E7\u00E3o do grupo do Estabelecimento.
+     * Sets data_cotacao_usd
+     * @param string $data_cotacao_usd {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
      * @return $this
      */
-    public function setGrupoDescricaoMcc($grupo_descricao_mcc)
+    public function setDataCotacaoUsd($data_cotacao_usd)
     {
         
-        $this->grupo_descricao_mcc = $grupo_descricao_mcc;
+        $this->data_cotacao_usd = $data_cotacao_usd;
         return $this;
     }
     
     /**
-     * Gets id_estabelecimento
-     * @return int
-     */
-    public function getIdEstabelecimento()
-    {
-        return $this->id_estabelecimento;
-    }
-  
-    /**
-     * Sets id_estabelecimento
-     * @param int $id_estabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
-     * @return $this
-     */
-    public function setIdEstabelecimento($id_estabelecimento)
-    {
-        
-        $this->id_estabelecimento = $id_estabelecimento;
-        return $this;
-    }
-    
-    /**
-     * Gets nome_estabelecimento
+     * Gets data_faturamento
      * @return string
      */
-    public function getNomeEstabelecimento()
+    public function getDataFaturamento()
     {
-        return $this->nome_estabelecimento;
+        return $this->data_faturamento;
     }
   
     /**
-     * Sets nome_estabelecimento
-     * @param string $nome_estabelecimento Nome do Estabelecimento.
+     * Sets data_faturamento
+     * @param string $data_faturamento {{{transacao_nao_processada_response_data_faturamento_value}}}
      * @return $this
      */
-    public function setNomeEstabelecimento($nome_estabelecimento)
+    public function setDataFaturamento($data_faturamento)
     {
         
-        $this->nome_estabelecimento = $nome_estabelecimento;
+        $this->data_faturamento = $data_faturamento;
         return $this;
     }
     
     /**
-     * Gets nome_fantasia_estabelecimento
+     * Gets data_origem
      * @return string
      */
-    public function getNomeFantasiaEstabelecimento()
+    public function getDataOrigem()
     {
-        return $this->nome_fantasia_estabelecimento;
+        return $this->data_origem;
     }
   
     /**
-     * Sets nome_fantasia_estabelecimento
-     * @param string $nome_fantasia_estabelecimento Nome Fantasia do Estabelecimento.
+     * Sets data_origem
+     * @param string $data_origem {{{transacao_nao_processada_response_data_origem_value}}}
      * @return $this
      */
-    public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
+    public function setDataOrigem($data_origem)
     {
         
-        $this->nome_fantasia_estabelecimento = $nome_fantasia_estabelecimento;
+        $this->data_origem = $data_origem;
         return $this;
     }
     
     /**
-     * Gets localidade_estabelecimento
+     * Gets data_vencimento_real
      * @return string
      */
-    public function getLocalidadeEstabelecimento()
+    public function getDataVencimentoReal()
     {
-        return $this->localidade_estabelecimento;
+        return $this->data_vencimento_real;
     }
   
     /**
-     * Sets localidade_estabelecimento
-     * @param string $localidade_estabelecimento Localidade do Estabelecimento.
+     * Sets data_vencimento_real
+     * @param string $data_vencimento_real {{{transacao_nao_processada_response_data_vencimento_value}}}
      * @return $this
      */
-    public function setLocalidadeEstabelecimento($localidade_estabelecimento)
+    public function setDataVencimentoReal($data_vencimento_real)
     {
         
-        $this->localidade_estabelecimento = $localidade_estabelecimento;
+        $this->data_vencimento_real = $data_vencimento_real;
         return $this;
     }
     
     /**
-     * Gets plano_parcelamento
-     * @return int
+     * Gets descricao_abreviada
+     * @return string
      */
-    public function getPlanoParcelamento()
+    public function getDescricaoAbreviada()
     {
-        return $this->plano_parcelamento;
+        return $this->descricao_abreviada;
     }
   
     /**
-     * Sets plano_parcelamento
-     * @param int $plano_parcelamento Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+     * Sets descricao_abreviada
+     * @param string $descricao_abreviada {{{transacao_nao_processada_response_descricao_abreviada_value}}}
      * @return $this
      */
-    public function setPlanoParcelamento($plano_parcelamento)
+    public function setDescricaoAbreviada($descricao_abreviada)
     {
         
-        $this->plano_parcelamento = $plano_parcelamento;
+        $this->descricao_abreviada = $descricao_abreviada;
         return $this;
     }
     
     /**
-     * Gets numero_parcela
-     * @return int
+     * Gets descricao_tipo_transacao_nao_processada
+     * @return string
      */
-    public function getNumeroParcela()
+    public function getDescricaoTipoTransacaoNaoProcessada()
     {
-        return $this->numero_parcela;
+        return $this->descricao_tipo_transacao_nao_processada;
     }
   
     /**
-     * Sets numero_parcela
-     * @param int $numero_parcela Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+     * Sets descricao_tipo_transacao_nao_processada
+     * @param string $descricao_tipo_transacao_nao_processada {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
      * @return $this
      */
-    public function setNumeroParcela($numero_parcela)
+    public function setDescricaoTipoTransacaoNaoProcessada($descricao_tipo_transacao_nao_processada)
     {
         
-        $this->numero_parcela = $numero_parcela;
+        $this->descricao_tipo_transacao_nao_processada = $descricao_tipo_transacao_nao_processada;
         return $this;
     }
     
@@ -1140,7 +793,7 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets detalhes_transacao
-     * @param string $detalhes_transacao Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+     * @param string $detalhes_transacao {{{transacao_nao_processada_response_detalhes_transacao_value}}}
      * @return $this
      */
     public function setDetalhesTransacao($detalhes_transacao)
@@ -1161,7 +814,7 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets flag_credito
-     * @param int $flag_credito Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+     * @param int $flag_credito {{{transacao_nao_processada_response_flag_credito_value}}}
      * @return $this
      */
     public function setFlagCredito($flag_credito)
@@ -1182,7 +835,7 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets flag_faturado
-     * @param int $flag_faturado Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+     * @param int $flag_faturado {{{transacao_nao_processada_response_flag_faturado_value}}}
      * @return $this
      */
     public function setFlagFaturado($flag_faturado)
@@ -1193,23 +846,107 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
     }
     
     /**
-     * Gets flag_estorno
-     * @return int
+     * Gets grupo_descricao_mcc
+     * @return string
      */
-    public function getFlagEstorno()
+    public function getGrupoDescricaoMcc()
     {
-        return $this->flag_estorno;
+        return $this->grupo_descricao_mcc;
     }
   
     /**
-     * Sets flag_estorno
-     * @param int $flag_estorno Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+     * Sets grupo_descricao_mcc
+     * @param string $grupo_descricao_mcc {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
      * @return $this
      */
-    public function setFlagEstorno($flag_estorno)
+    public function setGrupoDescricaoMcc($grupo_descricao_mcc)
     {
         
-        $this->flag_estorno = $flag_estorno;
+        $this->grupo_descricao_mcc = $grupo_descricao_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets grupo_mcc
+     * @return int
+     */
+    public function getGrupoMcc()
+    {
+        return $this->grupo_mcc;
+    }
+  
+    /**
+     * Sets grupo_mcc
+     * @param int $grupo_mcc {{{transacao_nao_processada_response_grupo_mcc_value}}}
+     * @return $this
+     */
+    public function setGrupoMcc($grupo_mcc)
+    {
+        
+        $this->grupo_mcc = $grupo_mcc;
+        return $this;
+    }
+    
+    /**
+     * Gets id_conta
+     * @return int
+     */
+    public function getIdConta()
+    {
+        return $this->id_conta;
+    }
+  
+    /**
+     * Sets id_conta
+     * @param int $id_conta {{{transacao_nao_processada_response_id_conta_value}}}
+     * @return $this
+     */
+    public function setIdConta($id_conta)
+    {
+        
+        $this->id_conta = $id_conta;
+        return $this;
+    }
+    
+    /**
+     * Gets id_estabelecimento
+     * @return int
+     */
+    public function getIdEstabelecimento()
+    {
+        return $this->id_estabelecimento;
+    }
+  
+    /**
+     * Sets id_estabelecimento
+     * @param int $id_estabelecimento {{{transacao_nao_processada_response_id_estabelecimento_value}}}
+     * @return $this
+     */
+    public function setIdEstabelecimento($id_estabelecimento)
+    {
+        
+        $this->id_estabelecimento = $id_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets id_tipo_transacao_nao_processada
+     * @return int
+     */
+    public function getIdTipoTransacaoNaoProcessada()
+    {
+        return $this->id_tipo_transacao_nao_processada;
+    }
+  
+    /**
+     * Sets id_tipo_transacao_nao_processada
+     * @param int $id_tipo_transacao_nao_processada {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
+     * @return $this
+     */
+    public function setIdTipoTransacaoNaoProcessada($id_tipo_transacao_nao_processada)
+    {
+        
+        $this->id_tipo_transacao_nao_processada = $id_tipo_transacao_nao_processada;
         return $this;
     }
     
@@ -1224,13 +961,160 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets id_transacao_estorno
-     * @param int $id_transacao_estorno C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+     * @param int $id_transacao_estorno {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
      * @return $this
      */
     public function setIdTransacaoEstorno($id_transacao_estorno)
     {
         
         $this->id_transacao_estorno = $id_transacao_estorno;
+        return $this;
+    }
+    
+    /**
+     * Gets localidade_estabelecimento
+     * @return string
+     */
+    public function getLocalidadeEstabelecimento()
+    {
+        return $this->localidade_estabelecimento;
+    }
+  
+    /**
+     * Sets localidade_estabelecimento
+     * @param string $localidade_estabelecimento {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
+     * @return $this
+     */
+    public function setLocalidadeEstabelecimento($localidade_estabelecimento)
+    {
+        
+        $this->localidade_estabelecimento = $localidade_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets modo_entrada_transacao
+     * @return string
+     */
+    public function getModoEntradaTransacao()
+    {
+        return $this->modo_entrada_transacao;
+    }
+  
+    /**
+     * Sets modo_entrada_transacao
+     * @param string $modo_entrada_transacao {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
+     * @return $this
+     */
+    public function setModoEntradaTransacao($modo_entrada_transacao)
+    {
+        
+        $this->modo_entrada_transacao = $modo_entrada_transacao;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_estabelecimento
+     * @return string
+     */
+    public function getNomeEstabelecimento()
+    {
+        return $this->nome_estabelecimento;
+    }
+  
+    /**
+     * Sets nome_estabelecimento
+     * @param string $nome_estabelecimento {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
+     * @return $this
+     */
+    public function setNomeEstabelecimento($nome_estabelecimento)
+    {
+        
+        $this->nome_estabelecimento = $nome_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_fantasia_estabelecimento
+     * @return string
+     */
+    public function getNomeFantasiaEstabelecimento()
+    {
+        return $this->nome_fantasia_estabelecimento;
+    }
+  
+    /**
+     * Sets nome_fantasia_estabelecimento
+     * @param string $nome_fantasia_estabelecimento {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
+     * @return $this
+     */
+    public function setNomeFantasiaEstabelecimento($nome_fantasia_estabelecimento)
+    {
+        
+        $this->nome_fantasia_estabelecimento = $nome_fantasia_estabelecimento;
+        return $this;
+    }
+    
+    /**
+     * Gets nome_portador
+     * @return string
+     */
+    public function getNomePortador()
+    {
+        return $this->nome_portador;
+    }
+  
+    /**
+     * Sets nome_portador
+     * @param string $nome_portador {{{transacao_nao_processada_response_nome_portador_value}}}
+     * @return $this
+     */
+    public function setNomePortador($nome_portador)
+    {
+        
+        $this->nome_portador = $nome_portador;
+        return $this;
+    }
+    
+    /**
+     * Gets parcela
+     * @return int
+     */
+    public function getParcela()
+    {
+        return $this->parcela;
+    }
+  
+    /**
+     * Sets parcela
+     * @param int $parcela {{{transacao_nao_processada_response_numero_parcela_value}}}
+     * @return $this
+     */
+    public function setParcela($parcela)
+    {
+        
+        $this->parcela = $parcela;
+        return $this;
+    }
+    
+    /**
+     * Gets plano
+     * @return int
+     */
+    public function getPlano()
+    {
+        return $this->plano;
+    }
+  
+    /**
+     * Sets plano
+     * @param int $plano {{{transacao_nao_processada_response_plano_parcelamento_value}}}
+     * @return $this
+     */
+    public function setPlano($plano)
+    {
+        
+        $this->plano = $plano;
         return $this;
     }
     
@@ -1245,13 +1129,97 @@ class TransacaoNaoProcessadaResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+     * @param int $status {{{transacao_nao_processada_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
     {
         
         $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets taxa_embarque
+     * @return Number
+     */
+    public function getTaxaEmbarque()
+    {
+        return $this->taxa_embarque;
+    }
+  
+    /**
+     * Sets taxa_embarque
+     * @param Number $taxa_embarque {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
+     * @return $this
+     */
+    public function setTaxaEmbarque($taxa_embarque)
+    {
+        
+        $this->taxa_embarque = $taxa_embarque;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_brl
+     * @return Number
+     */
+    public function getValorBrl()
+    {
+        return $this->valor_brl;
+    }
+  
+    /**
+     * Sets valor_brl
+     * @param Number $valor_brl {{{transacao_nao_processada_response_valor_brl_value}}}
+     * @return $this
+     */
+    public function setValorBrl($valor_brl)
+    {
+        
+        $this->valor_brl = $valor_brl;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_entrada
+     * @return Number
+     */
+    public function getValorEntrada()
+    {
+        return $this->valor_entrada;
+    }
+  
+    /**
+     * Sets valor_entrada
+     * @param Number $valor_entrada {{{transacao_nao_processada_response_valor_entrada_value}}}
+     * @return $this
+     */
+    public function setValorEntrada($valor_entrada)
+    {
+        
+        $this->valor_entrada = $valor_entrada;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_usd
+     * @return Number
+     */
+    public function getValorUsd()
+    {
+        return $this->valor_usd;
+    }
+  
+    /**
+     * Sets valor_usd
+     * @param Number $valor_usd {{{transacao_nao_processada_response_valor_usd_value}}}
+     * @return $this
+     */
+    public function setValorUsd($valor_usd)
+    {
+        
+        $this->valor_usd = $valor_usd;
         return $this;
     }
     

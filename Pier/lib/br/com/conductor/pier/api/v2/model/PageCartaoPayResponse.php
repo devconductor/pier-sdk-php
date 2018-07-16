@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageCartaoPayResponse Class Doc Comment
  *
  * @category    Class
- * @description P\u00E1gina de resposta da listagem de cart\u00F5es tokenizados
+ * @description {{{page_cartao_pay_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

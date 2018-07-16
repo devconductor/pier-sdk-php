@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PlanoParcelamentoTransferenciaCreditoContaBancariaRequest Class Doc Comment
  *
  * @category    Class
- * @description Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request
+ * @description {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
 
     
     /**
-      * $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+      * $id_cartao {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
       * @var int
       */
     protected $id_cartao;
     
     /**
-      * $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
+      * $valor_transacao {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
       * @var Number
       */
     protected $valor_transacao;
     
     /**
-      * $numero_meses_carencia Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
+      * $numero_meses_carencia {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
       * @var int
       */
     protected $numero_meses_carencia;
@@ -147,7 +147,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
   
     /**
      * Sets id_cartao
-     * @param int $id_cartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+     * @param int $id_cartao {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
      * @return $this
      */
     public function setIdCartao($id_cartao)
@@ -168,7 +168,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
   
     /**
      * Sets valor_transacao
-     * @param Number $valor_transacao Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
+     * @param Number $valor_transacao {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
      * @return $this
      */
     public function setValorTransacao($valor_transacao)
@@ -189,7 +189,7 @@ class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest implements Array
   
     /**
      * Sets numero_meses_carencia
-     * @param int $numero_meses_carencia Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
+     * @param int $numero_meses_carencia {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
      * @return $this
      */
     public function setNumeroMesesCarencia($numero_meses_carencia)

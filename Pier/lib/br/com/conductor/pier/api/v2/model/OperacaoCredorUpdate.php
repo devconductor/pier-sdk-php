@@ -38,7 +38,7 @@ use \ArrayAccess;
  * OperacaoCredorUpdate Class Doc Comment
  *
  * @category    Class
- * @description Objeto OperacaoCredor
+ * @description {{{operacao_credor_update_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -52,7 +52,7 @@ class OperacaoCredorUpdate implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_operacao' => 'int',
-        'id_credor' => 'int',
+        'id_grupo_economico' => 'int',
         'id_produto' => 'int',
         'remuneracao_percentual' => 'Number',
         'remuneracao_fixa' => 'Number',
@@ -75,7 +75,7 @@ class OperacaoCredorUpdate implements ArrayAccess
       */
     static $attributeMap = array(
         'id_operacao' => 'idOperacao',
-        'id_credor' => 'idCredor',
+        'id_grupo_economico' => 'idGrupoEconomico',
         'id_produto' => 'idProduto',
         'remuneracao_percentual' => 'remuneracaoPercentual',
         'remuneracao_fixa' => 'remuneracaoFixa',
@@ -98,7 +98,7 @@ class OperacaoCredorUpdate implements ArrayAccess
       */
     static $setters = array(
         'id_operacao' => 'setIdOperacao',
-        'id_credor' => 'setIdCredor',
+        'id_grupo_economico' => 'setIdGrupoEconomico',
         'id_produto' => 'setIdProduto',
         'remuneracao_percentual' => 'setRemuneracaoPercentual',
         'remuneracao_fixa' => 'setRemuneracaoFixa',
@@ -121,7 +121,7 @@ class OperacaoCredorUpdate implements ArrayAccess
       */
     static $getters = array(
         'id_operacao' => 'getIdOperacao',
-        'id_credor' => 'getIdCredor',
+        'id_grupo_economico' => 'getIdGrupoEconomico',
         'id_produto' => 'getIdProduto',
         'remuneracao_percentual' => 'getRemuneracaoPercentual',
         'remuneracao_fixa' => 'getRemuneracaoFixa',
@@ -140,73 +140,73 @@ class OperacaoCredorUpdate implements ArrayAccess
 
     
     /**
-      * $id_operacao Apresenta o id da Opera\u00E7\u00E3o.
+      * $id_operacao {{{operacao_credor_update_id_operacao_value}}}
       * @var int
       */
     protected $id_operacao;
     
     /**
-      * $id_credor Apresenta o id do Credor.
+      * $id_grupo_economico {{{operacao_credor_update_id_grupo_economico_value}}}
       * @var int
       */
-    protected $id_credor;
+    protected $id_grupo_economico;
     
     /**
-      * $id_produto Apresenta o id do produto que vai ser alterado.
+      * $id_produto {{{operacao_credor_update_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $remuneracao_percentual Remunera\u00E7\u00E3o Percentual.
+      * $remuneracao_percentual {{{operacao_credor_update_remuneracao_percentual_value}}}
       * @var Number
       */
     protected $remuneracao_percentual;
     
     /**
-      * $remuneracao_fixa Remunera\u00E7\u00E3o Fixa.
+      * $remuneracao_fixa {{{operacao_credor_update_remuneracao_fixa_value}}}
       * @var Number
       */
     protected $remuneracao_fixa;
     
     /**
-      * $periodicidade Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).
+      * $periodicidade {{{operacao_credor_update_periodicidade_value}}}
       * @var string
       */
     protected $periodicidade;
     
     /**
-      * $vencimento_primeira_parcela Vencimento da primeira parcela.
+      * $vencimento_primeira_parcela {{{operacao_credor_update_vencimento_primeira_parcela_value}}}
       * @var int
       */
     protected $vencimento_primeira_parcela;
     
     /**
-      * $dias_afastamento Dias afastamento.
+      * $dias_afastamento {{{operacao_credor_update_dias_afastamento_value}}}
       * @var int
       */
     protected $dias_afastamento;
     
     /**
-      * $fator_multiplicador Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).
+      * $fator_multiplicador {{{operacao_credor_update_fator_multiplicador_value}}}
       * @var string
       */
     protected $fator_multiplicador;
     
     /**
-      * $flag_taxa_fixada Flag taxa fixada.
+      * $flag_taxa_fixada {{{operacao_credor_update_flag_taxa_fixada_value}}}
       * @var bool
       */
     protected $flag_taxa_fixada;
     
     /**
-      * $plano_minimo Plano m\u00EDnimo da regra.
+      * $plano_minimo {{{operacao_credor_update_plano_minimo_value}}}
       * @var int
       */
     protected $plano_minimo;
     
     /**
-      * $plano_maximo Plano m\u00E1ximo da regra.
+      * $plano_maximo {{{operacao_credor_update_plano_maximo_value}}}
       * @var int
       */
     protected $plano_maximo;
@@ -221,7 +221,7 @@ class OperacaoCredorUpdate implements ArrayAccess
         
         if ($data != null) {
             $this->id_operacao = $data["id_operacao"];
-            $this->id_credor = $data["id_credor"];
+            $this->id_grupo_economico = $data["id_grupo_economico"];
             $this->id_produto = $data["id_produto"];
             $this->remuneracao_percentual = $data["remuneracao_percentual"];
             $this->remuneracao_fixa = $data["remuneracao_fixa"];
@@ -246,7 +246,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets id_operacao
-     * @param int $id_operacao Apresenta o id da Opera\u00E7\u00E3o.
+     * @param int $id_operacao {{{operacao_credor_update_id_operacao_value}}}
      * @return $this
      */
     public function setIdOperacao($id_operacao)
@@ -257,23 +257,23 @@ class OperacaoCredorUpdate implements ArrayAccess
     }
     
     /**
-     * Gets id_credor
+     * Gets id_grupo_economico
      * @return int
      */
-    public function getIdCredor()
+    public function getIdGrupoEconomico()
     {
-        return $this->id_credor;
+        return $this->id_grupo_economico;
     }
   
     /**
-     * Sets id_credor
-     * @param int $id_credor Apresenta o id do Credor.
+     * Sets id_grupo_economico
+     * @param int $id_grupo_economico {{{operacao_credor_update_id_grupo_economico_value}}}
      * @return $this
      */
-    public function setIdCredor($id_credor)
+    public function setIdGrupoEconomico($id_grupo_economico)
     {
         
-        $this->id_credor = $id_credor;
+        $this->id_grupo_economico = $id_grupo_economico;
         return $this;
     }
     
@@ -288,7 +288,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto Apresenta o id do produto que vai ser alterado.
+     * @param int $id_produto {{{operacao_credor_update_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -309,7 +309,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets remuneracao_percentual
-     * @param Number $remuneracao_percentual Remunera\u00E7\u00E3o Percentual.
+     * @param Number $remuneracao_percentual {{{operacao_credor_update_remuneracao_percentual_value}}}
      * @return $this
      */
     public function setRemuneracaoPercentual($remuneracao_percentual)
@@ -330,7 +330,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets remuneracao_fixa
-     * @param Number $remuneracao_fixa Remunera\u00E7\u00E3o Fixa.
+     * @param Number $remuneracao_fixa {{{operacao_credor_update_remuneracao_fixa_value}}}
      * @return $this
      */
     public function setRemuneracaoFixa($remuneracao_fixa)
@@ -351,7 +351,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets periodicidade
-     * @param string $periodicidade Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).
+     * @param string $periodicidade {{{operacao_credor_update_periodicidade_value}}}
      * @return $this
      */
     public function setPeriodicidade($periodicidade)
@@ -375,7 +375,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets vencimento_primeira_parcela
-     * @param int $vencimento_primeira_parcela Vencimento da primeira parcela.
+     * @param int $vencimento_primeira_parcela {{{operacao_credor_update_vencimento_primeira_parcela_value}}}
      * @return $this
      */
     public function setVencimentoPrimeiraParcela($vencimento_primeira_parcela)
@@ -396,7 +396,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets dias_afastamento
-     * @param int $dias_afastamento Dias afastamento.
+     * @param int $dias_afastamento {{{operacao_credor_update_dias_afastamento_value}}}
      * @return $this
      */
     public function setDiasAfastamento($dias_afastamento)
@@ -417,7 +417,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets fator_multiplicador
-     * @param string $fator_multiplicador Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).
+     * @param string $fator_multiplicador {{{operacao_credor_update_fator_multiplicador_value}}}
      * @return $this
      */
     public function setFatorMultiplicador($fator_multiplicador)
@@ -441,7 +441,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets flag_taxa_fixada
-     * @param bool $flag_taxa_fixada Flag taxa fixada.
+     * @param bool $flag_taxa_fixada {{{operacao_credor_update_flag_taxa_fixada_value}}}
      * @return $this
      */
     public function setFlagTaxaFixada($flag_taxa_fixada)
@@ -462,7 +462,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets plano_minimo
-     * @param int $plano_minimo Plano m\u00EDnimo da regra.
+     * @param int $plano_minimo {{{operacao_credor_update_plano_minimo_value}}}
      * @return $this
      */
     public function setPlanoMinimo($plano_minimo)
@@ -483,7 +483,7 @@ class OperacaoCredorUpdate implements ArrayAccess
   
     /**
      * Sets plano_maximo
-     * @param int $plano_maximo Plano m\u00E1ximo da regra.
+     * @param int $plano_maximo {{{operacao_credor_update_plano_maximo_value}}}
      * @return $this
      */
     public function setPlanoMaximo($plano_maximo)

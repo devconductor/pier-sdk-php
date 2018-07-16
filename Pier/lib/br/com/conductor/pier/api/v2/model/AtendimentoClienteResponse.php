@@ -38,7 +38,7 @@ use \ArrayAccess;
  * AtendimentoClienteResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto AtendimentoCliente
+ * @description {{{atendimento_cliente_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -148,85 +148,85 @@ class AtendimentoClienteResponse implements ArrayAccess
 
     
     /**
-      * $id_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
+      * $id_atendimento {{{atendimento_cliente_response_id_atendimento_value}}}
       * @var int
       */
     protected $id_atendimento;
     
     /**
-      * $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+      * $id_conta {{{atendimento_cliente_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+      * $id_tipo_atendimento {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
       * @var int
       */
     protected $id_tipo_atendimento;
     
     /**
-      * $descricao_tipo_atendimento Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
+      * $descricao_tipo_atendimento {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
       * @var string
       */
     protected $descricao_tipo_atendimento;
     
     /**
-      * $conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+      * $conteudo_atendimento {{{atendimento_cliente_response_conteudo_atendimento_value}}}
       * @var string
       */
     protected $conteudo_atendimento;
     
     /**
-      * $detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+      * $detalhes_atendimento {{{atendimento_cliente_response_detalhes_atendimento_value}}}
       * @var string
       */
     protected $detalhes_atendimento;
     
     /**
-      * $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
+      * $nome_atendente {{{atendimento_cliente_response_nome_atendente_value}}}
       * @var string
       */
     protected $nome_atendente;
     
     /**
-      * $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
+      * $nome_sistema {{{atendimento_cliente_response_nome_sistema_value}}}
       * @var string
       */
     protected $nome_sistema;
     
     /**
-      * $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+      * $data_hora_inicio_atendimento {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
       * @var string
       */
     protected $data_hora_inicio_atendimento;
     
     /**
-      * $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+      * $data_hora_fim_atendimento {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
       * @var string
       */
     protected $data_hora_fim_atendimento;
     
     /**
-      * $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado.
+      * $data_atendimento {{{atendimento_cliente_response_data_atendimento_value}}}
       * @var string
       */
     protected $data_atendimento;
     
     /**
-      * $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
+      * $data_agendamento {{{atendimento_cliente_response_data_agendamento_value}}}
       * @var string
       */
     protected $data_agendamento;
     
     /**
-      * $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
+      * $data_processamento {{{atendimento_cliente_response_data_processamento_value}}}
       * @var string
       */
     protected $data_processamento;
     
     /**
-      * $flag_processamento Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
+      * $flag_processamento {{{atendimento_cliente_response_flag_processamento_value}}}
       * @var int
       */
     protected $flag_processamento;
@@ -268,7 +268,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_atendimento
-     * @param int $id_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
+     * @param int $id_atendimento {{{atendimento_cliente_response_id_atendimento_value}}}
      * @return $this
      */
     public function setIdAtendimento($id_atendimento)
@@ -289,7 +289,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+     * @param int $id_conta {{{atendimento_cliente_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -310,7 +310,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_atendimento
-     * @param int $id_tipo_atendimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+     * @param int $id_tipo_atendimento {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
      * @return $this
      */
     public function setIdTipoAtendimento($id_tipo_atendimento)
@@ -331,7 +331,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets descricao_tipo_atendimento
-     * @param string $descricao_tipo_atendimento Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
+     * @param string $descricao_tipo_atendimento {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
      * @return $this
      */
     public function setDescricaoTipoAtendimento($descricao_tipo_atendimento)
@@ -352,7 +352,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets conteudo_atendimento
-     * @param string $conteudo_atendimento Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+     * @param string $conteudo_atendimento {{{atendimento_cliente_response_conteudo_atendimento_value}}}
      * @return $this
      */
     public function setConteudoAtendimento($conteudo_atendimento)
@@ -373,7 +373,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets detalhes_atendimento
-     * @param string $detalhes_atendimento Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+     * @param string $detalhes_atendimento {{{atendimento_cliente_response_detalhes_atendimento_value}}}
      * @return $this
      */
     public function setDetalhesAtendimento($detalhes_atendimento)
@@ -394,7 +394,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets nome_atendente
-     * @param string $nome_atendente Apresenta o nome do Atendente que registrou o Atendimento.
+     * @param string $nome_atendente {{{atendimento_cliente_response_nome_atendente_value}}}
      * @return $this
      */
     public function setNomeAtendente($nome_atendente)
@@ -415,7 +415,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets nome_sistema
-     * @param string $nome_sistema Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
+     * @param string $nome_sistema {{{atendimento_cliente_response_nome_sistema_value}}}
      * @return $this
      */
     public function setNomeSistema($nome_sistema)
@@ -436,7 +436,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_hora_inicio_atendimento
-     * @param string $data_hora_inicio_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+     * @param string $data_hora_inicio_atendimento {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
      * @return $this
      */
     public function setDataHoraInicioAtendimento($data_hora_inicio_atendimento)
@@ -457,7 +457,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_hora_fim_atendimento
-     * @param string $data_hora_fim_atendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+     * @param string $data_hora_fim_atendimento {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
      * @return $this
      */
     public function setDataHoraFimAtendimento($data_hora_fim_atendimento)
@@ -478,7 +478,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_atendimento
-     * @param string $data_atendimento Apresenta a data e hora em que o Atendimento foi realizado.
+     * @param string $data_atendimento {{{atendimento_cliente_response_data_atendimento_value}}}
      * @return $this
      */
     public function setDataAtendimento($data_atendimento)
@@ -499,7 +499,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_agendamento
-     * @param string $data_agendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
+     * @param string $data_agendamento {{{atendimento_cliente_response_data_agendamento_value}}}
      * @return $this
      */
     public function setDataAgendamento($data_agendamento)
@@ -520,7 +520,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets data_processamento
-     * @param string $data_processamento Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
+     * @param string $data_processamento {{{atendimento_cliente_response_data_processamento_value}}}
      * @return $this
      */
     public function setDataProcessamento($data_processamento)
@@ -541,7 +541,7 @@ class AtendimentoClienteResponse implements ArrayAccess
   
     /**
      * Sets flag_processamento
-     * @param int $flag_processamento Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
+     * @param int $flag_processamento {{{atendimento_cliente_response_flag_processamento_value}}}
      * @return $this
      */
     public function setFlagProcessamento($flag_processamento)

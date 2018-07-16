@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DocumentoDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta para o detalhamento do documento
+ * @description {{{documento_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -104,19 +104,19 @@ class DocumentoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id ID de identifica\u00E7\u00E3o do detalhamento do documento.
+      * $id {{{documento_detalhe_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $propriedade Propriedade do detalhamento do documento.
+      * $propriedade {{{documento_detalhe_response_propriedade_value}}}
       * @var string
       */
     protected $propriedade;
     
     /**
-      * $conteudo Conte\u00FAdo do detalhamento do documento.
+      * $conteudo {{{documento_detalhe_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
@@ -147,7 +147,7 @@ class DocumentoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id ID de identifica\u00E7\u00E3o do detalhamento do documento.
+     * @param int $id {{{documento_detalhe_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -168,7 +168,7 @@ class DocumentoDetalheResponse implements ArrayAccess
   
     /**
      * Sets propriedade
-     * @param string $propriedade Propriedade do detalhamento do documento.
+     * @param string $propriedade {{{documento_detalhe_response_propriedade_value}}}
      * @return $this
      */
     public function setPropriedade($propriedade)
@@ -189,7 +189,7 @@ class DocumentoDetalheResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conte\u00FAdo do detalhamento do documento.
+     * @param string $conteudo {{{documento_detalhe_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)

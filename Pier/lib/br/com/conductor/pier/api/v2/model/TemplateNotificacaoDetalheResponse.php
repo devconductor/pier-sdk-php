@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TemplateNotificacaoDetalheResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto de detalhes do Template de Notifica\u00E7\u00E3o
+ * @description {{{template_notificacao_detalhe_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -132,61 +132,61 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo Identificador.
+      * $id {{{template_notificacao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
+      * $id_configuracao_email {{{template_notificacao_response_id_configuracao_email_value}}}
       * @var int
       */
     protected $id_configuracao_email;
     
     /**
-      * $tipo_layout Tipo do layout de e-mail.
+      * $tipo_layout {{{template_notificacao_response_tipo_layout_value}}}
       * @var string
       */
     protected $tipo_layout;
     
     /**
-      * $tipo_notificacao Tipo da notifica\u00E7\u00E3o.
+      * $tipo_notificacao {{{template_notificacao_response_tipo_notificacao_value}}}
       * @var string
       */
     protected $tipo_notificacao;
     
     /**
-      * $template_padrao Template padr\u00E3o.
+      * $template_padrao {{{template_notificacao_response_template_padrao_value}}}
       * @var string
       */
     protected $template_padrao;
     
     /**
-      * $remetente Remetente.
+      * $remetente {{{template_notificacao_response_remetente_value}}}
       * @var string
       */
     protected $remetente;
     
     /**
-      * $assunto Assunto do e-mail.
+      * $assunto {{{template_notificacao_response_assunto_value}}}
       * @var string
       */
     protected $assunto;
     
     /**
-      * $data_inclusao Data da inclus\u00E3o.
+      * $data_inclusao {{{template_notificacao_response_data_inclusao_value}}}
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_alteracao Data altera\u00E7\u00E3o.
+      * $data_alteracao {{{template_notificacao_response_data_alteracao_value}}}
       * @var string
       */
     protected $data_alteracao;
     
     /**
-      * $conteudo Conteudo do e-mail.
+      * $conteudo {{{template_notificacao_detalhe_response_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
@@ -224,7 +224,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo Identificador.
+     * @param int $id {{{template_notificacao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -245,7 +245,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets id_configuracao_email
-     * @param int $id_configuracao_email C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
+     * @param int $id_configuracao_email {{{template_notificacao_response_id_configuracao_email_value}}}
      * @return $this
      */
     public function setIdConfiguracaoEmail($id_configuracao_email)
@@ -266,7 +266,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets tipo_layout
-     * @param string $tipo_layout Tipo do layout de e-mail.
+     * @param string $tipo_layout {{{template_notificacao_response_tipo_layout_value}}}
      * @return $this
      */
     public function setTipoLayout($tipo_layout)
@@ -290,7 +290,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets tipo_notificacao
-     * @param string $tipo_notificacao Tipo da notifica\u00E7\u00E3o.
+     * @param string $tipo_notificacao {{{template_notificacao_response_tipo_notificacao_value}}}
      * @return $this
      */
     public function setTipoNotificacao($tipo_notificacao)
@@ -314,7 +314,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets template_padrao
-     * @param string $template_padrao Template padr\u00E3o.
+     * @param string $template_padrao {{{template_notificacao_response_template_padrao_value}}}
      * @return $this
      */
     public function setTemplatePadrao($template_padrao)
@@ -335,7 +335,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets remetente
-     * @param string $remetente Remetente.
+     * @param string $remetente {{{template_notificacao_response_remetente_value}}}
      * @return $this
      */
     public function setRemetente($remetente)
@@ -356,7 +356,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets assunto
-     * @param string $assunto Assunto do e-mail.
+     * @param string $assunto {{{template_notificacao_response_assunto_value}}}
      * @return $this
      */
     public function setAssunto($assunto)
@@ -377,7 +377,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Data da inclus\u00E3o.
+     * @param string $data_inclusao {{{template_notificacao_response_data_inclusao_value}}}
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -398,7 +398,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets data_alteracao
-     * @param string $data_alteracao Data altera\u00E7\u00E3o.
+     * @param string $data_alteracao {{{template_notificacao_response_data_alteracao_value}}}
      * @return $this
      */
     public function setDataAlteracao($data_alteracao)
@@ -419,7 +419,7 @@ class TemplateNotificacaoDetalheResponse implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo Conteudo do e-mail.
+     * @param string $conteudo {{{template_notificacao_detalhe_response_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EmprestimoPessoalRequest Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
+ * @description {{{emprestimo_pessoal_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class EmprestimoPessoalRequest implements ArrayAccess
 
     
     /**
-      * $valor_solicitado Valor do empr\u00E9stimo/financiamento
+      * $valor_solicitado {{{emprestimo_pessoal_request_valor_solicitado_value}}}
       * @var Number
       */
     protected $valor_solicitado;
     
     /**
-      * $numero_parcelas N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento
+      * $numero_parcelas {{{emprestimo_pessoal_request_numero_parcelas_value}}}
       * @var int
       */
     protected $numero_parcelas;
     
     /**
-      * $taxa_juros Valor percentual da taxa de juros a ser aplicada
+      * $taxa_juros {{{emprestimo_pessoal_request_taxa_juros_value}}}
       * @var Number
       */
     protected $taxa_juros;
     
     /**
-      * $periodo_taxa Per\u00EDodo de aplica da taxa de juros
+      * $periodo_taxa {{{emprestimo_pessoal_request_periodo_taxa_value}}}
       * @var string
       */
     protected $periodo_taxa;
     
     /**
-      * $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+      * $sistema_amortizacao {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
       * @var string
       */
     protected $sistema_amortizacao;
     
     /**
-      * $numero_meses_carencia N\u00FAmero de meses para cobran\u00E7a da primeira parcela
+      * $numero_meses_carencia {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
       * @var int
       */
     protected $numero_meses_carencia;
@@ -180,7 +180,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets valor_solicitado
-     * @param Number $valor_solicitado Valor do empr\u00E9stimo/financiamento
+     * @param Number $valor_solicitado {{{emprestimo_pessoal_request_valor_solicitado_value}}}
      * @return $this
      */
     public function setValorSolicitado($valor_solicitado)
@@ -201,7 +201,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets numero_parcelas
-     * @param int $numero_parcelas N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento
+     * @param int $numero_parcelas {{{emprestimo_pessoal_request_numero_parcelas_value}}}
      * @return $this
      */
     public function setNumeroParcelas($numero_parcelas)
@@ -222,7 +222,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets taxa_juros
-     * @param Number $taxa_juros Valor percentual da taxa de juros a ser aplicada
+     * @param Number $taxa_juros {{{emprestimo_pessoal_request_taxa_juros_value}}}
      * @return $this
      */
     public function setTaxaJuros($taxa_juros)
@@ -243,7 +243,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets periodo_taxa
-     * @param string $periodo_taxa Per\u00EDodo de aplica da taxa de juros
+     * @param string $periodo_taxa {{{emprestimo_pessoal_request_periodo_taxa_value}}}
      * @return $this
      */
     public function setPeriodoTaxa($periodo_taxa)
@@ -264,7 +264,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets sistema_amortizacao
-     * @param string $sistema_amortizacao Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+     * @param string $sistema_amortizacao {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
      * @return $this
      */
     public function setSistemaAmortizacao($sistema_amortizacao)
@@ -285,7 +285,7 @@ class EmprestimoPessoalRequest implements ArrayAccess
   
     /**
      * Sets numero_meses_carencia
-     * @param int $numero_meses_carencia N\u00FAmero de meses para cobran\u00E7a da primeira parcela
+     * @param int $numero_meses_carencia {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
      * @return $this
      */
     public function setNumeroMesesCarencia($numero_meses_carencia)

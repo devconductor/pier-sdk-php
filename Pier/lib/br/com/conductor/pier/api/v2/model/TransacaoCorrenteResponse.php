@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TransacaoCorrenteResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso transacao
+ * @description {{{transacao_corrente_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -68,7 +68,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'int',
         'tipo_estabelecimento' => 'string',
         'id_grupo_mcc' => 'int',
-        'flag_solicitou_contestacao' => 'int'
+        'flag_solicitou_contestacao' => 'int',
+        'tipo_transacao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -97,7 +98,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'flagCredito',
         'tipo_estabelecimento' => 'tipoEstabelecimento',
         'id_grupo_mcc' => 'idGrupoMCC',
-        'flag_solicitou_contestacao' => 'flagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'flagSolicitouContestacao',
+        'tipo_transacao' => 'tipoTransacao'
     );
   
     static function attributeMap() {
@@ -126,7 +128,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'setFlagCredito',
         'tipo_estabelecimento' => 'setTipoEstabelecimento',
         'id_grupo_mcc' => 'setIdGrupoMcc',
-        'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'setFlagSolicitouContestacao',
+        'tipo_transacao' => 'setTipoTransacao'
     );
   
     static function setters() {
@@ -155,7 +158,8 @@ class TransacaoCorrenteResponse implements ArrayAccess
         'flag_credito' => 'getFlagCredito',
         'tipo_estabelecimento' => 'getTipoEstabelecimento',
         'id_grupo_mcc' => 'getIdGrupoMcc',
-        'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao'
+        'flag_solicitou_contestacao' => 'getFlagSolicitouContestacao',
+        'tipo_transacao' => 'getTipoTransacao'
     );
   
     static function getters() {
@@ -170,106 +174,112 @@ class TransacaoCorrenteResponse implements ArrayAccess
     protected $ultima_parcela_lancada;
     
     /**
-      * $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+      * $id_conta {{{transacao_corrente_response_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $id_tipo_registro C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
+      * $id_tipo_registro {{{transacao_corrente_response_id_tipo_registro_value}}}
       * @var int
       */
     protected $id_tipo_registro;
     
     /**
-      * $ordem Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
+      * $ordem {{{transacao_corrente_response_ordem_value}}}
       * @var int
       */
     protected $ordem;
     
     /**
-      * $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
+      * $id_transacao {{{transacao_corrente_response_id_transacao_value}}}
       * @var int
       */
     protected $id_transacao;
     
     /**
-      * $descricao Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
+      * $descricao {{{transacao_corrente_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $status Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+      * $status {{{transacao_corrente_response_status_value}}}
       * @var int
       */
     protected $status;
     
     /**
-      * $descricao_status Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
+      * $descricao_status {{{transacao_corrente_response_descricao_status_value}}}
       * @var string
       */
     protected $descricao_status;
     
     /**
-      * $valor Atributo que representa o valor da transa\u00E7\u00E3o.
+      * $valor {{{transacao_corrente_response_valor_value}}}
       * @var Number
       */
     protected $valor;
     
     /**
-      * $valor_dolar Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
+      * $valor_dolar {{{transacao_corrente_response_valor_dolar_value}}}
       * @var Number
       */
     protected $valor_dolar;
     
     /**
-      * $quantidade_parcelas Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
+      * $quantidade_parcelas {{{transacao_corrente_response_quantidade_parcelas_value}}}
       * @var int
       */
     protected $quantidade_parcelas;
     
     /**
-      * $valor_parcela Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
+      * $valor_parcela {{{transacao_corrente_response_valor_parcela_value}}}
       * @var Number
       */
     protected $valor_parcela;
     
     /**
-      * $data_evento Atributo que representa a data de envio da transa\u00E7\u00E3o.
+      * $data_evento {{{transacao_corrente_response_data_evento_value}}}
       * @var string
       */
     protected $data_evento;
     
     /**
-      * $estabelecimento Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
+      * $estabelecimento {{{transacao_corrente_response_estabelecimento_value}}}
       * @var string
       */
     protected $estabelecimento;
     
     /**
-      * $flag_credito Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
+      * $flag_credito {{{transacao_corrente_response_flag_credito_value}}}
       * @var int
       */
     protected $flag_credito;
     
     /**
-      * $tipo_estabelecimento Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
+      * $tipo_estabelecimento {{{transacao_corrente_response_tipo_estabelecimento_value}}}
       * @var string
       */
     protected $tipo_estabelecimento;
     
     /**
-      * $id_grupo_mcc Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
+      * $id_grupo_mcc {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
       * @var int
       */
     protected $id_grupo_mcc;
     
     /**
-      * $flag_solicitou_contestacao Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
+      * $flag_solicitou_contestacao {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
       * @var int
       */
     protected $flag_solicitou_contestacao;
+    
+    /**
+      * $tipo_transacao {{{transacao_corrente_response_tipo_transacao_value}}}
+      * @var int
+      */
+    protected $tipo_transacao;
     
 
     /**
@@ -298,6 +308,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
             $this->tipo_estabelecimento = $data["tipo_estabelecimento"];
             $this->id_grupo_mcc = $data["id_grupo_mcc"];
             $this->flag_solicitou_contestacao = $data["flag_solicitou_contestacao"];
+            $this->tipo_transacao = $data["tipo_transacao"];
         }
     }
     
@@ -333,7 +344,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+     * @param int $id_conta {{{transacao_corrente_response_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -354,7 +365,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_registro
-     * @param int $id_tipo_registro C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
+     * @param int $id_tipo_registro {{{transacao_corrente_response_id_tipo_registro_value}}}
      * @return $this
      */
     public function setIdTipoRegistro($id_tipo_registro)
@@ -375,7 +386,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets ordem
-     * @param int $ordem Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
+     * @param int $ordem {{{transacao_corrente_response_ordem_value}}}
      * @return $this
      */
     public function setOrdem($ordem)
@@ -396,7 +407,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets id_transacao
-     * @param int $id_transacao C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
+     * @param int $id_transacao {{{transacao_corrente_response_id_transacao_value}}}
      * @return $this
      */
     public function setIdTransacao($id_transacao)
@@ -417,7 +428,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
+     * @param string $descricao {{{transacao_corrente_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -438,7 +449,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param int $status Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+     * @param int $status {{{transacao_corrente_response_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -459,7 +470,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets descricao_status
-     * @param string $descricao_status Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
+     * @param string $descricao_status {{{transacao_corrente_response_descricao_status_value}}}
      * @return $this
      */
     public function setDescricaoStatus($descricao_status)
@@ -480,7 +491,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets valor
-     * @param Number $valor Atributo que representa o valor da transa\u00E7\u00E3o.
+     * @param Number $valor {{{transacao_corrente_response_valor_value}}}
      * @return $this
      */
     public function setValor($valor)
@@ -501,7 +512,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets valor_dolar
-     * @param Number $valor_dolar Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
+     * @param Number $valor_dolar {{{transacao_corrente_response_valor_dolar_value}}}
      * @return $this
      */
     public function setValorDolar($valor_dolar)
@@ -522,7 +533,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets quantidade_parcelas
-     * @param int $quantidade_parcelas Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
+     * @param int $quantidade_parcelas {{{transacao_corrente_response_quantidade_parcelas_value}}}
      * @return $this
      */
     public function setQuantidadeParcelas($quantidade_parcelas)
@@ -543,7 +554,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets valor_parcela
-     * @param Number $valor_parcela Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
+     * @param Number $valor_parcela {{{transacao_corrente_response_valor_parcela_value}}}
      * @return $this
      */
     public function setValorParcela($valor_parcela)
@@ -564,7 +575,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets data_evento
-     * @param string $data_evento Atributo que representa a data de envio da transa\u00E7\u00E3o.
+     * @param string $data_evento {{{transacao_corrente_response_data_evento_value}}}
      * @return $this
      */
     public function setDataEvento($data_evento)
@@ -585,7 +596,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets estabelecimento
-     * @param string $estabelecimento Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
+     * @param string $estabelecimento {{{transacao_corrente_response_estabelecimento_value}}}
      * @return $this
      */
     public function setEstabelecimento($estabelecimento)
@@ -606,7 +617,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets flag_credito
-     * @param int $flag_credito Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
+     * @param int $flag_credito {{{transacao_corrente_response_flag_credito_value}}}
      * @return $this
      */
     public function setFlagCredito($flag_credito)
@@ -627,7 +638,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets tipo_estabelecimento
-     * @param string $tipo_estabelecimento Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
+     * @param string $tipo_estabelecimento {{{transacao_corrente_response_tipo_estabelecimento_value}}}
      * @return $this
      */
     public function setTipoEstabelecimento($tipo_estabelecimento)
@@ -648,7 +659,7 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets id_grupo_mcc
-     * @param int $id_grupo_mcc Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
+     * @param int $id_grupo_mcc {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
      * @return $this
      */
     public function setIdGrupoMcc($id_grupo_mcc)
@@ -669,13 +680,34 @@ class TransacaoCorrenteResponse implements ArrayAccess
   
     /**
      * Sets flag_solicitou_contestacao
-     * @param int $flag_solicitou_contestacao Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
+     * @param int $flag_solicitou_contestacao {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
      * @return $this
      */
     public function setFlagSolicitouContestacao($flag_solicitou_contestacao)
     {
         
         $this->flag_solicitou_contestacao = $flag_solicitou_contestacao;
+        return $this;
+    }
+    
+    /**
+     * Gets tipo_transacao
+     * @return int
+     */
+    public function getTipoTransacao()
+    {
+        return $this->tipo_transacao;
+    }
+  
+    /**
+     * Sets tipo_transacao
+     * @param int $tipo_transacao {{{transacao_corrente_response_tipo_transacao_value}}}
+     * @return $this
+     */
+    public function setTipoTransacao($tipo_transacao)
+    {
+        
+        $this->tipo_transacao = $tipo_transacao;
         return $this;
     }
     

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageMoedaResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista dos tipos de ajustes
+ * @description {{{page_moeda_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

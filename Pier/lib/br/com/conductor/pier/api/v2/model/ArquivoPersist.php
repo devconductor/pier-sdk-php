@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ArquivoPersist Class Doc Comment
  *
  * @category    Class
- * @description Objeto Arquivo para persist\u00EAncia de dados.
+ * @description {{{arquivo_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class ArquivoPersist implements ArrayAccess
 
     
     /**
-      * $id_tipo_arquivo Tipo do arquivo
+      * $id_tipo_arquivo {{{arquivo_persist_id_tipo_arquivo_value}}}
       * @var int
       */
     protected $id_tipo_arquivo;
     
     /**
-      * $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+      * $arquivo {{{arquivo_persist_arquivo_value}}}
       * @var string
       */
     protected $arquivo;
     
     /**
-      * $nome Nome do arquivo.
+      * $nome {{{arquivo_persist_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $extensao Formato/extens\u00E3o do arquivo.
+      * $extensao {{{arquivo_persist_extensao_value}}}
       * @var string
       */
     protected $extensao;
     
     /**
-      * $tipo_comunicacao Tipo de comunica\u00E7\u00E3o.
+      * $tipo_comunicacao {{{arquivo_persist_tipo_comunicacao_value}}}
       * @var string
       */
     protected $tipo_comunicacao;
     
     /**
-      * $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
+      * $detalhes {{{arquivo_persist_detalhes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\ArquivoDetalhesPersist[]
       */
     protected $detalhes;
@@ -180,7 +180,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets id_tipo_arquivo
-     * @param int $id_tipo_arquivo Tipo do arquivo
+     * @param int $id_tipo_arquivo {{{arquivo_persist_id_tipo_arquivo_value}}}
      * @return $this
      */
     public function setIdTipoArquivo($id_tipo_arquivo)
@@ -201,7 +201,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets arquivo
-     * @param string $arquivo Conte\u00FAdo do arquivo convertido em Base 64
+     * @param string $arquivo {{{arquivo_persist_arquivo_value}}}
      * @return $this
      */
     public function setArquivo($arquivo)
@@ -222,7 +222,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do arquivo.
+     * @param string $nome {{{arquivo_persist_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -243,7 +243,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets extensao
-     * @param string $extensao Formato/extens\u00E3o do arquivo.
+     * @param string $extensao {{{arquivo_persist_extensao_value}}}
      * @return $this
      */
     public function setExtensao($extensao)
@@ -264,7 +264,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets tipo_comunicacao
-     * @param string $tipo_comunicacao Tipo de comunica\u00E7\u00E3o.
+     * @param string $tipo_comunicacao {{{arquivo_persist_tipo_comunicacao_value}}}
      * @return $this
      */
     public function setTipoComunicacao($tipo_comunicacao)
@@ -288,7 +288,7 @@ class ArquivoPersist implements ArrayAccess
   
     /**
      * Sets detalhes
-     * @param \br.com.conductor.pier.api.v2.model\ArquivoDetalhesPersist[] $detalhes Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
+     * @param \br.com.conductor.pier.api.v2.model\ArquivoDetalhesPersist[] $detalhes {{{arquivo_persist_detalhes_value}}}
      * @return $this
      */
     public function setDetalhes($detalhes)

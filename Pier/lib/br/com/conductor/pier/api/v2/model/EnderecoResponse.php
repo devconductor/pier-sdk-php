@@ -38,7 +38,7 @@ use \ArrayAccess;
  * EnderecoResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto Endere\u00E7o
+ * @description {{{endereco_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -64,7 +64,8 @@ class EnderecoResponse implements ArrayAccess
         'uf' => 'string',
         'pais' => 'string',
         'data_inclusao' => 'string',
-        'data_ultima_atualizacao' => 'string'
+        'data_ultima_atualizacao' => 'string',
+        'flag_correspondencia' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -89,7 +90,8 @@ class EnderecoResponse implements ArrayAccess
         'uf' => 'uf',
         'pais' => 'pais',
         'data_inclusao' => 'dataInclusao',
-        'data_ultima_atualizacao' => 'dataUltimaAtualizacao'
+        'data_ultima_atualizacao' => 'dataUltimaAtualizacao',
+        'flag_correspondencia' => 'flagCorrespondencia'
     );
   
     static function attributeMap() {
@@ -114,7 +116,8 @@ class EnderecoResponse implements ArrayAccess
         'uf' => 'setUf',
         'pais' => 'setPais',
         'data_inclusao' => 'setDataInclusao',
-        'data_ultima_atualizacao' => 'setDataUltimaAtualizacao'
+        'data_ultima_atualizacao' => 'setDataUltimaAtualizacao',
+        'flag_correspondencia' => 'setFlagCorrespondencia'
     );
   
     static function setters() {
@@ -139,7 +142,8 @@ class EnderecoResponse implements ArrayAccess
         'uf' => 'getUf',
         'pais' => 'getPais',
         'data_inclusao' => 'getDataInclusao',
-        'data_ultima_atualizacao' => 'getDataUltimaAtualizacao'
+        'data_ultima_atualizacao' => 'getDataUltimaAtualizacao',
+        'flag_correspondencia' => 'getFlagCorrespondencia'
     );
   
     static function getters() {
@@ -148,88 +152,94 @@ class EnderecoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+      * $id {{{endereco_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+      * $id_pessoa {{{endereco_response_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+      * $id_tipo_endereco {{{endereco_response_id_tipo_endereco_value}}}
       * @var int
       */
     protected $id_tipo_endereco;
     
     /**
-      * $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+      * $cep {{{endereco_response_cep_value}}}
       * @var string
       */
     protected $cep;
     
     /**
-      * $logradouro Apresenta o nome do Logradouro
+      * $logradouro {{{endereco_response_logradouro_value}}}
       * @var string
       */
     protected $logradouro;
     
     /**
-      * $numero Apresenta o n\u00FAmero do endere\u00E7o
+      * $numero {{{endereco_response_numero_value}}}
       * @var int
       */
     protected $numero;
     
     /**
-      * $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+      * $complemento {{{endereco_response_complemento_value}}}
       * @var string
       */
     protected $complemento;
     
     /**
-      * $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+      * $ponto_referencia {{{endereco_response_ponto_referencia_value}}}
       * @var string
       */
     protected $ponto_referencia;
     
     /**
-      * $bairro Apresenta nome do bairro
+      * $bairro {{{endereco_response_bairro_value}}}
       * @var string
       */
     protected $bairro;
     
     /**
-      * $cidade Apresenta nome da cidade
+      * $cidade {{{endereco_response_cidade_value}}}
       * @var string
       */
     protected $cidade;
     
     /**
-      * $uf Apresenta sigla da Unidade Federativa
+      * $uf {{{endereco_response_uf_value}}}
       * @var string
       */
     protected $uf;
     
     /**
-      * $pais Apresenta nome do Pais
+      * $pais {{{endereco_response_pais_value}}}
       * @var string
       */
     protected $pais;
     
     /**
-      * $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00E7o
+      * $data_inclusao {{{endereco_response_data_inclusao_value}}}
       * @var string
       */
     protected $data_inclusao;
     
     /**
-      * $data_ultima_atualizacao Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
+      * $data_ultima_atualizacao {{{endereco_response_data_ultima_atualizacao_value}}}
       * @var string
       */
     protected $data_ultima_atualizacao;
+    
+    /**
+      * $flag_correspondencia {{{endereco_response_flag_correspondencia_value}}}
+      * @var bool
+      */
+    protected $flag_correspondencia;
     
 
     /**
@@ -254,6 +264,7 @@ class EnderecoResponse implements ArrayAccess
             $this->pais = $data["pais"];
             $this->data_inclusao = $data["data_inclusao"];
             $this->data_ultima_atualizacao = $data["data_ultima_atualizacao"];
+            $this->flag_correspondencia = $data["flag_correspondencia"];
         }
     }
     
@@ -268,7 +279,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+     * @param int $id {{{endereco_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -289,7 +300,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+     * @param int $id_pessoa {{{endereco_response_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -310,7 +321,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets id_tipo_endereco
-     * @param int $id_tipo_endereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+     * @param int $id_tipo_endereco {{{endereco_response_id_tipo_endereco_value}}}
      * @return $this
      */
     public function setIdTipoEndereco($id_tipo_endereco)
@@ -331,7 +342,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets cep
-     * @param string $cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+     * @param string $cep {{{endereco_response_cep_value}}}
      * @return $this
      */
     public function setCep($cep)
@@ -352,7 +363,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets logradouro
-     * @param string $logradouro Apresenta o nome do Logradouro
+     * @param string $logradouro {{{endereco_response_logradouro_value}}}
      * @return $this
      */
     public function setLogradouro($logradouro)
@@ -373,7 +384,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets numero
-     * @param int $numero Apresenta o n\u00FAmero do endere\u00E7o
+     * @param int $numero {{{endereco_response_numero_value}}}
      * @return $this
      */
     public function setNumero($numero)
@@ -394,7 +405,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets complemento
-     * @param string $complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+     * @param string $complemento {{{endereco_response_complemento_value}}}
      * @return $this
      */
     public function setComplemento($complemento)
@@ -415,7 +426,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets ponto_referencia
-     * @param string $ponto_referencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+     * @param string $ponto_referencia {{{endereco_response_ponto_referencia_value}}}
      * @return $this
      */
     public function setPontoReferencia($ponto_referencia)
@@ -436,7 +447,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets bairro
-     * @param string $bairro Apresenta nome do bairro
+     * @param string $bairro {{{endereco_response_bairro_value}}}
      * @return $this
      */
     public function setBairro($bairro)
@@ -457,7 +468,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets cidade
-     * @param string $cidade Apresenta nome da cidade
+     * @param string $cidade {{{endereco_response_cidade_value}}}
      * @return $this
      */
     public function setCidade($cidade)
@@ -478,7 +489,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets uf
-     * @param string $uf Apresenta sigla da Unidade Federativa
+     * @param string $uf {{{endereco_response_uf_value}}}
      * @return $this
      */
     public function setUf($uf)
@@ -499,7 +510,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets pais
-     * @param string $pais Apresenta nome do Pais
+     * @param string $pais {{{endereco_response_pais_value}}}
      * @return $this
      */
     public function setPais($pais)
@@ -520,7 +531,7 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets data_inclusao
-     * @param string $data_inclusao Apresenta a data em que fora cadastrado o Endere\u00E7o
+     * @param string $data_inclusao {{{endereco_response_data_inclusao_value}}}
      * @return $this
      */
     public function setDataInclusao($data_inclusao)
@@ -541,13 +552,34 @@ class EnderecoResponse implements ArrayAccess
   
     /**
      * Sets data_ultima_atualizacao
-     * @param string $data_ultima_atualizacao Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
+     * @param string $data_ultima_atualizacao {{{endereco_response_data_ultima_atualizacao_value}}}
      * @return $this
      */
     public function setDataUltimaAtualizacao($data_ultima_atualizacao)
     {
         
         $this->data_ultima_atualizacao = $data_ultima_atualizacao;
+        return $this;
+    }
+    
+    /**
+     * Gets flag_correspondencia
+     * @return bool
+     */
+    public function getFlagCorrespondencia()
+    {
+        return $this->flag_correspondencia;
+    }
+  
+    /**
+     * Sets flag_correspondencia
+     * @param bool $flag_correspondencia {{{endereco_response_flag_correspondencia_value}}}
+     * @return $this
+     */
+    public function setFlagCorrespondencia($flag_correspondencia)
+    {
+        
+        $this->flag_correspondencia = $flag_correspondencia;
         return $this;
     }
     

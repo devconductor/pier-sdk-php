@@ -38,7 +38,7 @@ use \ArrayAccess;
  * PageStatusCartaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Lista de Status Cart\u00F5es
+ * @description {{{page_status_cartao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

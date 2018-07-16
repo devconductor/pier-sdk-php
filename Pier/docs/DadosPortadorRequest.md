@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartao** | **string** | N\u00FAmero do cart\u00E3o. | 
-**cpf** | **string** | N\u00FAmero do CPF. | 
-**nome** | **string** | Nome do portador. | [optional] 
-**data_nascimento** | **string** | Data de nascimento do portador do cart\u00E3o. | [optional] 
-**cep_residencial** | **string** | CEP da resid\u00EAncia do portador da conta. | 
-**email** | **string** | E-mail do portador do cart\u00E3o. | 
-**ddd** | **string** | DDD do n\u00FAmero de telefone do portador do cart\u00E3o. | [optional] 
-**telefone** | **string** | N\u00FAmero do telefone do portador do cart\u00E3o. | [optional] 
+**cartao** | **string** | {{{dados_portador_request_cartao_value}}} | 
+**cpf** | **string** | {{{dados_portador_request_cpf_value}}} | 
+**nome** | **string** | {{{dados_portador_request_nome_value}}} | [optional] 
+**data_nascimento** | **string** | {{{dados_portador_request_data_nascimento_value}}} | [optional] 
+**cep_residencial** | **string** | {{{dados_portador_request_cep_residencial_value}}} | 
+**email** | **string** | {{{dados_portador_request_email_value}}} | 
+**ddd** | **string** | {{{dados_portador_request_ddd_value}}} | [optional] 
+**telefone** | **string** | {{{dados_portador_request_telefone_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

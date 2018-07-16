@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo. | [optional] 
-**nome_campo** | **string** | Nome que identifica o detalhe do arquivo | 
-**conteudo** | **string** | Conte\u00FAdo do nomeCampo | 
+**id** | **int** | {{{arquivo_parametro_response_id_value}}} | [optional] 
+**nome_campo** | **string** | {{{arquivo_parametro_response_nome_campo_value}}} | 
+**conteudo** | **string** | {{{arquivo_parametro_response_conteudo_value}}} | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

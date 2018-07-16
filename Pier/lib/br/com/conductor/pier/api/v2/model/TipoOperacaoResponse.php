@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TipoOperacaoResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
+ * @description {{{tipo_operacao_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -156,97 +156,97 @@ class TipoOperacaoResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do TipoOperacao
+      * $id {{{tipo_operacao_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $tipo_operacao C\u00F3digo do TipoOperacao
+      * $tipo_operacao {{{tipo_operacao_response_tipo_operacao_value}}}
       * @var string
       */
     protected $tipo_operacao;
     
     /**
-      * $nome Nome do TipoOperacao
+      * $nome {{{tipo_operacao_response_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $descricao Decri\u00E7\u00E3o do TipoOperacao
+      * $descricao {{{tipo_operacao_response_descricao_value}}}
       * @var string
       */
     protected $descricao;
     
     /**
-      * $excedente_permitido Excedente permitido para o TipoOperacao
+      * $excedente_permitido {{{tipo_operacao_response_excedente_permitido_value}}}
       * @var Number
       */
     protected $excedente_permitido;
     
     /**
-      * $tipo_excedente_permitido Tipo do Excedente permitido para o TipoOperacao
+      * $tipo_excedente_permitido {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
       * @var string
       */
     protected $tipo_excedente_permitido;
     
     /**
-      * $valor_minimo Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
+      * $valor_minimo {{{tipo_operacao_response_valor_minimo_value}}}
       * @var Number
       */
     protected $valor_minimo;
     
     /**
-      * $valor_maximo Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
+      * $valor_maximo {{{tipo_operacao_response_valor_maximo_value}}}
       * @var Number
       */
     protected $valor_maximo;
     
     /**
-      * $valor_tac Valor TAC da transa\u00E7\u00E3o do TipoOperacao
+      * $valor_tac {{{tipo_operacao_response_valor_t_a_c_value}}}
       * @var Number
       */
     protected $valor_tac;
     
     /**
-      * $flag_tira_tac Flag Tira TAC do TipoOperacao
+      * $flag_tira_tac {{{tipo_operacao_response_flag_tira_tac_value}}}
       * @var int
       */
     protected $flag_tira_tac;
     
     /**
-      * $id_produto Identificador do Produto do TipoOperacao
+      * $id_produto {{{tipo_operacao_response_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $id_estabelecimento Identificador do Estabelecimento do TipoOperacao
+      * $id_estabelecimento {{{tipo_operacao_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $tarifa Tarifa do TipoOperacao
+      * $tarifa {{{tipo_operacao_response_tarifa_value}}}
       * @var Number
       */
     protected $tarifa;
     
     /**
-      * $remuneracao_emissor Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
+      * $remuneracao_emissor {{{tipo_operacao_response_remuneracao_emissor_value}}}
       * @var Number
       */
     protected $remuneracao_emissor;
     
     /**
-      * $plano_maximo Plano m\u00E1ximo do TipoOperacao
+      * $plano_maximo {{{tipo_operacao_response_plano_maximo_value}}}
       * @var int
       */
     protected $plano_maximo;
     
     /**
-      * $plano_minimo Plano minimo do TipoOperacao
+      * $plano_minimo {{{tipo_operacao_response_plano_minimo_value}}}
       * @var int
       */
     protected $plano_minimo;
@@ -290,7 +290,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do TipoOperacao
+     * @param int $id {{{tipo_operacao_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -311,7 +311,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_operacao
-     * @param string $tipo_operacao C\u00F3digo do TipoOperacao
+     * @param string $tipo_operacao {{{tipo_operacao_response_tipo_operacao_value}}}
      * @return $this
      */
     public function setTipoOperacao($tipo_operacao)
@@ -332,7 +332,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome Nome do TipoOperacao
+     * @param string $nome {{{tipo_operacao_response_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -353,7 +353,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets descricao
-     * @param string $descricao Decri\u00E7\u00E3o do TipoOperacao
+     * @param string $descricao {{{tipo_operacao_response_descricao_value}}}
      * @return $this
      */
     public function setDescricao($descricao)
@@ -374,7 +374,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets excedente_permitido
-     * @param Number $excedente_permitido Excedente permitido para o TipoOperacao
+     * @param Number $excedente_permitido {{{tipo_operacao_response_excedente_permitido_value}}}
      * @return $this
      */
     public function setExcedentePermitido($excedente_permitido)
@@ -395,7 +395,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets tipo_excedente_permitido
-     * @param string $tipo_excedente_permitido Tipo do Excedente permitido para o TipoOperacao
+     * @param string $tipo_excedente_permitido {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
      * @return $this
      */
     public function setTipoExcedentePermitido($tipo_excedente_permitido)
@@ -416,7 +416,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_minimo
-     * @param Number $valor_minimo Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
+     * @param Number $valor_minimo {{{tipo_operacao_response_valor_minimo_value}}}
      * @return $this
      */
     public function setValorMinimo($valor_minimo)
@@ -437,7 +437,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_maximo
-     * @param Number $valor_maximo Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
+     * @param Number $valor_maximo {{{tipo_operacao_response_valor_maximo_value}}}
      * @return $this
      */
     public function setValorMaximo($valor_maximo)
@@ -458,7 +458,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets valor_tac
-     * @param Number $valor_tac Valor TAC da transa\u00E7\u00E3o do TipoOperacao
+     * @param Number $valor_tac {{{tipo_operacao_response_valor_t_a_c_value}}}
      * @return $this
      */
     public function setValorTac($valor_tac)
@@ -479,7 +479,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets flag_tira_tac
-     * @param int $flag_tira_tac Flag Tira TAC do TipoOperacao
+     * @param int $flag_tira_tac {{{tipo_operacao_response_flag_tira_tac_value}}}
      * @return $this
      */
     public function setFlagTiraTac($flag_tira_tac)
@@ -500,7 +500,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto Identificador do Produto do TipoOperacao
+     * @param int $id_produto {{{tipo_operacao_response_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -521,7 +521,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento Identificador do Estabelecimento do TipoOperacao
+     * @param int $id_estabelecimento {{{tipo_operacao_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -542,7 +542,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets tarifa
-     * @param Number $tarifa Tarifa do TipoOperacao
+     * @param Number $tarifa {{{tipo_operacao_response_tarifa_value}}}
      * @return $this
      */
     public function setTarifa($tarifa)
@@ -563,7 +563,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets remuneracao_emissor
-     * @param Number $remuneracao_emissor Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
+     * @param Number $remuneracao_emissor {{{tipo_operacao_response_remuneracao_emissor_value}}}
      * @return $this
      */
     public function setRemuneracaoEmissor($remuneracao_emissor)
@@ -584,7 +584,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets plano_maximo
-     * @param int $plano_maximo Plano m\u00E1ximo do TipoOperacao
+     * @param int $plano_maximo {{{tipo_operacao_response_plano_maximo_value}}}
      * @return $this
      */
     public function setPlanoMaximo($plano_maximo)
@@ -605,7 +605,7 @@ class TipoOperacaoResponse implements ArrayAccess
   
     /**
      * Sets plano_minimo
-     * @param int $plano_minimo Plano minimo do TipoOperacao
+     * @param int $plano_minimo {{{tipo_operacao_response_plano_minimo_value}}}
      * @return $this
      */
     public function setPlanoMinimo($plano_minimo)

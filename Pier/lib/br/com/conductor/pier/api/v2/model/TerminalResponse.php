@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TerminalResponse Class Doc Comment
  *
  * @category    Class
- * @description ObjetoTerminal
+ * @description {{{terminal_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -116,37 +116,37 @@ class TerminalResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+      * $id {{{terminal_response_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $terminal N\u00FAmero \u00FAnico do terminal.
+      * $terminal {{{terminal_response_terminal_value}}}
       * @var string
       */
     protected $terminal;
     
     /**
-      * $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+      * $numero_estabelecimento {{{terminal_response_numero_estabelecimento_value}}}
       * @var int
       */
     protected $numero_estabelecimento;
     
     /**
-      * $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
+      * $id_estabelecimento {{{terminal_response_id_estabelecimento_value}}}
       * @var int
       */
     protected $id_estabelecimento;
     
     /**
-      * $flag_consulta_extrato Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+      * $flag_consulta_extrato {{{terminal_response_flag_consulta_extrato_value}}}
       * @var bool
       */
     protected $flag_consulta_extrato;
     
     /**
-      * $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+      * $flag_terminal_virtual {{{terminal_response_flag_terminal_virtual_value}}}
       * @var bool
       */
     protected $flag_terminal_virtual;
@@ -180,7 +180,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+     * @param int $id {{{terminal_response_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -201,7 +201,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets terminal
-     * @param string $terminal N\u00FAmero \u00FAnico do terminal.
+     * @param string $terminal {{{terminal_response_terminal_value}}}
      * @return $this
      */
     public function setTerminal($terminal)
@@ -222,7 +222,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets numero_estabelecimento
-     * @param int $numero_estabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+     * @param int $numero_estabelecimento {{{terminal_response_numero_estabelecimento_value}}}
      * @return $this
      */
     public function setNumeroEstabelecimento($numero_estabelecimento)
@@ -243,7 +243,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets id_estabelecimento
-     * @param int $id_estabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
+     * @param int $id_estabelecimento {{{terminal_response_id_estabelecimento_value}}}
      * @return $this
      */
     public function setIdEstabelecimento($id_estabelecimento)
@@ -264,7 +264,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets flag_consulta_extrato
-     * @param bool $flag_consulta_extrato Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+     * @param bool $flag_consulta_extrato {{{terminal_response_flag_consulta_extrato_value}}}
      * @return $this
      */
     public function setFlagConsultaExtrato($flag_consulta_extrato)
@@ -285,7 +285,7 @@ class TerminalResponse implements ArrayAccess
   
     /**
      * Sets flag_terminal_virtual
-     * @param bool $flag_terminal_virtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+     * @param bool $flag_terminal_virtual {{{terminal_response_flag_terminal_virtual_value}}}
      * @return $this
      */
     public function setFlagTerminalVirtual($flag_terminal_virtual)

@@ -38,7 +38,7 @@ use \ArrayAccess;
  * DetalhesFaturaConsignadaResponse Class Doc Comment
  *
  * @category    Class
- * @description Objeto contendo os detalhes de uma fatura consignada
+ * @description {{{detalhes_fatura_consignada_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class DetalhesFaturaConsignadaResponse implements ArrayAccess
 
     
     /**
-      * $fatura_consignada_response Apresenta os detalhes da fatura
+      * $fatura_consignada_response {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
       * @var \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse
       */
     protected $fatura_consignada_response;
     
     /**
-      * $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+      * $transacoes {{{detalhes_fatura_consignada_response_transacoes_value}}}
       * @var \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[]
       */
     protected $transacoes;
@@ -136,7 +136,7 @@ class DetalhesFaturaConsignadaResponse implements ArrayAccess
   
     /**
      * Sets fatura_consignada_response
-     * @param \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse $fatura_consignada_response Apresenta os detalhes da fatura
+     * @param \br.com.conductor.pier.api.v2.model\FaturaConsignadaResponse $fatura_consignada_response {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
      * @return $this
      */
     public function setFaturaConsignadaResponse($fatura_consignada_response)
@@ -157,7 +157,7 @@ class DetalhesFaturaConsignadaResponse implements ArrayAccess
   
     /**
      * Sets transacoes
-     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+     * @param \br.com.conductor.pier.api.v2.model\TransacoesCorrentesResponse[] $transacoes {{{detalhes_fatura_consignada_response_transacoes_value}}}
      * @return $this
      */
     public function setTransacoes($transacoes)

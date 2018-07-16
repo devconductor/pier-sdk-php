@@ -37,7 +37,7 @@ namespace br.com.conductor.pier.api.v2.model;
  * RiscoFraudeDetalhadoResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Objeto de resposta de Risco de Fraude Detalhado
+ * @description {{{risco_fraude_detalhado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2

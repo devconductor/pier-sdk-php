@@ -38,7 +38,7 @@ use \ArrayAccess;
  * HistoricoEventosResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
+ * @description {{{historico_eventos_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class HistoricoEventosResponse implements ArrayAccess
 
     
     /**
-      * $id_historico C\u00F3digo identificador do evento
+      * $id_historico {{{historico_eventos_response_id_historico_value}}}
       * @var int
       */
     protected $id_historico;
     
     /**
-      * $data_historico Data do evento
+      * $data_historico {{{historico_eventos_response_data_historico_value}}}
       * @var string
       */
     protected $data_historico;
     
     /**
-      * $tipo_historico Nome do campo alterado
+      * $tipo_historico {{{historico_eventos_response_tipo_historico_value}}}
       * @var string
       */
     protected $tipo_historico;
     
     /**
-      * $valor_anterior Valor anterior a modifica\u00E7\u00E3o
+      * $valor_anterior {{{historico_eventos_response_valor_anterior_value}}}
       * @var string
       */
     protected $valor_anterior;
     
     /**
-      * $valor_atribuido Valor atribu\u00EDdo na modifica\u00E7\u00E3o
+      * $valor_atribuido {{{historico_eventos_response_valor_atribuido_value}}}
       * @var string
       */
     protected $valor_atribuido;
@@ -169,7 +169,7 @@ class HistoricoEventosResponse implements ArrayAccess
   
     /**
      * Sets id_historico
-     * @param int $id_historico C\u00F3digo identificador do evento
+     * @param int $id_historico {{{historico_eventos_response_id_historico_value}}}
      * @return $this
      */
     public function setIdHistorico($id_historico)
@@ -190,7 +190,7 @@ class HistoricoEventosResponse implements ArrayAccess
   
     /**
      * Sets data_historico
-     * @param string $data_historico Data do evento
+     * @param string $data_historico {{{historico_eventos_response_data_historico_value}}}
      * @return $this
      */
     public function setDataHistorico($data_historico)
@@ -211,7 +211,7 @@ class HistoricoEventosResponse implements ArrayAccess
   
     /**
      * Sets tipo_historico
-     * @param string $tipo_historico Nome do campo alterado
+     * @param string $tipo_historico {{{historico_eventos_response_tipo_historico_value}}}
      * @return $this
      */
     public function setTipoHistorico($tipo_historico)
@@ -232,7 +232,7 @@ class HistoricoEventosResponse implements ArrayAccess
   
     /**
      * Sets valor_anterior
-     * @param string $valor_anterior Valor anterior a modifica\u00E7\u00E3o
+     * @param string $valor_anterior {{{historico_eventos_response_valor_anterior_value}}}
      * @return $this
      */
     public function setValorAnterior($valor_anterior)
@@ -253,7 +253,7 @@ class HistoricoEventosResponse implements ArrayAccess
   
     /**
      * Sets valor_atribuido
-     * @param string $valor_atribuido Valor atribu\u00EDdo na modifica\u00E7\u00E3o
+     * @param string $valor_atribuido {{{historico_eventos_response_valor_atribuido_value}}}
      * @return $this
      */
     public function setValorAtribuido($valor_atribuido)

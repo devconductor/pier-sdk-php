@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ReferenciaComercialAprovadoResponse Class Doc Comment
  *
  * @category    Class
- * @description ReferenciaComercialAprovadoResponse
+ * @description {{{referencia_comercial_aprovado_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -112,31 +112,31 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
 
     
     /**
-      * $razao_social Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+      * $razao_social {{{referencia_comercial_aprovado_response_razao_social_value}}}
       * @var string
       */
     protected $razao_social;
     
     /**
-      * $nome_contrato Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
+      * $nome_contrato {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
       * @var string
       */
     protected $nome_contrato;
     
     /**
-      * $ddd Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
+      * $ddd {{{referencia_comercial_aprovado_response_ddd_value}}}
       * @var string
       */
     protected $ddd;
     
     /**
-      * $telefone Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
+      * $telefone {{{referencia_comercial_aprovado_response_telefone_value}}}
       * @var string
       */
     protected $telefone;
     
     /**
-      * $email Apresenta o e-mail de contato da refer\u00EAncia comercial
+      * $email {{{referencia_comercial_aprovado_response_email_value}}}
       * @var string
       */
     protected $email;
@@ -169,7 +169,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets razao_social
-     * @param string $razao_social Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+     * @param string $razao_social {{{referencia_comercial_aprovado_response_razao_social_value}}}
      * @return $this
      */
     public function setRazaoSocial($razao_social)
@@ -190,7 +190,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets nome_contrato
-     * @param string $nome_contrato Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
+     * @param string $nome_contrato {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
      * @return $this
      */
     public function setNomeContrato($nome_contrato)
@@ -211,7 +211,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets ddd
-     * @param string $ddd Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
+     * @param string $ddd {{{referencia_comercial_aprovado_response_ddd_value}}}
      * @return $this
      */
     public function setDdd($ddd)
@@ -232,7 +232,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets telefone
-     * @param string $telefone Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
+     * @param string $telefone {{{referencia_comercial_aprovado_response_telefone_value}}}
      * @return $this
      */
     public function setTelefone($telefone)
@@ -253,7 +253,7 @@ class ReferenciaComercialAprovadoResponse implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email Apresenta o e-mail de contato da refer\u00EAncia comercial
+     * @param string $email {{{referencia_comercial_aprovado_response_email_value}}}
      * @return $this
      */
     public function setEmail($email)

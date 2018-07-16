@@ -38,7 +38,7 @@ use \ArrayAccess;
  * ConfiguracaoRotativoPersist Class Doc Comment
  *
  * @category    Class
- * @description Configura\u00E7\u00E3o Rotativo
+ * @description {{{configuracao_rotativo_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,91 +152,91 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
 
     
     /**
-      * $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
+      * $id_produto {{{configuracao_rotativo_persist_id_produto_value}}}
       * @var int
       */
     protected $id_produto;
     
     /**
-      * $compoe_oferta_valor_rotativo Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.
+      * $compoe_oferta_valor_rotativo {{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}
       * @var bool
       */
     protected $compoe_oferta_valor_rotativo;
     
     /**
-      * $compoe_oferta_valor_nao_financiavel Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
+      * $compoe_oferta_valor_nao_financiavel {{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}
       * @var bool
       */
     protected $compoe_oferta_valor_nao_financiavel;
     
     /**
-      * $compoe_oferta_valor_novos_lancamentos Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
+      * $compoe_oferta_valor_novos_lancamentos {{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}
       * @var bool
       */
     protected $compoe_oferta_valor_novos_lancamentos;
     
     /**
-      * $recalcula_parcelamento_para_entrada_maior Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
+      * $recalcula_parcelamento_para_entrada_maior {{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}
       * @var bool
       */
     protected $recalcula_parcelamento_para_entrada_maior;
     
     /**
-      * $minimo_parcelas_recalculo_parcelamento Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
+      * $minimo_parcelas_recalculo_parcelamento {{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}
       * @var bool
       */
     protected $minimo_parcelas_recalculo_parcelamento;
     
     /**
-      * $recalcula_parcelamento Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
+      * $recalcula_parcelamento {{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}
       * @var bool
       */
     protected $recalcula_parcelamento;
     
     /**
-      * $numero_minimo_ofertas N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
+      * $numero_minimo_ofertas {{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}
       * @var bool
       */
     protected $numero_minimo_ofertas;
     
     /**
-      * $aceita_pagamento_maior_que_entrada Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
+      * $aceita_pagamento_maior_que_entrada {{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}
       * @var bool
       */
     protected $aceita_pagamento_maior_que_entrada;
     
     /**
-      * $antecipa_parcelamentos_abertos Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.
+      * $antecipa_parcelamentos_abertos {{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}
       * @var bool
       */
     protected $antecipa_parcelamentos_abertos;
     
     /**
-      * $valor_minimo_parcela Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
+      * $valor_minimo_parcela {{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}
       * @var Number
       */
     protected $valor_minimo_parcela;
     
     /**
-      * $percentual_limitar_valor_minimo_parcela Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.
+      * $percentual_limitar_valor_minimo_parcela {{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}
       * @var Number
       */
     protected $percentual_limitar_valor_minimo_parcela;
     
     /**
-      * $id_regra_campanha C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
+      * $id_regra_campanha {{{configuracao_rotativo_persist_id_regra_campanha_value}}}
       * @var int
       */
     protected $id_regra_campanha;
     
     /**
-      * $parcelar_apenas_minimo Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
+      * $parcelar_apenas_minimo {{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}
       * @var bool
       */
     protected $parcelar_apenas_minimo;
     
     /**
-      * $usuario Nome do usu\u00E1rio
+      * $usuario {{{configuracao_rotativo_persist_usuario_value}}}
       * @var string
       */
     protected $usuario;
@@ -279,7 +279,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets id_produto
-     * @param int $id_produto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
+     * @param int $id_produto {{{configuracao_rotativo_persist_id_produto_value}}}
      * @return $this
      */
     public function setIdProduto($id_produto)
@@ -300,7 +300,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets compoe_oferta_valor_rotativo
-     * @param bool $compoe_oferta_valor_rotativo Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.
+     * @param bool $compoe_oferta_valor_rotativo {{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}
      * @return $this
      */
     public function setCompoeOfertaValorRotativo($compoe_oferta_valor_rotativo)
@@ -321,7 +321,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets compoe_oferta_valor_nao_financiavel
-     * @param bool $compoe_oferta_valor_nao_financiavel Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
+     * @param bool $compoe_oferta_valor_nao_financiavel {{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}
      * @return $this
      */
     public function setCompoeOfertaValorNaoFinanciavel($compoe_oferta_valor_nao_financiavel)
@@ -342,7 +342,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets compoe_oferta_valor_novos_lancamentos
-     * @param bool $compoe_oferta_valor_novos_lancamentos Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
+     * @param bool $compoe_oferta_valor_novos_lancamentos {{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}
      * @return $this
      */
     public function setCompoeOfertaValorNovosLancamentos($compoe_oferta_valor_novos_lancamentos)
@@ -363,7 +363,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets recalcula_parcelamento_para_entrada_maior
-     * @param bool $recalcula_parcelamento_para_entrada_maior Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
+     * @param bool $recalcula_parcelamento_para_entrada_maior {{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}
      * @return $this
      */
     public function setRecalculaParcelamentoParaEntradaMaior($recalcula_parcelamento_para_entrada_maior)
@@ -384,7 +384,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets minimo_parcelas_recalculo_parcelamento
-     * @param bool $minimo_parcelas_recalculo_parcelamento Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
+     * @param bool $minimo_parcelas_recalculo_parcelamento {{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}
      * @return $this
      */
     public function setMinimoParcelasRecalculoParcelamento($minimo_parcelas_recalculo_parcelamento)
@@ -405,7 +405,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets recalcula_parcelamento
-     * @param bool $recalcula_parcelamento Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
+     * @param bool $recalcula_parcelamento {{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}
      * @return $this
      */
     public function setRecalculaParcelamento($recalcula_parcelamento)
@@ -426,7 +426,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets numero_minimo_ofertas
-     * @param bool $numero_minimo_ofertas N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
+     * @param bool $numero_minimo_ofertas {{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}
      * @return $this
      */
     public function setNumeroMinimoOfertas($numero_minimo_ofertas)
@@ -447,7 +447,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets aceita_pagamento_maior_que_entrada
-     * @param bool $aceita_pagamento_maior_que_entrada Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
+     * @param bool $aceita_pagamento_maior_que_entrada {{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}
      * @return $this
      */
     public function setAceitaPagamentoMaiorQueEntrada($aceita_pagamento_maior_que_entrada)
@@ -468,7 +468,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets antecipa_parcelamentos_abertos
-     * @param bool $antecipa_parcelamentos_abertos Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.
+     * @param bool $antecipa_parcelamentos_abertos {{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}
      * @return $this
      */
     public function setAntecipaParcelamentosAbertos($antecipa_parcelamentos_abertos)
@@ -489,7 +489,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets valor_minimo_parcela
-     * @param Number $valor_minimo_parcela Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
+     * @param Number $valor_minimo_parcela {{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}
      * @return $this
      */
     public function setValorMinimoParcela($valor_minimo_parcela)
@@ -510,7 +510,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets percentual_limitar_valor_minimo_parcela
-     * @param Number $percentual_limitar_valor_minimo_parcela Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.
+     * @param Number $percentual_limitar_valor_minimo_parcela {{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}
      * @return $this
      */
     public function setPercentualLimitarValorMinimoParcela($percentual_limitar_valor_minimo_parcela)
@@ -531,7 +531,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets id_regra_campanha
-     * @param int $id_regra_campanha C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
+     * @param int $id_regra_campanha {{{configuracao_rotativo_persist_id_regra_campanha_value}}}
      * @return $this
      */
     public function setIdRegraCampanha($id_regra_campanha)
@@ -552,7 +552,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets parcelar_apenas_minimo
-     * @param bool $parcelar_apenas_minimo Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
+     * @param bool $parcelar_apenas_minimo {{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}
      * @return $this
      */
     public function setParcelarApenasMinimo($parcelar_apenas_minimo)
@@ -573,7 +573,7 @@ class ConfiguracaoRotativoPersist implements ArrayAccess
   
     /**
      * Sets usuario
-     * @param string $usuario Nome do usu\u00E1rio
+     * @param string $usuario {{{configuracao_rotativo_persist_usuario_value}}}
      * @return $this
      */
     public function setUsuario($usuario)

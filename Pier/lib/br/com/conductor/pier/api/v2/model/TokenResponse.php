@@ -38,7 +38,7 @@ use \ArrayAccess;
  * TokenResponse Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso token
+ * @description {{{token_response_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -56,9 +56,9 @@ class TokenResponse implements ArrayAccess
         'owner' => 'string',
         'status' => 'string',
         'criado_por' => 'string',
-        'data_criacao' => '\DateTime',
+        'data_criacao' => 'string',
         'alterado_por' => 'string',
-        'data_modificacao' => '\DateTime'
+        'data_modificacao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -124,50 +124,50 @@ class TokenResponse implements ArrayAccess
 
     
     /**
-      * $id C\u00F3digo identificador do token
+      * $id {{{token_dto_id_value}}}
       * @var int
       */
     protected $id;
     
     /**
-      * $base C\u00F3digo identificador da base
+      * $base {{{token_dto_base_value}}}
       * @var int
       */
     protected $base;
     
     /**
-      * $owner Owner do token
+      * $owner {{{token_dto_owner_value}}}
       * @var string
       */
     protected $owner;
     
     /**
-      * $status Status do token
+      * $status {{{token_dto_status_value}}}
       * @var string
       */
     protected $status;
     
     /**
-      * $criado_por Descri\u00E7\u00E3o de quem criou o token
+      * $criado_por {{{token_dto_criado_por_value}}}
       * @var string
       */
     protected $criado_por;
     
     /**
-      * $data_criacao Data de cria\u00E7\u00E3o do token
-      * @var \DateTime
+      * $data_criacao {{{token_dto_data_criacao_value}}}
+      * @var string
       */
     protected $data_criacao;
     
     /**
-      * $alterado_por Descri\u00E7\u00E3o de quem alterou o token
+      * $alterado_por {{{token_dto_alterado_por_value}}}
       * @var string
       */
     protected $alterado_por;
     
     /**
-      * $data_modificacao Data de modifica\u00E7\u00E3o do token
-      * @var \DateTime
+      * $data_modificacao {{{token_dto_data_modificacao_value}}}
+      * @var string
       */
     protected $data_modificacao;
     
@@ -202,7 +202,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets id
-     * @param int $id C\u00F3digo identificador do token
+     * @param int $id {{{token_dto_id_value}}}
      * @return $this
      */
     public function setId($id)
@@ -223,7 +223,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets base
-     * @param int $base C\u00F3digo identificador da base
+     * @param int $base {{{token_dto_base_value}}}
      * @return $this
      */
     public function setBase($base)
@@ -244,7 +244,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets owner
-     * @param string $owner Owner do token
+     * @param string $owner {{{token_dto_owner_value}}}
      * @return $this
      */
     public function setOwner($owner)
@@ -265,7 +265,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets status
-     * @param string $status Status do token
+     * @param string $status {{{token_dto_status_value}}}
      * @return $this
      */
     public function setStatus($status)
@@ -289,7 +289,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets criado_por
-     * @param string $criado_por Descri\u00E7\u00E3o de quem criou o token
+     * @param string $criado_por {{{token_dto_criado_por_value}}}
      * @return $this
      */
     public function setCriadoPor($criado_por)
@@ -301,7 +301,7 @@ class TokenResponse implements ArrayAccess
     
     /**
      * Gets data_criacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataCriacao()
     {
@@ -310,7 +310,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets data_criacao
-     * @param \DateTime $data_criacao Data de cria\u00E7\u00E3o do token
+     * @param string $data_criacao {{{token_dto_data_criacao_value}}}
      * @return $this
      */
     public function setDataCriacao($data_criacao)
@@ -331,7 +331,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets alterado_por
-     * @param string $alterado_por Descri\u00E7\u00E3o de quem alterou o token
+     * @param string $alterado_por {{{token_dto_alterado_por_value}}}
      * @return $this
      */
     public function setAlteradoPor($alterado_por)
@@ -343,7 +343,7 @@ class TokenResponse implements ArrayAccess
     
     /**
      * Gets data_modificacao
-     * @return \DateTime
+     * @return string
      */
     public function getDataModificacao()
     {
@@ -352,7 +352,7 @@ class TokenResponse implements ArrayAccess
   
     /**
      * Sets data_modificacao
-     * @param \DateTime $data_modificacao Data de modifica\u00E7\u00E3o do token
+     * @param string $data_modificacao {{{token_dto_data_modificacao_value}}}
      * @return $this
      */
     public function setDataModificacao($data_modificacao)

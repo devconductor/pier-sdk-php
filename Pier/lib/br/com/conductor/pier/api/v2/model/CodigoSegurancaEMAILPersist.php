@@ -38,7 +38,7 @@ use \ArrayAccess;
  * CodigoSegurancaEMAILPersist Class Doc Comment
  *
  * @category    Class
- * @description Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+ * @description {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -100,13 +100,13 @@ class CodigoSegurancaEMAILPersist implements ArrayAccess
 
     
     /**
-      * $email E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
+      * $email {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
       * @var string
       */
     protected $email;
     
     /**
-      * $codigo_seguranca Token para valida\u00E7\u00E3o.
+      * $codigo_seguranca {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
       * @var string
       */
     protected $codigo_seguranca;
@@ -136,7 +136,7 @@ class CodigoSegurancaEMAILPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
+     * @param string $email {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
      * @return $this
      */
     public function setEmail($email)
@@ -157,7 +157,7 @@ class CodigoSegurancaEMAILPersist implements ArrayAccess
   
     /**
      * Sets codigo_seguranca
-     * @param string $codigo_seguranca Token para valida\u00E7\u00E3o.
+     * @param string $codigo_seguranca {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
      * @return $this
      */
     public function setCodigoSeguranca($codigo_seguranca)
