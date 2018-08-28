@@ -197,7 +197,7 @@ class GlobaltagpayApi
     }
     
     /**
-     * atualizarUsingPUT
+     * atualizarUsingPUT1
      *
      * {{{cartao_pay_resource_atualizar}}}
      *
@@ -207,15 +207,15 @@ class GlobaltagpayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT($device_id, $id, $update)
+    public function atualizarUsingPUT1($device_id, $id, $update)
     {
-        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUTWithHttpInfo ($device_id, $id, $update);
+        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT1WithHttpInfo ($device_id, $id, $update);
         return $response; 
     }
 
 
     /**
-     * atualizarUsingPUTWithHttpInfo
+     * atualizarUsingPUT1WithHttpInfo
      *
      * {{{cartao_pay_resource_atualizar}}}
      *
@@ -225,20 +225,20 @@ class GlobaltagpayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUTWithHttpInfo($device_id, $id, $update)
+    public function atualizarUsingPUT1WithHttpInfo($device_id, $id, $update)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling atualizarUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling atualizarUsingPUT1');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT1');
         }
         // verify the required parameter 'update' is set
         if ($update === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $update when calling atualizarUsingPUT');
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling atualizarUsingPUT1');
         }
   
         // parse inputs
@@ -427,7 +427,7 @@ class GlobaltagpayApi
     }
     
     /**
-     * consultarUsingGET9
+     * consultarUsingGET11
      *
      * {{{cartao_pay_resource_consultar}}}
      *
@@ -436,15 +436,15 @@ class GlobaltagpayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9($device_id, $id)
+    public function consultarUsingGET11($device_id, $id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET9WithHttpInfo ($device_id, $id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET11WithHttpInfo ($device_id, $id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET9WithHttpInfo
+     * consultarUsingGET11WithHttpInfo
      *
      * {{{cartao_pay_resource_consultar}}}
      *
@@ -453,16 +453,16 @@ class GlobaltagpayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET9WithHttpInfo($device_id, $id)
+    public function consultarUsingGET11WithHttpInfo($device_id, $id)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET9');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling consultarUsingGET11');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET9');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET11');
         }
   
         // parse inputs
@@ -937,7 +937,7 @@ class GlobaltagpayApi
     }
     
     /**
-     * listarUsingGET10
+     * listarUsingGET11
      *
      * {{{cartao_pay_resource_listar}}}
      *
@@ -950,15 +950,15 @@ class GlobaltagpayApi
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET11($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET10WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($device_id, $sort, $page, $limit, $status, $numero_cartao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET10WithHttpInfo
+     * listarUsingGET11WithHttpInfo
      *
      * {{{cartao_pay_resource_listar}}}
      *
@@ -971,7 +971,7 @@ class GlobaltagpayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET10WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
+    public function listarUsingGET11WithHttpInfo($device_id = null, $sort = null, $page = null, $limit = null, $status = null, $numero_cartao = null)
     {
         
   
@@ -1058,7 +1058,7 @@ class GlobaltagpayApi
     }
     
     /**
-     * salvarUsingPOST5
+     * salvarUsingPOST6
      *
      * {{{cartao_pay_resource_salvar}}}
      *
@@ -1067,15 +1067,15 @@ class GlobaltagpayApi
      * @return \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST5($device_id, $persist)
+    public function salvarUsingPOST6($device_id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST5WithHttpInfo ($device_id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST6WithHttpInfo ($device_id, $persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST5WithHttpInfo
+     * salvarUsingPOST6WithHttpInfo
      *
      * {{{cartao_pay_resource_salvar}}}
      *
@@ -1084,16 +1084,16 @@ class GlobaltagpayApi
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST5WithHttpInfo($device_id, $persist)
+    public function salvarUsingPOST6WithHttpInfo($device_id, $persist)
     {
         
         // verify the required parameter 'device_id' is set
         if ($device_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST5');
+            throw new \InvalidArgumentException('Missing the required parameter $device_id when calling salvarUsingPOST6');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST5');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST6');
         }
   
         // parse inputs

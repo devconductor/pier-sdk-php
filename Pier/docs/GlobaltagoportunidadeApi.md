@@ -8,17 +8,17 @@ Method | HTTP request | Description
 [**alterarUsingPUT12**](GlobaltagoportunidadeApi.md#alterarUsingPUT12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterarUsingPUT20**](GlobaltagoportunidadeApi.md#alterarUsingPUT20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultarStatusUsingGET**](GlobaltagoportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultarUsingGET26**](GlobaltagoportunidadeApi.md#consultarUsingGET26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultarUsingGET45**](GlobaltagoportunidadeApi.md#consultarUsingGET45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultarUsingGET28**](GlobaltagoportunidadeApi.md#consultarUsingGET28) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultarUsingGET47**](GlobaltagoportunidadeApi.md#consultarUsingGET47) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listarAuditoriasStatusUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listarAuditoriasUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listarAuditoriasUsingGET1**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
 [**listarStatusUsingGET**](GlobaltagoportunidadeApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_listar_status}}}
-[**listarUsingGET35**](GlobaltagoportunidadeApi.md#listarUsingGET35) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
-[**listarUsingGET55**](GlobaltagoportunidadeApi.md#listarUsingGET55) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
+[**listarUsingGET36**](GlobaltagoportunidadeApi.md#listarUsingGET36) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
+[**listarUsingGET58**](GlobaltagoportunidadeApi.md#listarUsingGET58) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
 [**salvarStatusUsingPOST**](GlobaltagoportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_salvar_status}}}
-[**salvarUsingPOST21**](GlobaltagoportunidadeApi.md#salvarUsingPOST21) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
-[**salvarUsingPOST30**](GlobaltagoportunidadeApi.md#salvarUsingPOST30) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
+[**salvarUsingPOST22**](GlobaltagoportunidadeApi.md#salvarUsingPOST22) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
+[**salvarUsingPOST31**](GlobaltagoportunidadeApi.md#salvarUsingPOST31) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
 
 
 # **alterarStatusUsingPUT**
@@ -211,8 +211,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\OportunidadeResponse consultarUsingGET26($id)
+# **consultarUsingGET28**
+> \br.com.conductor.pier.api.v2.model\OportunidadeResponse consultarUsingGET28($id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -227,10 +227,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $id = 789; // int | {{{oportunidade_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET26($id);
+    $result = $api_instance->consultarUsingGET28($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET28: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -256,8 +256,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET45**
-> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse consultarUsingGET45($id)
+# **consultarUsingGET47**
+> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse consultarUsingGET47($id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -272,10 +272,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $id = 789; // int | {{{tipo_oportunidade_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET45($id);
+    $result = $api_instance->consultarUsingGET47($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET45: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->consultarUsingGET47: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -553,8 +553,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET35**
-> \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse listarUsingGET35($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
+# **listarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse listarUsingGET36($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo)
 
 {{{oportunidade_resource_listar}}}
 
@@ -578,10 +578,10 @@ $data_fim_vigencia = "data_fim_vigencia_example"; // string | {{{oportunidade_re
 $flag_ativo = true; // bool | {{{oportunidade_request_flag_ativo_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET35($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+    $result = $api_instance->listarUsingGET36($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->listarUsingGET35: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->listarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -616,8 +616,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET55**
-> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse listarUsingGET55($sort, $page, $limit, $descricao, $flag_ativo)
+# **listarUsingGET58**
+> \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse listarUsingGET58($sort, $page, $limit, $descricao, $flag_ativo)
 
 {{{tipo_oportunidade_resource_listar}}}
 
@@ -636,10 +636,10 @@ $descricao = "descricao_example"; // string | {{{tipo_oportunidade_request_descr
 $flag_ativo = true; // bool | {{{tipo_oportunidade_request_flag_ativo_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET55($sort, $page, $limit, $descricao, $flag_ativo);
+    $result = $api_instance->listarUsingGET58($sort, $page, $limit, $descricao, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->listarUsingGET55: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->listarUsingGET58: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -716,8 +716,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST21**
-> \br.com.conductor.pier.api.v2.model\OportunidadeResponse salvarUsingPOST21($persist)
+# **salvarUsingPOST22**
+> \br.com.conductor.pier.api.v2.model\OportunidadeResponse salvarUsingPOST22($persist)
 
 {{{oportunidade_resource_salvar}}}
 
@@ -732,10 +732,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $persist = new \br.com.conductor.pier.api.v2.model\OportunidadePersistValue_(); // \br.com.conductor.pier.api.v2.model\OportunidadePersistValue_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST21($persist);
+    $result = $api_instance->salvarUsingPOST22($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->salvarUsingPOST21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->salvarUsingPOST22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -761,8 +761,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST30**
-> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse salvarUsingPOST30($persist)
+# **salvarUsingPOST31**
+> \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse salvarUsingPOST31($persist)
 
 {{{tipo_oportunidade_resource_salvar}}}
 
@@ -777,10 +777,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagoportunida
 $persist = new \br.com.conductor.pier.api.v2.model\TipoOportunidadePersistValue_(); // \br.com.conductor.pier.api.v2.model\TipoOportunidadePersistValue_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST30($persist);
+    $result = $api_instance->salvarUsingPOST31($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagoportunidadeApi->salvarUsingPOST30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagoportunidadeApi->salvarUsingPOST31: ', $e->getMessage(), "\n";
 }
 ?>
 ```

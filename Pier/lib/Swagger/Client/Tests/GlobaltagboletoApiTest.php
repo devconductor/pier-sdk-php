@@ -66,12 +66,12 @@ class GlobaltagboletoApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET34
+     * Test case for consultarUsingGET36
      *
      * {{{boleto_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET34() {
+    public function test_consultarUsingGET36() {
 
     }
     
@@ -96,12 +96,12 @@ class GlobaltagboletoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET45
+     * Test case for listarUsingGET47
      *
      * {{{boleto_resource_listar}}}
      *
      */
-    public function test_listarUsingGET45() {
+    public function test_listarUsingGET47() {
 
     }
     

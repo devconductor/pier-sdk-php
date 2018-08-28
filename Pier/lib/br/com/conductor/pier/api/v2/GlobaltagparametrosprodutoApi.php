@@ -1,6 +1,6 @@
 <?php
 /**
- * GlobaltagstatuscontestacaoApi
+ * GlobaltagparametrosprodutoApi
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * GlobaltagstatuscontestacaoApi Class Doc Comment
+ * GlobaltagparametrosprodutoApi Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GlobaltagstatuscontestacaoApi
+class GlobaltagparametrosprodutoApi
 {
 
     /**
@@ -82,7 +82,7 @@ class GlobaltagstatuscontestacaoApi
     /**
      * Set the API client
      * @param \br.com.conductor.pier.api.v2.invoker\ApiClient $apiClient set the API client
-     * @return GlobaltagstatuscontestacaoApi
+     * @return GlobaltagparametrosprodutoApi
      */
     public function setApiClient(ApiClient $apiClient)
     {
@@ -92,52 +92,48 @@ class GlobaltagstatuscontestacaoApi
   
     
     /**
-     * listarStatusContestacaoUsingGET
+     * listarUsingGET37
      *
-     * {{{status_contestacao_resource_listar_status_contestacao}}}
+     * {{{parametro_produto_listar}}}
      *
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
-     * @param int $id_status_contestacao {{{status_contestacao_request_idstatuscontestacao_value}}} (optional)
-     * @param int $id_status_contestacao_origem {{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)
-     * @param string $descricao {{{status_contestacao_request_descricao_value}}} (optional)
-     * @param int $flag_permite_alteracao {{{status_contestacao_request_flagpermitealteracao_value}}} (optional)
-     * @param int $flag_sistema {{{status_contestacao_request_flagsistema_value}}} (optional)
-     * @param int $flag_ativo {{{status_contestacao_request_flagativo_value}}} (optional)
-     * @return \br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse
+     * @param int $id {{{parametro_produto_request_id_value}}} (optional)
+     * @param string $codigo {{{parametro_produto_request_codigo_value}}} (optional)
+     * @param string $tipo {{{parametro_produto_request_tipo_value}}} (optional)
+     * @param int $id_produto {{{parametro_produto_request_id_produto_value}}} (optional)
+     * @return \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusContestacaoUsingGET($sort = null, $page = null, $limit = null, $id_status_contestacao = null, $id_status_contestacao_origem = null, $descricao = null, $flag_permite_alteracao = null, $flag_sistema = null, $flag_ativo = null)
+    public function listarUsingGET37($sort = null, $page = null, $limit = null, $id = null, $codigo = null, $tipo = null, $id_produto = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarStatusContestacaoUsingGETWithHttpInfo ($sort, $page, $limit, $id_status_contestacao, $id_status_contestacao_origem, $descricao, $flag_permite_alteracao, $flag_sistema, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET37WithHttpInfo ($sort, $page, $limit, $id, $codigo, $tipo, $id_produto);
         return $response; 
     }
 
 
     /**
-     * listarStatusContestacaoUsingGETWithHttpInfo
+     * listarUsingGET37WithHttpInfo
      *
-     * {{{status_contestacao_resource_listar_status_contestacao}}}
+     * {{{parametro_produto_listar}}}
      *
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
-     * @param int $id_status_contestacao {{{status_contestacao_request_idstatuscontestacao_value}}} (optional)
-     * @param int $id_status_contestacao_origem {{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)
-     * @param string $descricao {{{status_contestacao_request_descricao_value}}} (optional)
-     * @param int $flag_permite_alteracao {{{status_contestacao_request_flagpermitealteracao_value}}} (optional)
-     * @param int $flag_sistema {{{status_contestacao_request_flagsistema_value}}} (optional)
-     * @param int $flag_ativo {{{status_contestacao_request_flagativo_value}}} (optional)
-     * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param int $id {{{parametro_produto_request_id_value}}} (optional)
+     * @param string $codigo {{{parametro_produto_request_codigo_value}}} (optional)
+     * @param string $tipo {{{parametro_produto_request_tipo_value}}} (optional)
+     * @param int $id_produto {{{parametro_produto_request_id_produto_value}}} (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ParametroProdutoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarStatusContestacaoUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_status_contestacao = null, $id_status_contestacao_origem = null, $descricao = null, $flag_permite_alteracao = null, $flag_sistema = null, $flag_ativo = null)
+    public function listarUsingGET37WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $codigo = null, $tipo = null, $id_produto = null)
     {
         
   
         // parse inputs
-        $resourcePath = "/api/status-contestacoes";
+        $resourcePath = "/api/parametros-produto";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -166,28 +162,20 @@ class GlobaltagstatuscontestacaoApi
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }// query params
         
-        if ($id_status_contestacao !== null) {
-            $queryParams['idStatusContestacao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_contestacao);
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
         }// query params
         
-        if ($id_status_contestacao_origem !== null) {
-            $queryParams['idStatusContestacaoOrigem'] = $this->apiClient->getSerializer()->toQueryValue($id_status_contestacao_origem);
+        if ($codigo !== null) {
+            $queryParams['codigo'] = $this->apiClient->getSerializer()->toQueryValue($codigo);
         }// query params
         
-        if ($descricao !== null) {
-            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        if ($tipo !== null) {
+            $queryParams['tipo'] = $this->apiClient->getSerializer()->toQueryValue($tipo);
         }// query params
         
-        if ($flag_permite_alteracao !== null) {
-            $queryParams['flagPermiteAlteracao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_alteracao);
-        }// query params
-        
-        if ($flag_sistema !== null) {
-            $queryParams['flagSistema'] = $this->apiClient->getSerializer()->toQueryValue($flag_sistema);
-        }// query params
-        
-        if ($flag_ativo !== null) {
-            $queryParams['flagAtivo'] = $this->apiClient->getSerializer()->toQueryValue($flag_ativo);
+        if ($id_produto !== null) {
+            $queryParams['idProduto'] = $this->apiClient->getSerializer()->toQueryValue($id_produto);
         }
         
         
@@ -209,19 +197,19 @@ class GlobaltagstatuscontestacaoApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
                 $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse'
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse'
             );
             
             if (!$response) {
                 return array(null, $statusCode, $httpHeader);
             }
 
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $httpHeader), $statusCode, $httpHeader);
             
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse', $e->getResponseHeaders());
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ParametroProdutoResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

@@ -76,32 +76,32 @@ class GlobaltagwebhookApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET53
+     * Test case for consultarUsingGET55
      *
      * {{{web_hook_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET53() {
+    public function test_consultarUsingGET55() {
 
     }
     
     /**
-     * Test case for listarUsingGET66
+     * Test case for listarUsingGET69
      *
      * {{{web_hook_resource_listar}}}
      *
      */
-    public function test_listarUsingGET66() {
+    public function test_listarUsingGET69() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST35
+     * Test case for salvarUsingPOST36
      *
      * {{{web_hook_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST35() {
+    public function test_salvarUsingPOST36() {
 
     }
     

@@ -288,7 +288,7 @@ class GlobaltagdebitorecorrenteApi
     }
     
     /**
-     * listarUsingGET17
+     * listarUsingGET18
      *
      * {{{conta_debito_recorrente_resource_listar}}}
      *
@@ -304,15 +304,15 @@ class GlobaltagdebitorecorrenteApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaDebitoRecorrenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
+    public function listarUsingGET18($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET17WithHttpInfo ($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET17WithHttpInfo
+     * listarUsingGET18WithHttpInfo
      *
      * {{{conta_debito_recorrente_resource_listar}}}
      *
@@ -328,12 +328,12 @@ class GlobaltagdebitorecorrenteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaDebitoRecorrenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET17WithHttpInfo($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
+    public function listarUsingGET18WithHttpInfo($id_conta, $id_tipo_debito_recorrente = null, $sort = null, $page = null, $limit = null, $data_hora_inicio = null, $data_hora_fim = null, $ativo = null, $data_hora_ultimo_pagamento = null)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET17');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling listarUsingGET18');
         }
   
         // parse inputs
@@ -431,7 +431,7 @@ class GlobaltagdebitorecorrenteApi
     }
     
     /**
-     * listarUsingGET53
+     * listarUsingGET56
      *
      * {{{tipo_debito_recorrente_resource_listar}}}
      *
@@ -445,15 +445,15 @@ class GlobaltagdebitorecorrenteApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET53($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET56($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET53WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET56WithHttpInfo ($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET53WithHttpInfo
+     * listarUsingGET56WithHttpInfo
      *
      * {{{tipo_debito_recorrente_resource_listar}}}
      *
@@ -467,7 +467,7 @@ class GlobaltagdebitorecorrenteApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET53WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
+    public function listarUsingGET56WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $descricao = null, $valor = null, $flag_ativo = null)
     {
         
   

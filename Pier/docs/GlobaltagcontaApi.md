@@ -18,8 +18,9 @@ Method | HTTP request | Description
 [**consultarDividaAtualizadaClienteUsingGET**](GlobaltagcontaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultarTaxasTarifasUsingGET**](GlobaltagcontaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
 [**consultarUsingGET1**](GlobaltagcontaApi.md#consultarUsingGET1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
-[**consultarUsingGET14**](GlobaltagcontaApi.md#consultarUsingGET14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultarUsingGET49**](GlobaltagcontaApi.md#consultarUsingGET49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultarUsingGET16**](GlobaltagcontaApi.md#consultarUsingGET16) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultarUsingGET51**](GlobaltagcontaApi.md#consultarUsingGET51) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**criarContasMultiAppUsingPOST**](GlobaltagcontaApi.md#criarContasMultiAppUsingPOST) | **POST** /api/contas/cadastrar-conta-multiapp | {{{conta_resource_cadastrar_conta_multiapp}}}
 [**desativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerarBoletoRecargaUsingPOST**](GlobaltagcontaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerarCartaoEmbossingUsingPOST**](GlobaltagcontaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -31,18 +32,18 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](GlobaltagcontaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | {{{conta_resource_listar_historico_atrasos_faturas}}}
 [**listarNaoProcessadasUsingGET**](GlobaltagcontaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | {{{transacoes_correntes_resource_listar_nao_processadas}}}
 [**listarProcessadasUsingGET**](GlobaltagcontaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | {{{transacoes_correntes_resource_listar_processadas}}}
-[**listarUsingGET18**](GlobaltagcontaApi.md#listarUsingGET18) | **GET** /api/contas | {{{conta_resource_listar}}}
-[**listarUsingGET58**](GlobaltagcontaApi.md#listarUsingGET58) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
-[**listarUsingGET60**](GlobaltagcontaApi.md#listarUsingGET60) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
+[**listarUsingGET19**](GlobaltagcontaApi.md#listarUsingGET19) | **GET** /api/contas | {{{conta_resource_listar}}}
+[**listarUsingGET61**](GlobaltagcontaApi.md#listarUsingGET61) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
+[**listarUsingGET63**](GlobaltagcontaApi.md#listarUsingGET63) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
 [**reativarUsingPOST1**](GlobaltagcontaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | {{{conta_resource_reativar}}}
-[**salvarUsingPOST8**](GlobaltagcontaApi.md#salvarUsingPOST8) | **POST** /api/contas | {{{conta_resource_salvar}}}
+[**salvarUsingPOST9**](GlobaltagcontaApi.md#salvarUsingPOST9) | **POST** /api/contas | {{{conta_resource_salvar}}}
 [**simularEmprestimoFinanciamentoUsingPOST**](GlobaltagcontaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | {{{financiamento_resource_simular_emprestimo_financiamento}}}
 [**transacoesUsingGET**](GlobaltagcontaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | {{{conta_resource_transacoes}}}
 [**transferirUsingPOST1**](GlobaltagcontaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_transferir}}}
 
 
 # **ajustarContaUsingPOST1**
-> \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $authorization, $identificador_externo, $id_transacao_original)
+> \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo, $id_transacao_original)
 
 {{{conta_resource_ajustar_conta}}}
 
@@ -58,12 +59,11 @@ $id = 789; // int | {{{conta_resource_ajustar_conta_param_id}}}
 $id_tipo_ajuste = 789; // int | {{{ajuste_persist_id_tipo_ajuste_value}}}
 $data_ajuste = "data_ajuste_example"; // string | {{{ajuste_persist_data_ajuste_value}}}
 $valor_ajuste = new Number(); // Number | {{{ajuste_persist_valor_ajuste_value}}}
-$authorization = "authorization_example"; // string | Authorization
 $identificador_externo = "identificador_externo_example"; // string | {{{ajuste_persist_identificador_externo_value}}}
 $id_transacao_original = 789; // int | {{{ajuste_persist_id_transacao_original}}}
 
 try { 
-    $result = $api_instance->ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $authorization, $identificador_externo, $id_transacao_original);
+    $result = $api_instance->ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo, $id_transacao_original);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->ajustarContaUsingPOST1: ', $e->getMessage(), "\n";
@@ -79,7 +79,6 @@ Name | Type | Description  | Notes
  **id_tipo_ajuste** | **int**| {{{ajuste_persist_id_tipo_ajuste_value}}} | 
  **data_ajuste** | **string**| {{{ajuste_persist_data_ajuste_value}}} | 
  **valor_ajuste** | [**Number**](.md)| {{{ajuste_persist_valor_ajuste_value}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **identificador_externo** | **string**| {{{ajuste_persist_identificador_externo_value}}} | [optional] 
  **id_transacao_original** | **int**| {{{ajuste_persist_id_transacao_original}}} | [optional] 
 
@@ -99,7 +98,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarProdutoUsingPOST**
-> string alterarProdutoUsingPOST($id, $request, $authorization)
+> string alterarProdutoUsingPOST($id, $request)
 
 {{{conta_resource_alterar_produto}}}
 
@@ -113,10 +112,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_alterar_produto_param_id}}}
 $request = new \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest(); // \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest | request
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarProdutoUsingPOST($id, $request, $authorization);
+    $result = $api_instance->alterarProdutoUsingPOST($id, $request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->alterarProdutoUsingPOST: ', $e->getMessage(), "\n";
@@ -130,7 +128,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_alterar_produto_param_id}}} | 
  **request** | [**\br.com.conductor.pier.api.v2.model\AlterarProdutoRequest**](\br.com.conductor.pier.api.v2.model\AlterarProdutoRequest.md)| request | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -148,7 +145,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarTitularUsingPOST**
-> \br.com.conductor.pier.api.v2.model\ContaResponse alterarTitularUsingPOST($id, $id_pessoa, $authorization)
+> \br.com.conductor.pier.api.v2.model\ContaResponse alterarTitularUsingPOST($id, $id_pessoa)
 
 {{{conta_resource_alterar_titular}}}
 
@@ -162,10 +159,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_alterar_titular_param_id_conta}}}
 $id_pessoa = 789; // int | {{{conta_resource_alterar_titular_param_id_pessoa}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarTitularUsingPOST($id, $id_pessoa, $authorization);
+    $result = $api_instance->alterarTitularUsingPOST($id, $id_pessoa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->alterarTitularUsingPOST: ', $e->getMessage(), "\n";
@@ -179,7 +175,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_alterar_titular_param_id_conta}}} | 
  **id_pessoa** | **int**| {{{conta_resource_alterar_titular_param_id_pessoa}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -197,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarVencimentoUsingPUT**
-> \br.com.conductor.pier.api.v2.model\ContaResponse alterarVencimentoUsingPUT($id, $novo_dia_vencimento, $authorization)
+> \br.com.conductor.pier.api.v2.model\ContaResponse alterarVencimentoUsingPUT($id, $novo_dia_vencimento)
 
 {{{conta_resource_alterar_vencimento}}}
 
@@ -211,10 +206,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_alterar_vencimento_param_id}}}
 $novo_dia_vencimento = 56; // int | {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarVencimentoUsingPUT($id, $novo_dia_vencimento, $authorization);
+    $result = $api_instance->alterarVencimentoUsingPUT($id, $novo_dia_vencimento);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->alterarVencimentoUsingPUT: ', $e->getMessage(), "\n";
@@ -228,7 +222,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_alterar_vencimento_param_id}}} | 
  **novo_dia_vencimento** | **int**| {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -246,7 +239,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ativarAnuidadeUsingPOST**
-> object ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial)
+> object ativarAnuidadeUsingPOST($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial)
 
 {{{conta_resource_ativar_anuidade}}}
 
@@ -260,7 +253,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_ativar_anuidade_param_id}}}
 $id_anuidade = 789; // int | {{{anuidade_request_id_anuidade_value}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -270,7 +262,7 @@ $id_operadora = 789; // int | {{{anuidade_request_id_operadora_value}}}
 $id_origem_comercial = 789; // int | {{{anuidade_request_id_origem_comercial_value}}}
 
 try { 
-    $result = $api_instance->ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
+    $result = $api_instance->ativarAnuidadeUsingPOST($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->ativarAnuidadeUsingPOST: ', $e->getMessage(), "\n";
@@ -284,7 +276,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **id_anuidade** | **int**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -309,7 +300,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ativarEnvioFaturaEmailUsingPOST**
-> object ativarEnvioFaturaEmailUsingPOST($id, $authorization)
+> object ativarEnvioFaturaEmailUsingPOST($id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -322,10 +313,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id, $authorization);
+    $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->ativarEnvioFaturaEmailUsingPOST: ', $e->getMessage(), "\n";
@@ -338,7 +328,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -356,7 +345,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bloquearUsingPOST1**
-> \br.com.conductor.pier.api.v2.model\ContaResponse bloquearUsingPOST1($id, $id_status, $authorization)
+> \br.com.conductor.pier.api.v2.model\ContaResponse bloquearUsingPOST1($id, $id_status)
 
 {{{conta_resource_bloquear}}}
 
@@ -370,10 +359,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_bloquear_param_id}}}
 $id_status = 789; // int | {{{conta_resource_bloquear_param_id_status}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->bloquearUsingPOST1($id, $id_status, $authorization);
+    $result = $api_instance->bloquearUsingPOST1($id, $id_status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->bloquearUsingPOST1: ', $e->getMessage(), "\n";
@@ -387,7 +375,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_bloquear_param_id}}} | 
  **id_status** | **int**| {{{conta_resource_bloquear_param_id_status}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -450,7 +437,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancelarUsingPOST1**
-> \br.com.conductor.pier.api.v2.model\ContaResponse cancelarUsingPOST1($id, $id_status, $authorization)
+> \br.com.conductor.pier.api.v2.model\ContaResponse cancelarUsingPOST1($id, $id_status)
 
 {{{conta_resource_cancelar}}}
 
@@ -464,10 +451,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_cancelar_param_id}}}
 $id_status = 789; // int | {{{conta_resource_cancelar_param_id_status}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->cancelarUsingPOST1($id, $id_status, $authorization);
+    $result = $api_instance->cancelarUsingPOST1($id, $id_status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->cancelarUsingPOST1: ', $e->getMessage(), "\n";
@@ -481,7 +467,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_cancelar_param_id}}} | 
  **id_status** | **int**| {{{conta_resource_cancelar_param_id_status}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -499,7 +484,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarBeneficioPagamentoAtrasoUsingGET**
-> \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET($id)
 
 {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 
@@ -512,10 +497,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarBeneficioPagamentoAtrasoUsingGET($id, $authorization);
+    $result = $api_instance->consultarBeneficioPagamentoAtrasoUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->consultarBeneficioPagamentoAtrasoUsingGET: ', $e->getMessage(), "\n";
@@ -528,7 +512,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -546,7 +529,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarBoletoEmitidoUsingGET**
-> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarBoletoEmitidoUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarBoletoEmitidoUsingGET($id)
 
 {{{conta_resource_consultar_boleto_emitido}}}
 
@@ -559,10 +542,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_consultar_boleto_emitido_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarBoletoEmitidoUsingGET($id, $authorization);
+    $result = $api_instance->consultarBoletoEmitidoUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->consultarBoletoEmitidoUsingGET: ', $e->getMessage(), "\n";
@@ -575,7 +557,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_consultar_boleto_emitido_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -593,7 +574,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarDividaAtualizadaClienteUsingGET**
-> \br.com.conductor.pier.api.v2.model\DividaClienteResponse consultarDividaAtualizadaClienteUsingGET($id, $authorization, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca)
+> \br.com.conductor.pier.api.v2.model\DividaClienteResponse consultarDividaAtualizadaClienteUsingGET($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca)
 
 {{{conta_resource_consultar_divida_atualizada_cliente}}}
 
@@ -606,7 +587,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -614,7 +594,7 @@ $data_vencimento = "data_vencimento_example"; // string | {{{divida_cliente_requ
 $id_escritorio_cobranca = 789; // int | {{{divida_cliente_request_id_escritorio_cobranca_value}}}
 
 try { 
-    $result = $api_instance->consultarDividaAtualizadaClienteUsingGET($id, $authorization, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
+    $result = $api_instance->consultarDividaAtualizadaClienteUsingGET($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->consultarDividaAtualizadaClienteUsingGET: ', $e->getMessage(), "\n";
@@ -627,7 +607,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -650,7 +629,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarTaxasTarifasUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_consultar_taxas_tarifas}}}
 
@@ -663,13 +642,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->consultarTaxasTarifasUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->consultarTaxasTarifasUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->consultarTaxasTarifasUsingGET: ', $e->getMessage(), "\n";
@@ -682,7 +660,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -749,8 +726,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET14($id, $authorization)
+# **consultarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\ContaDetalheResponse consultarUsingGET16($id)
 
 {{{conta_resource_consultar}}}
 
@@ -763,13 +740,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_consultar_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarUsingGET14($id, $authorization);
+    $result = $api_instance->consultarUsingGET16($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -779,7 +755,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_consultar_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -796,8 +771,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET49**
-> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET49($id, $id_transferencia)
+# **consultarUsingGET51**
+> \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse consultarUsingGET51($id, $id_transferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -813,10 +788,10 @@ $id = 789; // int | {{{transferencia_resource_consultar_param_id_conta}}}
 $id_transferencia = 789; // int | {{{transferencia_resource_consultar_param_id_transferencia}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET49($id, $id_transferencia);
+    $result = $api_instance->consultarUsingGET51($id, $id_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET49: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->consultarUsingGET51: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -843,8 +818,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **criarContasMultiAppUsingPOST**
+> \br.com.conductor.pier.api.v2.model\ContaMultiAppResponse criarContasMultiAppUsingPOST($conta_multi_app_persist)
+
+{{{conta_resource_cadastrar_conta_multiapp}}}
+
+{{{conta_resource_cadastrar_conta_multiapp_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
+$conta_multi_app_persist = new \br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_(); // \br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_ | contaMultiAppPersist
+
+try { 
+    $result = $api_instance->criarContasMultiAppUsingPOST($conta_multi_app_persist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcontaApi->criarContasMultiAppUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conta_multi_app_persist** | [**\br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_**](\br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_.md)| contaMultiAppPersist | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ContaMultiAppResponse**](ContaMultiAppResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **desativarEnvioFaturaEmailUsingPOST**
-> object desativarEnvioFaturaEmailUsingPOST($id, $authorization)
+> object desativarEnvioFaturaEmailUsingPOST($id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -857,10 +877,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id, $authorization);
+    $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->desativarEnvioFaturaEmailUsingPOST: ', $e->getMessage(), "\n";
@@ -873,7 +892,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -891,7 +909,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarBoletoRecargaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\BoletoResponse gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento, $authorization)
+> \br.com.conductor.pier.api.v2.model\BoletoResponse gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento)
 
 {{{conta_resource_gerar_boleto_recarga}}}
 
@@ -906,10 +924,9 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi()
 $id = 789; // int | {{{conta_resource_gerar_boleto_recarga_param_id}}}
 $valor = new Number(); // Number | {{{boleto_recarga_request_valor_value}}}
 $data_vencimento = "data_vencimento_example"; // string | {{{boleto_recarga_request_data_vencimento_value}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento, $authorization);
+    $result = $api_instance->gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->gerarBoletoRecargaUsingPOST: ', $e->getMessage(), "\n";
@@ -924,7 +941,6 @@ Name | Type | Description  | Notes
  **id** | **int**| {{{conta_resource_gerar_boleto_recarga_param_id}}} | 
  **valor** | [**Number**](.md)| {{{boleto_recarga_request_valor_value}}} | 
  **data_vencimento** | **string**| {{{boleto_recarga_request_data_vencimento_value}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -942,7 +958,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarCartaoEmbossingUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request)
 
 {{{conta_resource_gerar_cartao_embossing}}}
 
@@ -956,10 +972,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_gerar_cartao_embossing_param_id}}}
 $cartao_embossing_request = new \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest(); // \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest | cartaoEmbossingRequest
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request, $authorization);
+    $result = $api_instance->gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->gerarCartaoEmbossingUsingPOST: ', $e->getMessage(), "\n";
@@ -973,7 +988,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_gerar_cartao_embossing_param_id}}} | 
  **cartao_embossing_request** | [**\br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest**](\br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -991,7 +1005,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarCartaoProvisorioUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST($id)
 
 {{{conta_resource_gerar_cartao_provisorio}}}
 
@@ -1004,10 +1018,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarCartaoProvisorioUsingPOST($id, $authorization);
+    $result = $api_instance->gerarCartaoProvisorioUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->gerarCartaoProvisorioUsingPOST: ', $e->getMessage(), "\n";
@@ -1020,7 +1033,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1038,7 +1050,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarCartaoUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoUsingPOST($id, $id_pessoa, $authorization, $id_tipo_plastico)
+> \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico)
 
 {{{conta_resource_gerar_cartao}}}
 
@@ -1052,11 +1064,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_gerar_cartao_param_id}}}
 $id_pessoa = 789; // int | {{{conta_resource_gerar_cartao_param_id_pessoa}}}
-$authorization = "authorization_example"; // string | Authorization
 $id_tipo_plastico = 789; // int | {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}}
 
 try { 
-    $result = $api_instance->gerarCartaoUsingPOST($id, $id_pessoa, $authorization, $id_tipo_plastico);
+    $result = $api_instance->gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->gerarCartaoUsingPOST: ', $e->getMessage(), "\n";
@@ -1070,7 +1081,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_gerar_cartao_param_id}}} | 
  **id_pessoa** | **int**| {{{conta_resource_gerar_cartao_param_id_pessoa}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **id_tipo_plastico** | **int**| {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}} | [optional] 
 
 ### Return type
@@ -1089,7 +1099,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarCartaoVirtualUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoVirtualUsingPOST($id, $data_validade, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse gerarCartaoVirtualUsingPOST($id, $data_validade)
 
 {{{conta_resource_gerar_cartao_virtual}}}
 
@@ -1103,10 +1113,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_gerar_cartao_virtual_param_id}}}
 $data_validade = "data_validade_example"; // string | {{{conta_resource_gerar_cartao_virtual_param_data_validade}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarCartaoVirtualUsingPOST($id, $data_validade, $authorization);
+    $result = $api_instance->gerarCartaoVirtualUsingPOST($id, $data_validade);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->gerarCartaoVirtualUsingPOST: ', $e->getMessage(), "\n";
@@ -1120,7 +1129,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_gerar_cartao_virtual_param_id}}} | 
  **data_validade** | **string**| {{{conta_resource_gerar_cartao_virtual_param_data_validade}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1138,7 +1146,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarHistoricoAlteracoesLimitesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_listar_historico_alteracoes_limites}}}
 
@@ -1151,13 +1159,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarHistoricoAlteracoesLimitesUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->listarHistoricoAlteracoesLimitesUsingGET: ', $e->getMessage(), "\n";
@@ -1170,7 +1177,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1191,7 +1197,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarHistoricoAssessoriaUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_listar_historico_assessoria}}}
 
@@ -1204,13 +1210,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_listar_historico_assessoria_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarHistoricoAssessoriaUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->listarHistoricoAssessoriaUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->listarHistoricoAssessoriaUsingGET: ', $e->getMessage(), "\n";
@@ -1223,7 +1228,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_listar_historico_assessoria_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1244,7 +1248,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarHistoricoAtrasosFaturasUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_listar_historico_atrasos_faturas}}}
 
@@ -1257,13 +1261,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_listar_historico_atrasos_faturas_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarHistoricoAtrasosFaturasUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->listarHistoricoAtrasosFaturasUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->listarHistoricoAtrasosFaturasUsingGET: ', $e->getMessage(), "\n";
@@ -1276,7 +1279,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_listar_historico_atrasos_faturas_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1412,8 +1414,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET18($authorization, $sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
+# **listarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\PageContaResponse listarUsingGET19($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento)
 
 {{{conta_resource_listar}}}
 
@@ -1425,7 +1427,6 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -1440,10 +1441,10 @@ $data_cadastro = "data_cadastro_example"; // string | {{{conta_request_data_cada
 $data_ultima_alteracao_vencimento = "data_ultima_alteracao_vencimento_example"; // string | {{{conta_request_data_ultima_alteracao_vencimento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET18($authorization, $sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+    $result = $api_instance->listarUsingGET19($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1452,7 +1453,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1481,8 +1481,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET58**
-> \br.com.conductor.pier.api.v2.model\PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET58($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao)
+# **listarUsingGET61**
+> \br.com.conductor.pier.api.v2.model\PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET61($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao)
 
 {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
 
@@ -1504,10 +1504,10 @@ $data_fim = "data_fim_example"; // string | {{{transacoes_processadas_request_da
 $id_tipo_transacao = 789; // int | {{{transacoes_processadas_request_tipo_transacao}}}
 
 try { 
-    $result = $api_instance->listarUsingGET58($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
+    $result = $api_instance->listarUsingGET61($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET58: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET61: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1540,8 +1540,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET60**
-> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET60($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
+# **listarUsingGET63**
+> \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse listarUsingGET63($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia)
 
 {{{transferencia_resource_listar}}}
 
@@ -1564,10 +1564,10 @@ $valor_transferencia = new Number(); // Number | {{{transferencia_request_valor_
 $data_transferencia = "data_transferencia_example"; // string | {{{transferencia_request_data_transferencia_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET60($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+    $result = $api_instance->listarUsingGET63($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET60: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->listarUsingGET63: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1602,7 +1602,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reativarUsingPOST1**
-> object reativarUsingPOST1($id, $authorization)
+> object reativarUsingPOST1($id)
 
 {{{conta_resource_reativar}}}
 
@@ -1615,10 +1615,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_reativar_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->reativarUsingPOST1($id, $authorization);
+    $result = $api_instance->reativarUsingPOST1($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->reativarUsingPOST1: ', $e->getMessage(), "\n";
@@ -1631,7 +1630,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_reativar_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1648,8 +1646,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST8**
-> \br.com.conductor.pier.api.v2.model\ContaResponse salvarUsingPOST8($conta_persist, $authorization)
+# **salvarUsingPOST9**
+> \br.com.conductor.pier.api.v2.model\ContaResponse salvarUsingPOST9($conta_persist)
 
 {{{conta_resource_salvar}}}
 
@@ -1662,13 +1660,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $conta_persist = new \br.com.conductor.pier.api.v2.model\ContaPersistValue_(); // \br.com.conductor.pier.api.v2.model\ContaPersistValue_ | contaPersist
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->salvarUsingPOST8($conta_persist, $authorization);
+    $result = $api_instance->salvarUsingPOST9($conta_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcontaApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcontaApi->salvarUsingPOST9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1678,7 +1675,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conta_persist** | [**\br.com.conductor.pier.api.v2.model\ContaPersistValue_**](\br.com.conductor.pier.api.v2.model\ContaPersistValue_.md)| contaPersist | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1743,7 +1739,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transacoesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageTransacaoResponse transacoesUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_transacoes}}}
 
@@ -1756,13 +1752,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcontaApi();
 $id = 789; // int | {{{conta_resource_transacoes_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->transacoesUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->transacoesUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcontaApi->transacoesUsingGET: ', $e->getMessage(), "\n";
@@ -1775,7 +1770,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_transacoes_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 

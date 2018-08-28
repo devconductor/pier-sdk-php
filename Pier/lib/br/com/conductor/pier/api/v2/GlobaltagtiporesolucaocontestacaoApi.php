@@ -92,6 +92,139 @@ class GlobaltagtiporesolucaocontestacaoApi
   
     
     /**
+     * listarStatusContestacaoUsingGET
+     *
+     * {{{status_contestacao_resource_listar_status_contestacao}}}
+     *
+     * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
+     * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
+     * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $id_status_contestacao {{{status_contestacao_request_idstatuscontestacao_value}}} (optional)
+     * @param int $id_status_contestacao_origem {{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)
+     * @param string $descricao {{{status_contestacao_request_descricao_value}}} (optional)
+     * @param int $flag_permite_alteracao {{{status_contestacao_request_flagpermitealteracao_value}}} (optional)
+     * @param int $flag_sistema {{{status_contestacao_request_flagsistema_value}}} (optional)
+     * @return \br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarStatusContestacaoUsingGET($sort = null, $page = null, $limit = null, $id_status_contestacao = null, $id_status_contestacao_origem = null, $descricao = null, $flag_permite_alteracao = null, $flag_sistema = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->listarStatusContestacaoUsingGETWithHttpInfo ($sort, $page, $limit, $id_status_contestacao, $id_status_contestacao_origem, $descricao, $flag_permite_alteracao, $flag_sistema);
+        return $response; 
+    }
+
+
+    /**
+     * listarStatusContestacaoUsingGETWithHttpInfo
+     *
+     * {{{status_contestacao_resource_listar_status_contestacao}}}
+     *
+     * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
+     * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
+     * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $id_status_contestacao {{{status_contestacao_request_idstatuscontestacao_value}}} (optional)
+     * @param int $id_status_contestacao_origem {{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)
+     * @param string $descricao {{{status_contestacao_request_descricao_value}}} (optional)
+     * @param int $flag_permite_alteracao {{{status_contestacao_request_flagpermitealteracao_value}}} (optional)
+     * @param int $flag_sistema {{{status_contestacao_request_flagsistema_value}}} (optional)
+     * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function listarStatusContestacaoUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_status_contestacao = null, $id_status_contestacao_origem = null, $descricao = null, $flag_permite_alteracao = null, $flag_sistema = null)
+    {
+        
+  
+        // parse inputs
+        $resourcePath = "/api/status-contestacoes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        // query params
+        
+        if (is_array($sort)) {
+            $sort = $this->apiClient->getSerializer()->serializeCollection($sort, 'multi', true);
+        }
+        
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }// query params
+        
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }// query params
+        
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($id_status_contestacao !== null) {
+            $queryParams['idStatusContestacao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_contestacao);
+        }// query params
+        
+        if ($id_status_contestacao_origem !== null) {
+            $queryParams['idStatusContestacaoOrigem'] = $this->apiClient->getSerializer()->toQueryValue($id_status_contestacao_origem);
+        }// query params
+        
+        if ($descricao !== null) {
+            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        }// query params
+        
+        if ($flag_permite_alteracao !== null) {
+            $queryParams['flagPermiteAlteracao'] = $this->apiClient->getSerializer()->toQueryValue($flag_permite_alteracao);
+        }// query params
+        
+        if ($flag_sistema !== null) {
+            $queryParams['flagSistema'] = $this->apiClient->getSerializer()->toQueryValue($flag_sistema);
+        }
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\PageStatusContestacaoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * listarTipoResolucaoContestacaoUsingGET
      *
      * {{{tipo_resolucao_contestacao_resource_listar_tipo_contestacao}}}

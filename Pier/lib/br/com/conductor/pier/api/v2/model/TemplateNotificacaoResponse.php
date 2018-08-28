@@ -260,9 +260,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
      */
     public function setTipoLayout($tipo_layout)
     {
-        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL");
+        $allowed_values = array("RECUPERAR_SENHA", "FATURA_POR_EMAIL", "VALIDAR_DISPOSITIVO", "NOTIFICACAO_EMAIL", "OTP_3D_SECURE");
         if (!in_array($tipo_layout, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_layout', must be one of 'RECUPERAR_SENHA', 'FATURA_POR_EMAIL', 'VALIDAR_DISPOSITIVO', 'NOTIFICACAO_EMAIL', 'OTP_3D_SECURE'");
         }
         $this->tipo_layout = $tipo_layout;
         return $this;
@@ -284,9 +284,9 @@ class TemplateNotificacaoResponse implements ArrayAccess
      */
     public function setTipoNotificacao($tipo_notificacao)
     {
-        $allowed_values = array("SMS", "PUSH_APNS", "PUSH_FCM", "PUSH_GCM", "EMAIL");
+        $allowed_values = array("SMS", "PUSH_APNS", "PUSH_FCM", "PUSH_GCM", "WEBHOOK", "EMAIL");
         if (!in_array($tipo_notificacao, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_notificacao', must be one of 'SMS', 'PUSH_APNS', 'PUSH_FCM', 'PUSH_GCM', 'EMAIL'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_notificacao', must be one of 'SMS', 'PUSH_APNS', 'PUSH_FCM', 'PUSH_GCM', 'WEBHOOK', 'EMAIL'");
         }
         $this->tipo_notificacao = $tipo_notificacao;
         return $this;

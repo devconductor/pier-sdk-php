@@ -98,7 +98,6 @@ class GlobaltagservicocontaApi
      *
      * @param int $id {{{conta_resource_ativar_anuidade_param_id}}} (required)
      * @param int $id_anuidade {{{anuidade_request_id_anuidade_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -109,9 +108,9 @@ class GlobaltagservicocontaApi
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization = null, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    public function ativarAnuidadeUsingPOST($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->ativarAnuidadeUsingPOSTWithHttpInfo ($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
+        list($response, $statusCode, $httpHeader) = $this->ativarAnuidadeUsingPOSTWithHttpInfo ($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
         return $response; 
     }
 
@@ -123,7 +122,6 @@ class GlobaltagservicocontaApi
      *
      * @param int $id {{{conta_resource_ativar_anuidade_param_id}}} (required)
      * @param int $id_anuidade {{{anuidade_request_id_anuidade_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -134,7 +132,7 @@ class GlobaltagservicocontaApi
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarAnuidadeUsingPOSTWithHttpInfo($id, $id_anuidade, $authorization = null, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    public function ativarAnuidadeUsingPOSTWithHttpInfo($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
     {
         
         // verify the required parameter 'id' is set
@@ -195,11 +193,7 @@ class GlobaltagservicocontaApi
         if ($id_origem_comercial !== null) {
             $queryParams['idOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -254,13 +248,12 @@ class GlobaltagservicocontaApi
      * {{{conta_resource_ativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_ativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarEnvioFaturaEmailUsingPOST($id, $authorization = null)
+    public function ativarEnvioFaturaEmailUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->ativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->ativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -271,11 +264,10 @@ class GlobaltagservicocontaApi
      * {{{conta_resource_ativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_ativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function ativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -296,11 +288,7 @@ class GlobaltagservicocontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -355,13 +343,12 @@ class GlobaltagservicocontaApi
      * {{{conta_resource_desativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_desativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desativarEnvioFaturaEmailUsingPOST($id, $authorization = null)
+    public function desativarEnvioFaturaEmailUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->desativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -372,11 +359,10 @@ class GlobaltagservicocontaApi
      * {{{conta_resource_desativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_desativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function desativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -397,11 +383,7 @@ class GlobaltagservicocontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {

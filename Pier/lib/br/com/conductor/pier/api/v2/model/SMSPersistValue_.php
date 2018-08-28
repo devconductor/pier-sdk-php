@@ -322,9 +322,9 @@ class SMSPersistValue_ implements ArrayAccess
      */
     public function setTipoEvento($tipo_evento)
     {
-        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS");
+        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS", "OTP_3D_SECURE");
         if (!in_array($tipo_evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS', 'OTP_3D_SECURE'");
         }
         $this->tipo_evento = $tipo_evento;
         return $this;

@@ -76,12 +76,12 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT1
+     * Test case for atualizarUsingPUT2
      *
      * {{{conta_bancaria_resource_atualizar}}}
      *
      */
-    public function test_atualizarUsingPUT1() {
+    public function test_atualizarUsingPUT2() {
 
     }
     
@@ -126,22 +126,22 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET13
+     * Test case for consultarUsingGET15
      *
      * {{{conta_bancaria_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET13() {
+    public function test_consultarUsingGET15() {
 
     }
     
     /**
-     * Test case for consultarUsingGET48
+     * Test case for consultarUsingGET50
      *
      * {{{transferencia_bancaria_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET48() {
+    public function test_consultarUsingGET50() {
 
     }
     
@@ -156,22 +156,22 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET16
+     * Test case for listarUsingGET17
      *
      * {{{conta_bancaria_resource_listar}}}
      *
      */
-    public function test_listarUsingGET16() {
+    public function test_listarUsingGET17() {
 
     }
     
     /**
-     * Test case for listarUsingGET59
+     * Test case for listarUsingGET62
      *
      * {{{transferencia_bancaria_resource_listar}}}
      *
      */
-    public function test_listarUsingGET59() {
+    public function test_listarUsingGET62() {
 
     }
     
@@ -186,12 +186,12 @@ class GlobaltagtransferenciabancariaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST7
+     * Test case for salvarUsingPOST8
      *
      * {{{conta_bancaria_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST7() {
+    public function test_salvarUsingPOST8() {
 
     }
     

@@ -100,15 +100,14 @@ class GlobaltagcontaApi
      * @param int $id_tipo_ajuste {{{ajuste_persist_id_tipo_ajuste_value}}} (required)
      * @param string $data_ajuste {{{ajuste_persist_data_ajuste_value}}} (required)
      * @param Number $valor_ajuste {{{ajuste_persist_valor_ajuste_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string $identificador_externo {{{ajuste_persist_identificador_externo_value}}} (optional)
      * @param int $id_transacao_original {{{ajuste_persist_id_transacao_original}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $authorization = null, $identificador_externo = null, $id_transacao_original = null)
+    public function ajustarContaUsingPOST1($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null, $id_transacao_original = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOST1WithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $authorization, $identificador_externo, $id_transacao_original);
+        list($response, $statusCode, $httpHeader) = $this->ajustarContaUsingPOST1WithHttpInfo ($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo, $id_transacao_original);
         return $response; 
     }
 
@@ -122,13 +121,12 @@ class GlobaltagcontaApi
      * @param int $id_tipo_ajuste {{{ajuste_persist_id_tipo_ajuste_value}}} (required)
      * @param string $data_ajuste {{{ajuste_persist_data_ajuste_value}}} (required)
      * @param Number $valor_ajuste {{{ajuste_persist_valor_ajuste_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string $identificador_externo {{{ajuste_persist_identificador_externo_value}}} (optional)
      * @param int $id_transacao_original {{{ajuste_persist_id_transacao_original}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\AjusteFinanceiroResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ajustarContaUsingPOST1WithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $authorization = null, $identificador_externo = null, $id_transacao_original = null)
+    public function ajustarContaUsingPOST1WithHttpInfo($id, $id_tipo_ajuste, $data_ajuste, $valor_ajuste, $identificador_externo = null, $id_transacao_original = null)
     {
         
         // verify the required parameter 'id' is set
@@ -181,11 +179,7 @@ class GlobaltagcontaApi
         if ($id_transacao_original !== null) {
             $queryParams['idTransacaoOriginal'] = $this->apiClient->getSerializer()->toQueryValue($id_transacao_original);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -241,13 +235,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_produto_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
-     * @param string $authorization Authorization (optional)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarProdutoUsingPOST($id, $request, $authorization = null)
+    public function alterarProdutoUsingPOST($id, $request)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarProdutoUsingPOSTWithHttpInfo ($id, $request, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarProdutoUsingPOSTWithHttpInfo ($id, $request);
         return $response; 
     }
 
@@ -259,11 +252,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_produto_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\AlterarProdutoRequest $request request (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarProdutoUsingPOSTWithHttpInfo($id, $request, $authorization = null)
+    public function alterarProdutoUsingPOSTWithHttpInfo($id, $request)
     {
         
         // verify the required parameter 'id' is set
@@ -288,11 +280,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -352,13 +340,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_titular_param_id_conta}}} (required)
      * @param int $id_pessoa {{{conta_resource_alterar_titular_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarTitularUsingPOST($id, $id_pessoa, $authorization = null)
+    public function alterarTitularUsingPOST($id, $id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarTitularUsingPOSTWithHttpInfo ($id, $id_pessoa, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarTitularUsingPOSTWithHttpInfo ($id, $id_pessoa);
         return $response; 
     }
 
@@ -370,11 +357,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_titular_param_id_conta}}} (required)
      * @param int $id_pessoa {{{conta_resource_alterar_titular_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarTitularUsingPOSTWithHttpInfo($id, $id_pessoa, $authorization = null)
+    public function alterarTitularUsingPOSTWithHttpInfo($id, $id_pessoa)
     {
         
         // verify the required parameter 'id' is set
@@ -403,11 +389,7 @@ class GlobaltagcontaApi
         if ($id_pessoa !== null) {
             $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -463,13 +445,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_vencimento_param_id}}} (required)
      * @param int $novo_dia_vencimento {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarVencimentoUsingPUT($id, $novo_dia_vencimento, $authorization = null)
+    public function alterarVencimentoUsingPUT($id, $novo_dia_vencimento)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarVencimentoUsingPUTWithHttpInfo ($id, $novo_dia_vencimento, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarVencimentoUsingPUTWithHttpInfo ($id, $novo_dia_vencimento);
         return $response; 
     }
 
@@ -481,11 +462,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_alterar_vencimento_param_id}}} (required)
      * @param int $novo_dia_vencimento {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarVencimentoUsingPUTWithHttpInfo($id, $novo_dia_vencimento, $authorization = null)
+    public function alterarVencimentoUsingPUTWithHttpInfo($id, $novo_dia_vencimento)
     {
         
         // verify the required parameter 'id' is set
@@ -514,11 +494,7 @@ class GlobaltagcontaApi
         if ($novo_dia_vencimento !== null) {
             $queryParams['novo_dia_vencimento'] = $this->apiClient->getSerializer()->toQueryValue($novo_dia_vencimento);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -574,7 +550,6 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_ativar_anuidade_param_id}}} (required)
      * @param int $id_anuidade {{{anuidade_request_id_anuidade_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -585,9 +560,9 @@ class GlobaltagcontaApi
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization = null, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    public function ativarAnuidadeUsingPOST($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->ativarAnuidadeUsingPOSTWithHttpInfo ($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
+        list($response, $statusCode, $httpHeader) = $this->ativarAnuidadeUsingPOSTWithHttpInfo ($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
         return $response; 
     }
 
@@ -599,7 +574,6 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_ativar_anuidade_param_id}}} (required)
      * @param int $id_anuidade {{{anuidade_request_id_anuidade_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -610,7 +584,7 @@ class GlobaltagcontaApi
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarAnuidadeUsingPOSTWithHttpInfo($id, $id_anuidade, $authorization = null, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
+    public function ativarAnuidadeUsingPOSTWithHttpInfo($id, $id_anuidade, $sort = null, $page = null, $limit = null, $ddd = null, $celular = null, $id_operadora = null, $id_origem_comercial = null)
     {
         
         // verify the required parameter 'id' is set
@@ -671,11 +645,7 @@ class GlobaltagcontaApi
         if ($id_origem_comercial !== null) {
             $queryParams['idOrigemComercial'] = $this->apiClient->getSerializer()->toQueryValue($id_origem_comercial);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -730,13 +700,12 @@ class GlobaltagcontaApi
      * {{{conta_resource_ativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_ativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarEnvioFaturaEmailUsingPOST($id, $authorization = null)
+    public function ativarEnvioFaturaEmailUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->ativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->ativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -747,11 +716,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_ativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_ativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function ativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function ativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -772,11 +740,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -832,13 +796,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_bloquear_param_id}}} (required)
      * @param int $id_status {{{conta_resource_bloquear_param_id_status}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPOST1($id, $id_status, $authorization = null)
+    public function bloquearUsingPOST1($id, $id_status)
     {
-        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOST1WithHttpInfo ($id, $id_status, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOST1WithHttpInfo ($id, $id_status);
         return $response; 
     }
 
@@ -850,11 +813,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_bloquear_param_id}}} (required)
      * @param int $id_status {{{conta_resource_bloquear_param_id_status}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPOST1WithHttpInfo($id, $id_status, $authorization = null)
+    public function bloquearUsingPOST1WithHttpInfo($id, $id_status)
     {
         
         // verify the required parameter 'id' is set
@@ -883,11 +845,7 @@ class GlobaltagcontaApi
         if ($id_status !== null) {
             $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1034,13 +992,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_cancelar_param_id}}} (required)
      * @param int $id_status {{{conta_resource_cancelar_param_id_status}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOST1($id, $id_status, $authorization = null)
+    public function cancelarUsingPOST1($id, $id_status)
     {
-        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOST1WithHttpInfo ($id, $id_status, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOST1WithHttpInfo ($id, $id_status);
         return $response; 
     }
 
@@ -1052,11 +1009,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_cancelar_param_id}}} (required)
      * @param int $id_status {{{conta_resource_cancelar_param_id_status}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOST1WithHttpInfo($id, $id_status, $authorization = null)
+    public function cancelarUsingPOST1WithHttpInfo($id, $id_status)
     {
         
         // verify the required parameter 'id' is set
@@ -1085,11 +1041,7 @@ class GlobaltagcontaApi
         if ($id_status !== null) {
             $queryParams['id_status'] = $this->apiClient->getSerializer()->toQueryValue($id_status);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1144,13 +1096,12 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
      *
      * @param int $id {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarBeneficioPagamentoAtrasoUsingGET($id, $authorization = null)
+    public function consultarBeneficioPagamentoAtrasoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1161,11 +1112,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
      *
      * @param int $id {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\BeneficioPagamentoAtrasoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1186,11 +1136,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1245,13 +1191,12 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_boleto_emitido}}}
      *
      * @param int $id {{{conta_resource_consultar_boleto_emitido_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarBoletoEmitidoUsingGET($id, $authorization = null)
+    public function consultarBoletoEmitidoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarBoletoEmitidoUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarBoletoEmitidoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1262,11 +1207,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_boleto_emitido}}}
      *
      * @param int $id {{{conta_resource_consultar_boleto_emitido_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarBoletoEmitidoUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarBoletoEmitidoUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1287,11 +1231,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1346,7 +1286,6 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_divida_atualizada_cliente}}}
      *
      * @param int $id {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -1355,9 +1294,9 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\DividaClienteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDividaAtualizadaClienteUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
+    public function consultarDividaAtualizadaClienteUsingGET($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarDividaAtualizadaClienteUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
+        list($response, $statusCode, $httpHeader) = $this->consultarDividaAtualizadaClienteUsingGETWithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $id_escritorio_cobranca);
         return $response; 
     }
 
@@ -1368,7 +1307,6 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_divida_atualizada_cliente}}}
      *
      * @param int $id {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -1377,7 +1315,7 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DividaClienteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDividaAtualizadaClienteUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
+    public function consultarDividaAtualizadaClienteUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $id_escritorio_cobranca = null)
     {
         
         // verify the required parameter 'id' is set
@@ -1422,11 +1360,7 @@ class GlobaltagcontaApi
         if ($id_escritorio_cobranca !== null) {
             $queryParams['idEscritorioCobranca'] = $this->apiClient->getSerializer()->toQueryValue($id_escritorio_cobranca);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1481,16 +1415,15 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_taxas_tarifas}}}
      *
      * @param int $id {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarTaxasTarifasUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function consultarTaxasTarifasUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarTaxasTarifasUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->consultarTaxasTarifasUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -1501,14 +1434,13 @@ class GlobaltagcontaApi
      * {{{conta_resource_consultar_taxas_tarifas}}}
      *
      * @param int $id {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTaxasRefinanciamentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarTaxasTarifasUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function consultarTaxasTarifasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -1545,11 +1477,7 @@ class GlobaltagcontaApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1700,38 +1628,36 @@ class GlobaltagcontaApi
     }
     
     /**
-     * consultarUsingGET14
+     * consultarUsingGET16
      *
      * {{{conta_resource_consultar}}}
      *
      * @param int $id {{{conta_resource_consultar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET14($id, $authorization = null)
+    public function consultarUsingGET16($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET14WithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET16WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET14WithHttpInfo
+     * consultarUsingGET16WithHttpInfo
      *
      * {{{conta_resource_consultar}}}
      *
      * @param int $id {{{conta_resource_consultar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET14WithHttpInfo($id, $authorization = null)
+    public function consultarUsingGET16WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET14');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET16');
         }
   
         // parse inputs
@@ -1747,11 +1673,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1801,7 +1723,7 @@ class GlobaltagcontaApi
     }
     
     /**
-     * consultarUsingGET49
+     * consultarUsingGET51
      *
      * {{{transferencia_resource_consultar}}}
      *
@@ -1810,15 +1732,15 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET49($id, $id_transferencia)
+    public function consultarUsingGET51($id, $id_transferencia)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET49WithHttpInfo ($id, $id_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET51WithHttpInfo ($id, $id_transferencia);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET49WithHttpInfo
+     * consultarUsingGET51WithHttpInfo
      *
      * {{{transferencia_resource_consultar}}}
      *
@@ -1827,16 +1749,16 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TransferenciaDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET49WithHttpInfo($id, $id_transferencia)
+    public function consultarUsingGET51WithHttpInfo($id, $id_transferencia)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET49');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET51');
         }
         // verify the required parameter 'id_transferencia' is set
         if ($id_transferencia === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET49');
+            throw new \InvalidArgumentException('Missing the required parameter $id_transferencia when calling consultarUsingGET51');
         }
   
         // parse inputs
@@ -1910,18 +1832,108 @@ class GlobaltagcontaApi
     }
     
     /**
+     * criarContasMultiAppUsingPOST
+     *
+     * {{{conta_resource_cadastrar_conta_multiapp}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_ $conta_multi_app_persist contaMultiAppPersist (required)
+     * @return \br.com.conductor.pier.api.v2.model\ContaMultiAppResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function criarContasMultiAppUsingPOST($conta_multi_app_persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->criarContasMultiAppUsingPOSTWithHttpInfo ($conta_multi_app_persist);
+        return $response; 
+    }
+
+
+    /**
+     * criarContasMultiAppUsingPOSTWithHttpInfo
+     *
+     * {{{conta_resource_cadastrar_conta_multiapp}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\ContaMultiAppPersistValue_ $conta_multi_app_persist contaMultiAppPersist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\ContaMultiAppResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function criarContasMultiAppUsingPOSTWithHttpInfo($conta_multi_app_persist)
+    {
+        
+        // verify the required parameter 'conta_multi_app_persist' is set
+        if ($conta_multi_app_persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $conta_multi_app_persist when calling criarContasMultiAppUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/cadastrar-conta-multiapp";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($conta_multi_app_persist)) {
+            $_tempBody = $conta_multi_app_persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\ContaMultiAppResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\ContaMultiAppResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ContaMultiAppResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * desativarEnvioFaturaEmailUsingPOST
      *
      * {{{conta_resource_desativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_desativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desativarEnvioFaturaEmailUsingPOST($id, $authorization = null)
+    public function desativarEnvioFaturaEmailUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->desativarEnvioFaturaEmailUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1932,11 +1944,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_desativar_envio_fatura_email}}}
      *
      * @param int $id {{{conta_resource_desativar_envio_fatura_email_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function desativarEnvioFaturaEmailUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1957,11 +1968,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2018,13 +2025,12 @@ class GlobaltagcontaApi
      * @param int $id {{{conta_resource_gerar_boleto_recarga_param_id}}} (required)
      * @param Number $valor {{{boleto_recarga_request_valor_value}}} (required)
      * @param string $data_vencimento {{{boleto_recarga_request_data_vencimento_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento, $authorization = null)
+    public function gerarBoletoRecargaUsingPOST($id, $valor, $data_vencimento)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarBoletoRecargaUsingPOSTWithHttpInfo ($id, $valor, $data_vencimento, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarBoletoRecargaUsingPOSTWithHttpInfo ($id, $valor, $data_vencimento);
         return $response; 
     }
 
@@ -2037,11 +2043,10 @@ class GlobaltagcontaApi
      * @param int $id {{{conta_resource_gerar_boleto_recarga_param_id}}} (required)
      * @param Number $valor {{{boleto_recarga_request_valor_value}}} (required)
      * @param string $data_vencimento {{{boleto_recarga_request_data_vencimento_value}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarBoletoRecargaUsingPOSTWithHttpInfo($id, $valor, $data_vencimento, $authorization = null)
+    public function gerarBoletoRecargaUsingPOSTWithHttpInfo($id, $valor, $data_vencimento)
     {
         
         // verify the required parameter 'id' is set
@@ -2078,11 +2083,7 @@ class GlobaltagcontaApi
         if ($data_vencimento !== null) {
             $queryParams['dataVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_vencimento);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2138,13 +2139,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_embossing_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request, $authorization = null)
+    public function gerarCartaoEmbossingUsingPOST($id, $cartao_embossing_request)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarCartaoEmbossingUsingPOSTWithHttpInfo ($id, $cartao_embossing_request, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoEmbossingUsingPOSTWithHttpInfo ($id, $cartao_embossing_request);
         return $response; 
     }
 
@@ -2156,11 +2156,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_embossing_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\CartaoEmbossingRequest $cartao_embossing_request cartaoEmbossingRequest (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoEmbossingResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoEmbossingUsingPOSTWithHttpInfo($id, $cartao_embossing_request, $authorization = null)
+    public function gerarCartaoEmbossingUsingPOSTWithHttpInfo($id, $cartao_embossing_request)
     {
         
         // verify the required parameter 'id' is set
@@ -2185,11 +2184,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2248,13 +2243,12 @@ class GlobaltagcontaApi
      * {{{conta_resource_gerar_cartao_provisorio}}}
      *
      * @param int $id {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoProvisorioUsingPOST($id, $authorization = null)
+    public function gerarCartaoProvisorioUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarCartaoProvisorioUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoProvisorioUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -2265,11 +2259,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_gerar_cartao_provisorio}}}
      *
      * @param int $id {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoProvisorioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoProvisorioUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function gerarCartaoProvisorioUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -2290,11 +2283,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2350,14 +2339,13 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_param_id}}} (required)
      * @param int $id_pessoa {{{conta_resource_gerar_cartao_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param int $id_tipo_plastico {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoUsingPOST($id, $id_pessoa, $authorization = null, $id_tipo_plastico = null)
+    public function gerarCartaoUsingPOST($id, $id_pessoa, $id_tipo_plastico = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarCartaoUsingPOSTWithHttpInfo ($id, $id_pessoa, $authorization, $id_tipo_plastico);
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoUsingPOSTWithHttpInfo ($id, $id_pessoa, $id_tipo_plastico);
         return $response; 
     }
 
@@ -2369,12 +2357,11 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_param_id}}} (required)
      * @param int $id_pessoa {{{conta_resource_gerar_cartao_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param int $id_tipo_plastico {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoUsingPOSTWithHttpInfo($id, $id_pessoa, $authorization = null, $id_tipo_plastico = null)
+    public function gerarCartaoUsingPOSTWithHttpInfo($id, $id_pessoa, $id_tipo_plastico = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2403,11 +2390,7 @@ class GlobaltagcontaApi
         if ($id_tipo_plastico !== null) {
             $queryParams['id_tipo_plastico'] = $this->apiClient->getSerializer()->toQueryValue($id_tipo_plastico);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2471,13 +2454,12 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_virtual_param_id}}} (required)
      * @param string $data_validade {{{conta_resource_gerar_cartao_virtual_param_data_validade}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoVirtualUsingPOST($id, $data_validade, $authorization = null)
+    public function gerarCartaoVirtualUsingPOST($id, $data_validade)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarCartaoVirtualUsingPOSTWithHttpInfo ($id, $data_validade, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarCartaoVirtualUsingPOSTWithHttpInfo ($id, $data_validade);
         return $response; 
     }
 
@@ -2489,11 +2471,10 @@ class GlobaltagcontaApi
      *
      * @param int $id {{{conta_resource_gerar_cartao_virtual_param_id}}} (required)
      * @param string $data_validade {{{conta_resource_gerar_cartao_virtual_param_data_validade}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarCartaoVirtualUsingPOSTWithHttpInfo($id, $data_validade, $authorization = null)
+    public function gerarCartaoVirtualUsingPOSTWithHttpInfo($id, $data_validade)
     {
         
         // verify the required parameter 'id' is set
@@ -2522,11 +2503,7 @@ class GlobaltagcontaApi
         if ($data_validade !== null) {
             $queryParams['dataValidade'] = $this->apiClient->getSerializer()->toQueryValue($data_validade);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2581,16 +2558,15 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_alteracoes_limites}}}
      *
      * @param int $id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2601,14 +2577,13 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_alteracoes_limites}}}
      *
      * @param int $id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2645,11 +2620,7 @@ class GlobaltagcontaApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2704,16 +2675,15 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_assessoria}}}
      *
      * @param int $id {{{conta_resource_listar_historico_assessoria_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAssessoriaUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAssessoriaUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAssessoriaUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAssessoriaUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2724,14 +2694,13 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_assessoria}}}
      *
      * @param int $id {{{conta_resource_listar_historico_assessoria_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAssessoriaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAssessoriaUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAssessoriaUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2768,11 +2737,7 @@ class GlobaltagcontaApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2827,16 +2792,15 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_atrasos_faturas}}}
      *
      * @param int $id {{{conta_resource_listar_historico_atrasos_faturas_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAtrasosFaturasUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAtrasosFaturasUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAtrasosFaturasUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAtrasosFaturasUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -2847,14 +2811,13 @@ class GlobaltagcontaApi
      * {{{conta_resource_listar_historico_atrasos_faturas}}}
      *
      * @param int $id {{{conta_resource_listar_historico_atrasos_faturas_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoAtrasoFaturaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAtrasosFaturasUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAtrasosFaturasUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -2891,11 +2854,7 @@ class GlobaltagcontaApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -3221,11 +3180,10 @@ class GlobaltagcontaApi
     }
     
     /**
-     * listarUsingGET18
+     * listarUsingGET19
      *
      * {{{conta_resource_listar}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -3241,19 +3199,18 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\PageContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET18($authorization = null, $sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET19($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET18WithHttpInfo ($authorization, $sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET19WithHttpInfo ($sort, $page, $limit, $id_produto, $id_origem_comercial, $id_pessoa, $id_status_conta, $dia_vencimento, $melhor_dia_compra, $data_status_conta, $data_cadastro, $data_ultima_alteracao_vencimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET18WithHttpInfo
+     * listarUsingGET19WithHttpInfo
      *
      * {{{conta_resource_listar}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -3269,7 +3226,7 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET18WithHttpInfo($authorization = null, $sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
+    public function listarUsingGET19WithHttpInfo($sort = null, $page = null, $limit = null, $id_produto = null, $id_origem_comercial = null, $id_pessoa = null, $id_status_conta = null, $dia_vencimento = null, $melhor_dia_compra = null, $data_status_conta = null, $data_cadastro = null, $data_ultima_alteracao_vencimento = null)
     {
         
   
@@ -3338,11 +3295,7 @@ class GlobaltagcontaApi
         if ($data_ultima_alteracao_vencimento !== null) {
             $queryParams['dataUltimaAlteracaoVencimento'] = $this->apiClient->getSerializer()->toQueryValue($data_ultima_alteracao_vencimento);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -3384,7 +3337,7 @@ class GlobaltagcontaApi
     }
     
     /**
-     * listarUsingGET58
+     * listarUsingGET61
      *
      * {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
      *
@@ -3399,15 +3352,15 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoProcessadaNaoProcessadaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET58($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
+    public function listarUsingGET61($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET58WithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET61WithHttpInfo ($id, $sort, $page, $limit, $data_vencimento, $data_inicio, $data_fim, $id_tipo_transacao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET58WithHttpInfo
+     * listarUsingGET61WithHttpInfo
      *
      * {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
      *
@@ -3422,12 +3375,12 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoProcessadaNaoProcessadaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET58WithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
+    public function listarUsingGET61WithHttpInfo($id, $sort = null, $page = null, $limit = null, $data_vencimento = null, $data_inicio = null, $data_fim = null, $id_tipo_transacao = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET58');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET61');
         }
   
         // parse inputs
@@ -3525,7 +3478,7 @@ class GlobaltagcontaApi
     }
     
     /**
-     * listarUsingGET60
+     * listarUsingGET63
      *
      * {{{transferencia_resource_listar}}}
      *
@@ -3541,15 +3494,15 @@ class GlobaltagcontaApi
      * @return \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET60($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET63($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET60WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET63WithHttpInfo ($id, $sort, $page, $limit, $id_transferencia, $id_conta_origem, $id_conta_destino, $valor_transferencia, $data_transferencia);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET60WithHttpInfo
+     * listarUsingGET63WithHttpInfo
      *
      * {{{transferencia_resource_listar}}}
      *
@@ -3565,12 +3518,12 @@ class GlobaltagcontaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransferenciaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET60WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
+    public function listarUsingGET63WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_transferencia = null, $id_conta_origem = null, $id_conta_destino = null, $valor_transferencia = null, $data_transferencia = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET60');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET63');
         }
   
         // parse inputs
@@ -3677,13 +3630,12 @@ class GlobaltagcontaApi
      * {{{conta_resource_reativar}}}
      *
      * @param int $id {{{conta_resource_reativar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOST1($id, $authorization = null)
+    public function reativarUsingPOST1($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOST1WithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOST1WithHttpInfo ($id);
         return $response; 
     }
 
@@ -3694,11 +3646,10 @@ class GlobaltagcontaApi
      * {{{conta_resource_reativar}}}
      *
      * @param int $id {{{conta_resource_reativar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOST1WithHttpInfo($id, $authorization = null)
+    public function reativarUsingPOST1WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -3719,11 +3670,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -3773,38 +3720,36 @@ class GlobaltagcontaApi
     }
     
     /**
-     * salvarUsingPOST8
+     * salvarUsingPOST9
      *
      * {{{conta_resource_salvar}}}
      *
      * @param \br.com.conductor.pier.api.v2.model\ContaPersistValue_ $conta_persist contaPersist (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8($conta_persist, $authorization = null)
+    public function salvarUsingPOST9($conta_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST8WithHttpInfo ($conta_persist, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($conta_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST8WithHttpInfo
+     * salvarUsingPOST9WithHttpInfo
      *
      * {{{conta_resource_salvar}}}
      *
      * @param \br.com.conductor.pier.api.v2.model\ContaPersistValue_ $conta_persist contaPersist (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST8WithHttpInfo($conta_persist, $authorization = null)
+    public function salvarUsingPOST9WithHttpInfo($conta_persist)
     {
         
         // verify the required parameter 'conta_persist' is set
         if ($conta_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $conta_persist when calling salvarUsingPOST8');
+            throw new \InvalidArgumentException('Missing the required parameter $conta_persist when calling salvarUsingPOST9');
         }
   
         // parse inputs
@@ -3820,11 +3765,7 @@ class GlobaltagcontaApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -3980,16 +3921,15 @@ class GlobaltagcontaApi
      * {{{conta_resource_transacoes}}}
      *
      * @param int $id {{{conta_resource_transacoes_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageTransacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function transacoesUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->transacoesUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -4000,14 +3940,13 @@ class GlobaltagcontaApi
      * {{{conta_resource_transacoes}}}
      *
      * @param int $id {{{conta_resource_transacoes_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTransacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacoesUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function transacoesUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -4044,11 +3983,7 @@ class GlobaltagcontaApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {

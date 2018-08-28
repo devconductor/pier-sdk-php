@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**consultarPorEmailUsingGET**](GlobaltagnotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | {{{codigo_seguranca_resource_consultar_por_email}}}
 [**consultarPorSMSUsingGET**](GlobaltagnotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | {{{codigo_seguranca_resource_consultar_por_s_m_s}}}
 [**consultarTemplateNotificacaoUsingGET**](GlobaltagnotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | {{{notificacao_resource_consultar_template_notificacao}}}
+[**enviarOTPUsingPOST**](GlobaltagnotificacaoApi.md#enviarOTPUsingPOST) | **POST** /api/notificacoes/3d-secure | {{{notificacao_resource_3d_secure}}}
 [**gerarTokenEMAILUsingPOST**](GlobaltagnotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_e_m_a_i_l}}}
 [**gerarTokenSMSUsingPOST**](GlobaltagnotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_s_m_s}}}
 [**listarConfiguracaoUsingGET**](GlobaltagnotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | {{{email_resource_listar_configuracao}}}
@@ -360,6 +361,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **enviarOTPUsingPOST**
+> object enviarOTPUsingPOST($secure3d_request)
+
+{{{notificacao_resource_3d_secure}}}
+
+{{{notificacao_resource_3d_secure_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagnotificacaoApi();
+$secure3d_request = new \br.com.conductor.pier.api.v2.model\Secure3dRequest(); // \br.com.conductor.pier.api.v2.model\Secure3dRequest | secure3dRequest
+
+try { 
+    $result = $api_instance->enviarOTPUsingPOST($secure3d_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagnotificacaoApi->enviarOTPUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **secure3d_request** | [**\br.com.conductor.pier.api.v2.model\Secure3dRequest**](\br.com.conductor.pier.api.v2.model\Secure3dRequest.md)| secure3dRequest | 
+
+### Return type
+
+**object**
 
 ### Authorization
 

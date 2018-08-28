@@ -66,6 +66,16 @@ class GlobaltagtiporesolucaocontestacaoApiTest extends \PHPUnit_Framework_TestCa
 
     
     /**
+     * Test case for listarStatusContestacaoUsingGET
+     *
+     * {{{status_contestacao_resource_listar_status_contestacao}}}
+     *
+     */
+    public function test_listarStatusContestacaoUsingGET() {
+
+    }
+    
+    /**
      * Test case for listarTipoResolucaoContestacaoUsingGET
      *
      * {{{tipo_resolucao_contestacao_resource_listar_tipo_contestacao}}}

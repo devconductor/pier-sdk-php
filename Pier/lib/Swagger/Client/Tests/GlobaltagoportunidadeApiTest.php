@@ -106,22 +106,22 @@ class GlobaltagoportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET26
+     * Test case for consultarUsingGET28
      *
      * {{{oportunidade_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET26() {
+    public function test_consultarUsingGET28() {
 
     }
     
     /**
-     * Test case for consultarUsingGET45
+     * Test case for consultarUsingGET47
      *
      * {{{tipo_oportunidade_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET45() {
+    public function test_consultarUsingGET47() {
 
     }
     
@@ -166,22 +166,22 @@ class GlobaltagoportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET35
+     * Test case for listarUsingGET36
      *
      * {{{oportunidade_resource_listar}}}
      *
      */
-    public function test_listarUsingGET35() {
+    public function test_listarUsingGET36() {
 
     }
     
     /**
-     * Test case for listarUsingGET55
+     * Test case for listarUsingGET58
      *
      * {{{tipo_oportunidade_resource_listar}}}
      *
      */
-    public function test_listarUsingGET55() {
+    public function test_listarUsingGET58() {
 
     }
     
@@ -196,22 +196,22 @@ class GlobaltagoportunidadeApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST21
+     * Test case for salvarUsingPOST22
      *
      * {{{oportunidade_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST21() {
+    public function test_salvarUsingPOST22() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST30
+     * Test case for salvarUsingPOST31
      *
      * {{{tipo_oportunidade_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST30() {
+    public function test_salvarUsingPOST31() {
 
     }
     

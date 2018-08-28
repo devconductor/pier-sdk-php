@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**consultarTaxaAntecipacaoUsingGET**](GlobaltagantecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
 [**efetivarAntecipacaoUsingPOST**](GlobaltagantecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacao}}}
 [**efetivarAntecipacoesUsingPOST**](GlobaltagantecipacaoApi.md#efetivarAntecipacoesUsingPOST) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacoes}}}
-[**listarUsingGET13**](GlobaltagantecipacaoApi.md#listarUsingGET13) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
+[**listarUsingGET14**](GlobaltagantecipacaoApi.md#listarUsingGET14) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
 [**simularAntecipacaoUsingGET**](GlobaltagantecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacao}}}
 [**simularAntecipacoesUsingGET**](GlobaltagantecipacaoApi.md#simularAntecipacoesUsingGET) | **GET** /api/compras-antecipaveis/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacoes}}}
 
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET13($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
+# **listarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\PageCompraResponse listarUsingGET14($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao)
 
 {{{compra_antecipavel_resource_listar}}}
 
@@ -228,10 +228,10 @@ $juros = true; // bool | {{{compra_d_t_o_juros_value}}}
 $tipo_origem_transacao = "tipo_origem_transacao_example"; // string | {{{compra_d_t_o_tipo_origem_transacao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET13($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
+    $result = $api_instance->listarUsingGET14($id_conta, $sort, $page, $limit, $id_compra, $parcelada, $juros, $tipo_origem_transacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagantecipacaoApi->listarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagantecipacaoApi->listarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -8,15 +8,15 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](GlobaltagusuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | {{{usuario_resource_alterar_senha}}}
 [**alterarUsingPUT23**](GlobaltagusuarioApi.md#alterarUsingPUT23) | **PUT** /api/usuarios/{id} | {{{usuario_resource_alterar}}}
 [**ativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#ativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
-[**atualizarUsingPUT2**](GlobaltagusuarioApi.md#atualizarUsingPUT2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
+[**atualizarUsingPUT3**](GlobaltagusuarioApi.md#atualizarUsingPUT3) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultarContasVinculadasUsingGET**](GlobaltagusuarioApi.md#consultarContasVinculadasUsingGET) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultarUsingGET15**](GlobaltagusuarioApi.md#consultarUsingGET15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultarUsingGET51**](GlobaltagusuarioApi.md#consultarUsingGET51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultarUsingGET17**](GlobaltagusuarioApi.md#consultarUsingGET17) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultarUsingGET53**](GlobaltagusuarioApi.md#consultarUsingGET53) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#desativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
-[**listarUsingGET62**](GlobaltagusuarioApi.md#listarUsingGET62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
+[**listarUsingGET65**](GlobaltagusuarioApi.md#listarUsingGET65) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperarSenhaUsingPOST**](GlobaltagusuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
-[**salvarUsingPOST33**](GlobaltagusuarioApi.md#salvarUsingPOST33) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
-[**salvarUsingPOST9**](GlobaltagusuarioApi.md#salvarUsingPOST9) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvarUsingPOST10**](GlobaltagusuarioApi.md#salvarUsingPOST10) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvarUsingPOST34**](GlobaltagusuarioApi.md#salvarUsingPOST34) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
 [**validarSenhaForteUsingPOST**](GlobaltagusuarioApi.md#validarSenhaForteUsingPOST) | **POST** /api/usuarios/validar-senha-forte | {{{usuario_resource_validar_senha_forte}}}
 [**validarSenhaLoginUsingPOST**](GlobaltagusuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | {{{usuario_resource_validar_senha_login}}}
 [**validarSenhaUsingGET1**](GlobaltagusuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | {{{usuario_resource_validar_senha}}}
@@ -211,8 +211,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **atualizarUsingPUT2**
-> \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse atualizarUsingPUT2($update)
+# **atualizarUsingPUT3**
+> \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse atualizarUsingPUT3($update)
 
 {{{controle_seguranca_dispositivo_atualizar}}}
 
@@ -227,10 +227,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi
 $update = new \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoUpdateValor_(); // \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoUpdateValor_ | update
 
 try { 
-    $result = $api_instance->atualizarUsingPUT2($update);
+    $result = $api_instance->atualizarUsingPUT3($update);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->atualizarUsingPUT2: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->atualizarUsingPUT3: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -307,8 +307,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse consultarUsingGET15($id_usuario, $sort, $page, $limit)
+# **consultarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse consultarUsingGET17($id_usuario, $sort, $page, $limit)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -326,10 +326,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET15($id_usuario, $sort, $page, $limit);
+    $result = $api_instance->consultarUsingGET17($id_usuario, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -358,8 +358,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET51**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET51($id)
+# **consultarUsingGET53**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse consultarUsingGET53($id)
 
 {{{usuario_resource_consultar}}}
 
@@ -374,10 +374,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi
 $id = 789; // int | {{{usuario_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET51($id);
+    $result = $api_instance->consultarUsingGET53($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET51: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->consultarUsingGET53: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -448,8 +448,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET62**
-> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET62($sort, $page, $limit, $nome, $cpf, $email, $status)
+# **listarUsingGET65**
+> \br.com.conductor.pier.api.v2.model\PageUsuarioResponse listarUsingGET65($sort, $page, $limit, $nome, $cpf, $email, $status)
 
 {{{usuario_resource_listar}}}
 
@@ -470,10 +470,10 @@ $email = "email_example"; // string | {{{usuario_request_email_value}}}
 $status = "status_example"; // string | {{{usuario_request_status_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET62($sort, $page, $limit, $nome, $cpf, $email, $status);
+    $result = $api_instance->listarUsingGET65($sort, $page, $limit, $nome, $cpf, $email, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->listarUsingGET62: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->listarUsingGET65: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -550,53 +550,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST33**
-> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST33($persist)
-
-{{{usuario_resource_salvar}}}
-
-{{{usuario_resource_salvar_notes}}}
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi();
-$persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_(); // \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ | persist
-
-try { 
-    $result = $api_instance->salvarUsingPOST33($persist);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->salvarUsingPOST33: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**\br.com.conductor.pier.api.v2.model\UsuarioPersistencia_**](\br.com.conductor.pier.api.v2.model\UsuarioPersistencia_.md)| persist | 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **salvarUsingPOST9**
-> \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse salvarUsingPOST9($persist)
+# **salvarUsingPOST10**
+> \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse salvarUsingPOST10($persist)
 
 {{{controle_seguranca_dispositivo_salvar}}}
 
@@ -611,10 +566,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi
 $persist = new \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoPersistencia_(); // \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoPersistencia_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST9($persist);
+    $result = $api_instance->salvarUsingPOST10($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagusuarioApi->salvarUsingPOST9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagusuarioApi->salvarUsingPOST10: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -628,6 +583,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse**](ControleSegurancaDispositivoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salvarUsingPOST34**
+> \br.com.conductor.pier.api.v2.model\UsuarioResponse salvarUsingPOST34($persist)
+
+{{{usuario_resource_salvar}}}
+
+{{{usuario_resource_salvar_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagusuarioApi();
+$persist = new \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_(); // \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ | persist
+
+try { 
+    $result = $api_instance->salvarUsingPOST34($persist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagusuarioApi->salvarUsingPOST34: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**\br.com.conductor.pier.api.v2.model\UsuarioPersistencia_**](\br.com.conductor.pier.api.v2.model\UsuarioPersistencia_.md)| persist | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 

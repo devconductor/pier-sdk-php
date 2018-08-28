@@ -52,10 +52,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       */
     static $swaggerTypes = array(
         'id_cartao' => 'int',
+        'aging_compras' => 'int',
         'aging_contestacao' => 'int',
         'cartao' => 'string',
         'nome' => 'string',
-        'bandeira' => 'string'
+        'bandeira' => 'string',
+        'valor_compra' => 'string'
     );
   
     static function swaggerTypes() {
@@ -68,10 +70,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       */
     static $attributeMap = array(
         'id_cartao' => 'idCartao',
+        'aging_compras' => 'agingCompras',
         'aging_contestacao' => 'agingContestacao',
         'cartao' => 'cartao',
         'nome' => 'nome',
-        'bandeira' => 'bandeira'
+        'bandeira' => 'bandeira',
+        'valor_compra' => 'valorCompra'
     );
   
     static function attributeMap() {
@@ -84,10 +88,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       */
     static $setters = array(
         'id_cartao' => 'setIdCartao',
+        'aging_compras' => 'setAgingCompras',
         'aging_contestacao' => 'setAgingContestacao',
         'cartao' => 'setCartao',
         'nome' => 'setNome',
-        'bandeira' => 'setBandeira'
+        'bandeira' => 'setBandeira',
+        'valor_compra' => 'setValorCompra'
     );
   
     static function setters() {
@@ -100,10 +106,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       */
     static $getters = array(
         'id_cartao' => 'getIdCartao',
+        'aging_compras' => 'getAgingCompras',
         'aging_contestacao' => 'getAgingContestacao',
         'cartao' => 'getCartao',
         'nome' => 'getNome',
-        'bandeira' => 'getBandeira'
+        'bandeira' => 'getBandeira',
+        'valor_compra' => 'getValorCompra'
     );
   
     static function getters() {
@@ -116,6 +124,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       * @var int
       */
     protected $id_cartao;
+    
+    /**
+      * $aging_compras {{{compra_contestada_cartao_response_aging_compras_value}}}
+      * @var int
+      */
+    protected $aging_compras;
     
     /**
       * $aging_contestacao {{{compra_contestada_cartao_response_aging_contestacao_value}}}
@@ -141,6 +155,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
       */
     protected $bandeira;
     
+    /**
+      * $valor_compra {{{compra_contestada_cartao_response_valor_compra_value}}}
+      * @var string
+      */
+    protected $valor_compra;
+    
 
     /**
      * Constructor
@@ -151,10 +171,12 @@ class CompraContestadaCartaoResponse implements ArrayAccess
         
         if ($data != null) {
             $this->id_cartao = $data["id_cartao"];
+            $this->aging_compras = $data["aging_compras"];
             $this->aging_contestacao = $data["aging_contestacao"];
             $this->cartao = $data["cartao"];
             $this->nome = $data["nome"];
             $this->bandeira = $data["bandeira"];
+            $this->valor_compra = $data["valor_compra"];
         }
     }
     
@@ -176,6 +198,27 @@ class CompraContestadaCartaoResponse implements ArrayAccess
     {
         
         $this->id_cartao = $id_cartao;
+        return $this;
+    }
+    
+    /**
+     * Gets aging_compras
+     * @return int
+     */
+    public function getAgingCompras()
+    {
+        return $this->aging_compras;
+    }
+  
+    /**
+     * Sets aging_compras
+     * @param int $aging_compras {{{compra_contestada_cartao_response_aging_compras_value}}}
+     * @return $this
+     */
+    public function setAgingCompras($aging_compras)
+    {
+        
+        $this->aging_compras = $aging_compras;
         return $this;
     }
     
@@ -260,6 +303,27 @@ class CompraContestadaCartaoResponse implements ArrayAccess
     {
         
         $this->bandeira = $bandeira;
+        return $this;
+    }
+    
+    /**
+     * Gets valor_compra
+     * @return string
+     */
+    public function getValorCompra()
+    {
+        return $this->valor_compra;
+    }
+  
+    /**
+     * Sets valor_compra
+     * @param string $valor_compra {{{compra_contestada_cartao_response_valor_compra_value}}}
+     * @return $this
+     */
+    public function setValorCompra($valor_compra)
+    {
+        
+        $this->valor_compra = $valor_compra;
         return $this;
     }
     

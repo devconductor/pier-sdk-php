@@ -1,6 +1,6 @@
 <?php
 /**
- * GlobaltagjobApiTest
+ * UsuarioldapresourceApiTest
  * PHP version 5
  *
  * @category Class
@@ -39,7 +39,7 @@ use \br.com.conductor.pier.api.v2.invoker\ApiException;
 use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
 
 /**
- * GlobaltagjobApiTest Class Doc Comment
+ * UsuarioldapresourceApiTest Class Doc Comment
  *
  * @category Class
  * @package  br.com.conductor.pier.api.v2.invoker
@@ -47,7 +47,7 @@ use \br.com.conductor.pier.api.v2.invoker\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GlobaltagjobApiTest extends \PHPUnit_Framework_TestCase
+class UsuarioldapresourceApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -66,52 +66,72 @@ class GlobaltagjobApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for ativarJobUsingPOST
+     * Test case for alterarUsingPUT22
      *
-     * {{{job_resource_ativar_job}}}
+     * alterar
      *
      */
-    public function test_ativarJobUsingPOST() {
+    public function test_alterarUsingPUT22() {
 
     }
     
     /**
-     * Test case for atualizarUsingPUT4
+     * Test case for ativarUsuarioUsingPOST
      *
-     * {{{job_resource_atualizar}}}
+     * ativarUsuario
      *
      */
-    public function test_atualizarUsingPUT4() {
+    public function test_ativarUsuarioUsingPOST() {
 
     }
     
     /**
-     * Test case for desativarJobUsingPOST
+     * Test case for consultarUsingGET52
      *
-     * {{{job_resource_desativar_job}}}
+     * consultar
      *
      */
-    public function test_desativarJobUsingPOST() {
+    public function test_consultarUsingGET52() {
 
     }
     
     /**
-     * Test case for listarUsingGET31
+     * Test case for desativarUsuarioUsingPOST
      *
-     * {{{job_resource_listar}}}
+     * desativarUsuario
      *
      */
-    public function test_listarUsingGET31() {
+    public function test_desativarUsuarioUsingPOST() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST17
+     * Test case for listarUsingGET64
      *
-     * {{{job_resource_salvar}}}
+     * listar
      *
      */
-    public function test_salvarUsingPOST17() {
+    public function test_listarUsingGET64() {
+
+    }
+    
+    /**
+     * Test case for perfisUsingGET
+     *
+     * perfis
+     *
+     */
+    public function test_perfisUsingGET() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST33
+     *
+     * salvar
+     *
+     */
+    public function test_salvarUsingPOST33() {
 
     }
     

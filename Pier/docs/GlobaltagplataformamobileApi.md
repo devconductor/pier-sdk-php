@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](GlobaltagplataformamobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | {{{plataforma_mobile_resource_atualizar}}}
-[**listarUsingGET40**](GlobaltagplataformamobileApi.md#listarUsingGET40) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
-[**salvarUsingPOST26**](GlobaltagplataformamobileApi.md#salvarUsingPOST26) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
+[**listarUsingGET42**](GlobaltagplataformamobileApi.md#listarUsingGET42) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
+[**salvarUsingPOST27**](GlobaltagplataformamobileApi.md#salvarUsingPOST27) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
 
 
 # **atualizarUsingPUT1**
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET40**
-> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET40($sort, $page, $limit, $nome)
+# **listarUsingGET42**
+> \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse listarUsingGET42($sort, $page, $limit, $nome)
 
 {{{plataforma_mobile_resource_listar}}}
 
@@ -75,10 +75,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $nome = "nome_example"; // string | {{{plataforma_mobile_request_nome_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET40($sort, $page, $limit, $nome);
+    $result = $api_instance->listarUsingGET42($sort, $page, $limit, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagplataformamobileApi->listarUsingGET40: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagplataformamobileApi->listarUsingGET42: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -107,8 +107,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST26**
-> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST26($persist)
+# **salvarUsingPOST27**
+> \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse salvarUsingPOST27($persist)
 
 {{{plataforma_mobile_resource_salvar}}}
 
@@ -123,10 +123,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagplataforma
 $persist = new \br.com.conductor.pier.api.v2.model\PlataformaMobilePersistValue_(); // \br.com.conductor.pier.api.v2.model\PlataformaMobilePersistValue_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST26($persist);
+    $result = $api_instance->salvarUsingPOST27($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagplataformamobileApi->salvarUsingPOST26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagplataformamobileApi->salvarUsingPOST27: ', $e->getMessage(), "\n";
 }
 ?>
 ```

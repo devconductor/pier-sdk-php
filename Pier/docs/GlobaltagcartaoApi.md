@@ -16,7 +16,8 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](GlobaltagcartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | {{{cartao_resource_consultar_limite_disponibilidade}}}
 [**consultarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 [**consultarPortadorUsingGET**](GlobaltagcartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | {{{cartao_resource_consultar_portador}}}
-[**consultarUsingGET10**](GlobaltagcartaoApi.md#consultarUsingGET10) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**consultarUsingGET12**](GlobaltagcartaoApi.md#consultarUsingGET12) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**criarCartoesMultiAppUsingPOST**](GlobaltagcartaoApi.md#criarCartoesMultiAppUsingPOST) | **POST** /api/cartoes/gerar-cartoes-multiapp | {{{conta_resource_cadastrar_cartao_multiapp}}}
 [**desbloquearSenhaIncorretaUsingPOST**](GlobaltagcartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | {{{cartao_resource_desbloquear_senha_incorreta}}}
 [**desbloquearUsingPOST**](GlobaltagcartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | {{{cartao_resource_desbloquear}}}
 [**gerarLotesCartoesPrePagosUsingPOST**](GlobaltagcartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -24,7 +25,7 @@ Method | HTTP request | Description
 [**gerarNovaViaUsingPOST**](GlobaltagcartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | {{{cartao_resource_gerar_nova_via}}}
 [**lancarTarifaSegundaViaUsingPOST**](GlobaltagcartaoApi.md#lancarTarifaSegundaViaUsingPOST) | **POST** /api/cartoes/{id}/lancar-tarifa-reemissao | {{{cartao_resource_lancar_tarifa_segunda_via}}}
 [**listarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
-[**listarUsingGET11**](GlobaltagcartaoApi.md#listarUsingGET11) | **GET** /api/cartoes | {{{cartao_resource_listar}}}
+[**listarUsingGET12**](GlobaltagcartaoApi.md#listarUsingGET12) | **GET** /api/cartoes | {{{cartao_resource_listar}}}
 [**reativarUsingPOST**](GlobaltagcartaoApi.md#reativarUsingPOST) | **POST** /api/cartoes/{id}/reativar | {{{cartao_resource_reativar}}}
 [**validarCVVUsingPOST**](GlobaltagcartaoApi.md#validarCVVUsingPOST) | **POST** /api/cartoes/{id}/validar-cvv | {{{cartao_resource_validar_c_v_v}}}
 [**validarDadosImpressosBandeiradoUsingGET**](GlobaltagcartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -35,7 +36,7 @@ Method | HTTP request | Description
 
 
 # **alterarAlterarSenhaUsingPUT**
-> string alterarAlterarSenhaUsingPUT($id, $senha, $authorization)
+> string alterarAlterarSenhaUsingPUT($id, $senha)
 
 {{{cartao_resource_alterar_alterar_senha}}}
 
@@ -49,10 +50,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_alterar_alterar_senha_param_id}}}
 $senha = "senha_example"; // string | {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarAlterarSenhaUsingPUT($id, $senha, $authorization);
+    $result = $api_instance->alterarAlterarSenhaUsingPUT($id, $senha);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->alterarAlterarSenhaUsingPUT: ', $e->getMessage(), "\n";
@@ -66,7 +66,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_alterar_alterar_senha_param_id}}} | 
  **senha** | **string**| {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -84,7 +83,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarEstagioUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse alterarEstagioUsingPOST($id, $update, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse alterarEstagioUsingPOST($id, $update)
 
 {{{cartao_resource_alterar_estagio}}}
 
@@ -98,10 +97,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_alterar_estagio_param_id}}}
 $update = new \br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_(); // \br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_ | {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarEstagioUsingPOST($id, $update, $authorization);
+    $result = $api_instance->alterarEstagioUsingPOST($id, $update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->alterarEstagioUsingPOST: ', $e->getMessage(), "\n";
@@ -115,7 +113,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_alterar_estagio_param_id}}} | 
  **update** | [**\br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_**](\br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_.md)| {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -133,7 +130,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **alterarStatusImpressaoUsingPUT**
-> \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT($id, $id_status_impressao, $authorization)
+> \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT($id, $id_status_impressao)
 
 {{{cartao_resource_alterar_status_impressao}}}
 
@@ -147,10 +144,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_alterar_status_impressao_param_id}}}
 $id_status_impressao = 789; // int | {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->alterarStatusImpressaoUsingPUT($id, $id_status_impressao, $authorization);
+    $result = $api_instance->alterarStatusImpressaoUsingPUT($id, $id_status_impressao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->alterarStatusImpressaoUsingPUT: ', $e->getMessage(), "\n";
@@ -164,7 +160,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_alterar_status_impressao_param_id}}} | 
  **id_status_impressao** | **int**| {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -182,7 +177,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **atribuirPessoaUsingPUT**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse atribuirPessoaUsingPUT($id, $id_pessoa, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse atribuirPessoaUsingPUT($id, $id_pessoa)
 
 {{{cartao_resource_atribuir_pessoa}}}
 
@@ -196,10 +191,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_atribuir_pessoa_param_id_cartao}}}
 $id_pessoa = 789; // int | {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->atribuirPessoaUsingPUT($id, $id_pessoa, $authorization);
+    $result = $api_instance->atribuirPessoaUsingPUT($id, $id_pessoa);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->atribuirPessoaUsingPUT: ', $e->getMessage(), "\n";
@@ -213,7 +207,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_atribuir_pessoa_param_id_cartao}}} | 
  **id_pessoa** | **int**| {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -231,7 +224,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bloquearUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse bloquearUsingPOST($id, $id_status, $observacao, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse bloquearUsingPOST($id, $id_status, $observacao)
 
 {{{cartao_resource_bloquear}}}
 
@@ -246,10 +239,9 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi(
 $id = 789; // int | {{{cartao_resource_bloquear_param_id}}}
 $id_status = 789; // int | {{{cartao_resource_bloquear_param_id_status}}}
 $observacao = "observacao_example"; // string | {{{cartao_resource_bloquear_param_observacao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->bloquearUsingPOST($id, $id_status, $observacao, $authorization);
+    $result = $api_instance->bloquearUsingPOST($id, $id_status, $observacao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->bloquearUsingPOST: ', $e->getMessage(), "\n";
@@ -264,7 +256,6 @@ Name | Type | Description  | Notes
  **id** | **int**| {{{cartao_resource_bloquear_param_id}}} | 
  **id_status** | **int**| {{{cartao_resource_bloquear_param_id_status}}} | 
  **observacao** | **string**| {{{cartao_resource_bloquear_param_observacao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -282,7 +273,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cadastrarAlterarSenhaUsingPOST**
-> string cadastrarAlterarSenhaUsingPOST($id, $senha, $authorization)
+> string cadastrarAlterarSenhaUsingPOST($id, $senha)
 
 {{{cartao_resource_cadastrar_alterar_senha}}}
 
@@ -296,10 +287,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_cadastrar_alterar_senha_param_id}}}
 $senha = "senha_example"; // string | {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->cadastrarAlterarSenhaUsingPOST($id, $senha, $authorization);
+    $result = $api_instance->cadastrarAlterarSenhaUsingPOST($id, $senha);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->cadastrarAlterarSenhaUsingPOST: ', $e->getMessage(), "\n";
@@ -313,7 +303,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_cadastrar_alterar_senha_param_id}}} | 
  **senha** | **string**| {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -331,7 +320,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancelarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse cancelarUsingPOST($id, $id_status, $observacao, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse cancelarUsingPOST($id, $id_status, $observacao)
 
 {{{cartao_resource_cancelar}}}
 
@@ -346,10 +335,9 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi(
 $id = 789; // int | {{{cartao_resource_cancelar_param_id}}}
 $id_status = 789; // int | {{{cartao_resource_cancelar_param_id_status}}}
 $observacao = "observacao_example"; // string | {{{cartao_resource_cancelar_param_observacao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->cancelarUsingPOST($id, $id_status, $observacao, $authorization);
+    $result = $api_instance->cancelarUsingPOST($id, $id_status, $observacao);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->cancelarUsingPOST: ', $e->getMessage(), "\n";
@@ -364,7 +352,6 @@ Name | Type | Description  | Notes
  **id** | **int**| {{{cartao_resource_cancelar_param_id}}} | 
  **id_status** | **int**| {{{cartao_resource_cancelar_param_id_status}}} | 
  **observacao** | **string**| {{{cartao_resource_cancelar_param_observacao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -382,7 +369,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarCartaoImpressaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET($id)
 
 {{{cartao_resource_consultar_cartao_impressao}}}
 
@@ -395,10 +382,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_consultar_cartao_impressao_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarCartaoImpressaoUsingGET($id, $authorization);
+    $result = $api_instance->consultarCartaoImpressaoUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->consultarCartaoImpressaoUsingGET: ', $e->getMessage(), "\n";
@@ -411,7 +397,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_consultar_cartao_impressao_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -429,7 +414,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarDadosReaisCartaoUsingGET**
-> \br.com.conductor.pier.api.v2.model\DadosCartaoResponse consultarDadosReaisCartaoUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\DadosCartaoResponse consultarDadosReaisCartaoUsingGET($id)
 
 {{{cartao_resource_consultar_dados_reais_cartao}}}
 
@@ -442,10 +427,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | id
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarDadosReaisCartaoUsingGET($id, $authorization);
+    $result = $api_instance->consultarDadosReaisCartaoUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->consultarDadosReaisCartaoUsingGET: ', $e->getMessage(), "\n";
@@ -458,7 +442,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| id | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -476,7 +459,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarLimiteDisponibilidadeUsingGET**
-> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET($id)
 
 {{{cartao_resource_consultar_limite_disponibilidade}}}
 
@@ -489,10 +472,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_consultar_limite_disponibilidade_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarLimiteDisponibilidadeUsingGET($id, $authorization);
+    $result = $api_instance->consultarLimiteDisponibilidadeUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->consultarLimiteDisponibilidadeUsingGET: ', $e->getMessage(), "\n";
@@ -505,7 +487,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_consultar_limite_disponibilidade_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -523,7 +504,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarLotesCartoesPrePagosUsingGET**
-> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET($id)
 
 {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 
@@ -536,10 +517,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarLotesCartoesPrePagosUsingGET($id, $authorization);
+    $result = $api_instance->consultarLotesCartoesPrePagosUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->consultarLotesCartoesPrePagosUsingGET: ', $e->getMessage(), "\n";
@@ -552,7 +532,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -570,7 +549,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **consultarPortadorUsingGET**
-> \br.com.conductor.pier.api.v2.model\PortadorResponse consultarPortadorUsingGET($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\PortadorResponse consultarPortadorUsingGET($id)
 
 {{{cartao_resource_consultar_portador}}}
 
@@ -583,10 +562,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_consultar_portador_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarPortadorUsingGET($id, $authorization);
+    $result = $api_instance->consultarPortadorUsingGET($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->consultarPortadorUsingGET: ', $e->getMessage(), "\n";
@@ -599,7 +577,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_consultar_portador_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -616,8 +593,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET10($id, $authorization)
+# **consultarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse consultarUsingGET12($id)
 
 {{{cartao_resource_consultar}}}
 
@@ -630,13 +607,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_consultar_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->consultarUsingGET10($id, $authorization);
+    $result = $api_instance->consultarUsingGET12($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcartaoApi->consultarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcartaoApi->consultarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -646,7 +622,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_consultar_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -663,8 +638,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **criarCartoesMultiAppUsingPOST**
+> \br.com.conductor.pier.api.v2.model\VinculoCartoesResponse criarCartoesMultiAppUsingPOST($cartao_multi_app_persist)
+
+{{{conta_resource_cadastrar_cartao_multiapp}}}
+
+{{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
+$cartao_multi_app_persist = new \br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_(); // \br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_ | cartaoMultiAppPersist
+
+try { 
+    $result = $api_instance->criarCartoesMultiAppUsingPOST($cartao_multi_app_persist);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcartaoApi->criarCartoesMultiAppUsingPOST: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cartao_multi_app_persist** | [**\br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_**](\br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_.md)| cartaoMultiAppPersist | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\VinculoCartoesResponse**](VinculoCartoesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **desbloquearSenhaIncorretaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearSenhaIncorretaUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearSenhaIncorretaUsingPOST($id)
 
 {{{cartao_resource_desbloquear_senha_incorreta}}}
 
@@ -677,10 +697,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_desbloquear_senha_incorreta_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->desbloquearSenhaIncorretaUsingPOST($id, $authorization);
+    $result = $api_instance->desbloquearSenhaIncorretaUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->desbloquearSenhaIncorretaUsingPOST: ', $e->getMessage(), "\n";
@@ -693,7 +712,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_desbloquear_senha_incorreta_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -711,7 +729,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desbloquearUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse desbloquearUsingPOST($id)
 
 {{{cartao_resource_desbloquear}}}
 
@@ -724,10 +742,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_desbloquear_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->desbloquearUsingPOST($id, $authorization);
+    $result = $api_instance->desbloquearUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->desbloquearUsingPOST: ', $e->getMessage(), "\n";
@@ -740,7 +757,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_desbloquear_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -758,7 +774,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarLotesCartoesPrePagosUsingPOST**
-> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST($authorization, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo)
+> \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo)
 
 {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
 
@@ -770,7 +786,6 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
-$authorization = "authorization_example"; // string | Authorization
 $id_origem_comercial = 789; // int | {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}}
 $id_produto = 789; // int | {{{lote_cartoes_pre_pagos_persist_id_produto_value}}}
 $id_tipo_cartao = 789; // int | {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}}
@@ -780,7 +795,7 @@ $quantidade_cartoes = 56; // int | {{{lote_cartoes_pre_pagos_persist_quantidade_
 $identificador_externo = "identificador_externo_example"; // string | {{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}}
 
 try { 
-    $result = $api_instance->gerarLotesCartoesPrePagosUsingPOST($authorization, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo);
+    $result = $api_instance->gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->gerarLotesCartoesPrePagosUsingPOST: ', $e->getMessage(), "\n";
@@ -792,7 +807,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| Authorization | [optional] 
  **id_origem_comercial** | **int**| {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} | [optional] 
  **id_produto** | **int**| {{{lote_cartoes_pre_pagos_persist_id_produto_value}}} | [optional] 
  **id_tipo_cartao** | **int**| {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} | [optional] 
@@ -817,7 +831,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarNovaViaCartaoMultiAppUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiAppUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiAppUsingPOST($id)
 
 {{{cartao_resource_gerar_nova_via_multiplo}}}
 
@@ -830,10 +844,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarNovaViaCartaoMultiAppUsingPOST($id, $authorization);
+    $result = $api_instance->gerarNovaViaCartaoMultiAppUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->gerarNovaViaCartaoMultiAppUsingPOST: ', $e->getMessage(), "\n";
@@ -846,7 +859,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_gerar_nova_via_param_id_cartao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -864,7 +876,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gerarNovaViaUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse gerarNovaViaUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse gerarNovaViaUsingPOST($id)
 
 {{{cartao_resource_gerar_nova_via}}}
 
@@ -877,10 +889,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->gerarNovaViaUsingPOST($id, $authorization);
+    $result = $api_instance->gerarNovaViaUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->gerarNovaViaUsingPOST: ', $e->getMessage(), "\n";
@@ -893,7 +904,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_gerar_nova_via_param_id_cartao}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -911,7 +921,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lancarTarifaSegundaViaUsingPOST**
-> object lancarTarifaSegundaViaUsingPOST($id, $authorization)
+> object lancarTarifaSegundaViaUsingPOST($id)
 
 {{{cartao_resource_lancar_tarifa_segunda_via}}}
 
@@ -924,10 +934,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->lancarTarifaSegundaViaUsingPOST($id, $authorization);
+    $result = $api_instance->lancarTarifaSegundaViaUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->lancarTarifaSegundaViaUsingPOST: ', $e->getMessage(), "\n";
@@ -940,7 +949,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -958,7 +966,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listarLotesCartoesPrePagosUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET($authorization, $sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo)
+> \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo)
 
 {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
 
@@ -970,7 +978,6 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -986,7 +993,7 @@ $status_processamento = 56; // int | {{{lote_cartoes_pre_pagos_request_status_pr
 $identificador_externo = "identificador_externo_example"; // string | {{{lote_cartoes_pre_pagos_request_identificador_externo_value}}}
 
 try { 
-    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($authorization, $sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo);
+    $result = $api_instance->listarLotesCartoesPrePagosUsingGET($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->listarLotesCartoesPrePagosUsingGET: ', $e->getMessage(), "\n";
@@ -998,7 +1005,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1028,8 +1034,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\PageCartaoResponse listarUsingGET11($authorization, $sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao)
+# **listarUsingGET12**
+> \br.com.conductor.pier.api.v2.model\PageCartaoResponse listarUsingGET12($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao, $identificador_externo)
 
 {{{cartao_resource_listar}}}
 
@@ -1041,7 +1047,6 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -1063,12 +1068,13 @@ $flag_impressao_origem_comercial = 56; // int | {{{cartao_request_flag_impressao
 $flag_provisorio = 56; // int | {{{cartao_request_flag_provisorio_value}}}
 $codigo_desbloqueio = "codigo_desbloqueio_example"; // string | {{{cartao_request_codigo_desbloqueio_value}}}
 $sequencial_cartao = 56; // int | {{{cartao_request_sequencial_cartao_value}}}
+$identificador_externo = 789; // int | {{{cartao_request_identificador_externo_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET11($authorization, $sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+    $result = $api_instance->listarUsingGET12($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao, $identificador_externo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcartaoApi->listarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcartaoApi->listarUsingGET12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1077,7 +1083,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1099,6 +1104,7 @@ Name | Type | Description  | Notes
  **flag_provisorio** | **int**| {{{cartao_request_flag_provisorio_value}}} | [optional] 
  **codigo_desbloqueio** | **string**| {{{cartao_request_codigo_desbloqueio_value}}} | [optional] 
  **sequencial_cartao** | **int**| {{{cartao_request_sequencial_cartao_value}}} | [optional] 
+ **identificador_externo** | **int**| {{{cartao_request_identificador_externo_value}}} | [optional] 
 
 ### Return type
 
@@ -1116,7 +1122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reativarUsingPOST**
-> \br.com.conductor.pier.api.v2.model\CartaoResponse reativarUsingPOST($id, $authorization)
+> \br.com.conductor.pier.api.v2.model\CartaoResponse reativarUsingPOST($id)
 
 {{{cartao_resource_reativar}}}
 
@@ -1129,10 +1135,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_reativar_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->reativarUsingPOST($id, $authorization);
+    $result = $api_instance->reativarUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->reativarUsingPOST: ', $e->getMessage(), "\n";
@@ -1145,7 +1150,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_reativar_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1163,7 +1167,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarCVVUsingPOST**
-> string validarCVVUsingPOST($id, $valida_cvv, $authorization)
+> string validarCVVUsingPOST($id, $valida_cvv)
 
 {{{cartao_resource_validar_c_v_v}}}
 
@@ -1177,10 +1181,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_validar_c_v_v_param_id}}}
 $valida_cvv = new \br.com.conductor.pier.api.v2.model\ValidaCVVRequest(); // \br.com.conductor.pier.api.v2.model\ValidaCVVRequest | validaCVV
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarCVVUsingPOST($id, $valida_cvv, $authorization);
+    $result = $api_instance->validarCVVUsingPOST($id, $valida_cvv);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarCVVUsingPOST: ', $e->getMessage(), "\n";
@@ -1194,7 +1197,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_validar_c_v_v_param_id}}} | 
  **valida_cvv** | [**\br.com.conductor.pier.api.v2.model\ValidaCVVRequest**](\br.com.conductor.pier.api.v2.model\ValidaCVVRequest.md)| validaCVV | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1212,7 +1214,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDadosImpressosBandeiradoUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
 
 {{{cartao_resource_validar_dados_impressos_bandeirado}}}
 
@@ -1228,10 +1230,9 @@ $numero_cartao = "numero_cartao_example"; // string | {{{cartao_resource_validar
 $nome_portador = "nome_portador_example"; // string | {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}
 $data_validade = "data_validade_example"; // string | {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}
 $codigo_seguranca = "codigo_seguranca_example"; // string | {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization);
+    $result = $api_instance->validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarDadosImpressosBandeiradoUsingGET: ', $e->getMessage(), "\n";
@@ -1247,7 +1248,6 @@ Name | Type | Description  | Notes
  **nome_portador** | **string**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}} | 
  **data_validade** | **string**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}} | 
  **codigo_seguranca** | **string**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1265,7 +1265,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDadosImpressosNaoBandeiradoUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
 
 {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
 
@@ -1281,10 +1281,9 @@ $numero_cartao = "numero_cartao_example"; // string | {{{cartao_resource_validar
 $nome_portador = "nome_portador_example"; // string | {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}
 $data_validade = "data_validade_example"; // string | {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}
 $codigo_seguranca = "codigo_seguranca_example"; // string | {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization);
+    $result = $api_instance->validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarDadosImpressosNaoBandeiradoUsingGET: ', $e->getMessage(), "\n";
@@ -1300,7 +1299,6 @@ Name | Type | Description  | Notes
  **nome_portador** | **string**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}} | 
  **data_validade** | **string**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}} | 
  **codigo_seguranca** | **string**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1318,7 +1316,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarDe55CartaoMastercardUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma, $authorization)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma)
 
 {{{cartao_resource_validar_de55_cartao_mastercard}}}
 
@@ -1332,10 +1330,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $numero_cartao = "numero_cartao_example"; // string | {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}
 $criptograma = "criptograma_example"; // string | {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma, $authorization);
+    $result = $api_instance->validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarDe55CartaoMastercardUsingGET: ', $e->getMessage(), "\n";
@@ -1349,7 +1346,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **numero_cartao** | **string**| {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}} | 
  **criptograma** | **string**| {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1367,7 +1363,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarSenhaUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse validarSenhaUsingGET($id, $senha, $authorization)
+> \br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse validarSenhaUsingGET($id, $senha)
 
 {{{cartao_resource_validar_senha}}}
 
@@ -1381,10 +1377,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi();
 $id = 789; // int | {{{cartao_resource_validar_senha_param_id}}}
 $senha = "senha_example"; // string | {{{cartao_resource_validar_senha_param_senha}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarSenhaUsingGET($id, $senha, $authorization);
+    $result = $api_instance->validarSenhaUsingGET($id, $senha);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarSenhaUsingGET: ', $e->getMessage(), "\n";
@@ -1398,7 +1393,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{cartao_resource_validar_senha_param_id}}} | 
  **senha** | **string**| {{{cartao_resource_validar_senha_param_senha}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -1416,7 +1410,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **validarTarjaUsingGET**
-> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2, $authorization)
+> \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2)
 
 {{{cartao_resource_validar_tarja}}}
 
@@ -1431,10 +1425,9 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcartaoApi(
 $numero_cartao = "numero_cartao_example"; // string | {{{cartao_resource_validar_tarja_param_numero_cartao}}}
 $trilha1 = "trilha1_example"; // string | {{{cartao_resource_validar_tarja_param_trilha1}}}
 $trilha2 = "trilha2_example"; // string | {{{cartao_resource_validar_tarja_param_trilha2}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2, $authorization);
+    $result = $api_instance->validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagcartaoApi->validarTarjaUsingGET: ', $e->getMessage(), "\n";
@@ -1449,7 +1442,6 @@ Name | Type | Description  | Notes
  **numero_cartao** | **string**| {{{cartao_resource_validar_tarja_param_numero_cartao}}} | 
  **trilha1** | **string**| {{{cartao_resource_validar_tarja_param_trilha1}}} | 
  **trilha2** | **string**| {{{cartao_resource_validar_tarja_param_trilha2}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 

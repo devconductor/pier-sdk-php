@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET5**](GlobaltagarquivoApi.md#consultarUsingGET5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultarUsingGET6**](GlobaltagarquivoApi.md#consultarUsingGET6) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrarUsingPOST**](GlobaltagarquivoApi.md#integrarUsingPOST) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listarPorNumeroReceitaFederalUsingGET**](GlobaltagarquivoApi.md#listarPorNumeroReceitaFederalUsingGET) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listarStatusArquivosUsingGET**](GlobaltagarquivoApi.md#listarStatusArquivosUsingGET) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
 [**listarTiposArquivosUsingGET**](GlobaltagarquivoApi.md#listarTiposArquivosUsingGET) | **GET** /api/tipos-arquivos | {{{arquivo_resource_listar_tipos_arquivos}}}
-[**listarUsingGET5**](GlobaltagarquivoApi.md#listarUsingGET5) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
-[**listarUsingGET6**](GlobaltagarquivoApi.md#listarUsingGET6) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
+[**listarUsingGET6**](GlobaltagarquivoApi.md#listarUsingGET6) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
+[**listarUsingGET7**](GlobaltagarquivoApi.md#listarUsingGET7) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
 [**salvarUsingPOST1**](GlobaltagarquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | {{{arquivo_resource_salvar}}}
 
 
-# **consultarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse consultarUsingGET5($id)
+# **consultarUsingGET6**
+> \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse consultarUsingGET6($id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -30,10 +30,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagarquivoApi
 $id = 789; // int | {{{arquivo_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET5($id);
+    $result = $api_instance->consultarUsingGET6($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagarquivoApi->consultarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagarquivoApi->consultarUsingGET6: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -259,8 +259,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET5**
-> \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse listarUsingGET5($id, $page, $limit)
+# **listarUsingGET6**
+> \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse listarUsingGET6($id, $page, $limit)
 
 {{{arquivo_a_u_d_resource_listar}}}
 
@@ -277,10 +277,10 @@ $page = 56; // int | P\u00E1gina solicitada (Default = 0)
 $limit = 56; // int | Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 
 try { 
-    $result = $api_instance->listarUsingGET5($id, $page, $limit);
+    $result = $api_instance->listarUsingGET6($id, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagarquivoApi->listarUsingGET5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagarquivoApi->listarUsingGET6: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -308,8 +308,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\PageArquivoResponse listarUsingGET6($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao)
+# **listarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\PageArquivoResponse listarUsingGET7($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao)
 
 {{{arquivo_resource_listar}}}
 
@@ -330,10 +330,10 @@ $id_status_arquivo = 789; // int | {{{arquivo_request_id_status_arquivo_value}}}
 $extensao = "extensao_example"; // string | {{{arquivo_request_extensao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET6($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
+    $result = $api_instance->listarUsingGET7($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagarquivoApi->listarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagarquivoApi->listarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

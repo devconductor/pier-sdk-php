@@ -1,6 +1,6 @@
 <?php
 /**
- * UsuarioldapUpdateObjectDescription_
+ * AplicacaoRequest
  *
  * PHP version 5
  *
@@ -35,16 +35,16 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * UsuarioldapUpdateObjectDescription_ Class Doc Comment
+ * AplicacaoRequest Class Doc Comment
  *
  * @category    Class
- * @description {{{usuarioldap_update_object_description}}}
+ * @description {{{aplicacao_request_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
+class AplicacaoRequest implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -52,11 +52,8 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
       */
     static $swaggerTypes = array(
         'nome' => 'string',
-        'login' => 'string',
-        'cpf' => 'string',
-        'email' => 'string',
-        'perfis' => '\br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]',
-        'status' => 'string'
+        'token_id' => 'int',
+        'sort' => 'string[]'
     );
   
     static function swaggerTypes() {
@@ -69,11 +66,8 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
       */
     static $attributeMap = array(
         'nome' => 'nome',
-        'login' => 'login',
-        'cpf' => 'cpf',
-        'email' => 'email',
-        'perfis' => 'perfis',
-        'status' => 'status'
+        'token_id' => 'tokenId',
+        'sort' => 'sort'
     );
   
     static function attributeMap() {
@@ -86,11 +80,8 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
       */
     static $setters = array(
         'nome' => 'setNome',
-        'login' => 'setLogin',
-        'cpf' => 'setCpf',
-        'email' => 'setEmail',
-        'perfis' => 'setPerfis',
-        'status' => 'setStatus'
+        'token_id' => 'setTokenId',
+        'sort' => 'setSort'
     );
   
     static function setters() {
@@ -103,11 +94,8 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
       */
     static $getters = array(
         'nome' => 'getNome',
-        'login' => 'getLogin',
-        'cpf' => 'getCpf',
-        'email' => 'getEmail',
-        'perfis' => 'getPerfis',
-        'status' => 'getStatus'
+        'token_id' => 'getTokenId',
+        'sort' => 'getSort'
     );
   
     static function getters() {
@@ -116,40 +104,22 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
 
     
     /**
-      * $nome {{{usuario_update_nome_value}}}
+      * $nome {{{aplicacao_dto_nome_value}}}
       * @var string
       */
     protected $nome;
     
     /**
-      * $login {{{usuario_update_login_value}}}
-      * @var string
+      * $token_id {{{aplicacao_dto_token_value}}}
+      * @var int
       */
-    protected $login;
+    protected $token_id;
     
     /**
-      * $cpf {{{usuario_update_cpf_value}}}
-      * @var string
+      * $sort {{{global_menssagem_sort_sort}}}
+      * @var string[]
       */
-    protected $cpf;
-    
-    /**
-      * $email {{{usuario_update_email_value}}}
-      * @var string
-      */
-    protected $email;
-    
-    /**
-      * $perfis {{{usuario_persist_email_value}}}
-      * @var \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
-      */
-    protected $perfis;
-    
-    /**
-      * $status {{{usuario_update_status_value}}}
-      * @var string
-      */
-    protected $status;
+    protected $sort;
     
 
     /**
@@ -161,11 +131,8 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
         
         if ($data != null) {
             $this->nome = $data["nome"];
-            $this->login = $data["login"];
-            $this->cpf = $data["cpf"];
-            $this->email = $data["email"];
-            $this->perfis = $data["perfis"];
-            $this->status = $data["status"];
+            $this->token_id = $data["token_id"];
+            $this->sort = $data["sort"];
         }
     }
     
@@ -180,7 +147,7 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
   
     /**
      * Sets nome
-     * @param string $nome {{{usuario_update_nome_value}}}
+     * @param string $nome {{{aplicacao_dto_nome_value}}}
      * @return $this
      */
     public function setNome($nome)
@@ -191,107 +158,44 @@ class UsuarioldapUpdateObjectDescription_ implements ArrayAccess
     }
     
     /**
-     * Gets login
-     * @return string
+     * Gets token_id
+     * @return int
      */
-    public function getLogin()
+    public function getTokenId()
     {
-        return $this->login;
+        return $this->token_id;
     }
   
     /**
-     * Sets login
-     * @param string $login {{{usuario_update_login_value}}}
+     * Sets token_id
+     * @param int $token_id {{{aplicacao_dto_token_value}}}
      * @return $this
      */
-    public function setLogin($login)
+    public function setTokenId($token_id)
     {
         
-        $this->login = $login;
+        $this->token_id = $token_id;
         return $this;
     }
     
     /**
-     * Gets cpf
-     * @return string
+     * Gets sort
+     * @return string[]
      */
-    public function getCpf()
+    public function getSort()
     {
-        return $this->cpf;
+        return $this->sort;
     }
   
     /**
-     * Sets cpf
-     * @param string $cpf {{{usuario_update_cpf_value}}}
+     * Sets sort
+     * @param string[] $sort {{{global_menssagem_sort_sort}}}
      * @return $this
      */
-    public function setCpf($cpf)
+    public function setSort($sort)
     {
         
-        $this->cpf = $cpf;
-        return $this;
-    }
-    
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-  
-    /**
-     * Sets email
-     * @param string $email {{{usuario_update_email_value}}}
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        
-        $this->email = $email;
-        return $this;
-    }
-    
-    /**
-     * Gets perfis
-     * @return \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
-     */
-    public function getPerfis()
-    {
-        return $this->perfis;
-    }
-  
-    /**
-     * Sets perfis
-     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $perfis {{{usuario_persist_email_value}}}
-     * @return $this
-     */
-    public function setPerfis($perfis)
-    {
-        
-        $this->perfis = $perfis;
-        return $this;
-    }
-    
-    /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-  
-    /**
-     * Sets status
-     * @param string $status {{{usuario_update_status_value}}}
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        
-        $this->status = $status;
+        $this->sort = $sort;
         return $this;
     }
     

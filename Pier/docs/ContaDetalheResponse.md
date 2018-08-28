@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **saldo_disponivel_global** | [**Number**](Number.md) | {{{conta_detalhe_response_saldo_disponivel_global_value}}} | [optional] 
 **saldo_disponivel_saque** | [**Number**](Number.md) | {{{conta_detalhe_response_saldo_disponivel_saque_value}}} | [optional] 
 **dias_atraso** | **int** | {{{conta_detalhe_response_dias_atraso_value}}} | [optional] 
+**proximo_vencimento_padrao** | **string** | {{{conta_response_proximo_vencimento_padrao_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

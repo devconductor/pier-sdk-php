@@ -186,12 +186,22 @@ class GlobaltagcartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET10
+     * Test case for consultarUsingGET12
      *
      * {{{cartao_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET10() {
+    public function test_consultarUsingGET12() {
+
+    }
+    
+    /**
+     * Test case for criarCartoesMultiAppUsingPOST
+     *
+     * {{{conta_resource_cadastrar_cartao_multiapp}}}
+     *
+     */
+    public function test_criarCartoesMultiAppUsingPOST() {
 
     }
     
@@ -266,12 +276,12 @@ class GlobaltagcartaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET11
+     * Test case for listarUsingGET12
      *
      * {{{cartao_resource_listar}}}
      *
      */
-    public function test_listarUsingGET11() {
+    public function test_listarUsingGET12() {
 
     }
     

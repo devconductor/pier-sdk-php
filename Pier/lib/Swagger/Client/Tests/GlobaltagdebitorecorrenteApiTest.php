@@ -86,22 +86,22 @@ class GlobaltagdebitorecorrenteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET17
+     * Test case for listarUsingGET18
      *
      * {{{conta_debito_recorrente_resource_listar}}}
      *
      */
-    public function test_listarUsingGET17() {
+    public function test_listarUsingGET18() {
 
     }
     
     /**
-     * Test case for listarUsingGET53
+     * Test case for listarUsingGET56
      *
      * {{{tipo_debito_recorrente_resource_listar}}}
      *
      */
-    public function test_listarUsingGET53() {
+    public function test_listarUsingGET56() {
 
     }
     

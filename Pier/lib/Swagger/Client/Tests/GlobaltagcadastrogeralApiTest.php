@@ -76,6 +76,16 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for alterarCorteUsingPUT
+     *
+     * {{{vencimento_resource_alterar}}}
+     *
+     */
+    public function test_alterarCorteUsingPUT() {
+
+    }
+    
+    /**
      * Test case for alterarUsingPUT1
      *
      * {{{campanha_resource_alterar}}}
@@ -166,59 +176,39 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET11
+     * Test case for consultarUsingGET13
      *
      * {{{configuracao_registro_cobranca_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET11() {
+    public function test_consultarUsingGET13() {
 
     }
     
     /**
-     * Test case for consultarUsingGET12
+     * Test case for consultarUsingGET14
      *
      * {{{configuracao_rotativo_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET12() {
+    public function test_consultarUsingGET14() {
 
     }
     
     /**
-     * Test case for consultarUsingGET32
+     * Test case for consultarUsingGET34
      *
      * {{{produto_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET32() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET41
-     *
-     * {{{tipo_transacoes_ajuste_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET41() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET42
-     *
-     * {{{tipo_boleto_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET42() {
+    public function test_consultarUsingGET34() {
 
     }
     
     /**
      * Test case for consultarUsingGET43
      *
-     * {{{tipo_endereco_resource_consultar}}}
+     * {{{tipo_transacoes_ajuste_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET43() {
@@ -228,7 +218,7 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET44
      *
-     * {{{tipo_operacao_resource_consultar}}}
+     * {{{tipo_boleto_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET44() {
@@ -236,9 +226,19 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for consultarUsingGET45
+     *
+     * {{{tipo_endereco_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET45() {
+
+    }
+    
+    /**
      * Test case for consultarUsingGET46
      *
-     * {{{tipo_telefone_resource_consultar}}}
+     * {{{tipo_operacao_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET46() {
@@ -246,22 +246,32 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET6
+     * Test case for consultarUsingGET48
      *
-     * {{{atendimento_cliente_resource_consultar}}}
+     * {{{tipo_telefone_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET6() {
+    public function test_consultarUsingGET48() {
 
     }
     
     /**
-     * Test case for consultarUsingGET8
+     * Test case for consultarUsingGET7
+     *
+     * {{{atendimento_cliente_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET7() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET9
      *
      * {{{banco_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET8() {
+    public function test_consultarUsingGET9() {
 
     }
     
@@ -376,19 +386,19 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET14
+     * Test case for listarUsingGET10
      *
-     * {{{configuracao_registro_cobranca_resource_listar}}}
+     * {{{banco_resource_listar}}}
      *
      */
-    public function test_listarUsingGET14() {
+    public function test_listarUsingGET10() {
 
     }
     
     /**
      * Test case for listarUsingGET15
      *
-     * {{{configuracao_rotativo_resource_listar}}}
+     * {{{configuracao_registro_cobranca_resource_listar}}}
      *
      */
     public function test_listarUsingGET15() {
@@ -396,29 +406,19 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET41
+     * Test case for listarUsingGET16
      *
-     * {{{portador_resource_listar}}}
-     *
-     */
-    public function test_listarUsingGET41() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET42
-     *
-     * {{{produto_resource_listar}}}
+     * {{{configuracao_rotativo_resource_listar}}}
      *
      */
-    public function test_listarUsingGET42() {
+    public function test_listarUsingGET16() {
 
     }
     
     /**
      * Test case for listarUsingGET43
      *
-     * {{{promotor_resource_listar}}}
+     * {{{portador_resource_listar}}}
      *
      */
     public function test_listarUsingGET43() {
@@ -426,62 +426,72 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET52
+     * Test case for listarUsingGET44
+     *
+     * {{{produto_resource_listar}}}
+     *
+     */
+    public function test_listarUsingGET44() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET45
+     *
+     * {{{promotor_resource_listar}}}
+     *
+     */
+    public function test_listarUsingGET45() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET55
      *
      * {{{tipo_ajuste_resource_consultar}}}
      *
      */
-    public function test_listarUsingGET52() {
+    public function test_listarUsingGET55() {
 
     }
     
     /**
-     * Test case for listarUsingGET54
+     * Test case for listarUsingGET57
      *
      * {{{tipo_endereco_resource_listar}}}
      *
      */
-    public function test_listarUsingGET54() {
+    public function test_listarUsingGET57() {
 
     }
     
     /**
-     * Test case for listarUsingGET56
+     * Test case for listarUsingGET59
      *
      * {{{tipo_telefone_resource_listar}}}
      *
      */
-    public function test_listarUsingGET56() {
+    public function test_listarUsingGET59() {
 
     }
     
     /**
-     * Test case for listarUsingGET63
+     * Test case for listarUsingGET66
      *
      * {{{vencimento_resource_listar}}}
      *
      */
-    public function test_listarUsingGET63() {
+    public function test_listarUsingGET66() {
 
     }
     
     /**
-     * Test case for listarUsingGET7
+     * Test case for listarUsingGET8
      *
      * {{{atendimento_cliente_resource_listar}}}
      *
      */
-    public function test_listarUsingGET7() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET9
-     *
-     * {{{banco_resource_listar}}}
-     *
-     */
-    public function test_listarUsingGET9() {
+    public function test_listarUsingGET8() {
 
     }
     
@@ -496,22 +506,22 @@ class GlobaltagcadastrogeralApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST4
+     * Test case for salvarUsingPOST5
      *
      * {{{campanha_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST4() {
+    public function test_salvarUsingPOST5() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST6
+     * Test case for salvarUsingPOST7
      *
      * {{{configuracao_rotativo_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST6() {
+    public function test_salvarUsingPOST7() {
 
     }
     

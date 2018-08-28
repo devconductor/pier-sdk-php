@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPOST**](GlobaltagpropostaApi.md#alterarUsingPOST) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultarUsingGET33**](GlobaltagpropostaApi.md#consultarUsingGET33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultarUsingGET35**](GlobaltagpropostaApi.md#consultarUsingGET35) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listarStatusPropostaUsingGET**](GlobaltagpropostaApi.md#listarStatusPropostaUsingGET) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
-[**listarUsingGET44**](GlobaltagpropostaApi.md#listarUsingGET44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
+[**listarUsingGET46**](GlobaltagpropostaApi.md#listarUsingGET46) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
 
 # **alterarUsingPOST**
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET33**
-> \br.com.conductor.pier.api.v2.model\PropostaResponse consultarUsingGET33($id)
+# **consultarUsingGET35**
+> \br.com.conductor.pier.api.v2.model\PropostaResponse consultarUsingGET35($id)
 
 {{{proposta_resource_consultar}}}
 
@@ -73,10 +73,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagpropostaAp
 $id = 789; // int | {{{proposta_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET33($id);
+    $result = $api_instance->consultarUsingGET35($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpropostaApi->consultarUsingGET33: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpropostaApi->consultarUsingGET35: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -155,8 +155,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET44**
-> \br.com.conductor.pier.api.v2.model\PagePropostaResponse listarUsingGET44($sort, $page, $limit, $status)
+# **listarUsingGET46**
+> \br.com.conductor.pier.api.v2.model\PagePropostaResponse listarUsingGET46($sort, $page, $limit, $status)
 
 {{{proposta_resource_listar}}}
 
@@ -174,10 +174,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $status = 56; // int | {{{proposta_request_status_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET44($sort, $page, $limit, $status);
+    $result = $api_instance->listarUsingGET46($sort, $page, $limit, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpropostaApi->listarUsingGET44: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpropostaApi->listarUsingGET46: ', $e->getMessage(), "\n";
 }
 ?>
 ```

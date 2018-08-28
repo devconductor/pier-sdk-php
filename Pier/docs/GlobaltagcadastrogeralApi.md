@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarConvenioUsingPUT**](GlobaltagcadastrogeralApi.md#alterarConvenioUsingPUT) | **PUT** /api/convenios/{id} | Altera os dados banc\u00E1rios de um determinado conv\u00EAnio
+[**alterarCorteUsingPUT**](GlobaltagcadastrogeralApi.md#alterarCorteUsingPUT) | **PUT** /api/vencimentos/{dataVencimento} | {{{vencimento_resource_alterar}}}
 [**alterarUsingPUT1**](GlobaltagcadastrogeralApi.md#alterarUsingPUT1) | **PUT** /api/campanhas/{id} | {{{campanha_resource_alterar}}}
 [**alterarUsingPUT2**](GlobaltagcadastrogeralApi.md#alterarUsingPUT2) | **PUT** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_alterar}}}
 [**alterarUsingPUT3**](GlobaltagcadastrogeralApi.md#alterarUsingPUT3) | **PUT** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_alterar}}}
@@ -14,16 +15,16 @@ Method | HTTP request | Description
 [**consultarCampanhaUsingGET**](GlobaltagcadastrogeralApi.md#consultarCampanhaUsingGET) | **GET** /api/campanhas/{id} | {{{campanha_resource_consultar_campanha}}}
 [**consultarConvenioUsingGET**](GlobaltagcadastrogeralApi.md#consultarConvenioUsingGET) | **GET** /api/convenios/{id} | Consultar dados banc\u00E1rios pelo id do conv\u00EAnio
 [**consultarTaxaAntecipacaoUsingGET**](GlobaltagcadastrogeralApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
-[**consultarUsingGET11**](GlobaltagcadastrogeralApi.md#consultarUsingGET11) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
-[**consultarUsingGET12**](GlobaltagcadastrogeralApi.md#consultarUsingGET12) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
-[**consultarUsingGET32**](GlobaltagcadastrogeralApi.md#consultarUsingGET32) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
-[**consultarUsingGET41**](GlobaltagcadastrogeralApi.md#consultarUsingGET41) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
-[**consultarUsingGET42**](GlobaltagcadastrogeralApi.md#consultarUsingGET42) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
-[**consultarUsingGET43**](GlobaltagcadastrogeralApi.md#consultarUsingGET43) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
-[**consultarUsingGET44**](GlobaltagcadastrogeralApi.md#consultarUsingGET44) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
-[**consultarUsingGET46**](GlobaltagcadastrogeralApi.md#consultarUsingGET46) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
-[**consultarUsingGET6**](GlobaltagcadastrogeralApi.md#consultarUsingGET6) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
-[**consultarUsingGET8**](GlobaltagcadastrogeralApi.md#consultarUsingGET8) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
+[**consultarUsingGET13**](GlobaltagcadastrogeralApi.md#consultarUsingGET13) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
+[**consultarUsingGET14**](GlobaltagcadastrogeralApi.md#consultarUsingGET14) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
+[**consultarUsingGET34**](GlobaltagcadastrogeralApi.md#consultarUsingGET34) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
+[**consultarUsingGET43**](GlobaltagcadastrogeralApi.md#consultarUsingGET43) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
+[**consultarUsingGET44**](GlobaltagcadastrogeralApi.md#consultarUsingGET44) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
+[**consultarUsingGET45**](GlobaltagcadastrogeralApi.md#consultarUsingGET45) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
+[**consultarUsingGET46**](GlobaltagcadastrogeralApi.md#consultarUsingGET46) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
+[**consultarUsingGET48**](GlobaltagcadastrogeralApi.md#consultarUsingGET48) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
+[**consultarUsingGET7**](GlobaltagcadastrogeralApi.md#consultarUsingGET7) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
+[**consultarUsingGET9**](GlobaltagcadastrogeralApi.md#consultarUsingGET9) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
 [**listarCampanhasUsingGET**](GlobaltagcadastrogeralApi.md#listarCampanhasUsingGET) | **GET** /api/campanhas | {{{campanha_resource_listar_campanhas}}}
 [**listarContasPorPessoaUsingGET**](GlobaltagcadastrogeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | {{{pessoa_resource_listar_contas_por_pessoa}}}
 [**listarConveniosUsingGET**](GlobaltagcadastrogeralApi.md#listarConveniosUsingGET) | **GET** /api/convenios | Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
@@ -35,20 +36,20 @@ Method | HTTP request | Description
 [**listarParentescosUsingGET**](GlobaltagcadastrogeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | {{{campo_codificado_resource_listar_parentescos}}}
 [**listarProfissoesUsingGET**](GlobaltagcadastrogeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | {{{campo_codificado_resource_listar_profissoes}}}
 [**listarTiposCampanhasUsingGET**](GlobaltagcadastrogeralApi.md#listarTiposCampanhasUsingGET) | **GET** /api/tipos-campanhas | {{{tipo_campanha_resource_listar_tipos_campanhas}}}
-[**listarUsingGET14**](GlobaltagcadastrogeralApi.md#listarUsingGET14) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
-[**listarUsingGET15**](GlobaltagcadastrogeralApi.md#listarUsingGET15) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
-[**listarUsingGET41**](GlobaltagcadastrogeralApi.md#listarUsingGET41) | **GET** /api/portadores | {{{portador_resource_listar}}}
-[**listarUsingGET42**](GlobaltagcadastrogeralApi.md#listarUsingGET42) | **GET** /api/produtos | {{{produto_resource_listar}}}
-[**listarUsingGET43**](GlobaltagcadastrogeralApi.md#listarUsingGET43) | **GET** /api/promotores | {{{promotor_resource_listar}}}
-[**listarUsingGET52**](GlobaltagcadastrogeralApi.md#listarUsingGET52) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
-[**listarUsingGET54**](GlobaltagcadastrogeralApi.md#listarUsingGET54) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
-[**listarUsingGET56**](GlobaltagcadastrogeralApi.md#listarUsingGET56) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
-[**listarUsingGET63**](GlobaltagcadastrogeralApi.md#listarUsingGET63) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
-[**listarUsingGET7**](GlobaltagcadastrogeralApi.md#listarUsingGET7) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
-[**listarUsingGET9**](GlobaltagcadastrogeralApi.md#listarUsingGET9) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listarUsingGET10**](GlobaltagcadastrogeralApi.md#listarUsingGET10) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listarUsingGET15**](GlobaltagcadastrogeralApi.md#listarUsingGET15) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
+[**listarUsingGET16**](GlobaltagcadastrogeralApi.md#listarUsingGET16) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
+[**listarUsingGET43**](GlobaltagcadastrogeralApi.md#listarUsingGET43) | **GET** /api/portadores | {{{portador_resource_listar}}}
+[**listarUsingGET44**](GlobaltagcadastrogeralApi.md#listarUsingGET44) | **GET** /api/produtos | {{{produto_resource_listar}}}
+[**listarUsingGET45**](GlobaltagcadastrogeralApi.md#listarUsingGET45) | **GET** /api/promotores | {{{promotor_resource_listar}}}
+[**listarUsingGET55**](GlobaltagcadastrogeralApi.md#listarUsingGET55) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
+[**listarUsingGET57**](GlobaltagcadastrogeralApi.md#listarUsingGET57) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
+[**listarUsingGET59**](GlobaltagcadastrogeralApi.md#listarUsingGET59) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
+[**listarUsingGET66**](GlobaltagcadastrogeralApi.md#listarUsingGET66) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
+[**listarUsingGET8**](GlobaltagcadastrogeralApi.md#listarUsingGET8) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
 [**salvarUsingPOST2**](GlobaltagcadastrogeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | {{{atendimento_cliente_resource_salvar}}}
-[**salvarUsingPOST4**](GlobaltagcadastrogeralApi.md#salvarUsingPOST4) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
-[**salvarUsingPOST6**](GlobaltagcadastrogeralApi.md#salvarUsingPOST6) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
+[**salvarUsingPOST5**](GlobaltagcadastrogeralApi.md#salvarUsingPOST5) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
+[**salvarUsingPOST7**](GlobaltagcadastrogeralApi.md#salvarUsingPOST7) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
 
 
 # **alterarConvenioUsingPUT**
@@ -86,6 +87,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\ConvenioResponse**](ConvenioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **alterarCorteUsingPUT**
+> \br.com.conductor.pier.api.v2.model\ControleVencimentoResponse alterarCorteUsingPUT($data_vencimento, $update)
+
+{{{vencimento_resource_alterar}}}
+
+{{{vencimento_resource_alterar_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcadastrogeralApi();
+$data_vencimento = "data_vencimento_example"; // string | {{{fatura_resource_consultar_fatura_param_data_vencimento}}}
+$update = new \br.com.conductor.pier.api.v2.model\VencimentoUpdate(); // \br.com.conductor.pier.api.v2.model\VencimentoUpdate | update
+
+try { 
+    $result = $api_instance->alterarCorteUsingPUT($data_vencimento, $update);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcadastrogeralApi->alterarCorteUsingPUT: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data_vencimento** | **string**| {{{fatura_resource_consultar_fatura_param_data_vencimento}}} | 
+ **update** | [**\br.com.conductor.pier.api.v2.model\VencimentoUpdate**](\br.com.conductor.pier.api.v2.model\VencimentoUpdate.md)| update | 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\ControleVencimentoResponse**](ControleVencimentoResponse.md)
 
 ### Authorization
 
@@ -513,8 +561,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET11**
-> \br.com.conductor.pier.api.v2.model\ConfiguracaoRegistroCobrancaResponse consultarUsingGET11($id)
+# **consultarUsingGET13**
+> \br.com.conductor.pier.api.v2.model\ConfiguracaoRegistroCobrancaResponse consultarUsingGET13($id)
 
 {{{configuracao_registro_cobranca_resource_consultar}}}
 
@@ -529,10 +577,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET11($id);
+    $result = $api_instance->consultarUsingGET13($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -558,8 +606,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET12**
-> \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoDetalheResponse consultarUsingGET12($id)
+# **consultarUsingGET14**
+> \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoDetalheResponse consultarUsingGET14($id)
 
 {{{configuracao_rotativo_resource_consultar}}}
 
@@ -574,10 +622,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{configuracao_rotativo_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET12($id);
+    $result = $api_instance->consultarUsingGET14($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET14: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -603,8 +651,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET32**
-> \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse consultarUsingGET32($id)
+# **consultarUsingGET34**
+> \br.com.conductor.pier.api.v2.model\ProdutoDetalhesResponse consultarUsingGET34($id)
 
 {{{produto_resource_consultar}}}
 
@@ -619,10 +667,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{produto_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET32($id);
+    $result = $api_instance->consultarUsingGET34($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET32: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET34: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -648,8 +696,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET41**
-> \br.com.conductor.pier.api.v2.model\TipoAjusteResponse consultarUsingGET41($id)
+# **consultarUsingGET43**
+> \br.com.conductor.pier.api.v2.model\TipoAjusteResponse consultarUsingGET43($id)
 
 {{{tipo_transacoes_ajuste_resource_consultar}}}
 
@@ -664,10 +712,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET41($id);
+    $result = $api_instance->consultarUsingGET43($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET41: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET43: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -693,8 +741,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET42**
-> \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse consultarUsingGET42($sort, $page, $limit, $id, $descricao, $banco)
+# **consultarUsingGET44**
+> \br.com.conductor.pier.api.v2.model\PageTipoBoletoResponse consultarUsingGET44($sort, $page, $limit, $id, $descricao, $banco)
 
 {{{tipo_boleto_resource_consultar}}}
 
@@ -714,10 +762,10 @@ $descricao = "descricao_example"; // string | {{{tipo_boleto_request_descricao_v
 $banco = 789; // int | {{{tipo_boleto_request_banco_value}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET42($sort, $page, $limit, $id, $descricao, $banco);
+    $result = $api_instance->consultarUsingGET44($sort, $page, $limit, $id, $descricao, $banco);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET42: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET44: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -748,8 +796,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET43**
-> \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse consultarUsingGET43($id)
+# **consultarUsingGET45**
+> \br.com.conductor.pier.api.v2.model\TipoEnderecoResponse consultarUsingGET45($id)
 
 {{{tipo_endereco_resource_consultar}}}
 
@@ -764,10 +812,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{tipo_endereco_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET43($id);
+    $result = $api_instance->consultarUsingGET45($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET43: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET45: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -793,8 +841,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET44**
-> \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse consultarUsingGET44($id_cartao, $id_estabelecimento, $codigo_processamento)
+# **consultarUsingGET46**
+> \br.com.conductor.pier.api.v2.model\TipoOperacaoResponse consultarUsingGET46($id_cartao, $id_estabelecimento, $codigo_processamento)
 
 {{{tipo_operacao_resource_consultar}}}
 
@@ -811,10 +859,10 @@ $id_estabelecimento = 789; // int | {{{tipo_operacao_resource_consultar_param_id
 $codigo_processamento = "codigo_processamento_example"; // string | {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET44($id_cartao, $id_estabelecimento, $codigo_processamento);
+    $result = $api_instance->consultarUsingGET46($id_cartao, $id_estabelecimento, $codigo_processamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET44: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET46: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -842,8 +890,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET46**
-> \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse consultarUsingGET46($id)
+# **consultarUsingGET48**
+> \br.com.conductor.pier.api.v2.model\TipoTelefoneResponse consultarUsingGET48($id)
 
 {{{tipo_telefone_resource_consultar}}}
 
@@ -858,10 +906,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{tipo_telefone_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET46($id);
+    $result = $api_instance->consultarUsingGET48($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET46: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET48: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -887,8 +935,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET6**
-> \br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse consultarUsingGET6($id)
+# **consultarUsingGET7**
+> \br.com.conductor.pier.api.v2.model\AtendimentoClienteResponse consultarUsingGET7($id)
 
 {{{atendimento_cliente_resource_consultar}}}
 
@@ -903,10 +951,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET6($id);
+    $result = $api_instance->consultarUsingGET7($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET7: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -932,8 +980,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\BancoResponse consultarUsingGET8($id)
+# **consultarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\BancoResponse consultarUsingGET9($id)
 
 {{{banco_resource_consultar}}}
 
@@ -948,10 +996,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $id = 789; // int | {{{banco_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET8($id);
+    $result = $api_instance->consultarUsingGET9($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->consultarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1524,8 +1572,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET14**
-> \br.com.conductor.pier.api.v2.model\ConfiguracaoRegistroCobrancaResponse listarUsingGET14($sort, $page, $limit)
+# **listarUsingGET10**
+> \br.com.conductor.pier.api.v2.model\PageBancoResponse listarUsingGET10($sort, $page, $limit)
+
+{{{banco_resource_listar}}}
+
+{{{banco_resource_listar_notes}}}
+
+### Example 
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcadastrogeralApi();
+$sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
+$page = 56; // int | {{{global_menssagem_sort_page_value}}}
+$limit = 56; // int | {{{global_menssagem_sort_limit}}}
+
+try { 
+    $result = $api_instance->listarUsingGET10($sort, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET10: ', $e->getMessage(), "\n";
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
+ **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
+ **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
+
+### Return type
+
+[**\br.com.conductor.pier.api.v2.model\PageBancoResponse**](PageBancoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **listarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\ConfiguracaoRegistroCobrancaResponse listarUsingGET15($sort, $page, $limit)
 
 {{{configuracao_registro_cobranca_resource_listar}}}
 
@@ -1542,10 +1639,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarUsingGET14($sort, $page, $limit);
+    $result = $api_instance->listarUsingGET15($sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1573,8 +1670,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET15**
-> \br.com.conductor.pier.api.v2.model\PageConfiguracaoRotativoResponse listarUsingGET15($sort, $page, $limit, $id_produto)
+# **listarUsingGET16**
+> \br.com.conductor.pier.api.v2.model\PageConfiguracaoRotativoResponse listarUsingGET16($sort, $page, $limit, $id_produto)
 
 {{{configuracao_rotativo_resource_listar}}}
 
@@ -1592,10 +1689,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $id_produto = 789; // int | {{{configuracao_rotativo_request_id_produto_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET15($sort, $page, $limit, $id_produto);
+    $result = $api_instance->listarUsingGET16($sort, $page, $limit, $id_produto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET15: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET16: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1624,8 +1721,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET41**
-> \br.com.conductor.pier.api.v2.model\PagePortadorResponse listarUsingGET41($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
+# **listarUsingGET43**
+> \br.com.conductor.pier.api.v2.model\PagePortadorResponse listarUsingGET43($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador)
 
 {{{portador_resource_listar}}}
 
@@ -1652,10 +1749,10 @@ $data_cadastro_portador = "data_cadastro_portador_example"; // string | {{{porta
 $data_cancelamento_portador = "data_cancelamento_portador_example"; // string | {{{portador_request_data_cancelamento_portador_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET41($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
+    $result = $api_instance->listarUsingGET43($sort, $page, $limit, $id_conta, $id_produto, $id_pessoa, $id_parentesco, $tipo_portador, $nome_impresso, $id_tipo_cartao, $flag_ativo, $data_cadastro_portador, $data_cancelamento_portador);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET41: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET43: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1693,8 +1790,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET42**
-> \br.com.conductor.pier.api.v2.model\PageProdutoResponse listarUsingGET42($sort, $page, $limit, $nome, $status, $id_fantasia_basica)
+# **listarUsingGET44**
+> \br.com.conductor.pier.api.v2.model\PageProdutoResponse listarUsingGET44($sort, $page, $limit, $nome, $status, $id_fantasia_basica)
 
 {{{produto_resource_listar}}}
 
@@ -1714,10 +1811,10 @@ $status = 56; // int | {{{produto_request_status_value}}}
 $id_fantasia_basica = 789; // int | {{{produto_request_id_fantasia_basica_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET42($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
+    $result = $api_instance->listarUsingGET44($sort, $page, $limit, $nome, $status, $id_fantasia_basica);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET42: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET44: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1748,8 +1845,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET43**
-> \br.com.conductor.pier.api.v2.model\PagePromotorResponse listarUsingGET43($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario)
+# **listarUsingGET45**
+> \br.com.conductor.pier.api.v2.model\PagePromotorResponse listarUsingGET45($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario)
 
 {{{promotor_resource_listar}}}
 
@@ -1771,10 +1868,10 @@ $id_estabelecimento = 789; // int | {{{promotor_request_id_estabelecimento_value
 $id_usuario = 789; // int | {{{promotor_request_id_usuario_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET43($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
+    $result = $api_instance->listarUsingGET45($sort, $page, $limit, $id, $nome, $data_cadastro, $id_estabelecimento, $id_usuario);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET43: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET45: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1807,8 +1904,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET52**
-> \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse listarUsingGET52($sort, $page, $limit, $id, $descricao)
+# **listarUsingGET55**
+> \br.com.conductor.pier.api.v2.model\PageTipoAjusteResponse listarUsingGET55($sort, $page, $limit, $id, $descricao)
 
 {{{tipo_ajuste_resource_consultar}}}
 
@@ -1827,10 +1924,10 @@ $id = 789; // int | {{{tipo_ajuste_request_id_value}}}
 $descricao = "descricao_example"; // string | {{{tipo_ajuste_request_descricao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET52($sort, $page, $limit, $id, $descricao);
+    $result = $api_instance->listarUsingGET55($sort, $page, $limit, $id, $descricao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET52: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET55: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1860,8 +1957,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET54**
-> \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse listarUsingGET54($sort, $page, $limit, $id, $nome)
+# **listarUsingGET57**
+> \br.com.conductor.pier.api.v2.model\PageTipoEnderecoResponse listarUsingGET57($sort, $page, $limit, $id, $nome)
 
 {{{tipo_endereco_resource_listar}}}
 
@@ -1880,10 +1977,10 @@ $id = 789; // int | {{{tipo_endereco_request_id_value}}}
 $nome = "nome_example"; // string | {{{tipo_endereco_request_nome_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET54($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET57($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET54: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET57: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1913,8 +2010,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET56**
-> \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse listarUsingGET56($sort, $page, $limit, $id, $nome)
+# **listarUsingGET59**
+> \br.com.conductor.pier.api.v2.model\PageTipoTelefoneResponse listarUsingGET59($sort, $page, $limit, $id, $nome)
 
 {{{tipo_telefone_resource_listar}}}
 
@@ -1933,10 +2030,10 @@ $id = 789; // int | {{{tipo_telefone_request_id_value}}}
 $nome = "nome_example"; // string | {{{tipo_telefone_request_nome_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET56($sort, $page, $limit, $id, $nome);
+    $result = $api_instance->listarUsingGET59($sort, $page, $limit, $id, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET56: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET59: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1966,8 +2063,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET63**
-> \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse listarUsingGET63($sort, $page, $limit, $data_vencimento)
+# **listarUsingGET66**
+> \br.com.conductor.pier.api.v2.model\PageControleVencimentoResponse listarUsingGET66($sort, $page, $limit, $data_vencimento, $data_vencimento_fim)
 
 {{{vencimento_resource_listar}}}
 
@@ -1983,12 +2080,13 @@ $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $data_vencimento = "data_vencimento_example"; // string | {{{controle_vencimento_request_data_vencimento_value}}}
+$data_vencimento_fim = "data_vencimento_fim_example"; // string | {{{calendario_fatura_request_data_fim_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET63($sort, $page, $limit, $data_vencimento);
+    $result = $api_instance->listarUsingGET66($sort, $page, $limit, $data_vencimento, $data_vencimento_fim);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET63: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET66: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2001,6 +2099,7 @@ Name | Type | Description  | Notes
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
  **data_vencimento** | **string**| {{{controle_vencimento_request_data_vencimento_value}}} | [optional] 
+ **data_vencimento_fim** | **string**| {{{calendario_fatura_request_data_fim_value}}} | [optional] 
 
 ### Return type
 
@@ -2017,8 +2116,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse listarUsingGET7($sort, $page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
+# **listarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse listarUsingGET8($sort, $page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento)
 
 {{{atendimento_cliente_resource_listar}}}
 
@@ -2039,10 +2138,10 @@ $nome_atendente = "nome_atendente_example"; // string | {{{atendimento_cliente_r
 $data_atendimento = "data_atendimento_example"; // string | {{{atendimento_cliente_request_data_atendimento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET7($sort, $page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
+    $result = $api_instance->listarUsingGET8($sort, $page, $limit, $id_tipo_atendimento, $id_conta, $nome_atendente, $data_atendimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2062,55 +2161,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\br.com.conductor.pier.api.v2.model\PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **listarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\PageBancoResponse listarUsingGET9($sort, $page, $limit)
-
-{{{banco_resource_listar}}}
-
-{{{banco_resource_listar_notes}}}
-
-### Example 
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagcadastrogeralApi();
-$sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
-$page = 56; // int | {{{global_menssagem_sort_page_value}}}
-$limit = 56; // int | {{{global_menssagem_sort_limit}}}
-
-try { 
-    $result = $api_instance->listarUsingGET9($sort, $page, $limit);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->listarUsingGET9: ', $e->getMessage(), "\n";
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
- **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
- **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
-
-### Return type
-
-[**\br.com.conductor.pier.api.v2.model\PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 
@@ -2184,8 +2234,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST4**
-> \br.com.conductor.pier.api.v2.model\CampanhaResponse salvarUsingPOST4($campanha_persist)
+# **salvarUsingPOST5**
+> \br.com.conductor.pier.api.v2.model\CampanhaResponse salvarUsingPOST5($campanha_persist)
 
 {{{campanha_resource_salvar}}}
 
@@ -2200,10 +2250,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $campanha_persist = new \br.com.conductor.pier.api.v2.model\CampanhaPersist(); // \br.com.conductor.pier.api.v2.model\CampanhaPersist | campanhaPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST4($campanha_persist);
+    $result = $api_instance->salvarUsingPOST5($campanha_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->salvarUsingPOST4: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2229,8 +2279,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST6**
-> \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoDetalheResponse salvarUsingPOST6($configuracao_rotativo_persist)
+# **salvarUsingPOST7**
+> \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoDetalheResponse salvarUsingPOST7($configuracao_rotativo_persist)
 
 {{{configuracao_rotativo_resource_salvar}}}
 
@@ -2245,10 +2295,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagcadastroge
 $configuracao_rotativo_persist = new \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoPersist(); // \br.com.conductor.pier.api.v2.model\ConfiguracaoRotativoPersist | configuracaoRotativoPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST6($configuracao_rotativo_persist);
+    $result = $api_instance->salvarUsingPOST7($configuracao_rotativo_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagcadastrogeralApi->salvarUsingPOST6: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagcadastrogeralApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
 }
 ?>
 ```

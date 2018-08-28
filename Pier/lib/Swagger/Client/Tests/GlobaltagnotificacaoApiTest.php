@@ -136,6 +136,16 @@ class GlobaltagnotificacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for enviarOTPUsingPOST
+     *
+     * {{{notificacao_resource_3d_secure}}}
+     *
+     */
+    public function test_enviarOTPUsingPOST() {
+
+    }
+    
+    /**
      * Test case for gerarTokenEMAILUsingPOST
      *
      * {{{codigo_seguranca_resource_gerar_token_e_m_a_i_l}}}

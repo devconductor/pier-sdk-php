@@ -261,7 +261,7 @@ class GlobaltaglimitedisponibilidadeApi
     }
     
     /**
-     * consultarUsingGET23
+     * consultarUsingGET25
      *
      * {{{limite_disponibilidade_resource_consultar}}}
      *
@@ -269,15 +269,15 @@ class GlobaltaglimitedisponibilidadeApi
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23($id_conta)
+    public function consultarUsingGET25($id_conta)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET23WithHttpInfo ($id_conta);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id_conta);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET23WithHttpInfo
+     * consultarUsingGET25WithHttpInfo
      *
      * {{{limite_disponibilidade_resource_consultar}}}
      *
@@ -285,12 +285,12 @@ class GlobaltaglimitedisponibilidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET23WithHttpInfo($id_conta)
+    public function consultarUsingGET25WithHttpInfo($id_conta)
     {
         
         // verify the required parameter 'id_conta' is set
         if ($id_conta === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET23');
+            throw new \InvalidArgumentException('Missing the required parameter $id_conta when calling consultarUsingGET25');
         }
   
         // parse inputs
@@ -329,6 +329,111 @@ class GlobaltaglimitedisponibilidadeApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath, 'GET',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * sensibilizarSaldoDisponivelGlobalUsingPOST
+     *
+     * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+     *
+     * @param int $id {{{sensibilizar_saldo_global_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\SensibilizarSaldoGlobalUpdateValue_ $sensibilizar_saldo_global sensibilizarSaldoGlobal (required)
+     * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function sensibilizarSaldoDisponivelGlobalUsingPOST($id, $sensibilizar_saldo_global)
+    {
+        list($response, $statusCode, $httpHeader) = $this->sensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo ($id, $sensibilizar_saldo_global);
+        return $response; 
+    }
+
+
+    /**
+     * sensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo
+     *
+     * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+     *
+     * @param int $id {{{sensibilizar_saldo_global_param_id}}} (required)
+     * @param \br.com.conductor.pier.api.v2.model\SensibilizarSaldoGlobalUpdateValue_ $sensibilizar_saldo_global sensibilizarSaldoGlobal (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function sensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo($id, $sensibilizar_saldo_global)
+    {
+        
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling sensibilizarSaldoDisponivelGlobalUsingPOST');
+        }
+        // verify the required parameter 'sensibilizar_saldo_global' is set
+        if ($sensibilizar_saldo_global === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $sensibilizar_saldo_global when calling sensibilizarSaldoDisponivelGlobalUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($sensibilizar_saldo_global)) {
+            $_tempBody = $sensibilizar_saldo_global;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
                 $queryParams, $httpBody,
                 $headerParams, '\br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse'
             );

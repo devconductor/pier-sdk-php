@@ -63,6 +63,7 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
         'data_contestacao' => '\DateTime',
         'data_envio_cb' => 'string',
         'data_transacao' => '\DateTime',
+        'historico' => 'string',
         'id_compra_contestada' => 'int',
         'internacional' => 'int',
         'mcc' => 'string',
@@ -106,6 +107,7 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
         'data_contestacao' => 'dataContestacao',
         'data_envio_cb' => 'dataEnvioCB',
         'data_transacao' => 'dataTransacao',
+        'historico' => 'historico',
         'id_compra_contestada' => 'idCompraContestada',
         'internacional' => 'internacional',
         'mcc' => 'mcc',
@@ -149,6 +151,7 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
         'data_contestacao' => 'setDataContestacao',
         'data_envio_cb' => 'setDataEnvioCb',
         'data_transacao' => 'setDataTransacao',
+        'historico' => 'setHistorico',
         'id_compra_contestada' => 'setIdCompraContestada',
         'internacional' => 'setInternacional',
         'mcc' => 'setMcc',
@@ -192,6 +195,7 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
         'data_contestacao' => 'getDataContestacao',
         'data_envio_cb' => 'getDataEnvioCb',
         'data_transacao' => 'getDataTransacao',
+        'historico' => 'getHistorico',
         'id_compra_contestada' => 'getIdCompraContestada',
         'internacional' => 'getInternacional',
         'mcc' => 'getMcc',
@@ -290,6 +294,12 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
       * @var \DateTime
       */
     protected $data_transacao;
+    
+    /**
+      * $historico 
+      * @var string
+      */
+    protected $historico;
     
     /**
       * $id_compra_contestada 
@@ -432,6 +442,7 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
             $this->data_contestacao = $data["data_contestacao"];
             $this->data_envio_cb = $data["data_envio_cb"];
             $this->data_transacao = $data["data_transacao"];
+            $this->historico = $data["historico"];
             $this->id_compra_contestada = $data["id_compra_contestada"];
             $this->internacional = $data["internacional"];
             $this->mcc = $data["mcc"];
@@ -704,6 +715,27 @@ class CompraContestadaTransacaoResponse implements ArrayAccess
     {
         
         $this->data_transacao = $data_transacao;
+        return $this;
+    }
+    
+    /**
+     * Gets historico
+     * @return string
+     */
+    public function getHistorico()
+    {
+        return $this->historico;
+    }
+  
+    /**
+     * Sets historico
+     * @param string $historico 
+     * @return $this
+     */
+    public function setHistorico($historico)
+    {
+        
+        $this->historico = $historico;
         return $this;
     }
     

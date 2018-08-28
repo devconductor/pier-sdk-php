@@ -92,7 +92,7 @@ class GlobaltagriscofraudeApi
   
     
     /**
-     * consultarUsingGET35
+     * consultarUsingGET37
      *
      * {{{risco_fraude_resource_consultar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagriscofraudeApi
      * @return \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35($id)
+    public function consultarUsingGET37($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET35WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET37WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET35WithHttpInfo
+     * consultarUsingGET37WithHttpInfo
      *
      * {{{risco_fraude_resource_consultar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagriscofraudeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\RiscoFraudeDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET35WithHttpInfo($id)
+    public function consultarUsingGET37WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET35');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET37');
         }
   
         // parse inputs

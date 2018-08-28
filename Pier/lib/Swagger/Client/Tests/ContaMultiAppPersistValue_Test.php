@@ -1,6 +1,6 @@
 <?php
 /**
- * UsuarioldapUpdateObjectDescription_Test
+ * ContaMultiAppPersistValue_Test
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * UsuarioldapUpdateObjectDescription_Test Class Doc Comment
+ * ContaMultiAppPersistValue_Test Class Doc Comment
  *
  * @category    Class
- * @description {{{usuarioldap_update_object_description}}}
+ * @description {{{conta_multi_app_persist_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsuarioldapUpdateObjectDescription_Test extends \PHPUnit_Framework_TestCase
+class ContaMultiAppPersistValue_Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class UsuarioldapUpdateObjectDescription_Test extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test UsuarioldapUpdateObjectDescription_
+     * Test ContaMultiAppPersistValue_
      */
-    public function testUsuarioldapUpdateObjectDescription_() {
+    public function testContaMultiAppPersistValue_() {
 
     }
 

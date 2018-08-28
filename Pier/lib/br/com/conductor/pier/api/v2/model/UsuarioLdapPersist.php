@@ -38,7 +38,7 @@ use \ArrayAccess;
  * UsuarioLdapPersist Class Doc Comment
  *
  * @category    Class
- * @description {{{usuario_persist_object_description}}}
+ * @description 
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -51,10 +51,11 @@ class UsuarioLdapPersist implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'nome' => 'string',
-        'login' => 'string',
         'cpf' => 'string',
         'email' => 'string',
+        'id_emissor' => 'int',
+        'login' => 'string',
+        'nome' => 'string',
         'perfis' => '\br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]'
     );
   
@@ -67,10 +68,11 @@ class UsuarioLdapPersist implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
-        'nome' => 'nome',
-        'login' => 'login',
         'cpf' => 'cpf',
         'email' => 'email',
+        'id_emissor' => 'idEmissor',
+        'login' => 'login',
+        'nome' => 'nome',
         'perfis' => 'perfis'
     );
   
@@ -83,10 +85,11 @@ class UsuarioLdapPersist implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
-        'nome' => 'setNome',
-        'login' => 'setLogin',
         'cpf' => 'setCpf',
         'email' => 'setEmail',
+        'id_emissor' => 'setIdEmissor',
+        'login' => 'setLogin',
+        'nome' => 'setNome',
         'perfis' => 'setPerfis'
     );
   
@@ -99,10 +102,11 @@ class UsuarioLdapPersist implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
-        'nome' => 'getNome',
-        'login' => 'getLogin',
         'cpf' => 'getCpf',
         'email' => 'getEmail',
+        'id_emissor' => 'getIdEmissor',
+        'login' => 'getLogin',
+        'nome' => 'getNome',
         'perfis' => 'getPerfis'
     );
   
@@ -112,31 +116,37 @@ class UsuarioLdapPersist implements ArrayAccess
 
     
     /**
-      * $nome {{{usuario_persist_nome_value}}}
-      * @var string
-      */
-    protected $nome;
-    
-    /**
-      * $login {{{usuario_persist_login_value}}}
-      * @var string
-      */
-    protected $login;
-    
-    /**
-      * $cpf {{{usuario_persist_cpf_value}}}
+      * $cpf 
       * @var string
       */
     protected $cpf;
     
     /**
-      * $email {{{usuario_persist_email_value}}}
+      * $email 
       * @var string
       */
     protected $email;
     
     /**
-      * $perfis {{{usuario_persist_perfis_value}}}
+      * $id_emissor 
+      * @var int
+      */
+    protected $id_emissor;
+    
+    /**
+      * $login 
+      * @var string
+      */
+    protected $login;
+    
+    /**
+      * $nome 
+      * @var string
+      */
+    protected $nome;
+    
+    /**
+      * $perfis 
       * @var \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[]
       */
     protected $perfis;
@@ -150,54 +160,13 @@ class UsuarioLdapPersist implements ArrayAccess
     {
         
         if ($data != null) {
-            $this->nome = $data["nome"];
-            $this->login = $data["login"];
             $this->cpf = $data["cpf"];
             $this->email = $data["email"];
+            $this->id_emissor = $data["id_emissor"];
+            $this->login = $data["login"];
+            $this->nome = $data["nome"];
             $this->perfis = $data["perfis"];
         }
-    }
-    
-    /**
-     * Gets nome
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-  
-    /**
-     * Sets nome
-     * @param string $nome {{{usuario_persist_nome_value}}}
-     * @return $this
-     */
-    public function setNome($nome)
-    {
-        
-        $this->nome = $nome;
-        return $this;
-    }
-    
-    /**
-     * Gets login
-     * @return string
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-  
-    /**
-     * Sets login
-     * @param string $login {{{usuario_persist_login_value}}}
-     * @return $this
-     */
-    public function setLogin($login)
-    {
-        
-        $this->login = $login;
-        return $this;
     }
     
     /**
@@ -211,7 +180,7 @@ class UsuarioLdapPersist implements ArrayAccess
   
     /**
      * Sets cpf
-     * @param string $cpf {{{usuario_persist_cpf_value}}}
+     * @param string $cpf 
      * @return $this
      */
     public function setCpf($cpf)
@@ -232,13 +201,76 @@ class UsuarioLdapPersist implements ArrayAccess
   
     /**
      * Sets email
-     * @param string $email {{{usuario_persist_email_value}}}
+     * @param string $email 
      * @return $this
      */
     public function setEmail($email)
     {
         
         $this->email = $email;
+        return $this;
+    }
+    
+    /**
+     * Gets id_emissor
+     * @return int
+     */
+    public function getIdEmissor()
+    {
+        return $this->id_emissor;
+    }
+  
+    /**
+     * Sets id_emissor
+     * @param int $id_emissor 
+     * @return $this
+     */
+    public function setIdEmissor($id_emissor)
+    {
+        
+        $this->id_emissor = $id_emissor;
+        return $this;
+    }
+    
+    /**
+     * Gets login
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+  
+    /**
+     * Sets login
+     * @param string $login 
+     * @return $this
+     */
+    public function setLogin($login)
+    {
+        
+        $this->login = $login;
+        return $this;
+    }
+    
+    /**
+     * Gets nome
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+  
+    /**
+     * Sets nome
+     * @param string $nome 
+     * @return $this
+     */
+    public function setNome($nome)
+    {
+        
+        $this->nome = $nome;
         return $this;
     }
     
@@ -253,7 +285,7 @@ class UsuarioLdapPersist implements ArrayAccess
   
     /**
      * Sets perfis
-     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $perfis {{{usuario_persist_perfis_value}}}
+     * @param \br.com.conductor.pier.api.v2.model\ReferenciaIdPersist[] $perfis 
      * @return $this
      */
     public function setPerfis($perfis)

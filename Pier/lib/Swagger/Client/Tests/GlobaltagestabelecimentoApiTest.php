@@ -186,19 +186,9 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET20
-     *
-     * {{{estabelecimento_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET20() {
-
-    }
-    
-    /**
      * Test case for consultarUsingGET22
      *
-     * {{{grupo_economico_resource_consultar}}}
+     * {{{estabelecimento_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET22() {
@@ -208,7 +198,7 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for consultarUsingGET24
      *
-     * {{{maquineta_resource_consultar}}}
+     * {{{grupo_economico_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET24() {
@@ -216,29 +206,29 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET25
+     * Test case for consultarUsingGET26
      *
-     * {{{operacao_credor_resource_consultar}}}
+     * {{{maquineta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET25() {
+    public function test_consultarUsingGET26() {
 
     }
     
     /**
-     * Test case for consultarUsingGET38
+     * Test case for consultarUsingGET27
      *
-     * {{{telefone_estabelecimento_resource_consultar}}}
+     * {{{operacao_credor_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET38() {
+    public function test_consultarUsingGET27() {
 
     }
     
     /**
      * Test case for consultarUsingGET40
      *
-     * {{{terminal_resource_consultar}}}
+     * {{{telefone_estabelecimento_resource_consultar}}}
      *
      */
     public function test_consultarUsingGET40() {
@@ -246,12 +236,22 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET52
+     * Test case for consultarUsingGET42
+     *
+     * {{{terminal_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET42() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET54
      *
      * {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET52() {
+    public function test_consultarUsingGET54() {
 
     }
     
@@ -376,29 +376,19 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET25
+     * Test case for listarUsingGET26
      *
      * {{{estabelecimento_resource_listar}}}
      *
      */
-    public function test_listarUsingGET25() {
-
-    }
-    
-    /**
-     * Test case for listarUsingGET28
-     *
-     * {{{grupo_economico_resource_listar}}}
-     *
-     */
-    public function test_listarUsingGET28() {
+    public function test_listarUsingGET26() {
 
     }
     
     /**
      * Test case for listarUsingGET29
      *
-     * {{{grupo_origem_comercial_resource_listar}}}
+     * {{{grupo_economico_resource_listar}}}
      *
      */
     public function test_listarUsingGET29() {
@@ -406,19 +396,19 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET32
+     * Test case for listarUsingGET30
      *
-     * {{{maquineta_resource_listar}}}
+     * {{{grupo_origem_comercial_resource_listar}}}
      *
      */
-    public function test_listarUsingGET32() {
+    public function test_listarUsingGET30() {
 
     }
     
     /**
      * Test case for listarUsingGET33
      *
-     * {{{moeda_resource_listar}}}
+     * {{{maquineta_resource_listar}}}
      *
      */
     public function test_listarUsingGET33() {
@@ -428,7 +418,7 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for listarUsingGET34
      *
-     * {{{operacao_credor_resource_listar}}}
+     * {{{moeda_resource_listar}}}
      *
      */
     public function test_listarUsingGET34() {
@@ -436,59 +426,59 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET49
+     * Test case for listarUsingGET35
+     *
+     * {{{operacao_credor_resource_listar}}}
+     *
+     */
+    public function test_listarUsingGET35() {
+
+    }
+    
+    /**
+     * Test case for listarUsingGET52
      *
      * {{{telefone_estabelecimento_resource_listar}}}
      *
      */
-    public function test_listarUsingGET49() {
+    public function test_listarUsingGET52() {
 
     }
     
     /**
-     * Test case for listarUsingGET51
+     * Test case for listarUsingGET54
      *
      * {{{terminal_resource_listar}}}
      *
      */
-    public function test_listarUsingGET51() {
+    public function test_listarUsingGET54() {
 
     }
     
     /**
-     * Test case for listarUsingGET64
+     * Test case for listarUsingGET67
      *
      * {{{vinculo_estabelecimento_adquirente_resource_listar}}}
      *
      */
-    public function test_listarUsingGET64() {
+    public function test_listarUsingGET67() {
 
     }
     
     /**
-     * Test case for listarUsingGET65
+     * Test case for listarUsingGET68
      *
      * {{{vinculo_operacao_resource_listar}}}
      *
      */
-    public function test_listarUsingGET65() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST19
-     *
-     * {{{maquineta_resource_salvar}}}
-     *
-     */
-    public function test_salvarUsingPOST19() {
+    public function test_listarUsingGET68() {
 
     }
     
     /**
      * Test case for salvarUsingPOST20
      *
-     * {{{operacao_credor_resource_salvar}}}
+     * {{{maquineta_resource_salvar}}}
      *
      */
     public function test_salvarUsingPOST20() {
@@ -496,32 +486,42 @@ class GlobaltagestabelecimentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST27
+     * Test case for salvarUsingPOST21
+     *
+     * {{{operacao_credor_resource_salvar}}}
+     *
+     */
+    public function test_salvarUsingPOST21() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST28
      *
      * {{{telefone_estabelecimento_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST27() {
+    public function test_salvarUsingPOST28() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST29
+     * Test case for salvarUsingPOST30
      *
      * {{{terminal_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST29() {
+    public function test_salvarUsingPOST30() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST34
+     * Test case for salvarUsingPOST35
      *
      * {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST34() {
+    public function test_salvarUsingPOST35() {
 
     }
     

@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET27**](GlobaltagparametroemissorApi.md#consultarUsingGET27) | **GET** /api/parametros-emissor/{codigo} | {{{parametro_emissor_recurso}}}
+[**consultarUsingGET29**](GlobaltagparametroemissorApi.md#consultarUsingGET29) | **GET** /api/parametros-emissor/{codigo} | {{{parametro_emissor_recurso}}}
 
 
-# **consultarUsingGET27**
-> \br.com.conductor.pier.api.v2.model\ParametroEmissorResponse consultarUsingGET27($codigo)
+# **consultarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\ParametroEmissorResponse consultarUsingGET29($codigo)
 
 {{{parametro_emissor_recurso}}}
 
@@ -23,10 +23,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagparametroe
 $codigo = "codigo_example"; // string | {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET27($codigo);
+    $result = $api_instance->consultarUsingGET29($codigo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagparametroemissorApi->consultarUsingGET27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagparametroemissorApi->consultarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```

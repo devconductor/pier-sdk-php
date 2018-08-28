@@ -51,6 +51,7 @@ class ParametroProdutoResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
+        'id' => 'int',
         'id_produto' => 'int',
         'tipo_origem_transacao' => 'string',
         'descricao' => 'string',
@@ -67,6 +68,7 @@ class ParametroProdutoResponse implements ArrayAccess
       * @var string[] 
       */
     static $attributeMap = array(
+        'id' => 'id',
         'id_produto' => 'idProduto',
         'tipo_origem_transacao' => 'tipoOrigemTransacao',
         'descricao' => 'descricao',
@@ -83,6 +85,7 @@ class ParametroProdutoResponse implements ArrayAccess
       * @var string[]
       */
     static $setters = array(
+        'id' => 'setId',
         'id_produto' => 'setIdProduto',
         'tipo_origem_transacao' => 'setTipoOrigemTransacao',
         'descricao' => 'setDescricao',
@@ -99,6 +102,7 @@ class ParametroProdutoResponse implements ArrayAccess
       * @var string[]
       */
     static $getters = array(
+        'id' => 'getId',
         'id_produto' => 'getIdProduto',
         'tipo_origem_transacao' => 'getTipoOrigemTransacao',
         'descricao' => 'getDescricao',
@@ -110,6 +114,12 @@ class ParametroProdutoResponse implements ArrayAccess
         return self::$getters;
     }
 
+    
+    /**
+      * $id {{{parametro_produto_response_id_value}}}
+      * @var int
+      */
+    protected $id;
     
     /**
       * $id_produto {{{parametro_produto_response_id_produto_value}}}
@@ -150,12 +160,34 @@ class ParametroProdutoResponse implements ArrayAccess
     {
         
         if ($data != null) {
+            $this->id = $data["id"];
             $this->id_produto = $data["id_produto"];
             $this->tipo_origem_transacao = $data["tipo_origem_transacao"];
             $this->descricao = $data["descricao"];
             $this->valor_parametro = $data["valor_parametro"];
             $this->data_validade = $data["data_validade"];
         }
+    }
+    
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+  
+    /**
+     * Sets id
+     * @param int $id {{{parametro_produto_response_id_value}}}
+     * @return $this
+     */
+    public function setId($id)
+    {
+        
+        $this->id = $id;
+        return $this;
     }
     
     /**

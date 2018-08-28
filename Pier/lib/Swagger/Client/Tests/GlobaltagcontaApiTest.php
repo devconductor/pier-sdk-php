@@ -206,22 +206,32 @@ class GlobaltagcontaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET14
+     * Test case for consultarUsingGET16
      *
      * {{{conta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET14() {
+    public function test_consultarUsingGET16() {
 
     }
     
     /**
-     * Test case for consultarUsingGET49
+     * Test case for consultarUsingGET51
      *
      * {{{transferencia_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET49() {
+    public function test_consultarUsingGET51() {
+
+    }
+    
+    /**
+     * Test case for criarContasMultiAppUsingPOST
+     *
+     * {{{conta_resource_cadastrar_conta_multiapp}}}
+     *
+     */
+    public function test_criarContasMultiAppUsingPOST() {
 
     }
     
@@ -336,32 +346,32 @@ class GlobaltagcontaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET18
+     * Test case for listarUsingGET19
      *
      * {{{conta_resource_listar}}}
      *
      */
-    public function test_listarUsingGET18() {
+    public function test_listarUsingGET19() {
 
     }
     
     /**
-     * Test case for listarUsingGET58
+     * Test case for listarUsingGET61
      *
      * {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
      *
      */
-    public function test_listarUsingGET58() {
+    public function test_listarUsingGET61() {
 
     }
     
     /**
-     * Test case for listarUsingGET60
+     * Test case for listarUsingGET63
      *
      * {{{transferencia_resource_listar}}}
      *
      */
-    public function test_listarUsingGET60() {
+    public function test_listarUsingGET63() {
 
     }
     
@@ -376,12 +386,12 @@ class GlobaltagcontaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST8
+     * Test case for salvarUsingPOST9
      *
      * {{{conta_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST8() {
+    public function test_salvarUsingPOST9() {
 
     }
     

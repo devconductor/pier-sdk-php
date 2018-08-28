@@ -5,17 +5,17 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT21**](GlobaltagdocumentoApi.md#alterarUsingPUT21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
-[**atualizarUsingPUT3**](GlobaltagdocumentoApi.md#atualizarUsingPUT3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultarUsingGET18**](GlobaltagdocumentoApi.md#consultarUsingGET18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultarUsingGET47**](GlobaltagdocumentoApi.md#consultarUsingGET47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**atualizarUsingPUT4**](GlobaltagdocumentoApi.md#atualizarUsingPUT4) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
+[**consultarUsingGET19**](GlobaltagdocumentoApi.md#consultarUsingGET19) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultarUsingGET20**](GlobaltagdocumentoApi.md#consultarUsingGET20) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultarUsingGET49**](GlobaltagdocumentoApi.md#consultarUsingGET49) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrarUsingPOST1**](GlobaltagdocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
-[**listarUsingGET21**](GlobaltagdocumentoApi.md#listarUsingGET21) | **GET** /api/documentos | {{{documento_resource_listar}}}
-[**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
-[**listarUsingGET57**](GlobaltagdocumentoApi.md#listarUsingGET57) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
-[**salvarUsingPOST11**](GlobaltagdocumentoApi.md#salvarUsingPOST11) | **POST** /api/documentos | {{{documento_resource_salvar}}}
-[**salvarUsingPOST12**](GlobaltagdocumentoApi.md#salvarUsingPOST12) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
-[**salvarUsingPOST31**](GlobaltagdocumentoApi.md#salvarUsingPOST31) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
+[**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/documentos | {{{documento_resource_listar}}}
+[**listarUsingGET23**](GlobaltagdocumentoApi.md#listarUsingGET23) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
+[**listarUsingGET60**](GlobaltagdocumentoApi.md#listarUsingGET60) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
+[**salvarUsingPOST12**](GlobaltagdocumentoApi.md#salvarUsingPOST12) | **POST** /api/documentos | {{{documento_resource_salvar}}}
+[**salvarUsingPOST13**](GlobaltagdocumentoApi.md#salvarUsingPOST13) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
+[**salvarUsingPOST32**](GlobaltagdocumentoApi.md#salvarUsingPOST32) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
 
 
 # **alterarUsingPUT21**
@@ -65,8 +65,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **atualizarUsingPUT3**
-> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse atualizarUsingPUT3($id, $persist)
+# **atualizarUsingPUT4**
+> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse atualizarUsingPUT4($id, $persist)
 
 {{{documento_template_resource_atualizar}}}
 
@@ -82,10 +82,10 @@ $id = 789; // int | {{{documento_template_resource_atualizar_param_id}}}
 $persist = new \br.com.conductor.pier.api.v2.model\DocumentoTemplatePersist(); // \br.com.conductor.pier.api.v2.model\DocumentoTemplatePersist | persist
 
 try { 
-    $result = $api_instance->atualizarUsingPUT3($id, $persist);
+    $result = $api_instance->atualizarUsingPUT4($id, $persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->atualizarUsingPUT3: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->atualizarUsingPUT4: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -112,8 +112,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET17($id)
+# **consultarUsingGET19**
+> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse consultarUsingGET19($id)
 
 {{{documento_resource_consultar}}}
 
@@ -128,10 +128,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{documento_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET17($id);
+    $result = $api_instance->consultarUsingGET19($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET19: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET18**
-> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET18($id)
+# **consultarUsingGET20**
+> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse consultarUsingGET20($id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -173,10 +173,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{documento_template_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET18($id);
+    $result = $api_instance->consultarUsingGET20($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET18: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -202,8 +202,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET47**
-> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET47($id)
+# **consultarUsingGET49**
+> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse consultarUsingGET49($id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -218,10 +218,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $id = 789; // int | {{{tipo_template_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET47($id);
+    $result = $api_instance->consultarUsingGET49($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET47: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->consultarUsingGET49: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -292,8 +292,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\PageDocumentoResponse listarUsingGET21($sort, $page, $limit, $id_template_documento, $nome, $extensao)
+# **listarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\PageDocumentoResponse listarUsingGET22($sort, $page, $limit, $id_template_documento, $nome, $extensao)
 
 {{{documento_resource_listar}}}
 
@@ -313,10 +313,10 @@ $nome = "nome_example"; // string | {{{documento_request_nome_value}}}
 $extensao = "extensao_example"; // string | {{{documento_request_extensao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $id_template_documento, $nome, $extensao);
+    $result = $api_instance->listarUsingGET22($sort, $page, $limit, $id_template_documento, $nome, $extensao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -347,8 +347,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse listarUsingGET22($sort, $page, $limit, $id_tipo_template)
+# **listarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse listarUsingGET23($sort, $page, $limit, $id_tipo_template)
 
 {{{documento_template_resource_listar}}}
 
@@ -366,10 +366,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $id_tipo_template = 789; // int | {{{documento_template_request_id_tipo_template_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET22($sort, $page, $limit, $id_tipo_template);
+    $result = $api_instance->listarUsingGET23($sort, $page, $limit, $id_tipo_template);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET23: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -398,8 +398,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET57**
-> \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse listarUsingGET57($sort, $page, $limit)
+# **listarUsingGET60**
+> \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse listarUsingGET60($sort, $page, $limit)
 
 {{{tipo_template_resource_listar}}}
 
@@ -416,10 +416,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarUsingGET57($sort, $page, $limit);
+    $result = $api_instance->listarUsingGET60($sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET57: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->listarUsingGET60: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -447,8 +447,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST11**
-> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse salvarUsingPOST11($persist)
+# **salvarUsingPOST12**
+> \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse salvarUsingPOST12($persist)
 
 {{{documento_resource_salvar}}}
 
@@ -463,10 +463,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $persist = new \br.com.conductor.pier.api.v2.model\DocumentoParametrosRequest(); // \br.com.conductor.pier.api.v2.model\DocumentoParametrosRequest | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST11($persist);
+    $result = $api_instance->salvarUsingPOST12($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST11: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -492,8 +492,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST12**
-> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse salvarUsingPOST12($persist)
+# **salvarUsingPOST13**
+> \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse salvarUsingPOST13($persist)
 
 {{{documento_template_resource_salvar}}}
 
@@ -508,10 +508,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $persist = new \br.com.conductor.pier.api.v2.model\DocumentoTemplatePersist(); // \br.com.conductor.pier.api.v2.model\DocumentoTemplatePersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST12($persist);
+    $result = $api_instance->salvarUsingPOST13($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST12: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST13: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -537,8 +537,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST31**
-> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse salvarUsingPOST31($persist)
+# **salvarUsingPOST32**
+> \br.com.conductor.pier.api.v2.model\TipoTemplateResponse salvarUsingPOST32($persist)
 
 {{{tipo_template_resource_salvar}}}
 
@@ -553,10 +553,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagdocumentoA
 $persist = new \br.com.conductor.pier.api.v2.model\TipoTemplateRequest(); // \br.com.conductor.pier.api.v2.model\TipoTemplateRequest | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST31($persist);
+    $result = $api_instance->salvarUsingPOST32($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST31: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdocumentoApi->salvarUsingPOST32: ', $e->getMessage(), "\n";
 }
 ?>
 ```

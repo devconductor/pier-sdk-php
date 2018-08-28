@@ -197,7 +197,7 @@ class GlobaltagpropostaApi
     }
     
     /**
-     * consultarUsingGET33
+     * consultarUsingGET35
      *
      * {{{proposta_resource_consultar}}}
      *
@@ -205,15 +205,15 @@ class GlobaltagpropostaApi
      * @return \br.com.conductor.pier.api.v2.model\PropostaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET33($id)
+    public function consultarUsingGET35($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET33WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET35WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET33WithHttpInfo
+     * consultarUsingGET35WithHttpInfo
      *
      * {{{proposta_resource_consultar}}}
      *
@@ -221,12 +221,12 @@ class GlobaltagpropostaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PropostaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET33WithHttpInfo($id)
+    public function consultarUsingGET35WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET33');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET35');
         }
   
         // parse inputs
@@ -407,7 +407,7 @@ class GlobaltagpropostaApi
     }
     
     /**
-     * listarUsingGET44
+     * listarUsingGET46
      *
      * {{{proposta_resource_listar}}}
      *
@@ -418,15 +418,15 @@ class GlobaltagpropostaApi
      * @return \br.com.conductor.pier.api.v2.model\PagePropostaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET44($sort = null, $page = null, $limit = null, $status = null)
+    public function listarUsingGET46($sort = null, $page = null, $limit = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET44WithHttpInfo ($sort, $page, $limit, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET46WithHttpInfo ($sort, $page, $limit, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET44WithHttpInfo
+     * listarUsingGET46WithHttpInfo
      *
      * {{{proposta_resource_listar}}}
      *
@@ -437,7 +437,7 @@ class GlobaltagpropostaApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePropostaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET44WithHttpInfo($sort = null, $page = null, $limit = null, $status = null)
+    public function listarUsingGET46WithHttpInfo($sort = null, $page = null, $limit = null, $status = null)
     {
         
   

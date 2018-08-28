@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET34**](GlobaltagboletoApi.md#consultarUsingGET34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultarUsingGET36**](GlobaltagboletoApi.md#consultarUsingGET36) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviarBoletoEmailUsingPOST**](GlobaltagboletoApi.md#enviarBoletoEmailUsingPOST) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerarBoletoUsingPOST**](GlobaltagboletoApi.md#gerarBoletoUsingPOST) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
-[**listarUsingGET45**](GlobaltagboletoApi.md#listarUsingGET45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
+[**listarUsingGET47**](GlobaltagboletoApi.md#listarUsingGET47) | **GET** /api/boletos | {{{boleto_resource_listar}}}
 [**registrarBoletoUsingPOST**](GlobaltagboletoApi.md#registrarBoletoUsingPOST) | **POST** /api/boletos/{id}/registrar | {{{registro_cobranca_resource_registrar_boleto}}}
 [**visualizarBoletoUsingGET**](GlobaltagboletoApi.md#visualizarBoletoUsingGET) | **GET** /api/boletos/{id}/arquivo.pdf | {{{boleto_resource_visualizar_boleto}}}
 
 
-# **consultarUsingGET34**
-> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarUsingGET34($id)
+# **consultarUsingGET36**
+> \br.com.conductor.pier.api.v2.model\BoletoResponse consultarUsingGET36($id, $zera_valor_codigo_barras)
 
 {{{boleto_resource_consultar}}}
 
@@ -26,12 +26,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagboletoApi();
 $id = 789; // int | {{{boleto_resource_consultar_param_id}}}
+$zera_valor_codigo_barras = true; // bool | {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET34($id);
+    $result = $api_instance->consultarUsingGET36($id, $zera_valor_codigo_barras);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagboletoApi->consultarUsingGET34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagboletoApi->consultarUsingGET36: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -41,6 +42,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{boleto_resource_consultar_param_id}}} | 
+ **zera_valor_codigo_barras** | **bool**| {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} | [optional] 
 
 ### Return type
 
@@ -149,8 +151,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET45**
-> \br.com.conductor.pier.api.v2.model\PageBoletoListarResponse listarUsingGET45($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto)
+# **listarUsingGET47**
+> \br.com.conductor.pier.api.v2.model\PageBoletoListarResponse listarUsingGET47($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto)
 
 {{{boleto_resource_listar}}}
 
@@ -171,10 +173,10 @@ $valor_boleto = new Number(); // Number | {{{boleto_listar_request_valor_value}}
 $id_tipo_boleto = 789; // int | {{{boleto_listar_request_id_tipo_boleto_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET45($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto);
+    $result = $api_instance->listarUsingGET47($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagboletoApi->listarUsingGET45: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagboletoApi->listarUsingGET47: ', $e->getMessage(), "\n";
 }
 ?>
 ```

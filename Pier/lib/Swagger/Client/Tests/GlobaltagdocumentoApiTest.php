@@ -76,42 +76,42 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT3
+     * Test case for atualizarUsingPUT4
      *
      * {{{documento_template_resource_atualizar}}}
      *
      */
-    public function test_atualizarUsingPUT3() {
+    public function test_atualizarUsingPUT4() {
 
     }
     
     /**
-     * Test case for consultarUsingGET17
+     * Test case for consultarUsingGET19
      *
      * {{{documento_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET17() {
+    public function test_consultarUsingGET19() {
 
     }
     
     /**
-     * Test case for consultarUsingGET18
+     * Test case for consultarUsingGET20
      *
      * {{{documento_template_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET18() {
+    public function test_consultarUsingGET20() {
 
     }
     
     /**
-     * Test case for consultarUsingGET47
+     * Test case for consultarUsingGET49
      *
      * {{{tipo_template_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET47() {
+    public function test_consultarUsingGET49() {
 
     }
     
@@ -126,19 +126,9 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET21
-     *
-     * {{{documento_resource_listar}}}
-     *
-     */
-    public function test_listarUsingGET21() {
-
-    }
-    
-    /**
      * Test case for listarUsingGET22
      *
-     * {{{documento_template_resource_listar}}}
+     * {{{documento_resource_listar}}}
      *
      */
     public function test_listarUsingGET22() {
@@ -146,29 +136,29 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET57
+     * Test case for listarUsingGET23
      *
-     * {{{tipo_template_resource_listar}}}
+     * {{{documento_template_resource_listar}}}
      *
      */
-    public function test_listarUsingGET57() {
+    public function test_listarUsingGET23() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST11
+     * Test case for listarUsingGET60
      *
-     * {{{documento_resource_salvar}}}
+     * {{{tipo_template_resource_listar}}}
      *
      */
-    public function test_salvarUsingPOST11() {
+    public function test_listarUsingGET60() {
 
     }
     
     /**
      * Test case for salvarUsingPOST12
      *
-     * {{{documento_template_resource_salvar}}}
+     * {{{documento_resource_salvar}}}
      *
      */
     public function test_salvarUsingPOST12() {
@@ -176,12 +166,22 @@ class GlobaltagdocumentoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST31
+     * Test case for salvarUsingPOST13
+     *
+     * {{{documento_template_resource_salvar}}}
+     *
+     */
+    public function test_salvarUsingPOST13() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST32
      *
      * {{{tipo_template_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST31() {
+    public function test_salvarUsingPOST32() {
 
     }
     

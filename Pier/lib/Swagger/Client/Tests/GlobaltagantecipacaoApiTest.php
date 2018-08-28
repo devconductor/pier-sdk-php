@@ -106,12 +106,12 @@ class GlobaltagantecipacaoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET13
+     * Test case for listarUsingGET14
      *
      * {{{compra_antecipavel_resource_listar}}}
      *
      */
-    public function test_listarUsingGET13() {
+    public function test_listarUsingGET14() {
 
     }
     

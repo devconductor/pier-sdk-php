@@ -512,7 +512,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * atualizarUsingPUT2
+     * atualizarUsingPUT3
      *
      * {{{controle_seguranca_dispositivo_atualizar}}}
      *
@@ -520,15 +520,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT2($update)
+    public function atualizarUsingPUT3($update)
     {
-        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT2WithHttpInfo ($update);
+        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT3WithHttpInfo ($update);
         return $response; 
     }
 
 
     /**
-     * atualizarUsingPUT2WithHttpInfo
+     * atualizarUsingPUT3WithHttpInfo
      *
      * {{{controle_seguranca_dispositivo_atualizar}}}
      *
@@ -536,12 +536,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT2WithHttpInfo($update)
+    public function atualizarUsingPUT3WithHttpInfo($update)
     {
         
         // verify the required parameter 'update' is set
         if ($update === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $update when calling atualizarUsingPUT2');
+            throw new \InvalidArgumentException('Missing the required parameter $update when calling atualizarUsingPUT3');
         }
   
         // parse inputs
@@ -720,7 +720,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * consultarUsingGET15
+     * consultarUsingGET17
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
@@ -731,15 +731,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15($id_usuario, $sort = null, $page = null, $limit = null)
+    public function consultarUsingGET17($id_usuario, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET15WithHttpInfo ($id_usuario, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id_usuario, $sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET15WithHttpInfo
+     * consultarUsingGET17WithHttpInfo
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
@@ -750,12 +750,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageControleSegurancaDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET15WithHttpInfo($id_usuario, $sort = null, $page = null, $limit = null)
+    public function consultarUsingGET17WithHttpInfo($id_usuario, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id_usuario' is set
         if ($id_usuario === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_usuario when calling consultarUsingGET15');
+            throw new \InvalidArgumentException('Missing the required parameter $id_usuario when calling consultarUsingGET17');
         }
   
         // parse inputs
@@ -833,7 +833,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * consultarUsingGET51
+     * consultarUsingGET53
      *
      * {{{usuario_resource_consultar}}}
      *
@@ -841,15 +841,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET51($id)
+    public function consultarUsingGET53($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET51WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET53WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET51WithHttpInfo
+     * consultarUsingGET53WithHttpInfo
      *
      * {{{usuario_resource_consultar}}}
      *
@@ -857,12 +857,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET51WithHttpInfo($id)
+    public function consultarUsingGET53WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET51');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET53');
         }
   
         // parse inputs
@@ -1023,7 +1023,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * listarUsingGET62
+     * listarUsingGET65
      *
      * {{{usuario_resource_listar}}}
      *
@@ -1037,15 +1037,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\PageUsuarioResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET62($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET65($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET62WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET65WithHttpInfo ($sort, $page, $limit, $nome, $cpf, $email, $status);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET62WithHttpInfo
+     * listarUsingGET65WithHttpInfo
      *
      * {{{usuario_resource_listar}}}
      *
@@ -1059,7 +1059,7 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageUsuarioResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET62WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
+    public function listarUsingGET65WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $cpf = null, $email = null, $status = null)
     {
         
   
@@ -1245,98 +1245,7 @@ class GlobaltagusuarioApi
     }
     
     /**
-     * salvarUsingPOST33
-     *
-     * {{{usuario_resource_salvar}}}
-     *
-     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ $persist persist (required)
-     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST33($persist)
-    {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST33WithHttpInfo ($persist);
-        return $response; 
-    }
-
-
-    /**
-     * salvarUsingPOST33WithHttpInfo
-     *
-     * {{{usuario_resource_salvar}}}
-     *
-     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ $persist persist (required)
-     * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
-     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
-     */
-    public function salvarUsingPOST33WithHttpInfo($persist)
-    {
-        
-        // verify the required parameter 'persist' is set
-        if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST33');
-        }
-  
-        // parse inputs
-        $resourcePath = "/api/usuarios";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
-  
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // body params
-        $_tempBody = null;
-        if (isset($persist)) {
-            $_tempBody = $persist;
-        }
-  
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath, 'POST',
-                $queryParams, $httpBody,
-                $headerParams, '\br.com.conductor.pier.api.v2.model\UsuarioResponse'
-            );
-            
-            if (!$response) {
-                return array(null, $statusCode, $httpHeader);
-            }
-
-            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $httpHeader), $statusCode, $httpHeader);
-            
-        } catch (ApiException $e) {
-            switch ($e->getCode()) { 
-            case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            }
-  
-            throw $e;
-        }
-    }
-    
-    /**
-     * salvarUsingPOST9
+     * salvarUsingPOST10
      *
      * {{{controle_seguranca_dispositivo_salvar}}}
      *
@@ -1344,15 +1253,15 @@ class GlobaltagusuarioApi
      * @return \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9($persist)
+    public function salvarUsingPOST10($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST9WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST10WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST9WithHttpInfo
+     * salvarUsingPOST10WithHttpInfo
      *
      * {{{controle_seguranca_dispositivo_salvar}}}
      *
@@ -1360,12 +1269,12 @@ class GlobaltagusuarioApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST9WithHttpInfo($persist)
+    public function salvarUsingPOST10WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST9');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST10');
         }
   
         // parse inputs
@@ -1418,6 +1327,97 @@ class GlobaltagusuarioApi
             switch ($e->getCode()) { 
             case 200:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\ControleSegurancaDispositivoResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
+     * salvarUsingPOST34
+     *
+     * {{{usuario_resource_salvar}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ $persist persist (required)
+     * @return \br.com.conductor.pier.api.v2.model\UsuarioResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST34($persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST34WithHttpInfo ($persist);
+        return $response; 
+    }
+
+
+    /**
+     * salvarUsingPOST34WithHttpInfo
+     *
+     * {{{usuario_resource_salvar}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\UsuarioPersistencia_ $persist persist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\UsuarioResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function salvarUsingPOST34WithHttpInfo($persist)
+    {
+        
+        // verify the required parameter 'persist' is set
+        if ($persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST34');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/usuarios";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($persist)) {
+            $_tempBody = $persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\UsuarioResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\UsuarioResponse', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
             }

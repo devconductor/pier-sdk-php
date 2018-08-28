@@ -146,22 +146,22 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
+     * Test case for cadastrarAdicionalUsingPOST
+     *
+     * {{{adicional_resource_cadastrar_adicional}}}
+     *
+     */
+    public function test_cadastrarAdicionalUsingPOST() {
+
+    }
+    
+    /**
      * Test case for cadastrarUsingPOST1
      *
      * {{{adicional_resource_cadastrar}}}
      *
      */
     public function test_cadastrarUsingPOST1() {
-
-    }
-    
-    /**
-     * Test case for consultarUsingGET19
-     *
-     * {{{endereco_resource_consultar}}}
-     *
-     */
-    public function test_consultarUsingGET19() {
 
     }
     
@@ -176,32 +176,42 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET30
+     * Test case for consultarUsingGET21
+     *
+     * {{{endereco_resource_consultar}}}
+     *
+     */
+    public function test_consultarUsingGET21() {
+
+    }
+    
+    /**
+     * Test case for consultarUsingGET32
      *
      * {{{pessoa_detalhe_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET30() {
+    public function test_consultarUsingGET32() {
 
     }
     
     /**
-     * Test case for consultarUsingGET31
+     * Test case for consultarUsingGET33
      *
      * {{{pessoa_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET31() {
+    public function test_consultarUsingGET33() {
 
     }
     
     /**
-     * Test case for consultarUsingGET39
+     * Test case for consultarUsingGET41
      *
      * {{{telefone_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET39() {
+    public function test_consultarUsingGET41() {
 
     }
     
@@ -236,42 +246,42 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET24
+     * Test case for listarUsingGET25
      *
      * {{{endereco_resource_listar}}}
      *
      */
-    public function test_listarUsingGET24() {
+    public function test_listarUsingGET25() {
 
     }
     
     /**
-     * Test case for listarUsingGET38
+     * Test case for listarUsingGET40
      *
      * {{{pessoa_detalhe_resource_listar}}}
      *
      */
-    public function test_listarUsingGET38() {
+    public function test_listarUsingGET40() {
 
     }
     
     /**
-     * Test case for listarUsingGET39
+     * Test case for listarUsingGET41
      *
      * {{{pessoa_resource_listar}}}
      *
      */
-    public function test_listarUsingGET39() {
+    public function test_listarUsingGET41() {
 
     }
     
     /**
-     * Test case for listarUsingGET50
+     * Test case for listarUsingGET53
      *
      * {{{telefone_resource_listar}}}
      *
      */
-    public function test_listarUsingGET50() {
+    public function test_listarUsingGET53() {
 
     }
     
@@ -296,39 +306,29 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST13
+     * Test case for salvarUsingPOST14
      *
      * {{{endereco_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST13() {
+    public function test_salvarUsingPOST14() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST16
+     * Test case for salvarUsingPOST17
      *
      * {{{integracao_emissor_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST16() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST24
-     *
-     * {{{pessoa_detalhe_resource_salvar}}}
-     *
-     */
-    public function test_salvarUsingPOST24() {
+    public function test_salvarUsingPOST17() {
 
     }
     
     /**
      * Test case for salvarUsingPOST25
      *
-     * {{{pessoa_resource_salvar}}}
+     * {{{pessoa_detalhe_resource_salvar}}}
      *
      */
     public function test_salvarUsingPOST25() {
@@ -336,12 +336,22 @@ class GlobaltagcadastroclienteApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST28
+     * Test case for salvarUsingPOST26
+     *
+     * {{{pessoa_resource_salvar}}}
+     *
+     */
+    public function test_salvarUsingPOST26() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST29
      *
      * {{{telefone_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST28() {
+    public function test_salvarUsingPOST29() {
 
     }
     

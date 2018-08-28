@@ -96,19 +96,20 @@ class GlobaltaggrupochagebackApi
      *
      * {{{codigo_chargeback_resource_listar}}}
      *
-     * @param int $id id (required)
+     * @param int $grupo_chargeback_id grupoChargebackId (required)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $id  (optional)
+     * @param string $descricao  (optional)
      * @param bool $flag_atm  (optional)
-     * @param int $id_bandeira  (optional)
-     * @param int $group_id  (optional)
+     * @param int $grupo_chargeback_id2  (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCodigoChargebackResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarCodigosUsingGET($id, $sort = null, $page = null, $limit = null, $flag_atm = null, $id_bandeira = null, $group_id = null)
+    public function listarCodigosUsingGET($grupo_chargeback_id, $sort = null, $page = null, $limit = null, $id = null, $descricao = null, $flag_atm = null, $grupo_chargeback_id2 = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarCodigosUsingGETWithHttpInfo ($id, $sort, $page, $limit, $flag_atm, $id_bandeira, $group_id);
+        list($response, $statusCode, $httpHeader) = $this->listarCodigosUsingGETWithHttpInfo ($grupo_chargeback_id, $sort, $page, $limit, $id, $descricao, $flag_atm, $grupo_chargeback_id2);
         return $response; 
     }
 
@@ -118,26 +119,27 @@ class GlobaltaggrupochagebackApi
      *
      * {{{codigo_chargeback_resource_listar}}}
      *
-     * @param int $id id (required)
+     * @param int $grupo_chargeback_id grupoChargebackId (required)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $id  (optional)
+     * @param string $descricao  (optional)
      * @param bool $flag_atm  (optional)
-     * @param int $id_bandeira  (optional)
-     * @param int $group_id  (optional)
+     * @param int $grupo_chargeback_id2  (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCodigoChargebackResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarCodigosUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null, $flag_atm = null, $id_bandeira = null, $group_id = null)
+    public function listarCodigosUsingGETWithHttpInfo($grupo_chargeback_id, $sort = null, $page = null, $limit = null, $id = null, $descricao = null, $flag_atm = null, $grupo_chargeback_id2 = null)
     {
         
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarCodigosUsingGET');
+        // verify the required parameter 'grupo_chargeback_id' is set
+        if ($grupo_chargeback_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $grupo_chargeback_id when calling listarCodigosUsingGET');
         }
   
         // parse inputs
-        $resourcePath = "/api/grupos-chargeback/{id}/codigos";
+        $resourcePath = "/api/grupos-chargeback/{grupoChargebackId}/codigos";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -166,24 +168,28 @@ class GlobaltaggrupochagebackApi
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }// query params
         
+        if ($id !== null) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($id);
+        }// query params
+        
+        if ($descricao !== null) {
+            $queryParams['descricao'] = $this->apiClient->getSerializer()->toQueryValue($descricao);
+        }// query params
+        
         if ($flag_atm !== null) {
             $queryParams['flagAtm'] = $this->apiClient->getSerializer()->toQueryValue($flag_atm);
         }// query params
         
-        if ($id_bandeira !== null) {
-            $queryParams['idBandeira'] = $this->apiClient->getSerializer()->toQueryValue($id_bandeira);
-        }// query params
-        
-        if ($group_id !== null) {
-            $queryParams['groupId'] = $this->apiClient->getSerializer()->toQueryValue($group_id);
+        if ($grupo_chargeback_id2 !== null) {
+            $queryParams['grupoChargebackId'] = $this->apiClient->getSerializer()->toQueryValue($grupo_chargeback_id2);
         }
         
         // path params
         
-        if ($id !== null) {
+        if ($grupo_chargeback_id !== null) {
             $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
+                "{" . "grupoChargebackId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($grupo_chargeback_id),
                 $resourcePath
             );
         }
@@ -227,7 +233,7 @@ class GlobaltaggrupochagebackApi
     }
     
     /**
-     * listarUsingGET27
+     * listarUsingGET28
      *
      * {{{grupo_chargeback_resource_listar}}}
      *
@@ -237,15 +243,15 @@ class GlobaltaggrupochagebackApi
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27($sort = null, $page = null, $limit = null)
+    public function listarUsingGET28($sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET27WithHttpInfo ($sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET27WithHttpInfo
+     * listarUsingGET28WithHttpInfo
      *
      * {{{grupo_chargeback_resource_listar}}}
      *
@@ -255,7 +261,7 @@ class GlobaltaggrupochagebackApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET27WithHttpInfo($sort = null, $page = null, $limit = null)
+    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null)
     {
         
   

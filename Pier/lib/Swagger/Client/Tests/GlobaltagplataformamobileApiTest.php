@@ -76,22 +76,22 @@ class GlobaltagplataformamobileApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET40
+     * Test case for listarUsingGET42
      *
      * {{{plataforma_mobile_resource_listar}}}
      *
      */
-    public function test_listarUsingGET40() {
+    public function test_listarUsingGET42() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST26
+     * Test case for salvarUsingPOST27
      *
      * {{{plataforma_mobile_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST26() {
+    public function test_salvarUsingPOST27() {
 
     }
     

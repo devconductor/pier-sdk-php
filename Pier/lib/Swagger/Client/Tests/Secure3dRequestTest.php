@@ -1,6 +1,6 @@
 <?php
 /**
- * NotificacaoPushResponseValue_Test
+ * Secure3dRequestTest
  *
  * PHP version 5
  *
@@ -34,16 +34,16 @@
 namespace br.com.conductor.pier.api.v2.model;
 
 /**
- * NotificacaoPushResponseValue_Test Class Doc Comment
+ * Secure3dRequestTest Class Doc Comment
  *
  * @category    Class
- * @description {{{notificacao_push_response_description}}}
+ * @description {{{request_secure_3d_description}}}
  * @package     br.com.conductor.pier.api.v2.invoker
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NotificacaoPushResponseValue_Test extends \PHPUnit_Framework_TestCase
+class Secure3dRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -61,9 +61,9 @@ class NotificacaoPushResponseValue_Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test NotificacaoPushResponseValue_
+     * Test Secure3dRequest
      */
-    public function testNotificacaoPushResponseValue_() {
+    public function testSecure3dRequest() {
 
     }
 

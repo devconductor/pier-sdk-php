@@ -76,22 +76,22 @@ class GlobaltaginscricaoapnApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET30
+     * Test case for listarUsingGET31
      *
      * {{{inscricao_apn_recurso_listar}}}
      *
      */
-    public function test_listarUsingGET30() {
+    public function test_listarUsingGET31() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST14
+     * Test case for salvarUsingPOST15
      *
      * {{{inscricao_apn_recurso_salvar}}}
      *
      */
-    public function test_salvarUsingPOST14() {
+    public function test_salvarUsingPOST15() {
 
     }
     

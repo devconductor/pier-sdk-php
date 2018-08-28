@@ -51,7 +51,7 @@ class PagePushResponse implements ArrayAccess
       * @var string[]
       */
     static $swaggerTypes = array(
-        'content' => '\br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]',
+        'content' => '\br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]',
         'first' => 'bool',
         'first_page' => 'bool',
         'has_content' => 'bool',
@@ -149,7 +149,7 @@ class PagePushResponse implements ArrayAccess
     
     /**
       * $content 
-      * @var \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]
+      * @var \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]
       */
     protected $content;
     
@@ -259,7 +259,7 @@ class PagePushResponse implements ArrayAccess
     
     /**
      * Gets content
-     * @return \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[]
+     * @return \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[]
      */
     public function getContent()
     {
@@ -268,7 +268,7 @@ class PagePushResponse implements ArrayAccess
   
     /**
      * Sets content
-     * @param \br.com.conductor.pier.api.v2.model\NotificacaoPushResponseValue_[] $content 
+     * @param \br.com.conductor.pier.api.v2.model\NotificacaoPushResponse[] $content 
      * @return $this
      */
     public function setContent($content)

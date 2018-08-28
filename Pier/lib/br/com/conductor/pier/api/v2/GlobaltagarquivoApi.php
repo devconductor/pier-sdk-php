@@ -92,7 +92,7 @@ class GlobaltagarquivoApi
   
     
     /**
-     * consultarUsingGET5
+     * consultarUsingGET6
      *
      * {{{arquivo_resource_consultar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagarquivoApi
      * @return \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5($id)
+    public function consultarUsingGET6($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET5WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET6WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET5WithHttpInfo
+     * consultarUsingGET6WithHttpInfo
      *
      * {{{arquivo_resource_consultar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagarquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\ArquivoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET5WithHttpInfo($id)
+    public function consultarUsingGET6WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET6');
         }
   
         // parse inputs
@@ -611,7 +611,7 @@ class GlobaltagarquivoApi
     }
     
     /**
-     * listarUsingGET5
+     * listarUsingGET6
      *
      * {{{arquivo_a_u_d_resource_listar}}}
      *
@@ -621,15 +621,15 @@ class GlobaltagarquivoApi
      * @return \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5($id, $page = null, $limit = null)
+    public function listarUsingGET6($id, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET5WithHttpInfo ($id, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($id, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET5WithHttpInfo
+     * listarUsingGET6WithHttpInfo
      *
      * {{{arquivo_a_u_d_resource_listar}}}
      *
@@ -639,12 +639,12 @@ class GlobaltagarquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageArquivoAUDResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET5WithHttpInfo($id, $page = null, $limit = null)
+    public function listarUsingGET6WithHttpInfo($id, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET5');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET6');
         }
   
         // parse inputs
@@ -718,7 +718,7 @@ class GlobaltagarquivoApi
     }
     
     /**
-     * listarUsingGET6
+     * listarUsingGET7
      *
      * {{{arquivo_resource_listar}}}
      *
@@ -732,15 +732,15 @@ class GlobaltagarquivoApi
      * @return \br.com.conductor.pier.api.v2.model\PageArquivoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    public function listarUsingGET7($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET6WithHttpInfo ($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET7WithHttpInfo ($sort, $page, $limit, $nome, $id_tipo_arquivo, $id_status_arquivo, $extensao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET6WithHttpInfo
+     * listarUsingGET7WithHttpInfo
      *
      * {{{arquivo_resource_listar}}}
      *
@@ -754,7 +754,7 @@ class GlobaltagarquivoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageArquivoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET6WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
+    public function listarUsingGET7WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null, $id_tipo_arquivo = null, $id_status_arquivo = null, $extensao = null)
     {
         
   

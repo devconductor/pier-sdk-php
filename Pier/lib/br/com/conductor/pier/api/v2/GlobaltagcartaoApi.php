@@ -98,13 +98,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_alterar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarAlterarSenhaUsingPUT($id, $senha, $authorization = null)
+    public function alterarAlterarSenhaUsingPUT($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarAlterarSenhaUsingPUTWithHttpInfo ($id, $senha, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarAlterarSenhaUsingPUTWithHttpInfo ($id, $senha);
         return $response; 
     }
 
@@ -116,11 +115,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_alterar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarAlterarSenhaUsingPUTWithHttpInfo($id, $senha, $authorization = null)
+    public function alterarAlterarSenhaUsingPUTWithHttpInfo($id, $senha)
     {
         
         // verify the required parameter 'id' is set
@@ -146,10 +144,6 @@ class GlobaltagcartaoApi
   
         
         // header params
-        
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }// header params
         
         if ($senha !== null) {
             $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
@@ -209,13 +203,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_estagio_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_ $update {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarEstagioUsingPOST($id, $update, $authorization = null)
+    public function alterarEstagioUsingPOST($id, $update)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarEstagioUsingPOSTWithHttpInfo ($id, $update, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarEstagioUsingPOSTWithHttpInfo ($id, $update);
         return $response; 
     }
 
@@ -227,11 +220,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_estagio_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\EstagioCartaoUpdate_ $update {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarEstagioUsingPOSTWithHttpInfo($id, $update, $authorization = null)
+    public function alterarEstagioUsingPOSTWithHttpInfo($id, $update)
     {
         
         // verify the required parameter 'id' is set
@@ -256,11 +248,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -320,13 +308,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_status_impressao_param_id}}} (required)
      * @param int $id_status_impressao {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUT($id, $id_status_impressao, $authorization = null)
+    public function alterarStatusImpressaoUsingPUT($id, $id_status_impressao)
     {
-        list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id, $id_status_impressao, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->alterarStatusImpressaoUsingPUTWithHttpInfo ($id, $id_status_impressao);
         return $response; 
     }
 
@@ -338,11 +325,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_alterar_status_impressao_param_id}}} (required)
      * @param int $id_status_impressao {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\HistoricoImpressaoCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id, $id_status_impressao, $authorization = null)
+    public function alterarStatusImpressaoUsingPUTWithHttpInfo($id, $id_status_impressao)
     {
         
         // verify the required parameter 'id' is set
@@ -371,11 +357,7 @@ class GlobaltagcartaoApi
         if ($id_status_impressao !== null) {
             $queryParams['id_status_impressao'] = $this->apiClient->getSerializer()->toQueryValue($id_status_impressao);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -431,13 +413,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_atribuir_pessoa_param_id_cartao}}} (required)
      * @param int $id_pessoa {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atribuirPessoaUsingPUT($id, $id_pessoa, $authorization = null)
+    public function atribuirPessoaUsingPUT($id, $id_pessoa)
     {
-        list($response, $statusCode, $httpHeader) = $this->atribuirPessoaUsingPUTWithHttpInfo ($id, $id_pessoa, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->atribuirPessoaUsingPUTWithHttpInfo ($id, $id_pessoa);
         return $response; 
     }
 
@@ -449,11 +430,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_atribuir_pessoa_param_id_cartao}}} (required)
      * @param int $id_pessoa {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atribuirPessoaUsingPUTWithHttpInfo($id, $id_pessoa, $authorization = null)
+    public function atribuirPessoaUsingPUTWithHttpInfo($id, $id_pessoa)
     {
         
         // verify the required parameter 'id' is set
@@ -482,11 +462,7 @@ class GlobaltagcartaoApi
         if ($id_pessoa !== null) {
             $queryParams['id_pessoa'] = $this->apiClient->getSerializer()->toQueryValue($id_pessoa);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -543,13 +519,12 @@ class GlobaltagcartaoApi
      * @param int $id {{{cartao_resource_bloquear_param_id}}} (required)
      * @param int $id_status {{{cartao_resource_bloquear_param_id_status}}} (required)
      * @param string $observacao {{{cartao_resource_bloquear_param_observacao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPOST($id, $id_status, $observacao, $authorization = null)
+    public function bloquearUsingPOST($id, $id_status, $observacao)
     {
-        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOSTWithHttpInfo ($id, $id_status, $observacao, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->bloquearUsingPOSTWithHttpInfo ($id, $id_status, $observacao);
         return $response; 
     }
 
@@ -562,11 +537,10 @@ class GlobaltagcartaoApi
      * @param int $id {{{cartao_resource_bloquear_param_id}}} (required)
      * @param int $id_status {{{cartao_resource_bloquear_param_id_status}}} (required)
      * @param string $observacao {{{cartao_resource_bloquear_param_observacao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function bloquearUsingPOSTWithHttpInfo($id, $id_status, $observacao, $authorization = null)
+    public function bloquearUsingPOSTWithHttpInfo($id, $id_status, $observacao)
     {
         
         // verify the required parameter 'id' is set
@@ -603,11 +577,7 @@ class GlobaltagcartaoApi
         if ($observacao !== null) {
             $queryParams['observacao'] = $this->apiClient->getSerializer()->toQueryValue($observacao);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -663,13 +633,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_cadastrar_alterar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPOST($id, $senha, $authorization = null)
+    public function cadastrarAlterarSenhaUsingPOST($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPOSTWithHttpInfo ($id, $senha, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->cadastrarAlterarSenhaUsingPOSTWithHttpInfo ($id, $senha);
         return $response; 
     }
 
@@ -681,11 +650,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_cadastrar_alterar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cadastrarAlterarSenhaUsingPOSTWithHttpInfo($id, $senha, $authorization = null)
+    public function cadastrarAlterarSenhaUsingPOSTWithHttpInfo($id, $senha)
     {
         
         // verify the required parameter 'id' is set
@@ -711,10 +679,6 @@ class GlobaltagcartaoApi
   
         
         // header params
-        
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }// header params
         
         if ($senha !== null) {
             $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
@@ -775,13 +739,12 @@ class GlobaltagcartaoApi
      * @param int $id {{{cartao_resource_cancelar_param_id}}} (required)
      * @param int $id_status {{{cartao_resource_cancelar_param_id_status}}} (required)
      * @param string $observacao {{{cartao_resource_cancelar_param_observacao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOST($id, $id_status, $observacao, $authorization = null)
+    public function cancelarUsingPOST($id, $id_status, $observacao)
     {
-        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOSTWithHttpInfo ($id, $id_status, $observacao, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->cancelarUsingPOSTWithHttpInfo ($id, $id_status, $observacao);
         return $response; 
     }
 
@@ -794,11 +757,10 @@ class GlobaltagcartaoApi
      * @param int $id {{{cartao_resource_cancelar_param_id}}} (required)
      * @param int $id_status {{{cartao_resource_cancelar_param_id_status}}} (required)
      * @param string $observacao {{{cartao_resource_cancelar_param_observacao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function cancelarUsingPOSTWithHttpInfo($id, $id_status, $observacao, $authorization = null)
+    public function cancelarUsingPOSTWithHttpInfo($id, $id_status, $observacao)
     {
         
         // verify the required parameter 'id' is set
@@ -835,11 +797,7 @@ class GlobaltagcartaoApi
         if ($observacao !== null) {
             $queryParams['observacao'] = $this->apiClient->getSerializer()->toQueryValue($observacao);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -894,13 +852,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_cartao_impressao}}}
      *
      * @param int $id {{{cartao_resource_consultar_cartao_impressao_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarCartaoImpressaoUsingGET($id, $authorization = null)
+    public function consultarCartaoImpressaoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarCartaoImpressaoUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarCartaoImpressaoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -911,11 +868,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_cartao_impressao}}}
      *
      * @param int $id {{{cartao_resource_consultar_cartao_impressao_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DadosCartaoImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarCartaoImpressaoUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarCartaoImpressaoUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -936,11 +892,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -995,13 +947,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_dados_reais_cartao}}}
      *
      * @param int $id id (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\DadosCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDadosReaisCartaoUsingGET($id, $authorization = null)
+    public function consultarDadosReaisCartaoUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarDadosReaisCartaoUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarDadosReaisCartaoUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1012,11 +963,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_dados_reais_cartao}}}
      *
      * @param int $id id (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\DadosCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarDadosReaisCartaoUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarDadosReaisCartaoUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1037,11 +987,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1096,13 +1042,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_limite_disponibilidade}}}
      *
      * @param int $id {{{cartao_resource_consultar_limite_disponibilidade_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteDisponibilidadeUsingGET($id, $authorization = null)
+    public function consultarLimiteDisponibilidadeUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarLimiteDisponibilidadeUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1113,11 +1058,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_limite_disponibilidade}}}
      *
      * @param int $id {{{cartao_resource_consultar_limite_disponibilidade_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\LimiteDisponibilidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLimiteDisponibilidadeUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarLimiteDisponibilidadeUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1138,11 +1082,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1197,13 +1137,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
      *
      * @param int $id {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLotesCartoesPrePagosUsingGET($id, $authorization = null)
+    public function consultarLotesCartoesPrePagosUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarLotesCartoesPrePagosUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarLotesCartoesPrePagosUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1214,11 +1153,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
      *
      * @param int $id {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarLotesCartoesPrePagosUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarLotesCartoesPrePagosUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1239,11 +1177,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1298,13 +1232,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_portador}}}
      *
      * @param int $id {{{cartao_resource_consultar_portador_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\PortadorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarPortadorUsingGET($id, $authorization = null)
+    public function consultarPortadorUsingGET($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarPortadorUsingGETWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarPortadorUsingGETWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1315,11 +1248,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_consultar_portador}}}
      *
      * @param int $id {{{cartao_resource_consultar_portador_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PortadorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarPortadorUsingGETWithHttpInfo($id, $authorization = null)
+    public function consultarPortadorUsingGETWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1340,11 +1272,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1394,38 +1322,36 @@ class GlobaltagcartaoApi
     }
     
     /**
-     * consultarUsingGET10
+     * consultarUsingGET12
      *
      * {{{cartao_resource_consultar}}}
      *
      * @param int $id {{{cartao_resource_consultar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10($id, $authorization = null)
+    public function consultarUsingGET12($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET10WithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET12WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET10WithHttpInfo
+     * consultarUsingGET12WithHttpInfo
      *
      * {{{cartao_resource_consultar}}}
      *
      * @param int $id {{{cartao_resource_consultar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoDetalheResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET10WithHttpInfo($id, $authorization = null)
+    public function consultarUsingGET12WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET10');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET12');
         }
   
         // parse inputs
@@ -1441,11 +1367,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1495,18 +1417,108 @@ class GlobaltagcartaoApi
     }
     
     /**
+     * criarCartoesMultiAppUsingPOST
+     *
+     * {{{conta_resource_cadastrar_cartao_multiapp}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_ $cartao_multi_app_persist cartaoMultiAppPersist (required)
+     * @return \br.com.conductor.pier.api.v2.model\VinculoCartoesResponse
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function criarCartoesMultiAppUsingPOST($cartao_multi_app_persist)
+    {
+        list($response, $statusCode, $httpHeader) = $this->criarCartoesMultiAppUsingPOSTWithHttpInfo ($cartao_multi_app_persist);
+        return $response; 
+    }
+
+
+    /**
+     * criarCartoesMultiAppUsingPOSTWithHttpInfo
+     *
+     * {{{conta_resource_cadastrar_cartao_multiapp}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\CartaoMultiAppPersistValue_ $cartao_multi_app_persist cartaoMultiAppPersist (required)
+     * @return Array of \br.com.conductor.pier.api.v2.model\VinculoCartoesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function criarCartoesMultiAppUsingPOSTWithHttpInfo($cartao_multi_app_persist)
+    {
+        
+        // verify the required parameter 'cartao_multi_app_persist' is set
+        if ($cartao_multi_app_persist === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cartao_multi_app_persist when calling criarCartoesMultiAppUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes/gerar-cartoes-multiapp";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($cartao_multi_app_persist)) {
+            $_tempBody = $cartao_multi_app_persist;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, '\br.com.conductor.pier.api.v2.model\VinculoCartoesResponse'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, '\br.com.conductor.pier.api.v2.model\VinculoCartoesResponse', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), '\br.com.conductor.pier.api.v2.model\VinculoCartoesResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * desbloquearSenhaIncorretaUsingPOST
      *
      * {{{cartao_resource_desbloquear_senha_incorreta}}}
      *
      * @param int $id {{{cartao_resource_desbloquear_senha_incorreta_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearSenhaIncorretaUsingPOST($id, $authorization = null)
+    public function desbloquearSenhaIncorretaUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desbloquearSenhaIncorretaUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearSenhaIncorretaUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1517,11 +1529,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_desbloquear_senha_incorreta}}}
      *
      * @param int $id {{{cartao_resource_desbloquear_senha_incorreta_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearSenhaIncorretaUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function desbloquearSenhaIncorretaUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1542,11 +1553,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1601,13 +1608,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_desbloquear}}}
      *
      * @param int $id {{{cartao_resource_desbloquear_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPOST($id, $authorization = null)
+    public function desbloquearUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->desbloquearUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1618,11 +1624,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_desbloquear}}}
      *
      * @param int $id {{{cartao_resource_desbloquear_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function desbloquearUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function desbloquearUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1643,11 +1648,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1701,7 +1702,6 @@ class GlobaltagcartaoApi
      *
      * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param int $id_origem_comercial {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)
      * @param int $id_produto {{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)
      * @param int $id_tipo_cartao {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)
@@ -1712,9 +1712,9 @@ class GlobaltagcartaoApi
      * @return \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarLotesCartoesPrePagosUsingPOST($authorization = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $identificador_externo = null)
+    public function gerarLotesCartoesPrePagosUsingPOST($id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $identificador_externo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo ($authorization, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo);
+        list($response, $statusCode, $httpHeader) = $this->gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo ($id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $identificador_externo);
         return $response; 
     }
 
@@ -1724,7 +1724,6 @@ class GlobaltagcartaoApi
      *
      * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param int $id_origem_comercial {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)
      * @param int $id_produto {{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)
      * @param int $id_tipo_cartao {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)
@@ -1735,7 +1734,7 @@ class GlobaltagcartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LoteCartoesPrePagosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo($authorization = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $identificador_externo = null)
+    public function gerarLotesCartoesPrePagosUsingPOSTWithHttpInfo($id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $identificador_externo = null)
     {
         
   
@@ -1780,11 +1779,7 @@ class GlobaltagcartaoApi
         if ($identificador_externo !== null) {
             $queryParams['identificadorExterno'] = $this->apiClient->getSerializer()->toQueryValue($identificador_externo);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -1831,13 +1826,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_gerar_nova_via_multiplo}}}
      *
      * @param int $id {{{cartao_resource_gerar_nova_via_param_id_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoMultiAppImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaCartaoMultiAppUsingPOST($id, $authorization = null)
+    public function gerarNovaViaCartaoMultiAppUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1848,11 +1842,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_gerar_nova_via_multiplo}}}
      *
      * @param int $id {{{cartao_resource_gerar_nova_via_param_id_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoMultiAppImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function gerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1873,11 +1866,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -1932,13 +1921,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_gerar_nova_via}}}
      *
      * @param int $id {{{cartao_resource_gerar_nova_via_param_id_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaUsingPOST($id, $authorization = null)
+    public function gerarNovaViaUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->gerarNovaViaUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -1949,11 +1937,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_gerar_nova_via}}}
      *
      * @param int $id {{{cartao_resource_gerar_nova_via_param_id_cartao}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function gerarNovaViaUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function gerarNovaViaUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -1974,11 +1961,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2033,13 +2016,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_lancar_tarifa_segunda_via}}}
      *
      * @param int $id {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return object
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function lancarTarifaSegundaViaUsingPOST($id, $authorization = null)
+    public function lancarTarifaSegundaViaUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->lancarTarifaSegundaViaUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->lancarTarifaSegundaViaUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -2050,11 +2032,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_lancar_tarifa_segunda_via}}}
      *
      * @param int $id {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of object, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function lancarTarifaSegundaViaUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function lancarTarifaSegundaViaUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -2075,11 +2056,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2133,7 +2110,6 @@ class GlobaltagcartaoApi
      *
      * {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -2150,9 +2126,9 @@ class GlobaltagcartaoApi
      * @return \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarLotesCartoesPrePagosUsingGET($authorization = null, $sort = null, $page = null, $limit = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null, $identificador_externo = null)
+    public function listarLotesCartoesPrePagosUsingGET($sort = null, $page = null, $limit = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null, $identificador_externo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarLotesCartoesPrePagosUsingGETWithHttpInfo ($authorization, $sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo);
+        list($response, $statusCode, $httpHeader) = $this->listarLotesCartoesPrePagosUsingGETWithHttpInfo ($sort, $page, $limit, $id_origem_comercial, $id_produto, $id_tipo_cartao, $id_imagem, $id_endereco, $quantidade_cartoes, $data_cadastro, $usuario_cadastro, $status_processamento, $identificador_externo);
         return $response; 
     }
 
@@ -2162,7 +2138,6 @@ class GlobaltagcartaoApi
      *
      * {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -2179,7 +2154,7 @@ class GlobaltagcartaoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageLoteCartoesPrePagosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarLotesCartoesPrePagosUsingGETWithHttpInfo($authorization = null, $sort = null, $page = null, $limit = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null, $identificador_externo = null)
+    public function listarLotesCartoesPrePagosUsingGETWithHttpInfo($sort = null, $page = null, $limit = null, $id_origem_comercial = null, $id_produto = null, $id_tipo_cartao = null, $id_imagem = null, $id_endereco = null, $quantidade_cartoes = null, $data_cadastro = null, $usuario_cadastro = null, $status_processamento = null, $identificador_externo = null)
     {
         
   
@@ -2252,11 +2227,7 @@ class GlobaltagcartaoApi
         if ($identificador_externo !== null) {
             $queryParams['identificadorExterno'] = $this->apiClient->getSerializer()->toQueryValue($identificador_externo);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -2298,11 +2269,10 @@ class GlobaltagcartaoApi
     }
     
     /**
-     * listarUsingGET11
+     * listarUsingGET12
      *
      * {{{cartao_resource_listar}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -2324,22 +2294,22 @@ class GlobaltagcartaoApi
      * @param int $flag_provisorio {{{cartao_request_flag_provisorio_value}}} (optional)
      * @param string $codigo_desbloqueio {{{cartao_request_codigo_desbloqueio_value}}} (optional)
      * @param int $sequencial_cartao {{{cartao_request_sequencial_cartao_value}}} (optional)
+     * @param int $identificador_externo {{{cartao_request_identificador_externo_value}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11($authorization = null, $sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET12($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null, $identificador_externo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET11WithHttpInfo ($authorization, $sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($sort, $page, $limit, $id_status_cartao, $id_estagio_cartao, $id_conta, $id_pessoa, $id_produto, $tipo_portador, $numero_cartao, $nome_impresso, $data_geracao, $data_status_cartao, $data_estagio_cartao, $data_validade, $data_impressao, $arquivo_impressao, $flag_impressao_origem_comercial, $flag_provisorio, $codigo_desbloqueio, $sequencial_cartao, $identificador_externo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET11WithHttpInfo
+     * listarUsingGET12WithHttpInfo
      *
      * {{{cartao_resource_listar}}}
      *
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
@@ -2361,10 +2331,11 @@ class GlobaltagcartaoApi
      * @param int $flag_provisorio {{{cartao_request_flag_provisorio_value}}} (optional)
      * @param string $codigo_desbloqueio {{{cartao_request_codigo_desbloqueio_value}}} (optional)
      * @param int $sequencial_cartao {{{cartao_request_sequencial_cartao_value}}} (optional)
+     * @param int $identificador_externo {{{cartao_request_identificador_externo_value}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET11WithHttpInfo($authorization = null, $sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null)
+    public function listarUsingGET12WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_cartao = null, $id_estagio_cartao = null, $id_conta = null, $id_pessoa = null, $id_produto = null, $tipo_portador = null, $numero_cartao = null, $nome_impresso = null, $data_geracao = null, $data_status_cartao = null, $data_estagio_cartao = null, $data_validade = null, $data_impressao = null, $arquivo_impressao = null, $flag_impressao_origem_comercial = null, $flag_provisorio = null, $codigo_desbloqueio = null, $sequencial_cartao = null, $identificador_externo = null)
     {
         
   
@@ -2468,12 +2439,12 @@ class GlobaltagcartaoApi
         
         if ($sequencial_cartao !== null) {
             $queryParams['sequencialCartao'] = $this->apiClient->getSerializer()->toQueryValue($sequencial_cartao);
-        }
-        // header params
+        }// query params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
+        if ($identificador_externo !== null) {
+            $queryParams['identificadorExterno'] = $this->apiClient->getSerializer()->toQueryValue($identificador_externo);
         }
+        
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -2520,13 +2491,12 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_reativar}}}
      *
      * @param int $id {{{cartao_resource_reativar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\CartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOST($id, $authorization = null)
+    public function reativarUsingPOST($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOSTWithHttpInfo ($id, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->reativarUsingPOSTWithHttpInfo ($id);
         return $response; 
     }
 
@@ -2537,11 +2507,10 @@ class GlobaltagcartaoApi
      * {{{cartao_resource_reativar}}}
      *
      * @param int $id {{{cartao_resource_reativar_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\CartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function reativarUsingPOSTWithHttpInfo($id, $authorization = null)
+    public function reativarUsingPOSTWithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
@@ -2562,11 +2531,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2622,13 +2587,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_validar_c_v_v_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
-     * @param string $authorization Authorization (optional)
      * @return string
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarCVVUsingPOST($id, $valida_cvv, $authorization = null)
+    public function validarCVVUsingPOST($id, $valida_cvv)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarCVVUsingPOSTWithHttpInfo ($id, $valida_cvv, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarCVVUsingPOSTWithHttpInfo ($id, $valida_cvv);
         return $response; 
     }
 
@@ -2640,11 +2604,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_validar_c_v_v_param_id}}} (required)
      * @param \br.com.conductor.pier.api.v2.model\ValidaCVVRequest $valida_cvv validaCVV (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarCVVUsingPOSTWithHttpInfo($id, $valida_cvv, $authorization = null)
+    public function validarCVVUsingPOSTWithHttpInfo($id, $valida_cvv)
     {
         
         // verify the required parameter 'id' is set
@@ -2669,11 +2632,7 @@ class GlobaltagcartaoApi
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
         
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {
@@ -2735,13 +2694,12 @@ class GlobaltagcartaoApi
      * @param string $nome_portador {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}} (required)
      * @param string $data_validade {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}} (required)
      * @param string $codigo_seguranca {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization = null)
+    public function validarDadosImpressosBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
         return $response; 
     }
 
@@ -2755,11 +2713,10 @@ class GlobaltagcartaoApi
      * @param string $nome_portador {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}} (required)
      * @param string $data_validade {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}} (required)
      * @param string $codigo_seguranca {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDadosImpressosBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization = null)
+    public function validarDadosImpressosBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
     {
         
         // verify the required parameter 'numero_cartao' is set
@@ -2808,11 +2765,7 @@ class GlobaltagcartaoApi
         if ($codigo_seguranca !== null) {
             $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -2862,13 +2815,12 @@ class GlobaltagcartaoApi
      * @param string $nome_portador {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}} (required)
      * @param string $data_validade {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}} (required)
      * @param string $codigo_seguranca {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization = null)
+    public function validarDadosImpressosNaoBandeiradoUsingGET($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo ($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca);
         return $response; 
     }
 
@@ -2882,11 +2834,10 @@ class GlobaltagcartaoApi
      * @param string $nome_portador {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}} (required)
      * @param string $data_validade {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}} (required)
      * @param string $codigo_seguranca {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca, $authorization = null)
+    public function validarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo($numero_cartao, $nome_portador, $data_validade, $codigo_seguranca)
     {
         
         // verify the required parameter 'numero_cartao' is set
@@ -2935,11 +2886,7 @@ class GlobaltagcartaoApi
         if ($codigo_seguranca !== null) {
             $queryParams['codigo_seguranca'] = $this->apiClient->getSerializer()->toQueryValue($codigo_seguranca);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -2987,13 +2934,12 @@ class GlobaltagcartaoApi
      *
      * @param string $numero_cartao {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}} (required)
      * @param string $criptograma {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma, $authorization = null)
+    public function validarDe55CartaoMastercardUsingGET($numero_cartao, $criptograma)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarDe55CartaoMastercardUsingGETWithHttpInfo ($numero_cartao, $criptograma, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarDe55CartaoMastercardUsingGETWithHttpInfo ($numero_cartao, $criptograma);
         return $response; 
     }
 
@@ -3005,11 +2951,10 @@ class GlobaltagcartaoApi
      *
      * @param string $numero_cartao {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}} (required)
      * @param string $criptograma {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarDe55CartaoMastercardUsingGETWithHttpInfo($numero_cartao, $criptograma, $authorization = null)
+    public function validarDe55CartaoMastercardUsingGETWithHttpInfo($numero_cartao, $criptograma)
     {
         
         // verify the required parameter 'numero_cartao' is set
@@ -3042,11 +2987,7 @@ class GlobaltagcartaoApi
         if ($criptograma !== null) {
             $queryParams['criptograma'] = $this->apiClient->getSerializer()->toQueryValue($criptograma);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -3094,13 +3035,12 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_validar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_validar_senha_param_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarSenhaUsingGET($id, $senha, $authorization = null)
+    public function validarSenhaUsingGET($id, $senha)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarSenhaUsingGETWithHttpInfo ($id, $senha, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarSenhaUsingGETWithHttpInfo ($id, $senha);
         return $response; 
     }
 
@@ -3112,11 +3052,10 @@ class GlobaltagcartaoApi
      *
      * @param int $id {{{cartao_resource_validar_senha_param_id}}} (required)
      * @param string $senha {{{cartao_resource_validar_senha_param_senha}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaSenhaCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarSenhaUsingGETWithHttpInfo($id, $senha, $authorization = null)
+    public function validarSenhaUsingGETWithHttpInfo($id, $senha)
     {
         
         // verify the required parameter 'id' is set
@@ -3142,10 +3081,6 @@ class GlobaltagcartaoApi
   
         
         // header params
-        
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }// header params
         
         if ($senha !== null) {
             $headerParams['senha'] = $this->apiClient->getSerializer()->toHeaderValue($senha);
@@ -3206,13 +3141,12 @@ class GlobaltagcartaoApi
      * @param string $numero_cartao {{{cartao_resource_validar_tarja_param_numero_cartao}}} (required)
      * @param string $trilha1 {{{cartao_resource_validar_tarja_param_trilha1}}} (required)
      * @param string $trilha2 {{{cartao_resource_validar_tarja_param_trilha2}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2, $authorization = null)
+    public function validarTarjaUsingGET($numero_cartao, $trilha1, $trilha2)
     {
-        list($response, $statusCode, $httpHeader) = $this->validarTarjaUsingGETWithHttpInfo ($numero_cartao, $trilha1, $trilha2, $authorization);
+        list($response, $statusCode, $httpHeader) = $this->validarTarjaUsingGETWithHttpInfo ($numero_cartao, $trilha1, $trilha2);
         return $response; 
     }
 
@@ -3225,11 +3159,10 @@ class GlobaltagcartaoApi
      * @param string $numero_cartao {{{cartao_resource_validar_tarja_param_numero_cartao}}} (required)
      * @param string $trilha1 {{{cartao_resource_validar_tarja_param_trilha1}}} (required)
      * @param string $trilha2 {{{cartao_resource_validar_tarja_param_trilha2}}} (required)
-     * @param string $authorization Authorization (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\ValidaCartaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function validarTarjaUsingGETWithHttpInfo($numero_cartao, $trilha1, $trilha2, $authorization = null)
+    public function validarTarjaUsingGETWithHttpInfo($numero_cartao, $trilha1, $trilha2)
     {
         
         // verify the required parameter 'numero_cartao' is set
@@ -3270,11 +3203,7 @@ class GlobaltagcartaoApi
         if ($trilha2 !== null) {
             $queryParams['trilha2'] = $this->apiClient->getSerializer()->toQueryValue($trilha2);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);

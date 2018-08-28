@@ -1,6 +1,6 @@
 <?php
 /**
- * NotificacaoPushResponseValue_
+ * NotificacaoPushResponse
  *
  * PHP version 5
  *
@@ -35,7 +35,7 @@ namespace br.com.conductor.pier.api.v2.model;
 
 use \ArrayAccess;
 /**
- * NotificacaoPushResponseValue_ Class Doc Comment
+ * NotificacaoPushResponse Class Doc Comment
  *
  * @category    Class
  * @description {{{notificacao_push_response_description}}}
@@ -44,7 +44,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NotificacaoPushResponseValue_ implements ArrayAccess
+class NotificacaoPushResponse implements ArrayAccess
 {
     /**
       * Array of property to type mappings. Used for (de)serialization 
@@ -282,9 +282,9 @@ class NotificacaoPushResponseValue_ implements ArrayAccess
      */
     public function setTipoEvento($tipo_evento)
     {
-        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS");
+        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS", "OTP_3D_SECURE");
         if (!in_array($tipo_evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS', 'OTP_3D_SECURE'");
         }
         $this->tipo_evento = $tipo_evento;
         return $this;

@@ -66,12 +66,12 @@ class GlobaltaglogApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for salvarUsingPOST18
+     * Test case for salvarUsingPOST19
      *
      * {{{log_acesso_usuario_recurso_salvar}}}
      *
      */
-    public function test_salvarUsingPOST18() {
+    public function test_salvarUsingPOST19() {
 
     }
     

@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nome** | **string** | {{{usuario_update_nome_value}}} | [optional] 
-**login** | **string** | {{{usuario_update_login_value}}} | [optional] 
+**login** | **string** | {{{usuario_update_login_value}}} | 
 **cpf** | **string** | {{{usuario_update_cpf_value}}} | [optional] 
-**email** | **string** | {{{usuario_update_email_value}}} | [optional] 
+**email** | **string** | {{{usuario_update_email_value}}} | 
 **status** | **string** | {{{usuario_update_status_value}}} | [optional] 
 **bloquear_acesso** | **bool** | {{{usuario_update_bloquear_acesso_descricao}}} | [optional] 
 

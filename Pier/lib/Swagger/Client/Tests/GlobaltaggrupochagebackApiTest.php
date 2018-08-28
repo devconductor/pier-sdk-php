@@ -76,12 +76,12 @@ class GlobaltaggrupochagebackApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET27
+     * Test case for listarUsingGET28
      *
      * {{{grupo_chargeback_resource_listar}}}
      *
      */
-    public function test_listarUsingGET27() {
+    public function test_listarUsingGET28() {
 
     }
     

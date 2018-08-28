@@ -187,7 +187,7 @@ class GlobaltaginscricaoapnApi
     }
     
     /**
-     * listarUsingGET30
+     * listarUsingGET31
      *
      * {{{inscricao_apn_recurso_listar}}}
      *
@@ -203,15 +203,15 @@ class GlobaltaginscricaoapnApi
      * @return \br.com.conductor.pier.api.v2.model\PageInscricaoAPNResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30($sort = null, $id_cartoes = null, $page = null, $limit = null, $device_token = null, $data_criacao = null, $data_desativacao = null, $ativo = null, $id_aplicacao_mobile = null)
+    public function listarUsingGET31($sort = null, $id_cartoes = null, $page = null, $limit = null, $device_token = null, $data_criacao = null, $data_desativacao = null, $ativo = null, $id_aplicacao_mobile = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET31WithHttpInfo ($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET30WithHttpInfo
+     * listarUsingGET31WithHttpInfo
      *
      * {{{inscricao_apn_recurso_listar}}}
      *
@@ -227,7 +227,7 @@ class GlobaltaginscricaoapnApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageInscricaoAPNResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET30WithHttpInfo($sort = null, $id_cartoes = null, $page = null, $limit = null, $device_token = null, $data_criacao = null, $data_desativacao = null, $ativo = null, $id_aplicacao_mobile = null)
+    public function listarUsingGET31WithHttpInfo($sort = null, $id_cartoes = null, $page = null, $limit = null, $device_token = null, $data_criacao = null, $data_desativacao = null, $ativo = null, $id_aplicacao_mobile = null)
     {
         
   
@@ -330,7 +330,7 @@ class GlobaltaginscricaoapnApi
     }
     
     /**
-     * salvarUsingPOST14
+     * salvarUsingPOST15
      *
      * {{{inscricao_apn_recurso_salvar}}}
      *
@@ -338,15 +338,15 @@ class GlobaltaginscricaoapnApi
      * @return \br.com.conductor.pier.api.v2.model\InscricaoAPNResponse[]
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14($inscricao_persist)
+    public function salvarUsingPOST15($inscricao_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST14WithHttpInfo ($inscricao_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST15WithHttpInfo ($inscricao_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST14WithHttpInfo
+     * salvarUsingPOST15WithHttpInfo
      *
      * {{{inscricao_apn_recurso_salvar}}}
      *
@@ -354,12 +354,12 @@ class GlobaltaginscricaoapnApi
      * @return Array of \br.com.conductor.pier.api.v2.model\InscricaoAPNResponse[], HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST14WithHttpInfo($inscricao_persist)
+    public function salvarUsingPOST15WithHttpInfo($inscricao_persist)
     {
         
         // verify the required parameter 'inscricao_persist' is set
         if ($inscricao_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $inscricao_persist when calling salvarUsingPOST14');
+            throw new \InvalidArgumentException('Missing the required parameter $inscricao_persist when calling salvarUsingPOST15');
         }
   
         // parse inputs

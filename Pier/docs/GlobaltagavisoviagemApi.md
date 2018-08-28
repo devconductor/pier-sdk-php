@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET7**](GlobaltagavisoviagemApi.md#consultarUsingGET7) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
+[**consultarUsingGET8**](GlobaltagavisoviagemApi.md#consultarUsingGET8) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
 [**desabilitarUsingPOST**](GlobaltagavisoviagemApi.md#desabilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/desabilitar | {{{aviso_viagem_resource_desabilitar}}}
 [**habilitarUsingPOST**](GlobaltagavisoviagemApi.md#habilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/habilitar | {{{aviso_viagem_resource_habilitar}}}
-[**listarUsingGET8**](GlobaltagavisoviagemApi.md#listarUsingGET8) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
+[**listarUsingGET9**](GlobaltagavisoviagemApi.md#listarUsingGET9) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
 [**salvarUsingPOST3**](GlobaltagavisoviagemApi.md#salvarUsingPOST3) | **POST** /api/avisos-viagens | {{{aviso_viagem_resource_salvar}}}
 
 
-# **consultarUsingGET7**
-> \br.com.conductor.pier.api.v2.model\AvisoViagemResponse consultarUsingGET7($id)
+# **consultarUsingGET8**
+> \br.com.conductor.pier.api.v2.model\AvisoViagemResponse consultarUsingGET8($id)
 
 {{{aviso_viagem_resource_consultar}}}
 
@@ -27,10 +27,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagavisoviage
 $id = 789; // int | {{{aviso_viagem_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET7($id);
+    $result = $api_instance->consultarUsingGET8($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagavisoviagemApi->consultarUsingGET7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagavisoviagemApi->consultarUsingGET8: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -146,8 +146,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET8**
-> \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse listarUsingGET8($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo)
+# **listarUsingGET9**
+> \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse listarUsingGET9($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo)
 
 {{{aviso_viagem_resource_listar}}}
 
@@ -169,10 +169,10 @@ $data_fim = "data_fim_example"; // string | {{{aviso_viagem_request_data_fim_val
 $flag_ativo = 56; // int | {{{aviso_viagem_request_flag_ativo_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET8($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
+    $result = $api_instance->listarUsingGET9($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagavisoviagemApi->listarUsingGET8: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagavisoviagemApi->listarUsingGET9: ', $e->getMessage(), "\n";
 }
 ?>
 ```

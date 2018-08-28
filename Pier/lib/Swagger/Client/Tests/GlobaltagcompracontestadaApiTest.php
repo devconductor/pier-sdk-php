@@ -66,6 +66,16 @@ class GlobaltagcompracontestadaApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
+     * Test case for contestarUsingPOST
+     *
+     * {{{compra_contestada_transacoes_resource_contestar}}}
+     *
+     */
+    public function test_contestarUsingPOST() {
+
+    }
+    
+    /**
      * Test case for detalheCartaoUsingGET
      *
      * {{{compra_contestada_detalhe_cartao_resource_listar}}}
@@ -76,12 +86,12 @@ class GlobaltagcompracontestadaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET12
+     * Test case for listarUsingGET13
      *
      * {{{cartao_com_compra_contestada_resource_listar}}}
      *
      */
-    public function test_listarUsingGET12() {
+    public function test_listarUsingGET13() {
 
     }
     

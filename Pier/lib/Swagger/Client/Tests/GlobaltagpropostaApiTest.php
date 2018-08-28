@@ -76,12 +76,12 @@ class GlobaltagpropostaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET33
+     * Test case for consultarUsingGET35
      *
      * {{{proposta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET33() {
+    public function test_consultarUsingGET35() {
 
     }
     
@@ -96,12 +96,12 @@ class GlobaltagpropostaApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET44
+     * Test case for listarUsingGET46
      *
      * {{{proposta_resource_listar}}}
      *
      */
-    public function test_listarUsingGET44() {
+    public function test_listarUsingGET46() {
 
     }
     

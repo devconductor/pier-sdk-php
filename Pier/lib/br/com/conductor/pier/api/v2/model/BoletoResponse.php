@@ -84,7 +84,8 @@ class BoletoResponse implements ArrayAccess
         'id' => 'int',
         'id_conta' => 'int',
         'endereco_cobranca_beneficiario' => 'string',
-        'status' => 'int'
+        'status' => 'int',
+        'boleto_registrado' => 'bool'
     );
   
     static function swaggerTypes() {
@@ -129,7 +130,8 @@ class BoletoResponse implements ArrayAccess
         'id' => 'id',
         'id_conta' => 'idConta',
         'endereco_cobranca_beneficiario' => 'enderecoCobrancaBeneficiario',
-        'status' => 'status'
+        'status' => 'status',
+        'boleto_registrado' => 'boletoRegistrado'
     );
   
     static function attributeMap() {
@@ -174,7 +176,8 @@ class BoletoResponse implements ArrayAccess
         'id' => 'setId',
         'id_conta' => 'setIdConta',
         'endereco_cobranca_beneficiario' => 'setEnderecoCobrancaBeneficiario',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'boleto_registrado' => 'setBoletoRegistrado'
     );
   
     static function setters() {
@@ -219,7 +222,8 @@ class BoletoResponse implements ArrayAccess
         'id' => 'getId',
         'id_conta' => 'getIdConta',
         'endereco_cobranca_beneficiario' => 'getEnderecoCobrancaBeneficiario',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'boleto_registrado' => 'getBoletoRegistrado'
     );
   
     static function getters() {
@@ -431,6 +435,12 @@ class BoletoResponse implements ArrayAccess
       */
     protected $status;
     
+    /**
+      * $boleto_registrado {{{boleto_response_registrado_value}}}
+      * @var bool
+      */
+    protected $boleto_registrado;
+    
 
     /**
      * Constructor
@@ -474,6 +484,7 @@ class BoletoResponse implements ArrayAccess
             $this->id_conta = $data["id_conta"];
             $this->endereco_cobranca_beneficiario = $data["endereco_cobranca_beneficiario"];
             $this->status = $data["status"];
+            $this->boleto_registrado = $data["boleto_registrado"];
         }
     }
     
@@ -1188,6 +1199,27 @@ class BoletoResponse implements ArrayAccess
     {
         
         $this->status = $status;
+        return $this;
+    }
+    
+    /**
+     * Gets boleto_registrado
+     * @return bool
+     */
+    public function getBoletoRegistrado()
+    {
+        return $this->boleto_registrado;
+    }
+  
+    /**
+     * Sets boleto_registrado
+     * @param bool $boleto_registrado {{{boleto_response_registrado_value}}}
+     * @return $this
+     */
+    public function setBoletoRegistrado($boleto_registrado)
+    {
+        
+        $this->boleto_registrado = $boleto_registrado;
         return $this;
     }
     

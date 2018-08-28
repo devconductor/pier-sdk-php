@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**desativarUsingPUT**](GlobaltaginscricaoapnApi.md#desativarUsingPUT) | **PUT** /api/inscricoes-apn/{id}/desativar | {{{inscricao_apn_recurso_desativar}}}
-[**listarUsingGET30**](GlobaltaginscricaoapnApi.md#listarUsingGET30) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
-[**salvarUsingPOST14**](GlobaltaginscricaoapnApi.md#salvarUsingPOST14) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
+[**listarUsingGET31**](GlobaltaginscricaoapnApi.md#listarUsingGET31) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
+[**salvarUsingPOST15**](GlobaltaginscricaoapnApi.md#salvarUsingPOST15) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
 
 
 # **desativarUsingPUT**
@@ -54,8 +54,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET30**
-> \br.com.conductor.pier.api.v2.model\PageInscricaoAPNResponse listarUsingGET30($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile)
+# **listarUsingGET31**
+> \br.com.conductor.pier.api.v2.model\PageInscricaoAPNResponse listarUsingGET31($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile)
 
 {{{inscricao_apn_recurso_listar}}}
 
@@ -78,10 +78,10 @@ $ativo = true; // bool | {{{inscricao_apn_requisicao_ativo_descricao}}}
 $id_aplicacao_mobile = 789; // int | {{{inscricao_apn_requisicao_id_aplicacao_mobile_descricao}}}
 
 try { 
-    $result = $api_instance->listarUsingGET30($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile);
+    $result = $api_instance->listarUsingGET31($sort, $id_cartoes, $page, $limit, $device_token, $data_criacao, $data_desativacao, $ativo, $id_aplicacao_mobile);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltaginscricaoapnApi->listarUsingGET30: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltaginscricaoapnApi->listarUsingGET31: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -115,8 +115,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST14**
-> \br.com.conductor.pier.api.v2.model\InscricaoAPNResponse[] salvarUsingPOST14($inscricao_persist)
+# **salvarUsingPOST15**
+> \br.com.conductor.pier.api.v2.model\InscricaoAPNResponse[] salvarUsingPOST15($inscricao_persist)
 
 {{{inscricao_apn_recurso_salvar}}}
 
@@ -131,10 +131,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltaginscricaoa
 $inscricao_persist = new \br.com.conductor.pier.api.v2.model\InscricaoApnPersistencia_(); // \br.com.conductor.pier.api.v2.model\InscricaoApnPersistencia_ | inscricaoPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST14($inscricao_persist);
+    $result = $api_instance->salvarUsingPOST15($inscricao_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltaginscricaoapnApi->salvarUsingPOST14: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltaginscricaoapnApi->salvarUsingPOST15: ', $e->getMessage(), "\n";
 }
 ?>
 ```

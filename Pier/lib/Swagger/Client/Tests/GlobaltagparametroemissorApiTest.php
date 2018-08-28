@@ -66,12 +66,12 @@ class GlobaltagparametroemissorApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET27
+     * Test case for consultarUsingGET29
      *
      * {{{parametro_emissor_recurso}}}
      *
      */
-    public function test_consultarUsingGET27() {
+    public function test_consultarUsingGET29() {
 
     }
     

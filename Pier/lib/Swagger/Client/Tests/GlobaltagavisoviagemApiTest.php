@@ -66,12 +66,12 @@ class GlobaltagavisoviagemApiTest extends \PHPUnit_Framework_TestCase
 
     
     /**
-     * Test case for consultarUsingGET7
+     * Test case for consultarUsingGET8
      *
      * {{{aviso_viagem_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET7() {
+    public function test_consultarUsingGET8() {
 
     }
     
@@ -96,12 +96,12 @@ class GlobaltagavisoviagemApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET8
+     * Test case for listarUsingGET9
      *
      * {{{aviso_viagem_resource_listar}}}
      *
      */
-    public function test_listarUsingGET8() {
+    public function test_listarUsingGET9() {
 
     }
     

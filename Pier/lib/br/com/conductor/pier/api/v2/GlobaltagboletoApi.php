@@ -92,36 +92,38 @@ class GlobaltagboletoApi
   
     
     /**
-     * consultarUsingGET34
+     * consultarUsingGET36
      *
      * {{{boleto_resource_consultar}}}
      *
      * @param int $id {{{boleto_resource_consultar_param_id}}} (required)
+     * @param bool $zera_valor_codigo_barras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\BoletoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET34($id)
+    public function consultarUsingGET36($id, $zera_valor_codigo_barras = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET34WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET36WithHttpInfo ($id, $zera_valor_codigo_barras);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET34WithHttpInfo
+     * consultarUsingGET36WithHttpInfo
      *
      * {{{boleto_resource_consultar}}}
      *
      * @param int $id {{{boleto_resource_consultar_param_id}}} (required)
+     * @param bool $zera_valor_codigo_barras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\BoletoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET34WithHttpInfo($id)
+    public function consultarUsingGET36WithHttpInfo($id, $zera_valor_codigo_barras = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET34');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET36');
         }
   
         // parse inputs
@@ -136,7 +138,11 @@ class GlobaltagboletoApi
         }
         $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
   
+        // query params
         
+        if ($zera_valor_codigo_barras !== null) {
+            $queryParams['zeraValorCodigoBarras'] = $this->apiClient->getSerializer()->toQueryValue($zera_valor_codigo_barras);
+        }
         
         // path params
         
@@ -285,10 +291,6 @@ class GlobaltagboletoApi
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;
-            case 201:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
             }
   
             throw $e;
@@ -387,7 +389,7 @@ class GlobaltagboletoApi
     }
     
     /**
-     * listarUsingGET45
+     * listarUsingGET47
      *
      * {{{boleto_resource_listar}}}
      *
@@ -401,15 +403,15 @@ class GlobaltagboletoApi
      * @return \br.com.conductor.pier.api.v2.model\PageBoletoListarResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45($sort = null, $page = null, $limit = null, $id_conta = null, $data_vencimento = null, $valor_boleto = null, $id_tipo_boleto = null)
+    public function listarUsingGET47($sort = null, $page = null, $limit = null, $id_conta = null, $data_vencimento = null, $valor_boleto = null, $id_tipo_boleto = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET45WithHttpInfo ($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET47WithHttpInfo ($sort, $page, $limit, $id_conta, $data_vencimento, $valor_boleto, $id_tipo_boleto);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET45WithHttpInfo
+     * listarUsingGET47WithHttpInfo
      *
      * {{{boleto_resource_listar}}}
      *
@@ -423,7 +425,7 @@ class GlobaltagboletoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageBoletoListarResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET45WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $data_vencimento = null, $valor_boleto = null, $id_tipo_boleto = null)
+    public function listarUsingGET47WithHttpInfo($sort = null, $page = null, $limit = null, $id_conta = null, $data_vencimento = null, $valor_boleto = null, $id_tipo_boleto = null)
     {
         
   
@@ -694,10 +696,6 @@ class GlobaltagboletoApi
         } catch (ApiException $e) {
             switch ($e->getCode()) { 
             case 200:
-                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
-                $e->setResponseObject($data);
-                break;
-            case 201:
                 $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
                 $e->setResponseObject($data);
                 break;

@@ -282,7 +282,7 @@ class GlobaltagstatusparametroApi
     }
     
     /**
-     * consultarUsingGET36
+     * consultarUsingGET38
      *
      * {{{status_conta_resource_consultar}}}
      *
@@ -290,15 +290,15 @@ class GlobaltagstatusparametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET36($id)
+    public function consultarUsingGET38($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET36WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET38WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET36WithHttpInfo
+     * consultarUsingGET38WithHttpInfo
      *
      * {{{status_conta_resource_consultar}}}
      *
@@ -306,12 +306,12 @@ class GlobaltagstatusparametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET36WithHttpInfo($id)
+    public function consultarUsingGET38WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET36');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET38');
         }
   
         // parse inputs
@@ -377,7 +377,7 @@ class GlobaltagstatusparametroApi
     }
     
     /**
-     * consultarUsingGET37
+     * consultarUsingGET39
      *
      * {{{status_impressao_resource_consultar}}}
      *
@@ -385,15 +385,15 @@ class GlobaltagstatusparametroApi
      * @return \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET37($id)
+    public function consultarUsingGET39($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET37WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET39WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET37WithHttpInfo
+     * consultarUsingGET39WithHttpInfo
      *
      * {{{status_impressao_resource_consultar}}}
      *
@@ -401,12 +401,12 @@ class GlobaltagstatusparametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\StatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET37WithHttpInfo($id)
+    public function consultarUsingGET39WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET37');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET39');
         }
   
         // parse inputs
@@ -807,7 +807,7 @@ class GlobaltagstatusparametroApi
     }
     
     /**
-     * listarUsingGET47
+     * listarUsingGET49
      *
      * {{{status_conta_resource_listar}}}
      *
@@ -828,15 +828,15 @@ class GlobaltagstatusparametroApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusContaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET47($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
+    public function listarUsingGET49($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET47WithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET49WithHttpInfo ($sort, $page, $limit, $id, $nome, $permite_alterar_vencimento, $permite_alterar_limite, $permite_emitir_nova_via_cartao, $permite_fazer_transferencia, $permite_receber_transferencia, $permite_criar_acordo_cobranca, $permite_atribuir_como_bloqueio, $permite_desbloquear, $permite_atribuir_como_cancelamento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET47WithHttpInfo
+     * listarUsingGET49WithHttpInfo
      *
      * {{{status_conta_resource_listar}}}
      *
@@ -857,7 +857,7 @@ class GlobaltagstatusparametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusContaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET47WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
+    public function listarUsingGET49WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null, $permite_alterar_vencimento = null, $permite_alterar_limite = null, $permite_emitir_nova_via_cartao = null, $permite_fazer_transferencia = null, $permite_receber_transferencia = null, $permite_criar_acordo_cobranca = null, $permite_atribuir_como_bloqueio = null, $permite_desbloquear = null, $permite_atribuir_como_cancelamento = null)
     {
         
   
@@ -976,7 +976,7 @@ class GlobaltagstatusparametroApi
     }
     
     /**
-     * listarUsingGET48
+     * listarUsingGET50
      *
      * {{{status_impressao_resource_listar}}}
      *
@@ -988,15 +988,15 @@ class GlobaltagstatusparametroApi
      * @return \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET48($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET50($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET48WithHttpInfo ($sort, $page, $limit, $id, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET50WithHttpInfo ($sort, $page, $limit, $id, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET48WithHttpInfo
+     * listarUsingGET50WithHttpInfo
      *
      * {{{status_impressao_resource_listar}}}
      *
@@ -1008,7 +1008,7 @@ class GlobaltagstatusparametroApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageStatusImpressaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET48WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
+    public function listarUsingGET50WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $nome = null)
     {
         
   

@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **id_conta** | **int** | {{{boleto_response_id_conta_value}}} | [optional] 
 **endereco_cobranca_beneficiario** | **string** | {{{boleto_response_endereco_cobranca_beneficiario_value}}} | [optional] 
 **status** | **int** | {{{boleto_response_status_value}}} | [optional] 
+**boleto_registrado** | **bool** | {{{boleto_response_registrado_value}}} | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

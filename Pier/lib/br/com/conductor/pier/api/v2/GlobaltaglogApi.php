@@ -92,7 +92,7 @@ class GlobaltaglogApi
   
     
     /**
-     * salvarUsingPOST18
+     * salvarUsingPOST19
      *
      * {{{log_acesso_usuario_recurso_salvar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltaglogApi
      * @return \br.com.conductor.pier.api.v2.model\LogAcessoUsuarioResposta_
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST18($log_acesso_usuario_persist)
+    public function salvarUsingPOST19($log_acesso_usuario_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST18WithHttpInfo ($log_acesso_usuario_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST19WithHttpInfo ($log_acesso_usuario_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST18WithHttpInfo
+     * salvarUsingPOST19WithHttpInfo
      *
      * {{{log_acesso_usuario_recurso_salvar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltaglogApi
      * @return Array of \br.com.conductor.pier.api.v2.model\LogAcessoUsuarioResposta_, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST18WithHttpInfo($log_acesso_usuario_persist)
+    public function salvarUsingPOST19WithHttpInfo($log_acesso_usuario_persist)
     {
         
         // verify the required parameter 'log_acesso_usuario_persist' is set
         if ($log_acesso_usuario_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $log_acesso_usuario_persist when calling salvarUsingPOST18');
+            throw new \InvalidArgumentException('Missing the required parameter $log_acesso_usuario_persist when calling salvarUsingPOST19');
         }
   
         // parse inputs

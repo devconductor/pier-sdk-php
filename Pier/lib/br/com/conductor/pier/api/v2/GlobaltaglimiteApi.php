@@ -97,16 +97,15 @@ class GlobaltaglimiteApi
      * {{{conta_resource_listar_historico_alteracoes_limites}}}
      *
      * @param int $id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGET($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGET($id, $sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $authorization, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo ($id, $sort, $page, $limit);
         return $response; 
     }
 
@@ -117,14 +116,13 @@ class GlobaltaglimiteApi
      * {{{conta_resource_listar_historico_alteracoes_limites}}}
      *
      * @param int $id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} (required)
-     * @param string $authorization Authorization (optional)
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $authorization = null, $sort = null, $page = null, $limit = null)
+    public function listarHistoricoAlteracoesLimitesUsingGETWithHttpInfo($id, $sort = null, $page = null, $limit = null)
     {
         
         // verify the required parameter 'id' is set
@@ -161,11 +159,7 @@ class GlobaltaglimiteApi
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        // header params
         
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = $this->apiClient->getSerializer()->toHeaderValue($authorization);
-        }
         // path params
         
         if ($id !== null) {

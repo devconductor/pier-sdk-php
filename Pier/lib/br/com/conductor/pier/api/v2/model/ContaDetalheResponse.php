@@ -76,7 +76,8 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'Number',
         'saldo_disponivel_global' => 'Number',
         'saldo_disponivel_saque' => 'Number',
-        'dias_atraso' => 'int'
+        'dias_atraso' => 'int',
+        'proximo_vencimento_padrao' => 'string'
     );
   
     static function swaggerTypes() {
@@ -113,7 +114,8 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'limiteSaqueGlobal',
         'saldo_disponivel_global' => 'saldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'saldoDisponivelSaque',
-        'dias_atraso' => 'diasAtraso'
+        'dias_atraso' => 'diasAtraso',
+        'proximo_vencimento_padrao' => 'proximoVencimentoPadrao'
     );
   
     static function attributeMap() {
@@ -150,7 +152,8 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'setLimiteSaqueGlobal',
         'saldo_disponivel_global' => 'setSaldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'setSaldoDisponivelSaque',
-        'dias_atraso' => 'setDiasAtraso'
+        'dias_atraso' => 'setDiasAtraso',
+        'proximo_vencimento_padrao' => 'setProximoVencimentoPadrao'
     );
   
     static function setters() {
@@ -187,7 +190,8 @@ class ContaDetalheResponse implements ArrayAccess
         'limite_saque_global' => 'getLimiteSaqueGlobal',
         'saldo_disponivel_global' => 'getSaldoDisponivelGlobal',
         'saldo_disponivel_saque' => 'getSaldoDisponivelSaque',
-        'dias_atraso' => 'getDiasAtraso'
+        'dias_atraso' => 'getDiasAtraso',
+        'proximo_vencimento_padrao' => 'getProximoVencimentoPadrao'
     );
   
     static function getters() {
@@ -351,6 +355,12 @@ class ContaDetalheResponse implements ArrayAccess
       */
     protected $dias_atraso;
     
+    /**
+      * $proximo_vencimento_padrao {{{conta_response_proximo_vencimento_padrao_value}}}
+      * @var string
+      */
+    protected $proximo_vencimento_padrao;
+    
 
     /**
      * Constructor
@@ -386,6 +396,7 @@ class ContaDetalheResponse implements ArrayAccess
             $this->saldo_disponivel_global = $data["saldo_disponivel_global"];
             $this->saldo_disponivel_saque = $data["saldo_disponivel_saque"];
             $this->dias_atraso = $data["dias_atraso"];
+            $this->proximo_vencimento_padrao = $data["proximo_vencimento_padrao"];
         }
     }
     
@@ -932,6 +943,27 @@ class ContaDetalheResponse implements ArrayAccess
     {
         
         $this->dias_atraso = $dias_atraso;
+        return $this;
+    }
+    
+    /**
+     * Gets proximo_vencimento_padrao
+     * @return string
+     */
+    public function getProximoVencimentoPadrao()
+    {
+        return $this->proximo_vencimento_padrao;
+    }
+  
+    /**
+     * Sets proximo_vencimento_padrao
+     * @param string $proximo_vencimento_padrao {{{conta_response_proximo_vencimento_padrao_value}}}
+     * @return $this
+     */
+    public function setProximoVencimentoPadrao($proximo_vencimento_padrao)
+    {
+        
+        $this->proximo_vencimento_padrao = $proximo_vencimento_padrao;
         return $this;
     }
     

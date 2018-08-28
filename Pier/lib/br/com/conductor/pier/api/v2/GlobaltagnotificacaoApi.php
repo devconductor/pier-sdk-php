@@ -829,6 +829,97 @@ class GlobaltagnotificacaoApi
     }
     
     /**
+     * enviarOTPUsingPOST
+     *
+     * {{{notificacao_resource_3d_secure}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\Secure3dRequest $secure3d_request secure3dRequest (required)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function enviarOTPUsingPOST($secure3d_request)
+    {
+        list($response, $statusCode, $httpHeader) = $this->enviarOTPUsingPOSTWithHttpInfo ($secure3d_request);
+        return $response; 
+    }
+
+
+    /**
+     * enviarOTPUsingPOSTWithHttpInfo
+     *
+     * {{{notificacao_resource_3d_secure}}}
+     *
+     * @param \br.com.conductor.pier.api.v2.model\Secure3dRequest $secure3d_request secure3dRequest (required)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function enviarOTPUsingPOSTWithHttpInfo($secure3d_request)
+    {
+        
+        // verify the required parameter 'secure3d_request' is set
+        if ($secure3d_request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $secure3d_request when calling enviarOTPUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/notificacoes/3d-secure";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($secure3d_request)) {
+            $_tempBody = $secure3d_request;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * gerarTokenEMAILUsingPOST
      *
      * {{{codigo_seguranca_resource_gerar_token_e_m_a_i_l}}}

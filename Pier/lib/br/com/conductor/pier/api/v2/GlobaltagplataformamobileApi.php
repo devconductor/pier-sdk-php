@@ -197,7 +197,7 @@ class GlobaltagplataformamobileApi
     }
     
     /**
-     * listarUsingGET40
+     * listarUsingGET42
      *
      * {{{plataforma_mobile_resource_listar}}}
      *
@@ -208,15 +208,15 @@ class GlobaltagplataformamobileApi
      * @return \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET42($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET40WithHttpInfo ($sort, $page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET42WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET40WithHttpInfo
+     * listarUsingGET42WithHttpInfo
      *
      * {{{plataforma_mobile_resource_listar}}}
      *
@@ -227,7 +227,7 @@ class GlobaltagplataformamobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PagePlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET40WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET42WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
     {
         
   
@@ -306,7 +306,7 @@ class GlobaltagplataformamobileApi
     }
     
     /**
-     * salvarUsingPOST26
+     * salvarUsingPOST27
      *
      * {{{plataforma_mobile_resource_salvar}}}
      *
@@ -314,15 +314,15 @@ class GlobaltagplataformamobileApi
      * @return \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST26($persist)
+    public function salvarUsingPOST27($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST26WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST27WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST26WithHttpInfo
+     * salvarUsingPOST27WithHttpInfo
      *
      * {{{plataforma_mobile_resource_salvar}}}
      *
@@ -330,12 +330,12 @@ class GlobaltagplataformamobileApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PlataformaMobileResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST26WithHttpInfo($persist)
+    public function salvarUsingPOST27WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST26');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST27');
         }
   
         // parse inputs

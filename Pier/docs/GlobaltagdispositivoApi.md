@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](GlobaltagdispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | {{{dispositivo_resource_ativar}}}
 [**desativarUsingPOST**](GlobaltagdispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | {{{dispositivo_resource_desativar}}}
-[**listarUsingGET20**](GlobaltagdispositivoApi.md#listarUsingGET20) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
-[**salvarUsingPOST10**](GlobaltagdispositivoApi.md#salvarUsingPOST10) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
+[**listarUsingGET21**](GlobaltagdispositivoApi.md#listarUsingGET21) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
+[**salvarUsingPOST11**](GlobaltagdispositivoApi.md#salvarUsingPOST11) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
 
 
 # **ativarUsingPOST**
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET20($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
+# **listarUsingGET21**
+> \br.com.conductor.pier.api.v2.model\PageDispositivoResponse listarUsingGET21($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao)
 
 {{{dispositivo_resource_listar}}}
 
@@ -123,10 +123,10 @@ $data_criacao = "data_criacao_example"; // string | {{{dispositivo_request_data_
 $data_desativacao = "data_desativacao_example"; // string | {{{dispositivo_request_data_desativacao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET20($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
+    $result = $api_instance->listarUsingGET21($sort, $page, $limit, $token, $id_usuario, $id_aplicacao_mobile, $data_criacao, $data_desativacao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdispositivoApi->listarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdispositivoApi->listarUsingGET21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -159,8 +159,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST10**
-> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST10($persist)
+# **salvarUsingPOST11**
+> \br.com.conductor.pier.api.v2.model\DispositivoResponse salvarUsingPOST11($persist)
 
 {{{dispositivo_resource_salvar}}}
 
@@ -175,10 +175,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagdispositiv
 $persist = new \br.com.conductor.pier.api.v2.model\DispositivoPersistValue_(); // \br.com.conductor.pier.api.v2.model\DispositivoPersistValue_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST10($persist);
+    $result = $api_instance->salvarUsingPOST11($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdispositivoApi->salvarUsingPOST10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdispositivoApi->salvarUsingPOST11: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **ativarAnuidadeUsingPOST**
-> object ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial)
+> object ativarAnuidadeUsingPOST($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial)
 
 {{{conta_resource_ativar_anuidade}}}
 
@@ -26,7 +26,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagservicocontaApi();
 $id = 789; // int | {{{conta_resource_ativar_anuidade_param_id}}}
 $id_anuidade = 789; // int | {{{anuidade_request_id_anuidade_value}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
@@ -36,7 +35,7 @@ $id_operadora = 789; // int | {{{anuidade_request_id_operadora_value}}}
 $id_origem_comercial = 789; // int | {{{anuidade_request_id_origem_comercial_value}}}
 
 try { 
-    $result = $api_instance->ativarAnuidadeUsingPOST($id, $id_anuidade, $authorization, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
+    $result = $api_instance->ativarAnuidadeUsingPOST($id, $id_anuidade, $sort, $page, $limit, $ddd, $celular, $id_operadora, $id_origem_comercial);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagservicocontaApi->ativarAnuidadeUsingPOST: ', $e->getMessage(), "\n";
@@ -50,7 +49,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **id_anuidade** | **int**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -75,7 +73,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ativarEnvioFaturaEmailUsingPOST**
-> object ativarEnvioFaturaEmailUsingPOST($id, $authorization)
+> object ativarEnvioFaturaEmailUsingPOST($id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -88,10 +86,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagservicocontaApi();
 $id = 789; // int | {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id, $authorization);
+    $result = $api_instance->ativarEnvioFaturaEmailUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagservicocontaApi->ativarEnvioFaturaEmailUsingPOST: ', $e->getMessage(), "\n";
@@ -104,7 +101,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 
@@ -122,7 +118,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **desativarEnvioFaturaEmailUsingPOST**
-> object desativarEnvioFaturaEmailUsingPOST($id, $authorization)
+> object desativarEnvioFaturaEmailUsingPOST($id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -135,10 +131,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagservicocontaApi();
 $id = 789; // int | {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 
 try { 
-    $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id, $authorization);
+    $result = $api_instance->desativarEnvioFaturaEmailUsingPOST($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltagservicocontaApi->desativarEnvioFaturaEmailUsingPOST: ', $e->getMessage(), "\n";
@@ -151,7 +146,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
 
 ### Return type
 

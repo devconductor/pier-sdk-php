@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT24**](GlobaltagwebhookApi.md#alterarUsingPUT24) | **PUT** /api/webhooks/{id} | {{{web_hook_resource_alterar}}}
-[**consultarUsingGET53**](GlobaltagwebhookApi.md#consultarUsingGET53) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
-[**listarUsingGET66**](GlobaltagwebhookApi.md#listarUsingGET66) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
-[**salvarUsingPOST35**](GlobaltagwebhookApi.md#salvarUsingPOST35) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
+[**consultarUsingGET55**](GlobaltagwebhookApi.md#consultarUsingGET55) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
+[**listarUsingGET69**](GlobaltagwebhookApi.md#listarUsingGET69) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
+[**salvarUsingPOST36**](GlobaltagwebhookApi.md#salvarUsingPOST36) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
 
 
 # **alterarUsingPUT24**
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET53**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET53($id)
+# **consultarUsingGET55**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse consultarUsingGET55($id)
 
 {{{web_hook_resource_consultar}}}
 
@@ -75,10 +75,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagwebhookApi
 $id = 789; // int | {{{web_hook_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET53($id);
+    $result = $api_instance->consultarUsingGET55($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagwebhookApi->consultarUsingGET53: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagwebhookApi->consultarUsingGET55: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET66**
-> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET66($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
+# **listarUsingGET69**
+> \br.com.conductor.pier.api.v2.model\PageWebHookResponse listarUsingGET69($sort, $page, $limit, $id, $tipo_evento, $metodo, $url)
 
 {{{web_hook_resource_listar}}}
 
@@ -126,10 +126,10 @@ $metodo = "metodo_example"; // string | {{{web_hook_request_metodo_value}}}
 $url = "url_example"; // string | {{{web_hook_request_url_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET66($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+    $result = $api_instance->listarUsingGET69($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagwebhookApi->listarUsingGET66: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagwebhookApi->listarUsingGET69: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -161,8 +161,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST35**
-> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST35($webhook)
+# **salvarUsingPOST36**
+> \br.com.conductor.pier.api.v2.model\WebHookResponse salvarUsingPOST36($webhook)
 
 {{{web_hook_resource_salvar}}}
 
@@ -177,10 +177,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagwebhookApi
 $webhook = new \br.com.conductor.pier.api.v2.model\WebHookPersistValue_(); // \br.com.conductor.pier.api.v2.model\WebHookPersistValue_ | webhook
 
 try { 
-    $result = $api_instance->salvarUsingPOST35($webhook);
+    $result = $api_instance->salvarUsingPOST36($webhook);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagwebhookApi->salvarUsingPOST35: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagwebhookApi->salvarUsingPOST36: ', $e->getMessage(), "\n";
 }
 ?>
 ```

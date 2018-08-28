@@ -86,22 +86,22 @@ class GlobaltagstatusparametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET36
+     * Test case for consultarUsingGET38
      *
      * {{{status_conta_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET36() {
+    public function test_consultarUsingGET38() {
 
     }
     
     /**
-     * Test case for consultarUsingGET37
+     * Test case for consultarUsingGET39
      *
      * {{{status_impressao_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET37() {
+    public function test_consultarUsingGET39() {
 
     }
     
@@ -136,22 +136,22 @@ class GlobaltagstatusparametroApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET47
+     * Test case for listarUsingGET49
      *
      * {{{status_conta_resource_listar}}}
      *
      */
-    public function test_listarUsingGET47() {
+    public function test_listarUsingGET49() {
 
     }
     
     /**
-     * Test case for listarUsingGET48
+     * Test case for listarUsingGET50
      *
      * {{{status_impressao_resource_listar}}}
      *
      */
-    public function test_listarUsingGET48() {
+    public function test_listarUsingGET50() {
 
     }
     

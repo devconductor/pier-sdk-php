@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](GlobaltagfaqApi.md#adicionarUsingPOST) | **POST** /api/faqs | {{{faq_resource_adicionar}}}
 [**alterarUsingPUT7**](GlobaltagfaqApi.md#alterarUsingPUT7) | **PUT** /api/faqs/{id} | {{{faq_resource_alterar}}}
-[**consultarUsingGET21**](GlobaltagfaqApi.md#consultarUsingGET21) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
-[**listarUsingGET26**](GlobaltagfaqApi.md#listarUsingGET26) | **GET** /api/faqs | {{{faq_resource_listar}}}
+[**consultarUsingGET23**](GlobaltagfaqApi.md#consultarUsingGET23) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
+[**listarUsingGET27**](GlobaltagfaqApi.md#listarUsingGET27) | **GET** /api/faqs | {{{faq_resource_listar}}}
 
 
 # **adicionarUsingPOST**
@@ -122,8 +122,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET21**
-> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET21($id)
+# **consultarUsingGET23**
+> \br.com.conductor.pier.api.v2.model\FaqResponse consultarUsingGET23($id)
 
 {{{faq_resource_consultar}}}
 
@@ -138,10 +138,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltagfaqApi();
 $id = 789; // int | {{{faq_resource_consultar_param_id_faq}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET21($id);
+    $result = $api_instance->consultarUsingGET23($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagfaqApi->consultarUsingGET21: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagfaqApi->consultarUsingGET23: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -167,8 +167,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET26**
-> \br.com.conductor.pier.api.v2.model\PageFaqResponse listarUsingGET26($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
+# **listarUsingGET27**
+> \br.com.conductor.pier.api.v2.model\PageFaqResponse listarUsingGET27($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status)
 
 {{{faq_resource_listar}}}
 
@@ -192,10 +192,10 @@ $categoria = "categoria_example"; // string | {{{faq_request_categoria_value}}}
 $status = "status_example"; // string | {{{faq_request_status_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
+    $result = $api_instance->listarUsingGET27($sort, $page, $limit, $id_faq, $pergunta, $resposta, $relevancia, $plataforma, $categoria, $status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagfaqApi->listarUsingGET26: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagfaqApi->listarUsingGET27: ', $e->getMessage(), "\n";
 }
 ?>
 ```

@@ -203,7 +203,7 @@ class GlobaltagwebhookApi
     }
     
     /**
-     * consultarUsingGET53
+     * consultarUsingGET55
      *
      * {{{web_hook_resource_consultar}}}
      *
@@ -211,15 +211,15 @@ class GlobaltagwebhookApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET53($id)
+    public function consultarUsingGET55($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET53WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET55WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET53WithHttpInfo
+     * consultarUsingGET55WithHttpInfo
      *
      * {{{web_hook_resource_consultar}}}
      *
@@ -227,12 +227,12 @@ class GlobaltagwebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET53WithHttpInfo($id)
+    public function consultarUsingGET55WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET53');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET55');
         }
   
         // parse inputs
@@ -298,7 +298,7 @@ class GlobaltagwebhookApi
     }
     
     /**
-     * listarUsingGET66
+     * listarUsingGET69
      *
      * {{{web_hook_resource_listar}}}
      *
@@ -312,15 +312,15 @@ class GlobaltagwebhookApi
      * @return \br.com.conductor.pier.api.v2.model\PageWebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET66($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET69($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET66WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET69WithHttpInfo ($sort, $page, $limit, $id, $tipo_evento, $metodo, $url);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET66WithHttpInfo
+     * listarUsingGET69WithHttpInfo
      *
      * {{{web_hook_resource_listar}}}
      *
@@ -334,7 +334,7 @@ class GlobaltagwebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageWebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET66WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
+    public function listarUsingGET69WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $tipo_evento = null, $metodo = null, $url = null)
     {
         
   
@@ -425,7 +425,7 @@ class GlobaltagwebhookApi
     }
     
     /**
-     * salvarUsingPOST35
+     * salvarUsingPOST36
      *
      * {{{web_hook_resource_salvar}}}
      *
@@ -433,15 +433,15 @@ class GlobaltagwebhookApi
      * @return \br.com.conductor.pier.api.v2.model\WebHookResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST35($webhook)
+    public function salvarUsingPOST36($webhook)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST35WithHttpInfo ($webhook);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST36WithHttpInfo ($webhook);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST35WithHttpInfo
+     * salvarUsingPOST36WithHttpInfo
      *
      * {{{web_hook_resource_salvar}}}
      *
@@ -449,12 +449,12 @@ class GlobaltagwebhookApi
      * @return Array of \br.com.conductor.pier.api.v2.model\WebHookResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST35WithHttpInfo($webhook)
+    public function salvarUsingPOST36WithHttpInfo($webhook)
     {
         
         // verify the required parameter 'webhook' is set
         if ($webhook === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $webhook when calling salvarUsingPOST35');
+            throw new \InvalidArgumentException('Missing the required parameter $webhook when calling salvarUsingPOST36');
         }
   
         // parse inputs

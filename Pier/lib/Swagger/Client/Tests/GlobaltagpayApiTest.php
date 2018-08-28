@@ -76,12 +76,12 @@ class GlobaltagpayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT
+     * Test case for atualizarUsingPUT1
      *
      * {{{cartao_pay_resource_atualizar}}}
      *
      */
-    public function test_atualizarUsingPUT() {
+    public function test_atualizarUsingPUT1() {
 
     }
     
@@ -96,12 +96,12 @@ class GlobaltagpayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET9
+     * Test case for consultarUsingGET11
      *
      * {{{cartao_pay_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET9() {
+    public function test_consultarUsingGET11() {
 
     }
     
@@ -156,22 +156,22 @@ class GlobaltagpayApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET10
+     * Test case for listarUsingGET11
      *
      * {{{cartao_pay_resource_listar}}}
      *
      */
-    public function test_listarUsingGET10() {
+    public function test_listarUsingGET11() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST5
+     * Test case for salvarUsingPOST6
      *
      * {{{cartao_pay_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST5() {
+    public function test_salvarUsingPOST6() {
 
     }
     

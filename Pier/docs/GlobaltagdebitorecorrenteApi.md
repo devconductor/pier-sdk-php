@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**aderirDebitoRecorrenteUsingPOST**](GlobaltagdebitorecorrenteApi.md#aderirDebitoRecorrenteUsingPOST) | **POST** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_aderir}}}
 [**cancelarDebitoRecorrenteUsingPOST**](GlobaltagdebitorecorrenteApi.md#cancelarDebitoRecorrenteUsingPOST) | **POST** /api/debitos-recorrentes/{id}/cancelar | {{{conta_debito_recorrente_resource_cancelar}}}
-[**listarUsingGET17**](GlobaltagdebitorecorrenteApi.md#listarUsingGET17) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
-[**listarUsingGET53**](GlobaltagdebitorecorrenteApi.md#listarUsingGET53) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
+[**listarUsingGET18**](GlobaltagdebitorecorrenteApi.md#listarUsingGET18) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
+[**listarUsingGET56**](GlobaltagdebitorecorrenteApi.md#listarUsingGET56) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
 
 
 # **aderirDebitoRecorrenteUsingPOST**
@@ -102,8 +102,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET17**
-> \br.com.conductor.pier.api.v2.model\PageContaDebitoRecorrenteResponse listarUsingGET17($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento)
+# **listarUsingGET18**
+> \br.com.conductor.pier.api.v2.model\PageContaDebitoRecorrenteResponse listarUsingGET18($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento)
 
 {{{conta_debito_recorrente_resource_listar}}}
 
@@ -126,10 +126,10 @@ $ativo = true; // bool | {{{conta_debito_recorrente_request_ativo_value}}}
 $data_hora_ultimo_pagamento = "data_hora_ultimo_pagamento_example"; // string | {{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET17($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
+    $result = $api_instance->listarUsingGET18($id_conta, $id_tipo_debito_recorrente, $sort, $page, $limit, $data_hora_inicio, $data_hora_fim, $ativo, $data_hora_ultimo_pagamento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdebitorecorrenteApi->listarUsingGET17: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdebitorecorrenteApi->listarUsingGET18: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -163,8 +163,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET53**
-> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET53($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
+# **listarUsingGET56**
+> \br.com.conductor.pier.api.v2.model\PageTipoDebitoRecorrenteResponse listarUsingGET56($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo)
 
 {{{tipo_debito_recorrente_resource_listar}}}
 
@@ -185,10 +185,10 @@ $valor = new Number(); // Number | {{{tipo_debito_recorrente_request_valor_value
 $flag_ativo = true; // bool | {{{tipo_debito_recorrente_request_flag_ativo_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET53($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
+    $result = $api_instance->listarUsingGET56($sort, $page, $limit, $id, $descricao, $valor, $flag_ativo);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagdebitorecorrenteApi->listarUsingGET53: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagdebitorecorrenteApi->listarUsingGET56: ', $e->getMessage(), "\n";
 }
 ?>
 ```

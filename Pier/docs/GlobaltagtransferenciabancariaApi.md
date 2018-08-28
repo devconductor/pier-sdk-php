@@ -5,18 +5,18 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarTaxasJurosContasUsingPUT**](GlobaltagtransferenciabancariaApi.md#atualizarTaxasJurosContasUsingPUT) | **PUT** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
-[**atualizarUsingPUT1**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
+[**atualizarUsingPUT2**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT2) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
 [**cancelarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#cancelarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar | {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
 [**confirmarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#confirmarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar | {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria}}}
 [**consultarTaxasJurosContasUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTaxasJurosContasUsingGET) | **GET** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
 [**consultarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
-[**consultarUsingGET13**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET13) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
-[**consultarUsingGET48**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
+[**consultarUsingGET15**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET15) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
+[**consultarUsingGET50**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET50) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
 [**listarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
-[**listarUsingGET16**](GlobaltagtransferenciabancariaApi.md#listarUsingGET16) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
-[**listarUsingGET59**](GlobaltagtransferenciabancariaApi.md#listarUsingGET59) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
+[**listarUsingGET17**](GlobaltagtransferenciabancariaApi.md#listarUsingGET17) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
+[**listarUsingGET62**](GlobaltagtransferenciabancariaApi.md#listarUsingGET62) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
 [**salvarTaxasJurosContasUsingPOST**](GlobaltagtransferenciabancariaApi.md#salvarTaxasJurosContasUsingPOST) | **POST** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
-[**salvarUsingPOST7**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
+[**salvarUsingPOST8**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST8) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
 [**simularTransferenciaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
 [**transferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferencia_credito_conta_bancaria}}}
 [**transferirUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferir}}}
@@ -69,8 +69,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **atualizarUsingPUT1**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse atualizarUsingPUT1($id, $update)
+# **atualizarUsingPUT2**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse atualizarUsingPUT2($id, $update)
 
 {{{conta_bancaria_resource_atualizar}}}
 
@@ -86,10 +86,10 @@ $id = 789; // int | {{{conta_bancaria_resource_atualizar_param_id}}}
 $update = new \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorUpdateValue_(); // \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorUpdateValue_ | update
 
 try { 
-    $result = $api_instance->atualizarUsingPUT1($id, $update);
+    $result = $api_instance->atualizarUsingPUT2($id, $update);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->atualizarUsingPUT1: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->atualizarUsingPUT2: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -298,8 +298,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET13**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET13($id)
+# **consultarUsingGET15**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse consultarUsingGET15($id)
 
 {{{conta_bancaria_resource_consultar}}}
 
@@ -314,10 +314,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagtransferen
 $id = 789; // int | {{{conta_bancaria_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET13($id);
+    $result = $api_instance->consultarUsingGET15($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET13: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET15: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -343,8 +343,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET48**
-> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET48($id, $id_transferencia, $id_conta_bancaria_destino)
+# **consultarUsingGET50**
+> \br.com.conductor.pier.api.v2.model\TransferenciaBancariaResponse consultarUsingGET50($id, $id_transferencia, $id_conta_bancaria_destino)
 
 {{{transferencia_bancaria_resource_consultar}}}
 
@@ -361,10 +361,10 @@ $id_transferencia = 789; // int | {{{transferencia_bancaria_resource_consultar_p
 $id_conta_bancaria_destino = 789; // int | {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET48($id, $id_transferencia, $id_conta_bancaria_destino);
+    $result = $api_instance->consultarUsingGET50($id, $id_transferencia, $id_conta_bancaria_destino);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET48: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->consultarUsingGET50: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -449,8 +449,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET16**
-> \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse listarUsingGET16($id_conta, $nome_agencia, $banco, $numero_agencia, $numero_conta, $flag_ativo, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit)
+# **listarUsingGET17**
+> \br.com.conductor.pier.api.v2.model\PageContaBancariaPortadorResponse listarUsingGET17($id_conta, $nome_agencia, $banco, $numero_agencia, $numero_conta, $flag_ativo, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit)
 
 {{{conta_bancaria_resource_listar}}}
 
@@ -477,10 +477,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarUsingGET16($id_conta, $nome_agencia, $banco, $numero_agencia, $numero_conta, $flag_ativo, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
+    $result = $api_instance->listarUsingGET17($id_conta, $nome_agencia, $banco, $numero_agencia, $numero_conta, $flag_ativo, $flag_conta_origem_doc, $id_pessoa_fisica, $favorecido, $numero_receira_federal, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->listarUsingGET16: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->listarUsingGET17: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -518,8 +518,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET59**
-> \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse listarUsingGET59($id, $id_conta_bancaria_destino, $sort, $page, $limit)
+# **listarUsingGET62**
+> \br.com.conductor.pier.api.v2.model\PageTransferenciaBancariaResponse listarUsingGET62($id, $id_conta_bancaria_destino, $sort, $page, $limit)
 
 {{{transferencia_bancaria_resource_listar}}}
 
@@ -538,10 +538,10 @@ $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarUsingGET59($id, $id_conta_bancaria_destino, $sort, $page, $limit);
+    $result = $api_instance->listarUsingGET62($id, $id_conta_bancaria_destino, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->listarUsingGET59: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->listarUsingGET62: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -618,8 +618,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST7**
-> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse salvarUsingPOST7($persist)
+# **salvarUsingPOST8**
+> \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorResponse salvarUsingPOST8($persist)
 
 {{{conta_bancaria_resource_salvar}}}
 
@@ -634,10 +634,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagtransferen
 $persist = new \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersistValue_(); // \br.com.conductor.pier.api.v2.model\ContaBancariaPortadorPersistValue_ | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST7($persist);
+    $result = $api_instance->salvarUsingPOST8($persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagtransferenciabancariaApi->salvarUsingPOST7: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagtransferenciabancariaApi->salvarUsingPOST8: ', $e->getMessage(), "\n";
 }
 ?>
 ```

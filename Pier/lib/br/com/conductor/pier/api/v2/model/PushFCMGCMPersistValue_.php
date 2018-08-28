@@ -132,19 +132,19 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
 
     
     /**
-      * $id_pessoa {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+      * $id_pessoa {{{push_a_p_n_s_persist_id_pessoa_value}}}
       * @var int
       */
     protected $id_pessoa;
     
     /**
-      * $id_conta {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+      * $id_conta {{{push_a_p_n_s_persist_id_conta_value}}}
       * @var int
       */
     protected $id_conta;
     
     /**
-      * $token_dispositivo {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+      * $token_dispositivo {{{push_a_p_n_s_persist_token_dispositivo_value}}}
       * @var string
       */
     protected $token_dispositivo;
@@ -156,13 +156,13 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
     protected $token_servidor;
     
     /**
-      * $titulo {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+      * $titulo {{{push_a_p_n_s_persist_titulo_value}}}
       * @var string
       */
     protected $titulo;
     
     /**
-      * $conteudo {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+      * $conteudo {{{push_a_p_n_s_persist_conteudo_value}}}
       * @var string
       */
     protected $conteudo;
@@ -224,7 +224,7 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
   
     /**
      * Sets id_pessoa
-     * @param int $id_pessoa {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+     * @param int $id_pessoa {{{push_a_p_n_s_persist_id_pessoa_value}}}
      * @return $this
      */
     public function setIdPessoa($id_pessoa)
@@ -245,7 +245,7 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
   
     /**
      * Sets id_conta
-     * @param int $id_conta {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+     * @param int $id_conta {{{push_a_p_n_s_persist_id_conta_value}}}
      * @return $this
      */
     public function setIdConta($id_conta)
@@ -266,7 +266,7 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
   
     /**
      * Sets token_dispositivo
-     * @param string $token_dispositivo {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+     * @param string $token_dispositivo {{{push_a_p_n_s_persist_token_dispositivo_value}}}
      * @return $this
      */
     public function setTokenDispositivo($token_dispositivo)
@@ -308,7 +308,7 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
   
     /**
      * Sets titulo
-     * @param string $titulo {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+     * @param string $titulo {{{push_a_p_n_s_persist_titulo_value}}}
      * @return $this
      */
     public function setTitulo($titulo)
@@ -329,7 +329,7 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
   
     /**
      * Sets conteudo
-     * @param string $conteudo {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+     * @param string $conteudo {{{push_a_p_n_s_persist_conteudo_value}}}
      * @return $this
      */
     public function setConteudo($conteudo)
@@ -355,9 +355,9 @@ class PushFCMGCMPersistValue_ implements ArrayAccess
      */
     public function setTipoEvento($tipo_evento)
     {
-        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS");
+        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS", "OTP_3D_SECURE");
         if (!in_array($tipo_evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS', 'OTP_3D_SECURE'");
         }
         $this->tipo_evento = $tipo_evento;
         return $this;

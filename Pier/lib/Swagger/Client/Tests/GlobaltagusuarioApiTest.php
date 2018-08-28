@@ -106,12 +106,12 @@ class GlobaltagusuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for atualizarUsingPUT2
+     * Test case for atualizarUsingPUT3
      *
      * {{{controle_seguranca_dispositivo_atualizar}}}
      *
      */
-    public function test_atualizarUsingPUT2() {
+    public function test_atualizarUsingPUT3() {
 
     }
     
@@ -126,22 +126,22 @@ class GlobaltagusuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for consultarUsingGET15
+     * Test case for consultarUsingGET17
      *
      * {{{controle_seguranca_dispositivo_consultar}}}
      *
      */
-    public function test_consultarUsingGET15() {
+    public function test_consultarUsingGET17() {
 
     }
     
     /**
-     * Test case for consultarUsingGET51
+     * Test case for consultarUsingGET53
      *
      * {{{usuario_resource_consultar}}}
      *
      */
-    public function test_consultarUsingGET51() {
+    public function test_consultarUsingGET53() {
 
     }
     
@@ -156,12 +156,12 @@ class GlobaltagusuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET62
+     * Test case for listarUsingGET65
      *
      * {{{usuario_resource_listar}}}
      *
      */
-    public function test_listarUsingGET62() {
+    public function test_listarUsingGET65() {
 
     }
     
@@ -176,22 +176,22 @@ class GlobaltagusuarioApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for salvarUsingPOST33
-     *
-     * {{{usuario_resource_salvar}}}
-     *
-     */
-    public function test_salvarUsingPOST33() {
-
-    }
-    
-    /**
-     * Test case for salvarUsingPOST9
+     * Test case for salvarUsingPOST10
      *
      * {{{controle_seguranca_dispositivo_salvar}}}
      *
      */
-    public function test_salvarUsingPOST9() {
+    public function test_salvarUsingPOST10() {
+
+    }
+    
+    /**
+     * Test case for salvarUsingPOST34
+     *
+     * {{{usuario_resource_salvar}}}
+     *
+     */
+    public function test_salvarUsingPOST34() {
 
     }
     

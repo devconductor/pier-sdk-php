@@ -1,4 +1,4 @@
-# NotificacaoPushResponseValue_
+# NotificacaoPushResponse
 
 ## Properties
 Name | Type | Description | Notes

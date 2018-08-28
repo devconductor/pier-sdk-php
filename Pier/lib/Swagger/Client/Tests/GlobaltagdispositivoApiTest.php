@@ -86,22 +86,22 @@ class GlobaltagdispositivoApiTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test case for listarUsingGET20
+     * Test case for listarUsingGET21
      *
      * {{{dispositivo_resource_listar}}}
      *
      */
-    public function test_listarUsingGET20() {
+    public function test_listarUsingGET21() {
 
     }
     
     /**
-     * Test case for salvarUsingPOST10
+     * Test case for salvarUsingPOST11
      *
      * {{{dispositivo_resource_salvar}}}
      *
      */
-    public function test_salvarUsingPOST10() {
+    public function test_salvarUsingPOST11() {
 
     }
     

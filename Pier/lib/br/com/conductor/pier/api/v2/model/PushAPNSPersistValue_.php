@@ -174,19 +174,19 @@ class PushAPNSPersistValue_ implements ArrayAccess
     protected $conteudo;
     
     /**
-      * $tipo_evento {{{push_a_p_n_s_persist_tipo_evento_value}}}
+      * $tipo_evento {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
       * @var string
       */
     protected $tipo_evento;
     
     /**
-      * $icone {{{push_a_p_n_s_persist_icone_value}}}
+      * $icone {{{push_f_c_m_g_c_m_persist_icone_value}}}
       * @var string
       */
     protected $icone;
     
     /**
-      * $som {{{push_a_p_n_s_persist_som_value}}}
+      * $som {{{push_f_c_m_g_c_m_persist_som_value}}}
       * @var string
       */
     protected $som;
@@ -371,14 +371,14 @@ class PushAPNSPersistValue_ implements ArrayAccess
   
     /**
      * Sets tipo_evento
-     * @param string $tipo_evento {{{push_a_p_n_s_persist_tipo_evento_value}}}
+     * @param string $tipo_evento {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
      * @return $this
      */
     public function setTipoEvento($tipo_evento)
     {
-        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS");
+        $allowed_values = array("RISCO_FRAUDE", "CODIGO_SEGURANCA", "OUTROS", "OTP_3D_SECURE");
         if (!in_array($tipo_evento, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS'");
+            throw new \InvalidArgumentException("Invalid value for 'tipo_evento', must be one of 'RISCO_FRAUDE', 'CODIGO_SEGURANCA', 'OUTROS', 'OTP_3D_SECURE'");
         }
         $this->tipo_evento = $tipo_evento;
         return $this;
@@ -395,7 +395,7 @@ class PushAPNSPersistValue_ implements ArrayAccess
   
     /**
      * Sets icone
-     * @param string $icone {{{push_a_p_n_s_persist_icone_value}}}
+     * @param string $icone {{{push_f_c_m_g_c_m_persist_icone_value}}}
      * @return $this
      */
     public function setIcone($icone)
@@ -416,7 +416,7 @@ class PushAPNSPersistValue_ implements ArrayAccess
   
     /**
      * Sets som
-     * @param string $som {{{push_a_p_n_s_persist_som_value}}}
+     * @param string $som {{{push_f_c_m_g_c_m_persist_som_value}}}
      * @return $this
      */
     public function setSom($som)

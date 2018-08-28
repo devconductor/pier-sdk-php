@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **data_contestacao** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **data_envio_cb** | **string** |  | [optional] 
 **data_transacao** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**historico** | **string** |  | [optional] 
 **id_compra_contestada** | **int** |  | [optional] 
 **internacional** | **int** |  | [optional] 
 **mcc** | **string** |  | [optional] 

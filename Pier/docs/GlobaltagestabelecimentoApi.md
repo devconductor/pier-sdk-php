@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrarUsingPOST4**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consultaOperacaoUsingGET**](GlobaltagestabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultarOrigemComercialUsingGET**](GlobaltagestabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultarUsingGET20**](GlobaltagestabelecimentoApi.md#consultarUsingGET20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultarUsingGET25**](GlobaltagestabelecimentoApi.md#consultarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultarUsingGET38**](GlobaltagestabelecimentoApi.md#consultarUsingGET38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultarUsingGET52**](GlobaltagestabelecimentoApi.md#consultarUsingGET52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultarUsingGET26**](GlobaltagestabelecimentoApi.md#consultarUsingGET26) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultarUsingGET27**](GlobaltagestabelecimentoApi.md#consultarUsingGET27) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultarUsingGET42**](GlobaltagestabelecimentoApi.md#consultarUsingGET42) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultarUsingGET54**](GlobaltagestabelecimentoApi.md#consultarUsingGET54) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitarVinculoUsingPOST1**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -35,21 +35,21 @@ Method | HTTP request | Description
 [**listarTiposMaquinetasUsingGET**](GlobaltagestabelecimentoApi.md#listarTiposMaquinetasUsingGET) | **GET** /api/tipos-maquinetas | {{{maquineta_resource_listar_tipos_maquinetas}}}
 [**listarTiposOrigensComerciaisUsingGET**](GlobaltagestabelecimentoApi.md#listarTiposOrigensComerciaisUsingGET) | **GET** /api/tipos-origens-comerciais | {{{tipo_origem_comercial_resource_listar_tipos_origens_comerciais}}}
 [**listarTiposTerminaisUsingGET1**](GlobaltagestabelecimentoApi.md#listarTiposTerminaisUsingGET1) | **GET** /api/tipos-terminais-estabelecimento | {{{terminal_resource_listar_tipos_terminais}}}
-[**listarUsingGET25**](GlobaltagestabelecimentoApi.md#listarUsingGET25) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
-[**listarUsingGET28**](GlobaltagestabelecimentoApi.md#listarUsingGET28) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
-[**listarUsingGET29**](GlobaltagestabelecimentoApi.md#listarUsingGET29) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
-[**listarUsingGET32**](GlobaltagestabelecimentoApi.md#listarUsingGET32) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
-[**listarUsingGET33**](GlobaltagestabelecimentoApi.md#listarUsingGET33) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
-[**listarUsingGET34**](GlobaltagestabelecimentoApi.md#listarUsingGET34) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
-[**listarUsingGET49**](GlobaltagestabelecimentoApi.md#listarUsingGET49) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
-[**listarUsingGET51**](GlobaltagestabelecimentoApi.md#listarUsingGET51) | **GET** /api/terminais | {{{terminal_resource_listar}}}
-[**listarUsingGET64**](GlobaltagestabelecimentoApi.md#listarUsingGET64) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
-[**listarUsingGET65**](GlobaltagestabelecimentoApi.md#listarUsingGET65) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
-[**salvarUsingPOST19**](GlobaltagestabelecimentoApi.md#salvarUsingPOST19) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
-[**salvarUsingPOST20**](GlobaltagestabelecimentoApi.md#salvarUsingPOST20) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
-[**salvarUsingPOST27**](GlobaltagestabelecimentoApi.md#salvarUsingPOST27) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
-[**salvarUsingPOST29**](GlobaltagestabelecimentoApi.md#salvarUsingPOST29) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
-[**salvarUsingPOST34**](GlobaltagestabelecimentoApi.md#salvarUsingPOST34) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
+[**listarUsingGET26**](GlobaltagestabelecimentoApi.md#listarUsingGET26) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
+[**listarUsingGET29**](GlobaltagestabelecimentoApi.md#listarUsingGET29) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
+[**listarUsingGET30**](GlobaltagestabelecimentoApi.md#listarUsingGET30) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
+[**listarUsingGET33**](GlobaltagestabelecimentoApi.md#listarUsingGET33) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
+[**listarUsingGET34**](GlobaltagestabelecimentoApi.md#listarUsingGET34) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
+[**listarUsingGET35**](GlobaltagestabelecimentoApi.md#listarUsingGET35) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
+[**listarUsingGET52**](GlobaltagestabelecimentoApi.md#listarUsingGET52) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
+[**listarUsingGET54**](GlobaltagestabelecimentoApi.md#listarUsingGET54) | **GET** /api/terminais | {{{terminal_resource_listar}}}
+[**listarUsingGET67**](GlobaltagestabelecimentoApi.md#listarUsingGET67) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
+[**listarUsingGET68**](GlobaltagestabelecimentoApi.md#listarUsingGET68) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
+[**salvarUsingPOST20**](GlobaltagestabelecimentoApi.md#salvarUsingPOST20) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
+[**salvarUsingPOST21**](GlobaltagestabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
+[**salvarUsingPOST28**](GlobaltagestabelecimentoApi.md#salvarUsingPOST28) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
+[**salvarUsingPOST30**](GlobaltagestabelecimentoApi.md#salvarUsingPOST30) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
+[**salvarUsingPOST35**](GlobaltagestabelecimentoApi.md#salvarUsingPOST35) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
 
 # **alterarOrigemComercialUsingPUT**
@@ -606,8 +606,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET20**
-> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET20($id)
+# **consultarUsingGET22**
+> \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse consultarUsingGET22($id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -622,10 +622,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET20($id);
+    $result = $api_instance->consultarUsingGET22($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET22: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -651,8 +651,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET22**
-> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET22($id)
+# **consultarUsingGET24**
+> \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse consultarUsingGET24($id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -667,10 +667,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{grupo_economico_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET22($id);
+    $result = $api_instance->consultarUsingGET24($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET22: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET24: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -696,8 +696,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET24**
-> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET24($id)
+# **consultarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\MaquinetaResponse consultarUsingGET26($id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -712,10 +712,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{maquineta_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET24($id);
+    $result = $api_instance->consultarUsingGET26($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET24: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -741,8 +741,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET25($id)
+# **consultarUsingGET27**
+> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse consultarUsingGET27($id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -757,10 +757,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{operacao_credor_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET25($id);
+    $result = $api_instance->consultarUsingGET27($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET27: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -786,8 +786,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET38**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET38($id)
+# **consultarUsingGET40**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse consultarUsingGET40($id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -802,10 +802,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{telefone_estabelecimento_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET38($id);
+    $result = $api_instance->consultarUsingGET40($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET38: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET40: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -831,8 +831,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET40**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET40($id)
+# **consultarUsingGET42**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse consultarUsingGET42($id)
 
 {{{terminal_resource_consultar}}}
 
@@ -847,10 +847,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{terminal_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET40($id);
+    $result = $api_instance->consultarUsingGET42($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET40: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET42: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -876,8 +876,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET52**
-> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52($id)
+# **consultarUsingGET54**
+> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse consultarUsingGET54($id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -892,10 +892,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $id = 789; // int | {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET52($id);
+    $result = $api_instance->consultarUsingGET54($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET52: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->consultarUsingGET54: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1553,8 +1553,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET25**
-> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET25($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
+# **listarUsingGET26**
+> \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse listarUsingGET26($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz)
 
 {{{estabelecimento_resource_listar}}}
 
@@ -1606,10 +1606,10 @@ $uf2 = "uf2_example"; // string | {{{estabelecimento_request_uf2_value}}}
 $flag_matriz = 56; // int | {{{estabelecimento_request_flag_matriz_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET25($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+    $result = $api_instance->listarUsingGET26($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET25: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET26: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1672,8 +1672,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET28**
-> \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse listarUsingGET28($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav)
+# **listarUsingGET29**
+> \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse listarUsingGET29($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav)
 
 {{{grupo_economico_resource_listar}}}
 
@@ -1715,10 +1715,10 @@ $limite_rav = new Number(); // Number | {{{grupo_economico_request_limite_r_a_v_
 $id_credor_rav = 789; // int | {{{grupo_economico_request_id_credor_r_a_v_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET28($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
+    $result = $api_instance->listarUsingGET29($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET28: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET29: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1771,8 +1771,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET29**
-> \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse listarUsingGET29($sort, $page, $limit, $nome)
+# **listarUsingGET30**
+> \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse listarUsingGET30($sort, $page, $limit, $nome)
 
 {{{grupo_origem_comercial_resource_listar}}}
 
@@ -1790,10 +1790,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $nome = "nome_example"; // string | {{{grupo_origem_comercial_request_nome_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET29($sort, $page, $limit, $nome);
+    $result = $api_instance->listarUsingGET30($sort, $page, $limit, $nome);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET29: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET30: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1822,8 +1822,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET32**
-> \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse listarUsingGET32($sort, $page, $limit, $id_estabelecimento)
+# **listarUsingGET33**
+> \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse listarUsingGET33($sort, $page, $limit, $id_estabelecimento)
 
 {{{maquineta_resource_listar}}}
 
@@ -1841,10 +1841,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $id_estabelecimento = 789; // int | {{{maquineta_request_id_estabelecimento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET32($sort, $page, $limit, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET33($sort, $page, $limit, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET32: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET33: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1873,8 +1873,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET33**
-> \br.com.conductor.pier.api.v2.model\PageMoedaResponse listarUsingGET33($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao)
+# **listarUsingGET34**
+> \br.com.conductor.pier.api.v2.model\PageMoedaResponse listarUsingGET34($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao)
 
 {{{moeda_resource_listar}}}
 
@@ -1894,10 +1894,10 @@ $simbolo = "simbolo_example"; // string | {{{moeda_request_simbolo_value}}}
 $descricao = "descricao_example"; // string | {{{moeda_request_descricao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET33($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
+    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET33: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET34: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1928,8 +1928,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET34**
-> \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse listarUsingGET34($sort, $page, $limit, $id_operacao, $id_credor, $id_produto)
+# **listarUsingGET35**
+> \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse listarUsingGET35($sort, $page, $limit, $id_operacao, $id_credor, $id_produto)
 
 {{{operacao_credor_resource_listar}}}
 
@@ -1949,10 +1949,10 @@ $id_credor = 789; // int | {{{operacao_credor_request_id_credor_value}}}
 $id_produto = 789; // int | {{{operacao_credor_request_id_produto_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET34($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
+    $result = $api_instance->listarUsingGET35($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET35: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -1983,8 +1983,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET49**
-> \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse listarUsingGET49($sort, $page, $limit, $id_estabelecimento)
+# **listarUsingGET52**
+> \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse listarUsingGET52($sort, $page, $limit, $id_estabelecimento)
 
 {{{telefone_estabelecimento_resource_listar}}}
 
@@ -2002,10 +2002,10 @@ $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 $id_estabelecimento = 789; // int | {{{telefone_estabelecimento_request_id_estabelecimento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET49($sort, $page, $limit, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET52($sort, $page, $limit, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET49: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET52: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2034,8 +2034,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET51**
-> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET51($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
+# **listarUsingGET54**
+> \br.com.conductor.pier.api.v2.model\PageTerminalResponse listarUsingGET54($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento)
 
 {{{terminal_resource_listar}}}
 
@@ -2056,10 +2056,10 @@ $numero_estabelecimento = 789; // int | {{{terminal_request_numero_estabelecimen
 $id_estabelecimento = 789; // int | {{{terminal_request_id_estabelecimento_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET51($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+    $result = $api_instance->listarUsingGET54($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET51: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET54: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2091,8 +2091,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET64**
-> \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET64($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente)
+# **listarUsingGET67**
+> \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET67($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente)
 
 {{{vinculo_estabelecimento_adquirente_resource_listar}}}
 
@@ -2112,10 +2112,10 @@ $id_estabelecimento = 789; // int | {{{vinculo_estabelecimento_adquirente_reques
 $codigo_estabelecimento_adquirente = "codigo_estabelecimento_adquirente_example"; // string | {{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET64($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
+    $result = $api_instance->listarUsingGET67($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET64: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET67: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2146,8 +2146,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET65**
-> \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse listarUsingGET65($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc)
+# **listarUsingGET68**
+> \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse listarUsingGET68($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc)
 
 {{{vinculo_operacao_resource_listar}}}
 
@@ -2168,10 +2168,10 @@ $id_operacao = 789; // int | {{{vinculo_operacao_request_id_operacao_value}}}
 $codigo_mcc = 56; // int | {{{vinculo_operacao_request_codigo_m_c_c_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET65($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
+    $result = $api_instance->listarUsingGET68($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET65: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->listarUsingGET68: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2203,8 +2203,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST19**
-> \br.com.conductor.pier.api.v2.model\MaquinetaResponse salvarUsingPOST19($maquineta_persist)
+# **salvarUsingPOST20**
+> \br.com.conductor.pier.api.v2.model\MaquinetaResponse salvarUsingPOST20($maquineta_persist)
 
 {{{maquineta_resource_salvar}}}
 
@@ -2219,10 +2219,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $maquineta_persist = new \br.com.conductor.pier.api.v2.model\MaquinetaPersist(); // \br.com.conductor.pier.api.v2.model\MaquinetaPersist | maquinetaPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST19($maquineta_persist);
+    $result = $api_instance->salvarUsingPOST20($maquineta_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST19: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST20: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2248,8 +2248,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST20**
-> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse salvarUsingPOST20($operacao_credor_persist)
+# **salvarUsingPOST21**
+> \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse salvarUsingPOST21($operacao_credor_persist)
 
 {{{operacao_credor_resource_salvar}}}
 
@@ -2264,10 +2264,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $operacao_credor_persist = new \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist(); // \br.com.conductor.pier.api.v2.model\OperacaoCredorPersist | operacaoCredorPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST20($operacao_credor_persist);
+    $result = $api_instance->salvarUsingPOST21($operacao_credor_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST20: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST21: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2293,8 +2293,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST27**
-> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse salvarUsingPOST27($telefone_estabelecimento_persist)
+# **salvarUsingPOST28**
+> \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse salvarUsingPOST28($telefone_estabelecimento_persist)
 
 {{{telefone_estabelecimento_resource_salvar}}}
 
@@ -2309,10 +2309,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $telefone_estabelecimento_persist = new \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoPersist(); // \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoPersist | telefoneEstabelecimentoPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST27($telefone_estabelecimento_persist);
+    $result = $api_instance->salvarUsingPOST28($telefone_estabelecimento_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST27: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST28: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2338,8 +2338,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST29**
-> \br.com.conductor.pier.api.v2.model\TerminalResponse salvarUsingPOST29($terminal_persist)
+# **salvarUsingPOST30**
+> \br.com.conductor.pier.api.v2.model\TerminalResponse salvarUsingPOST30($terminal_persist)
 
 {{{terminal_resource_salvar}}}
 
@@ -2354,10 +2354,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $terminal_persist = new \br.com.conductor.pier.api.v2.model\TerminalPersist(); // \br.com.conductor.pier.api.v2.model\TerminalPersist | terminalPersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST29($terminal_persist);
+    $result = $api_instance->salvarUsingPOST30($terminal_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST29: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST30: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -2383,8 +2383,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST34**
-> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST34($vinculo_estabelecimento_adquirente_persist)
+# **salvarUsingPOST35**
+> \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST35($vinculo_estabelecimento_adquirente_persist)
 
 {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
@@ -2399,10 +2399,10 @@ $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\Globaltagestabeleci
 $vinculo_estabelecimento_adquirente_persist = new \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirentePersist(); // \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirentePersist | vinculoEstabelecimentoAdquirentePersist
 
 try { 
-    $result = $api_instance->salvarUsingPOST34($vinculo_estabelecimento_adquirente_persist);
+    $result = $api_instance->salvarUsingPOST35($vinculo_estabelecimento_adquirente_persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST34: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagestabelecimentoApi->salvarUsingPOST35: ', $e->getMessage(), "\n";
 }
 ?>
 ```

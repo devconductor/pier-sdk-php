@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **listarHistoricoAlteracoesLimitesUsingGET**
-> \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET($id, $authorization, $sort, $page, $limit)
+> \br.com.conductor.pier.api.v2.model\PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit)
 
 {{{conta_resource_listar_historico_alteracoes_limites}}}
 
@@ -21,13 +21,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new br.com.conductor.pier.api.v2.invoker\Api\GlobaltaglimiteApi();
 $id = 789; // int | {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
-$authorization = "authorization_example"; // string | Authorization
 $sort = array("sort_example"); // string[] | {{{global_menssagem_sort_sort}}}
 $page = 56; // int | {{{global_menssagem_sort_page_value}}}
 $limit = 56; // int | {{{global_menssagem_sort_limit}}}
 
 try { 
-    $result = $api_instance->listarHistoricoAlteracoesLimitesUsingGET($id, $authorization, $sort, $page, $limit);
+    $result = $api_instance->listarHistoricoAlteracoesLimitesUsingGET($id, $sort, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GlobaltaglimiteApi->listarHistoricoAlteracoesLimitesUsingGET: ', $e->getMessage(), "\n";
@@ -40,7 +39,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} | 
- **authorization** | **string**| Authorization | [optional] 
  **sort** | [**string[]**](string.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **int**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **int**| {{{global_menssagem_sort_limit}}} | [optional] 

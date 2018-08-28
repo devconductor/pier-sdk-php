@@ -92,7 +92,7 @@ class GlobaltagavisoviagemApi
   
     
     /**
-     * consultarUsingGET7
+     * consultarUsingGET8
      *
      * {{{aviso_viagem_resource_consultar}}}
      *
@@ -100,15 +100,15 @@ class GlobaltagavisoviagemApi
      * @return \br.com.conductor.pier.api.v2.model\AvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7($id)
+    public function consultarUsingGET8($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET7WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET8WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET7WithHttpInfo
+     * consultarUsingGET8WithHttpInfo
      *
      * {{{aviso_viagem_resource_consultar}}}
      *
@@ -116,12 +116,12 @@ class GlobaltagavisoviagemApi
      * @return Array of \br.com.conductor.pier.api.v2.model\AvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET7WithHttpInfo($id)
+    public function consultarUsingGET8WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET7');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET8');
         }
   
         // parse inputs
@@ -377,7 +377,7 @@ class GlobaltagavisoviagemApi
     }
     
     /**
-     * listarUsingGET8
+     * listarUsingGET9
      *
      * {{{aviso_viagem_resource_listar}}}
      *
@@ -392,15 +392,15 @@ class GlobaltagavisoviagemApi
      * @return \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
+    public function listarUsingGET9($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET8WithHttpInfo ($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET9WithHttpInfo ($sort, $page, $limit, $id_cartao, $codigo_pais, $data_inicio, $data_fim, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET8WithHttpInfo
+     * listarUsingGET9WithHttpInfo
      *
      * {{{aviso_viagem_resource_listar}}}
      *
@@ -415,7 +415,7 @@ class GlobaltagavisoviagemApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageAvisoViagemResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET8WithHttpInfo($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
+    public function listarUsingGET9WithHttpInfo($sort = null, $page = null, $limit = null, $id_cartao = null, $codigo_pais = null, $data_inicio = null, $data_fim = null, $flag_ativo = null)
     {
         
   

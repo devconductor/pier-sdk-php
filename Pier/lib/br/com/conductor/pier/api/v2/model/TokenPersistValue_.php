@@ -54,7 +54,8 @@ class TokenPersistValue_ implements ArrayAccess
         'token' => 'string',
         'base' => 'int',
         'owner' => 'string',
-        'criado_por' => 'string'
+        'criado_por' => 'string',
+        'id_aplicacao' => 'int'
     );
   
     static function swaggerTypes() {
@@ -69,7 +70,8 @@ class TokenPersistValue_ implements ArrayAccess
         'token' => 'token',
         'base' => 'base',
         'owner' => 'owner',
-        'criado_por' => 'criadoPor'
+        'criado_por' => 'criadoPor',
+        'id_aplicacao' => 'idAplicacao'
     );
   
     static function attributeMap() {
@@ -84,7 +86,8 @@ class TokenPersistValue_ implements ArrayAccess
         'token' => 'setToken',
         'base' => 'setBase',
         'owner' => 'setOwner',
-        'criado_por' => 'setCriadoPor'
+        'criado_por' => 'setCriadoPor',
+        'id_aplicacao' => 'setIdAplicacao'
     );
   
     static function setters() {
@@ -99,7 +102,8 @@ class TokenPersistValue_ implements ArrayAccess
         'token' => 'getToken',
         'base' => 'getBase',
         'owner' => 'getOwner',
-        'criado_por' => 'getCriadoPor'
+        'criado_por' => 'getCriadoPor',
+        'id_aplicacao' => 'getIdAplicacao'
     );
   
     static function getters() {
@@ -131,6 +135,12 @@ class TokenPersistValue_ implements ArrayAccess
       */
     protected $criado_por;
     
+    /**
+      * $id_aplicacao {{{token_dto_id_application_value}}}
+      * @var int
+      */
+    protected $id_aplicacao;
+    
 
     /**
      * Constructor
@@ -144,6 +154,7 @@ class TokenPersistValue_ implements ArrayAccess
             $this->base = $data["base"];
             $this->owner = $data["owner"];
             $this->criado_por = $data["criado_por"];
+            $this->id_aplicacao = $data["id_aplicacao"];
         }
     }
     
@@ -228,6 +239,27 @@ class TokenPersistValue_ implements ArrayAccess
     {
         
         $this->criado_por = $criado_por;
+        return $this;
+    }
+    
+    /**
+     * Gets id_aplicacao
+     * @return int
+     */
+    public function getIdAplicacao()
+    {
+        return $this->id_aplicacao;
+    }
+  
+    /**
+     * Sets id_aplicacao
+     * @param int $id_aplicacao {{{token_dto_id_application_value}}}
+     * @return $this
+     */
+    public function setIdAplicacao($id_aplicacao)
+    {
+        
+        $this->id_aplicacao = $id_aplicacao;
         return $this;
     }
     

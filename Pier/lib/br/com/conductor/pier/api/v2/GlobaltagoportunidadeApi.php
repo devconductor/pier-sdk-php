@@ -530,7 +530,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * consultarUsingGET26
+     * consultarUsingGET28
      *
      * {{{oportunidade_resource_consultar}}}
      *
@@ -538,15 +538,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26($id)
+    public function consultarUsingGET28($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET28WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET26WithHttpInfo
+     * consultarUsingGET28WithHttpInfo
      *
      * {{{oportunidade_resource_consultar}}}
      *
@@ -554,12 +554,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET26WithHttpInfo($id)
+    public function consultarUsingGET28WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET28');
         }
   
         // parse inputs
@@ -625,7 +625,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * consultarUsingGET45
+     * consultarUsingGET47
      *
      * {{{tipo_oportunidade_resource_consultar}}}
      *
@@ -633,15 +633,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET45($id)
+    public function consultarUsingGET47($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET45WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET47WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET45WithHttpInfo
+     * consultarUsingGET47WithHttpInfo
      *
      * {{{tipo_oportunidade_resource_consultar}}}
      *
@@ -649,12 +649,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET45WithHttpInfo($id)
+    public function consultarUsingGET47WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET45');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET47');
         }
   
         // parse inputs
@@ -1308,7 +1308,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * listarUsingGET35
+     * listarUsingGET36
      *
      * {{{oportunidade_resource_listar}}}
      *
@@ -1325,15 +1325,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET35($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET36($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET35WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET36WithHttpInfo ($sort, $page, $limit, $id_status_oportunidade, $data_cadastro, $data_atualizacao, $numero_receita_federal, $data_inicio_vigencia, $data_fim_vigencia, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET35WithHttpInfo
+     * listarUsingGET36WithHttpInfo
      *
      * {{{oportunidade_resource_listar}}}
      *
@@ -1350,7 +1350,7 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET35WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
+    public function listarUsingGET36WithHttpInfo($sort = null, $page = null, $limit = null, $id_status_oportunidade = null, $data_cadastro = null, $data_atualizacao = null, $numero_receita_federal = null, $data_inicio_vigencia = null, $data_fim_vigencia = null, $flag_ativo = null)
     {
         
   
@@ -1453,7 +1453,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * listarUsingGET55
+     * listarUsingGET58
      *
      * {{{tipo_oportunidade_resource_listar}}}
      *
@@ -1465,15 +1465,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET55($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET58($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET55WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET58WithHttpInfo ($sort, $page, $limit, $descricao, $flag_ativo);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET55WithHttpInfo
+     * listarUsingGET58WithHttpInfo
      *
      * {{{tipo_oportunidade_resource_listar}}}
      *
@@ -1485,7 +1485,7 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET55WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
+    public function listarUsingGET58WithHttpInfo($sort = null, $page = null, $limit = null, $descricao = null, $flag_ativo = null)
     {
         
   
@@ -1673,7 +1673,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * salvarUsingPOST21
+     * salvarUsingPOST22
      *
      * {{{oportunidade_resource_salvar}}}
      *
@@ -1681,15 +1681,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\OportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST21($persist)
+    public function salvarUsingPOST22($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST21WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST22WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST21WithHttpInfo
+     * salvarUsingPOST22WithHttpInfo
      *
      * {{{oportunidade_resource_salvar}}}
      *
@@ -1697,12 +1697,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST21WithHttpInfo($persist)
+    public function salvarUsingPOST22WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST21');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST22');
         }
   
         // parse inputs
@@ -1764,7 +1764,7 @@ class GlobaltagoportunidadeApi
     }
     
     /**
-     * salvarUsingPOST30
+     * salvarUsingPOST31
      *
      * {{{tipo_oportunidade_resource_salvar}}}
      *
@@ -1772,15 +1772,15 @@ class GlobaltagoportunidadeApi
      * @return \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST30($persist)
+    public function salvarUsingPOST31($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST30WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST31WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST30WithHttpInfo
+     * salvarUsingPOST31WithHttpInfo
      *
      * {{{tipo_oportunidade_resource_salvar}}}
      *
@@ -1788,12 +1788,12 @@ class GlobaltagoportunidadeApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoOportunidadeResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST30WithHttpInfo($persist)
+    public function salvarUsingPOST31WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST30');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST31');
         }
   
         // parse inputs

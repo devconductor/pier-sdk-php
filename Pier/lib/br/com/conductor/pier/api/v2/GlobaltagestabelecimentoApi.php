@@ -1290,7 +1290,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET20
+     * consultarUsingGET22
      *
      * {{{estabelecimento_resource_consultar}}}
      *
@@ -1298,15 +1298,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20($id)
+    public function consultarUsingGET22($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET20WithHttpInfo
+     * consultarUsingGET22WithHttpInfo
      *
      * {{{estabelecimento_resource_consultar}}}
      *
@@ -1314,12 +1314,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\EstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET20WithHttpInfo($id)
+    public function consultarUsingGET22WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
         }
   
         // parse inputs
@@ -1385,7 +1385,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET22
+     * consultarUsingGET24
      *
      * {{{grupo_economico_resource_consultar}}}
      *
@@ -1393,15 +1393,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22($id)
+    public function consultarUsingGET24($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET22WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET22WithHttpInfo
+     * consultarUsingGET24WithHttpInfo
      *
      * {{{grupo_economico_resource_consultar}}}
      *
@@ -1409,12 +1409,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\GrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET22WithHttpInfo($id)
+    public function consultarUsingGET24WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET22');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
         }
   
         // parse inputs
@@ -1480,7 +1480,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET24
+     * consultarUsingGET26
      *
      * {{{maquineta_resource_consultar}}}
      *
@@ -1488,15 +1488,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\MaquinetaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24($id)
+    public function consultarUsingGET26($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET24WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET26WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET24WithHttpInfo
+     * consultarUsingGET26WithHttpInfo
      *
      * {{{maquineta_resource_consultar}}}
      *
@@ -1504,12 +1504,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\MaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET24WithHttpInfo($id)
+    public function consultarUsingGET26WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET24');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET26');
         }
   
         // parse inputs
@@ -1575,7 +1575,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET25
+     * consultarUsingGET27
      *
      * {{{operacao_credor_resource_consultar}}}
      *
@@ -1583,15 +1583,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25($id)
+    public function consultarUsingGET27($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET25WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET27WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET25WithHttpInfo
+     * consultarUsingGET27WithHttpInfo
      *
      * {{{operacao_credor_resource_consultar}}}
      *
@@ -1599,12 +1599,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET25WithHttpInfo($id)
+    public function consultarUsingGET27WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET25');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET27');
         }
   
         // parse inputs
@@ -1670,7 +1670,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET38
+     * consultarUsingGET40
      *
      * {{{telefone_estabelecimento_resource_consultar}}}
      *
@@ -1678,15 +1678,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38($id)
+    public function consultarUsingGET40($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET38WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET38WithHttpInfo
+     * consultarUsingGET40WithHttpInfo
      *
      * {{{telefone_estabelecimento_resource_consultar}}}
      *
@@ -1694,12 +1694,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET38WithHttpInfo($id)
+    public function consultarUsingGET40WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET38');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
         }
   
         // parse inputs
@@ -1765,7 +1765,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET40
+     * consultarUsingGET42
      *
      * {{{terminal_resource_consultar}}}
      *
@@ -1773,15 +1773,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40($id)
+    public function consultarUsingGET42($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET40WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET42WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET40WithHttpInfo
+     * consultarUsingGET42WithHttpInfo
      *
      * {{{terminal_resource_consultar}}}
      *
@@ -1789,12 +1789,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET40WithHttpInfo($id)
+    public function consultarUsingGET42WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET40');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET42');
         }
   
         // parse inputs
@@ -1860,7 +1860,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * consultarUsingGET52
+     * consultarUsingGET54
      *
      * {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
      *
@@ -1868,15 +1868,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET52($id)
+    public function consultarUsingGET54($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET52WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET54WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET52WithHttpInfo
+     * consultarUsingGET54WithHttpInfo
      *
      * {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
      *
@@ -1884,12 +1884,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET52WithHttpInfo($id)
+    public function consultarUsingGET54WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET52');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET54');
         }
   
         // parse inputs
@@ -3347,7 +3347,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET25
+     * listarUsingGET26
      *
      * {{{estabelecimento_resource_listar}}}
      *
@@ -3392,15 +3392,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET26($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET25WithHttpInfo ($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET26WithHttpInfo ($sort, $page, $limit, $id, $id_grupo_economico, $numero_receita_federal, $nome, $descricao, $nome_fantasia, $cep, $nome_logradouro, $numero_endereco, $complemento, $bairro, $cidade, $uf, $pais, $data_cadastramento, $contato, $email, $flag_arquivo_secr_fazenda, $flag_cartao_digitado, $inativo, $id_pais, $mcc, $id_tipo_estabelecimento, $correspondencia, $id_moeda, $tipo_pagamento, $numero_estabelecimento, $cep2, $nome_logradouro2, $numero_endereco2, $complemento2, $bairro2, $cidade2, $uf2, $flag_matriz);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET25WithHttpInfo
+     * listarUsingGET26WithHttpInfo
      *
      * {{{estabelecimento_resource_listar}}}
      *
@@ -3445,7 +3445,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET25WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
+    public function listarUsingGET26WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $id_grupo_economico = null, $numero_receita_federal = null, $nome = null, $descricao = null, $nome_fantasia = null, $cep = null, $nome_logradouro = null, $numero_endereco = null, $complemento = null, $bairro = null, $cidade = null, $uf = null, $pais = null, $data_cadastramento = null, $contato = null, $email = null, $flag_arquivo_secr_fazenda = null, $flag_cartao_digitado = null, $inativo = null, $id_pais = null, $mcc = null, $id_tipo_estabelecimento = null, $correspondencia = null, $id_moeda = null, $tipo_pagamento = null, $numero_estabelecimento = null, $cep2 = null, $nome_logradouro2 = null, $numero_endereco2 = null, $complemento2 = null, $bairro2 = null, $cidade2 = null, $uf2 = null, $flag_matriz = null)
     {
         
   
@@ -3660,7 +3660,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET28
+     * listarUsingGET29
      *
      * {{{grupo_economico_resource_listar}}}
      *
@@ -3695,15 +3695,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
+    public function listarUsingGET29($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET28WithHttpInfo ($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $razao_social, $nome_credor, $numero_receita_federal, $inscricao_estadual, $contato, $banco, $agencia, $digito_agencia, $conta_corrente, $digito_conta_corrente, $periodicidade, $pagamento_semanal, $pagamento_mensal, $pagamento_decendial_primeiro, $pagamento_decendial_segundo, $pagamento_decendial_terceiro, $pagamento_quinzenal_primeiro, $pagamento_quinzenal_segundo, $percentual_rav, $recebe_rav, $percentual_multiplica, $taxa_adm, $taxa_banco, $limite_rav, $id_credor_rav);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET28WithHttpInfo
+     * listarUsingGET29WithHttpInfo
      *
      * {{{grupo_economico_resource_listar}}}
      *
@@ -3738,7 +3738,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoEconomicoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET28WithHttpInfo($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
+    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $razao_social = null, $nome_credor = null, $numero_receita_federal = null, $inscricao_estadual = null, $contato = null, $banco = null, $agencia = null, $digito_agencia = null, $conta_corrente = null, $digito_conta_corrente = null, $periodicidade = null, $pagamento_semanal = null, $pagamento_mensal = null, $pagamento_decendial_primeiro = null, $pagamento_decendial_segundo = null, $pagamento_decendial_terceiro = null, $pagamento_quinzenal_primeiro = null, $pagamento_quinzenal_segundo = null, $percentual_rav = null, $recebe_rav = null, $percentual_multiplica = null, $taxa_adm = null, $taxa_banco = null, $limite_rav = null, $id_credor_rav = null)
     {
         
   
@@ -3913,7 +3913,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET29
+     * listarUsingGET30
      *
      * {{{grupo_origem_comercial_resource_listar}}}
      *
@@ -3924,15 +3924,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET30($sort = null, $page = null, $limit = null, $nome = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET29WithHttpInfo ($sort, $page, $limit, $nome);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET30WithHttpInfo ($sort, $page, $limit, $nome);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET29WithHttpInfo
+     * listarUsingGET30WithHttpInfo
      *
      * {{{grupo_origem_comercial_resource_listar}}}
      *
@@ -3943,7 +3943,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoOrigemComercialResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET29WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
+    public function listarUsingGET30WithHttpInfo($sort = null, $page = null, $limit = null, $nome = null)
     {
         
   
@@ -4022,7 +4022,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET32
+     * listarUsingGET33
      *
      * {{{maquineta_resource_listar}}}
      *
@@ -4033,15 +4033,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET32($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET33($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET32WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET33WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET32WithHttpInfo
+     * listarUsingGET33WithHttpInfo
      *
      * {{{maquineta_resource_listar}}}
      *
@@ -4052,7 +4052,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageMaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET32WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET33WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
         
   
@@ -4131,7 +4131,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET33
+     * listarUsingGET34
      *
      * {{{moeda_resource_listar}}}
      *
@@ -4144,15 +4144,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageMoedaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
+    public function listarUsingGET34($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET33WithHttpInfo ($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET34WithHttpInfo ($sort, $page, $limit, $codigo_moeda, $simbolo, $descricao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET33WithHttpInfo
+     * listarUsingGET34WithHttpInfo
      *
      * {{{moeda_resource_listar}}}
      *
@@ -4165,7 +4165,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageMoedaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET33WithHttpInfo($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
+    public function listarUsingGET34WithHttpInfo($sort = null, $page = null, $limit = null, $codigo_moeda = null, $simbolo = null, $descricao = null)
     {
         
   
@@ -4252,7 +4252,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET34
+     * listarUsingGET35
      *
      * {{{operacao_credor_resource_listar}}}
      *
@@ -4265,15 +4265,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET34($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
+    public function listarUsingGET35($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET34WithHttpInfo ($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET35WithHttpInfo ($sort, $page, $limit, $id_operacao, $id_credor, $id_produto);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET34WithHttpInfo
+     * listarUsingGET35WithHttpInfo
      *
      * {{{operacao_credor_resource_listar}}}
      *
@@ -4286,7 +4286,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageOperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET34WithHttpInfo($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
+    public function listarUsingGET35WithHttpInfo($sort = null, $page = null, $limit = null, $id_operacao = null, $id_credor = null, $id_produto = null)
     {
         
   
@@ -4373,7 +4373,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET49
+     * listarUsingGET52
      *
      * {{{telefone_estabelecimento_resource_listar}}}
      *
@@ -4384,15 +4384,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET49($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET52($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET49WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET52WithHttpInfo ($sort, $page, $limit, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET49WithHttpInfo
+     * listarUsingGET52WithHttpInfo
      *
      * {{{telefone_estabelecimento_resource_listar}}}
      *
@@ -4403,7 +4403,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET49WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
+    public function listarUsingGET52WithHttpInfo($sort = null, $page = null, $limit = null, $id_estabelecimento = null)
     {
         
   
@@ -4482,7 +4482,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET51
+     * listarUsingGET54
      *
      * {{{terminal_resource_listar}}}
      *
@@ -4496,15 +4496,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageTerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET51($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET54($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET51WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET54WithHttpInfo ($sort, $page, $limit, $id, $terminal, $numero_estabelecimento, $id_estabelecimento);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET51WithHttpInfo
+     * listarUsingGET54WithHttpInfo
      *
      * {{{terminal_resource_listar}}}
      *
@@ -4518,7 +4518,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET51WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
+    public function listarUsingGET54WithHttpInfo($sort = null, $page = null, $limit = null, $id = null, $terminal = null, $numero_estabelecimento = null, $id_estabelecimento = null)
     {
         
   
@@ -4609,7 +4609,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET64
+     * listarUsingGET67
      *
      * {{{vinculo_estabelecimento_adquirente_resource_listar}}}
      *
@@ -4622,15 +4622,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET64($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
+    public function listarUsingGET67($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET64WithHttpInfo ($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET67WithHttpInfo ($sort, $page, $limit, $id_adquirente, $id_estabelecimento, $codigo_estabelecimento_adquirente);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET64WithHttpInfo
+     * listarUsingGET67WithHttpInfo
      *
      * {{{vinculo_estabelecimento_adquirente_resource_listar}}}
      *
@@ -4643,7 +4643,7 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageVinculoEstabelecimentoAdquirenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET64WithHttpInfo($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
+    public function listarUsingGET67WithHttpInfo($sort = null, $page = null, $limit = null, $id_adquirente = null, $id_estabelecimento = null, $codigo_estabelecimento_adquirente = null)
     {
         
   
@@ -4730,7 +4730,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * listarUsingGET65
+     * listarUsingGET68
      *
      * {{{vinculo_operacao_resource_listar}}}
      *
@@ -4744,15 +4744,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET65($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
+    public function listarUsingGET68($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET65WithHttpInfo ($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET68WithHttpInfo ($id, $sort, $page, $limit, $id_produto, $id_operacao, $codigo_mcc);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET65WithHttpInfo
+     * listarUsingGET68WithHttpInfo
      *
      * {{{vinculo_operacao_resource_listar}}}
      *
@@ -4766,12 +4766,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageVinculoOperacaoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET65WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
+    public function listarUsingGET68WithHttpInfo($id, $sort = null, $page = null, $limit = null, $id_produto = null, $id_operacao = null, $codigo_mcc = null)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET65');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling listarUsingGET68');
         }
   
         // parse inputs
@@ -4865,7 +4865,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * salvarUsingPOST19
+     * salvarUsingPOST20
      *
      * {{{maquineta_resource_salvar}}}
      *
@@ -4873,15 +4873,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\MaquinetaResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST19($maquineta_persist)
+    public function salvarUsingPOST20($maquineta_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST19WithHttpInfo ($maquineta_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST20WithHttpInfo ($maquineta_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST19WithHttpInfo
+     * salvarUsingPOST20WithHttpInfo
      *
      * {{{maquineta_resource_salvar}}}
      *
@@ -4889,12 +4889,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\MaquinetaResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST19WithHttpInfo($maquineta_persist)
+    public function salvarUsingPOST20WithHttpInfo($maquineta_persist)
     {
         
         // verify the required parameter 'maquineta_persist' is set
         if ($maquineta_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $maquineta_persist when calling salvarUsingPOST19');
+            throw new \InvalidArgumentException('Missing the required parameter $maquineta_persist when calling salvarUsingPOST20');
         }
   
         // parse inputs
@@ -4956,7 +4956,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * salvarUsingPOST20
+     * salvarUsingPOST21
      *
      * {{{operacao_credor_resource_salvar}}}
      *
@@ -4964,15 +4964,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST20($operacao_credor_persist)
+    public function salvarUsingPOST21($operacao_credor_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST20WithHttpInfo ($operacao_credor_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST21WithHttpInfo ($operacao_credor_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST20WithHttpInfo
+     * salvarUsingPOST21WithHttpInfo
      *
      * {{{operacao_credor_resource_salvar}}}
      *
@@ -4980,12 +4980,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\OperacaoCredorResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST20WithHttpInfo($operacao_credor_persist)
+    public function salvarUsingPOST21WithHttpInfo($operacao_credor_persist)
     {
         
         // verify the required parameter 'operacao_credor_persist' is set
         if ($operacao_credor_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $operacao_credor_persist when calling salvarUsingPOST20');
+            throw new \InvalidArgumentException('Missing the required parameter $operacao_credor_persist when calling salvarUsingPOST21');
         }
   
         // parse inputs
@@ -5047,7 +5047,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * salvarUsingPOST27
+     * salvarUsingPOST28
      *
      * {{{telefone_estabelecimento_resource_salvar}}}
      *
@@ -5055,15 +5055,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST27($telefone_estabelecimento_persist)
+    public function salvarUsingPOST28($telefone_estabelecimento_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST27WithHttpInfo ($telefone_estabelecimento_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST28WithHttpInfo ($telefone_estabelecimento_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST27WithHttpInfo
+     * salvarUsingPOST28WithHttpInfo
      *
      * {{{telefone_estabelecimento_resource_salvar}}}
      *
@@ -5071,12 +5071,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TelefoneEstabelecimentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST27WithHttpInfo($telefone_estabelecimento_persist)
+    public function salvarUsingPOST28WithHttpInfo($telefone_estabelecimento_persist)
     {
         
         // verify the required parameter 'telefone_estabelecimento_persist' is set
         if ($telefone_estabelecimento_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $telefone_estabelecimento_persist when calling salvarUsingPOST27');
+            throw new \InvalidArgumentException('Missing the required parameter $telefone_estabelecimento_persist when calling salvarUsingPOST28');
         }
   
         // parse inputs
@@ -5138,7 +5138,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * salvarUsingPOST29
+     * salvarUsingPOST30
      *
      * {{{terminal_resource_salvar}}}
      *
@@ -5146,15 +5146,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\TerminalResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST29($terminal_persist)
+    public function salvarUsingPOST30($terminal_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST29WithHttpInfo ($terminal_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST30WithHttpInfo ($terminal_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST29WithHttpInfo
+     * salvarUsingPOST30WithHttpInfo
      *
      * {{{terminal_resource_salvar}}}
      *
@@ -5162,12 +5162,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TerminalResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST29WithHttpInfo($terminal_persist)
+    public function salvarUsingPOST30WithHttpInfo($terminal_persist)
     {
         
         // verify the required parameter 'terminal_persist' is set
         if ($terminal_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $terminal_persist when calling salvarUsingPOST29');
+            throw new \InvalidArgumentException('Missing the required parameter $terminal_persist when calling salvarUsingPOST30');
         }
   
         // parse inputs
@@ -5229,7 +5229,7 @@ class GlobaltagestabelecimentoApi
     }
     
     /**
-     * salvarUsingPOST34
+     * salvarUsingPOST35
      *
      * {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
      *
@@ -5237,15 +5237,15 @@ class GlobaltagestabelecimentoApi
      * @return \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST34($vinculo_estabelecimento_adquirente_persist)
+    public function salvarUsingPOST35($vinculo_estabelecimento_adquirente_persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST34WithHttpInfo ($vinculo_estabelecimento_adquirente_persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST35WithHttpInfo ($vinculo_estabelecimento_adquirente_persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST34WithHttpInfo
+     * salvarUsingPOST35WithHttpInfo
      *
      * {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
      *
@@ -5253,12 +5253,12 @@ class GlobaltagestabelecimentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\VinculoEstabelecimentoAdquirenteResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST34WithHttpInfo($vinculo_estabelecimento_adquirente_persist)
+    public function salvarUsingPOST35WithHttpInfo($vinculo_estabelecimento_adquirente_persist)
     {
         
         // verify the required parameter 'vinculo_estabelecimento_adquirente_persist' is set
         if ($vinculo_estabelecimento_adquirente_persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $vinculo_estabelecimento_adquirente_persist when calling salvarUsingPOST34');
+            throw new \InvalidArgumentException('Missing the required parameter $vinculo_estabelecimento_adquirente_persist when calling salvarUsingPOST35');
         }
   
         // parse inputs

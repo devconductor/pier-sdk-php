@@ -5,16 +5,16 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarChaveUsingPOST**](GlobaltagpayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
-[**atualizarUsingPUT**](GlobaltagpayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
+[**atualizarUsingPUT1**](GlobaltagpayApi.md#atualizarUsingPUT1) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirmaAtualizacaoChaveUsingPOST**](GlobaltagpayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultarUsingGET9**](GlobaltagpayApi.md#consultarUsingGET9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultarUsingGET11**](GlobaltagpayApi.md#consultarUsingGET11) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listarCodigosRespostaUsingGET**](GlobaltagpayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listarModosEntradaUsingGET**](GlobaltagpayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listarOperacoesUsingGET**](GlobaltagpayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
 [**listarTiposTerminaisUsingGET**](GlobaltagpayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | {{{enum_pay_resource_listar_tipos_terminais}}}
 [**listarTiposTransacoesUsingGET**](GlobaltagpayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | {{{enum_pay_resource_listar_tipos_transacoes}}}
-[**listarUsingGET10**](GlobaltagpayApi.md#listarUsingGET10) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
-[**salvarUsingPOST5**](GlobaltagpayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
+[**listarUsingGET11**](GlobaltagpayApi.md#listarUsingGET11) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
+[**salvarUsingPOST6**](GlobaltagpayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
 
 
 # **atualizarChaveUsingPOST**
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **atualizarUsingPUT**
-> \br.com.conductor.pier.api.v2.model\CartaoPayResponse atualizarUsingPUT($device_id, $id, $update)
+# **atualizarUsingPUT1**
+> \br.com.conductor.pier.api.v2.model\CartaoPayResponse atualizarUsingPUT1($device_id, $id, $update)
 
 {{{cartao_pay_resource_atualizar}}}
 
@@ -82,10 +82,10 @@ $id = 789; // int | {{{cartao_pay_resource_atualizar_param_id}}}
 $update = new \br.com.conductor.pier.api.v2.model\CartaoPayUpdate(); // \br.com.conductor.pier.api.v2.model\CartaoPayUpdate | update
 
 try { 
-    $result = $api_instance->atualizarUsingPUT($device_id, $id, $update);
+    $result = $api_instance->atualizarUsingPUT1($device_id, $id, $update);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpayApi->atualizarUsingPUT: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpayApi->atualizarUsingPUT1: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -162,8 +162,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consultarUsingGET9**
-> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET9($device_id, $id)
+# **consultarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\CartaoPayDetalheResponse consultarUsingGET11($device_id, $id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -179,10 +179,10 @@ $device_id = "device_id_example"; // string | {{{cartao_pay_resource_consultar_p
 $id = 789; // int | {{{cartao_pay_resource_consultar_param_id}}}
 
 try { 
-    $result = $api_instance->consultarUsingGET9($device_id, $id);
+    $result = $api_instance->consultarUsingGET11($device_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpayApi->consultarUsingGET9: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpayApi->consultarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -414,8 +414,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **listarUsingGET10**
-> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET10($device_id, $sort, $page, $limit, $status, $numero_cartao)
+# **listarUsingGET11**
+> \br.com.conductor.pier.api.v2.model\PageCartaoPayResponse listarUsingGET11($device_id, $sort, $page, $limit, $status, $numero_cartao)
 
 {{{cartao_pay_resource_listar}}}
 
@@ -435,10 +435,10 @@ $status = "status_example"; // string | {{{cartao_pay_request_status_value}}}
 $numero_cartao = "numero_cartao_example"; // string | {{{cartao_pay_request_numero_cartao_value}}}
 
 try { 
-    $result = $api_instance->listarUsingGET10($device_id, $sort, $page, $limit, $status, $numero_cartao);
+    $result = $api_instance->listarUsingGET11($device_id, $sort, $page, $limit, $status, $numero_cartao);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpayApi->listarUsingGET10: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpayApi->listarUsingGET11: ', $e->getMessage(), "\n";
 }
 ?>
 ```
@@ -469,8 +469,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salvarUsingPOST5**
-> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST5($device_id, $persist)
+# **salvarUsingPOST6**
+> \br.com.conductor.pier.api.v2.model\CartaoPayCadastroResponse salvarUsingPOST6($device_id, $persist)
 
 {{{cartao_pay_resource_salvar}}}
 
@@ -486,10 +486,10 @@ $device_id = "device_id_example"; // string | {{{cartao_pay_resource_salvar_para
 $persist = new \br.com.conductor.pier.api.v2.model\CartaoPayPersist(); // \br.com.conductor.pier.api.v2.model\CartaoPayPersist | persist
 
 try { 
-    $result = $api_instance->salvarUsingPOST5($device_id, $persist);
+    $result = $api_instance->salvarUsingPOST6($device_id, $persist);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GlobaltagpayApi->salvarUsingPOST5: ', $e->getMessage(), "\n";
+    echo 'Exception when calling GlobaltagpayApi->salvarUsingPOST6: ', $e->getMessage(), "\n";
 }
 ?>
 ```

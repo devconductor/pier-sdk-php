@@ -92,6 +92,117 @@ class GlobaltagcompracontestadaApi
   
     
     /**
+     * contestarUsingPOST
+     *
+     * {{{compra_contestada_transacoes_resource_contestar}}}
+     *
+     * @param int $id_cartao idCartao (required)
+     * @param \br.com.conductor.pier.api.v2.model\ContestarCompraRequest $request request (required)
+     * @param string $login login (optional)
+     * @return object
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function contestarUsingPOST($id_cartao, $request, $login = null)
+    {
+        list($response, $statusCode, $httpHeader) = $this->contestarUsingPOSTWithHttpInfo ($id_cartao, $request, $login);
+        return $response; 
+    }
+
+
+    /**
+     * contestarUsingPOSTWithHttpInfo
+     *
+     * {{{compra_contestada_transacoes_resource_contestar}}}
+     *
+     * @param int $id_cartao idCartao (required)
+     * @param \br.com.conductor.pier.api.v2.model\ContestarCompraRequest $request request (required)
+     * @param string $login login (optional)
+     * @return Array of object, HTTP status code, HTTP response headers (array of strings)
+     * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
+     */
+    public function contestarUsingPOSTWithHttpInfo($id_cartao, $request, $login = null)
+    {
+        
+        // verify the required parameter 'id_cartao' is set
+        if ($id_cartao === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_cartao when calling contestarUsingPOST');
+        }
+        // verify the required parameter 'request' is set
+        if ($request === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $request when calling contestarUsingPOST');
+        }
+  
+        // parse inputs
+        $resourcePath = "/api/cartoes-com-contestacoes/{idCartao}/contestar";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = ApiClient::selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = ApiClient::selectHeaderContentType(array('application/json'));
+  
+        
+        
+        // path params
+        
+        if ($id_cartao !== null) {
+            $resourcePath = str_replace(
+                "{" . "idCartao" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_cartao),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }// body params
+        $_tempBody = null;
+        if (isset($login)) {
+            $_tempBody = $login;
+        }
+  
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath, 'POST',
+                $queryParams, $httpBody,
+                $headerParams, 'object'
+            );
+            
+            if (!$response) {
+                return array(null, $statusCode, $httpHeader);
+            }
+
+            return array(\br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader);
+            
+        } catch (ApiException $e) {
+            switch ($e->getCode()) { 
+            case 200:
+                $data = \br.com.conductor.pier.api.v2.invoker\ObjectSerializer::deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+                break;
+            }
+  
+            throw $e;
+        }
+    }
+    
+    /**
      * detalheCartaoUsingGET
      *
      * {{{compra_contestada_detalhe_cartao_resource_listar}}}
@@ -187,35 +298,67 @@ class GlobaltagcompracontestadaApi
     }
     
     /**
-     * listarUsingGET12
+     * listarUsingGET13
      *
      * {{{cartao_com_compra_contestada_resource_listar}}}
      *
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $aging_contestacao  (optional)
+     * @param string $nome  (optional)
+     * @param string $bandeira  (optional)
+     * @param string $cartao  (optional)
+     * @param string $cpf  (optional)
+     * @param string $conta  (optional)
+     * @param int $status_cartao  (optional)
+     * @param int $status_contestacao  (optional)
+     * @param string $data_contestacao  (optional)
+     * @param string $data_alteracao  (optional)
+     * @param string $data_reapresentacao  (optional)
+     * @param int $dias_contestacao  (optional)
+     * @param int $dias_compra  (optional)
+     * @param string $modo_entrada  (optional)
+     * @param string $motivo  (optional)
+     * @param Number $valor_compra  (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12($sort = null, $page = null, $limit = null)
+    public function listarUsingGET13($sort = null, $page = null, $limit = null, $aging_contestacao = null, $nome = null, $bandeira = null, $cartao = null, $cpf = null, $conta = null, $status_cartao = null, $status_contestacao = null, $data_contestacao = null, $data_alteracao = null, $data_reapresentacao = null, $dias_contestacao = null, $dias_compra = null, $modo_entrada = null, $motivo = null, $valor_compra = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET12WithHttpInfo ($sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET13WithHttpInfo ($sort, $page, $limit, $aging_contestacao, $nome, $bandeira, $cartao, $cpf, $conta, $status_cartao, $status_contestacao, $data_contestacao, $data_alteracao, $data_reapresentacao, $dias_contestacao, $dias_compra, $modo_entrada, $motivo, $valor_compra);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET12WithHttpInfo
+     * listarUsingGET13WithHttpInfo
      *
      * {{{cartao_com_compra_contestada_resource_listar}}}
      *
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $aging_contestacao  (optional)
+     * @param string $nome  (optional)
+     * @param string $bandeira  (optional)
+     * @param string $cartao  (optional)
+     * @param string $cpf  (optional)
+     * @param string $conta  (optional)
+     * @param int $status_cartao  (optional)
+     * @param int $status_contestacao  (optional)
+     * @param string $data_contestacao  (optional)
+     * @param string $data_alteracao  (optional)
+     * @param string $data_reapresentacao  (optional)
+     * @param int $dias_contestacao  (optional)
+     * @param int $dias_compra  (optional)
+     * @param string $modo_entrada  (optional)
+     * @param string $motivo  (optional)
+     * @param Number $valor_compra  (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET12WithHttpInfo($sort = null, $page = null, $limit = null)
+    public function listarUsingGET13WithHttpInfo($sort = null, $page = null, $limit = null, $aging_contestacao = null, $nome = null, $bandeira = null, $cartao = null, $cpf = null, $conta = null, $status_cartao = null, $status_contestacao = null, $data_contestacao = null, $data_alteracao = null, $data_reapresentacao = null, $dias_contestacao = null, $dias_compra = null, $modo_entrada = null, $motivo = null, $valor_compra = null)
     {
         
   
@@ -247,6 +390,70 @@ class GlobaltagcompracontestadaApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($aging_contestacao !== null) {
+            $queryParams['agingContestacao'] = $this->apiClient->getSerializer()->toQueryValue($aging_contestacao);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($bandeira !== null) {
+            $queryParams['bandeira'] = $this->apiClient->getSerializer()->toQueryValue($bandeira);
+        }// query params
+        
+        if ($cartao !== null) {
+            $queryParams['cartao'] = $this->apiClient->getSerializer()->toQueryValue($cartao);
+        }// query params
+        
+        if ($cpf !== null) {
+            $queryParams['cpf'] = $this->apiClient->getSerializer()->toQueryValue($cpf);
+        }// query params
+        
+        if ($conta !== null) {
+            $queryParams['conta'] = $this->apiClient->getSerializer()->toQueryValue($conta);
+        }// query params
+        
+        if ($status_cartao !== null) {
+            $queryParams['statusCartao'] = $this->apiClient->getSerializer()->toQueryValue($status_cartao);
+        }// query params
+        
+        if ($status_contestacao !== null) {
+            $queryParams['statusContestacao'] = $this->apiClient->getSerializer()->toQueryValue($status_contestacao);
+        }// query params
+        
+        if ($data_contestacao !== null) {
+            $queryParams['dataContestacao'] = $this->apiClient->getSerializer()->toQueryValue($data_contestacao);
+        }// query params
+        
+        if ($data_alteracao !== null) {
+            $queryParams['dataAlteracao'] = $this->apiClient->getSerializer()->toQueryValue($data_alteracao);
+        }// query params
+        
+        if ($data_reapresentacao !== null) {
+            $queryParams['dataReapresentacao'] = $this->apiClient->getSerializer()->toQueryValue($data_reapresentacao);
+        }// query params
+        
+        if ($dias_contestacao !== null) {
+            $queryParams['diasContestacao'] = $this->apiClient->getSerializer()->toQueryValue($dias_contestacao);
+        }// query params
+        
+        if ($dias_compra !== null) {
+            $queryParams['diasCompra'] = $this->apiClient->getSerializer()->toQueryValue($dias_compra);
+        }// query params
+        
+        if ($modo_entrada !== null) {
+            $queryParams['modoEntrada'] = $this->apiClient->getSerializer()->toQueryValue($modo_entrada);
+        }// query params
+        
+        if ($motivo !== null) {
+            $queryParams['motivo'] = $this->apiClient->getSerializer()->toQueryValue($motivo);
+        }// query params
+        
+        if ($valor_compra !== null) {
+            $queryParams['valorCompra'] = $this->apiClient->getSerializer()->toQueryValue($valor_compra);
         }
         
         
@@ -298,12 +505,28 @@ class GlobaltagcompracontestadaApi
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $aging_contestacao  (optional)
+     * @param string $nome  (optional)
+     * @param string $bandeira  (optional)
+     * @param string $cartao  (optional)
+     * @param string $cpf  (optional)
+     * @param string $conta  (optional)
+     * @param int $status_cartao  (optional)
+     * @param int $status_contestacao  (optional)
+     * @param string $data_contestacao  (optional)
+     * @param string $data_alteracao  (optional)
+     * @param string $data_reapresentacao  (optional)
+     * @param int $dias_contestacao  (optional)
+     * @param int $dias_compra  (optional)
+     * @param string $modo_entrada  (optional)
+     * @param string $motivo  (optional)
+     * @param Number $valor_compra  (optional)
      * @return \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacaoUsingGET($id_cartao, $sort = null, $page = null, $limit = null)
+    public function transacaoUsingGET($id_cartao, $sort = null, $page = null, $limit = null, $aging_contestacao = null, $nome = null, $bandeira = null, $cartao = null, $cpf = null, $conta = null, $status_cartao = null, $status_contestacao = null, $data_contestacao = null, $data_alteracao = null, $data_reapresentacao = null, $dias_contestacao = null, $dias_compra = null, $modo_entrada = null, $motivo = null, $valor_compra = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->transacaoUsingGETWithHttpInfo ($id_cartao, $sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->transacaoUsingGETWithHttpInfo ($id_cartao, $sort, $page, $limit, $aging_contestacao, $nome, $bandeira, $cartao, $cpf, $conta, $status_cartao, $status_contestacao, $data_contestacao, $data_alteracao, $data_reapresentacao, $dias_contestacao, $dias_compra, $modo_entrada, $motivo, $valor_compra);
         return $response; 
     }
 
@@ -317,10 +540,26 @@ class GlobaltagcompracontestadaApi
      * @param string[] $sort {{{global_menssagem_sort_sort}}} (optional)
      * @param int $page {{{global_menssagem_sort_page_value}}} (optional)
      * @param int $limit {{{global_menssagem_sort_limit}}} (optional)
+     * @param int $aging_contestacao  (optional)
+     * @param string $nome  (optional)
+     * @param string $bandeira  (optional)
+     * @param string $cartao  (optional)
+     * @param string $cpf  (optional)
+     * @param string $conta  (optional)
+     * @param int $status_cartao  (optional)
+     * @param int $status_contestacao  (optional)
+     * @param string $data_contestacao  (optional)
+     * @param string $data_alteracao  (optional)
+     * @param string $data_reapresentacao  (optional)
+     * @param int $dias_contestacao  (optional)
+     * @param int $dias_compra  (optional)
+     * @param string $modo_entrada  (optional)
+     * @param string $motivo  (optional)
+     * @param Number $valor_compra  (optional)
      * @return Array of \br.com.conductor.pier.api.v2.model\PageGrupoChargebackResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function transacaoUsingGETWithHttpInfo($id_cartao, $sort = null, $page = null, $limit = null)
+    public function transacaoUsingGETWithHttpInfo($id_cartao, $sort = null, $page = null, $limit = null, $aging_contestacao = null, $nome = null, $bandeira = null, $cartao = null, $cpf = null, $conta = null, $status_cartao = null, $status_contestacao = null, $data_contestacao = null, $data_alteracao = null, $data_reapresentacao = null, $dias_contestacao = null, $dias_compra = null, $modo_entrada = null, $motivo = null, $valor_compra = null)
     {
         
         // verify the required parameter 'id_cartao' is set
@@ -356,6 +595,70 @@ class GlobaltagcompracontestadaApi
         
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }// query params
+        
+        if ($aging_contestacao !== null) {
+            $queryParams['agingContestacao'] = $this->apiClient->getSerializer()->toQueryValue($aging_contestacao);
+        }// query params
+        
+        if ($nome !== null) {
+            $queryParams['nome'] = $this->apiClient->getSerializer()->toQueryValue($nome);
+        }// query params
+        
+        if ($bandeira !== null) {
+            $queryParams['bandeira'] = $this->apiClient->getSerializer()->toQueryValue($bandeira);
+        }// query params
+        
+        if ($cartao !== null) {
+            $queryParams['cartao'] = $this->apiClient->getSerializer()->toQueryValue($cartao);
+        }// query params
+        
+        if ($cpf !== null) {
+            $queryParams['cpf'] = $this->apiClient->getSerializer()->toQueryValue($cpf);
+        }// query params
+        
+        if ($conta !== null) {
+            $queryParams['conta'] = $this->apiClient->getSerializer()->toQueryValue($conta);
+        }// query params
+        
+        if ($status_cartao !== null) {
+            $queryParams['statusCartao'] = $this->apiClient->getSerializer()->toQueryValue($status_cartao);
+        }// query params
+        
+        if ($status_contestacao !== null) {
+            $queryParams['statusContestacao'] = $this->apiClient->getSerializer()->toQueryValue($status_contestacao);
+        }// query params
+        
+        if ($data_contestacao !== null) {
+            $queryParams['dataContestacao'] = $this->apiClient->getSerializer()->toQueryValue($data_contestacao);
+        }// query params
+        
+        if ($data_alteracao !== null) {
+            $queryParams['dataAlteracao'] = $this->apiClient->getSerializer()->toQueryValue($data_alteracao);
+        }// query params
+        
+        if ($data_reapresentacao !== null) {
+            $queryParams['dataReapresentacao'] = $this->apiClient->getSerializer()->toQueryValue($data_reapresentacao);
+        }// query params
+        
+        if ($dias_contestacao !== null) {
+            $queryParams['diasContestacao'] = $this->apiClient->getSerializer()->toQueryValue($dias_contestacao);
+        }// query params
+        
+        if ($dias_compra !== null) {
+            $queryParams['diasCompra'] = $this->apiClient->getSerializer()->toQueryValue($dias_compra);
+        }// query params
+        
+        if ($modo_entrada !== null) {
+            $queryParams['modoEntrada'] = $this->apiClient->getSerializer()->toQueryValue($modo_entrada);
+        }// query params
+        
+        if ($motivo !== null) {
+            $queryParams['motivo'] = $this->apiClient->getSerializer()->toQueryValue($motivo);
+        }// query params
+        
+        if ($valor_compra !== null) {
+            $queryParams['valorCompra'] = $this->apiClient->getSerializer()->toQueryValue($valor_compra);
         }
         
         // path params

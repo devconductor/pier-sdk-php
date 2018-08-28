@@ -197,7 +197,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * atualizarUsingPUT3
+     * atualizarUsingPUT4
      *
      * {{{documento_template_resource_atualizar}}}
      *
@@ -206,15 +206,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT3($id, $persist)
+    public function atualizarUsingPUT4($id, $persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT3WithHttpInfo ($id, $persist);
+        list($response, $statusCode, $httpHeader) = $this->atualizarUsingPUT4WithHttpInfo ($id, $persist);
         return $response; 
     }
 
 
     /**
-     * atualizarUsingPUT3WithHttpInfo
+     * atualizarUsingPUT4WithHttpInfo
      *
      * {{{documento_template_resource_atualizar}}}
      *
@@ -223,16 +223,16 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function atualizarUsingPUT3WithHttpInfo($id, $persist)
+    public function atualizarUsingPUT4WithHttpInfo($id, $persist)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling atualizarUsingPUT4');
         }
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling atualizarUsingPUT3');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling atualizarUsingPUT4');
         }
   
         // parse inputs
@@ -302,7 +302,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET17
+     * consultarUsingGET19
      *
      * {{{documento_resource_consultar}}}
      *
@@ -310,15 +310,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17($id)
+    public function consultarUsingGET19($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET17WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET19WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET17WithHttpInfo
+     * consultarUsingGET19WithHttpInfo
      *
      * {{{documento_resource_consultar}}}
      *
@@ -326,12 +326,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET17WithHttpInfo($id)
+    public function consultarUsingGET19WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET17');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET19');
         }
   
         // parse inputs
@@ -397,7 +397,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET18
+     * consultarUsingGET20
      *
      * {{{documento_template_resource_consultar}}}
      *
@@ -405,15 +405,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET18($id)
+    public function consultarUsingGET20($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET18WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET20WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET18WithHttpInfo
+     * consultarUsingGET20WithHttpInfo
      *
      * {{{documento_template_resource_consultar}}}
      *
@@ -421,12 +421,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET18WithHttpInfo($id)
+    public function consultarUsingGET20WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET18');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET20');
         }
   
         // parse inputs
@@ -492,7 +492,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * consultarUsingGET47
+     * consultarUsingGET49
      *
      * {{{tipo_template_resource_consultar}}}
      *
@@ -500,15 +500,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET47($id)
+    public function consultarUsingGET49($id)
     {
-        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET47WithHttpInfo ($id);
+        list($response, $statusCode, $httpHeader) = $this->consultarUsingGET49WithHttpInfo ($id);
         return $response; 
     }
 
 
     /**
-     * consultarUsingGET47WithHttpInfo
+     * consultarUsingGET49WithHttpInfo
      *
      * {{{tipo_template_resource_consultar}}}
      *
@@ -516,12 +516,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function consultarUsingGET47WithHttpInfo($id)
+    public function consultarUsingGET49WithHttpInfo($id)
     {
         
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET47');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling consultarUsingGET49');
         }
   
         // parse inputs
@@ -678,7 +678,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * listarUsingGET21
+     * listarUsingGET22
      *
      * {{{documento_resource_listar}}}
      *
@@ -691,15 +691,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDocumentoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
+    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET21WithHttpInfo ($sort, $page, $limit, $id_template_documento, $nome, $extensao);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id_template_documento, $nome, $extensao);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET21WithHttpInfo
+     * listarUsingGET22WithHttpInfo
      *
      * {{{documento_resource_listar}}}
      *
@@ -712,7 +712,7 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET21WithHttpInfo($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
+    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id_template_documento = null, $nome = null, $extensao = null)
     {
         
   
@@ -799,7 +799,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * listarUsingGET22
+     * listarUsingGET23
      *
      * {{{documento_template_resource_listar}}}
      *
@@ -810,15 +810,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22($sort = null, $page = null, $limit = null, $id_tipo_template = null)
+    public function listarUsingGET23($sort = null, $page = null, $limit = null, $id_tipo_template = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET22WithHttpInfo ($sort, $page, $limit, $id_tipo_template);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET23WithHttpInfo ($sort, $page, $limit, $id_tipo_template);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET22WithHttpInfo
+     * listarUsingGET23WithHttpInfo
      *
      * {{{documento_template_resource_listar}}}
      *
@@ -829,7 +829,7 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageDocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET22WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_template = null)
+    public function listarUsingGET23WithHttpInfo($sort = null, $page = null, $limit = null, $id_tipo_template = null)
     {
         
   
@@ -908,7 +908,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * listarUsingGET57
+     * listarUsingGET60
      *
      * {{{tipo_template_resource_listar}}}
      *
@@ -918,15 +918,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET57($sort = null, $page = null, $limit = null)
+    public function listarUsingGET60($sort = null, $page = null, $limit = null)
     {
-        list($response, $statusCode, $httpHeader) = $this->listarUsingGET57WithHttpInfo ($sort, $page, $limit);
+        list($response, $statusCode, $httpHeader) = $this->listarUsingGET60WithHttpInfo ($sort, $page, $limit);
         return $response; 
     }
 
 
     /**
-     * listarUsingGET57WithHttpInfo
+     * listarUsingGET60WithHttpInfo
      *
      * {{{tipo_template_resource_listar}}}
      *
@@ -936,7 +936,7 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\PageTipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function listarUsingGET57WithHttpInfo($sort = null, $page = null, $limit = null)
+    public function listarUsingGET60WithHttpInfo($sort = null, $page = null, $limit = null)
     {
         
   
@@ -1011,7 +1011,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * salvarUsingPOST11
+     * salvarUsingPOST12
      *
      * {{{documento_resource_salvar}}}
      *
@@ -1019,15 +1019,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST11($persist)
+    public function salvarUsingPOST12($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST11WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST12WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST11WithHttpInfo
+     * salvarUsingPOST12WithHttpInfo
      *
      * {{{documento_resource_salvar}}}
      *
@@ -1035,12 +1035,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoDetalhadoResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST11WithHttpInfo($persist)
+    public function salvarUsingPOST12WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST11');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST12');
         }
   
         // parse inputs
@@ -1102,7 +1102,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * salvarUsingPOST12
+     * salvarUsingPOST13
      *
      * {{{documento_template_resource_salvar}}}
      *
@@ -1110,15 +1110,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST12($persist)
+    public function salvarUsingPOST13($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST12WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST13WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST12WithHttpInfo
+     * salvarUsingPOST13WithHttpInfo
      *
      * {{{documento_template_resource_salvar}}}
      *
@@ -1126,12 +1126,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\DocumentoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST12WithHttpInfo($persist)
+    public function salvarUsingPOST13WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST12');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST13');
         }
   
         // parse inputs
@@ -1193,7 +1193,7 @@ class GlobaltagdocumentoApi
     }
     
     /**
-     * salvarUsingPOST31
+     * salvarUsingPOST32
      *
      * {{{tipo_template_resource_salvar}}}
      *
@@ -1201,15 +1201,15 @@ class GlobaltagdocumentoApi
      * @return \br.com.conductor.pier.api.v2.model\TipoTemplateResponse
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST31($persist)
+    public function salvarUsingPOST32($persist)
     {
-        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST31WithHttpInfo ($persist);
+        list($response, $statusCode, $httpHeader) = $this->salvarUsingPOST32WithHttpInfo ($persist);
         return $response; 
     }
 
 
     /**
-     * salvarUsingPOST31WithHttpInfo
+     * salvarUsingPOST32WithHttpInfo
      *
      * {{{tipo_template_resource_salvar}}}
      *
@@ -1217,12 +1217,12 @@ class GlobaltagdocumentoApi
      * @return Array of \br.com.conductor.pier.api.v2.model\TipoTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \br.com.conductor.pier.api.v2.invoker\ApiException on non-2xx response
      */
-    public function salvarUsingPOST31WithHttpInfo($persist)
+    public function salvarUsingPOST32WithHttpInfo($persist)
     {
         
         // verify the required parameter 'persist' is set
         if ($persist === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST31');
+            throw new \InvalidArgumentException('Missing the required parameter $persist when calling salvarUsingPOST32');
         }
   
         // parse inputs
